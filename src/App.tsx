@@ -82,7 +82,7 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <div className="header-content">
-          <h1>🌐 Global Country & Flag Explorer</h1>
+          <h1>🌐 Countries Explorer</h1>
           <p className="subtitle">
             Search countries, examine flags, capitals, population, languages,
             and geographic info
