@@ -6,13 +6,13 @@
 }
 
 .app-container {
-  max-width: 1280px;
+  max-width: 1720px;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .app-header {
@@ -169,29 +169,67 @@
 
 .country-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.75rem;
   width: 100%;
+}
+
+@media (max-width: 1536px) {
+  .country-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (max-width: 1360px) {
+  .country-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1120px) {
+  .country-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .country-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .country-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .country-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
 }
 
 .country-card {
   background: rgba(30, 41, 59, 0.5);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  border-radius: 12px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
 }
 
 .country-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: rgba(99, 102, 241, 0.4);
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.35),
-    0 0 20px rgba(99, 102, 241, 0.15);
+    0 8px 20px rgba(0, 0, 0, 0.35),
+    0 0 15px rgba(99, 102, 241, 0.15);
 }
 
 .country-card:focus-visible {
@@ -202,7 +240,8 @@
 .flag-wrapper {
   position: relative;
   width: 100%;
-  height: 135px;
+  aspect-ratio: 16 / 10;
+  min-height: 70px;
   background: #0f172a;
   display: flex;
   align-items: center;
@@ -222,16 +261,16 @@
 }
 
 .emoji-flag-fallback {
-  font-size: 3.5rem;
+  font-size: 2.2rem;
   position: absolute;
   z-index: 0;
 }
 
 .country-info {
-  padding: 1.1rem;
+  padding: 0.55rem 0.65rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
   background: rgba(15, 23, 42, 0.6);
   flex-grow: 1;
 }
@@ -240,11 +279,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
 }
 
 .country-name {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
   margin: 0;
   color: #f8fafc;
@@ -254,11 +293,11 @@
 }
 
 .country-code-badge {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  padding: 0.2rem 0.5rem;
-  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
   background: rgba(99, 102, 241, 0.2);
   color: #a5b4fc;
   border: 1px solid rgba(99, 102, 241, 0.3);
@@ -268,7 +307,7 @@
 
 .country-subinfo {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: #cbd5e1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -279,18 +318,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.25rem;
-  font-size: 0.8rem;
+  margin-top: 0.15rem;
+  font-size: 0.7rem;
+  gap: 0.25rem;
 }
 
 .region-tag {
   color: #94a3b8;
   font-weight: 500;
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .pop-tag {
   color: #a855f7;
   font-weight: 600;
+  font-size: 0.7rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Loading & Empty States */

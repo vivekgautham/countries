@@ -179,6 +179,7 @@ function App() {
                   onClick={() => setSelectedCountry(country)}
                   tabIndex={0}
                   role="button"
+                  title={`${country.name} (${country.code})`}
                   onKeyDown={(e) => {
                     if (e.key === "Enter" || e.key === " ") {
                       setSelectedCountry(country);
@@ -200,20 +201,34 @@ function App() {
                   </div>
                   <div className="country-info">
                     <div className="card-header-row">
-                      <h3 className="country-name">{country.name}</h3>
+                      <h3 className="country-name" title={country.name}>
+                        {country.name}
+                      </h3>
                       <span className="country-code-badge">{country.code}</span>
                     </div>
                     {country.capital && country.capital !== "N/A" && (
-                      <p className="country-subinfo">🏛️ {country.capital}</p>
+                      <p
+                        className="country-subinfo"
+                        title={`Capital: ${country.capital}`}
+                      >
+                        🏛️ {country.capital}
+                      </p>
                     )}
                     <div className="card-footer-row">
-                      <span className="region-tag">{country.region}</span>
+                      <span className="region-tag" title={country.region}>
+                        {country.region}
+                      </span>
                       {country.population > 0 && (
-                        <span className="pop-tag">
+                        <span
+                          className="pop-tag"
+                          title={`Population: ${country.population.toLocaleString()}`}
+                        >
                           👥{" "}
                           {country.population >= 1_000_000
                             ? `${(country.population / 1_000_000).toFixed(1)}M`
-                            : country.population.toLocaleString()}
+                            : country.population >= 1_000
+                              ? `${(country.population / 1_000).toFixed(0)}K`
+                              : country.population.toLocaleString()}
                         </span>
                       )}
                     </div>
