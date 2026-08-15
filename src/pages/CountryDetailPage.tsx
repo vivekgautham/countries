@@ -563,12 +563,12 @@ export default function CountryDetailPage() {
           )}
 
           {/* Bordering Nations */}
-          {country.borders && country.borders.length > 0 && (
-            <Grid size={{ xs: 12 }}>
-              <Card variant="outlined" sx={{ p: 1 }}>
-                <CardContent
-                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-                >
+          <Grid size={{ xs: 12 }}>
+            <Card variant="outlined" sx={{ p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Stack direction="row" alignItems="center" spacing={1}>
                   <Typography
                     variant="h6"
                     component="h2"
@@ -576,7 +576,24 @@ export default function CountryDetailPage() {
                   >
                     🗺️ Bordering Nations
                   </Typography>
-                  <Divider />
+                  <Chip
+                    label={country.borders ? country.borders.length : 0}
+                    size="small"
+                    color={
+                      country.borders && country.borders.length > 0
+                        ? "primary"
+                        : "default"
+                    }
+                    variant="outlined"
+                    sx={{
+                      fontWeight: 700,
+                      height: 22,
+                      fontSize: "0.75rem",
+                    }}
+                  />
+                </Stack>
+                <Divider />
+                {country.borders && country.borders.length > 0 ? (
                   <Box
                     sx={{
                       display: "grid",
@@ -658,10 +675,17 @@ export default function CountryDetailPage() {
                       );
                     })}
                   </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-          )}
+                ) : (
+                  <Typography
+                    color="text.secondary"
+                    sx={{ fontStyle: "italic", fontSize: "0.9rem" }}
+                  >
+                    None (Island or territory with no land borders)
+                  </Typography>
+                )}
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </Stack>
     </Container>
