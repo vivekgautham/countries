@@ -53,7 +53,7 @@ export default function CountryListPage() {
     <div className="app-container">
       <header className="app-header">
         <div className="header-content">
-          <h1>🌐 Countries Explorer</h1>
+          <h1>🌍 Countries</h1>
         </div>
 
         {/* Controls Section */}
