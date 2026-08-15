@@ -1,5 +1,24 @@
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ExploreIcon from "@mui/icons-material/Explore";
+import MapIcon from "@mui/icons-material/Map";
+import MenuBookIcon from "@mui/icons-material/MenuBook";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  Chip,
+  CircularProgress,
+  Container,
+  Divider,
+  Grid,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
 import { useEffect, useMemo } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
 import { getCountryEmoji } from "../utils/countryUtils";
@@ -39,39 +58,68 @@ export default function CountryDetailPage() {
 
   if (isLoading && countries.length === 0) {
     return (
-      <div className="app-container">
-        <div className="detail-page-wrapper">
-          <div className="loading-state">
-            <div className="spinner"></div>
-            <p>Loading country details...</p>
-          </div>
-        </div>
-      </div>
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Paper
+          variant="outlined"
+          sx={{
+            p: 8,
+            textAlign: "center",
+            borderRadius: 4,
+            backgroundColor: "rgba(30, 41, 59, 0.3)",
+          }}
+        >
+          <Stack spacing={2} alignItems="center">
+            <CircularProgress color="primary" />
+            <Typography color="text.secondary">
+              Loading country details...
+            </Typography>
+          </Stack>
+        </Paper>
+      </Container>
     );
   }
 
   if (!country) {
     return (
-      <div className="app-container">
-        <div className="detail-page-wrapper">
-          <div className="detail-nav-bar">
-            <Link to="/" className="back-button">
-              ← Back to all countries
-            </Link>
-          </div>
-          <div className="empty-state">
-            <div className="empty-icon">🗺️</div>
-            <h2>Country Not Found</h2>
-            <p>
-              We couldn&apos;t find a country matching &ldquo;{countryCode}
-              &rdquo;.
-            </p>
-            <button className="reset-btn" onClick={() => navigate("/")}>
-              Explore Countries
-            </button>
-          </div>
-        </div>
-      </div>
+      <Container maxWidth="lg" sx={{ py: 4 }}>
+        <Stack spacing={3}>
+          <Box>
+            <Button
+              component={RouterLink}
+              to="/"
+              startIcon={<ArrowBackIcon />}
+              variant="outlined"
+            >
+              Back to all countries
+            </Button>
+          </Box>
+
+          <Paper
+            variant="outlined"
+            sx={{
+              p: 6,
+              textAlign: "center",
+              borderRadius: 4,
+              backgroundColor: "rgba(30, 41, 59, 0.3)",
+              borderStyle: "dashed",
+            }}
+          >
+            <Stack spacing={2} alignItems="center">
+              <ExploreIcon sx={{ fontSize: 64, color: "text.secondary" }} />
+              <Typography variant="h4" component="h2">
+                Country Not Found
+              </Typography>
+              <Typography color="text.secondary">
+                We couldn&apos;t find a country matching &ldquo;{countryCode}
+                &rdquo;.
+              </Typography>
+              <Button variant="contained" onClick={() => navigate("/")}>
+                Explore Countries
+              </Button>
+            </Stack>
+          </Paper>
+        </Stack>
+      </Container>
     );
   }
 
@@ -81,225 +129,541 @@ export default function CountryDetailPage() {
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(country.name)}`;
 
   return (
-    <div className="app-container">
-      <div className="detail-page-wrapper">
+    <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
+      <Stack spacing={3}>
         {/* Navigation Bar */}
-        <div className="detail-nav-bar">
-          <Link to="/" className="back-button">
-            ← Back to all countries
-          </Link>
-        </div>
+        <Box>
+          <Button
+            component={RouterLink}
+            to="/"
+            startIcon={<ArrowBackIcon />}
+            variant="outlined"
+            sx={{
+              px: 2.5,
+              py: 1,
+              backgroundColor: "rgba(30, 41, 59, 0.7)",
+              borderColor: "rgba(255, 255, 255, 0.1)",
+              "&:hover": {
+                borderColor: "primary.main",
+                backgroundColor: "rgba(99, 102, 241, 0.15)",
+              },
+            }}
+          >
+            Back to all countries
+          </Button>
+        </Box>
 
         {/* Hero Card */}
-        <div className="detail-hero-card">
-          <div className="detail-hero-banner">
-            <div className="detail-flag-wrapper">
-              <img
+        <Card
+          variant="outlined"
+          sx={{
+            borderRadius: 4,
+            overflow: "hidden",
+            boxShadow: "0 16px 40px rgba(0, 0, 0, 0.35)",
+          }}
+        >
+          <Grid container>
+            {/* Flag & Coat of Arms Showcase */}
+            <Grid
+              size={{ xs: 12, md: 5 }}
+              sx={{
+                position: "relative",
+                backgroundColor: "#020617",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                minHeight: 240,
+                p: 3,
+                borderRight: { md: "1px solid rgba(255, 255, 255, 0.08)" },
+                borderBottom: {
+                  xs: "1px solid rgba(255, 255, 255, 0.08)",
+                  md: "none",
+                },
+              }}
+            >
+              <Box
+                component="img"
                 src={flagUrl}
                 alt={`Flag of ${country.name}`}
-                className="detail-flag-image"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = "none";
+                sx={{
+                  maxWidth: "100%",
+                  maxHeight: 200,
+                  objectFit: "contain",
+                  borderRadius: 2,
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.5)",
+                }}
+                onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
+                  e.currentTarget.style.display = "none";
                 }}
               />
-              <span className="detail-emoji-fallback">
-                {getCountryEmoji(country.code)}
-              </span>
-            </div>
 
-            {country.coatOfArms && (
-              <div
-                className="detail-coat-of-arms"
-                title="Official Coat of Arms"
+              {country.coatOfArms && (
+                <Paper
+                  variant="outlined"
+                  title="Official Coat of Arms"
+                  sx={{
+                    position: "absolute",
+                    bottom: 16,
+                    right: 16,
+                    width: 60,
+                    height: 60,
+                    p: 0.5,
+                    borderRadius: 2,
+                    backgroundColor: "rgba(15, 23, 42, 0.85)",
+                    backdropFilter: "blur(8px)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={country.coatOfArms}
+                    alt={`Coat of arms of ${country.name}`}
+                    sx={{
+                      maxWidth: "100%",
+                      maxHeight: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
+                </Paper>
+              )}
+            </Grid>
+
+            {/* Hero Main Info */}
+            <Grid size={{ xs: 12, md: 7 }}>
+              <CardContent
+                sx={{
+                  p: { xs: 2.5, sm: 3.5 },
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  gap: 2.5,
+                }}
               >
-                <img
-                  src={country.coatOfArms}
-                  alt={`Coat of arms of ${country.name}`}
-                />
-              </div>
-            )}
-          </div>
-
-          <div className="detail-hero-content">
-            <div className="detail-title-section">
-              <div className="detail-title-row">
-                <h1>
-                  <span className="detail-flag-icon">
-                    {getCountryEmoji(country.code)}
-                  </span>
-                  {country.name}
-                </h1>
-                {country.unMember && (
-                  <span
-                    className="un-badge"
-                    title="United Nations Member State"
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="space-between"
+                    flexWrap="wrap"
+                    gap={1}
                   >
-                    🇺🇳 UN Member
-                  </span>
-                )}
-              </div>
+                    <Typography
+                      variant="h4"
+                      component="h1"
+                      sx={{
+                        fontWeight: 800,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1.5,
+                      }}
+                    >
+                      <span>{getCountryEmoji(country.code)}</span>
+                      {country.name}
+                    </Typography>
 
-              {country.officialName &&
-                country.officialName !== country.name && (
-                  <p className="detail-official-name">{country.officialName}</p>
-                )}
+                    {country.unMember && (
+                      <Chip
+                        icon={
+                          <VerifiedIcon sx={{ fontSize: "1rem !important" }} />
+                        }
+                        label="UN Member"
+                        color="info"
+                        variant="outlined"
+                        size="small"
+                        sx={{ fontWeight: 700 }}
+                      />
+                    )}
+                  </Stack>
 
-              <div className="detail-badge-row">
-                <span className="detail-badge region-badge">
-                  {country.region}
-                </span>
-                {country.subregion && (
-                  <span className="detail-badge subregion-badge">
-                    {country.subregion}
-                  </span>
-                )}
-                <span className="detail-badge code-badge">
-                  ISO: {country.code}{" "}
-                  {country.code3 ? `/ ${country.code3}` : ""}
-                </span>
-              </div>
-            </div>
+                  {country.officialName &&
+                    country.officialName !== country.name && (
+                      <Typography
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ fontStyle: "italic" }}
+                      >
+                        {country.officialName}
+                      </Typography>
+                    )}
 
-            {/* Quick Action Links */}
-            <div className="detail-quick-actions">
-              <a
-                href={googleMapsUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="action-btn map-action"
-              >
-                🗺️ View on Google Maps ↗
-              </a>
-              <a
-                href={wikipediaUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="action-btn wiki-action"
-              >
-                📖 Wikipedia Article ↗
-              </a>
-            </div>
-          </div>
-        </div>
+                  <Stack
+                    direction="row"
+                    flexWrap="wrap"
+                    gap={1}
+                    sx={{ pt: 0.5 }}
+                  >
+                    <Chip
+                      label={country.region}
+                      size="small"
+                      color="primary"
+                      variant="outlined"
+                    />
+                    {country.subregion && (
+                      <Chip
+                        label={country.subregion}
+                        size="small"
+                        color="secondary"
+                        variant="outlined"
+                      />
+                    )}
+                    <Chip
+                      label={`ISO: ${country.code}${country.code3 ? ` / ${country.code3}` : ""}`}
+                      size="small"
+                      variant="outlined"
+                    />
+                  </Stack>
+                </Stack>
 
-        {/* Detailed Information Section */}
-        <section className="detail-sections-grid">
+                {/* Action Links */}
+                <Stack direction="row" flexWrap="wrap" gap={1.5} sx={{ pt: 1 }}>
+                  <Button
+                    component="a"
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="contained"
+                    color="success"
+                    startIcon={<MapIcon />}
+                    size="small"
+                    sx={{
+                      backgroundColor: "rgba(16, 185, 129, 0.2)",
+                      color: "#6ee7b7",
+                      border: "1px solid rgba(16, 185, 129, 0.3)",
+                      "&:hover": {
+                        backgroundColor: "#10b981",
+                        color: "#ffffff",
+                      },
+                    }}
+                  >
+                    View on Google Maps ↗
+                  </Button>
+                  <Button
+                    component="a"
+                    href={wikipediaUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="outlined"
+                    startIcon={<MenuBookIcon />}
+                    size="small"
+                    sx={{
+                      borderColor: "rgba(255, 255, 255, 0.15)",
+                      color: "text.primary",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.08)",
+                      },
+                    }}
+                  >
+                    Wikipedia Article ↗
+                  </Button>
+                </Stack>
+              </CardContent>
+            </Grid>
+          </Grid>
+        </Card>
+
+        {/* Detailed Info Cards Grid */}
+        <Grid container spacing={2.5}>
           {/* Geography & Territory */}
-          <div className="detail-card">
-            <h3 className="card-section-title">🌍 Geography & Territory</h3>
-            <div className="detail-data-list">
-              <div className="data-row">
-                <span className="data-label">🏛️ Capital</span>
-                <span className="data-value">{country.capital || "N/A"}</span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">📍 Region</span>
-                <span className="data-value">{country.region}</span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">🧭 Subregion</span>
-                <span className="data-value">{country.subregion || "N/A"}</span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">📐 Total Area</span>
-                <span className="data-value">
-                  {country.area
-                    ? `${country.area.toLocaleString()} sq km (${(country.area * 0.386102).toLocaleString(undefined, { maximumFractionDigits: 0 })} sq mi)`
-                    : "N/A"}
-                </span>
-              </div>
-            </div>
-          </div>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  sx={{ fontWeight: 700 }}
+                >
+                  🌍 Geography & Territory
+                </Typography>
+                <Divider />
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">🏛️ Capital</Typography>
+                    <Typography fontWeight={600}>
+                      {country.capital || "N/A"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">📍 Region</Typography>
+                    <Typography fontWeight={600}>{country.region}</Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">🧭 Subregion</Typography>
+                    <Typography fontWeight={600}>
+                      {country.subregion || "N/A"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      📐 Total Area
+                    </Typography>
+                    <Typography fontWeight={600} textAlign="right">
+                      {country.area
+                        ? `${country.area.toLocaleString()} sq km (${(country.area * 0.386102).toLocaleString(undefined, { maximumFractionDigits: 0 })} sq mi)`
+                        : "N/A"}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
 
           {/* Identity & Codes */}
-          <div className="detail-card">
-            <h3 className="card-section-title">🔤 Identity & Codes</h3>
-            <div className="detail-data-list">
-              <div className="data-row">
-                <span className="data-label">🔤 ISO Alpha-2</span>
-                <span className="data-value">{country.code}</span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">🔤 ISO Alpha-3</span>
-                <span className="data-value">{country.code3 || "N/A"}</span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">📞 Calling Code</span>
-                <span className="data-value">{country.phoneCode || "N/A"}</span>
-              </div>
-            </div>
-          </div>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  sx={{ fontWeight: 700 }}
+                >
+                  🔤 Identity & Codes
+                </Typography>
+                <Divider />
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🔤 ISO Alpha-2
+                    </Typography>
+                    <Typography fontWeight={600}>{country.code}</Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🔤 ISO Alpha-3
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.code3 || "N/A"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      📞 Calling Code
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.phoneCode || "N/A"}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
 
-          {/* Culture & Economy */}
-          <div className="detail-card full-span">
-            <h3 className="card-section-title">💵 Economy & Languages</h3>
-            <div className="detail-data-list">
-              <div className="data-row">
-                <span className="data-label">💵 Currencies</span>
-                <span className="data-value">
-                  {country.currencies && country.currencies.length > 0
-                    ? country.currencies.join(", ")
-                    : "N/A"}
-                </span>
-              </div>
-              <div className="data-row">
-                <span className="data-label">🗣️ Languages</span>
-                <span className="data-value">
-                  {country.languages && country.languages.length > 0
-                    ? country.languages.join(", ")
-                    : "N/A"}
-                </span>
-              </div>
-            </div>
-          </div>
+          {/* Economy & Languages */}
+          <Grid size={{ xs: 12 }}>
+            <Card variant="outlined" sx={{ p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  sx={{ fontWeight: 700 }}
+                >
+                  💵 Economy & Languages
+                </Typography>
+                <Divider />
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    flexWrap="wrap"
+                    gap={1}
+                  >
+                    <Typography color="text.secondary">
+                      💵 Currencies
+                    </Typography>
+                    <Typography fontWeight={600} textAlign="right">
+                      {country.currencies && country.currencies.length > 0
+                        ? country.currencies.join(", ")
+                        : "N/A"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    flexWrap="wrap"
+                    gap={1}
+                  >
+                    <Typography color="text.secondary">🗣️ Languages</Typography>
+                    <Typography fontWeight={600} textAlign="right">
+                      {country.languages && country.languages.length > 0
+                        ? country.languages.join(", ")
+                        : "N/A"}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
 
           {/* Timezones */}
           {country.timezones && country.timezones.length > 0 && (
-            <div className="detail-card full-span">
-              <h3 className="card-section-title">⏰ Timezones</h3>
-              <div className="timezone-pills">
-                {country.timezones.map((tz) => (
-                  <span key={tz} className="timezone-pill">
-                    {tz}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <Grid size={{ xs: 12 }}>
+              <Card variant="outlined" sx={{ p: 1 }}>
+                <CardContent
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                >
+                  <Typography
+                    variant="h6"
+                    component="h2"
+                    sx={{ fontWeight: 700 }}
+                  >
+                    ⏰ Timezones
+                  </Typography>
+                  <Divider />
+                  <Stack direction="row" flexWrap="wrap" gap={1}>
+                    {country.timezones.map((tz) => (
+                      <Chip
+                        key={tz}
+                        label={tz}
+                        size="small"
+                        variant="outlined"
+                      />
+                    ))}
+                  </Stack>
+                </CardContent>
+              </Card>
+            </Grid>
           )}
 
-          {/* Border Countries */}
+          {/* Bordering Nations */}
           {country.borders && country.borders.length > 0 && (
-            <div className="detail-card full-span">
-              <h3 className="card-section-title">🗺️ Bordering Nations</h3>
-              <div className="border-countries-grid">
-                {country.borders.map((bCode) => {
-                  const neighbor = code3ToCountryMap.get(bCode.toUpperCase());
-                  if (neighbor) {
-                    return (
-                      <Link
-                        key={bCode}
-                        to={`/country/${neighbor.code.toLowerCase()}`}
-                        className="neighbor-card"
-                      >
-                        <span className="neighbor-emoji">
-                          {getCountryEmoji(neighbor.code)}
-                        </span>
-                        <span className="neighbor-name">{neighbor.name}</span>
-                        <span className="neighbor-code">{neighbor.code}</span>
-                      </Link>
-                    );
-                  }
-                  return (
-                    <span key={bCode} className="neighbor-fallback">
-                      {bCode}
-                    </span>
-                  );
-                })}
-              </div>
-            </div>
+            <Grid size={{ xs: 12 }}>
+              <Card variant="outlined" sx={{ p: 1 }}>
+                <CardContent
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                >
+                  <Typography
+                    variant="h6"
+                    component="h2"
+                    sx={{ fontWeight: 700 }}
+                  >
+                    🗺️ Bordering Nations
+                  </Typography>
+                  <Divider />
+                  <Box
+                    sx={{
+                      display: "grid",
+                      gridTemplateColumns: {
+                        xs: "repeat(2, 1fr)",
+                        sm: "repeat(3, 1fr)",
+                        md: "repeat(4, 1fr)",
+                      },
+                      gap: 1.5,
+                    }}
+                  >
+                    {country.borders.map((bCode) => {
+                      const neighbor = code3ToCountryMap.get(
+                        bCode.toUpperCase(),
+                      );
+                      if (neighbor) {
+                        return (
+                          <Button
+                            key={bCode}
+                            component={RouterLink}
+                            to={`/country/${neighbor.code.toLowerCase()}`}
+                            variant="outlined"
+                            size="small"
+                            sx={{
+                              justifyContent: "flex-start",
+                              p: 1,
+                              backgroundColor: "rgba(15, 23, 42, 0.6)",
+                              borderColor: "rgba(255, 255, 255, 0.1)",
+                              "&:hover": {
+                                borderColor: "primary.main",
+                                backgroundColor: "rgba(99, 102, 241, 0.15)",
+                              },
+                            }}
+                          >
+                            <Stack
+                              direction="row"
+                              alignItems="center"
+                              spacing={1}
+                              sx={{ width: "100%", overflow: "hidden" }}
+                            >
+                              <Typography
+                                sx={{ fontSize: "1.2rem", lineHeight: 1 }}
+                              >
+                                {getCountryEmoji(neighbor.code)}
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  flexGrow: 1,
+                                  overflow: "hidden",
+                                  textOverflow: "ellipsis",
+                                  whiteSpace: "nowrap",
+                                  textAlign: "left",
+                                }}
+                              >
+                                {neighbor.name}
+                              </Typography>
+                              <Chip
+                                label={neighbor.code}
+                                size="small"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 700,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Stack>
+                          </Button>
+                        );
+                      }
+                      return (
+                        <Chip
+                          key={bCode}
+                          label={bCode}
+                          variant="outlined"
+                          size="small"
+                        />
+                      );
+                    })}
+                  </Box>
+                </CardContent>
+              </Card>
+            </Grid>
           )}
-        </section>
-      </div>
-    </div>
+        </Grid>
+      </Stack>
+    </Container>
   );
 }
