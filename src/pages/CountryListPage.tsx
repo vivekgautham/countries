@@ -64,7 +64,7 @@ export default function CountryListPage() {
             </span>
             <input
               type="text"
-              placeholder="Search countries, examine flags, capitals, population, languages, and geographic info..."
+              placeholder="Search countries, examine flags, capitals, languages, and geographic info..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
@@ -180,19 +180,6 @@ export default function CountryListPage() {
                       <span className="region-tag" title={country.region}>
                         {country.region}
                       </span>
-                      {country.population > 0 && (
-                        <span
-                          className="pop-tag"
-                          title={`Population: ${country.population.toLocaleString()}`}
-                        >
-                          👥{" "}
-                          {country.population >= 1_000_000
-                            ? `${(country.population / 1_000_000).toFixed(1)}M`
-                            : country.population >= 1_000
-                              ? `${(country.population / 1_000).toFixed(0)}K`
-                              : country.population.toLocaleString()}
-                        </span>
-                      )}
                     </div>
                   </div>
                 </div>

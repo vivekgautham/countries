@@ -318,14 +318,6 @@
   white-space: nowrap;
 }
 
-.pop-tag {
-  color: #a855f7;
-  font-weight: 600;
-  font-size: 0.7rem;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
 /* Loading & Empty States */
 .loading-state,
 .empty-state {
@@ -609,17 +601,6 @@
   border-radius: 10px;
   text-decoration: none;
   transition: all 0.2s ease;
-}
-
-.flag-action {
-  background: rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.3);
-}
-
-.flag-action:hover {
-  background: #6366f1;
-  color: #ffffff;
 }
 
 .map-action {

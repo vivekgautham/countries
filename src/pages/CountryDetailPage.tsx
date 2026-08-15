@@ -77,7 +77,6 @@ export default function CountryDetailPage() {
 
   const codeLower = country.code.toLowerCase();
   const flagUrl = `https://flagcdn.com/w640/${codeLower}.png`;
-  const svgFlagUrl = `https://flagcdn.com/${codeLower}.svg`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(country.name)}`;
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(country.name)}`;
 
@@ -164,14 +163,6 @@ export default function CountryDetailPage() {
             {/* Quick Action Links */}
             <div className="detail-quick-actions">
               <a
-                href={svgFlagUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="action-btn flag-action"
-              >
-                📥 High-Res SVG Flag
-              </a>
-              <a
                 href={googleMapsUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -220,18 +211,10 @@ export default function CountryDetailPage() {
             </div>
           </div>
 
-          {/* Demographics & Identity */}
+          {/* Identity & Codes */}
           <div className="detail-card">
-            <h3 className="card-section-title">👥 Demographics & Identity</h3>
+            <h3 className="card-section-title">🔤 Identity & Codes</h3>
             <div className="detail-data-list">
-              <div className="data-row">
-                <span className="data-label">👥 Population</span>
-                <span className="data-value">
-                  {country.population
-                    ? `${country.population.toLocaleString()} (${(country.population / 1_000_000).toFixed(2)} Million)`
-                    : "N/A"}
-                </span>
-              </div>
               <div className="data-row">
                 <span className="data-label">🔤 ISO Alpha-2</span>
                 <span className="data-value">{country.code}</span>
