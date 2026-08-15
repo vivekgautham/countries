@@ -12,16 +12,21 @@ export function getCountryEmoji(code: string): string {
   return String.fromCodePoint(...codePoints);
 }
 
-type SortOption = "name-asc" | "pop-desc" | "area-desc";
-
-const REGIONS = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
+const REGIONS = [
+  "All",
+  "Africa",
+  "Americas",
+  "Asia",
+  "Europe",
+  "Oceania",
+  "Antarctic",
+];
 
 function App() {
   const { data: countries = [], isLoading, isError } = useCountriesData();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
-  const [sortBy, setSortBy] = useState<SortOption>("name-asc");
   const [selectedCountry, setSelectedCountry] = useState<UnifiedCountry | null>(
     null,
   );
@@ -60,19 +65,11 @@ function App() {
       );
     }
 
-    // Sort
-    result.sort((a, b) => {
-      if (sortBy === "pop-desc") {
-        return b.population - a.population;
-      }
-      if (sortBy === "area-desc") {
-        return (b.area || 0) - (a.area || 0);
-      }
-      return a.name.localeCompare(b.name);
-    });
+    // Sort alphabetically by name
+    result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion, sortBy]);
+  }, [countries, searchTerm, selectedRegion]);
 
   const totalFilteredPopulation = useMemo(() => {
     return filteredCountries.reduce((sum, c) => sum + (c.population || 0), 0);
@@ -83,10 +80,6 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <h1>🌐 Countries Explorer</h1>
-          <p className="subtitle">
-            Search countries, examine flags, capitals, population, languages,
-            and geographic info
-          </p>
         </div>
 
         {/* Controls Section */}
@@ -97,7 +90,7 @@ function App() {
             </span>
             <input
               type="text"
-              placeholder="Search by name, capital, or ISO code (e.g. Japan, Tokyo, JP, CAN)..."
+              placeholder="Search countries, examine flags, capitals, population, languages, and geographic info..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
@@ -126,21 +119,6 @@ function App() {
                   {region}
                 </button>
               ))}
-            </div>
-
-            {/* Sort Select */}
-            <div className="sort-wrapper">
-              <label htmlFor="sort-select">Sort by:</label>
-              <select
-                id="sort-select"
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as SortOption)}
-                className="sort-select"
-              >
-                <option value="name-asc">Name (A–Z)</option>
-                <option value="pop-desc">Population (Highest)</option>
-                <option value="area-desc">Area (Largest)</option>
-              </select>
             </div>
           </div>
 

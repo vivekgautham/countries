@@ -1,0 +1,6246 @@
+[
+  {
+    "code": "AW",
+    "code3": "ABW",
+    "name": "Aruba",
+    "officialName": "Aruba",
+    "capital": "Oranjestad",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 180,
+    "currencies": [
+      "Aruban florin (ƒ)"
+    ],
+    "languages": [
+      "Dutch",
+      "Papiamento"
+    ],
+    "phoneCode": "+297",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "AF",
+    "code3": "AFG",
+    "name": "Afghanistan",
+    "officialName": "Islamic Republic of Afghanistan",
+    "capital": "Kabul",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 652230,
+    "currencies": [
+      "Afghan afghani (؋)"
+    ],
+    "languages": [
+      "Dari",
+      "Pashto",
+      "Turkmen"
+    ],
+    "phoneCode": "+93",
+    "timezones": [],
+    "borders": [
+      "IRN",
+      "PAK",
+      "TKM",
+      "UZB",
+      "TJK",
+      "CHN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AO",
+    "code3": "AGO",
+    "name": "Angola",
+    "officialName": "Republic of Angola",
+    "capital": "Luanda",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 1246700,
+    "currencies": [
+      "Angolan kwanza (Kz)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+244",
+    "timezones": [],
+    "borders": [
+      "COG",
+      "COD",
+      "ZMB",
+      "NAM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AI",
+    "code3": "AIA",
+    "name": "Anguilla",
+    "officialName": "Anguilla",
+    "capital": "The Valley",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 91,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1264",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "AX",
+    "code3": "ALA",
+    "name": "Åland Islands",
+    "officialName": "Åland Islands",
+    "capital": "Mariehamn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 1580,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Swedish"
+    ],
+    "phoneCode": "+35818",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "AL",
+    "code3": "ALB",
+    "name": "Albania",
+    "officialName": "Republic of Albania",
+    "capital": "Tirana",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 28748,
+    "currencies": [
+      "Albanian lek (L)"
+    ],
+    "languages": [
+      "Albanian"
+    ],
+    "phoneCode": "+355",
+    "timezones": [],
+    "borders": [
+      "MNE",
+      "GRC",
+      "MKD",
+      "UNK"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AD",
+    "code3": "AND",
+    "name": "Andorra",
+    "officialName": "Principality of Andorra",
+    "capital": "Andorra la Vella",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 468,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Catalan"
+    ],
+    "phoneCode": "+376",
+    "timezones": [],
+    "borders": [
+      "FRA",
+      "ESP"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AE",
+    "code3": "ARE",
+    "name": "United Arab Emirates",
+    "officialName": "United Arab Emirates",
+    "capital": "Abu Dhabi",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 83600,
+    "currencies": [
+      "United Arab Emirates dirham (د.إ)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+971",
+    "timezones": [],
+    "borders": [
+      "OMN",
+      "SAU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AR",
+    "code3": "ARG",
+    "name": "Argentina",
+    "officialName": "Argentine Republic",
+    "capital": "Buenos Aires",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 2780400,
+    "currencies": [
+      "Argentine peso ($)"
+    ],
+    "languages": [
+      "Guaraní",
+      "Spanish"
+    ],
+    "phoneCode": "+54",
+    "timezones": [],
+    "borders": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "PRY",
+      "URY"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AM",
+    "code3": "ARM",
+    "name": "Armenia",
+    "officialName": "Republic of Armenia",
+    "capital": "Yerevan",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 29743,
+    "currencies": [
+      "Armenian dram (֏)"
+    ],
+    "languages": [
+      "Armenian"
+    ],
+    "phoneCode": "+374",
+    "timezones": [],
+    "borders": [
+      "AZE",
+      "GEO",
+      "IRN",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AS",
+    "code3": "ASM",
+    "name": "American Samoa",
+    "officialName": "American Samoa",
+    "capital": "Pago Pago",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 199,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Samoan"
+    ],
+    "phoneCode": "+1684",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "AQ",
+    "code3": "ATA",
+    "name": "Antarctica",
+    "officialName": "Antarctica",
+    "capital": "N/A",
+    "region": "Antarctic",
+    "subregion": "",
+    "population": 0,
+    "area": 14000000,
+    "currencies": [],
+    "languages": {},
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "TF",
+    "code3": "ATF",
+    "name": "French Southern and Antarctic Lands",
+    "officialName": "Territory of the French Southern and Antarctic Lands",
+    "capital": "Port-aux-Français",
+    "region": "Antarctic",
+    "subregion": "",
+    "population": 0,
+    "area": 7747,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+262",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "AG",
+    "code3": "ATG",
+    "name": "Antigua and Barbuda",
+    "officialName": "Antigua and Barbuda",
+    "capital": "Saint John's",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 442,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1268",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "AU",
+    "code3": "AUS",
+    "name": "Australia",
+    "officialName": "Commonwealth of Australia",
+    "capital": "Canberra",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 0,
+    "area": 7692024,
+    "currencies": [
+      "Australian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+61",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "AT",
+    "code3": "AUT",
+    "name": "Austria",
+    "officialName": "Republic of Austria",
+    "capital": "Vienna",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 83871,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Austro-Bavarian German"
+    ],
+    "phoneCode": "+43",
+    "timezones": [],
+    "borders": [
+      "CZE",
+      "DEU",
+      "HUN",
+      "ITA",
+      "LIE",
+      "SVK",
+      "SVN",
+      "CHE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "AZ",
+    "code3": "AZE",
+    "name": "Azerbaijan",
+    "officialName": "Republic of Azerbaijan",
+    "capital": "Baku",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 86600,
+    "currencies": [
+      "Azerbaijani manat (₼)"
+    ],
+    "languages": [
+      "Azerbaijani",
+      "Russian"
+    ],
+    "phoneCode": "+994",
+    "timezones": [],
+    "borders": [
+      "ARM",
+      "GEO",
+      "IRN",
+      "RUS",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BI",
+    "code3": "BDI",
+    "name": "Burundi",
+    "officialName": "Republic of Burundi",
+    "capital": "Gitega",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 27834,
+    "currencies": [
+      "Burundian franc (Fr)"
+    ],
+    "languages": [
+      "French",
+      "Kirundi"
+    ],
+    "phoneCode": "+257",
+    "timezones": [],
+    "borders": [
+      "COD",
+      "RWA",
+      "TZA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BE",
+    "code3": "BEL",
+    "name": "Belgium",
+    "officialName": "Kingdom of Belgium",
+    "capital": "Brussels",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 30528,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "German",
+      "French",
+      "Dutch"
+    ],
+    "phoneCode": "+32",
+    "timezones": [],
+    "borders": [
+      "FRA",
+      "DEU",
+      "LUX",
+      "NLD"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BJ",
+    "code3": "BEN",
+    "name": "Benin",
+    "officialName": "Republic of Benin",
+    "capital": "Porto-Novo",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 112622,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+229",
+    "timezones": [],
+    "borders": [
+      "BFA",
+      "NER",
+      "NGA",
+      "TGO"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BF",
+    "code3": "BFA",
+    "name": "Burkina Faso",
+    "officialName": "Burkina Faso",
+    "capital": "Ouagadougou",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 272967,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+226",
+    "timezones": [],
+    "borders": [
+      "BEN",
+      "CIV",
+      "GHA",
+      "MLI",
+      "NER",
+      "TGO"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BD",
+    "code3": "BGD",
+    "name": "Bangladesh",
+    "officialName": "People's Republic of Bangladesh",
+    "capital": "Dhaka",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 147570,
+    "currencies": [
+      "Bangladeshi taka (৳)"
+    ],
+    "languages": [
+      "Bengali"
+    ],
+    "phoneCode": "+880",
+    "timezones": [],
+    "borders": [
+      "MMR",
+      "IND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BG",
+    "code3": "BGR",
+    "name": "Bulgaria",
+    "officialName": "Republic of Bulgaria",
+    "capital": "Sofia",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 110879,
+    "currencies": [
+      "Bulgarian lev (лв)"
+    ],
+    "languages": [
+      "Bulgarian"
+    ],
+    "phoneCode": "+359",
+    "timezones": [],
+    "borders": [
+      "GRC",
+      "MKD",
+      "ROU",
+      "SRB",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BH",
+    "code3": "BHR",
+    "name": "Bahrain",
+    "officialName": "Kingdom of Bahrain",
+    "capital": "Manama",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 765,
+    "currencies": [
+      "Bahraini dinar (.د.ب)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+973",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "BS",
+    "code3": "BHS",
+    "name": "Bahamas",
+    "officialName": "Commonwealth of the Bahamas",
+    "capital": "Nassau",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 13943,
+    "currencies": [
+      "Bahamian dollar ($)",
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1242",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "BA",
+    "code3": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "officialName": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 51209,
+    "currencies": [
+      "Bosnia and Herzegovina convertible mark (KM)"
+    ],
+    "languages": [
+      "Bosnian",
+      "Croatian",
+      "Serbian"
+    ],
+    "phoneCode": "+387",
+    "timezones": [],
+    "borders": [
+      "HRV",
+      "MNE",
+      "SRB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BL",
+    "code3": "BLM",
+    "name": "Saint Barthélemy",
+    "officialName": "Collectivity of Saint Barthélemy",
+    "capital": "Gustavia",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 21,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+590",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "SH",
+    "code3": "SHN",
+    "name": "Saint Helena, Ascension and Tristan da Cunha",
+    "officialName": "Saint Helena, Ascension and Tristan da Cunha",
+    "capital": "Jamestown",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 394,
+    "currencies": [
+      "Pound sterling (£)",
+      "Saint Helena pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+2 (2 zones)",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "BY",
+    "code3": "BLR",
+    "name": "Belarus",
+    "officialName": "Republic of Belarus",
+    "capital": "Minsk",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 0,
+    "area": 207600,
+    "currencies": [
+      "Belarusian ruble (Br)"
+    ],
+    "languages": [
+      "Belarusian",
+      "Russian"
+    ],
+    "phoneCode": "+375",
+    "timezones": [],
+    "borders": [
+      "LVA",
+      "LTU",
+      "POL",
+      "RUS",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BZ",
+    "code3": "BLZ",
+    "name": "Belize",
+    "officialName": "Belize",
+    "capital": "Belmopan",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 22966,
+    "currencies": [
+      "Belize dollar ($)"
+    ],
+    "languages": [
+      "Belizean Creole",
+      "English",
+      "Spanish"
+    ],
+    "phoneCode": "+501",
+    "timezones": [],
+    "borders": [
+      "GTM",
+      "MEX"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BM",
+    "code3": "BMU",
+    "name": "Bermuda",
+    "officialName": "Bermuda",
+    "capital": "Hamilton",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 54,
+    "currencies": [
+      "Bermudian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1441",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "BO",
+    "code3": "BOL",
+    "name": "Bolivia",
+    "officialName": "Plurinational State of Bolivia",
+    "capital": "Sucre",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 1098581,
+    "currencies": [
+      "Bolivian boliviano (Bs.)"
+    ],
+    "languages": [
+      "Aymara",
+      "Guaraní",
+      "Quechua",
+      "Spanish"
+    ],
+    "phoneCode": "+591",
+    "timezones": [],
+    "borders": [
+      "ARG",
+      "BRA",
+      "CHL",
+      "PRY",
+      "PER"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BQ",
+    "code3": "BES",
+    "name": "Caribbean Netherlands",
+    "officialName": "Bonaire, Sint Eustatius and Saba",
+    "capital": "Kralendijk, Oranjestad, The Bottom",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 328,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Dutch",
+      "Papiamento"
+    ],
+    "phoneCode": "+599",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "BR",
+    "code3": "BRA",
+    "name": "Brazil",
+    "officialName": "Federative Republic of Brazil",
+    "capital": "Brasília",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 8515767,
+    "currencies": [
+      "Brazilian real (R$)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+55",
+    "timezones": [],
+    "borders": [
+      "ARG",
+      "BOL",
+      "COL",
+      "GUF",
+      "GUY",
+      "PRY",
+      "PER",
+      "SUR",
+      "URY",
+      "VEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BB",
+    "code3": "BRB",
+    "name": "Barbados",
+    "officialName": "Barbados",
+    "capital": "Bridgetown",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 430,
+    "currencies": [
+      "Barbadian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1246",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "BN",
+    "code3": "BRN",
+    "name": "Brunei",
+    "officialName": "Nation of Brunei, Abode of Peace",
+    "capital": "Bandar Seri Begawan",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 5765,
+    "currencies": [
+      "Brunei dollar ($)",
+      "Singapore dollar ($)"
+    ],
+    "languages": [
+      "Malay"
+    ],
+    "phoneCode": "+673",
+    "timezones": [],
+    "borders": [
+      "MYS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BT",
+    "code3": "BTN",
+    "name": "Bhutan",
+    "officialName": "Kingdom of Bhutan",
+    "capital": "Thimphu",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 38394,
+    "currencies": [
+      "Bhutanese ngultrum (Nu.)",
+      "Indian rupee (₹)"
+    ],
+    "languages": [
+      "Dzongkha"
+    ],
+    "phoneCode": "+975",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "IND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "BV",
+    "code3": "BVT",
+    "name": "Bouvet Island",
+    "officialName": "Bouvet Island",
+    "capital": "N/A",
+    "region": "Antarctic",
+    "subregion": "",
+    "population": 0,
+    "area": 49,
+    "currencies": [],
+    "languages": [
+      "Norwegian"
+    ],
+    "phoneCode": "+47",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "BW",
+    "code3": "BWA",
+    "name": "Botswana",
+    "officialName": "Republic of Botswana",
+    "capital": "Gaborone",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 0,
+    "area": 582000,
+    "currencies": [
+      "Botswana pula (P)"
+    ],
+    "languages": [
+      "English",
+      "Tswana"
+    ],
+    "phoneCode": "+267",
+    "timezones": [],
+    "borders": [
+      "NAM",
+      "ZAF",
+      "ZMB",
+      "ZWE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CF",
+    "code3": "CAF",
+    "name": "Central African Republic",
+    "officialName": "Central African Republic",
+    "capital": "Bangui",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 622984,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French",
+      "Sango"
+    ],
+    "phoneCode": "+236",
+    "timezones": [],
+    "borders": [
+      "CMR",
+      "TCD",
+      "COD",
+      "COG",
+      "SSD",
+      "SDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CA",
+    "code3": "CAN",
+    "name": "Canada",
+    "officialName": "Canada",
+    "capital": "Ottawa",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 9984670,
+    "currencies": [
+      "Canadian dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "phoneCode": "+1 (62 zones)",
+    "timezones": [],
+    "borders": [
+      "USA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CC",
+    "code3": "CCK",
+    "name": "Cocos (Keeling) Islands",
+    "officialName": "Territory of the Cocos (Keeling) Islands",
+    "capital": "West Island",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 0,
+    "area": 14,
+    "currencies": [
+      "Australian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+61",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "CH",
+    "code3": "CHE",
+    "name": "Switzerland",
+    "officialName": "Swiss Confederation",
+    "capital": "Bern",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 41284,
+    "currencies": [
+      "Swiss franc (Fr.)"
+    ],
+    "languages": [
+      "French",
+      "Swiss German",
+      "Italian",
+      "Romansh"
+    ],
+    "phoneCode": "+41",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "FRA",
+      "ITA",
+      "LIE",
+      "DEU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CL",
+    "code3": "CHL",
+    "name": "Chile",
+    "officialName": "Republic of Chile",
+    "capital": "Santiago",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 756102,
+    "currencies": [
+      "Chilean peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+56",
+    "timezones": [],
+    "borders": [
+      "ARG",
+      "BOL",
+      "PER"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CN",
+    "code3": "CHN",
+    "name": "China",
+    "officialName": "People's Republic of China",
+    "capital": "Beijing",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 9706961,
+    "currencies": [
+      "Chinese yuan (¥)"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "phoneCode": "+86",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "BTN",
+      "MMR",
+      "HKG",
+      "IND",
+      "KAZ",
+      "NPL",
+      "PRK",
+      "KGZ",
+      "LAO",
+      "MAC",
+      "MNG",
+      "PAK",
+      "RUS",
+      "TJK",
+      "VNM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CI",
+    "code3": "CIV",
+    "name": "Ivory Coast",
+    "officialName": "Republic of Côte d'Ivoire",
+    "capital": "Yamoussoukro",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 322463,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+225",
+    "timezones": [],
+    "borders": [
+      "BFA",
+      "GHA",
+      "GIN",
+      "LBR",
+      "MLI"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CM",
+    "code3": "CMR",
+    "name": "Cameroon",
+    "officialName": "Republic of Cameroon",
+    "capital": "Yaoundé",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 475442,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "phoneCode": "+237",
+    "timezones": [],
+    "borders": [
+      "CAF",
+      "TCD",
+      "COG",
+      "GNQ",
+      "GAB",
+      "NGA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CD",
+    "code3": "COD",
+    "name": "DR Congo",
+    "officialName": "Democratic Republic of the Congo",
+    "capital": "Kinshasa",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 2344858,
+    "currencies": [
+      "Congolese franc (FC)"
+    ],
+    "languages": [
+      "French",
+      "Kikongo",
+      "Lingala",
+      "Tshiluba",
+      "Swahili"
+    ],
+    "phoneCode": "+243",
+    "timezones": [],
+    "borders": [
+      "AGO",
+      "BDI",
+      "CAF",
+      "COG",
+      "RWA",
+      "SSD",
+      "TZA",
+      "UGA",
+      "ZMB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CG",
+    "code3": "COG",
+    "name": "Congo",
+    "officialName": "Republic of the Congo",
+    "capital": "Brazzaville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 342000,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French",
+      "Kikongo",
+      "Lingala"
+    ],
+    "phoneCode": "+242",
+    "timezones": [],
+    "borders": [
+      "AGO",
+      "CMR",
+      "CAF",
+      "COD",
+      "GAB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CK",
+    "code3": "COK",
+    "name": "Cook Islands",
+    "officialName": "Cook Islands",
+    "capital": "Avarua",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 236,
+    "currencies": [
+      "Cook Islands dollar ($)",
+      "New Zealand dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Cook Islands Māori"
+    ],
+    "phoneCode": "+682",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "CO",
+    "code3": "COL",
+    "name": "Colombia",
+    "officialName": "Republic of Colombia",
+    "capital": "Bogotá",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 1141748,
+    "currencies": [
+      "Colombian peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+57",
+    "timezones": [],
+    "borders": [
+      "BRA",
+      "ECU",
+      "PAN",
+      "PER",
+      "VEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "KM",
+    "code3": "COM",
+    "name": "Comoros",
+    "officialName": "Union of the Comoros",
+    "capital": "Moroni",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 1862,
+    "currencies": [
+      "Comorian franc (Fr)"
+    ],
+    "languages": [
+      "Arabic",
+      "French",
+      "Comorian"
+    ],
+    "phoneCode": "+269",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "CV",
+    "code3": "CPV",
+    "name": "Cape Verde",
+    "officialName": "Republic of Cabo Verde",
+    "capital": "Praia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 4033,
+    "currencies": [
+      "Cape Verdean escudo (Esc)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+238",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "CR",
+    "code3": "CRI",
+    "name": "Costa Rica",
+    "officialName": "Republic of Costa Rica",
+    "capital": "San José",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 51100,
+    "currencies": [
+      "Costa Rican colón (₡)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+506",
+    "timezones": [],
+    "borders": [
+      "NIC",
+      "PAN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "CU",
+    "code3": "CUB",
+    "name": "Cuba",
+    "officialName": "Republic of Cuba",
+    "capital": "Havana",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 109884,
+    "currencies": [
+      "Cuban convertible peso ($)",
+      "Cuban peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+53",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "CW",
+    "code3": "CUW",
+    "name": "Curaçao",
+    "officialName": "Country of Curaçao",
+    "capital": "Willemstad",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 444,
+    "currencies": [
+      "Netherlands Antillean guilder (ƒ)"
+    ],
+    "languages": [
+      "English",
+      "Dutch",
+      "Papiamento"
+    ],
+    "phoneCode": "+599",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "CX",
+    "code3": "CXR",
+    "name": "Christmas Island",
+    "officialName": "Territory of Christmas Island",
+    "capital": "Flying Fish Cove",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 0,
+    "area": 135,
+    "currencies": [
+      "Australian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+61",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "KY",
+    "code3": "CYM",
+    "name": "Cayman Islands",
+    "officialName": "Cayman Islands",
+    "capital": "George Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 264,
+    "currencies": [
+      "Cayman Islands dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1345",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "CY",
+    "code3": "CYP",
+    "name": "Cyprus",
+    "officialName": "Republic of Cyprus",
+    "capital": "Nicosia",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 9251,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Greek",
+      "Turkish"
+    ],
+    "phoneCode": "+357",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "CZ",
+    "code3": "CZE",
+    "name": "Czechia",
+    "officialName": "Czech Republic",
+    "capital": "Prague",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 78865,
+    "currencies": [
+      "Czech koruna (Kč)"
+    ],
+    "languages": [
+      "Czech",
+      "Slovak"
+    ],
+    "phoneCode": "+420",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "DEU",
+      "POL",
+      "SVK"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "DE",
+    "code3": "DEU",
+    "name": "Germany",
+    "officialName": "Federal Republic of Germany",
+    "capital": "Berlin",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 357114,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "German"
+    ],
+    "phoneCode": "+49",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "BEL",
+      "CZE",
+      "DNK",
+      "FRA",
+      "LUX",
+      "NLD",
+      "POL",
+      "CHE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "DJ",
+    "code3": "DJI",
+    "name": "Djibouti",
+    "officialName": "Republic of Djibouti",
+    "capital": "Djibouti",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 23200,
+    "currencies": [
+      "Djiboutian franc (Fr)"
+    ],
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "phoneCode": "+253",
+    "timezones": [],
+    "borders": [
+      "ERI",
+      "ETH",
+      "SOM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "DM",
+    "code3": "DMA",
+    "name": "Dominica",
+    "officialName": "Commonwealth of Dominica",
+    "capital": "Roseau",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 751,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1767",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "DK",
+    "code3": "DNK",
+    "name": "Denmark",
+    "officialName": "Kingdom of Denmark",
+    "capital": "Copenhagen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 43094,
+    "currencies": [
+      "Danish krone (kr)"
+    ],
+    "languages": [
+      "Danish"
+    ],
+    "phoneCode": "+45",
+    "timezones": [],
+    "borders": [
+      "DEU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "DO",
+    "code3": "DOM",
+    "name": "Dominican Republic",
+    "officialName": "Dominican Republic",
+    "capital": "Santo Domingo",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 48671,
+    "currencies": [
+      "Dominican peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+1 (3 zones)",
+    "timezones": [],
+    "borders": [
+      "HTI"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "DZ",
+    "code3": "DZA",
+    "name": "Algeria",
+    "officialName": "People's Democratic Republic of Algeria",
+    "capital": "Algiers",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 2381741,
+    "currencies": [
+      "Algerian dinar (د.ج)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+213",
+    "timezones": [],
+    "borders": [
+      "TUN",
+      "LBY",
+      "NER",
+      "ESH",
+      "MRT",
+      "MLI",
+      "MAR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "EC",
+    "code3": "ECU",
+    "name": "Ecuador",
+    "officialName": "Republic of Ecuador",
+    "capital": "Quito",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 276841,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+593",
+    "timezones": [],
+    "borders": [
+      "COL",
+      "PER"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "EG",
+    "code3": "EGY",
+    "name": "Egypt",
+    "officialName": "Arab Republic of Egypt",
+    "capital": "Cairo",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 1002450,
+    "currencies": [
+      "Egyptian pound (£)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+20",
+    "timezones": [],
+    "borders": [
+      "ISR",
+      "LBY",
+      "PSE",
+      "SDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ER",
+    "code3": "ERI",
+    "name": "Eritrea",
+    "officialName": "State of Eritrea",
+    "capital": "Asmara",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 117600,
+    "currencies": [
+      "Eritrean nakfa (Nfk)"
+    ],
+    "languages": [
+      "Arabic",
+      "English",
+      "Tigrinya"
+    ],
+    "phoneCode": "+291",
+    "timezones": [],
+    "borders": [
+      "DJI",
+      "ETH",
+      "SDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "EH",
+    "code3": "ESH",
+    "name": "Western Sahara",
+    "officialName": "Sahrawi Arab Democratic Republic",
+    "capital": "El Aaiún",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 266000,
+    "currencies": [
+      "Algerian dinar (دج)",
+      "Moroccan dirham (DH)",
+      "Mauritanian ouguiya (UM)"
+    ],
+    "languages": [
+      "Berber",
+      "Hassaniya",
+      "Spanish"
+    ],
+    "phoneCode": "+2 (2 zones)",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "MRT",
+      "MAR"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "ES",
+    "code3": "ESP",
+    "name": "Spain",
+    "officialName": "Kingdom of Spain",
+    "capital": "Madrid",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 505992,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+34",
+    "timezones": [],
+    "borders": [
+      "AND",
+      "FRA",
+      "GIB",
+      "PRT",
+      "MAR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "EE",
+    "code3": "EST",
+    "name": "Estonia",
+    "officialName": "Republic of Estonia",
+    "capital": "Tallinn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 45227,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Estonian"
+    ],
+    "phoneCode": "+372",
+    "timezones": [],
+    "borders": [
+      "LVA",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ET",
+    "code3": "ETH",
+    "name": "Ethiopia",
+    "officialName": "Federal Democratic Republic of Ethiopia",
+    "capital": "Addis Ababa",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 1104300,
+    "currencies": [
+      "Ethiopian birr (Br)"
+    ],
+    "languages": [
+      "Amharic"
+    ],
+    "phoneCode": "+251",
+    "timezones": [],
+    "borders": [
+      "DJI",
+      "ERI",
+      "KEN",
+      "SOM",
+      "SSD",
+      "SDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "FI",
+    "code3": "FIN",
+    "name": "Finland",
+    "officialName": "Republic of Finland",
+    "capital": "Helsinki",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 338424,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Finnish",
+      "Swedish"
+    ],
+    "phoneCode": "+358",
+    "timezones": [],
+    "borders": [
+      "NOR",
+      "SWE",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "FJ",
+    "code3": "FJI",
+    "name": "Fiji",
+    "officialName": "Republic of Fiji",
+    "capital": "Suva",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 0,
+    "area": 18272,
+    "currencies": [
+      "Fijian dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Fijian",
+      "Fiji Hindi"
+    ],
+    "phoneCode": "+679",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "FK",
+    "code3": "FLK",
+    "name": "Falkland Islands",
+    "officialName": "Falkland Islands",
+    "capital": "Stanley",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 12173,
+    "currencies": [
+      "Falkland Islands pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+500",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "FR",
+    "code3": "FRA",
+    "name": "France",
+    "officialName": "French Republic",
+    "capital": "Paris",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 551695,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+33",
+    "timezones": [],
+    "borders": [
+      "AND",
+      "BEL",
+      "DEU",
+      "ITA",
+      "LUX",
+      "MCO",
+      "ESP",
+      "CHE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "FO",
+    "code3": "FRO",
+    "name": "Faroe Islands",
+    "officialName": "Faroe Islands",
+    "capital": "Tórshavn",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 1393,
+    "currencies": [
+      "Danish krone (kr)",
+      "Faroese króna (kr)"
+    ],
+    "languages": [
+      "Danish",
+      "Faroese"
+    ],
+    "phoneCode": "+298",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "FM",
+    "code3": "FSM",
+    "name": "Micronesia",
+    "officialName": "Federated States of Micronesia",
+    "capital": "Palikir",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 702,
+    "currencies": [],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+691",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "GA",
+    "code3": "GAB",
+    "name": "Gabon",
+    "officialName": "Gabonese Republic",
+    "capital": "Libreville",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 267668,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+241",
+    "timezones": [],
+    "borders": [
+      "CMR",
+      "COG",
+      "GNQ"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GB",
+    "code3": "GBR",
+    "name": "United Kingdom",
+    "officialName": "United Kingdom of Great Britain and Northern Ireland",
+    "capital": "London",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 242900,
+    "currencies": [
+      "British pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+44",
+    "timezones": [],
+    "borders": [
+      "IRL"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GE",
+    "code3": "GEO",
+    "name": "Georgia",
+    "officialName": "Georgia",
+    "capital": "Tbilisi",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 69700,
+    "currencies": [
+      "lari (₾)"
+    ],
+    "languages": [
+      "Georgian"
+    ],
+    "phoneCode": "+995",
+    "timezones": [],
+    "borders": [
+      "ARM",
+      "AZE",
+      "RUS",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GG",
+    "code3": "GGY",
+    "name": "Guernsey",
+    "officialName": "Bailiwick of Guernsey",
+    "capital": "St. Peter Port",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 78,
+    "currencies": [
+      "British pound (£)",
+      "Guernsey pound (£)"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Guernésiais"
+    ],
+    "phoneCode": "+44",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "GH",
+    "code3": "GHA",
+    "name": "Ghana",
+    "officialName": "Republic of Ghana",
+    "capital": "Accra",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 238533,
+    "currencies": [
+      "Ghanaian cedi (₵)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+233",
+    "timezones": [],
+    "borders": [
+      "BFA",
+      "CIV",
+      "TGO"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GI",
+    "code3": "GIB",
+    "name": "Gibraltar",
+    "officialName": "Gibraltar",
+    "capital": "Gibraltar",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 6,
+    "currencies": [
+      "Gibraltar pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+350",
+    "timezones": [],
+    "borders": [
+      "ESP"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "GN",
+    "code3": "GIN",
+    "name": "Guinea",
+    "officialName": "Republic of Guinea",
+    "capital": "Conakry",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 245857,
+    "currencies": [
+      "Guinean franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+224",
+    "timezones": [],
+    "borders": [
+      "CIV",
+      "GNB",
+      "LBR",
+      "MLI",
+      "SEN",
+      "SLE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GP",
+    "code3": "GLP",
+    "name": "Guadeloupe",
+    "officialName": "Guadeloupe",
+    "capital": "Basse-Terre",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 1628,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+590",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "GM",
+    "code3": "GMB",
+    "name": "Gambia",
+    "officialName": "Republic of the Gambia",
+    "capital": "Banjul",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 10689,
+    "currencies": [
+      "dalasi (D)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+220",
+    "timezones": [],
+    "borders": [
+      "SEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GW",
+    "code3": "GNB",
+    "name": "Guinea-Bissau",
+    "officialName": "Republic of Guinea-Bissau",
+    "capital": "Bissau",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 36125,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "Portuguese",
+      "Upper Guinea Creole"
+    ],
+    "phoneCode": "+245",
+    "timezones": [],
+    "borders": [
+      "GIN",
+      "SEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GQ",
+    "code3": "GNQ",
+    "name": "Equatorial Guinea",
+    "officialName": "Republic of Equatorial Guinea",
+    "capital": "Malabo",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 28051,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French",
+      "Portuguese",
+      "Spanish"
+    ],
+    "phoneCode": "+240",
+    "timezones": [],
+    "borders": [
+      "CMR",
+      "GAB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GR",
+    "code3": "GRC",
+    "name": "Greece",
+    "officialName": "Hellenic Republic",
+    "capital": "Athens",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 131990,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Greek"
+    ],
+    "phoneCode": "+30",
+    "timezones": [],
+    "borders": [
+      "ALB",
+      "BGR",
+      "TUR",
+      "MKD"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GD",
+    "code3": "GRD",
+    "name": "Grenada",
+    "officialName": "Grenada",
+    "capital": "St. George's",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 344,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1473",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "GL",
+    "code3": "GRL",
+    "name": "Greenland",
+    "officialName": "Greenland",
+    "capital": "Nuuk",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 2166086,
+    "currencies": [
+      "krone (kr.)"
+    ],
+    "languages": [
+      "Greenlandic"
+    ],
+    "phoneCode": "+299",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "GT",
+    "code3": "GTM",
+    "name": "Guatemala",
+    "officialName": "Republic of Guatemala",
+    "capital": "Guatemala City",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 108889,
+    "currencies": [
+      "Guatemalan quetzal (Q)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+502",
+    "timezones": [],
+    "borders": [
+      "BLZ",
+      "SLV",
+      "HND",
+      "MEX"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "GF",
+    "code3": "GUF",
+    "name": "French Guiana",
+    "officialName": "Guiana",
+    "capital": "Cayenne",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 83534,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+594",
+    "timezones": [],
+    "borders": [
+      "BRA",
+      "SUR"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "GU",
+    "code3": "GUM",
+    "name": "Guam",
+    "officialName": "Guam",
+    "capital": "Hagåtña",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 549,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Chamorro",
+      "English",
+      "Spanish"
+    ],
+    "phoneCode": "+1671",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "GY",
+    "code3": "GUY",
+    "name": "Guyana",
+    "officialName": "Co-operative Republic of Guyana",
+    "capital": "Georgetown",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 214969,
+    "currencies": [
+      "Guyanese dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+592",
+    "timezones": [],
+    "borders": [
+      "BRA",
+      "SUR",
+      "VEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "HK",
+    "code3": "HKG",
+    "name": "Hong Kong",
+    "officialName": "Hong Kong Special Administrative Region of the People's Republic of China",
+    "capital": "City of Victoria",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 1104,
+    "currencies": [
+      "Hong Kong dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Chinese"
+    ],
+    "phoneCode": "+852",
+    "timezones": [],
+    "borders": [
+      "CHN"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "HM",
+    "code3": "HMD",
+    "name": "Heard Island and McDonald Islands",
+    "officialName": "Heard Island and McDonald Islands",
+    "capital": "N/A",
+    "region": "Antarctic",
+    "subregion": "",
+    "population": 0,
+    "area": 412,
+    "currencies": [],
+    "languages": [
+      "English"
+    ],
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "HN",
+    "code3": "HND",
+    "name": "Honduras",
+    "officialName": "Republic of Honduras",
+    "capital": "Tegucigalpa",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 112492,
+    "currencies": [
+      "Honduran lempira (L)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+504",
+    "timezones": [],
+    "borders": [
+      "GTM",
+      "SLV",
+      "NIC"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "HR",
+    "code3": "HRV",
+    "name": "Croatia",
+    "officialName": "Republic of Croatia",
+    "capital": "Zagreb",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 56594,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Croatian"
+    ],
+    "phoneCode": "+385",
+    "timezones": [],
+    "borders": [
+      "BIH",
+      "HUN",
+      "MNE",
+      "SRB",
+      "SVN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "HT",
+    "code3": "HTI",
+    "name": "Haiti",
+    "officialName": "Republic of Haiti",
+    "capital": "Port-au-Prince",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 27750,
+    "currencies": [
+      "Haitian gourde (G)"
+    ],
+    "languages": [
+      "French",
+      "Haitian Creole"
+    ],
+    "phoneCode": "+509",
+    "timezones": [],
+    "borders": [
+      "DOM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "HU",
+    "code3": "HUN",
+    "name": "Hungary",
+    "officialName": "Hungary",
+    "capital": "Budapest",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 93028,
+    "currencies": [
+      "Hungarian forint (Ft)"
+    ],
+    "languages": [
+      "Hungarian"
+    ],
+    "phoneCode": "+36",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "HRV",
+      "ROU",
+      "SRB",
+      "SVK",
+      "SVN",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ID",
+    "code3": "IDN",
+    "name": "Indonesia",
+    "officialName": "Republic of Indonesia",
+    "capital": "Jakarta",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 1904569,
+    "currencies": [
+      "Indonesian rupiah (Rp)"
+    ],
+    "languages": [
+      "Indonesian"
+    ],
+    "phoneCode": "+62",
+    "timezones": [],
+    "borders": [
+      "TLS",
+      "MYS",
+      "PNG"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IM",
+    "code3": "IMN",
+    "name": "Isle of Man",
+    "officialName": "Isle of Man",
+    "capital": "Douglas",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 572,
+    "currencies": [
+      "British pound (£)",
+      "Manx pound (£)"
+    ],
+    "languages": [
+      "English",
+      "Manx"
+    ],
+    "phoneCode": "+44",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "IN",
+    "code3": "IND",
+    "name": "India",
+    "officialName": "Republic of India",
+    "capital": "New Delhi",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 3287590,
+    "currencies": [
+      "Indian rupee (₹)"
+    ],
+    "languages": [
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "phoneCode": "+91",
+    "timezones": [],
+    "borders": [
+      "BGD",
+      "BTN",
+      "MMR",
+      "CHN",
+      "NPL",
+      "PAK"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IO",
+    "code3": "IOT",
+    "name": "British Indian Ocean Territory",
+    "officialName": "British Indian Ocean Territory",
+    "capital": "Diego Garcia",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 60,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+246",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "IE",
+    "code3": "IRL",
+    "name": "Ireland",
+    "officialName": "Republic of Ireland",
+    "capital": "Dublin",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 70273,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "English",
+      "Irish"
+    ],
+    "phoneCode": "+353",
+    "timezones": [],
+    "borders": [
+      "GBR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IR",
+    "code3": "IRN",
+    "name": "Iran",
+    "officialName": "Islamic Republic of Iran",
+    "capital": "Tehran",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 1648195,
+    "currencies": [
+      "Iranian rial (﷼)"
+    ],
+    "languages": [
+      "Persian (Farsi)"
+    ],
+    "phoneCode": "+98",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "ARM",
+      "AZE",
+      "IRQ",
+      "PAK",
+      "TUR",
+      "TKM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IQ",
+    "code3": "IRQ",
+    "name": "Iraq",
+    "officialName": "Republic of Iraq",
+    "capital": "Baghdad",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 438317,
+    "currencies": [
+      "Iraqi dinar (ع.د)"
+    ],
+    "languages": [
+      "Arabic",
+      "Aramaic",
+      "Sorani"
+    ],
+    "phoneCode": "+964",
+    "timezones": [],
+    "borders": [
+      "IRN",
+      "JOR",
+      "KWT",
+      "SAU",
+      "SYR",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IS",
+    "code3": "ISL",
+    "name": "Iceland",
+    "officialName": "Iceland",
+    "capital": "Reykjavik",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 103000,
+    "currencies": [
+      "Icelandic króna (kr)"
+    ],
+    "languages": [
+      "Icelandic"
+    ],
+    "phoneCode": "+354",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "IL",
+    "code3": "ISR",
+    "name": "Israel",
+    "officialName": "State of Israel",
+    "capital": "Jerusalem",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 20770,
+    "currencies": [
+      "Israeli new shekel (₪)"
+    ],
+    "languages": [
+      "Arabic",
+      "Hebrew"
+    ],
+    "phoneCode": "+972",
+    "timezones": [],
+    "borders": [
+      "EGY",
+      "JOR",
+      "LBN",
+      "PSE",
+      "SYR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "IT",
+    "code3": "ITA",
+    "name": "Italy",
+    "officialName": "Italian Republic",
+    "capital": "Rome",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 301336,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "phoneCode": "+39",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "FRA",
+      "SMR",
+      "SVN",
+      "CHE",
+      "VAT"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "JM",
+    "code3": "JAM",
+    "name": "Jamaica",
+    "officialName": "Jamaica",
+    "capital": "Kingston",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 10991,
+    "currencies": [
+      "Jamaican dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Jamaican Patois"
+    ],
+    "phoneCode": "+1876",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "JE",
+    "code3": "JEY",
+    "name": "Jersey",
+    "officialName": "Bailiwick of Jersey",
+    "capital": "Saint Helier",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 116,
+    "currencies": [
+      "British pound (£)",
+      "Jersey pound (£)"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Jèrriais"
+    ],
+    "phoneCode": "+44",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "JO",
+    "code3": "JOR",
+    "name": "Jordan",
+    "officialName": "Hashemite Kingdom of Jordan",
+    "capital": "Amman",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 89342,
+    "currencies": [
+      "Jordanian dinar (د.ا)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+962",
+    "timezones": [],
+    "borders": [
+      "IRQ",
+      "ISR",
+      "PSE",
+      "SAU",
+      "SYR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "JP",
+    "code3": "JPN",
+    "name": "Japan",
+    "officialName": "Japan",
+    "capital": "Tokyo",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 377930,
+    "currencies": [
+      "Japanese yen (¥)"
+    ],
+    "languages": [
+      "Japanese"
+    ],
+    "phoneCode": "+81",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "KZ",
+    "code3": "KAZ",
+    "name": "Kazakhstan",
+    "officialName": "Republic of Kazakhstan",
+    "capital": "Astana",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 0,
+    "area": 2724900,
+    "currencies": [
+      "Kazakhstani tenge (₸)"
+    ],
+    "languages": [
+      "Kazakh",
+      "Russian"
+    ],
+    "phoneCode": "+7 (2 zones)",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "KGZ",
+      "RUS",
+      "TKM",
+      "UZB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "KE",
+    "code3": "KEN",
+    "name": "Kenya",
+    "officialName": "Republic of Kenya",
+    "capital": "Nairobi",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 580367,
+    "currencies": [
+      "Kenyan shilling (Sh)"
+    ],
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "phoneCode": "+254",
+    "timezones": [],
+    "borders": [
+      "ETH",
+      "SOM",
+      "SSD",
+      "TZA",
+      "UGA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "KG",
+    "code3": "KGZ",
+    "name": "Kyrgyzstan",
+    "officialName": "Kyrgyz Republic",
+    "capital": "Bishkek",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 0,
+    "area": 199951,
+    "currencies": [
+      "Kyrgyzstani som (с)"
+    ],
+    "languages": [
+      "Kyrgyz",
+      "Russian"
+    ],
+    "phoneCode": "+996",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "KAZ",
+      "TJK",
+      "UZB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "KH",
+    "code3": "KHM",
+    "name": "Cambodia",
+    "officialName": "Kingdom of Cambodia",
+    "capital": "Phnom Penh",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 181035,
+    "currencies": [
+      "Cambodian riel (៛)",
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Khmer"
+    ],
+    "phoneCode": "+855",
+    "timezones": [],
+    "borders": [
+      "LAO",
+      "THA",
+      "VNM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "KI",
+    "code3": "KIR",
+    "name": "Kiribati",
+    "officialName": "Independent and Sovereign Republic of Kiribati",
+    "capital": "South Tarawa",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 811,
+    "currencies": [
+      "Australian dollar ($)",
+      "Kiribati dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Gilbertese"
+    ],
+    "phoneCode": "+686",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "KN",
+    "code3": "KNA",
+    "name": "Saint Kitts and Nevis",
+    "officialName": "Federation of Saint Christopher and Nevis",
+    "capital": "Basseterre",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 261,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1869",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "KR",
+    "code3": "KOR",
+    "name": "South Korea",
+    "officialName": "Republic of Korea",
+    "capital": "Seoul",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 100210,
+    "currencies": [
+      "South Korean won (₩)"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "phoneCode": "+82",
+    "timezones": [],
+    "borders": [
+      "PRK"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "XK",
+    "code3": "UNK",
+    "name": "Kosovo",
+    "officialName": "Republic of Kosovo",
+    "capital": "Pristina",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 10908,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Albanian",
+      "Serbian"
+    ],
+    "phoneCode": "+383",
+    "timezones": [],
+    "borders": [
+      "ALB",
+      "MKD",
+      "MNE",
+      "SRB"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "KW",
+    "code3": "KWT",
+    "name": "Kuwait",
+    "officialName": "State of Kuwait",
+    "capital": "Kuwait City",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 17818,
+    "currencies": [
+      "Kuwaiti dinar (د.ك)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+965",
+    "timezones": [],
+    "borders": [
+      "IRQ",
+      "SAU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LA",
+    "code3": "LAO",
+    "name": "Laos",
+    "officialName": "Lao People's Democratic Republic",
+    "capital": "Vientiane",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 236800,
+    "currencies": [
+      "Lao kip (₭)"
+    ],
+    "languages": [
+      "Lao"
+    ],
+    "phoneCode": "+856",
+    "timezones": [],
+    "borders": [
+      "MMR",
+      "KHM",
+      "CHN",
+      "THA",
+      "VNM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LB",
+    "code3": "LBN",
+    "name": "Lebanon",
+    "officialName": "Lebanese Republic",
+    "capital": "Beirut",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 10452,
+    "currencies": [
+      "Lebanese pound (ل.ل)"
+    ],
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "phoneCode": "+961",
+    "timezones": [],
+    "borders": [
+      "ISR",
+      "SYR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LR",
+    "code3": "LBR",
+    "name": "Liberia",
+    "officialName": "Republic of Liberia",
+    "capital": "Monrovia",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 111369,
+    "currencies": [
+      "Liberian dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+231",
+    "timezones": [],
+    "borders": [
+      "GIN",
+      "CIV",
+      "SLE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LY",
+    "code3": "LBY",
+    "name": "Libya",
+    "officialName": "State of Libya",
+    "capital": "Tripoli",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 1759540,
+    "currencies": [
+      "Libyan dinar (ل.د)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+218",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "TCD",
+      "EGY",
+      "NER",
+      "SDN",
+      "TUN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LC",
+    "code3": "LCA",
+    "name": "Saint Lucia",
+    "officialName": "Saint Lucia",
+    "capital": "Castries",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 616,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1758",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "LI",
+    "code3": "LIE",
+    "name": "Liechtenstein",
+    "officialName": "Principality of Liechtenstein",
+    "capital": "Vaduz",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 160,
+    "currencies": [
+      "Swiss franc (Fr)"
+    ],
+    "languages": [
+      "German"
+    ],
+    "phoneCode": "+423",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "CHE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LK",
+    "code3": "LKA",
+    "name": "Sri Lanka",
+    "officialName": "Democratic Socialist Republic of Sri Lanka",
+    "capital": "Colombo",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 65610,
+    "currencies": [
+      "Sri Lankan rupee (Rs රු)"
+    ],
+    "languages": [
+      "Sinhala",
+      "Tamil"
+    ],
+    "phoneCode": "+94",
+    "timezones": [],
+    "borders": [
+      "IND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LS",
+    "code3": "LSO",
+    "name": "Lesotho",
+    "officialName": "Kingdom of Lesotho",
+    "capital": "Maseru",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 0,
+    "area": 30355,
+    "currencies": [
+      "Lesotho loti (L)",
+      "South African rand (R)"
+    ],
+    "languages": [
+      "English",
+      "Sotho"
+    ],
+    "phoneCode": "+266",
+    "timezones": [],
+    "borders": [
+      "ZAF"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LT",
+    "code3": "LTU",
+    "name": "Lithuania",
+    "officialName": "Republic of Lithuania",
+    "capital": "Vilnius",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 65300,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Lithuanian"
+    ],
+    "phoneCode": "+370",
+    "timezones": [],
+    "borders": [
+      "BLR",
+      "LVA",
+      "POL",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LU",
+    "code3": "LUX",
+    "name": "Luxembourg",
+    "officialName": "Grand Duchy of Luxembourg",
+    "capital": "Luxembourg",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 2586,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "German",
+      "French",
+      "Luxembourgish"
+    ],
+    "phoneCode": "+352",
+    "timezones": [],
+    "borders": [
+      "BEL",
+      "FRA",
+      "DEU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "LV",
+    "code3": "LVA",
+    "name": "Latvia",
+    "officialName": "Republic of Latvia",
+    "capital": "Riga",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 64559,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Latvian"
+    ],
+    "phoneCode": "+371",
+    "timezones": [],
+    "borders": [
+      "BLR",
+      "EST",
+      "LTU",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MO",
+    "code3": "MAC",
+    "name": "Macau",
+    "officialName": "Macao Special Administrative Region of the People's Republic of China",
+    "capital": "N/A",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 30,
+    "currencies": [
+      "Macanese pataca (P)"
+    ],
+    "languages": [
+      "Portuguese",
+      "Chinese"
+    ],
+    "phoneCode": "+853",
+    "timezones": [],
+    "borders": [
+      "CHN"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "MF",
+    "code3": "MAF",
+    "name": "Saint Martin",
+    "officialName": "Saint Martin",
+    "capital": "Marigot",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 53,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+590",
+    "timezones": [],
+    "borders": [
+      "SXM"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "MA",
+    "code3": "MAR",
+    "name": "Morocco",
+    "officialName": "Kingdom of Morocco",
+    "capital": "Rabat",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 446550,
+    "currencies": [
+      "Moroccan dirham (د.م.)"
+    ],
+    "languages": [
+      "Arabic",
+      "Berber"
+    ],
+    "phoneCode": "+212",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "ESH",
+      "ESP"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MC",
+    "code3": "MCO",
+    "name": "Monaco",
+    "officialName": "Principality of Monaco",
+    "capital": "Monaco",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 2.02,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+377",
+    "timezones": [],
+    "borders": [
+      "FRA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MD",
+    "code3": "MDA",
+    "name": "Moldova",
+    "officialName": "Republic of Moldova",
+    "capital": "Chișinău",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 0,
+    "area": 33846,
+    "currencies": [
+      "Moldovan leu (L)"
+    ],
+    "languages": [
+      "Moldavian"
+    ],
+    "phoneCode": "+373",
+    "timezones": [],
+    "borders": [
+      "ROU",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MG",
+    "code3": "MDG",
+    "name": "Madagascar",
+    "officialName": "Republic of Madagascar",
+    "capital": "Antananarivo",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 587041,
+    "currencies": [
+      "Malagasy ariary (Ar)"
+    ],
+    "languages": [
+      "French",
+      "Malagasy"
+    ],
+    "phoneCode": "+261",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "MV",
+    "code3": "MDV",
+    "name": "Maldives",
+    "officialName": "Republic of the Maldives",
+    "capital": "Malé",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 300,
+    "currencies": [
+      "Maldivian rufiyaa (.ރ)"
+    ],
+    "languages": [
+      "Maldivian"
+    ],
+    "phoneCode": "+960",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "MX",
+    "code3": "MEX",
+    "name": "Mexico",
+    "officialName": "United Mexican States",
+    "capital": "Mexico City",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 1964375,
+    "currencies": [
+      "Mexican peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+52",
+    "timezones": [],
+    "borders": [
+      "BLZ",
+      "GTM",
+      "USA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MH",
+    "code3": "MHL",
+    "name": "Marshall Islands",
+    "officialName": "Republic of the Marshall Islands",
+    "capital": "Majuro",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 181,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Marshallese"
+    ],
+    "phoneCode": "+692",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "MK",
+    "code3": "MKD",
+    "name": "North Macedonia",
+    "officialName": "Republic of North Macedonia",
+    "capital": "Skopje",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 25713,
+    "currencies": [
+      "denar (den)"
+    ],
+    "languages": [
+      "Macedonian"
+    ],
+    "phoneCode": "+389",
+    "timezones": [],
+    "borders": [
+      "ALB",
+      "BGR",
+      "GRC",
+      "UNK",
+      "SRB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ML",
+    "code3": "MLI",
+    "name": "Mali",
+    "officialName": "Republic of Mali",
+    "capital": "Bamako",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 1240192,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+223",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "BFA",
+      "GIN",
+      "CIV",
+      "MRT",
+      "NER",
+      "SEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MT",
+    "code3": "MLT",
+    "name": "Malta",
+    "officialName": "Republic of Malta",
+    "capital": "Valletta",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 316,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "English",
+      "Maltese"
+    ],
+    "phoneCode": "+356",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "MM",
+    "code3": "MMR",
+    "name": "Myanmar",
+    "officialName": "Republic of the Union of Myanmar",
+    "capital": "Naypyidaw",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 676578,
+    "currencies": [
+      "Burmese kyat (Ks)"
+    ],
+    "languages": [
+      "Burmese"
+    ],
+    "phoneCode": "+95",
+    "timezones": [],
+    "borders": [
+      "BGD",
+      "CHN",
+      "IND",
+      "LAO",
+      "THA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ME",
+    "code3": "MNE",
+    "name": "Montenegro",
+    "officialName": "Montenegro",
+    "capital": "Podgorica",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 13812,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Montenegrin"
+    ],
+    "phoneCode": "+382",
+    "timezones": [],
+    "borders": [
+      "ALB",
+      "BIH",
+      "HRV",
+      "UNK",
+      "SRB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MN",
+    "code3": "MNG",
+    "name": "Mongolia",
+    "officialName": "Mongolia",
+    "capital": "Ulan Bator",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 1564110,
+    "currencies": [
+      "Mongolian tögrög (₮)"
+    ],
+    "languages": [
+      "Mongolian"
+    ],
+    "phoneCode": "+976",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MP",
+    "code3": "MNP",
+    "name": "Northern Mariana Islands",
+    "officialName": "Commonwealth of the Northern Mariana Islands",
+    "capital": "Saipan",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 464,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Carolinian",
+      "Chamorro",
+      "English"
+    ],
+    "phoneCode": "+1670",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "MZ",
+    "code3": "MOZ",
+    "name": "Mozambique",
+    "officialName": "Republic of Mozambique",
+    "capital": "Maputo",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 801590,
+    "currencies": [
+      "Mozambican metical (MT)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+258",
+    "timezones": [],
+    "borders": [
+      "MWI",
+      "ZAF",
+      "SWZ",
+      "TZA",
+      "ZMB",
+      "ZWE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MR",
+    "code3": "MRT",
+    "name": "Mauritania",
+    "officialName": "Islamic Republic of Mauritania",
+    "capital": "Nouakchott",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 1030700,
+    "currencies": [
+      "Mauritanian ouguiya (UM)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+222",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "MLI",
+      "SEN",
+      "ESH"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MS",
+    "code3": "MSR",
+    "name": "Montserrat",
+    "officialName": "Montserrat",
+    "capital": "Plymouth",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 102,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1664",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "MQ",
+    "code3": "MTQ",
+    "name": "Martinique",
+    "officialName": "Martinique",
+    "capital": "Fort-de-France",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 1128,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+596",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "MU",
+    "code3": "MUS",
+    "name": "Mauritius",
+    "officialName": "Republic of Mauritius",
+    "capital": "Port Louis",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 2040,
+    "currencies": [
+      "Mauritian rupee (₨)"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Mauritian Creole"
+    ],
+    "phoneCode": "+230",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "MW",
+    "code3": "MWI",
+    "name": "Malawi",
+    "officialName": "Republic of Malawi",
+    "capital": "Lilongwe",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 118484,
+    "currencies": [
+      "Malawian kwacha (MK)"
+    ],
+    "languages": [
+      "English",
+      "Chewa"
+    ],
+    "phoneCode": "+265",
+    "timezones": [],
+    "borders": [
+      "MOZ",
+      "TZA",
+      "ZMB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "MY",
+    "code3": "MYS",
+    "name": "Malaysia",
+    "officialName": "Malaysia",
+    "capital": "Kuala Lumpur",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 330803,
+    "currencies": [
+      "Malaysian ringgit (RM)"
+    ],
+    "languages": [
+      "English",
+      "Malay"
+    ],
+    "phoneCode": "+60",
+    "timezones": [],
+    "borders": [
+      "BRN",
+      "IDN",
+      "THA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "YT",
+    "code3": "MYT",
+    "name": "Mayotte",
+    "officialName": "Department of Mayotte",
+    "capital": "Mamoudzou",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 374,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+262",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "NA",
+    "code3": "NAM",
+    "name": "Namibia",
+    "officialName": "Republic of Namibia",
+    "capital": "Windhoek",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 0,
+    "area": 825615,
+    "currencies": [
+      "Namibian dollar ($)",
+      "South African rand (R)"
+    ],
+    "languages": [
+      "Afrikaans",
+      "German",
+      "English",
+      "Herero",
+      "Khoekhoe",
+      "Kwangali",
+      "Lozi",
+      "Ndonga",
+      "Tswana"
+    ],
+    "phoneCode": "+264",
+    "timezones": [],
+    "borders": [
+      "AGO",
+      "BWA",
+      "ZAF",
+      "ZMB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NC",
+    "code3": "NCL",
+    "name": "New Caledonia",
+    "officialName": "New Caledonia",
+    "capital": "Nouméa",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 0,
+    "area": 18575,
+    "currencies": [
+      "CFP franc (₣)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+687",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "NE",
+    "code3": "NER",
+    "name": "Niger",
+    "officialName": "Republic of Niger",
+    "capital": "Niamey",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 1267000,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+227",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "BEN",
+      "BFA",
+      "TCD",
+      "LBY",
+      "MLI",
+      "NGA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NF",
+    "code3": "NFK",
+    "name": "Norfolk Island",
+    "officialName": "Territory of Norfolk Island",
+    "capital": "Kingston",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 0,
+    "area": 36,
+    "currencies": [
+      "Australian dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Norfuk"
+    ],
+    "phoneCode": "+672",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "NG",
+    "code3": "NGA",
+    "name": "Nigeria",
+    "officialName": "Federal Republic of Nigeria",
+    "capital": "Abuja",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 923768,
+    "currencies": [
+      "Nigerian naira (₦)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+234",
+    "timezones": [],
+    "borders": [
+      "BEN",
+      "CMR",
+      "TCD",
+      "NER"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NI",
+    "code3": "NIC",
+    "name": "Nicaragua",
+    "officialName": "Republic of Nicaragua",
+    "capital": "Managua",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 130373,
+    "currencies": [
+      "Nicaraguan córdoba (C$)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+505",
+    "timezones": [],
+    "borders": [
+      "CRI",
+      "HND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NU",
+    "code3": "NIU",
+    "name": "Niue",
+    "officialName": "Niue",
+    "capital": "Alofi",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 260,
+    "currencies": [
+      "New Zealand dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Niuean"
+    ],
+    "phoneCode": "+683",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "NL",
+    "code3": "NLD",
+    "name": "Netherlands",
+    "officialName": "Kingdom of the Netherlands",
+    "capital": "Amsterdam",
+    "region": "Europe",
+    "subregion": "Western Europe",
+    "population": 0,
+    "area": 41850,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Dutch"
+    ],
+    "phoneCode": "+31",
+    "timezones": [],
+    "borders": [
+      "BEL",
+      "DEU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NO",
+    "code3": "NOR",
+    "name": "Norway",
+    "officialName": "Kingdom of Norway",
+    "capital": "Oslo",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 323802,
+    "currencies": [
+      "Norwegian krone (kr)"
+    ],
+    "languages": [
+      "Norwegian Nynorsk",
+      "Norwegian Bokmål",
+      "Sami"
+    ],
+    "phoneCode": "+47",
+    "timezones": [],
+    "borders": [
+      "FIN",
+      "SWE",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NP",
+    "code3": "NPL",
+    "name": "Nepal",
+    "officialName": "Federal Democratic Republic of Nepal",
+    "capital": "Kathmandu",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 147181,
+    "currencies": [
+      "Nepalese rupee (₨)"
+    ],
+    "languages": [
+      "Nepali"
+    ],
+    "phoneCode": "+977",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "IND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "NR",
+    "code3": "NRU",
+    "name": "Nauru",
+    "officialName": "Republic of Nauru",
+    "capital": "Yaren",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 21,
+    "currencies": [
+      "Australian dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Nauru"
+    ],
+    "phoneCode": "+674",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "NZ",
+    "code3": "NZL",
+    "name": "New Zealand",
+    "officialName": "New Zealand",
+    "capital": "Wellington",
+    "region": "Oceania",
+    "subregion": "Australia and New Zealand",
+    "population": 0,
+    "area": 270467,
+    "currencies": [
+      "New Zealand dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Māori",
+      "New Zealand Sign Language"
+    ],
+    "phoneCode": "+64",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "OM",
+    "code3": "OMN",
+    "name": "Oman",
+    "officialName": "Sultanate of Oman",
+    "capital": "Muscat",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 309500,
+    "currencies": [
+      "Omani rial (ر.ع.)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+968",
+    "timezones": [],
+    "borders": [
+      "SAU",
+      "ARE",
+      "YEM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PK",
+    "code3": "PAK",
+    "name": "Pakistan",
+    "officialName": "Islamic Republic of Pakistan",
+    "capital": "Islamabad",
+    "region": "Asia",
+    "subregion": "Southern Asia",
+    "population": 0,
+    "area": 881912,
+    "currencies": [
+      "Pakistani rupee (₨)"
+    ],
+    "languages": [
+      "English",
+      "Urdu"
+    ],
+    "phoneCode": "+92",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "CHN",
+      "IND",
+      "IRN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PA",
+    "code3": "PAN",
+    "name": "Panama",
+    "officialName": "Republic of Panama",
+    "capital": "Panama City",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 75417,
+    "currencies": [
+      "Panamanian balboa (B/.)",
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+507",
+    "timezones": [],
+    "borders": [
+      "COL",
+      "CRI"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PN",
+    "code3": "PCN",
+    "name": "Pitcairn Islands",
+    "officialName": "Pitcairn Group of Islands",
+    "capital": "Adamstown",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 47,
+    "currencies": [
+      "New Zealand dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+64",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "PE",
+    "code3": "PER",
+    "name": "Peru",
+    "officialName": "Republic of Peru",
+    "capital": "Lima",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 1285216,
+    "currencies": [
+      "Peruvian sol (S/.)"
+    ],
+    "languages": [
+      "Aymara",
+      "Quechua",
+      "Spanish"
+    ],
+    "phoneCode": "+51",
+    "timezones": [],
+    "borders": [
+      "BOL",
+      "BRA",
+      "CHL",
+      "COL",
+      "ECU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PH",
+    "code3": "PHL",
+    "name": "Philippines",
+    "officialName": "Republic of the Philippines",
+    "capital": "Manila",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 342353,
+    "currencies": [
+      "Philippine peso (₱)"
+    ],
+    "languages": [
+      "English",
+      "Filipino"
+    ],
+    "phoneCode": "+63",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "PW",
+    "code3": "PLW",
+    "name": "Palau",
+    "officialName": "Republic of Palau",
+    "capital": "Ngerulmud",
+    "region": "Oceania",
+    "subregion": "Micronesia",
+    "population": 0,
+    "area": 459,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Palauan"
+    ],
+    "phoneCode": "+680",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "PG",
+    "code3": "PNG",
+    "name": "Papua New Guinea",
+    "officialName": "Independent State of Papua New Guinea",
+    "capital": "Port Moresby",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 0,
+    "area": 462840,
+    "currencies": [
+      "Papua New Guinean kina (K)"
+    ],
+    "languages": [
+      "English",
+      "Hiri Motu",
+      "Tok Pisin"
+    ],
+    "phoneCode": "+675",
+    "timezones": [],
+    "borders": [
+      "IDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PL",
+    "code3": "POL",
+    "name": "Poland",
+    "officialName": "Republic of Poland",
+    "capital": "Warsaw",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 312679,
+    "currencies": [
+      "Polish złoty (zł)"
+    ],
+    "languages": [
+      "Polish"
+    ],
+    "phoneCode": "+48",
+    "timezones": [],
+    "borders": [
+      "BLR",
+      "CZE",
+      "DEU",
+      "LTU",
+      "RUS",
+      "SVK",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PR",
+    "code3": "PRI",
+    "name": "Puerto Rico",
+    "officialName": "Commonwealth of Puerto Rico",
+    "capital": "San Juan",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 8870,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "phoneCode": "+1 (2 zones)",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "KP",
+    "code3": "PRK",
+    "name": "North Korea",
+    "officialName": "Democratic People's Republic of Korea",
+    "capital": "Pyongyang",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 120538,
+    "currencies": [
+      "North Korean won (₩)"
+    ],
+    "languages": [
+      "Korean"
+    ],
+    "phoneCode": "+850",
+    "timezones": [],
+    "borders": [
+      "CHN",
+      "KOR",
+      "RUS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PT",
+    "code3": "PRT",
+    "name": "Portugal",
+    "officialName": "Portuguese Republic",
+    "capital": "Lisbon",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 92090,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+351",
+    "timezones": [],
+    "borders": [
+      "ESP"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PY",
+    "code3": "PRY",
+    "name": "Paraguay",
+    "officialName": "Republic of Paraguay",
+    "capital": "Asunción",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 406752,
+    "currencies": [
+      "Paraguayan guaraní (₲)"
+    ],
+    "languages": [
+      "Guaraní",
+      "Spanish"
+    ],
+    "phoneCode": "+595",
+    "timezones": [],
+    "borders": [
+      "ARG",
+      "BOL",
+      "BRA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PS",
+    "code3": "PSE",
+    "name": "Palestine",
+    "officialName": "State of Palestine",
+    "capital": "Ramallah",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 6220,
+    "currencies": [
+      "Egyptian pound (E£)",
+      "Israeli new shekel (₪)",
+      "Jordanian dinar (JD)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+970",
+    "timezones": [],
+    "borders": [
+      "ISR",
+      "EGY",
+      "JOR"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "PF",
+    "code3": "PYF",
+    "name": "French Polynesia",
+    "officialName": "French Polynesia",
+    "capital": "Papeetē",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 4167,
+    "currencies": [
+      "CFP franc (₣)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+689",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "QA",
+    "code3": "QAT",
+    "name": "Qatar",
+    "officialName": "State of Qatar",
+    "capital": "Doha",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 11586,
+    "currencies": [
+      "Qatari riyal (ر.ق)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+974",
+    "timezones": [],
+    "borders": [
+      "SAU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "RE",
+    "code3": "REU",
+    "name": "Réunion",
+    "officialName": "Réunion Island",
+    "capital": "Saint-Denis",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 2511,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+262",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "RO",
+    "code3": "ROU",
+    "name": "Romania",
+    "officialName": "Romania",
+    "capital": "Bucharest",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 238391,
+    "currencies": [
+      "Romanian leu (lei)"
+    ],
+    "languages": [
+      "Romanian"
+    ],
+    "phoneCode": "+40",
+    "timezones": [],
+    "borders": [
+      "BGR",
+      "HUN",
+      "MDA",
+      "SRB",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "RU",
+    "code3": "RUS",
+    "name": "Russia",
+    "officialName": "Russian Federation",
+    "capital": "Moscow",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 0,
+    "area": 17098242,
+    "currencies": [
+      "Russian ruble (₽)"
+    ],
+    "languages": [
+      "Russian"
+    ],
+    "phoneCode": "+7 (5 zones)",
+    "timezones": [],
+    "borders": [
+      "AZE",
+      "BLR",
+      "CHN",
+      "EST",
+      "FIN",
+      "GEO",
+      "KAZ",
+      "PRK",
+      "LVA",
+      "LTU",
+      "MNG",
+      "NOR",
+      "POL",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "RW",
+    "code3": "RWA",
+    "name": "Rwanda",
+    "officialName": "Republic of Rwanda",
+    "capital": "Kigali",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 26338,
+    "currencies": [
+      "Rwandan franc (Fr)"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Kinyarwanda"
+    ],
+    "phoneCode": "+250",
+    "timezones": [],
+    "borders": [
+      "BDI",
+      "COD",
+      "TZA",
+      "UGA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SA",
+    "code3": "SAU",
+    "name": "Saudi Arabia",
+    "officialName": "Kingdom of Saudi Arabia",
+    "capital": "Riyadh",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 2149690,
+    "currencies": [
+      "Saudi riyal (ر.س)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+966",
+    "timezones": [],
+    "borders": [
+      "IRQ",
+      "JOR",
+      "KWT",
+      "OMN",
+      "QAT",
+      "ARE",
+      "YEM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SD",
+    "code3": "SDN",
+    "name": "Sudan",
+    "officialName": "Republic of the Sudan",
+    "capital": "Khartoum",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 1886068,
+    "currencies": [
+      "Sudanese pound (PT)"
+    ],
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "phoneCode": "+249",
+    "timezones": [],
+    "borders": [
+      "CAF",
+      "TCD",
+      "EGY",
+      "ERI",
+      "ETH",
+      "LBY",
+      "SSD"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SN",
+    "code3": "SEN",
+    "name": "Senegal",
+    "officialName": "Republic of Senegal",
+    "capital": "Dakar",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 196722,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+221",
+    "timezones": [],
+    "borders": [
+      "GMB",
+      "GIN",
+      "GNB",
+      "MLI",
+      "MRT"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SG",
+    "code3": "SGP",
+    "name": "Singapore",
+    "officialName": "Republic of Singapore",
+    "capital": "Singapore",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 710,
+    "currencies": [
+      "Singapore dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Malay",
+      "Tamil",
+      "Chinese"
+    ],
+    "phoneCode": "+65",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "GS",
+    "code3": "SGS",
+    "name": "South Georgia",
+    "officialName": "South Georgia and the South Sandwich Islands",
+    "capital": "King Edward Point",
+    "region": "Antarctic",
+    "subregion": "",
+    "population": 0,
+    "area": 3903,
+    "currencies": [
+      "Saint Helena pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+500",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "SJ",
+    "code3": "SJM",
+    "name": "Svalbard and Jan Mayen",
+    "officialName": "Svalbard og Jan Mayen",
+    "capital": "Longyearbyen",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": -1,
+    "currencies": [
+      "krone (kr)"
+    ],
+    "languages": [
+      "Norwegian"
+    ],
+    "phoneCode": "+4779",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "SB",
+    "code3": "SLB",
+    "name": "Solomon Islands",
+    "officialName": "Solomon Islands",
+    "capital": "Honiara",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 0,
+    "area": 28896,
+    "currencies": [
+      "Solomon Islands dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+677",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "SL",
+    "code3": "SLE",
+    "name": "Sierra Leone",
+    "officialName": "Republic of Sierra Leone",
+    "capital": "Freetown",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 71740,
+    "currencies": [
+      "Sierra Leonean leone (Le)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+232",
+    "timezones": [],
+    "borders": [
+      "GIN",
+      "LBR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SV",
+    "code3": "SLV",
+    "name": "El Salvador",
+    "officialName": "Republic of El Salvador",
+    "capital": "San Salvador",
+    "region": "Americas",
+    "subregion": "Central America",
+    "population": 0,
+    "area": 21041,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+503",
+    "timezones": [],
+    "borders": [
+      "GTM",
+      "HND"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SM",
+    "code3": "SMR",
+    "name": "San Marino",
+    "officialName": "Most Serene Republic of San Marino",
+    "capital": "City of San Marino",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 61,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Italian"
+    ],
+    "phoneCode": "+378",
+    "timezones": [],
+    "borders": [
+      "ITA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SO",
+    "code3": "SOM",
+    "name": "Somalia",
+    "officialName": "Federal Republic of Somalia",
+    "capital": "Mogadishu",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 637657,
+    "currencies": [
+      "Somali shilling (Sh)"
+    ],
+    "languages": [
+      "Arabic",
+      "Somali"
+    ],
+    "phoneCode": "+252",
+    "timezones": [],
+    "borders": [
+      "DJI",
+      "ETH",
+      "KEN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "PM",
+    "code3": "SPM",
+    "name": "Saint Pierre and Miquelon",
+    "officialName": "Saint Pierre and Miquelon",
+    "capital": "Saint-Pierre",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 242,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+508",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "RS",
+    "code3": "SRB",
+    "name": "Serbia",
+    "officialName": "Republic of Serbia",
+    "capital": "Belgrade",
+    "region": "Europe",
+    "subregion": "Southeast Europe",
+    "population": 0,
+    "area": 88361,
+    "currencies": [
+      "Serbian dinar (дин.)"
+    ],
+    "languages": [
+      "Serbian"
+    ],
+    "phoneCode": "+381",
+    "timezones": [],
+    "borders": [
+      "BIH",
+      "BGR",
+      "HRV",
+      "HUN",
+      "UNK",
+      "MKD",
+      "MNE",
+      "ROU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SS",
+    "code3": "SSD",
+    "name": "South Sudan",
+    "officialName": "Republic of South Sudan",
+    "capital": "Juba",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 619745,
+    "currencies": [
+      "South Sudanese pound (£)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+211",
+    "timezones": [],
+    "borders": [
+      "CAF",
+      "COD",
+      "ETH",
+      "KEN",
+      "SDN",
+      "UGA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ST",
+    "code3": "STP",
+    "name": "São Tomé and Príncipe",
+    "officialName": "Democratic Republic of São Tomé and Príncipe",
+    "capital": "São Tomé",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 964,
+    "currencies": [
+      "São Tomé and Príncipe dobra (Db)"
+    ],
+    "languages": [
+      "Portuguese"
+    ],
+    "phoneCode": "+239",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "SR",
+    "code3": "SUR",
+    "name": "Suriname",
+    "officialName": "Republic of Suriname",
+    "capital": "Paramaribo",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 163820,
+    "currencies": [
+      "Surinamese dollar ($)"
+    ],
+    "languages": [
+      "Dutch"
+    ],
+    "phoneCode": "+597",
+    "timezones": [],
+    "borders": [
+      "BRA",
+      "GUF",
+      "GUY"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SK",
+    "code3": "SVK",
+    "name": "Slovakia",
+    "officialName": "Slovak Republic",
+    "capital": "Bratislava",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 49037,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Slovak"
+    ],
+    "phoneCode": "+421",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "CZE",
+      "HUN",
+      "POL",
+      "UKR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SI",
+    "code3": "SVN",
+    "name": "Slovenia",
+    "officialName": "Republic of Slovenia",
+    "capital": "Ljubljana",
+    "region": "Europe",
+    "subregion": "Central Europe",
+    "population": 0,
+    "area": 20273,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Slovene"
+    ],
+    "phoneCode": "+386",
+    "timezones": [],
+    "borders": [
+      "AUT",
+      "HRV",
+      "ITA",
+      "HUN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SE",
+    "code3": "SWE",
+    "name": "Sweden",
+    "officialName": "Kingdom of Sweden",
+    "capital": "Stockholm",
+    "region": "Europe",
+    "subregion": "Northern Europe",
+    "population": 0,
+    "area": 450295,
+    "currencies": [
+      "Swedish krona (kr)"
+    ],
+    "languages": [
+      "Swedish"
+    ],
+    "phoneCode": "+46",
+    "timezones": [],
+    "borders": [
+      "FIN",
+      "NOR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SZ",
+    "code3": "SWZ",
+    "name": "Eswatini",
+    "officialName": "Kingdom of Eswatini",
+    "capital": "Lobamba",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 0,
+    "area": 17364,
+    "currencies": [
+      "Swazi lilangeni (L)",
+      "South African rand (R)"
+    ],
+    "languages": [
+      "English",
+      "Swazi"
+    ],
+    "phoneCode": "+268",
+    "timezones": [],
+    "borders": [
+      "MOZ",
+      "ZAF"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "SX",
+    "code3": "SXM",
+    "name": "Sint Maarten",
+    "officialName": "Sint Maarten",
+    "capital": "Philipsburg",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 34,
+    "currencies": [
+      "Netherlands Antillean guilder (ƒ)"
+    ],
+    "languages": [
+      "English",
+      "French",
+      "Dutch"
+    ],
+    "phoneCode": "+1721",
+    "timezones": [],
+    "borders": [
+      "MAF"
+    ],
+    "unMember": false
+  },
+  {
+    "code": "SC",
+    "code3": "SYC",
+    "name": "Seychelles",
+    "officialName": "Republic of Seychelles",
+    "capital": "Victoria",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 452,
+    "currencies": [
+      "Seychellois rupee (₨)"
+    ],
+    "languages": [
+      "Seychellois Creole",
+      "English",
+      "French"
+    ],
+    "phoneCode": "+248",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "SY",
+    "code3": "SYR",
+    "name": "Syria",
+    "officialName": "Syrian Arab Republic",
+    "capital": "Damascus",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 185180,
+    "currencies": [
+      "Syrian pound (£)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+963",
+    "timezones": [],
+    "borders": [
+      "IRQ",
+      "ISR",
+      "JOR",
+      "LBN",
+      "TUR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TC",
+    "code3": "TCA",
+    "name": "Turks and Caicos Islands",
+    "officialName": "Turks and Caicos Islands",
+    "capital": "Cockburn Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 948,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1649",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "TD",
+    "code3": "TCD",
+    "name": "Chad",
+    "officialName": "Republic of Chad",
+    "capital": "N'Djamena",
+    "region": "Africa",
+    "subregion": "Middle Africa",
+    "population": 0,
+    "area": 1284000,
+    "currencies": [
+      "Central African CFA franc (Fr)"
+    ],
+    "languages": [
+      "Arabic",
+      "French"
+    ],
+    "phoneCode": "+235",
+    "timezones": [],
+    "borders": [
+      "CMR",
+      "CAF",
+      "LBY",
+      "NER",
+      "NGA",
+      "SDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TG",
+    "code3": "TGO",
+    "name": "Togo",
+    "officialName": "Togolese Republic",
+    "capital": "Lomé",
+    "region": "Africa",
+    "subregion": "Western Africa",
+    "population": 0,
+    "area": 56785,
+    "currencies": [
+      "West African CFA franc (Fr)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+228",
+    "timezones": [],
+    "borders": [
+      "BEN",
+      "BFA",
+      "GHA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TH",
+    "code3": "THA",
+    "name": "Thailand",
+    "officialName": "Kingdom of Thailand",
+    "capital": "Bangkok",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 513120,
+    "currencies": [
+      "Thai baht (฿)"
+    ],
+    "languages": [
+      "Thai"
+    ],
+    "phoneCode": "+66",
+    "timezones": [],
+    "borders": [
+      "MMR",
+      "KHM",
+      "LAO",
+      "MYS"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TJ",
+    "code3": "TJK",
+    "name": "Tajikistan",
+    "officialName": "Republic of Tajikistan",
+    "capital": "Dushanbe",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 0,
+    "area": 143100,
+    "currencies": [
+      "Tajikistani somoni (ЅМ)"
+    ],
+    "languages": [
+      "Russian",
+      "Tajik"
+    ],
+    "phoneCode": "+992",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "CHN",
+      "KGZ",
+      "UZB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TK",
+    "code3": "TKL",
+    "name": "Tokelau",
+    "officialName": "Tokelau",
+    "capital": "Fakaofo",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 12,
+    "currencies": [
+      "New Zealand dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Samoan",
+      "Tokelauan"
+    ],
+    "phoneCode": "+690",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "TM",
+    "code3": "TKM",
+    "name": "Turkmenistan",
+    "officialName": "Turkmenistan",
+    "capital": "Ashgabat",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 0,
+    "area": 488100,
+    "currencies": [
+      "Turkmenistan manat (m)"
+    ],
+    "languages": [
+      "Russian",
+      "Turkmen"
+    ],
+    "phoneCode": "+993",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "IRN",
+      "KAZ",
+      "UZB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TL",
+    "code3": "TLS",
+    "name": "Timor-Leste",
+    "officialName": "Democratic Republic of Timor-Leste",
+    "capital": "Dili",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 14874,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "Portuguese",
+      "Tetum"
+    ],
+    "phoneCode": "+670",
+    "timezones": [],
+    "borders": [
+      "IDN"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TO",
+    "code3": "TON",
+    "name": "Tonga",
+    "officialName": "Kingdom of Tonga",
+    "capital": "Nuku'alofa",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 747,
+    "currencies": [
+      "Tongan paʻanga (T$)"
+    ],
+    "languages": [
+      "English",
+      "Tongan"
+    ],
+    "phoneCode": "+676",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "TT",
+    "code3": "TTO",
+    "name": "Trinidad and Tobago",
+    "officialName": "Republic of Trinidad and Tobago",
+    "capital": "Port of Spain",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 5130,
+    "currencies": [
+      "Trinidad and Tobago dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1868",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "TN",
+    "code3": "TUN",
+    "name": "Tunisia",
+    "officialName": "Tunisian Republic",
+    "capital": "Tunis",
+    "region": "Africa",
+    "subregion": "Northern Africa",
+    "population": 0,
+    "area": 163610,
+    "currencies": [
+      "Tunisian dinar (د.ت)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+216",
+    "timezones": [],
+    "borders": [
+      "DZA",
+      "LBY"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TR",
+    "code3": "TUR",
+    "name": "Türkiye",
+    "officialName": "Republic of Türkiye",
+    "capital": "Ankara",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 783562,
+    "currencies": [
+      "Turkish lira (₺)"
+    ],
+    "languages": [
+      "Turkish"
+    ],
+    "phoneCode": "+90",
+    "timezones": [],
+    "borders": [
+      "ARM",
+      "AZE",
+      "BGR",
+      "GEO",
+      "GRC",
+      "IRN",
+      "IRQ",
+      "SYR"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "TV",
+    "code3": "TUV",
+    "name": "Tuvalu",
+    "officialName": "Tuvalu",
+    "capital": "Funafuti",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 26,
+    "currencies": [
+      "Australian dollar ($)",
+      "Tuvaluan dollar ($)"
+    ],
+    "languages": [
+      "English",
+      "Tuvaluan"
+    ],
+    "phoneCode": "+688",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "TW",
+    "code3": "TWN",
+    "name": "Taiwan",
+    "officialName": "Republic of China (Taiwan)",
+    "capital": "Taipei",
+    "region": "Asia",
+    "subregion": "Eastern Asia",
+    "population": 0,
+    "area": 36193,
+    "currencies": [
+      "New Taiwan dollar ($)"
+    ],
+    "languages": [
+      "Chinese"
+    ],
+    "phoneCode": "+886",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "TZ",
+    "code3": "TZA",
+    "name": "Tanzania",
+    "officialName": "United Republic of Tanzania",
+    "capital": "Dodoma",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 945087,
+    "currencies": [
+      "Tanzanian shilling (Sh)"
+    ],
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "phoneCode": "+255",
+    "timezones": [],
+    "borders": [
+      "BDI",
+      "COD",
+      "KEN",
+      "MWI",
+      "MOZ",
+      "RWA",
+      "UGA",
+      "ZMB"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "UG",
+    "code3": "UGA",
+    "name": "Uganda",
+    "officialName": "Republic of Uganda",
+    "capital": "Kampala",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 241550,
+    "currencies": [
+      "Ugandan shilling (Sh)"
+    ],
+    "languages": [
+      "English",
+      "Swahili"
+    ],
+    "phoneCode": "+256",
+    "timezones": [],
+    "borders": [
+      "COD",
+      "KEN",
+      "RWA",
+      "SSD",
+      "TZA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "UA",
+    "code3": "UKR",
+    "name": "Ukraine",
+    "officialName": "Ukraine",
+    "capital": "Kyiv",
+    "region": "Europe",
+    "subregion": "Eastern Europe",
+    "population": 0,
+    "area": 603500,
+    "currencies": [
+      "Ukrainian hryvnia (₴)"
+    ],
+    "languages": [
+      "Ukrainian"
+    ],
+    "phoneCode": "+380",
+    "timezones": [],
+    "borders": [
+      "BLR",
+      "HUN",
+      "MDA",
+      "POL",
+      "ROU",
+      "RUS",
+      "SVK"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "UM",
+    "code3": "UMI",
+    "name": "United States Minor Outlying Islands",
+    "officialName": "United States Minor Outlying Islands",
+    "capital": "N/A",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 34.2,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+268",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "UY",
+    "code3": "URY",
+    "name": "Uruguay",
+    "officialName": "Oriental Republic of Uruguay",
+    "capital": "Montevideo",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 181034,
+    "currencies": [
+      "Uruguayan peso ($)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+598",
+    "timezones": [],
+    "borders": [
+      "ARG",
+      "BRA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "US",
+    "code3": "USA",
+    "name": "United States",
+    "officialName": "United States of America",
+    "capital": "Washington D.C.",
+    "region": "Americas",
+    "subregion": "North America",
+    "population": 0,
+    "area": 9372610,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1 (380 zones)",
+    "timezones": [],
+    "borders": [
+      "CAN",
+      "MEX"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "UZ",
+    "code3": "UZB",
+    "name": "Uzbekistan",
+    "officialName": "Republic of Uzbekistan",
+    "capital": "Tashkent",
+    "region": "Asia",
+    "subregion": "Central Asia",
+    "population": 0,
+    "area": 447400,
+    "currencies": [
+      "Uzbekistani soʻm (so'm)"
+    ],
+    "languages": [
+      "Russian",
+      "Uzbek"
+    ],
+    "phoneCode": "+998",
+    "timezones": [],
+    "borders": [
+      "AFG",
+      "KAZ",
+      "KGZ",
+      "TJK",
+      "TKM"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "VA",
+    "code3": "VAT",
+    "name": "Vatican City",
+    "officialName": "Vatican City State",
+    "capital": "Vatican City",
+    "region": "Europe",
+    "subregion": "Southern Europe",
+    "population": 0,
+    "area": 0.44,
+    "currencies": [
+      "Euro (€)"
+    ],
+    "languages": [
+      "Italian",
+      "Latin"
+    ],
+    "phoneCode": "+3 (2 zones)",
+    "timezones": [],
+    "borders": [
+      "ITA"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "VC",
+    "code3": "VCT",
+    "name": "Saint Vincent and the Grenadines",
+    "officialName": "Saint Vincent and the Grenadines",
+    "capital": "Kingstown",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 389,
+    "currencies": [
+      "Eastern Caribbean dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1784",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "VE",
+    "code3": "VEN",
+    "name": "Venezuela",
+    "officialName": "Bolivarian Republic of Venezuela",
+    "capital": "Caracas",
+    "region": "Americas",
+    "subregion": "South America",
+    "population": 0,
+    "area": 916445,
+    "currencies": [
+      "Venezuelan bolívar soberano (Bs.S.)"
+    ],
+    "languages": [
+      "Spanish"
+    ],
+    "phoneCode": "+58",
+    "timezones": [],
+    "borders": [
+      "BRA",
+      "COL",
+      "GUY"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "VG",
+    "code3": "VGB",
+    "name": "British Virgin Islands",
+    "officialName": "Virgin Islands",
+    "capital": "Road Town",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 151,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1284",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "VI",
+    "code3": "VIR",
+    "name": "United States Virgin Islands",
+    "officialName": "Virgin Islands of the United States",
+    "capital": "Charlotte Amalie",
+    "region": "Americas",
+    "subregion": "Caribbean",
+    "population": 0,
+    "area": 347,
+    "currencies": [
+      "United States dollar ($)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+1340",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "VN",
+    "code3": "VNM",
+    "name": "Vietnam",
+    "officialName": "Socialist Republic of Vietnam",
+    "capital": "Hanoi",
+    "region": "Asia",
+    "subregion": "South-Eastern Asia",
+    "population": 0,
+    "area": 331212,
+    "currencies": [
+      "Vietnamese đồng (₫)"
+    ],
+    "languages": [
+      "Vietnamese"
+    ],
+    "phoneCode": "+84",
+    "timezones": [],
+    "borders": [
+      "KHM",
+      "CHN",
+      "LAO"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "VU",
+    "code3": "VUT",
+    "name": "Vanuatu",
+    "officialName": "Republic of Vanuatu",
+    "capital": "Port Vila",
+    "region": "Oceania",
+    "subregion": "Melanesia",
+    "population": 0,
+    "area": 12189,
+    "currencies": [
+      "Vanuatu vatu (Vt)"
+    ],
+    "languages": [
+      "Bislama",
+      "English",
+      "French"
+    ],
+    "phoneCode": "+678",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "WF",
+    "code3": "WLF",
+    "name": "Wallis and Futuna",
+    "officialName": "Territory of the Wallis and Futuna Islands",
+    "capital": "Mata-Utu",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 142,
+    "currencies": [
+      "CFP franc (₣)"
+    ],
+    "languages": [
+      "French"
+    ],
+    "phoneCode": "+681",
+    "timezones": [],
+    "borders": [],
+    "unMember": false
+  },
+  {
+    "code": "WS",
+    "code3": "WSM",
+    "name": "Samoa",
+    "officialName": "Independent State of Samoa",
+    "capital": "Apia",
+    "region": "Oceania",
+    "subregion": "Polynesia",
+    "population": 0,
+    "area": 2842,
+    "currencies": [
+      "Samoan tālā (T)"
+    ],
+    "languages": [
+      "English",
+      "Samoan"
+    ],
+    "phoneCode": "+685",
+    "timezones": [],
+    "borders": [],
+    "unMember": true
+  },
+  {
+    "code": "YE",
+    "code3": "YEM",
+    "name": "Yemen",
+    "officialName": "Republic of Yemen",
+    "capital": "Sana'a",
+    "region": "Asia",
+    "subregion": "Western Asia",
+    "population": 0,
+    "area": 527968,
+    "currencies": [
+      "Yemeni rial (﷼)"
+    ],
+    "languages": [
+      "Arabic"
+    ],
+    "phoneCode": "+967",
+    "timezones": [],
+    "borders": [
+      "OMN",
+      "SAU"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ZA",
+    "code3": "ZAF",
+    "name": "South Africa",
+    "officialName": "Republic of South Africa",
+    "capital": "Pretoria, Bloemfontein, Cape Town",
+    "region": "Africa",
+    "subregion": "Southern Africa",
+    "population": 0,
+    "area": 1221037,
+    "currencies": [
+      "South African rand (R)"
+    ],
+    "languages": [
+      "Afrikaans",
+      "English",
+      "Southern Ndebele",
+      "Northern Sotho",
+      "Southern Sotho",
+      "Swazi",
+      "Tswana",
+      "Tsonga",
+      "Venda",
+      "Xhosa",
+      "Zulu"
+    ],
+    "phoneCode": "+27",
+    "timezones": [],
+    "borders": [
+      "BWA",
+      "LSO",
+      "MOZ",
+      "NAM",
+      "SWZ",
+      "ZWE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ZM",
+    "code3": "ZMB",
+    "name": "Zambia",
+    "officialName": "Republic of Zambia",
+    "capital": "Lusaka",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 752612,
+    "currencies": [
+      "Zambian kwacha (ZK)"
+    ],
+    "languages": [
+      "English"
+    ],
+    "phoneCode": "+260",
+    "timezones": [],
+    "borders": [
+      "AGO",
+      "BWA",
+      "COD",
+      "MWI",
+      "MOZ",
+      "NAM",
+      "TZA",
+      "ZWE"
+    ],
+    "unMember": true
+  },
+  {
+    "code": "ZW",
+    "code3": "ZWE",
+    "name": "Zimbabwe",
+    "officialName": "Republic of Zimbabwe",
+    "capital": "Harare",
+    "region": "Africa",
+    "subregion": "Eastern Africa",
+    "population": 0,
+    "area": 390757,
+    "currencies": [
+      "Botswana pula (P)",
+      "Chinese yuan (¥)",
+      "Euro (€)",
+      "British pound (£)",
+      "Indian rupee (₹)",
+      "Japanese yen (¥)",
+      "United States dollar ($)",
+      "South African rand (Rs)",
+      "Zimbabwean bonds ($)"
+    ],
+    "languages": [
+      "Chibarwe",
+      "English",
+      "Kalanga",
+      "Khoisan",
+      "Ndau",
+      "Northern Ndebele",
+      "Chewa",
+      "Shona",
+      "Sotho",
+      "Tonga",
+      "Tswana",
+      "Tsonga",
+      "Venda",
+      "Xhosa",
+      "Zimbabwean Sign Language"
+    ],
+    "phoneCode": "+263",
+    "timezones": [],
+    "borders": [
+      "BWA",
+      "MOZ",
+      "ZAF",
+      "ZMB"
+    ],
+    "unMember": true
+  }
+]

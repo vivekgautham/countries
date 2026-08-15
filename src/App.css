@@ -111,7 +111,7 @@
 .filter-sort-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
@@ -119,6 +119,7 @@
 .region-chips {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
 }
 
@@ -145,31 +146,6 @@
   color: #ffffff;
   border-color: #6366f1;
   box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
-}
-
-.sort-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: #94a3b8;
-  font-weight: 500;
-}
-
-.sort-select {
-  padding: 0.5rem 0.85rem;
-  border-radius: 10px;
-  background: rgba(30, 41, 59, 0.7);
-  color: #f1f5f9;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  outline: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.sort-select:focus {
-  border-color: #6366f1;
 }
 
 .stats-bar {
@@ -630,11 +606,6 @@
     background: #f1f5f9;
     color: #64748b;
     border-color: rgba(0, 0, 0, 0.08);
-  }
-  .sort-select {
-    background: #ffffff;
-    color: #0f172a;
-    border-color: rgba(0, 0, 0, 0.15);
   }
   .country-card {
     background: #ffffff;
