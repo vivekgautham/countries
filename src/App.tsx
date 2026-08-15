@@ -71,10 +71,6 @@ function App() {
     return result;
   }, [countries, searchTerm, selectedRegion]);
 
-  const totalFilteredPopulation = useMemo(() => {
-    return filteredCountries.reduce((sum, c) => sum + (c.population || 0), 0);
-  }, [filteredCountries]);
-
   return (
     <div className="app-container">
       <header className="app-header">
@@ -120,20 +116,6 @@ function App() {
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* Stats Bar */}
-          <div className="stats-bar">
-            <span>
-              <strong>{filteredCountries.length}</strong>{" "}
-              {filteredCountries.length === 1 ? "country" : "countries"}
-            </span>
-            {totalFilteredPopulation > 0 && (
-              <span>
-                Total Population:{" "}
-                <strong>{totalFilteredPopulation.toLocaleString()}</strong>
-              </span>
-            )}
           </div>
         </div>
       </header>
