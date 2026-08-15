@@ -1633,7 +1633,9 @@
       "Algerian dinar (د.ج)"
     ],
     "languages": [
-      "Arabic"
+      "Arabic",
+      "Tamazight (Berber)",
+      "French"
     ],
     "phoneCode": "+213",
     "timezones": [],
@@ -1768,7 +1770,11 @@
       "Euro (€)"
     ],
     "languages": [
-      "Spanish"
+      "Spanish",
+      "Catalan",
+      "Galician",
+      "Basque",
+      "Occitan (Aranese)"
     ],
     "phoneCode": "+34",
     "timezones": [],
@@ -1819,7 +1825,12 @@
       "Ethiopian birr (Br)"
     ],
     "languages": [
-      "Amharic"
+      "Amharic",
+      "Afar",
+      "Oromo",
+      "Somali",
+      "Tigrinya",
+      "English"
     ],
     "phoneCode": "+251",
     "timezones": [],
@@ -2619,9 +2630,28 @@
       "Indian rupee (₹)"
     ],
     "languages": [
-      "English",
       "Hindi",
-      "Tamil"
+      "English",
+      "Bengali",
+      "Telugu",
+      "Marathi",
+      "Tamil",
+      "Urdu",
+      "Gujarati",
+      "Kannada",
+      "Malayalam",
+      "Odia",
+      "Punjabi",
+      "Assamese",
+      "Maithili",
+      "Santali",
+      "Kashmiri",
+      "Nepali",
+      "Konkani",
+      "Dogri",
+      "Sindhi",
+      "Bodo",
+      "Sanskrit"
     ],
     "phoneCode": "+91",
     "timezones": [],
@@ -3302,7 +3332,8 @@
     ],
     "languages": [
       "Sinhala",
-      "Tamil"
+      "Tamil",
+      "English"
     ],
     "phoneCode": "+94",
     "timezones": [],
@@ -3477,7 +3508,8 @@
     ],
     "languages": [
       "Arabic",
-      "Berber"
+      "Tamazight (Berber)",
+      "French"
     ],
     "phoneCode": "+212",
     "timezones": [],
@@ -3916,7 +3948,8 @@
     "languages": [
       "English",
       "French",
-      "Mauritian Creole"
+      "Mauritian Creole",
+      "Bhojpuri"
     ],
     "phoneCode": "+230",
     "timezones": [],
@@ -4117,7 +4150,11 @@
       "Nigerian naira (₦)"
     ],
     "languages": [
-      "English"
+      "English",
+      "Hausa",
+      "Yoruba",
+      "Igbo",
+      "Fulfulde"
     ],
     "phoneCode": "+234",
     "timezones": [],
@@ -4334,8 +4371,13 @@
       "Pakistani rupee (₨)"
     ],
     "languages": [
+      "Urdu",
       "English",
-      "Urdu"
+      "Punjabi",
+      "Pashto",
+      "Sindhi",
+      "Saraiki",
+      "Balochi"
     ],
     "phoneCode": "+92",
     "timezones": [],
@@ -4436,8 +4478,15 @@
       "Philippine peso (₱)"
     ],
     "languages": [
+      "Filipino",
       "English",
-      "Filipino"
+      "Cebuano",
+      "Ilocano",
+      "Hiligaynon",
+      "Bikol",
+      "Waray",
+      "Kapampangan",
+      "Pangasinan"
     ],
     "phoneCode": "+63",
     "timezones": [],
@@ -4480,9 +4529,10 @@
       "Papua New Guinean kina (K)"
     ],
     "languages": [
+      "Tok Pisin",
       "English",
       "Hiri Motu",
-      "Tok Pisin"
+      "PNG Sign Language"
     ],
     "phoneCode": "+675",
     "timezones": [],
@@ -4785,9 +4835,10 @@
       "Rwandan franc (Fr)"
     ],
     "languages": [
-      "English",
+      "Kinyarwanda",
       "French",
-      "Kinyarwanda"
+      "English",
+      "Swahili"
     ],
     "phoneCode": "+250",
     "timezones": [],
@@ -6143,15 +6194,16 @@
     "languages": [
       "Afrikaans",
       "English",
-      "Southern Ndebele",
+      "isiNdebele",
       "Northern Sotho",
-      "Southern Sotho",
-      "Swazi",
-      "Tswana",
-      "Tsonga",
-      "Venda",
-      "Xhosa",
-      "Zulu"
+      "Sesotho",
+      "siSwati",
+      "Xitsonga",
+      "Setswana",
+      "Tshivenda",
+      "isiXhosa",
+      "isiZulu",
+      "South African Sign Language"
     ],
     "phoneCode": "+27",
     "timezones": [],
