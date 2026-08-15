@@ -87,17 +87,26 @@ export default function CountryListPage() {
             sx={{
               fontWeight: 800,
               letterSpacing: "-0.03em",
-              background:
-                "linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
               display: "flex",
               alignItems: "center",
               gap: 1.5,
               fontSize: { xs: "2rem", sm: "2.75rem" },
             }}
           >
-            <span>🌍</span> Countries
+            <Box component="span" sx={{ fontSize: "1.1em", lineHeight: 1 }}>
+              🌍
+            </Box>
+            <Box
+              component="span"
+              sx={{
+                background:
+                  "linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Countries
+            </Box>
           </Typography>
 
           {/* Search and Filter Section */}
