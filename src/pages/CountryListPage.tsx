@@ -1,4 +1,5 @@
 import ClearIcon from "@mui/icons-material/Clear";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ReplayIcon from "@mui/icons-material/Replay";
 import SearchIcon from "@mui/icons-material/Search";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -16,11 +17,13 @@ import {
   Paper,
   Stack,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
-import { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useMemo, useState } from "react";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
+import CompareFloatingDock from "../components/compare/CompareFloatingDock";
 import { getCountryEmoji } from "../utils/countryUtils";
 
 const REGIONS = [
@@ -33,12 +36,42 @@ const REGIONS = [
   "Antarctic",
 ];
 
+const MAX_COMPARE_COUNTRIES = 4;
+
 export default function CountryListPage() {
   const { data: countries = [], isLoading, isError } = useCountriesData();
   const navigate = useNavigate();
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
+    [],
+  );
+
+  const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
+    if (e) {
+      e.stopPropagation();
+    }
+    const upperCode = code.toUpperCase();
+    if (selectedCompareCodes.includes(upperCode)) {
+      setSelectedCompareCodes((prev) => prev.filter((c) => c !== upperCode));
+    } else {
+      if (selectedCompareCodes.length >= MAX_COMPARE_COUNTRIES) {
+        return;
+      }
+      setSelectedCompareCodes((prev) => [...prev, upperCode]);
+    }
+  };
+
+  const handleRemoveCompare = (code: string) => {
+    setSelectedCompareCodes((prev) =>
+      prev.filter((c) => c !== code.toUpperCase()),
+    );
+  };
+
+  const handleClearCompare = () => {
+    setSelectedCompareCodes([]);
+  };
 
   const filteredCountries = useMemo(() => {
     let result = [...countries];
@@ -82,6 +115,7 @@ export default function CountryListPage() {
         maxWidth: 1720,
         py: { xs: 2.5, sm: 4 },
         px: { xs: 1.5, sm: 3 },
+        pb: selectedCompareCodes.length > 0 ? 12 : { xs: 2.5, sm: 4 },
       }}
     >
       {/* Header Section */}
@@ -114,6 +148,30 @@ export default function CountryListPage() {
               Countries
             </Box>
           </Typography>
+
+          {/* Compare Shortcuts Button */}
+          <Button
+            component={RouterLink}
+            to="/compare"
+            startIcon={<CompareArrowsIcon />}
+            variant="outlined"
+            sx={{
+              borderRadius: 3,
+              borderColor: "rgba(99, 102, 241, 0.4)",
+              backgroundColor: "rgba(99, 102, 241, 0.1)",
+              color: "primary.light",
+              px: 2.5,
+              py: 0.75,
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              "&:hover": {
+                borderColor: "primary.light",
+                backgroundColor: "rgba(99, 102, 241, 0.2)",
+              },
+            }}
+          >
+            Compare Countries
+          </Button>
 
           {/* Search and Filter Section */}
           <Box sx={{ width: "100%", maxWidth: 840 }}>
@@ -291,6 +349,9 @@ export default function CountryListPage() {
             {filteredCountries.map((country) => {
               const codeLower = country.code.toLowerCase();
               const flagUrl = `https://flagcdn.com/w320/${codeLower}.png`;
+              const isCompared = selectedCompareCodes.includes(
+                country.code.toUpperCase(),
+              );
 
               return (
                 <Card
@@ -298,6 +359,13 @@ export default function CountryListPage() {
                   variant="outlined"
                   sx={{
                     borderRadius: 2.5,
+                    position: "relative",
+                    borderColor: isCompared
+                      ? "primary.main"
+                      : "rgba(255, 255, 255, 0.08)",
+                    boxShadow: isCompared
+                      ? "0 0 0 1.5px rgba(99, 102, 241, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35)"
+                      : "none",
                     transition:
                       "transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s",
                     "&:hover": {
@@ -307,6 +375,48 @@ export default function CountryListPage() {
                     },
                   }}
                 >
+                  {/* Compare Toggle Button */}
+                  <Tooltip
+                    title={
+                      isCompared
+                        ? `Remove ${country.name} from compare`
+                        : `Compare ${country.name}`
+                    }
+                    arrow
+                  >
+                    <IconButton
+                      size="small"
+                      onClick={(e) => handleToggleCompare(country.code, e)}
+                      sx={{
+                        position: "absolute",
+                        top: 5,
+                        right: 5,
+                        zIndex: 2,
+                        p: 0.4,
+                        borderRadius: 1.5,
+                        backgroundColor: isCompared
+                          ? "primary.main"
+                          : "rgba(15, 23, 42, 0.75)",
+                        backdropFilter: "blur(8px)",
+                        color: isCompared ? "#ffffff" : "text.secondary",
+                        border: "1px solid",
+                        borderColor: isCompared
+                          ? "primary.light"
+                          : "rgba(255, 255, 255, 0.15)",
+                        "&:hover": {
+                          backgroundColor: isCompared
+                            ? "primary.dark"
+                            : "rgba(99, 102, 241, 0.6)",
+                          color: "#ffffff",
+                          borderColor: "primary.main",
+                          transform: "scale(1.08)",
+                        },
+                      }}
+                    >
+                      <CompareArrowsIcon sx={{ fontSize: 15 }} />
+                    </IconButton>
+                  </Tooltip>
+
                   <CardActionArea
                     onClick={() =>
                       navigate(`/country/${country.code.toLowerCase()}`)
@@ -474,6 +584,14 @@ export default function CountryListPage() {
           </Box>
         )}
       </Box>
+
+      {/* Floating Compare Selection Dock */}
+      <CompareFloatingDock
+        selectedCodes={selectedCompareCodes}
+        allCountries={countries}
+        onRemove={handleRemoveCompare}
+        onClear={handleClearCompare}
+      />
     </Container>
   );
 }

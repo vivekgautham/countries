@@ -78,6 +78,7 @@ export interface UnifiedCountry {
   timezones?: string[];
   borders?: string[];
   unMember?: boolean;
+  landlocked?: boolean;
   coatOfArms?: string;
   airports?: AirportStats;
 }

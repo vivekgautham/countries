@@ -1,5 +1,6 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ClearIcon from "@mui/icons-material/Clear";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExploreIcon from "@mui/icons-material/Explore";
@@ -166,7 +167,12 @@ export default function CountryDetailPage() {
     <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
       <Stack spacing={3}>
         {/* Navigation Bar */}
-        <Box>
+        <Stack
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          gap={1.5}
+        >
           <Button
             component={RouterLink}
             to="/"
@@ -185,7 +191,28 @@ export default function CountryDetailPage() {
           >
             Back to all countries
           </Button>
-        </Box>
+
+          <Button
+            component={RouterLink}
+            to={`/compare?c=${country.code}`}
+            startIcon={<CompareArrowsIcon />}
+            variant="outlined"
+            sx={{
+              px: 2.5,
+              py: 1,
+              borderColor: "rgba(99, 102, 241, 0.5)",
+              backgroundColor: "rgba(99, 102, 241, 0.1)",
+              color: "primary.light",
+              fontWeight: 700,
+              "&:hover": {
+                borderColor: "primary.light",
+                backgroundColor: "rgba(99, 102, 241, 0.25)",
+              },
+            }}
+          >
+            Compare {country.name}
+          </Button>
+        </Stack>
 
         {/* Hero Card */}
         <Card
@@ -457,6 +484,43 @@ export default function CountryDetailPage() {
                         : "N/A"}
                     </Typography>
                   </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      👥 Population
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.population
+                        ? country.population.toLocaleString()
+                        : "N/A"}
+                    </Typography>
+                  </Stack>
+                  {Boolean(
+                    country.population && country.area && country.area > 0,
+                  ) && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📊 Population Density
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {Math.round(
+                          country.population / (country.area || 1),
+                        ).toLocaleString()}{" "}
+                        / sq km (
+                        {Math.round(
+                          country.population / ((country.area || 1) * 0.386102),
+                        ).toLocaleString()}{" "}
+                        / sq mi)
+                      </Typography>
+                    </Stack>
+                  )}
                 </Stack>
               </CardContent>
             </Card>
@@ -1076,29 +1140,54 @@ export default function CountryDetailPage() {
               <CardContent
                 sx={{ display: "flex", flexDirection: "column", gap: 2 }}
               >
-                <Stack direction="row" alignItems="center" spacing={1}>
-                  <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ fontWeight: 700 }}
-                  >
-                    🗺️ Bordering Nations
-                  </Typography>
-                  <Chip
-                    label={country.borders ? country.borders.length : 0}
-                    size="small"
-                    color={
-                      country.borders && country.borders.length > 0
-                        ? "primary"
-                        : "default"
-                    }
-                    variant="outlined"
-                    sx={{
-                      fontWeight: 700,
-                      height: 22,
-                      fontSize: "0.75rem",
-                    }}
-                  />
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  <Stack direction="row" alignItems="center" spacing={1}>
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700 }}
+                    >
+                      🗺️ Bordering Nations
+                    </Typography>
+                    <Chip
+                      label={country.borders ? country.borders.length : 0}
+                      size="small"
+                      color={
+                        country.borders && country.borders.length > 0
+                          ? "primary"
+                          : "default"
+                      }
+                      variant="outlined"
+                      sx={{
+                        fontWeight: 700,
+                        height: 22,
+                        fontSize: "0.75rem",
+                      }}
+                    />
+                  </Stack>
+
+                  {country.borders && country.borders.length > 0 && (
+                    <Button
+                      component={RouterLink}
+                      to={`/compare?c=${[country.code, ...country.borders.slice(0, 3).map((b) => code3ToCountryMap.get(b)?.code || b)].join(",")}`}
+                      startIcon={<CompareArrowsIcon />}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        fontSize: "0.75rem",
+                        borderColor: "rgba(255, 255, 255, 0.15)",
+                        "&:hover": { borderColor: "primary.light" },
+                      }}
+                    >
+                      Compare with Neighbors
+                    </Button>
+                  )}
                 </Stack>
                 <Divider />
                 {country.borders && country.borders.length > 0 ? (

@@ -9,6 +9,17 @@ const airportsData = airportsDataRaw as Record<string, AirportStats>;
 const COUNTRIES_DATA_URL =
   "https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json";
 
+const populationByCode: Record<string, number> = {};
+const areaByCode: Record<string, number> = {};
+
+(rawCountriesData as unknown as UnifiedCountry[]).forEach((c) => {
+  if (c.code) {
+    const code = c.code.toUpperCase();
+    if (c.population) populationByCode[code] = c.population;
+    if (c.area) areaByCode[code] = c.area;
+  }
+});
+
 function formatPhoneCode(idd?: {
   root?: string;
   suffixes?: string[];
@@ -31,6 +42,8 @@ export function transformCountryDetails(
 
     const languagesList = item.languages ? Object.values(item.languages) : [];
     const code = item.cca2.toUpperCase();
+    const population = item.population || populationByCode[code] || 0;
+    const area = item.area || areaByCode[code] || 0;
 
     return {
       code,
@@ -43,14 +56,15 @@ export function transformCountryDetails(
           : "N/A",
       region: item.region || "Unknown",
       subregion: item.subregion || "",
-      population: item.population || 0,
-      area: item.area || 0,
+      population,
+      area,
       currencies: currenciesList,
       languages: languagesList,
       phoneCode: formatPhoneCode(item.idd),
       timezones: item.timezones || [],
       borders: item.borders || [],
       unMember: item.unMember ?? false,
+      landlocked: item.landlocked ?? false,
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
       airports: airportsData[code],
     };

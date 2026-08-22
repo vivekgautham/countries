@@ -7,10 +7,10 @@
     "capital": "Oranjestad",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 107566,
     "area": 180,
     "currencies": [
-      "Aruban florin (ƒ)"
+      "Aruban florin (\u0192)"
     ],
     "languages": [
       "Dutch",
@@ -29,10 +29,10 @@
     "capital": "Kabul",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 43844000,
     "area": 652230,
     "currencies": [
-      "Afghan afghani (؋)"
+      "Afghan afghani (\u060b)"
     ],
     "languages": [
       "Dari",
@@ -59,7 +59,7 @@
     "capital": "Luanda",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 36170961,
     "area": 1246700,
     "currencies": [
       "Angolan kwanza (Kz)"
@@ -85,7 +85,7 @@
     "capital": "The Valley",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 16010,
     "area": 91,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -101,15 +101,15 @@
   {
     "code": "AX",
     "code3": "ALA",
-    "name": "Åland Islands",
-    "officialName": "Åland Islands",
+    "name": "\u00c5land Islands",
+    "officialName": "\u00c5land Islands",
     "capital": "Mariehamn",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 30654,
     "area": 1580,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Swedish"
@@ -127,7 +127,7 @@
     "capital": "Tirana",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 2363314,
     "area": 28748,
     "currencies": [
       "Albanian lek (L)"
@@ -153,10 +153,10 @@
     "capital": "Andorra la Vella",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 88306,
     "area": 468,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Catalan"
@@ -177,10 +177,10 @@
     "capital": "Abu Dhabi",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 10678556,
     "area": 83600,
     "currencies": [
-      "United Arab Emirates dirham (د.إ)"
+      "United Arab Emirates dirham (\u062f.\u0625)"
     ],
     "languages": [
       "Arabic"
@@ -201,13 +201,13 @@
     "capital": "Buenos Aires",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 46735004,
     "area": 2780400,
     "currencies": [
       "Argentine peso ($)"
     ],
     "languages": [
-      "Guaraní",
+      "Guaran\u00ed",
       "Spanish"
     ],
     "phoneCode": "+54",
@@ -229,10 +229,10 @@
     "capital": "Yerevan",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 3081100,
     "area": 29743,
     "currencies": [
-      "Armenian dram (֏)"
+      "Armenian dram (\u058f)"
     ],
     "languages": [
       "Armenian"
@@ -255,7 +255,7 @@
     "capital": "Pago Pago",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 49710,
     "area": 199,
     "currencies": [
       "United States dollar ($)"
@@ -277,7 +277,7 @@
     "capital": "N/A",
     "region": "Antarctic",
     "subregion": "",
-    "population": 0,
+    "population": null,
     "area": 14000000,
     "currencies": [],
     "languages": {},
@@ -290,13 +290,13 @@
     "code3": "ATF",
     "name": "French Southern and Antarctic Lands",
     "officialName": "Territory of the French Southern and Antarctic Lands",
-    "capital": "Port-aux-Français",
+    "capital": "Port-aux-Fran\u00e7ais",
     "region": "Antarctic",
     "subregion": "",
-    "population": 0,
+    "population": null,
     "area": 7747,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -314,7 +314,7 @@
     "capital": "Saint John's",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 103603,
     "area": 442,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -335,7 +335,7 @@
     "capital": "Canberra",
     "region": "Oceania",
     "subregion": "Australia and New Zealand",
-    "population": 0,
+    "population": 27400013,
     "area": 7692024,
     "currencies": [
       "Australian dollar ($)"
@@ -356,10 +356,10 @@
     "capital": "Vienna",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 9200931,
     "area": 83871,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Austro-Bavarian German"
@@ -386,10 +386,10 @@
     "capital": "Baku",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 10241722,
     "area": 86600,
     "currencies": [
-      "Azerbaijani manat (₼)"
+      "Azerbaijani manat (\u20bc)"
     ],
     "languages": [
       "Azerbaijani",
@@ -414,7 +414,7 @@
     "capital": "Gitega",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 12332788,
     "area": 27834,
     "currencies": [
       "Burundian franc (Fr)"
@@ -440,10 +440,10 @@
     "capital": "Brussels",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 11825551,
     "area": 30528,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "German",
@@ -468,7 +468,7 @@
     "capital": "Porto-Novo",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 13224860,
     "area": 112622,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -494,7 +494,7 @@
     "capital": "Ouagadougou",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 24070553,
     "area": 272967,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -522,10 +522,10 @@
     "capital": "Dhaka",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 169828911,
     "area": 147570,
     "currencies": [
-      "Bangladeshi taka (৳)"
+      "Bangladeshi taka (\u09f3)"
     ],
     "languages": [
       "Bengali"
@@ -546,10 +546,10 @@
     "capital": "Sofia",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 6437360,
     "area": 110879,
     "currencies": [
-      "Bulgarian lev (лв)"
+      "Bulgarian lev (\u043b\u0432)"
     ],
     "languages": [
       "Bulgarian"
@@ -573,10 +573,10 @@
     "capital": "Manama",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 1594654,
     "area": 765,
     "currencies": [
-      "Bahraini dinar (.د.ب)"
+      "Bahraini dinar (.\u062f.\u0628)"
     ],
     "languages": [
       "Arabic"
@@ -594,7 +594,7 @@
     "capital": "Nassau",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 398165,
     "area": 13943,
     "currencies": [
       "Bahamian dollar ($)",
@@ -616,7 +616,7 @@
     "capital": "Sarajevo",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 3422000,
     "area": 51209,
     "currencies": [
       "Bosnia and Herzegovina convertible mark (KM)"
@@ -638,15 +638,15 @@
   {
     "code": "BL",
     "code3": "BLM",
-    "name": "Saint Barthélemy",
-    "officialName": "Collectivity of Saint Barthélemy",
+    "name": "Saint Barth\u00e9lemy",
+    "officialName": "Collectivity of Saint Barth\u00e9lemy",
     "capital": "Gustavia",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 10562,
     "area": 21,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -664,11 +664,11 @@
     "capital": "Jamestown",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 5651,
     "area": 394,
     "currencies": [
-      "Pound sterling (£)",
-      "Saint Helena pound (£)"
+      "Pound sterling (\u00a3)",
+      "Saint Helena pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -686,7 +686,7 @@
     "capital": "Minsk",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "population": 0,
+    "population": 9109280,
     "area": 207600,
     "currencies": [
       "Belarusian ruble (Br)"
@@ -714,7 +714,7 @@
     "capital": "Belmopan",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 417634,
     "area": 22966,
     "currencies": [
       "Belize dollar ($)"
@@ -740,7 +740,7 @@
     "capital": "Hamilton",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 64055,
     "area": 54,
     "currencies": [
       "Bermudian dollar ($)"
@@ -761,14 +761,14 @@
     "capital": "Sucre",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 11312620,
     "area": 1098581,
     "currencies": [
       "Bolivian boliviano (Bs.)"
     ],
     "languages": [
       "Aymara",
-      "Guaraní",
+      "Guaran\u00ed",
       "Quechua",
       "Spanish"
     ],
@@ -791,7 +791,7 @@
     "capital": "Kralendijk, Oranjestad, The Bottom",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 26552,
     "area": 328,
     "currencies": [
       "United States dollar ($)"
@@ -811,10 +811,10 @@
     "code3": "BRA",
     "name": "Brazil",
     "officialName": "Federative Republic of Brazil",
-    "capital": "Brasília",
+    "capital": "Bras\u00edlia",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 213421037,
     "area": 8515767,
     "currencies": [
       "Brazilian real (R$)"
@@ -846,7 +846,7 @@
     "capital": "Bridgetown",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 267800,
     "area": 430,
     "currencies": [
       "Barbadian dollar ($)"
@@ -867,7 +867,7 @@
     "capital": "Bandar Seri Begawan",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 455500,
     "area": 5765,
     "currencies": [
       "Brunei dollar ($)",
@@ -891,11 +891,11 @@
     "capital": "Thimphu",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 784043,
     "area": 38394,
     "currencies": [
       "Bhutanese ngultrum (Nu.)",
-      "Indian rupee (₹)"
+      "Indian rupee (\u20b9)"
     ],
     "languages": [
       "Dzongkha"
@@ -916,7 +916,7 @@
     "capital": "N/A",
     "region": "Antarctic",
     "subregion": "",
-    "population": 0,
+    "population": null,
     "area": 49,
     "currencies": [],
     "languages": [
@@ -935,7 +935,7 @@
     "capital": "Gaborone",
     "region": "Africa",
     "subregion": "Southern Africa",
-    "population": 0,
+    "population": 2359609,
     "area": 582000,
     "currencies": [
       "Botswana pula (P)"
@@ -962,7 +962,7 @@
     "capital": "Bangui",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 6470307,
     "area": 622984,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -991,7 +991,7 @@
     "capital": "Ottawa",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 41548787,
     "area": 9984670,
     "currencies": [
       "Canadian dollar ($)"
@@ -1015,7 +1015,7 @@
     "capital": "West Island",
     "region": "Oceania",
     "subregion": "Australia and New Zealand",
-    "population": 0,
+    "population": 593,
     "area": 14,
     "currencies": [
       "Australian dollar ($)"
@@ -1036,7 +1036,7 @@
     "capital": "Bern",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 9082848,
     "area": 41284,
     "currencies": [
       "Swiss franc (Fr.)"
@@ -1066,7 +1066,7 @@
     "capital": "Santiago",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 20206953,
     "area": 756102,
     "currencies": [
       "Chilean peso ($)"
@@ -1091,10 +1091,10 @@
     "capital": "Beijing",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 1408280000,
     "area": 9706961,
     "currencies": [
-      "Chinese yuan (¥)"
+      "Chinese yuan (\u00a5)"
     ],
     "languages": [
       "Chinese"
@@ -1125,11 +1125,11 @@
     "code": "CI",
     "code3": "CIV",
     "name": "Ivory Coast",
-    "officialName": "Republic of Côte d'Ivoire",
+    "officialName": "Republic of C\u00f4te d'Ivoire",
     "capital": "Yamoussoukro",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 29389150,
     "area": 322463,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -1153,10 +1153,10 @@
     "code3": "CMR",
     "name": "Cameroon",
     "officialName": "Republic of Cameroon",
-    "capital": "Yaoundé",
+    "capital": "Yaound\u00e9",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 29442327,
     "area": 475442,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -1185,7 +1185,7 @@
     "capital": "Kinshasa",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 112832000,
     "area": 2344858,
     "currencies": [
       "Congolese franc (FC)"
@@ -1220,7 +1220,7 @@
     "capital": "Brazzaville",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 6142180,
     "area": 342000,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -1249,7 +1249,7 @@
     "capital": "Avarua",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 15040,
     "area": 236,
     "currencies": [
       "Cook Islands dollar ($)",
@@ -1257,7 +1257,7 @@
     ],
     "languages": [
       "English",
-      "Cook Islands Māori"
+      "Cook Islands M\u0101ori"
     ],
     "phoneCode": "+682",
     "timezones": [],
@@ -1269,10 +1269,10 @@
     "code3": "COL",
     "name": "Colombia",
     "officialName": "Republic of Colombia",
-    "capital": "Bogotá",
+    "capital": "Bogot\u00e1",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 53057212,
     "area": 1141748,
     "currencies": [
       "Colombian peso ($)"
@@ -1299,7 +1299,7 @@
     "capital": "Moroni",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 870038,
     "area": 1862,
     "currencies": [
       "Comorian franc (Fr)"
@@ -1322,7 +1322,7 @@
     "capital": "Praia",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 491233,
     "area": 4033,
     "currencies": [
       "Cape Verdean escudo (Esc)"
@@ -1340,13 +1340,13 @@
     "code3": "CRI",
     "name": "Costa Rica",
     "officialName": "Republic of Costa Rica",
-    "capital": "San José",
+    "capital": "San Jos\u00e9",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 5309625,
     "area": 51100,
     "currencies": [
-      "Costa Rican colón (₡)"
+      "Costa Rican col\u00f3n (\u20a1)"
     ],
     "languages": [
       "Spanish"
@@ -1367,7 +1367,7 @@
     "capital": "Havana",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 9748007,
     "area": 109884,
     "currencies": [
       "Cuban convertible peso ($)",
@@ -1384,15 +1384,15 @@
   {
     "code": "CW",
     "code3": "CUW",
-    "name": "Curaçao",
-    "officialName": "Country of Curaçao",
+    "name": "Cura\u00e7ao",
+    "officialName": "Country of Cura\u00e7ao",
     "capital": "Willemstad",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 156115,
     "area": 444,
     "currencies": [
-      "Netherlands Antillean guilder (ƒ)"
+      "Netherlands Antillean guilder (\u0192)"
     ],
     "languages": [
       "English",
@@ -1412,7 +1412,7 @@
     "capital": "Flying Fish Cove",
     "region": "Oceania",
     "subregion": "Australia and New Zealand",
-    "population": 0,
+    "population": 1692,
     "area": 135,
     "currencies": [
       "Australian dollar ($)"
@@ -1433,7 +1433,7 @@
     "capital": "George Town",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 84738,
     "area": 264,
     "currencies": [
       "Cayman Islands dollar ($)"
@@ -1454,10 +1454,10 @@
     "capital": "Nicosia",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 966400,
     "area": 9251,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Greek",
@@ -1476,10 +1476,10 @@
     "capital": "Prague",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 10876875,
     "area": 78865,
     "currencies": [
-      "Czech koruna (Kč)"
+      "Czech koruna (K\u010d)"
     ],
     "languages": [
       "Czech",
@@ -1503,10 +1503,10 @@
     "capital": "Berlin",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 83517030,
     "area": 357114,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "German"
@@ -1534,7 +1534,7 @@
     "capital": "Djibouti",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 1066809,
     "area": 23200,
     "currencies": [
       "Djiboutian franc (Fr)"
@@ -1560,7 +1560,7 @@
     "capital": "Roseau",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 67408,
     "area": 751,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -1581,7 +1581,7 @@
     "capital": "Copenhagen",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 6004342,
     "area": 43094,
     "currencies": [
       "Danish krone (kr)"
@@ -1604,7 +1604,7 @@
     "capital": "Santo Domingo",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 10771504,
     "area": 48671,
     "currencies": [
       "Dominican peso ($)"
@@ -1627,10 +1627,10 @@
     "capital": "Algiers",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 47400000,
     "area": 2381741,
     "currencies": [
-      "Algerian dinar (د.ج)"
+      "Algerian dinar (\u062f.\u062c)"
     ],
     "languages": [
       "Arabic",
@@ -1658,7 +1658,7 @@
     "capital": "Quito",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 18103660,
     "area": 276841,
     "currencies": [
       "United States dollar ($)"
@@ -1682,10 +1682,10 @@
     "capital": "Cairo",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 107271260,
     "area": 1002450,
     "currencies": [
-      "Egyptian pound (£)"
+      "Egyptian pound (\u00a3)"
     ],
     "languages": [
       "Arabic"
@@ -1708,7 +1708,7 @@
     "capital": "Asmara",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 3607000,
     "area": 117600,
     "currencies": [
       "Eritrean nakfa (Nfk)"
@@ -1732,13 +1732,13 @@
     "code3": "ESH",
     "name": "Western Sahara",
     "officialName": "Sahrawi Arab Democratic Republic",
-    "capital": "El Aaiún",
+    "capital": "El Aai\u00fan",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 600904,
     "area": 266000,
     "currencies": [
-      "Algerian dinar (دج)",
+      "Algerian dinar (\u062f\u062c)",
       "Moroccan dirham (DH)",
       "Mauritanian ouguiya (UM)"
     ],
@@ -1764,10 +1764,10 @@
     "capital": "Madrid",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 49315949,
     "area": 505992,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Spanish",
@@ -1795,10 +1795,10 @@
     "capital": "Tallinn",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 1369995,
     "area": 45227,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Estonian"
@@ -1819,7 +1819,7 @@
     "capital": "Addis Ababa",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 111652998,
     "area": 1104300,
     "currencies": [
       "Ethiopian birr (Br)"
@@ -1852,10 +1852,10 @@
     "capital": "Helsinki",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 5645651,
     "area": 338424,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Finnish",
@@ -1878,7 +1878,7 @@
     "capital": "Suva",
     "region": "Oceania",
     "subregion": "Melanesia",
-    "population": 0,
+    "population": 900869,
     "area": 18272,
     "currencies": [
       "Fijian dollar ($)"
@@ -1901,10 +1901,10 @@
     "capital": "Stanley",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 3662,
     "area": 12173,
     "currencies": [
-      "Falkland Islands pound (£)"
+      "Falkland Islands pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -1922,10 +1922,10 @@
     "capital": "Paris",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 68688000,
     "area": 551695,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -1949,14 +1949,14 @@
     "code3": "FRO",
     "name": "Faroe Islands",
     "officialName": "Faroe Islands",
-    "capital": "Tórshavn",
+    "capital": "T\u00f3rshavn",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 55146,
     "area": 1393,
     "currencies": [
       "Danish krone (kr)",
-      "Faroese króna (kr)"
+      "Faroese kr\u00f3na (kr)"
     ],
     "languages": [
       "Danish",
@@ -1975,7 +1975,7 @@
     "capital": "Palikir",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 105564,
     "area": 702,
     "currencies": [],
     "languages": [
@@ -1994,7 +1994,7 @@
     "capital": "Libreville",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 2469296,
     "area": 267668,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -2019,10 +2019,10 @@
     "capital": "London",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 68265209,
     "area": 242900,
     "currencies": [
-      "British pound (£)"
+      "British pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -2042,10 +2042,10 @@
     "capital": "Tbilisi",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 3704500,
     "area": 69700,
     "currencies": [
-      "lari (₾)"
+      "lari (\u20be)"
     ],
     "languages": [
       "Georgian"
@@ -2068,16 +2068,16 @@
     "capital": "St. Peter Port",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 64781,
     "area": 78,
     "currencies": [
-      "British pound (£)",
-      "Guernsey pound (£)"
+      "British pound (\u00a3)",
+      "Guernsey pound (\u00a3)"
     ],
     "languages": [
       "English",
       "French",
-      "Guernésiais"
+      "Guern\u00e9siais"
     ],
     "phoneCode": "+44",
     "timezones": [],
@@ -2092,10 +2092,10 @@
     "capital": "Accra",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 33742380,
     "area": 238533,
     "currencies": [
-      "Ghanaian cedi (₵)"
+      "Ghanaian cedi (\u20b5)"
     ],
     "languages": [
       "English"
@@ -2117,10 +2117,10 @@
     "capital": "Gibraltar",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 38000,
     "area": 6,
     "currencies": [
-      "Gibraltar pound (£)"
+      "Gibraltar pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -2140,7 +2140,7 @@
     "capital": "Conakry",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 14363931,
     "area": 245857,
     "currencies": [
       "Guinean franc (Fr)"
@@ -2168,10 +2168,10 @@
     "capital": "Basse-Terre",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 373791,
     "area": 1628,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -2189,7 +2189,7 @@
     "capital": "Banjul",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 2422712,
     "area": 10689,
     "currencies": [
       "dalasi (D)"
@@ -2212,7 +2212,7 @@
     "capital": "Bissau",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 1781308,
     "area": 36125,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -2237,7 +2237,7 @@
     "capital": "Malabo",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 1668768,
     "area": 28051,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -2263,10 +2263,10 @@
     "capital": "Athens",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 10400720,
     "area": 131990,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Greek"
@@ -2289,7 +2289,7 @@
     "capital": "St. George's",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 109021,
     "area": 344,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -2310,7 +2310,7 @@
     "capital": "Nuuk",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 56542,
     "area": 2166086,
     "currencies": [
       "krone (kr.)"
@@ -2331,7 +2331,7 @@
     "capital": "Guatemala City",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 18079810,
     "area": 108889,
     "currencies": [
       "Guatemalan quetzal (Q)"
@@ -2357,10 +2357,10 @@
     "capital": "Cayenne",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 292354,
     "area": 83534,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -2378,10 +2378,10 @@
     "code3": "GUM",
     "name": "Guam",
     "officialName": "Guam",
-    "capital": "Hagåtña",
+    "capital": "Hag\u00e5t\u00f1a",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 153836,
     "area": 549,
     "currencies": [
       "United States dollar ($)"
@@ -2404,7 +2404,7 @@
     "capital": "Georgetown",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 772975,
     "area": 214969,
     "currencies": [
       "Guyanese dollar ($)"
@@ -2429,7 +2429,7 @@
     "capital": "City of Victoria",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 7527500,
     "area": 1104,
     "currencies": [
       "Hong Kong dollar ($)"
@@ -2453,7 +2453,7 @@
     "capital": "N/A",
     "region": "Antarctic",
     "subregion": "",
-    "population": 0,
+    "population": null,
     "area": 412,
     "currencies": [],
     "languages": [
@@ -2471,7 +2471,7 @@
     "capital": "Tegucigalpa",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 9892632,
     "area": 112492,
     "currencies": [
       "Honduran lempira (L)"
@@ -2496,10 +2496,10 @@
     "capital": "Zagreb",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 3866233,
     "area": 56594,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Croatian"
@@ -2523,7 +2523,7 @@
     "capital": "Port-au-Prince",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 11867032,
     "area": 27750,
     "currencies": [
       "Haitian gourde (G)"
@@ -2547,7 +2547,7 @@
     "capital": "Budapest",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 9539502,
     "area": 93028,
     "currencies": [
       "Hungarian forint (Ft)"
@@ -2576,7 +2576,7 @@
     "capital": "Jakarta",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 284438782,
     "area": 1904569,
     "currencies": [
       "Indonesian rupiah (Rp)"
@@ -2601,11 +2601,11 @@
     "capital": "Douglas",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 84530,
     "area": 572,
     "currencies": [
-      "British pound (£)",
-      "Manx pound (£)"
+      "British pound (\u00a3)",
+      "Manx pound (\u00a3)"
     ],
     "languages": [
       "English",
@@ -2624,10 +2624,10 @@
     "capital": "New Delhi",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 1417492000,
     "area": 3287590,
     "currencies": [
-      "Indian rupee (₹)"
+      "Indian rupee (\u20b9)"
     ],
     "languages": [
       "Hindi",
@@ -2673,7 +2673,7 @@
     "capital": "Diego Garcia",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": null,
     "area": 60,
     "currencies": [
       "United States dollar ($)"
@@ -2694,10 +2694,10 @@
     "capital": "Dublin",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 5458600,
     "area": 70273,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "English",
@@ -2718,10 +2718,10 @@
     "capital": "Tehran",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 85961000,
     "area": 1648195,
     "currencies": [
-      "Iranian rial (﷼)"
+      "Iranian rial (\ufdfc)"
     ],
     "languages": [
       "Persian (Farsi)"
@@ -2747,10 +2747,10 @@
     "capital": "Baghdad",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 46118793,
     "area": 438317,
     "currencies": [
-      "Iraqi dinar (ع.د)"
+      "Iraqi dinar (\u0639.\u062f)"
     ],
     "languages": [
       "Arabic",
@@ -2777,10 +2777,10 @@
     "capital": "Reykjavik",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 391810,
     "area": 103000,
     "currencies": [
-      "Icelandic króna (kr)"
+      "Icelandic kr\u00f3na (kr)"
     ],
     "languages": [
       "Icelandic"
@@ -2798,10 +2798,10 @@
     "capital": "Jerusalem",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 10119400,
     "area": 20770,
     "currencies": [
-      "Israeli new shekel (₪)"
+      "Israeli new shekel (\u20aa)"
     ],
     "languages": [
       "Arabic",
@@ -2826,10 +2826,10 @@
     "capital": "Rome",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 58919230,
     "area": 301336,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Italian"
@@ -2854,7 +2854,7 @@
     "capital": "Kingston",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 2825544,
     "area": 10991,
     "currencies": [
       "Jamaican dollar ($)"
@@ -2876,16 +2876,16 @@
     "capital": "Saint Helier",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 103267,
     "area": 116,
     "currencies": [
-      "British pound (£)",
-      "Jersey pound (£)"
+      "British pound (\u00a3)",
+      "Jersey pound (\u00a3)"
     ],
     "languages": [
       "English",
       "French",
-      "Jèrriais"
+      "J\u00e8rriais"
     ],
     "phoneCode": "+44",
     "timezones": [],
@@ -2900,10 +2900,10 @@
     "capital": "Amman",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 11734000,
     "area": 89342,
     "currencies": [
-      "Jordanian dinar (د.ا)"
+      "Jordanian dinar (\u062f.\u0627)"
     ],
     "languages": [
       "Arabic"
@@ -2927,10 +2927,10 @@
     "capital": "Tokyo",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 123300000,
     "area": 377930,
     "currencies": [
-      "Japanese yen (¥)"
+      "Japanese yen (\u00a5)"
     ],
     "languages": [
       "Japanese"
@@ -2948,10 +2948,10 @@
     "capital": "Astana",
     "region": "Asia",
     "subregion": "Central Asia",
-    "population": 0,
+    "population": 20407844,
     "area": 2724900,
     "currencies": [
-      "Kazakhstani tenge (₸)"
+      "Kazakhstani tenge (\u20b8)"
     ],
     "languages": [
       "Kazakh",
@@ -2976,7 +2976,7 @@
     "capital": "Nairobi",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 53330978,
     "area": 580367,
     "currencies": [
       "Kenyan shilling (Sh)"
@@ -3004,10 +3004,10 @@
     "capital": "Bishkek",
     "region": "Asia",
     "subregion": "Central Asia",
-    "population": 0,
+    "population": 7281800,
     "area": 199951,
     "currencies": [
-      "Kyrgyzstani som (с)"
+      "Kyrgyzstani som (\u0441)"
     ],
     "languages": [
       "Kyrgyz",
@@ -3031,10 +3031,10 @@
     "capital": "Phnom Penh",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 17577760,
     "area": 181035,
     "currencies": [
-      "Cambodian riel (៛)",
+      "Cambodian riel (\u17db)",
       "United States dollar ($)"
     ],
     "languages": [
@@ -3057,7 +3057,7 @@
     "capital": "South Tarawa",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 120740,
     "area": 811,
     "currencies": [
       "Australian dollar ($)",
@@ -3080,7 +3080,7 @@
     "capital": "Basseterre",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 51320,
     "area": 261,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -3101,10 +3101,10 @@
     "capital": "Seoul",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 51159889,
     "area": 100210,
     "currencies": [
-      "South Korean won (₩)"
+      "South Korean won (\u20a9)"
     ],
     "languages": [
       "Korean"
@@ -3124,10 +3124,10 @@
     "capital": "Pristina",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 1585566,
     "area": 10908,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Albanian",
@@ -3151,10 +3151,10 @@
     "capital": "Kuwait City",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 4881254,
     "area": 17818,
     "currencies": [
-      "Kuwaiti dinar (د.ك)"
+      "Kuwaiti dinar (\u062f.\u0643)"
     ],
     "languages": [
       "Arabic"
@@ -3175,10 +3175,10 @@
     "capital": "Vientiane",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 7647000,
     "area": 236800,
     "currencies": [
-      "Lao kip (₭)"
+      "Lao kip (\u20ad)"
     ],
     "languages": [
       "Lao"
@@ -3202,10 +3202,10 @@
     "capital": "Beirut",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 5490000,
     "area": 10452,
     "currencies": [
-      "Lebanese pound (ل.ل)"
+      "Lebanese pound (\u0644.\u0644)"
     ],
     "languages": [
       "Arabic",
@@ -3227,7 +3227,7 @@
     "capital": "Monrovia",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 5248621,
     "area": 111369,
     "currencies": [
       "Liberian dollar ($)"
@@ -3252,10 +3252,10 @@
     "capital": "Tripoli",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 7459000,
     "area": 1759540,
     "currencies": [
-      "Libyan dinar (ل.د)"
+      "Libyan dinar (\u0644.\u062f)"
     ],
     "languages": [
       "Arabic"
@@ -3280,7 +3280,7 @@
     "capital": "Castries",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 184100,
     "area": 616,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -3301,7 +3301,7 @@
     "capital": "Vaduz",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 40900,
     "area": 160,
     "currencies": [
       "Swiss franc (Fr)"
@@ -3325,10 +3325,10 @@
     "capital": "Colombo",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 21763170,
     "area": 65610,
     "currencies": [
-      "Sri Lankan rupee (Rs රු)"
+      "Sri Lankan rupee (Rs \u0dbb\u0dd4)"
     ],
     "languages": [
       "Sinhala",
@@ -3350,7 +3350,7 @@
     "capital": "Maseru",
     "region": "Africa",
     "subregion": "Southern Africa",
-    "population": 0,
+    "population": 2116427,
     "area": 30355,
     "currencies": [
       "Lesotho loti (L)",
@@ -3375,10 +3375,10 @@
     "capital": "Vilnius",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 2894548,
     "area": 65300,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Lithuanian"
@@ -3401,10 +3401,10 @@
     "capital": "Luxembourg",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 681973,
     "area": 2586,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "German",
@@ -3428,10 +3428,10 @@
     "capital": "Riga",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 1830400,
     "area": 64559,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Latvian"
@@ -3454,7 +3454,7 @@
     "capital": "N/A",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 685900,
     "area": 30,
     "currencies": [
       "Macanese pataca (P)"
@@ -3478,10 +3478,10 @@
     "capital": "Marigot",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 31496,
     "area": 53,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -3501,10 +3501,10 @@
     "capital": "Rabat",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 36828330,
     "area": 446550,
     "currencies": [
-      "Moroccan dirham (د.م.)"
+      "Moroccan dirham (\u062f.\u0645.)"
     ],
     "languages": [
       "Arabic",
@@ -3528,10 +3528,10 @@
     "capital": "Monaco",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 38423,
     "area": 2.02,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -3548,10 +3548,10 @@
     "code3": "MDA",
     "name": "Moldova",
     "officialName": "Republic of Moldova",
-    "capital": "Chișinău",
+    "capital": "Chi\u0219in\u0103u",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "population": 0,
+    "population": 2381300,
     "area": 33846,
     "currencies": [
       "Moldovan leu (L)"
@@ -3575,7 +3575,7 @@
     "capital": "Antananarivo",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 31727042,
     "area": 587041,
     "currencies": [
       "Malagasy ariary (Ar)"
@@ -3594,13 +3594,13 @@
     "code3": "MDV",
     "name": "Maldives",
     "officialName": "Republic of the Maldives",
-    "capital": "Malé",
+    "capital": "Mal\u00e9",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 515132,
     "area": 300,
     "currencies": [
-      "Maldivian rufiyaa (.ރ)"
+      "Maldivian rufiyaa (.\u0783)"
     ],
     "languages": [
       "Maldivian"
@@ -3618,7 +3618,7 @@
     "capital": "Mexico City",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 130575786,
     "area": 1964375,
     "currencies": [
       "Mexican peso ($)"
@@ -3643,7 +3643,7 @@
     "capital": "Majuro",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 42418,
     "area": 181,
     "currencies": [
       "United States dollar ($)"
@@ -3665,7 +3665,7 @@
     "capital": "Skopje",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 1826247,
     "area": 25713,
     "currencies": [
       "denar (den)"
@@ -3692,7 +3692,7 @@
     "capital": "Bamako",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 22395489,
     "area": 1240192,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -3721,10 +3721,10 @@
     "capital": "Valletta",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 574250,
     "area": 316,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "English",
@@ -3743,7 +3743,7 @@
     "capital": "Naypyidaw",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 51316756,
     "area": 676578,
     "currencies": [
       "Burmese kyat (Ks)"
@@ -3770,10 +3770,10 @@
     "capital": "Podgorica",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 623327,
     "area": 13812,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Montenegrin"
@@ -3797,10 +3797,10 @@
     "capital": "Ulan Bator",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 3544835,
     "area": 1564110,
     "currencies": [
-      "Mongolian tögrög (₮)"
+      "Mongolian t\u00f6gr\u00f6g (\u20ae)"
     ],
     "languages": [
       "Mongolian"
@@ -3821,7 +3821,7 @@
     "capital": "Saipan",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 47329,
     "area": 464,
     "currencies": [
       "United States dollar ($)"
@@ -3844,7 +3844,7 @@
     "capital": "Maputo",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 34090466,
     "area": 801590,
     "currencies": [
       "Mozambican metical (MT)"
@@ -3872,7 +3872,7 @@
     "capital": "Nouakchott",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 4927532,
     "area": 1030700,
     "currencies": [
       "Mauritanian ouguiya (UM)"
@@ -3898,7 +3898,7 @@
     "capital": "Plymouth",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 4386,
     "area": 102,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -3919,10 +3919,10 @@
     "capital": "Fort-de-France",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 339897,
     "area": 1128,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -3940,10 +3940,10 @@
     "capital": "Port Louis",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 1243741,
     "area": 2040,
     "currencies": [
-      "Mauritian rupee (₨)"
+      "Mauritian rupee (\u20a8)"
     ],
     "languages": [
       "English",
@@ -3964,7 +3964,7 @@
     "capital": "Lilongwe",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 20734262,
     "area": 118484,
     "currencies": [
       "Malawian kwacha (MK)"
@@ -3990,7 +3990,7 @@
     "capital": "Kuala Lumpur",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 34231700,
     "area": 330803,
     "currencies": [
       "Malaysian ringgit (RM)"
@@ -4016,10 +4016,10 @@
     "capital": "Mamoudzou",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 337011,
     "area": 374,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -4037,7 +4037,7 @@
     "capital": "Windhoek",
     "region": "Africa",
     "subregion": "Southern Africa",
-    "population": 0,
+    "population": 3022401,
     "area": 825615,
     "currencies": [
       "Namibian dollar ($)",
@@ -4069,13 +4069,13 @@
     "code3": "NCL",
     "name": "New Caledonia",
     "officialName": "New Caledonia",
-    "capital": "Nouméa",
+    "capital": "Noum\u00e9a",
     "region": "Oceania",
     "subregion": "Melanesia",
-    "population": 0,
+    "population": 264596,
     "area": 18575,
     "currencies": [
-      "CFP franc (₣)"
+      "CFP franc (\u20a3)"
     ],
     "languages": [
       "French"
@@ -4093,7 +4093,7 @@
     "capital": "Niamey",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 26312034,
     "area": 1267000,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -4122,7 +4122,7 @@
     "capital": "Kingston",
     "region": "Oceania",
     "subregion": "Australia and New Zealand",
-    "population": 0,
+    "population": 2188,
     "area": 36,
     "currencies": [
       "Australian dollar ($)"
@@ -4144,10 +4144,10 @@
     "capital": "Abuja",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 223800000,
     "area": 923768,
     "currencies": [
-      "Nigerian naira (₦)"
+      "Nigerian naira (\u20a6)"
     ],
     "languages": [
       "English",
@@ -4174,10 +4174,10 @@
     "capital": "Managua",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 6803886,
     "area": 130373,
     "currencies": [
-      "Nicaraguan córdoba (C$)"
+      "Nicaraguan c\u00f3rdoba (C$)"
     ],
     "languages": [
       "Spanish"
@@ -4198,7 +4198,7 @@
     "capital": "Alofi",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 1681,
     "area": 260,
     "currencies": [
       "New Zealand dollar ($)"
@@ -4220,10 +4220,10 @@
     "capital": "Amsterdam",
     "region": "Europe",
     "subregion": "Western Europe",
-    "population": 0,
+    "population": 18080943,
     "area": 41850,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Dutch"
@@ -4244,14 +4244,14 @@
     "capital": "Oslo",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 5606944,
     "area": 323802,
     "currencies": [
       "Norwegian krone (kr)"
     ],
     "languages": [
       "Norwegian Nynorsk",
-      "Norwegian Bokmål",
+      "Norwegian Bokm\u00e5l",
       "Sami"
     ],
     "phoneCode": "+47",
@@ -4271,10 +4271,10 @@
     "capital": "Kathmandu",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 29911840,
     "area": 147181,
     "currencies": [
-      "Nepalese rupee (₨)"
+      "Nepalese rupee (\u20a8)"
     ],
     "languages": [
       "Nepali"
@@ -4295,7 +4295,7 @@
     "capital": "Yaren",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 11680,
     "area": 21,
     "currencies": [
       "Australian dollar ($)"
@@ -4317,14 +4317,14 @@
     "capital": "Wellington",
     "region": "Oceania",
     "subregion": "Australia and New Zealand",
-    "population": 0,
+    "population": 5324700,
     "area": 270467,
     "currencies": [
       "New Zealand dollar ($)"
     ],
     "languages": [
       "English",
-      "Māori",
+      "M\u0101ori",
       "New Zealand Sign Language"
     ],
     "phoneCode": "+64",
@@ -4340,10 +4340,10 @@
     "capital": "Muscat",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 5306976,
     "area": 309500,
     "currencies": [
-      "Omani rial (ر.ع.)"
+      "Omani rial (\u0631.\u0639.)"
     ],
     "languages": [
       "Arabic"
@@ -4365,10 +4365,10 @@
     "capital": "Islamabad",
     "region": "Asia",
     "subregion": "Southern Asia",
-    "population": 0,
+    "population": 241499431,
     "area": 881912,
     "currencies": [
-      "Terroristani rupee (₨)"
+      "Terroristani rupee (\u20a8)"
     ],
     "languages": [
       "Urdu",
@@ -4397,7 +4397,7 @@
     "capital": "Panama City",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 4064780,
     "area": 75417,
     "currencies": [
       "Panamanian balboa (B/.)",
@@ -4422,7 +4422,7 @@
     "capital": "Adamstown",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 35,
     "area": 47,
     "currencies": [
       "New Zealand dollar ($)"
@@ -4443,7 +4443,7 @@
     "capital": "Lima",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 34350244,
     "area": 1285216,
     "currencies": [
       "Peruvian sol (S/.)"
@@ -4472,10 +4472,10 @@
     "capital": "Manila",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 114123600,
     "area": 342353,
     "currencies": [
-      "Philippine peso (₱)"
+      "Philippine peso (\u20b1)"
     ],
     "languages": [
       "Filipino",
@@ -4501,7 +4501,7 @@
     "capital": "Ngerulmud",
     "region": "Oceania",
     "subregion": "Micronesia",
-    "population": 0,
+    "population": 16733,
     "area": 459,
     "currencies": [
       "United States dollar ($)"
@@ -4523,7 +4523,7 @@
     "capital": "Port Moresby",
     "region": "Oceania",
     "subregion": "Melanesia",
-    "population": 0,
+    "population": 11781559,
     "area": 462840,
     "currencies": [
       "Papua New Guinean kina (K)"
@@ -4549,10 +4549,10 @@
     "capital": "Warsaw",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 37401000,
     "area": 312679,
     "currencies": [
-      "Polish złoty (zł)"
+      "Polish z\u0142oty (z\u0142)"
     ],
     "languages": [
       "Polish"
@@ -4578,7 +4578,7 @@
     "capital": "San Juan",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 3203295,
     "area": 8870,
     "currencies": [
       "United States dollar ($)"
@@ -4600,10 +4600,10 @@
     "capital": "Pyongyang",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 25950000,
     "area": 120538,
     "currencies": [
-      "North Korean won (₩)"
+      "North Korean won (\u20a9)"
     ],
     "languages": [
       "Korean"
@@ -4625,10 +4625,10 @@
     "capital": "Lisbon",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 10749635,
     "area": 92090,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Portuguese"
@@ -4645,16 +4645,16 @@
     "code3": "PRY",
     "name": "Paraguay",
     "officialName": "Republic of Paraguay",
-    "capital": "Asunción",
+    "capital": "Asunci\u00f3n",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 6109644,
     "area": 406752,
     "currencies": [
-      "Paraguayan guaraní (₲)"
+      "Paraguayan guaran\u00ed (\u20b2)"
     ],
     "languages": [
-      "Guaraní",
+      "Guaran\u00ed",
       "Spanish"
     ],
     "phoneCode": "+595",
@@ -4674,11 +4674,11 @@
     "capital": "Ramallah",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 5483450,
     "area": 6220,
     "currencies": [
-      "Egyptian pound (E£)",
-      "Israeli new shekel (₪)",
+      "Egyptian pound (E\u00a3)",
+      "Israeli new shekel (\u20aa)",
       "Jordanian dinar (JD)"
     ],
     "languages": [
@@ -4698,13 +4698,13 @@
     "code3": "PYF",
     "name": "French Polynesia",
     "officialName": "French Polynesia",
-    "capital": "Papeetē",
+    "capital": "Papeet\u0113",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 279500,
     "area": 4167,
     "currencies": [
-      "CFP franc (₣)"
+      "CFP franc (\u20a3)"
     ],
     "languages": [
       "French"
@@ -4722,10 +4722,10 @@
     "capital": "Doha",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 3173024,
     "area": 11586,
     "currencies": [
-      "Qatari riyal (ر.ق)"
+      "Qatari riyal (\u0631.\u0642)"
     ],
     "languages": [
       "Arabic"
@@ -4740,15 +4740,15 @@
   {
     "code": "RE",
     "code3": "REU",
-    "name": "Réunion",
-    "officialName": "Réunion Island",
+    "name": "R\u00e9union",
+    "officialName": "R\u00e9union Island",
     "capital": "Saint-Denis",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 896175,
     "area": 2511,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -4766,7 +4766,7 @@
     "capital": "Bucharest",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 19036031,
     "area": 238391,
     "currencies": [
       "Romanian leu (lei)"
@@ -4793,10 +4793,10 @@
     "capital": "Moscow",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "population": 0,
+    "population": 146028325,
     "area": 17098242,
     "currencies": [
-      "Russian ruble (₽)"
+      "Russian ruble (\u20bd)"
     ],
     "languages": [
       "Russian"
@@ -4829,7 +4829,7 @@
     "capital": "Kigali",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 14104969,
     "area": 26338,
     "currencies": [
       "Rwandan franc (Fr)"
@@ -4858,10 +4858,10 @@
     "capital": "Riyadh",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 35300280,
     "area": 2149690,
     "currencies": [
-      "Saudi riyal (ر.س)"
+      "Saudi riyal (\u0631.\u0633)"
     ],
     "languages": [
       "Arabic"
@@ -4887,7 +4887,7 @@
     "capital": "Khartoum",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 51662000,
     "area": 1886068,
     "currencies": [
       "Sudanese pound (PT)"
@@ -4917,7 +4917,7 @@
     "capital": "Dakar",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 18593258,
     "area": 196722,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -4944,7 +4944,7 @@
     "capital": "Singapore",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 6036900,
     "area": 710,
     "currencies": [
       "Singapore dollar ($)"
@@ -4968,10 +4968,10 @@
     "capital": "King Edward Point",
     "region": "Antarctic",
     "subregion": "",
-    "population": 0,
+    "population": null,
     "area": 3903,
     "currencies": [
-      "Saint Helena pound (£)"
+      "Saint Helena pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -4989,7 +4989,7 @@
     "capital": "Longyearbyen",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": null,
     "area": -1,
     "currencies": [
       "krone (kr)"
@@ -5010,7 +5010,7 @@
     "capital": "Honiara",
     "region": "Oceania",
     "subregion": "Melanesia",
-    "population": 0,
+    "population": 750325,
     "area": 28896,
     "currencies": [
       "Solomon Islands dollar ($)"
@@ -5031,7 +5031,7 @@
     "capital": "Freetown",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 9077691,
     "area": 71740,
     "currencies": [
       "Sierra Leonean leone (Le)"
@@ -5055,7 +5055,7 @@
     "capital": "San Salvador",
     "region": "Americas",
     "subregion": "Central America",
-    "population": 0,
+    "population": 6029976,
     "area": 21041,
     "currencies": [
       "United States dollar ($)"
@@ -5079,10 +5079,10 @@
     "capital": "City of San Marino",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 34132,
     "area": 61,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Italian"
@@ -5102,7 +5102,7 @@
     "capital": "Mogadishu",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 19655000,
     "area": 637657,
     "currencies": [
       "Somali shilling (Sh)"
@@ -5128,10 +5128,10 @@
     "capital": "Saint-Pierre",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 5819,
     "area": 242,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "French"
@@ -5149,10 +5149,10 @@
     "capital": "Belgrade",
     "region": "Europe",
     "subregion": "Southeast Europe",
-    "population": 0,
+    "population": 6567783,
     "area": 88361,
     "currencies": [
-      "Serbian dinar (дин.)"
+      "Serbian dinar (\u0434\u0438\u043d.)"
     ],
     "languages": [
       "Serbian"
@@ -5179,10 +5179,10 @@
     "capital": "Juba",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 15786898,
     "area": 619745,
     "currencies": [
-      "South Sudanese pound (£)"
+      "South Sudanese pound (\u00a3)"
     ],
     "languages": [
       "English"
@@ -5202,15 +5202,15 @@
   {
     "code": "ST",
     "code3": "STP",
-    "name": "São Tomé and Príncipe",
-    "officialName": "Democratic Republic of São Tomé and Príncipe",
-    "capital": "São Tomé",
+    "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+    "officialName": "Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+    "capital": "S\u00e3o Tom\u00e9",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 209607,
     "area": 964,
     "currencies": [
-      "São Tomé and Príncipe dobra (Db)"
+      "S\u00e3o Tom\u00e9 and Pr\u00edncipe dobra (Db)"
     ],
     "languages": [
       "Portuguese"
@@ -5228,7 +5228,7 @@
     "capital": "Paramaribo",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 616500,
     "area": 163820,
     "currencies": [
       "Surinamese dollar ($)"
@@ -5253,10 +5253,10 @@
     "capital": "Bratislava",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 5413813,
     "area": 49037,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Slovak"
@@ -5280,10 +5280,10 @@
     "capital": "Ljubljana",
     "region": "Europe",
     "subregion": "Central Europe",
-    "population": 0,
+    "population": 2130638,
     "area": 20273,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Slovene"
@@ -5306,7 +5306,7 @@
     "capital": "Stockholm",
     "region": "Europe",
     "subregion": "Northern Europe",
-    "population": 0,
+    "population": 10596652,
     "area": 450295,
     "currencies": [
       "Swedish krona (kr)"
@@ -5330,7 +5330,7 @@
     "capital": "Lobamba",
     "region": "Africa",
     "subregion": "Southern Africa",
-    "population": 0,
+    "population": 1235549,
     "area": 17364,
     "currencies": [
       "Swazi lilangeni (L)",
@@ -5356,10 +5356,10 @@
     "capital": "Philipsburg",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 41349,
     "area": 34,
     "currencies": [
-      "Netherlands Antillean guilder (ƒ)"
+      "Netherlands Antillean guilder (\u0192)"
     ],
     "languages": [
       "English",
@@ -5381,10 +5381,10 @@
     "capital": "Victoria",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 122729,
     "area": 452,
     "currencies": [
-      "Seychellois rupee (₨)"
+      "Seychellois rupee (\u20a8)"
     ],
     "languages": [
       "Seychellois Creole",
@@ -5404,10 +5404,10 @@
     "capital": "Damascus",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 25620000,
     "area": 185180,
     "currencies": [
-      "Syrian pound (£)"
+      "Syrian pound (\u00a3)"
     ],
     "languages": [
       "Arabic"
@@ -5431,7 +5431,7 @@
     "capital": "Cockburn Town",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 50894,
     "area": 948,
     "currencies": [
       "United States dollar ($)"
@@ -5452,7 +5452,7 @@
     "capital": "N'Djamena",
     "region": "Africa",
     "subregion": "Middle Africa",
-    "population": 0,
+    "population": 19340757,
     "area": 1284000,
     "currencies": [
       "Central African CFA franc (Fr)"
@@ -5478,10 +5478,10 @@
     "code3": "TGO",
     "name": "Togo",
     "officialName": "Togolese Republic",
-    "capital": "Lomé",
+    "capital": "Lom\u00e9",
     "region": "Africa",
     "subregion": "Western Africa",
-    "population": 0,
+    "population": 8095498,
     "area": 56785,
     "currencies": [
       "West African CFA franc (Fr)"
@@ -5506,10 +5506,10 @@
     "capital": "Bangkok",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 65859640,
     "area": 513120,
     "currencies": [
-      "Thai baht (฿)"
+      "Thai baht (\u0e3f)"
     ],
     "languages": [
       "Thai"
@@ -5532,10 +5532,10 @@
     "capital": "Dushanbe",
     "region": "Asia",
     "subregion": "Central Asia",
-    "population": 0,
+    "population": 10499000,
     "area": 143100,
     "currencies": [
-      "Tajikistani somoni (ЅМ)"
+      "Tajikistani somoni (\u0405\u041c)"
     ],
     "languages": [
       "Russian",
@@ -5559,7 +5559,7 @@
     "capital": "Fakaofo",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 1647,
     "area": 12,
     "currencies": [
       "New Zealand dollar ($)"
@@ -5582,7 +5582,7 @@
     "capital": "Ashgabat",
     "region": "Asia",
     "subregion": "Central Asia",
-    "population": 0,
+    "population": 7057841,
     "area": 488100,
     "currencies": [
       "Turkmenistan manat (m)"
@@ -5609,7 +5609,7 @@
     "capital": "Dili",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 1391221,
     "area": 14874,
     "currencies": [
       "United States dollar ($)"
@@ -5633,10 +5633,10 @@
     "capital": "Nuku'alofa",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 100179,
     "area": 747,
     "currencies": [
-      "Tongan paʻanga (T$)"
+      "Tongan pa\u02bbanga (T$)"
     ],
     "languages": [
       "English",
@@ -5655,7 +5655,7 @@
     "capital": "Port of Spain",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 1368333,
     "area": 5130,
     "currencies": [
       "Trinidad and Tobago dollar ($)"
@@ -5676,10 +5676,10 @@
     "capital": "Tunis",
     "region": "Africa",
     "subregion": "Northern Africa",
-    "population": 0,
+    "population": 11972169,
     "area": 163610,
     "currencies": [
-      "Tunisian dinar (د.ت)"
+      "Tunisian dinar (\u062f.\u062a)"
     ],
     "languages": [
       "Arabic"
@@ -5695,15 +5695,15 @@
   {
     "code": "TR",
     "code3": "TUR",
-    "name": "Türkiye",
-    "officialName": "Republic of Türkiye",
+    "name": "T\u00fcrkiye",
+    "officialName": "Republic of T\u00fcrkiye",
     "capital": "Ankara",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 85664944,
     "area": 783562,
     "currencies": [
-      "Turkish lira (₺)"
+      "Turkish lira (\u20ba)"
     ],
     "languages": [
       "Turkish"
@@ -5730,7 +5730,7 @@
     "capital": "Funafuti",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 10643,
     "area": 26,
     "currencies": [
       "Australian dollar ($)",
@@ -5753,7 +5753,7 @@
     "capital": "Taipei",
     "region": "Asia",
     "subregion": "Eastern Asia",
-    "population": 0,
+    "population": 23337936,
     "area": 36193,
     "currencies": [
       "New Taiwan dollar ($)"
@@ -5774,7 +5774,7 @@
     "capital": "Dodoma",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 68153004,
     "area": 945087,
     "currencies": [
       "Tanzanian shilling (Sh)"
@@ -5805,7 +5805,7 @@
     "capital": "Kampala",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 45905417,
     "area": 241550,
     "currencies": [
       "Ugandan shilling (Sh)"
@@ -5833,10 +5833,10 @@
     "capital": "Kyiv",
     "region": "Europe",
     "subregion": "Eastern Europe",
-    "population": 0,
+    "population": 32862000,
     "area": 603500,
     "currencies": [
-      "Ukrainian hryvnia (₴)"
+      "Ukrainian hryvnia (\u20b4)"
     ],
     "languages": [
       "Ukrainian"
@@ -5862,7 +5862,7 @@
     "capital": "N/A",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": null,
     "area": 34.2,
     "currencies": [
       "United States dollar ($)"
@@ -5883,7 +5883,7 @@
     "capital": "Montevideo",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 3499451,
     "area": 181034,
     "currencies": [
       "Uruguayan peso ($)"
@@ -5907,7 +5907,7 @@
     "capital": "Washington D.C.",
     "region": "Americas",
     "subregion": "North America",
-    "population": 0,
+    "population": 340110988,
     "area": 9372610,
     "currencies": [
       "United States dollar ($)"
@@ -5931,10 +5931,10 @@
     "capital": "Tashkent",
     "region": "Asia",
     "subregion": "Central Asia",
-    "population": 0,
+    "population": 37859698,
     "area": 447400,
     "currencies": [
-      "Uzbekistani soʻm (so'm)"
+      "Uzbekistani so\u02bbm (so'm)"
     ],
     "languages": [
       "Russian",
@@ -5959,10 +5959,10 @@
     "capital": "Vatican City",
     "region": "Europe",
     "subregion": "Southern Europe",
-    "population": 0,
+    "population": 882,
     "area": 0.44,
     "currencies": [
-      "Euro (€)"
+      "Euro (\u20ac)"
     ],
     "languages": [
       "Italian",
@@ -5983,7 +5983,7 @@
     "capital": "Kingstown",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 110872,
     "area": 389,
     "currencies": [
       "Eastern Caribbean dollar ($)"
@@ -6004,10 +6004,10 @@
     "capital": "Caracas",
     "region": "Americas",
     "subregion": "South America",
-    "population": 0,
+    "population": 28517000,
     "area": 916445,
     "currencies": [
-      "Venezuelan bolívar soberano (Bs.S.)"
+      "Venezuelan bol\u00edvar soberano (Bs.S.)"
     ],
     "languages": [
       "Spanish"
@@ -6029,7 +6029,7 @@
     "capital": "Road Town",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 39471,
     "area": 151,
     "currencies": [
       "United States dollar ($)"
@@ -6050,7 +6050,7 @@
     "capital": "Charlotte Amalie",
     "region": "Americas",
     "subregion": "Caribbean",
-    "population": 0,
+    "population": 87146,
     "area": 347,
     "currencies": [
       "United States dollar ($)"
@@ -6071,10 +6071,10 @@
     "capital": "Hanoi",
     "region": "Asia",
     "subregion": "South-Eastern Asia",
-    "population": 0,
+    "population": 101343800,
     "area": 331212,
     "currencies": [
-      "Vietnamese đồng (₫)"
+      "Vietnamese \u0111\u1ed3ng (\u20ab)"
     ],
     "languages": [
       "Vietnamese"
@@ -6096,7 +6096,7 @@
     "capital": "Port Vila",
     "region": "Oceania",
     "subregion": "Melanesia",
-    "population": 0,
+    "population": 321409,
     "area": 12189,
     "currencies": [
       "Vanuatu vatu (Vt)"
@@ -6119,10 +6119,10 @@
     "capital": "Mata-Utu",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 11620,
     "area": 142,
     "currencies": [
-      "CFP franc (₣)"
+      "CFP franc (\u20a3)"
     ],
     "languages": [
       "French"
@@ -6140,10 +6140,10 @@
     "capital": "Apia",
     "region": "Oceania",
     "subregion": "Polynesia",
-    "population": 0,
+    "population": 205557,
     "area": 2842,
     "currencies": [
-      "Samoan tālā (T)"
+      "Samoan t\u0101l\u0101 (T)"
     ],
     "languages": [
       "English",
@@ -6162,10 +6162,10 @@
     "capital": "Sana'a",
     "region": "Asia",
     "subregion": "Western Asia",
-    "population": 0,
+    "population": 32684503,
     "area": 527968,
     "currencies": [
-      "Yemeni rial (﷼)"
+      "Yemeni rial (\ufdfc)"
     ],
     "languages": [
       "Arabic"
@@ -6186,7 +6186,7 @@
     "capital": "Pretoria, Bloemfontein, Cape Town",
     "region": "Africa",
     "subregion": "Southern Africa",
-    "population": 0,
+    "population": 63100945,
     "area": 1221037,
     "currencies": [
       "South African rand (R)"
@@ -6225,7 +6225,7 @@
     "capital": "Lusaka",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 19693423,
     "area": 752612,
     "currencies": [
       "Zambian kwacha (ZK)"
@@ -6255,15 +6255,15 @@
     "capital": "Harare",
     "region": "Africa",
     "subregion": "Eastern Africa",
-    "population": 0,
+    "population": 17073087,
     "area": 390757,
     "currencies": [
       "Botswana pula (P)",
-      "Chinese yuan (¥)",
-      "Euro (€)",
-      "British pound (£)",
-      "Indian rupee (₹)",
-      "Japanese yen (¥)",
+      "Chinese yuan (\u00a5)",
+      "Euro (\u20ac)",
+      "British pound (\u00a3)",
+      "Indian rupee (\u20b9)",
+      "Japanese yen (\u00a5)",
       "United States dollar ($)",
       "South African rand (Rs)",
       "Zimbabwean bonds ($)"
