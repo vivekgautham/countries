@@ -59,7 +59,13 @@ export default function CountryListPage() {
           (c.officialName && c.officialName.toLowerCase().includes(query)) ||
           c.code.toLowerCase().includes(query) ||
           (c.code3 && c.code3.toLowerCase().includes(query)) ||
-          (c.capital && c.capital.toLowerCase().includes(query)),
+          (c.capital && c.capital.toLowerCase().includes(query)) ||
+          (c.airports?.majorAirports?.some(
+            (a) =>
+              (a.iata && a.iata.toLowerCase().includes(query)) ||
+              a.name.toLowerCase().includes(query),
+          ) ??
+            false),
       );
     }
 
@@ -438,6 +444,28 @@ export default function CountryListPage() {
                       >
                         {country.region}
                       </Typography>
+
+                      {country.airports && country.airports.active > 0 && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "rgba(148, 163, 184, 0.85)",
+                            fontSize: "0.68rem",
+                            fontWeight: 500,
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            whiteSpace: "nowrap",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 0.5,
+                            mt: 0.2,
+                          }}
+                          title={`${country.airports.active.toLocaleString()} active airports${country.airports.large > 0 ? ` (${country.airports.large} major hubs)` : ""}`}
+                        >
+                          <span>✈️</span>
+                          {country.airports.active.toLocaleString()} airports
+                        </Typography>
+                      )}
                     </CardContent>
                   </CardActionArea>
                 </Card>

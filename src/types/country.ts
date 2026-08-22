@@ -40,6 +40,28 @@ export interface CountryDetail {
   };
 }
 
+export interface MajorAirport {
+  name: string;
+  iata?: string;
+  icao?: string;
+  municipality?: string;
+  type: string;
+}
+
+export interface AirportStats {
+  total: number;
+  active: number;
+  large: number;
+  medium: number;
+  small: number;
+  heliport: number;
+  seaplane: number;
+  balloonport: number;
+  closed: number;
+  scheduled: number;
+  majorAirports: MajorAirport[];
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -57,4 +79,5 @@ export interface UnifiedCountry {
   borders?: string[];
   unMember?: boolean;
   coatOfArms?: string;
+  airports?: AirportStats;
 }

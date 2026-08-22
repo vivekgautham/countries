@@ -1,5 +1,6 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ExploreIcon from "@mui/icons-material/Explore";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import MapIcon from "@mui/icons-material/Map";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import VerifiedIcon from "@mui/icons-material/Verified";
@@ -604,6 +605,313 @@ export default function CountryDetailPage() {
               </Card>
             </Grid>
           )}
+
+          {/* Aviation & Airports */}
+          <Grid size={{ xs: 12 }}>
+            <Card variant="outlined" sx={{ p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}
+              >
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  <Stack direction="row" alignItems="center" spacing={1}>
+                    <FlightTakeoffIcon sx={{ color: "primary.main" }} />
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700 }}
+                    >
+                      Aviation & Airports
+                    </Typography>
+                    {country.airports && (
+                      <Chip
+                        label={`${country.airports.active.toLocaleString()} Active`}
+                        size="small"
+                        color="primary"
+                        variant="outlined"
+                        sx={{
+                          fontWeight: 700,
+                          height: 22,
+                          fontSize: "0.75rem",
+                        }}
+                      />
+                    )}
+                  </Stack>
+                  <Typography
+                    component="a"
+                    href="https://davidmegginson.github.io/ourairports-data/"
+                    target="_blank"
+                    rel="noreferrer"
+                    variant="caption"
+                    sx={{
+                      color: "text.secondary",
+                      textDecoration: "none",
+                      "&:hover": {
+                        color: "primary.main",
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    Source: OurAirports Data ↗
+                  </Typography>
+                </Stack>
+                <Divider />
+
+                {country.airports && country.airports.total > 0 ? (
+                  <Stack spacing={3}>
+                    {/* Stats Grid */}
+                    <Box
+                      sx={{
+                        display: "grid",
+                        gridTemplateColumns: {
+                          xs: "repeat(2, 1fr)",
+                          sm: "repeat(3, 1fr)",
+                          md: "repeat(6, 1fr)",
+                        },
+                        gap: 1.5,
+                      }}
+                    >
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "primary.light" }}
+                        >
+                          {country.airports.active.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Total Active
+                        </Typography>
+                      </Paper>
+
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "#38bdf8" }}
+                        >
+                          {country.airports.large.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Large Hubs
+                        </Typography>
+                      </Paper>
+
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "#a855f7" }}
+                        >
+                          {country.airports.medium.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Medium / Regional
+                        </Typography>
+                      </Paper>
+
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "#94a3b8" }}
+                        >
+                          {country.airports.small.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Small Airfields
+                        </Typography>
+                      </Paper>
+
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "#f59e0b" }}
+                        >
+                          {country.airports.heliport.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Heliports
+                        </Typography>
+                      </Paper>
+
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          textAlign: "center",
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderRadius: 2,
+                        }}
+                      >
+                        <Typography
+                          variant="h5"
+                          sx={{ fontWeight: 800, color: "#10b981" }}
+                        >
+                          {country.airports.scheduled.toLocaleString()}
+                        </Typography>
+                        <Typography variant="caption" color="text.secondary">
+                          Scheduled Routes
+                        </Typography>
+                      </Paper>
+                    </Box>
+
+                    {/* Major Airports List */}
+                    {country.airports.majorAirports &&
+                      country.airports.majorAirports.length > 0 && (
+                        <Stack spacing={1.5}>
+                          <Typography
+                            variant="subtitle2"
+                            sx={{ fontWeight: 700, color: "text.secondary" }}
+                          >
+                            🛫 Major & Regional Airports (
+                            {country.airports.majorAirports.length})
+                          </Typography>
+                          <Box
+                            sx={{
+                              display: "grid",
+                              gridTemplateColumns: {
+                                xs: "repeat(1, 1fr)",
+                                sm: "repeat(2, 1fr)",
+                                md: "repeat(3, 1fr)",
+                              },
+                              gap: 1.25,
+                            }}
+                          >
+                            {country.airports.majorAirports.map(
+                              (airport, idx) => (
+                                <Paper
+                                  key={`${airport.name}-${idx}`}
+                                  variant="outlined"
+                                  sx={{
+                                    p: 1.25,
+                                    backgroundColor: "rgba(15, 23, 42, 0.6)",
+                                    borderColor: "rgba(255, 255, 255, 0.08)",
+                                    borderRadius: 2,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "space-between",
+                                    gap: 1,
+                                  }}
+                                >
+                                  <Box sx={{ minWidth: 0, flexGrow: 1 }}>
+                                    <Typography
+                                      variant="body2"
+                                      sx={{
+                                        fontWeight: 600,
+                                        overflow: "hidden",
+                                        textOverflow: "ellipsis",
+                                        whiteSpace: "nowrap",
+                                      }}
+                                      title={airport.name}
+                                    >
+                                      {airport.name}
+                                    </Typography>
+                                    {airport.municipality && (
+                                      <Typography
+                                        variant="caption"
+                                        color="text.secondary"
+                                        sx={{
+                                          display: "block",
+                                          overflow: "hidden",
+                                          textOverflow: "ellipsis",
+                                          whiteSpace: "nowrap",
+                                        }}
+                                      >
+                                        📍 {airport.municipality}
+                                      </Typography>
+                                    )}
+                                  </Box>
+                                  {airport.iata ? (
+                                    <Chip
+                                      label={airport.iata}
+                                      size="small"
+                                      sx={{
+                                        fontWeight: 700,
+                                        fontSize: "0.75rem",
+                                        backgroundColor:
+                                          airport.type === "large_airport"
+                                            ? "rgba(99, 102, 241, 0.25)"
+                                            : "rgba(148, 163, 184, 0.15)",
+                                        color:
+                                          airport.type === "large_airport"
+                                            ? "primary.light"
+                                            : "text.secondary",
+                                        border: "1px solid",
+                                        borderColor:
+                                          airport.type === "large_airport"
+                                            ? "rgba(99, 102, 241, 0.4)"
+                                            : "rgba(255, 255, 255, 0.1)",
+                                      }}
+                                    />
+                                  ) : airport.icao ? (
+                                    <Chip
+                                      label={airport.icao}
+                                      size="small"
+                                      variant="outlined"
+                                      sx={{ fontSize: "0.7rem" }}
+                                    />
+                                  ) : null}
+                                </Paper>
+                              ),
+                            )}
+                          </Box>
+                        </Stack>
+                      )}
+                  </Stack>
+                ) : (
+                  <Typography
+                    color="text.secondary"
+                    sx={{ fontStyle: "italic", fontSize: "0.9rem" }}
+                  >
+                    No commercial airports or registered airfields recorded for
+                    this territory.
+                  </Typography>
+                )}
+              </CardContent>
+            </Card>
+          </Grid>
 
           {/* Bordering Nations */}
           <Grid size={{ xs: 12 }}>

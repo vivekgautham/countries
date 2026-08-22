@@ -1,7 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import airportsDataRaw from "../data/airports.json";
 import rawCountriesData from "../data/countries.json";
-import { CountryDetail, UnifiedCountry } from "../types/country";
+import { AirportStats, CountryDetail, UnifiedCountry } from "../types/country";
+
+const airportsData = airportsDataRaw as Record<string, AirportStats>;
 
 const COUNTRIES_DATA_URL =
   "https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json";
@@ -27,9 +30,10 @@ export function transformCountryDetails(
       : [];
 
     const languagesList = item.languages ? Object.values(item.languages) : [];
+    const code = item.cca2.toUpperCase();
 
     return {
-      code: item.cca2.toUpperCase(),
+      code,
       code3: item.cca3 ? item.cca3.toUpperCase() : undefined,
       name: item.name.common,
       officialName: item.name.official,
@@ -48,8 +52,16 @@ export function transformCountryDetails(
       borders: item.borders || [],
       unMember: item.unMember ?? false,
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
+      airports: airportsData[code],
     };
   });
+}
+
+function getFallbackCountries(): UnifiedCountry[] {
+  return (rawCountriesData as unknown as UnifiedCountry[]).map((c) => ({
+    ...c,
+    airports: airportsData[c.code.toUpperCase()],
+  }));
 }
 
 export function useCountriesData() {
@@ -66,11 +78,11 @@ export function useCountriesData() {
           "Failed to fetch fresh country data from CDN, using bundled dataset:",
           err,
         );
-        return rawCountriesData as unknown as UnifiedCountry[];
+        return getFallbackCountries();
       }
     },
     initialData: () => {
-      return rawCountriesData as unknown as UnifiedCountry[];
+      return getFallbackCountries();
     },
     staleTime: 1000 * 60 * 60 * 24, // Cache for 24 hours
   });
