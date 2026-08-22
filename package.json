@@ -1,7 +1,7 @@
 {
   "name": "countries",
   "private": true,
-  "version": "0.0.29",
+  "version": "0.0.30",
   "homepage": "https://vivekgautham.github.io/countries",
   "type": "module",
   "scripts": {

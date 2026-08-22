@@ -95,6 +95,7 @@ export default function CountryComparePage() {
     if (selectedCodes.includes(country.code.toUpperCase())) return;
     if (selectedCodes.length >= MAX_COMPARE_COUNTRIES) return;
     updateSelectedCodes([...selectedCodes, country.code]);
+    setSearchInputValue("");
   };
 
   const handleRemoveCountry = (code: string) => {
@@ -312,8 +313,36 @@ export default function CountryComparePage() {
                 options={availableCountries}
                 getOptionLabel={(option) => `${option.name} (${option.code})`}
                 disabled={selectedCodes.length >= MAX_COMPARE_COUNTRIES}
-                onChange={(_, value) => handleAddCountry(value)}
+                inputValue={searchInputValue}
+                onInputChange={(_, newInputValue, reason) => {
+                  if (reason === "input") {
+                    setSearchInputValue(newInputValue);
+                  } else if (reason === "reset" || reason === "clear") {
+                    setSearchInputValue("");
+                  }
+                }}
+                onChange={(_, value) => {
+                  handleAddCountry(value);
+                  setSearchInputValue("");
+                }}
                 value={null}
+                autoHighlight
+                clearOnBlur
+                selectOnFocus
+                filterOptions={(options, state) => {
+                  const query = state.inputValue.trim().toLowerCase();
+                  if (!query) return options;
+                  return options.filter(
+                    (opt) =>
+                      opt.name.toLowerCase().includes(query) ||
+                      (opt.officialName &&
+                        opt.officialName.toLowerCase().includes(query)) ||
+                      opt.code.toLowerCase().includes(query) ||
+                      (opt.code3 && opt.code3.toLowerCase().includes(query)) ||
+                      (opt.capital &&
+                        opt.capital.toLowerCase().includes(query)),
+                  );
+                }}
                 renderOption={(props, option) => {
                   const flagUrl = `https://flagcdn.com/w40/${option.code.toLowerCase()}.png`;
                   return (
