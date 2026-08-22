@@ -1,8 +1,12 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ClearIcon from "@mui/icons-material/Clear";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExploreIcon from "@mui/icons-material/Explore";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import MapIcon from "@mui/icons-material/Map";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
+import SearchIcon from "@mui/icons-material/Search";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import {
   Box,
@@ -14,11 +18,14 @@ import {
   Container,
   Divider,
   Grid,
+  IconButton,
+  InputAdornment,
   Paper,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
@@ -29,9 +36,14 @@ export default function CountryDetailPage() {
   const navigate = useNavigate();
   const { data: countries = [], isLoading } = useCountriesData();
 
-  // Scroll to top when page changes
+  const [airportSearch, setAirportSearch] = useState("");
+  const [showAllAirports, setShowAllAirports] = useState(false);
+
+  // Scroll to top and reset airport state when country changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setAirportSearch("");
+    setShowAllAirports(false);
   }, [countryCode]);
 
   // Map of 3-letter ISO code -> Country for border links
@@ -56,6 +68,27 @@ export default function CountryDetailPage() {
       ) || null
     );
   }, [countries, countryCode]);
+
+  const filteredMajorAirports = useMemo(() => {
+    if (!country?.airports?.majorAirports) return [];
+    const list = country.airports.majorAirports;
+    const query = airportSearch.trim().toLowerCase();
+    if (!query) return list;
+    return list.filter(
+      (a) =>
+        a.name.toLowerCase().includes(query) ||
+        (a.iata && a.iata.toLowerCase().includes(query)) ||
+        (a.icao && a.icao.toLowerCase().includes(query)) ||
+        (a.municipality && a.municipality.toLowerCase().includes(query)),
+    );
+  }, [country?.airports?.majorAirports, airportSearch]);
+
+  const displayedAirports = useMemo(() => {
+    if (airportSearch.trim() || showAllAirports) {
+      return filteredMajorAirports;
+    }
+    return filteredMajorAirports.slice(0, 12);
+  }, [filteredMajorAirports, airportSearch, showAllAirports]);
 
   if (isLoading && countries.length === 0) {
     return (
@@ -800,27 +833,97 @@ export default function CountryDetailPage() {
                     {/* Major Airports List */}
                     {country.airports.majorAirports &&
                       country.airports.majorAirports.length > 0 && (
-                        <Stack spacing={1.5}>
-                          <Typography
-                            variant="subtitle2"
-                            sx={{ fontWeight: 700, color: "text.secondary" }}
+                        <Stack spacing={1.5} sx={{ minWidth: 0 }}>
+                          <Stack
+                            direction={{ xs: "column", sm: "row" }}
+                            alignItems={{ xs: "flex-start", sm: "center" }}
+                            justifyContent="space-between"
+                            gap={1.5}
                           >
-                            🛫 Major & Regional Airports (
-                            {country.airports.majorAirports.length})
-                          </Typography>
-                          <Box
-                            sx={{
-                              display: "grid",
-                              gridTemplateColumns: {
-                                xs: "repeat(1, 1fr)",
-                                sm: "repeat(2, 1fr)",
-                                md: "repeat(3, 1fr)",
-                              },
-                              gap: 1.25,
-                            }}
-                          >
-                            {country.airports.majorAirports.map(
-                              (airport, idx) => (
+                            <Typography
+                              variant="subtitle2"
+                              sx={{ fontWeight: 700, color: "text.secondary" }}
+                            >
+                              🛫 Major & Regional Airports (
+                              {country.airports.majorAirports.length})
+                            </Typography>
+
+                            {country.airports.majorAirports.length > 6 && (
+                              <TextField
+                                size="small"
+                                placeholder="Filter airports / IATA..."
+                                value={airportSearch}
+                                onChange={(e) =>
+                                  setAirportSearch(e.target.value)
+                                }
+                                InputProps={{
+                                  startAdornment: (
+                                    <InputAdornment position="start">
+                                      <SearchIcon
+                                        fontSize="small"
+                                        sx={{ color: "text.secondary" }}
+                                      />
+                                    </InputAdornment>
+                                  ),
+                                  endAdornment: airportSearch ? (
+                                    <InputAdornment position="end">
+                                      <IconButton
+                                        size="small"
+                                        onClick={() => setAirportSearch("")}
+                                        aria-label="Clear filter"
+                                      >
+                                        <ClearIcon fontSize="small" />
+                                      </IconButton>
+                                    </InputAdornment>
+                                  ) : null,
+                                  sx: {
+                                    fontSize: "0.8rem",
+                                    height: 32,
+                                    borderRadius: 2,
+                                    backgroundColor: "rgba(15, 23, 42, 0.6)",
+                                  },
+                                }}
+                                sx={{
+                                  width: { xs: "100%", sm: 240 },
+                                }}
+                              />
+                            )}
+                          </Stack>
+
+                          {displayedAirports.length === 0 ? (
+                            <Paper
+                              variant="outlined"
+                              sx={{
+                                p: 3,
+                                textAlign: "center",
+                                backgroundColor: "rgba(15, 23, 42, 0.4)",
+                                borderRadius: 2,
+                                borderStyle: "dashed",
+                              }}
+                            >
+                              <Typography
+                                variant="body2"
+                                color="text.secondary"
+                              >
+                                No airports found matching &ldquo;
+                                {airportSearch}&rdquo;.
+                              </Typography>
+                            </Paper>
+                          ) : (
+                            <Box
+                              sx={{
+                                display: "grid",
+                                gridTemplateColumns: {
+                                  xs: "repeat(1, minmax(0, 1fr))",
+                                  sm: "repeat(2, minmax(0, 1fr))",
+                                  md: "repeat(2, minmax(0, 1fr))",
+                                  lg: "repeat(auto-fill, minmax(290px, 1fr))",
+                                },
+                                gap: 1.25,
+                                minWidth: 0,
+                              }}
+                            >
+                              {displayedAirports.map((airport, idx) => (
                                 <Paper
                                   key={`${airport.name}-${idx}`}
                                   variant="outlined"
@@ -832,10 +935,18 @@ export default function CountryDetailPage() {
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "space-between",
-                                    gap: 1,
+                                    gap: 1.25,
+                                    minWidth: 0,
+                                    overflow: "hidden",
                                   }}
                                 >
-                                  <Box sx={{ minWidth: 0, flexGrow: 1 }}>
+                                  <Box
+                                    sx={{
+                                      minWidth: 0,
+                                      flexGrow: 1,
+                                      overflow: "hidden",
+                                    }}
+                                  >
                                     <Typography
                                       variant="body2"
                                       sx={{
@@ -858,6 +969,7 @@ export default function CountryDetailPage() {
                                           textOverflow: "ellipsis",
                                           whiteSpace: "nowrap",
                                         }}
+                                        title={airport.municipality}
                                       >
                                         📍 {airport.municipality}
                                       </Typography>
@@ -868,6 +980,7 @@ export default function CountryDetailPage() {
                                       label={airport.iata}
                                       size="small"
                                       sx={{
+                                        flexShrink: 0,
                                         fontWeight: 700,
                                         fontSize: "0.75rem",
                                         backgroundColor:
@@ -890,13 +1003,57 @@ export default function CountryDetailPage() {
                                       label={airport.icao}
                                       size="small"
                                       variant="outlined"
-                                      sx={{ fontSize: "0.7rem" }}
+                                      sx={{
+                                        flexShrink: 0,
+                                        fontSize: "0.7rem",
+                                      }}
                                     />
                                   ) : null}
                                 </Paper>
-                              ),
+                              ))}
+                            </Box>
+                          )}
+
+                          {!airportSearch.trim() &&
+                            filteredMajorAirports.length > 12 && (
+                              <Box
+                                sx={{
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  pt: 1,
+                                }}
+                              >
+                                <Button
+                                  variant="outlined"
+                                  size="small"
+                                  onClick={() =>
+                                    setShowAllAirports((prev) => !prev)
+                                  }
+                                  endIcon={
+                                    showAllAirports ? (
+                                      <ExpandLessIcon />
+                                    ) : (
+                                      <ExpandMoreIcon />
+                                    )
+                                  }
+                                  sx={{
+                                    textTransform: "none",
+                                    borderRadius: 2,
+                                    borderColor: "rgba(255, 255, 255, 0.15)",
+                                    color: "text.primary",
+                                    "&:hover": {
+                                      borderColor: "primary.main",
+                                      backgroundColor:
+                                        "rgba(99, 102, 241, 0.1)",
+                                    },
+                                  }}
+                                >
+                                  {showAllAirports
+                                    ? "Show fewer airports"
+                                    : `Show all ${filteredMajorAirports.length} airports`}
+                                </Button>
+                              </Box>
                             )}
-                          </Box>
                         </Stack>
                       )}
                   </Stack>
