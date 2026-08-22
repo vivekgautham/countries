@@ -46,6 +46,7 @@ export default function CountryComparePage() {
   const { data: allCountries = [], isLoading } = useCountriesData();
 
   const [copiedSnackbar, setCopiedSnackbar] = useState(false);
+  const [searchInputValue, setSearchInputValue] = useState("");
 
   // Selected country codes from URL query param ?c=US,CA,MX
   const selectedCodes = useMemo(() => {
