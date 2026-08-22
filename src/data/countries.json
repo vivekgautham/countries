@@ -17,7 +17,9 @@
       "Papiamento"
     ],
     "phoneCode": "+297",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -40,7 +42,9 @@
       "Turkmen"
     ],
     "phoneCode": "+93",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:30"
+    ],
     "borders": [
       "IRN",
       "PAK",
@@ -68,7 +72,9 @@
       "Portuguese"
     ],
     "phoneCode": "+244",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "COG",
       "COD",
@@ -94,7 +100,9 @@
       "English"
     ],
     "phoneCode": "+1264",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -115,7 +123,9 @@
       "Swedish"
     ],
     "phoneCode": "+35818",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -136,7 +146,9 @@
       "Albanian"
     ],
     "phoneCode": "+355",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "MNE",
       "GRC",
@@ -162,7 +174,9 @@
       "Catalan"
     ],
     "phoneCode": "+376",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "FRA",
       "ESP"
@@ -186,7 +200,9 @@
       "Arabic"
     ],
     "phoneCode": "+971",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [
       "OMN",
       "SAU"
@@ -211,7 +227,9 @@
       "Spanish"
     ],
     "phoneCode": "+54",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [
       "BOL",
       "BRA",
@@ -238,7 +256,9 @@
       "Armenian"
     ],
     "phoneCode": "+374",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [
       "AZE",
       "GEO",
@@ -265,7 +285,9 @@
       "Samoan"
     ],
     "phoneCode": "+1684",
-    "timezones": [],
+    "timezones": [
+      "UTC-11:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -281,7 +303,17 @@
     "area": 14000000,
     "currencies": [],
     "languages": {},
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00",
+      "UTC+00:00",
+      "UTC+03:00",
+      "UTC+05:00",
+      "UTC+06:00",
+      "UTC+07:00",
+      "UTC+10:00",
+      "UTC+11:00",
+      "UTC+13:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -302,7 +334,9 @@
       "French"
     ],
     "phoneCode": "+262",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -323,7 +357,9 @@
       "English"
     ],
     "phoneCode": "+1268",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -344,7 +380,14 @@
       "English"
     ],
     "phoneCode": "+61",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00",
+      "UTC+08:45",
+      "UTC+09:30",
+      "UTC+10:00",
+      "UTC+10:30",
+      "UTC+11:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -365,7 +408,9 @@
       "Austro-Bavarian German"
     ],
     "phoneCode": "+43",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CZE",
       "DEU",
@@ -396,7 +441,9 @@
       "Russian"
     ],
     "phoneCode": "+994",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [
       "ARM",
       "GEO",
@@ -424,7 +471,9 @@
       "Kirundi"
     ],
     "phoneCode": "+257",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "COD",
       "RWA",
@@ -451,7 +500,9 @@
       "Dutch"
     ],
     "phoneCode": "+32",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "FRA",
       "DEU",
@@ -477,7 +528,9 @@
       "French"
     ],
     "phoneCode": "+229",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BFA",
       "NER",
@@ -503,7 +556,9 @@
       "French"
     ],
     "phoneCode": "+226",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "BEN",
       "CIV",
@@ -531,7 +586,9 @@
       "Bengali"
     ],
     "phoneCode": "+880",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:00"
+    ],
     "borders": [
       "MMR",
       "IND"
@@ -555,7 +612,9 @@
       "Bulgarian"
     ],
     "phoneCode": "+359",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "GRC",
       "MKD",
@@ -582,7 +641,9 @@
       "Arabic"
     ],
     "phoneCode": "+973",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -604,7 +665,9 @@
       "English"
     ],
     "phoneCode": "+1242",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -627,7 +690,9 @@
       "Serbian"
     ],
     "phoneCode": "+387",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "HRV",
       "MNE",
@@ -652,7 +717,9 @@
       "French"
     ],
     "phoneCode": "+590",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -674,7 +741,9 @@
       "English"
     ],
     "phoneCode": "+2 (2 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -696,7 +765,9 @@
       "Russian"
     ],
     "phoneCode": "+375",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "LVA",
       "LTU",
@@ -725,7 +796,9 @@
       "Spanish"
     ],
     "phoneCode": "+501",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "GTM",
       "MEX"
@@ -749,7 +822,9 @@
       "English"
     ],
     "phoneCode": "+1441",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -773,7 +848,9 @@
       "Spanish"
     ],
     "phoneCode": "+591",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "ARG",
       "BRA",
@@ -802,7 +879,9 @@
       "Papiamento"
     ],
     "phoneCode": "+599",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -823,7 +902,12 @@
       "Portuguese"
     ],
     "phoneCode": "+55",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-02:00"
+    ],
     "borders": [
       "ARG",
       "BOL",
@@ -855,7 +939,9 @@
       "English"
     ],
     "phoneCode": "+1246",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -877,7 +963,9 @@
       "Malay"
     ],
     "phoneCode": "+673",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [
       "MYS"
     ],
@@ -901,7 +989,9 @@
       "Dzongkha"
     ],
     "phoneCode": "+975",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:00"
+    ],
     "borders": [
       "CHN",
       "IND"
@@ -923,7 +1013,9 @@
       "Norwegian"
     ],
     "phoneCode": "+47",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -945,7 +1037,9 @@
       "Tswana"
     ],
     "phoneCode": "+267",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "NAM",
       "ZAF",
@@ -972,7 +1066,9 @@
       "Sango"
     ],
     "phoneCode": "+236",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CMR",
       "TCD",
@@ -1001,7 +1097,14 @@
       "French"
     ],
     "phoneCode": "+1 (62 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00",
+      "UTC-04:00",
+      "UTC-03:30"
+    ],
     "borders": [
       "USA"
     ],
@@ -1024,7 +1127,9 @@
       "English"
     ],
     "phoneCode": "+61",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:30"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1048,7 +1153,9 @@
       "Romansh"
     ],
     "phoneCode": "+41",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "FRA",
@@ -1075,7 +1182,10 @@
       "Spanish"
     ],
     "phoneCode": "+56",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00",
+      "UTC-03:00"
+    ],
     "borders": [
       "ARG",
       "BOL",
@@ -1100,7 +1210,10 @@
       "Chinese"
     ],
     "phoneCode": "+86",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:00",
+      "UTC+08:00"
+    ],
     "borders": [
       "AFG",
       "BTN",
@@ -1138,7 +1251,9 @@
       "French"
     ],
     "phoneCode": "+225",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "BFA",
       "GHA",
@@ -1166,7 +1281,9 @@
       "French"
     ],
     "phoneCode": "+237",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CAF",
       "TCD",
@@ -1198,7 +1315,10 @@
       "Swahili"
     ],
     "phoneCode": "+243",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00",
+      "UTC+02:00"
+    ],
     "borders": [
       "AGO",
       "BDI",
@@ -1231,7 +1351,9 @@
       "Lingala"
     ],
     "phoneCode": "+242",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AGO",
       "CMR",
@@ -1260,7 +1382,9 @@
       "Cook Islands M\u0101ori"
     ],
     "phoneCode": "+682",
-    "timezones": [],
+    "timezones": [
+      "UTC-10:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1281,7 +1405,9 @@
       "Spanish"
     ],
     "phoneCode": "+57",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [
       "BRA",
       "ECU",
@@ -1310,7 +1436,9 @@
       "Comorian"
     ],
     "phoneCode": "+269",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1331,7 +1459,9 @@
       "Portuguese"
     ],
     "phoneCode": "+238",
-    "timezones": [],
+    "timezones": [
+      "UTC-01:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1352,7 +1482,9 @@
       "Spanish"
     ],
     "phoneCode": "+506",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "NIC",
       "PAN"
@@ -1377,7 +1509,9 @@
       "Spanish"
     ],
     "phoneCode": "+53",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1400,7 +1534,9 @@
       "Papiamento"
     ],
     "phoneCode": "+599",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1421,7 +1557,9 @@
       "English"
     ],
     "phoneCode": "+61",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1442,7 +1580,9 @@
       "English"
     ],
     "phoneCode": "+1345",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1464,7 +1604,9 @@
       "Turkish"
     ],
     "phoneCode": "+357",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1486,7 +1628,9 @@
       "Slovak"
     ],
     "phoneCode": "+420",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "DEU",
@@ -1512,7 +1656,9 @@
       "German"
     ],
     "phoneCode": "+49",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "BEL",
@@ -1544,7 +1690,9 @@
       "French"
     ],
     "phoneCode": "+253",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "ERI",
       "ETH",
@@ -1569,7 +1717,9 @@
       "English"
     ],
     "phoneCode": "+1767",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1590,7 +1740,9 @@
       "Danish"
     ],
     "phoneCode": "+45",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "DEU"
     ],
@@ -1613,7 +1765,9 @@
       "Spanish"
     ],
     "phoneCode": "+1 (3 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "HTI"
     ],
@@ -1638,7 +1792,9 @@
       "French"
     ],
     "phoneCode": "+213",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "TUN",
       "LBY",
@@ -1667,7 +1823,10 @@
       "Spanish"
     ],
     "phoneCode": "+593",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00",
+      "UTC-05:00"
+    ],
     "borders": [
       "COL",
       "PER"
@@ -1691,7 +1850,9 @@
       "Arabic"
     ],
     "phoneCode": "+20",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ISR",
       "LBY",
@@ -1719,7 +1880,9 @@
       "Tigrinya"
     ],
     "phoneCode": "+291",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "DJI",
       "ETH",
@@ -1748,7 +1911,9 @@
       "Spanish"
     ],
     "phoneCode": "+2 (2 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "DZA",
       "MRT",
@@ -1777,7 +1942,10 @@
       "Occitan (Aranese)"
     ],
     "phoneCode": "+34",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00",
+      "UTC+01:00"
+    ],
     "borders": [
       "AND",
       "FRA",
@@ -1804,7 +1972,9 @@
       "Estonian"
     ],
     "phoneCode": "+372",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "LVA",
       "RUS"
@@ -1833,7 +2003,9 @@
       "English"
     ],
     "phoneCode": "+251",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "DJI",
       "ERI",
@@ -1862,7 +2034,9 @@
       "Swedish"
     ],
     "phoneCode": "+358",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "NOR",
       "SWE",
@@ -1889,7 +2063,9 @@
       "Fiji Hindi"
     ],
     "phoneCode": "+679",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -1910,7 +2086,9 @@
       "English"
     ],
     "phoneCode": "+500",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1931,7 +2109,9 @@
       "French"
     ],
     "phoneCode": "+33",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AND",
       "BEL",
@@ -1963,7 +2143,9 @@
       "Faroese"
     ],
     "phoneCode": "+298",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -1982,7 +2164,10 @@
       "English"
     ],
     "phoneCode": "+691",
-    "timezones": [],
+    "timezones": [
+      "UTC+10:00",
+      "UTC+11:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -2003,7 +2188,9 @@
       "French"
     ],
     "phoneCode": "+241",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CMR",
       "COG",
@@ -2028,7 +2215,9 @@
       "English"
     ],
     "phoneCode": "+44",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "IRL"
     ],
@@ -2051,7 +2240,9 @@
       "Georgian"
     ],
     "phoneCode": "+995",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [
       "ARM",
       "AZE",
@@ -2080,7 +2271,9 @@
       "Guern\u00e9siais"
     ],
     "phoneCode": "+44",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2101,7 +2294,9 @@
       "English"
     ],
     "phoneCode": "+233",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "BFA",
       "CIV",
@@ -2126,7 +2321,9 @@
       "English"
     ],
     "phoneCode": "+350",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ESP"
     ],
@@ -2149,7 +2346,9 @@
       "French"
     ],
     "phoneCode": "+224",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "CIV",
       "GNB",
@@ -2177,7 +2376,9 @@
       "French"
     ],
     "phoneCode": "+590",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2198,7 +2399,9 @@
       "English"
     ],
     "phoneCode": "+220",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "SEN"
     ],
@@ -2222,7 +2425,9 @@
       "Upper Guinea Creole"
     ],
     "phoneCode": "+245",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "GIN",
       "SEN"
@@ -2248,7 +2453,9 @@
       "Spanish"
     ],
     "phoneCode": "+240",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CMR",
       "GAB"
@@ -2272,7 +2479,9 @@
       "Greek"
     ],
     "phoneCode": "+30",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ALB",
       "BGR",
@@ -2298,7 +2507,9 @@
       "English"
     ],
     "phoneCode": "+1473",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -2319,7 +2530,12 @@
       "Greenlandic"
     ],
     "phoneCode": "+299",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00",
+      "UTC-03:00",
+      "UTC-01:00",
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2340,7 +2556,9 @@
       "Spanish"
     ],
     "phoneCode": "+502",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "BLZ",
       "SLV",
@@ -2366,7 +2584,9 @@
       "French"
     ],
     "phoneCode": "+594",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [
       "BRA",
       "SUR"
@@ -2392,7 +2612,9 @@
       "Spanish"
     ],
     "phoneCode": "+1671",
-    "timezones": [],
+    "timezones": [
+      "UTC+10:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2413,7 +2635,9 @@
       "English"
     ],
     "phoneCode": "+592",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "BRA",
       "SUR",
@@ -2439,7 +2663,9 @@
       "Chinese"
     ],
     "phoneCode": "+852",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [
       "CHN"
     ],
@@ -2459,7 +2685,9 @@
     "languages": [
       "English"
     ],
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2480,7 +2708,9 @@
       "Spanish"
     ],
     "phoneCode": "+504",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "GTM",
       "SLV",
@@ -2505,7 +2735,9 @@
       "Croatian"
     ],
     "phoneCode": "+385",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BIH",
       "HUN",
@@ -2533,7 +2765,9 @@
       "Haitian Creole"
     ],
     "phoneCode": "+509",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [
       "DOM"
     ],
@@ -2556,7 +2790,9 @@
       "Hungarian"
     ],
     "phoneCode": "+36",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "HRV",
@@ -2585,7 +2821,11 @@
       "Indonesian"
     ],
     "phoneCode": "+62",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00",
+      "UTC+08:00",
+      "UTC+09:00"
+    ],
     "borders": [
       "TLS",
       "MYS",
@@ -2612,7 +2852,9 @@
       "Manx"
     ],
     "phoneCode": "+44",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2654,7 +2896,9 @@
       "Sanskrit"
     ],
     "phoneCode": "+91",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:30"
+    ],
     "borders": [
       "BGD",
       "BTN",
@@ -2682,7 +2926,9 @@
       "English"
     ],
     "phoneCode": "+246",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2704,7 +2950,9 @@
       "Irish"
     ],
     "phoneCode": "+353",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "GBR"
     ],
@@ -2727,7 +2975,9 @@
       "Persian (Farsi)"
     ],
     "phoneCode": "+98",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:30"
+    ],
     "borders": [
       "AFG",
       "ARM",
@@ -2758,7 +3008,9 @@
       "Sorani"
     ],
     "phoneCode": "+964",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "IRN",
       "JOR",
@@ -2786,7 +3038,9 @@
       "Icelandic"
     ],
     "phoneCode": "+354",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -2808,7 +3062,9 @@
       "Hebrew"
     ],
     "phoneCode": "+972",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "EGY",
       "JOR",
@@ -2835,7 +3091,9 @@
       "Italian"
     ],
     "phoneCode": "+39",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "FRA",
@@ -2864,7 +3122,9 @@
       "Jamaican Patois"
     ],
     "phoneCode": "+1876",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -2888,7 +3148,9 @@
       "J\u00e8rriais"
     ],
     "phoneCode": "+44",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -2909,7 +3171,9 @@
       "Arabic"
     ],
     "phoneCode": "+962",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "IRQ",
       "ISR",
@@ -2936,7 +3200,9 @@
       "Japanese"
     ],
     "phoneCode": "+81",
-    "timezones": [],
+    "timezones": [
+      "UTC+09:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -2958,7 +3224,10 @@
       "Russian"
     ],
     "phoneCode": "+7 (2 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00",
+      "UTC+06:00"
+    ],
     "borders": [
       "CHN",
       "KGZ",
@@ -2986,7 +3255,9 @@
       "Swahili"
     ],
     "phoneCode": "+254",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "ETH",
       "SOM",
@@ -3014,7 +3285,9 @@
       "Russian"
     ],
     "phoneCode": "+996",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:00"
+    ],
     "borders": [
       "CHN",
       "KAZ",
@@ -3041,7 +3314,9 @@
       "Khmer"
     ],
     "phoneCode": "+855",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00"
+    ],
     "borders": [
       "LAO",
       "THA",
@@ -3068,7 +3343,11 @@
       "Gilbertese"
     ],
     "phoneCode": "+686",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00",
+      "UTC+13:00",
+      "UTC+14:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3089,7 +3368,9 @@
       "English"
     ],
     "phoneCode": "+1869",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3110,7 +3391,9 @@
       "Korean"
     ],
     "phoneCode": "+82",
-    "timezones": [],
+    "timezones": [
+      "UTC+09:00"
+    ],
     "borders": [
       "PRK"
     ],
@@ -3134,7 +3417,9 @@
       "Serbian"
     ],
     "phoneCode": "+383",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ALB",
       "MKD",
@@ -3160,7 +3445,9 @@
       "Arabic"
     ],
     "phoneCode": "+965",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "IRQ",
       "SAU"
@@ -3184,7 +3471,9 @@
       "Lao"
     ],
     "phoneCode": "+856",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00"
+    ],
     "borders": [
       "MMR",
       "KHM",
@@ -3212,7 +3501,9 @@
       "French"
     ],
     "phoneCode": "+961",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ISR",
       "SYR"
@@ -3236,7 +3527,9 @@
       "English"
     ],
     "phoneCode": "+231",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "GIN",
       "CIV",
@@ -3261,7 +3554,9 @@
       "Arabic"
     ],
     "phoneCode": "+218",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "DZA",
       "TCD",
@@ -3289,7 +3584,9 @@
       "English"
     ],
     "phoneCode": "+1758",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3310,7 +3607,9 @@
       "German"
     ],
     "phoneCode": "+423",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "CHE"
@@ -3336,7 +3635,9 @@
       "English"
     ],
     "phoneCode": "+94",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:30"
+    ],
     "borders": [
       "IND"
     ],
@@ -3361,7 +3662,9 @@
       "Sotho"
     ],
     "phoneCode": "+266",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ZAF"
     ],
@@ -3384,7 +3687,9 @@
       "Lithuanian"
     ],
     "phoneCode": "+370",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BLR",
       "LVA",
@@ -3412,7 +3717,9 @@
       "Luxembourgish"
     ],
     "phoneCode": "+352",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BEL",
       "FRA",
@@ -3437,7 +3744,9 @@
       "Latvian"
     ],
     "phoneCode": "+371",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BLR",
       "EST",
@@ -3464,7 +3773,9 @@
       "Chinese"
     ],
     "phoneCode": "+853",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [
       "CHN"
     ],
@@ -3487,7 +3798,9 @@
       "French"
     ],
     "phoneCode": "+590",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "SXM"
     ],
@@ -3512,7 +3825,9 @@
       "French"
     ],
     "phoneCode": "+212",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "DZA",
       "ESH",
@@ -3537,7 +3852,9 @@
       "French"
     ],
     "phoneCode": "+377",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "FRA"
     ],
@@ -3560,7 +3877,9 @@
       "Moldavian"
     ],
     "phoneCode": "+373",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ROU",
       "UKR"
@@ -3585,7 +3904,9 @@
       "Malagasy"
     ],
     "phoneCode": "+261",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3606,7 +3927,9 @@
       "Maldivian"
     ],
     "phoneCode": "+960",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3627,7 +3950,12 @@
       "Spanish"
     ],
     "phoneCode": "+52",
-    "timezones": [],
+    "timezones": [
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00"
+    ],
     "borders": [
       "BLZ",
       "GTM",
@@ -3653,7 +3981,9 @@
       "Marshallese"
     ],
     "phoneCode": "+692",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3674,7 +4004,9 @@
       "Macedonian"
     ],
     "phoneCode": "+389",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ALB",
       "BGR",
@@ -3701,7 +4033,9 @@
       "French"
     ],
     "phoneCode": "+223",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "DZA",
       "BFA",
@@ -3731,7 +4065,9 @@
       "Maltese"
     ],
     "phoneCode": "+356",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3752,7 +4088,9 @@
       "Burmese"
     ],
     "phoneCode": "+95",
-    "timezones": [],
+    "timezones": [
+      "UTC+06:30"
+    ],
     "borders": [
       "BGD",
       "CHN",
@@ -3779,7 +4117,9 @@
       "Montenegrin"
     ],
     "phoneCode": "+382",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ALB",
       "BIH",
@@ -3806,7 +4146,10 @@
       "Mongolian"
     ],
     "phoneCode": "+976",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00",
+      "UTC+08:00"
+    ],
     "borders": [
       "CHN",
       "RUS"
@@ -3832,7 +4175,9 @@
       "English"
     ],
     "phoneCode": "+1670",
-    "timezones": [],
+    "timezones": [
+      "UTC+10:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -3853,7 +4198,9 @@
       "Portuguese"
     ],
     "phoneCode": "+258",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "MWI",
       "ZAF",
@@ -3881,7 +4228,9 @@
       "Arabic"
     ],
     "phoneCode": "+222",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "DZA",
       "MLI",
@@ -3907,7 +4256,9 @@
       "English"
     ],
     "phoneCode": "+1664",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -3928,7 +4279,9 @@
       "French"
     ],
     "phoneCode": "+596",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -3952,7 +4305,9 @@
       "Bhojpuri"
     ],
     "phoneCode": "+230",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -3974,7 +4329,9 @@
       "Chewa"
     ],
     "phoneCode": "+265",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "MOZ",
       "TZA",
@@ -4000,7 +4357,9 @@
       "Malay"
     ],
     "phoneCode": "+60",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [
       "BRN",
       "IDN",
@@ -4025,7 +4384,9 @@
       "French"
     ],
     "phoneCode": "+262",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4055,7 +4416,9 @@
       "Tswana"
     ],
     "phoneCode": "+264",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "AGO",
       "BWA",
@@ -4081,7 +4444,9 @@
       "French"
     ],
     "phoneCode": "+687",
-    "timezones": [],
+    "timezones": [
+      "UTC+11:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4102,7 +4467,9 @@
       "French"
     ],
     "phoneCode": "+227",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "DZA",
       "BEN",
@@ -4132,7 +4499,9 @@
       "Norfuk"
     ],
     "phoneCode": "+672",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4157,7 +4526,9 @@
       "Fulfulde"
     ],
     "phoneCode": "+234",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BEN",
       "CMR",
@@ -4183,7 +4554,9 @@
       "Spanish"
     ],
     "phoneCode": "+505",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "CRI",
       "HND"
@@ -4208,7 +4581,9 @@
       "Niuean"
     ],
     "phoneCode": "+683",
-    "timezones": [],
+    "timezones": [
+      "UTC-11:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4229,7 +4604,9 @@
       "Dutch"
     ],
     "phoneCode": "+31",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BEL",
       "DEU"
@@ -4255,7 +4632,9 @@
       "Sami"
     ],
     "phoneCode": "+47",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "FIN",
       "SWE",
@@ -4280,7 +4659,9 @@
       "Nepali"
     ],
     "phoneCode": "+977",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:45"
+    ],
     "borders": [
       "CHN",
       "IND"
@@ -4305,7 +4686,9 @@
       "Nauru"
     ],
     "phoneCode": "+674",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -4328,7 +4711,10 @@
       "New Zealand Sign Language"
     ],
     "phoneCode": "+64",
-    "timezones": [],
+    "timezones": [
+      "UTC+13:00",
+      "UTC+13:45"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -4349,7 +4735,9 @@
       "Arabic"
     ],
     "phoneCode": "+968",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [
       "SAU",
       "ARE",
@@ -4380,7 +4768,9 @@
       "Balochi"
     ],
     "phoneCode": "+92",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [
       "AFG",
       "CHN",
@@ -4407,7 +4797,9 @@
       "Spanish"
     ],
     "phoneCode": "+507",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [
       "COL",
       "CRI"
@@ -4431,7 +4823,9 @@
       "English"
     ],
     "phoneCode": "+64",
-    "timezones": [],
+    "timezones": [
+      "UTC-08:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4454,7 +4848,9 @@
       "Spanish"
     ],
     "phoneCode": "+51",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [
       "BOL",
       "BRA",
@@ -4489,7 +4885,9 @@
       "Pangasinan"
     ],
     "phoneCode": "+63",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -4511,7 +4909,9 @@
       "Palauan"
     ],
     "phoneCode": "+680",
-    "timezones": [],
+    "timezones": [
+      "UTC+09:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -4535,7 +4935,10 @@
       "PNG Sign Language"
     ],
     "phoneCode": "+675",
-    "timezones": [],
+    "timezones": [
+      "UTC+10:00",
+      "UTC+11:00"
+    ],
     "borders": [
       "IDN"
     ],
@@ -4558,7 +4961,9 @@
       "Polish"
     ],
     "phoneCode": "+48",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BLR",
       "CZE",
@@ -4588,7 +4993,9 @@
       "Spanish"
     ],
     "phoneCode": "+1 (2 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4609,7 +5016,9 @@
       "Korean"
     ],
     "phoneCode": "+850",
-    "timezones": [],
+    "timezones": [
+      "UTC+09:00"
+    ],
     "borders": [
       "CHN",
       "KOR",
@@ -4634,7 +5043,10 @@
       "Portuguese"
     ],
     "phoneCode": "+351",
-    "timezones": [],
+    "timezones": [
+      "UTC-01:00",
+      "UTC+00:00"
+    ],
     "borders": [
       "ESP"
     ],
@@ -4658,7 +5070,9 @@
       "Spanish"
     ],
     "phoneCode": "+595",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [
       "ARG",
       "BOL",
@@ -4685,7 +5099,9 @@
       "Arabic"
     ],
     "phoneCode": "+970",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "ISR",
       "EGY",
@@ -4710,7 +5126,11 @@
       "French"
     ],
     "phoneCode": "+689",
-    "timezones": [],
+    "timezones": [
+      "UTC-10:00",
+      "UTC-09:30",
+      "UTC-09:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4731,7 +5151,9 @@
       "Arabic"
     ],
     "phoneCode": "+974",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "SAU"
     ],
@@ -4754,7 +5176,9 @@
       "French"
     ],
     "phoneCode": "+262",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4775,7 +5199,9 @@
       "Romanian"
     ],
     "phoneCode": "+40",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BGR",
       "HUN",
@@ -4802,7 +5228,19 @@
       "Russian"
     ],
     "phoneCode": "+7 (5 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00",
+      "UTC+03:00",
+      "UTC+04:00",
+      "UTC+05:00",
+      "UTC+06:00",
+      "UTC+07:00",
+      "UTC+08:00",
+      "UTC+09:00",
+      "UTC+10:00",
+      "UTC+11:00",
+      "UTC+12:00"
+    ],
     "borders": [
       "AZE",
       "BLR",
@@ -4841,7 +5279,9 @@
       "Swahili"
     ],
     "phoneCode": "+250",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BDI",
       "COD",
@@ -4867,7 +5307,9 @@
       "Arabic"
     ],
     "phoneCode": "+966",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "IRQ",
       "JOR",
@@ -4897,7 +5339,9 @@
       "English"
     ],
     "phoneCode": "+249",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "CAF",
       "TCD",
@@ -4926,7 +5370,9 @@
       "French"
     ],
     "phoneCode": "+221",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "GMB",
       "GIN",
@@ -4956,7 +5402,9 @@
       "Chinese"
     ],
     "phoneCode": "+65",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -4977,7 +5425,9 @@
       "English"
     ],
     "phoneCode": "+500",
-    "timezones": [],
+    "timezones": [
+      "UTC-02:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -4998,7 +5448,9 @@
       "Norwegian"
     ],
     "phoneCode": "+4779",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5019,7 +5471,9 @@
       "English"
     ],
     "phoneCode": "+677",
-    "timezones": [],
+    "timezones": [
+      "UTC+11:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5040,7 +5494,9 @@
       "English"
     ],
     "phoneCode": "+232",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "GIN",
       "LBR"
@@ -5064,7 +5520,9 @@
       "Spanish"
     ],
     "phoneCode": "+503",
-    "timezones": [],
+    "timezones": [
+      "UTC-06:00"
+    ],
     "borders": [
       "GTM",
       "HND"
@@ -5088,7 +5546,9 @@
       "Italian"
     ],
     "phoneCode": "+378",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ITA"
     ],
@@ -5112,7 +5572,9 @@
       "Somali"
     ],
     "phoneCode": "+252",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "DJI",
       "ETH",
@@ -5137,7 +5599,9 @@
       "French"
     ],
     "phoneCode": "+508",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5158,7 +5622,9 @@
       "Serbian"
     ],
     "phoneCode": "+381",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "BIH",
       "BGR",
@@ -5188,7 +5654,9 @@
       "English"
     ],
     "phoneCode": "+211",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "CAF",
       "COD",
@@ -5216,7 +5684,9 @@
       "Portuguese"
     ],
     "phoneCode": "+239",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5237,7 +5707,9 @@
       "Dutch"
     ],
     "phoneCode": "+597",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [
       "BRA",
       "GUF",
@@ -5262,7 +5734,9 @@
       "Slovak"
     ],
     "phoneCode": "+421",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "CZE",
@@ -5289,7 +5763,9 @@
       "Slovene"
     ],
     "phoneCode": "+386",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "AUT",
       "HRV",
@@ -5315,7 +5791,9 @@
       "Swedish"
     ],
     "phoneCode": "+46",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "FIN",
       "NOR"
@@ -5341,7 +5819,9 @@
       "Swazi"
     ],
     "phoneCode": "+268",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "MOZ",
       "ZAF"
@@ -5367,7 +5847,9 @@
       "Dutch"
     ],
     "phoneCode": "+1721",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "MAF"
     ],
@@ -5392,7 +5874,9 @@
       "French"
     ],
     "phoneCode": "+248",
-    "timezones": [],
+    "timezones": [
+      "UTC+04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5413,7 +5897,9 @@
       "Arabic"
     ],
     "phoneCode": "+963",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "IRQ",
       "ISR",
@@ -5440,7 +5926,9 @@
       "English"
     ],
     "phoneCode": "+1649",
-    "timezones": [],
+    "timezones": [
+      "UTC-05:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5462,7 +5950,9 @@
       "French"
     ],
     "phoneCode": "+235",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "CMR",
       "CAF",
@@ -5490,7 +5980,9 @@
       "French"
     ],
     "phoneCode": "+228",
-    "timezones": [],
+    "timezones": [
+      "UTC+00:00"
+    ],
     "borders": [
       "BEN",
       "BFA",
@@ -5515,7 +6007,9 @@
       "Thai"
     ],
     "phoneCode": "+66",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00"
+    ],
     "borders": [
       "MMR",
       "KHM",
@@ -5542,7 +6036,9 @@
       "Tajik"
     ],
     "phoneCode": "+992",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [
       "AFG",
       "CHN",
@@ -5570,7 +6066,9 @@
       "Tokelauan"
     ],
     "phoneCode": "+690",
-    "timezones": [],
+    "timezones": [
+      "UTC+13:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5592,7 +6090,9 @@
       "Turkmen"
     ],
     "phoneCode": "+993",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [
       "AFG",
       "IRN",
@@ -5619,7 +6119,9 @@
       "Tetum"
     ],
     "phoneCode": "+670",
-    "timezones": [],
+    "timezones": [
+      "UTC+09:00"
+    ],
     "borders": [
       "IDN"
     ],
@@ -5643,7 +6145,9 @@
       "Tongan"
     ],
     "phoneCode": "+676",
-    "timezones": [],
+    "timezones": [
+      "UTC+13:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5664,7 +6168,9 @@
       "English"
     ],
     "phoneCode": "+1868",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5685,7 +6191,9 @@
       "Arabic"
     ],
     "phoneCode": "+216",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "DZA",
       "LBY"
@@ -5709,7 +6217,9 @@
       "Turkish"
     ],
     "phoneCode": "+90",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "ARM",
       "AZE",
@@ -5741,7 +6251,9 @@
       "Tuvaluan"
     ],
     "phoneCode": "+688",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -5762,7 +6274,9 @@
       "Chinese"
     ],
     "phoneCode": "+886",
-    "timezones": [],
+    "timezones": [
+      "UTC+08:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5784,7 +6298,9 @@
       "Swahili"
     ],
     "phoneCode": "+255",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "BDI",
       "COD",
@@ -5815,7 +6331,9 @@
       "Swahili"
     ],
     "phoneCode": "+256",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "COD",
       "KEN",
@@ -5842,7 +6360,10 @@
       "Ukrainian"
     ],
     "phoneCode": "+380",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00",
+      "UTC+03:00"
+    ],
     "borders": [
       "BLR",
       "HUN",
@@ -5871,7 +6392,10 @@
       "English"
     ],
     "phoneCode": "+268",
-    "timezones": [],
+    "timezones": [
+      "UTC-11:00",
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -5892,7 +6416,9 @@
       "Spanish"
     ],
     "phoneCode": "+598",
-    "timezones": [],
+    "timezones": [
+      "UTC-03:00"
+    ],
     "borders": [
       "ARG",
       "BRA"
@@ -5916,7 +6442,14 @@
       "English"
     ],
     "phoneCode": "+1 (380 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC-10:00",
+      "UTC-09:00",
+      "UTC-08:00",
+      "UTC-07:00",
+      "UTC-06:00",
+      "UTC-05:00"
+    ],
     "borders": [
       "CAN",
       "MEX"
@@ -5941,7 +6474,9 @@
       "Uzbek"
     ],
     "phoneCode": "+998",
-    "timezones": [],
+    "timezones": [
+      "UTC+05:00"
+    ],
     "borders": [
       "AFG",
       "KAZ",
@@ -5969,7 +6504,9 @@
       "Latin"
     ],
     "phoneCode": "+3 (2 zones)",
-    "timezones": [],
+    "timezones": [
+      "UTC+01:00"
+    ],
     "borders": [
       "ITA"
     ],
@@ -5992,7 +6529,9 @@
       "English"
     ],
     "phoneCode": "+1784",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -6013,7 +6552,9 @@
       "Spanish"
     ],
     "phoneCode": "+58",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [
       "BRA",
       "COL",
@@ -6038,7 +6579,9 @@
       "English"
     ],
     "phoneCode": "+1284",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -6059,7 +6602,9 @@
       "English"
     ],
     "phoneCode": "+1340",
-    "timezones": [],
+    "timezones": [
+      "UTC-04:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -6080,7 +6625,9 @@
       "Vietnamese"
     ],
     "phoneCode": "+84",
-    "timezones": [],
+    "timezones": [
+      "UTC+07:00"
+    ],
     "borders": [
       "KHM",
       "CHN",
@@ -6107,7 +6654,9 @@
       "French"
     ],
     "phoneCode": "+678",
-    "timezones": [],
+    "timezones": [
+      "UTC+11:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -6128,7 +6677,9 @@
       "French"
     ],
     "phoneCode": "+681",
-    "timezones": [],
+    "timezones": [
+      "UTC+12:00"
+    ],
     "borders": [],
     "unMember": false
   },
@@ -6150,7 +6701,9 @@
       "Samoan"
     ],
     "phoneCode": "+685",
-    "timezones": [],
+    "timezones": [
+      "UTC+14:00"
+    ],
     "borders": [],
     "unMember": true
   },
@@ -6171,7 +6724,9 @@
       "Arabic"
     ],
     "phoneCode": "+967",
-    "timezones": [],
+    "timezones": [
+      "UTC+03:00"
+    ],
     "borders": [
       "OMN",
       "SAU"
@@ -6206,7 +6761,9 @@
       "South African Sign Language"
     ],
     "phoneCode": "+27",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BWA",
       "LSO",
@@ -6234,7 +6791,9 @@
       "English"
     ],
     "phoneCode": "+260",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "AGO",
       "BWA",
@@ -6286,7 +6845,9 @@
       "Zimbabwean Sign Language"
     ],
     "phoneCode": "+263",
-    "timezones": [],
+    "timezones": [
+      "UTC+02:00"
+    ],
     "borders": [
       "BWA",
       "MOZ",

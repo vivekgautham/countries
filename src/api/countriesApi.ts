@@ -11,12 +11,15 @@ const COUNTRIES_DATA_URL =
 
 const populationByCode: Record<string, number> = {};
 const areaByCode: Record<string, number> = {};
+const timezonesByCode: Record<string, string[]> = {};
 
 (rawCountriesData as unknown as UnifiedCountry[]).forEach((c) => {
   if (c.code) {
     const code = c.code.toUpperCase();
     if (c.population) populationByCode[code] = c.population;
     if (c.area) areaByCode[code] = c.area;
+    if (c.timezones && c.timezones.length > 0)
+      timezonesByCode[code] = c.timezones;
   }
 });
 
@@ -44,6 +47,10 @@ export function transformCountryDetails(
     const code = item.cca2.toUpperCase();
     const population = item.population || populationByCode[code] || 0;
     const area = item.area || areaByCode[code] || 0;
+    const timezones =
+      item.timezones && item.timezones.length > 0
+        ? item.timezones
+        : timezonesByCode[code] || [];
 
     return {
       code,
@@ -61,7 +68,7 @@ export function transformCountryDetails(
       currencies: currenciesList,
       languages: languagesList,
       phoneCode: formatPhoneCode(item.idd),
-      timezones: item.timezones || [],
+      timezones,
       borders: item.borders || [],
       unMember: item.unMember ?? false,
       landlocked: item.landlocked ?? false,

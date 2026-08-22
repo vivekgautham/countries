@@ -680,13 +680,22 @@ export default function CountryDetailPage() {
                 <CardContent
                   sx={{ display: "flex", flexDirection: "column", gap: 2 }}
                 >
-                  <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ fontWeight: 700 }}
-                  >
-                    ⏰ Timezones
-                  </Typography>
+                  <Stack direction="row" alignItems="center" spacing={1}>
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700 }}
+                    >
+                      ⏰ Timezones
+                    </Typography>
+                    <Chip
+                      label={`${country.timezones.length} ${country.timezones.length === 1 ? "Zone" : "Zones"}`}
+                      size="small"
+                      color="primary"
+                      variant="outlined"
+                      sx={{ fontWeight: 700, height: 22, fontSize: "0.75rem" }}
+                    />
+                  </Stack>
                   <Divider />
                   <Stack direction="row" flexWrap="wrap" gap={1}>
                     {country.timezones.map((tz) => (
@@ -695,6 +704,11 @@ export default function CountryDetailPage() {
                         label={tz}
                         size="small"
                         variant="outlined"
+                        sx={{
+                          fontWeight: 600,
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          borderColor: "rgba(255, 255, 255, 0.15)",
+                        }}
                       />
                     ))}
                   </Stack>

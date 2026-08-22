@@ -1199,17 +1199,36 @@ export default function CountryComparePage() {
               {
                 label: "Timezones",
                 render: (c) => (
-                  <Stack spacing={0.5}>
+                  <Stack spacing={0.75}>
                     <Typography variant="body2" sx={{ fontWeight: 700 }}>
                       {c.timezones?.length ?? 0} timezone
                       {(c.timezones?.length ?? 0) === 1 ? "" : "s"}
                     </Typography>
-                    <Typography
-                      variant="caption"
-                      sx={{ color: "text.secondary" }}
-                    >
-                      {c.timezones?.join(", ") || "N/A"}
-                    </Typography>
+                    {c.timezones && c.timezones.length > 0 ? (
+                      <Stack direction="row" flexWrap="wrap" gap={0.5}>
+                        {c.timezones.map((tz) => (
+                          <Chip
+                            key={tz}
+                            label={tz}
+                            size="small"
+                            variant="outlined"
+                            sx={{
+                              height: 20,
+                              fontSize: "0.7rem",
+                              backgroundColor: "rgba(15, 23, 42, 0.4)",
+                              borderColor: "rgba(255, 255, 255, 0.1)",
+                            }}
+                          />
+                        ))}
+                      </Stack>
+                    ) : (
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary" }}
+                      >
+                        N/A
+                      </Typography>
+                    )}
                   </Stack>
                 ),
               },
