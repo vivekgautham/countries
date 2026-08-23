@@ -13,6 +13,7 @@ import {
   Box,
   Button,
   Card,
+  CardActionArea,
   CardContent,
   Chip,
   CircularProgress,
@@ -374,6 +375,71 @@ export default function CountryDetailPage() {
                           />
                         </Tooltip>
                       )}
+
+                      {country.sovereignty && (
+                        <Tooltip
+                          title={`Autonomous territory administered under the sovereignty of ${country.sovereignty.sovereignName}`}
+                          arrow
+                        >
+                          <Chip
+                            component={RouterLink}
+                            to={`/country/${country.sovereignty.sovereignCode.toLowerCase()}`}
+                            clickable
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                👑
+                              </span>
+                            }
+                            label={`Territory of ${country.sovereignty.sovereignName}`}
+                            size="small"
+                            variant="outlined"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: "rgba(99, 102, 241, 0.18)",
+                              borderColor: "primary.main",
+                              color: "primary.light",
+                              "&:hover": {
+                                backgroundColor: "rgba(99, 102, 241, 0.3)",
+                              },
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.autonomousRegions &&
+                        country.autonomousRegions.length > 0 && (
+                          <Tooltip
+                            title={`Administers ${country.autonomousRegions.length} autonomous regions and overseas territories`}
+                            arrow
+                          >
+                            <Chip
+                              icon={
+                                <span
+                                  style={{
+                                    fontSize: "0.95rem",
+                                    marginLeft: "4px",
+                                  }}
+                                >
+                                  🏛️
+                                </span>
+                              }
+                              label={`${country.autonomousRegions.length} Autonomous ${country.autonomousRegions.length === 1 ? "Territory" : "Territories"}`}
+                              size="small"
+                              variant="outlined"
+                              sx={{
+                                fontWeight: 700,
+                                backgroundColor: "rgba(236, 72, 153, 0.15)",
+                                borderColor: "rgba(236, 72, 153, 0.4)",
+                                color: "#f472b6",
+                              }}
+                            />
+                          </Tooltip>
+                        )}
                     </Stack>
                   </Stack>
 
@@ -859,6 +925,315 @@ export default function CountryDetailPage() {
               </CardContent>
             </Card>
           </Grid>
+
+          {/* Sovereign Nation & Autonomy (for territories) */}
+          {country.sovereignty && (
+            <Grid size={{ xs: 12, md: 6 }}>
+              <Card
+                variant="outlined"
+                sx={{
+                  height: "100%",
+                  p: 1,
+                  borderColor: "rgba(99, 102, 241, 0.35)",
+                  backgroundColor: "rgba(15, 23, 42, 0.6)",
+                }}
+              >
+                <CardContent
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                >
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    justifyContent="space-between"
+                    flexWrap="wrap"
+                    gap={1}
+                  >
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700 }}
+                    >
+                      🏛️ Sovereign Nation & Autonomy
+                    </Typography>
+                    <Chip
+                      size="small"
+                      label={country.sovereignty.typeLabel}
+                      color="primary"
+                      variant="filled"
+                      sx={{ fontWeight: 700, fontSize: "0.72rem" }}
+                    />
+                  </Stack>
+                  <Divider />
+                  <Stack spacing={1.5}>
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        👑 Sovereign Country
+                      </Typography>
+                      <Button
+                        component={RouterLink}
+                        to={`/country/${country.sovereignty.sovereignCode.toLowerCase()}`}
+                        variant="outlined"
+                        size="small"
+                        sx={{
+                          py: 0.4,
+                          px: 1.5,
+                          fontWeight: 700,
+                          fontSize: "0.85rem",
+                          borderColor: "primary.main",
+                          color: "primary.light",
+                          backgroundColor: "rgba(99, 102, 241, 0.12)",
+                          "&:hover": {
+                            backgroundColor: "rgba(99, 102, 241, 0.25)",
+                            borderColor: "primary.light",
+                          },
+                        }}
+                      >
+                        {getCountryEmoji(country.sovereignty.sovereignCode)}{" "}
+                        {country.sovereignty.sovereignName} (
+                        {country.sovereignty.sovereignCode}) ↗
+                      </Button>
+                    </Stack>
+
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📜 Political Classification
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {country.sovereignty.typeLabel}
+                      </Typography>
+                    </Stack>
+
+                    {country.sovereignty.notes && (
+                      <Box
+                        sx={{
+                          p: 1.25,
+                          borderRadius: 2,
+                          backgroundColor: "rgba(30, 41, 59, 0.5)",
+                          border: "1px solid rgba(255, 255, 255, 0.08)",
+                        }}
+                      >
+                        <Typography
+                          variant="caption"
+                          color="text.secondary"
+                          sx={{ display: "block", lineHeight: 1.5 }}
+                        >
+                          💡 {country.sovereignty.notes}
+                        </Typography>
+                      </Box>
+                    )}
+                  </Stack>
+                </CardContent>
+              </Card>
+            </Grid>
+          )}
+
+          {/* Autonomous Regions & Overseas Territories Grid (for sovereign countries) */}
+          {country.autonomousRegions &&
+            country.autonomousRegions.length > 0 && (
+              <Grid size={{ xs: 12 }}>
+                <Card
+                  variant="outlined"
+                  sx={{
+                    borderRadius: 3.5,
+                    p: 1,
+                    backgroundColor: "rgba(15, 23, 42, 0.65)",
+                    borderColor: "rgba(99, 102, 241, 0.35)",
+                    boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+                  }}
+                >
+                  <CardContent
+                    sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                  >
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      flexWrap="wrap"
+                      gap={1}
+                    >
+                      <Stack direction="row" alignItems="center" spacing={1.5}>
+                        <Typography
+                          variant="h6"
+                          component="h2"
+                          sx={{
+                            fontWeight: 800,
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 1,
+                          }}
+                        >
+                          <span>🏛️</span> Autonomous Regions & Overseas
+                          Territories
+                        </Typography>
+                        <Chip
+                          label={`${country.autonomousRegions.length} ${country.autonomousRegions.length === 1 ? "territory" : "territories"}`}
+                          size="small"
+                          color="primary"
+                          variant="outlined"
+                          sx={{ fontWeight: 700 }}
+                        />
+                      </Stack>
+                      <Typography variant="caption" color="text.secondary">
+                        Click any region to explore its detailed profile
+                      </Typography>
+                    </Stack>
+                    <Divider />
+                    <Box
+                      sx={{
+                        display: "grid",
+                        gridTemplateColumns: {
+                          xs: "1fr",
+                          sm: "repeat(2, 1fr)",
+                          md: "repeat(3, 1fr)",
+                          lg: "repeat(4, 1fr)",
+                        },
+                        gap: 1.5,
+                      }}
+                    >
+                      {country.autonomousRegions.map((region) => {
+                        const flagUrl = `https://flagcdn.com/w80/${region.code.toLowerCase()}.png`;
+                        return (
+                          <Card
+                            key={region.code}
+                            variant="outlined"
+                            sx={{
+                              borderRadius: 2.5,
+                              backgroundColor: "rgba(30, 41, 59, 0.6)",
+                              borderColor: "rgba(255, 255, 255, 0.1)",
+                              transition: "all 0.2s ease",
+                              "&:hover": {
+                                borderColor: "primary.main",
+                                backgroundColor: "rgba(99, 102, 241, 0.12)",
+                                transform: "translateY(-2px)",
+                                boxShadow: "0 6px 20px rgba(0, 0, 0, 0.3)",
+                              },
+                            }}
+                          >
+                            <CardActionArea
+                              component={RouterLink}
+                              to={`/country/${region.code.toLowerCase()}`}
+                              sx={{
+                                p: 1.5,
+                                height: "100%",
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                justifyContent: "space-between",
+                                gap: 1,
+                              }}
+                            >
+                              <Stack
+                                direction="row"
+                                alignItems="center"
+                                spacing={1.25}
+                                sx={{ width: "100%" }}
+                              >
+                                <Box
+                                  component="img"
+                                  src={flagUrl}
+                                  alt=""
+                                  sx={{
+                                    width: 32,
+                                    height: 22,
+                                    borderRadius: 0.5,
+                                    objectFit: "cover",
+                                    border:
+                                      "1px solid rgba(255, 255, 255, 0.15)",
+                                  }}
+                                  onError={(
+                                    e: React.SyntheticEvent<HTMLImageElement>,
+                                  ) => {
+                                    e.currentTarget.style.display = "none";
+                                  }}
+                                />
+                                <Box sx={{ minWidth: 0, flexGrow: 1 }}>
+                                  <Typography
+                                    variant="body2"
+                                    sx={{
+                                      fontWeight: 700,
+                                      overflow: "hidden",
+                                      textOverflow: "ellipsis",
+                                      whiteSpace: "nowrap",
+                                    }}
+                                  >
+                                    {region.name}
+                                  </Typography>
+                                  <Typography
+                                    variant="caption"
+                                    sx={{
+                                      color: "primary.light",
+                                      fontWeight: 600,
+                                    }}
+                                  >
+                                    ISO: {region.code}
+                                  </Typography>
+                                </Box>
+                              </Stack>
+
+                              <Stack
+                                spacing={0.5}
+                                sx={{ width: "100%", pt: 0.5 }}
+                              >
+                                <Chip
+                                  size="small"
+                                  label={region.typeLabel}
+                                  sx={{
+                                    height: 20,
+                                    fontSize: "0.68rem",
+                                    fontWeight: 600,
+                                    backgroundColor: "rgba(99, 102, 241, 0.15)",
+                                    color: "primary.light",
+                                    border: "1px solid rgba(99, 102, 241, 0.3)",
+                                    alignSelf: "flex-start",
+                                    maxWidth: "100%",
+                                    "& .MuiChip-label": { px: 0.5 },
+                                  }}
+                                />
+                                <Stack
+                                  direction="row"
+                                  justifyContent="space-between"
+                                  alignItems="center"
+                                  sx={{ width: "100%", pt: 0.5 }}
+                                >
+                                  {region.capital &&
+                                    region.capital !== "N/A" && (
+                                      <Typography
+                                        variant="caption"
+                                        color="text.secondary"
+                                        sx={{ fontSize: "0.72rem" }}
+                                      >
+                                        🏛️ {region.capital}
+                                      </Typography>
+                                    )}
+                                  {region.population !== undefined &&
+                                    region.population > 0 && (
+                                      <Typography
+                                        variant="caption"
+                                        color="text.secondary"
+                                        sx={{ fontSize: "0.72rem", ml: "auto" }}
+                                      >
+                                        👥 {region.population.toLocaleString()}
+                                      </Typography>
+                                    )}
+                                </Stack>
+                              </Stack>
+                            </CardActionArea>
+                          </Card>
+                        );
+                      })}
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Grid>
+            )}
 
           {/* Timezones */}
           {country.timezones && country.timezones.length > 0 && (

@@ -1342,6 +1342,73 @@ export default function CountryComparePage() {
                   );
                 },
               },
+              {
+                label: "Sovereignty & Territories",
+                render: (c) => {
+                  if (c.sovereignty) {
+                    return (
+                      <Stack spacing={0.5} alignItems="flex-start">
+                        <Chip
+                          size="small"
+                          label={`Territory of ${c.sovereignty.sovereignName}`}
+                          color="primary"
+                          variant="outlined"
+                          sx={{
+                            height: 24,
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            backgroundColor: "rgba(99, 102, 241, 0.12)",
+                          }}
+                        />
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                          }}
+                        >
+                          {c.sovereignty.typeLabel}
+                        </Typography>
+                      </Stack>
+                    );
+                  }
+                  if (c.autonomousRegions && c.autonomousRegions.length > 0) {
+                    return (
+                      <Stack spacing={0.5} alignItems="flex-start">
+                        <Chip
+                          size="small"
+                          label={`👑 ${c.autonomousRegions.length} ${c.autonomousRegions.length === 1 ? "Territory" : "Territories"}`}
+                          color="secondary"
+                          variant="outlined"
+                          sx={{
+                            height: 24,
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            backgroundColor: "rgba(236, 72, 153, 0.12)",
+                          }}
+                        />
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                          }}
+                        >
+                          {c.autonomousRegions.map((r) => r.name).join(", ")}
+                        </Typography>
+                      </Stack>
+                    );
+                  }
+                  return (
+                    <Typography
+                      variant="body2"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      Sovereign State
+                    </Typography>
+                  );
+                },
+              },
             ]}
           />
 

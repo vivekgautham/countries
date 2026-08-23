@@ -82,6 +82,38 @@ export interface NptInfo {
   notes?: string;
 }
 
+export type TerritoryType =
+  | "autonomous_region"
+  | "constituent_country"
+  | "special_administrative_region"
+  | "overseas_territory"
+  | "crown_dependency"
+  | "overseas_collectivity"
+  | "overseas_department"
+  | "associated_state"
+  | "external_territory"
+  | "unincorporated_territory"
+  | "special_municipality"
+  | "disputed_territory";
+
+export interface SovereignInfo {
+  sovereignCode: string; // e.g. "DK"
+  sovereignName: string; // e.g. "Denmark"
+  territoryType: TerritoryType;
+  typeLabel: string; // e.g. "Autonomous Constituent Country"
+  notes?: string;
+}
+
+export interface AutonomousRegionInfo {
+  code: string; // e.g. "GL"
+  name: string; // e.g. "Greenland"
+  officialName?: string;
+  territoryType: TerritoryType;
+  typeLabel: string;
+  capital?: string;
+  population?: number;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -102,4 +134,6 @@ export interface UnifiedCountry {
   coatOfArms?: string;
   airports?: AirportStats;
   npt?: NptInfo;
+  sovereignty?: SovereignInfo;
+  autonomousRegions?: AutonomousRegionInfo[];
 }

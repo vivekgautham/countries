@@ -4,6 +4,10 @@ import airportsDataRaw from "../data/airports.json";
 import rawCountriesData from "../data/countries.json";
 import { AirportStats, CountryDetail, UnifiedCountry } from "../types/country";
 import { getNptInfo } from "../utils/nptUtils";
+import {
+  getAutonomousRegionsForCountry,
+  getSovereigntyInfo,
+} from "../utils/sovereigntyUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 
@@ -37,7 +41,7 @@ function formatPhoneCode(idd?: {
 export function transformCountryDetails(
   rawList: CountryDetail[],
 ): UnifiedCountry[] {
-  return rawList.map((item) => {
+  const baseList: UnifiedCountry[] = rawList.map((item) => {
     const currenciesList = item.currencies
       ? Object.values(item.currencies).map(
           (c) => `${c.name}${c.symbol ? ` (${c.symbol})` : ""}`,
@@ -76,15 +80,29 @@ export function transformCountryDetails(
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
       airports: airportsData[code],
       npt: getNptInfo(code),
+      sovereignty: getSovereigntyInfo(code),
     };
   });
+
+  return baseList.map((c) => ({
+    ...c,
+    autonomousRegions: getAutonomousRegionsForCountry(c.code, baseList),
+  }));
 }
 
 function getFallbackCountries(): UnifiedCountry[] {
-  return (rawCountriesData as unknown as UnifiedCountry[]).map((c) => ({
+  const baseList: UnifiedCountry[] = (
+    rawCountriesData as unknown as UnifiedCountry[]
+  ).map((c) => ({
     ...c,
     airports: airportsData[c.code.toUpperCase()],
     npt: getNptInfo(c.code),
+    sovereignty: getSovereigntyInfo(c.code),
+  }));
+
+  return baseList.map((c) => ({
+    ...c,
+    autonomousRegions: getAutonomousRegionsForCountry(c.code, baseList),
   }));
 }
 
