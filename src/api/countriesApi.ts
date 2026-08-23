@@ -3,6 +3,7 @@ import axios from "axios";
 import airportsDataRaw from "../data/airports.json";
 import rawCountriesData from "../data/countries.json";
 import { AirportStats, CountryDetail, UnifiedCountry } from "../types/country";
+import { getNptInfo } from "../utils/nptUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 
@@ -74,6 +75,7 @@ export function transformCountryDetails(
       landlocked: item.landlocked ?? false,
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
       airports: airportsData[code],
+      npt: getNptInfo(code),
     };
   });
 }
@@ -82,6 +84,7 @@ function getFallbackCountries(): UnifiedCountry[] {
   return (rawCountriesData as unknown as UnifiedCountry[]).map((c) => ({
     ...c,
     airports: airportsData[c.code.toUpperCase()],
+    npt: getNptInfo(c.code),
   }));
 }
 

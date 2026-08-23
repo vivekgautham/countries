@@ -62,6 +62,26 @@ export interface AirportStats {
   majorAirports: MajorAirport[];
 }
 
+export type NptStatus =
+  | "nuclear_weapon_state"
+  | "non_nuclear_weapon_state"
+  | "non_party"
+  | "withdrawn"
+  | "abiding_state"
+  | "dependent_territory";
+
+export interface NptInfo {
+  status: NptStatus;
+  statusLabel: string;
+  isParty: boolean;
+  signedDate?: string;
+  depositedDate?: string;
+  depositaryLocation?: string;
+  method?: string;
+  sovereignState?: string;
+  notes?: string;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -81,4 +101,5 @@ export interface UnifiedCountry {
   landlocked?: boolean;
   coatOfArms?: string;
   airports?: AirportStats;
+  npt?: NptInfo;
 }

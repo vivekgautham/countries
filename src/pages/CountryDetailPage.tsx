@@ -24,6 +24,7 @@ import {
   Paper,
   Stack,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
@@ -31,6 +32,7 @@ import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { getNptBadgeConfig } from "../utils/nptUtils";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -162,6 +164,7 @@ export default function CountryDetailPage() {
   const flagUrl = `https://flagcdn.com/w640/${codeLower}.png`;
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(country.name)}`;
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(country.name)}`;
+  const nptBadge = getNptBadgeConfig(country.npt);
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
@@ -325,18 +328,53 @@ export default function CountryDetailPage() {
                       {country.name}
                     </Typography>
 
-                    {country.unMember && (
-                      <Chip
-                        icon={
-                          <VerifiedIcon sx={{ fontSize: "1rem !important" }} />
-                        }
-                        label="UN Member"
-                        color="info"
-                        variant="outlined"
-                        size="small"
-                        sx={{ fontWeight: 700 }}
-                      />
-                    )}
+                    <Stack
+                      direction="row"
+                      spacing={1}
+                      alignItems="center"
+                      flexWrap="wrap"
+                      gap={0.75}
+                    >
+                      {country.unMember && (
+                        <Chip
+                          icon={
+                            <VerifiedIcon
+                              sx={{ fontSize: "1rem !important" }}
+                            />
+                          }
+                          label="UN Member"
+                          color="info"
+                          variant="outlined"
+                          size="small"
+                          sx={{ fontWeight: 700 }}
+                        />
+                      )}
+
+                      {country.npt && (
+                        <Tooltip title={nptBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {nptBadge.icon}
+                              </span>
+                            }
+                            label={nptBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: nptBadge.backgroundColor,
+                              border: `1px solid ${nptBadge.borderColor}`,
+                              color: nptBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+                    </Stack>
                   </Stack>
 
                   {country.officialName &&
@@ -575,6 +613,155 @@ export default function CountryDetailPage() {
                       {country.phoneCode || "N/A"}
                     </Typography>
                   </Stack>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Nuclear Non-Proliferation Treaty (NPT) */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  <Typography
+                    variant="h6"
+                    component="h2"
+                    sx={{ fontWeight: 700 }}
+                  >
+                    ⚛️ Non-Proliferation Treaty (NPT)
+                  </Typography>
+                  {country.npt && (
+                    <Chip
+                      size="small"
+                      label={nptBadge.shortLabel}
+                      sx={{
+                        fontWeight: 700,
+                        fontSize: "0.75rem",
+                        backgroundColor: nptBadge.backgroundColor,
+                        border: `1px solid ${nptBadge.borderColor}`,
+                        color: nptBadge.textColor,
+                      }}
+                    />
+                  )}
+                </Stack>
+                <Divider />
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">📋 Status</Typography>
+                    <Typography fontWeight={600} textAlign="right">
+                      {country.npt?.statusLabel || "Unknown"}
+                    </Typography>
+                  </Stack>
+
+                  {country.npt?.signedDate && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">✍️ Signed</Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {country.npt.signedDate}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.npt?.depositedDate && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📥 Ratified / Deposited
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {country.npt.depositedDate}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.npt?.method && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">📜 Method</Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {country.npt.method}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.npt?.sovereignState && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        👑 Administering State
+                      </Typography>
+                      <Typography fontWeight={600}>
+                        {country.npt.sovereignState}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.npt?.notes && (
+                    <Box
+                      sx={{
+                        p: 1.25,
+                        borderRadius: 2,
+                        backgroundColor: "rgba(15, 23, 42, 0.5)",
+                        border: "1px solid rgba(255, 255, 255, 0.08)",
+                      }}
+                    >
+                      <Typography
+                        variant="caption"
+                        color="text.secondary"
+                        sx={{ display: "block", lineHeight: 1.5 }}
+                      >
+                        💡 {country.npt.notes}
+                      </Typography>
+                    </Box>
+                  )}
+
+                  <Box
+                    sx={{
+                      pt: 0.5,
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Typography
+                      component="a"
+                      href="https://treaties.unoda.org/t/npt"
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="caption"
+                      sx={{
+                        color: "primary.light",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      Source: UNODA Treaty Database ↗
+                    </Typography>
+                  </Box>
                 </Stack>
               </CardContent>
             </Card>

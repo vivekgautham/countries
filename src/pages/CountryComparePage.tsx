@@ -25,6 +25,7 @@ import {
   Snackbar,
   Stack,
   TextField,
+  Tooltip,
   Typography,
 } from "@mui/material";
 import React, { useMemo, useState } from "react";
@@ -38,6 +39,7 @@ import {
   getTopCountryByMetric,
 } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { getNptBadgeConfig } from "../utils/nptUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
 
@@ -340,7 +342,10 @@ export default function CountryComparePage() {
                       opt.code.toLowerCase().includes(query) ||
                       (opt.code3 && opt.code3.toLowerCase().includes(query)) ||
                       (opt.capital &&
-                        opt.capital.toLowerCase().includes(query)),
+                        opt.capital.toLowerCase().includes(query)) ||
+                      (opt.npt?.statusLabel &&
+                        opt.npt.statusLabel.toLowerCase().includes(query)) ||
+                      (query === "npt" && Boolean(opt.npt)),
                   );
                 }}
                 renderOption={(props, option) => {
@@ -389,6 +394,7 @@ export default function CountryComparePage() {
                             sx={{ color: "text.secondary", display: "block" }}
                           >
                             🏛️ {option.capital || "N/A"} • 🌐 {option.region}
+                            {option.npt && ` • ⚛️ ${option.npt.statusLabel}`}
                           </Typography>
                         </Box>
                       </Box>
@@ -1275,6 +1281,66 @@ export default function CountryComparePage() {
                     sx={{ height: 22, fontSize: "0.75rem", fontWeight: 600 }}
                   />
                 ),
+              },
+              {
+                label: "NPT Nuclear Treaty",
+                render: (c) => {
+                  const badge = getNptBadgeConfig(c.npt);
+                  return (
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Tooltip title={badge.tooltip} arrow>
+                        <Chip
+                          size="small"
+                          icon={
+                            <span
+                              style={{
+                                fontSize: "0.85rem",
+                                marginLeft: "4px",
+                              }}
+                            >
+                              {badge.icon}
+                            </span>
+                          }
+                          label={badge.label}
+                          variant="outlined"
+                          sx={{
+                            height: 24,
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            backgroundColor: badge.backgroundColor,
+                            borderColor: badge.borderColor,
+                            color: badge.textColor,
+                            "& .MuiChip-label": { px: 0.75 },
+                          }}
+                        />
+                      </Tooltip>
+                      {c.npt?.depositedDate && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                          }}
+                        >
+                          Ratified: {c.npt.depositedDate}
+                        </Typography>
+                      )}
+                      {c.npt?.notes && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.68rem",
+                            fontStyle: "italic",
+                            lineHeight: 1.3,
+                          }}
+                        >
+                          {c.npt.notes}
+                        </Typography>
+                      )}
+                    </Stack>
+                  );
+                },
               },
             ]}
           />
