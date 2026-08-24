@@ -20,7 +20,13 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import React, { useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import CompareFloatingDock from "../components/compare/CompareFloatingDock";
@@ -37,6 +43,8 @@ const REGIONS = [
 ];
 
 const MAX_COMPARE_COUNTRIES = 4;
+const INITIAL_BATCH_SIZE = 36;
+const LOAD_MORE_STEP = 36;
 
 export default function CountryListPage() {
   const { data: countries = [], isLoading, isError } = useCountriesData();
@@ -44,9 +52,17 @@ export default function CountryListPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
     [],
   );
+
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  // Reset pagination when filter/search changes
+  useEffect(() => {
+    setVisibleCount(INITIAL_BATCH_SIZE);
+  }, [searchTerm, selectedRegion]);
 
   const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
     if (e) {
@@ -107,6 +123,43 @@ export default function CountryListPage() {
 
     return result;
   }, [countries, searchTerm, selectedRegion]);
+
+  const visibleCountries = useMemo(() => {
+    return filteredCountries.slice(0, visibleCount);
+  }, [filteredCountries, visibleCount]);
+
+  const hasMore = visibleCount < filteredCountries.length;
+
+  const handleLoadMore = useCallback(() => {
+    setVisibleCount((prev) =>
+      Math.min(prev + LOAD_MORE_STEP, filteredCountries.length),
+    );
+  }, [filteredCountries.length]);
+
+  // IntersectionObserver to auto-load more items seamlessly before reaching the bottom
+  useEffect(() => {
+    if (!hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          handleLoadMore();
+        }
+      },
+      { rootMargin: "350px" },
+    );
+
+    const el = sentinelRef.current;
+    if (el) {
+      observer.observe(el);
+    }
+
+    return () => {
+      if (el) {
+        observer.unobserve(el);
+      }
+    };
+  }, [hasMore, handleLoadMore]);
 
   return (
     <Container
@@ -255,6 +308,26 @@ export default function CountryListPage() {
                   );
                 })}
               </Stack>
+
+              {/* Results Count & Filter Feedback */}
+              {!isLoading && filteredCountries.length > 0 && (
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    fontSize: "0.78rem",
+                    textAlign: "center",
+                    mt: 0.5,
+                  }}
+                >
+                  Showing {visibleCountries.length} of{" "}
+                  {filteredCountries.length}{" "}
+                  {filteredCountries.length === 1 ? "country" : "countries"}
+                  {selectedRegion !== "All" && ` • ${selectedRegion}`}
+                  {searchTerm && ` • Matching "${searchTerm}"`}
+                </Typography>
+              )}
             </Stack>
           </Box>
         </Stack>
@@ -333,254 +406,306 @@ export default function CountryListPage() {
             </Stack>
           </Paper>
         ) : (
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "repeat(2, 1fr)",
-                sm: "repeat(3, 1fr)",
-                md: "repeat(4, 1fr)",
-                lg: "repeat(6, 1fr)",
-                xl: "repeat(8, 1fr)",
-              },
-              gap: 1.25,
-            }}
-          >
-            {filteredCountries.map((country) => {
-              const codeLower = country.code.toLowerCase();
-              const flagUrl = `https://flagcdn.com/w320/${codeLower}.png`;
-              const isCompared = selectedCompareCodes.includes(
-                country.code.toUpperCase(),
-              );
+          <Box sx={{ width: "100%" }}>
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: {
+                  xs: "repeat(2, 1fr)",
+                  sm: "repeat(3, 1fr)",
+                  md: "repeat(4, 1fr)",
+                  lg: "repeat(6, 1fr)",
+                  xl: "repeat(8, 1fr)",
+                },
+                gap: 1.25,
+              }}
+            >
+              {visibleCountries.map((country) => {
+                const codeLower = country.code.toLowerCase();
+                const flagUrl = `https://flagcdn.com/w320/${codeLower}.png`;
+                const isCompared = selectedCompareCodes.includes(
+                  country.code.toUpperCase(),
+                );
 
-              return (
-                <Card
-                  key={country.code}
-                  variant="outlined"
-                  sx={{
-                    borderRadius: 2.5,
-                    position: "relative",
-                    borderColor: isCompared
-                      ? "primary.main"
-                      : "rgba(255, 255, 255, 0.08)",
-                    boxShadow: isCompared
-                      ? "0 0 0 1.5px rgba(99, 102, 241, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35)"
-                      : "none",
-                    transition:
-                      "transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s",
-                    "&:hover": {
-                      transform: "translateY(-4px)",
-                      borderColor: "primary.light",
-                      boxShadow: "0 8px 24px rgba(0, 0, 0, 0.35)",
-                    },
-                  }}
-                >
-                  {/* Compare Toggle Button */}
-                  <Tooltip
-                    title={
-                      isCompared
-                        ? `Remove ${country.name} from compare`
-                        : `Compare ${country.name}`
-                    }
-                    arrow
-                  >
-                    <IconButton
-                      size="small"
-                      onClick={(e) => handleToggleCompare(country.code, e)}
-                      sx={{
-                        position: "absolute",
-                        top: 5,
-                        right: 5,
-                        zIndex: 2,
-                        p: 0.4,
-                        borderRadius: 1.5,
-                        backgroundColor: isCompared
-                          ? "primary.main"
-                          : "rgba(15, 23, 42, 0.75)",
-                        backdropFilter: "blur(8px)",
-                        color: isCompared ? "#ffffff" : "text.secondary",
-                        border: "1px solid",
-                        borderColor: isCompared
-                          ? "primary.light"
-                          : "rgba(255, 255, 255, 0.15)",
-                        "&:hover": {
-                          backgroundColor: isCompared
-                            ? "primary.dark"
-                            : "rgba(99, 102, 241, 0.6)",
-                          color: "#ffffff",
-                          borderColor: "primary.main",
-                          transform: "scale(1.08)",
-                        },
-                      }}
-                    >
-                      <CompareArrowsIcon sx={{ fontSize: 15 }} />
-                    </IconButton>
-                  </Tooltip>
-
-                  <CardActionArea
-                    onClick={() =>
-                      navigate(`/country/${country.code.toLowerCase()}`)
-                    }
-                    title={`${country.name} (${country.code})`}
+                return (
+                  <Card
+                    key={country.code}
+                    variant="outlined"
                     sx={{
-                      height: "100%",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "stretch",
-                      justifyContent: "flex-start",
+                      borderRadius: 2.5,
+                      position: "relative",
+                      borderColor: isCompared
+                        ? "primary.main"
+                        : "rgba(255, 255, 255, 0.08)",
+                      boxShadow: isCompared
+                        ? "0 0 0 1.5px rgba(99, 102, 241, 0.6), 0 8px 24px rgba(0, 0, 0, 0.35)"
+                        : "none",
+                      transition:
+                        "transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s",
+                      "&:hover": {
+                        transform: "translateY(-4px)",
+                        borderColor: "primary.light",
+                        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.35)",
+                      },
                     }}
                   >
-                    {/* Flag Media Wrapper */}
-                    <Box
-                      sx={{
-                        position: "relative",
-                        width: "100%",
-                        aspectRatio: "16 / 10",
-                        minHeight: 70,
-                        backgroundColor: "#020617",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        overflow: "hidden",
-                      }}
+                    {/* Compare Toggle Button */}
+                    <Tooltip
+                      title={
+                        isCompared
+                          ? `Remove ${country.name} from compare`
+                          : `Compare ${country.name}`
+                      }
+                      arrow
                     >
-                      <Box
-                        component="img"
-                        src={flagUrl}
-                        alt={`Flag of ${country.name}`}
-                        loading="lazy"
-                        sx={{
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          transition: "transform 0.3s ease",
-                          "&:hover": {
-                            transform: "scale(1.05)",
-                          },
-                        }}
-                        onError={(
-                          e: React.SyntheticEvent<HTMLImageElement>,
-                        ) => {
-                          e.currentTarget.style.display = "none";
-                        }}
-                      />
-                      <Typography
+                      <IconButton
+                        size="small"
+                        onClick={(e) => handleToggleCompare(country.code, e)}
                         sx={{
                           position: "absolute",
-                          fontSize: "2.2rem",
-                          zIndex: 0,
-                          pointerEvents: "none",
+                          top: 5,
+                          right: 5,
+                          zIndex: 2,
+                          p: 0.4,
+                          borderRadius: 1.5,
+                          backgroundColor: isCompared
+                            ? "primary.main"
+                            : "rgba(15, 23, 42, 0.75)",
+                          backdropFilter: "blur(8px)",
+                          color: isCompared ? "#ffffff" : "text.secondary",
+                          border: "1px solid",
+                          borderColor: isCompared
+                            ? "primary.light"
+                            : "rgba(255, 255, 255, 0.15)",
+                          "&:hover": {
+                            backgroundColor: isCompared
+                              ? "primary.dark"
+                              : "rgba(99, 102, 241, 0.6)",
+                            color: "#ffffff",
+                            borderColor: "primary.main",
+                            transform: "scale(1.08)",
+                          },
                         }}
                       >
-                        {getCountryEmoji(country.code)}
-                      </Typography>
-                    </Box>
+                        <CompareArrowsIcon sx={{ fontSize: 15 }} />
+                      </IconButton>
+                    </Tooltip>
 
-                    {/* Card Content Info */}
-                    <CardContent
+                    <CardActionArea
+                      onClick={() =>
+                        navigate(`/country/${country.code.toLowerCase()}`)
+                      }
+                      title={`${country.name} (${country.code})`}
                       sx={{
-                        p: 1,
-                        "&:last-child": { pb: 1 },
-                        backgroundColor: "rgba(15, 23, 42, 0.6)",
-                        flexGrow: 1,
+                        height: "100%",
                         display: "flex",
                         flexDirection: "column",
-                        gap: 0.25,
+                        alignItems: "stretch",
+                        justifyContent: "flex-start",
                       }}
                     >
-                      <Stack
-                        direction="row"
-                        alignItems="center"
-                        justifyContent="space-between"
-                        gap={0.5}
+                      {/* Flag Media Wrapper */}
+                      <Box
+                        sx={{
+                          position: "relative",
+                          width: "100%",
+                          aspectRatio: "16 / 10",
+                          minHeight: 70,
+                          backgroundColor: "#020617",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          overflow: "hidden",
+                        }}
                       >
-                        <Typography
-                          variant="body2"
+                        <Box
+                          component="img"
+                          src={flagUrl}
+                          alt={`Flag of ${country.name}`}
+                          loading="lazy"
                           sx={{
-                            fontWeight: 700,
-                            fontSize: "0.85rem",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            transition: "transform 0.3s ease",
+                            "&:hover": {
+                              transform: "scale(1.05)",
+                            },
                           }}
-                          title={country.name}
-                        >
-                          {country.name}
-                        </Typography>
-                        <Chip
-                          size="small"
-                          label={country.code}
-                          sx={{
-                            height: 18,
-                            fontSize: "0.65rem",
-                            fontWeight: 700,
-                            backgroundColor: "rgba(99, 102, 241, 0.2)",
-                            color: "primary.light",
-                            border: "1px solid rgba(99, 102, 241, 0.3)",
-                            borderRadius: 1,
-                            "& .MuiChip-label": { px: 0.5 },
+                          onError={(
+                            e: React.SyntheticEvent<HTMLImageElement>,
+                          ) => {
+                            e.currentTarget.style.display = "none";
                           }}
                         />
-                      </Stack>
+                        <Typography
+                          sx={{
+                            position: "absolute",
+                            fontSize: "2.2rem",
+                            zIndex: 0,
+                            pointerEvents: "none",
+                          }}
+                        >
+                          {getCountryEmoji(country.code)}
+                        </Typography>
+                      </Box>
 
-                      {country.capital && country.capital !== "N/A" && (
+                      {/* Card Content Info */}
+                      <CardContent
+                        sx={{
+                          p: 1,
+                          "&:last-child": { pb: 1 },
+                          backgroundColor: "rgba(15, 23, 42, 0.6)",
+                          flexGrow: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 0.25,
+                        }}
+                      >
+                        <Stack
+                          direction="row"
+                          alignItems="center"
+                          justifyContent="space-between"
+                          gap={0.5}
+                        >
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              fontWeight: 700,
+                              fontSize: "0.85rem",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                            }}
+                            title={country.name}
+                          >
+                            {country.name}
+                          </Typography>
+                          <Chip
+                            size="small"
+                            label={country.code}
+                            sx={{
+                              height: 18,
+                              fontSize: "0.65rem",
+                              fontWeight: 700,
+                              backgroundColor: "rgba(99, 102, 241, 0.2)",
+                              color: "primary.light",
+                              border: "1px solid rgba(99, 102, 241, 0.3)",
+                              borderRadius: 1,
+                              "& .MuiChip-label": { px: 0.5 },
+                            }}
+                          />
+                        </Stack>
+
+                        {country.capital && country.capital !== "N/A" && (
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              color: "text.secondary",
+                              fontSize: "0.75rem",
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                            }}
+                            title={`Capital: ${country.capital}`}
+                          >
+                            🏛️ {country.capital}
+                          </Typography>
+                        )}
+
                         <Typography
                           variant="caption"
                           sx={{
                             color: "text.secondary",
-                            fontSize: "0.75rem",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            whiteSpace: "nowrap",
-                          }}
-                          title={`Capital: ${country.capital}`}
-                        >
-                          🏛️ {country.capital}
-                        </Typography>
-                      )}
-
-                      <Typography
-                        variant="caption"
-                        sx={{
-                          color: "text.secondary",
-                          fontSize: "0.7rem",
-                          fontWeight: 500,
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                          whiteSpace: "nowrap",
-                          mt: 0.25,
-                        }}
-                        title={country.region}
-                      >
-                        {country.region}
-                      </Typography>
-
-                      {country.airports && country.airports.active > 0 && (
-                        <Typography
-                          variant="caption"
-                          sx={{
-                            color: "rgba(148, 163, 184, 0.85)",
-                            fontSize: "0.68rem",
+                            fontSize: "0.7rem",
                             fontWeight: 500,
                             overflow: "hidden",
                             textOverflow: "ellipsis",
                             whiteSpace: "nowrap",
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 0.5,
-                            mt: 0.2,
+                            mt: 0.25,
                           }}
-                          title={`${country.airports.active.toLocaleString()} active airports${country.airports.large > 0 ? ` (${country.airports.large} major hubs)` : ""}`}
+                          title={country.region}
                         >
-                          <span>✈️</span>
-                          {country.airports.active.toLocaleString()} airports
+                          {country.region}
                         </Typography>
-                      )}
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              );
-            })}
+
+                        {country.airports && country.airports.active > 0 && (
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              color: "rgba(148, 163, 184, 0.85)",
+                              fontSize: "0.68rem",
+                              fontWeight: 500,
+                              overflow: "hidden",
+                              textOverflow: "ellipsis",
+                              whiteSpace: "nowrap",
+                              display: "flex",
+                              alignItems: "center",
+                              gap: 0.5,
+                              mt: 0.2,
+                            }}
+                            title={`${country.airports.active.toLocaleString()} active airports${country.airports.large > 0 ? ` (${country.airports.large} major hubs)` : ""}`}
+                          >
+                            <span>✈️</span>
+                            {country.airports.active.toLocaleString()} airports
+                          </Typography>
+                        )}
+                      </CardContent>
+                    </CardActionArea>
+                  </Card>
+                );
+              })}
+            </Box>
+
+            {/* Infinite Scroll Sentinel & Load More UI */}
+            <Box sx={{ mt: 3.5, mb: 2, textAlign: "center" }}>
+              {/* Invisible sentinel observed by IntersectionObserver */}
+              <div ref={sentinelRef} style={{ height: 1, width: "100%" }} />
+
+              {hasMore ? (
+                <Stack spacing={1.5} alignItems="center">
+                  <Button
+                    variant="outlined"
+                    onClick={handleLoadMore}
+                    sx={{
+                      borderRadius: 3,
+                      borderColor: "rgba(99, 102, 241, 0.4)",
+                      backgroundColor: "rgba(99, 102, 241, 0.08)",
+                      color: "primary.light",
+                      px: 3,
+                      py: 1,
+                      fontWeight: 700,
+                      fontSize: "0.85rem",
+                      "&:hover": {
+                        borderColor: "primary.main",
+                        backgroundColor: "rgba(99, 102, 241, 0.2)",
+                      },
+                    }}
+                  >
+                    Load More Countries ({visibleCountries.length} of{" "}
+                    {filteredCountries.length})
+                  </Button>
+                  <Typography
+                    variant="caption"
+                    sx={{ color: "text.secondary", fontSize: "0.75rem" }}
+                  >
+                    Scroll down to automatically load more
+                  </Typography>
+                </Stack>
+              ) : filteredCountries.length > INITIAL_BATCH_SIZE ? (
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 600,
+                    fontSize: "0.8rem",
+                    letterSpacing: "0.02em",
+                  }}
+                >
+                  ✓ Showing all {filteredCountries.length} countries
+                </Typography>
+              ) : null}
+            </Box>
           </Box>
         )}
       </Box>
