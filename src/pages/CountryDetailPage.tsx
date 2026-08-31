@@ -34,6 +34,7 @@ import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
+import { getTaxBadgeConfig } from "../utils/taxUtils";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -166,6 +167,7 @@ export default function CountryDetailPage() {
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(country.name)}`;
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(country.name)}`;
   const nptBadge = getNptBadgeConfig(country.npt);
+  const taxBadge = getTaxBadgeConfig(country.tax);
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
@@ -371,6 +373,31 @@ export default function CountryDetailPage() {
                               backgroundColor: nptBadge.backgroundColor,
                               border: `1px solid ${nptBadge.borderColor}`,
                               color: nptBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.tax && (
+                        <Tooltip title={taxBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {taxBadge.icon}
+                              </span>
+                            }
+                            label={taxBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: taxBadge.backgroundColor,
+                              border: `1px solid ${taxBadge.borderColor}`,
+                              color: taxBadge.textColor,
                             }}
                           />
                         </Tooltip>
@@ -920,6 +947,350 @@ export default function CountryDetailPage() {
                     ))
                   ) : (
                     <Typography color="text.secondary">N/A</Typography>
+                  )}
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Tax System & Global Income Regime */}
+          <Grid size={{ xs: 12 }}>
+            <Card
+              variant="outlined"
+              sx={{
+                p: { xs: 1.5, sm: 2 },
+                borderRadius: 3.5,
+                background:
+                  "linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.85) 100%)",
+                borderColor:
+                  country.tax?.systemType === "zero_tax"
+                    ? "rgba(16, 185, 129, 0.45)"
+                    : country.tax?.systemType === "territorial"
+                      ? "rgba(14, 165, 233, 0.45)"
+                      : country.tax?.systemType === "non_dom"
+                        ? "rgba(168, 85, 247, 0.45)"
+                        : "rgba(255, 255, 255, 0.12)",
+                boxShadow:
+                  country.tax?.systemType === "zero_tax"
+                    ? "0 8px 32px rgba(16, 185, 129, 0.12)"
+                    : country.tax?.systemType === "territorial"
+                      ? "0 8px 32px rgba(14, 165, 233, 0.12)"
+                      : "0 8px 32px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}
+              >
+                {/* Header */}
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1.5}
+                >
+                  <Stack direction="row" alignItems="center" spacing={1.5}>
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{
+                        fontWeight: 800,
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 1,
+                      }}
+                    >
+                      <span>💰</span> Tax System & Global Income
+                    </Typography>
+                    {country.tax?.isZeroGlobalTax && (
+                      <Chip
+                        icon={
+                          <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
+                            ✨
+                          </span>
+                        }
+                        label="Zero Global Income Tax"
+                        size="small"
+                        sx={{
+                          fontWeight: 800,
+                          fontSize: "0.75rem",
+                          backgroundColor: "rgba(16, 185, 129, 0.2)",
+                          color: "#6ee7b7",
+                          border: "1px solid rgba(16, 185, 129, 0.45)",
+                        }}
+                      />
+                    )}
+                  </Stack>
+
+                  <Stack direction="row" spacing={1} flexWrap="wrap" gap={0.75}>
+                    <Chip
+                      icon={
+                        <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
+                          {taxBadge.icon}
+                        </span>
+                      }
+                      label={country.tax?.systemLabel || taxBadge.label}
+                      sx={{
+                        fontWeight: 700,
+                        fontSize: "0.8rem",
+                        backgroundColor: taxBadge.backgroundColor,
+                        border: `1px solid ${taxBadge.borderColor}`,
+                        color: taxBadge.textColor,
+                      }}
+                    />
+                    {country.tax?.headlineRate && (
+                      <Chip
+                        label={`Headline: ${country.tax.headlineRate}`}
+                        size="small"
+                        variant="outlined"
+                        sx={{
+                          fontWeight: 700,
+                          borderColor: "rgba(255, 255, 255, 0.2)",
+                          color: "text.primary",
+                        }}
+                      />
+                    )}
+                  </Stack>
+                </Stack>
+
+                <Divider />
+
+                {/* Summary Banner */}
+                {country.tax?.summary && (
+                  <Paper
+                    variant="outlined"
+                    sx={{
+                      p: 2,
+                      borderRadius: 2.5,
+                      backgroundColor: "rgba(15, 23, 42, 0.6)",
+                      borderColor: "rgba(255, 255, 255, 0.08)",
+                    }}
+                  >
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "text.secondary",
+                        lineHeight: 1.6,
+                        fontSize: "0.9rem",
+                      }}
+                    >
+                      {country.tax.summary}
+                    </Typography>
+                  </Paper>
+                )}
+
+                {/* Rate Statistics Grid */}
+                <Grid container spacing={2}>
+                  {/* Foreign Income Tax Rate */}
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        height: "100%",
+                        backgroundColor: "rgba(15, 23, 42, 0.5)",
+                        borderColor: country.tax?.isZeroGlobalTax
+                          ? "rgba(16, 185, 129, 0.35)"
+                          : "rgba(255, 255, 255, 0.08)",
+                      }}
+                    >
+                      <Stack spacing={0.75}>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontWeight: 700,
+                            letterSpacing: "0.03em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          🌍 Foreign Income Tax
+                        </Typography>
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontWeight: 800,
+                            color: country.tax?.isZeroGlobalTax
+                              ? "#6ee7b7"
+                              : "text.primary",
+                          }}
+                        >
+                          {country.tax?.foreignIncomeTaxRate ||
+                            "Standard Worldwide"}
+                        </Typography>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+
+                  {/* Domestic Personal Income Tax Rate */}
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        height: "100%",
+                        backgroundColor: "rgba(15, 23, 42, 0.5)",
+                        borderColor: "rgba(255, 255, 255, 0.08)",
+                      }}
+                    >
+                      <Stack spacing={0.75}>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontWeight: 700,
+                            letterSpacing: "0.03em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          💼 Local Income Tax
+                        </Typography>
+                        <Typography
+                          variant="body1"
+                          sx={{
+                            fontWeight: 800,
+                            color:
+                              country.tax?.personalIncomeTaxRate === "0%"
+                                ? "#6ee7b7"
+                                : "text.primary",
+                          }}
+                        >
+                          {country.tax?.personalIncomeTaxRate ||
+                            "Standard Rates"}
+                        </Typography>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+
+                  {/* Capital Gains Tax Rate */}
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        height: "100%",
+                        backgroundColor: "rgba(15, 23, 42, 0.5)",
+                        borderColor: "rgba(255, 255, 255, 0.08)",
+                      }}
+                    >
+                      <Stack spacing={0.75}>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontWeight: 700,
+                            letterSpacing: "0.03em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          📈 Capital Gains Tax
+                        </Typography>
+                        <Typography variant="body1" sx={{ fontWeight: 800 }}>
+                          {country.tax?.capitalGainsTaxRate ||
+                            "Varies by asset"}
+                        </Typography>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+
+                  {/* Corporate Tax Rate */}
+                  <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        height: "100%",
+                        backgroundColor: "rgba(15, 23, 42, 0.5)",
+                        borderColor: "rgba(255, 255, 255, 0.08)",
+                      }}
+                    >
+                      <Stack spacing={0.75}>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontWeight: 700,
+                            letterSpacing: "0.03em",
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          🏢 Corporate Tax Rate
+                        </Typography>
+                        <Typography variant="body1" sx={{ fontWeight: 800 }}>
+                          {country.tax?.corporateTaxRate ||
+                            "Standard Corporate Rates"}
+                        </Typography>
+                      </Stack>
+                    </Paper>
+                  </Grid>
+                </Grid>
+
+                {/* Residency Rules and Caveats */}
+                <Stack spacing={1.5} sx={{ pt: 0.5 }}>
+                  {country.tax?.residencyRule && (
+                    <Stack
+                      direction={{ xs: "column", sm: "row" }}
+                      alignItems={{ xs: "flex-start", sm: "center" }}
+                      justifyContent="space-between"
+                      gap={1}
+                      sx={{
+                        p: 1.5,
+                        borderRadius: 2,
+                        backgroundColor: "rgba(30, 41, 59, 0.4)",
+                      }}
+                    >
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 700,
+                          color: "text.secondary",
+                          minWidth: 160,
+                        }}
+                      >
+                        📅 Tax Residency:
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{ fontWeight: 600, color: "text.primary" }}
+                      >
+                        {country.tax.residencyRule}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.tax?.notes && (
+                    <Stack
+                      direction={{ xs: "column", sm: "row" }}
+                      alignItems={{ xs: "flex-start", sm: "center" }}
+                      justifyContent="space-between"
+                      gap={1}
+                      sx={{
+                        p: 1.5,
+                        borderRadius: 2,
+                        backgroundColor: "rgba(30, 41, 59, 0.4)",
+                      }}
+                    >
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 700,
+                          color: "warning.light",
+                          minWidth: 160,
+                        }}
+                      >
+                        ℹ️ Key Notes & Caveats:
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        sx={{ color: "text.secondary", fontWeight: 500 }}
+                      >
+                        {country.tax.notes}
+                      </Typography>
+                    </Stack>
                   )}
                 </Stack>
               </CardContent>

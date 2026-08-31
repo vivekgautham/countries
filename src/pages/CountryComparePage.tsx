@@ -40,6 +40,7 @@ import {
 } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
+import { getTaxBadgeConfig } from "../utils/taxUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
 
@@ -1412,7 +1413,174 @@ export default function CountryComparePage() {
             ]}
           />
 
-          {/* 3. Aviation & Infrastructure */}
+          {/* 3. Tax System & Global Income Comparison */}
+          <ComparisonSection
+            title="Tax System & Global Income Regime"
+            icon={<span style={{ fontSize: "1.2rem" }}>💰</span>}
+            countries={selectedCountries}
+            rows={[
+              {
+                label: "Tax Regime",
+                render: (c) => {
+                  const badge = getTaxBadgeConfig(c.tax);
+                  return (
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Tooltip title={badge.tooltip} arrow>
+                        <Chip
+                          size="small"
+                          icon={
+                            <span
+                              style={{
+                                fontSize: "0.85rem",
+                                marginLeft: "4px",
+                              }}
+                            >
+                              {badge.icon}
+                            </span>
+                          }
+                          label={c.tax?.systemLabel || badge.label}
+                          variant="outlined"
+                          sx={{
+                            height: 24,
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            backgroundColor: badge.backgroundColor,
+                            borderColor: badge.borderColor,
+                            color: badge.textColor,
+                            "& .MuiChip-label": { px: 0.75 },
+                          }}
+                        />
+                      </Tooltip>
+                      {c.tax?.isZeroGlobalTax && (
+                        <Chip
+                          label="0% Global Tax ✨"
+                          size="small"
+                          sx={{
+                            height: 18,
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                            backgroundColor: "rgba(16, 185, 129, 0.2)",
+                            color: "#6ee7b7",
+                            border: "1px solid rgba(16, 185, 129, 0.4)",
+                          }}
+                        />
+                      )}
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "Foreign Income Tax Rate",
+                render: (c) => (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 800,
+                      color: c.tax?.isZeroGlobalTax
+                        ? "#6ee7b7"
+                        : "text.primary",
+                    }}
+                  >
+                    {c.tax?.foreignIncomeTaxRate || "Standard Worldwide Rates"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Local Personal Income Tax",
+                render: (c) => (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 700,
+                      color:
+                        c.tax?.personalIncomeTaxRate === "0%"
+                          ? "#6ee7b7"
+                          : "text.primary",
+                    }}
+                  >
+                    {c.tax?.personalIncomeTaxRate || "Standard Progressive"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Capital Gains Tax",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.tax?.capitalGainsTaxRate || "Varies by asset"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Corporate Tax Rate",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.tax?.corporateTaxRate || "Standard Corporate Rates"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Tax Residency Rules",
+                render: (c) => {
+                  if (!c.tax?.residencyRule) {
+                    return (
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary" }}
+                      >
+                        183-day rule or center of vital interests
+                      </Typography>
+                    );
+                  }
+                  return (
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        color: "text.secondary",
+                        lineHeight: 1.4,
+                        display: "block",
+                      }}
+                    >
+                      {c.tax.residencyRule}
+                    </Typography>
+                  );
+                },
+              },
+              {
+                label: "Regime Summary & Notes",
+                render: (c) => (
+                  <Stack spacing={0.5}>
+                    {c.tax?.summary && (
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: "text.secondary",
+                          fontSize: "0.72rem",
+                          lineHeight: 1.35,
+                        }}
+                      >
+                        {c.tax.summary}
+                      </Typography>
+                    )}
+                    {c.tax?.notes && (
+                      <Typography
+                        variant="caption"
+                        sx={{
+                          color: "warning.light",
+                          fontSize: "0.68rem",
+                          fontStyle: "italic",
+                          lineHeight: 1.3,
+                        }}
+                      >
+                        Note: {c.tax.notes}
+                      </Typography>
+                    )}
+                  </Stack>
+                ),
+              },
+            ]}
+          />
+
+          {/* 4. Aviation & Infrastructure */}
           <ComparisonSection
             title="Aviation & Airport Infrastructure"
             icon={<FlightIcon sx={{ color: "info.light" }} />}

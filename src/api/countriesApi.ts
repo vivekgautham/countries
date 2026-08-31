@@ -8,6 +8,7 @@ import {
   getAutonomousRegionsForCountry,
   getSovereigntyInfo,
 } from "../utils/sovereigntyUtils";
+import { getTaxInfo } from "../utils/taxUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 
@@ -81,6 +82,7 @@ export function transformCountryDetails(
       airports: airportsData[code],
       npt: getNptInfo(code),
       sovereignty: getSovereigntyInfo(code),
+      tax: getTaxInfo(code),
     };
   });
 
@@ -98,6 +100,7 @@ function getFallbackCountries(): UnifiedCountry[] {
     airports: airportsData[c.code.toUpperCase()],
     npt: getNptInfo(c.code),
     sovereignty: getSovereigntyInfo(c.code),
+    tax: getTaxInfo(c.code),
   }));
 
   return baseList.map((c) => ({

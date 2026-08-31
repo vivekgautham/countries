@@ -114,6 +114,23 @@ export interface AutonomousRegionInfo {
   population?: number;
 }
 
+export type TaxSystemType =
+  "zero_tax" | "territorial" | "non_dom" | "worldwide";
+
+export interface TaxInfo {
+  systemType: TaxSystemType;
+  systemLabel: string;
+  headlineRate: string; // e.g. "0%" or "0% - 37%"
+  foreignIncomeTaxRate: string; // e.g. "0% (Tax-Free)"
+  personalIncomeTaxRate: string; // e.g. "0%" or "0% - 37%"
+  capitalGainsTaxRate?: string;
+  corporateTaxRate?: string;
+  residencyRule?: string;
+  summary?: string;
+  notes?: string;
+  isZeroGlobalTax: boolean;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -136,4 +153,5 @@ export interface UnifiedCountry {
   npt?: NptInfo;
   sovereignty?: SovereignInfo;
   autonomousRegions?: AutonomousRegionInfo[];
+  tax?: TaxInfo;
 }

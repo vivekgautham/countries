@@ -31,6 +31,12 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import CompareFloatingDock from "../components/compare/CompareFloatingDock";
 import { getCountryEmoji } from "../utils/countryUtils";
+import {
+  TAX_FILTER_OPTIONS,
+  getTaxBadgeConfig,
+  matchesTaxFilter,
+  matchesTaxQuery,
+} from "../utils/taxUtils";
 
 const REGIONS = [
   "All",
@@ -52,6 +58,7 @@ export default function CountryListPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedTaxRegime, setSelectedTaxRegime] = useState("all");
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
     [],
@@ -62,7 +69,7 @@ export default function CountryListPage() {
   // Reset pagination when filter/search changes
   useEffect(() => {
     setVisibleCount(INITIAL_BATCH_SIZE);
-  }, [searchTerm, selectedRegion]);
+  }, [searchTerm, selectedRegion, selectedTaxRegime]);
 
   const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
     if (e) {
@@ -99,6 +106,11 @@ export default function CountryListPage() {
       );
     }
 
+    // Filter by Tax Regime
+    if (selectedTaxRegime !== "all") {
+      result = result.filter((c) => matchesTaxFilter(c, selectedTaxRegime));
+    }
+
     // Filter by Search Query
     const query = searchTerm.trim().toLowerCase();
     if (query) {
@@ -109,6 +121,7 @@ export default function CountryListPage() {
           c.code.toLowerCase().includes(query) ||
           (c.code3 && c.code3.toLowerCase().includes(query)) ||
           (c.capital && c.capital.toLowerCase().includes(query)) ||
+          matchesTaxQuery(c, query) ||
           (c.airports?.majorAirports?.some(
             (a) =>
               (a.iata && a.iata.toLowerCase().includes(query)) ||
@@ -122,7 +135,7 @@ export default function CountryListPage() {
     result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion]);
+  }, [countries, searchTerm, selectedRegion, selectedTaxRegime]);
 
   const visibleCountries = useMemo(() => {
     return filteredCountries.slice(0, visibleCount);
@@ -309,6 +322,67 @@ export default function CountryListPage() {
                 })}
               </Stack>
 
+              {/* Tax Regime Filter Chips */}
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="center"
+                alignItems="center"
+                gap={1}
+                sx={{ pt: 0.5 }}
+              >
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 700,
+                    fontSize: "0.75rem",
+                    mr: 0.5,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 0.5,
+                  }}
+                >
+                  💰 Tax:
+                </Typography>
+                {TAX_FILTER_OPTIONS.map((opt) => {
+                  const isActive = selectedTaxRegime === opt.id;
+                  return (
+                    <Chip
+                      key={opt.id}
+                      icon={
+                        <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
+                          {opt.icon}
+                        </span>
+                      }
+                      label={opt.label}
+                      clickable
+                      onClick={() => setSelectedTaxRegime(opt.id)}
+                      size="small"
+                      variant={isActive ? "filled" : "outlined"}
+                      sx={{
+                        fontSize: "0.8rem",
+                        fontWeight: isActive ? 700 : 500,
+                        borderRadius: 2,
+                        borderColor: isActive
+                          ? "secondary.main"
+                          : "rgba(255, 255, 255, 0.12)",
+                        backgroundColor: isActive
+                          ? "rgba(168, 85, 247, 0.25)"
+                          : "rgba(30, 41, 59, 0.4)",
+                        color: isActive ? "#d8b4fe" : "text.secondary",
+                        "&:hover": {
+                          backgroundColor: isActive
+                            ? "rgba(168, 85, 247, 0.35)"
+                            : "rgba(30, 41, 59, 0.7)",
+                          color: "text.primary",
+                        },
+                      }}
+                    />
+                  );
+                })}
+              </Stack>
+
               {/* Results Count & Filter Feedback */}
               {!isLoading && filteredCountries.length > 0 && (
                 <Typography
@@ -325,6 +399,8 @@ export default function CountryListPage() {
                   {filteredCountries.length}{" "}
                   {filteredCountries.length === 1 ? "country" : "countries"}
                   {selectedRegion !== "All" && ` • ${selectedRegion}`}
+                  {selectedTaxRegime !== "all" &&
+                    ` • ${TAX_FILTER_OPTIONS.find((t) => t.id === selectedTaxRegime)?.label}`}
                   {searchTerm && ` • Matching "${searchTerm}"`}
                 </Typography>
               )}
@@ -399,6 +475,7 @@ export default function CountryListPage() {
                 onClick={() => {
                   setSearchTerm("");
                   setSelectedRegion("All");
+                  setSelectedTaxRegime("all");
                 }}
               >
                 Reset Filters
@@ -426,6 +503,7 @@ export default function CountryListPage() {
                 const isCompared = selectedCompareCodes.includes(
                   country.code.toUpperCase(),
                 );
+                const taxBadge = getTaxBadgeConfig(country.tax);
 
                 return (
                   <Card
@@ -649,6 +727,40 @@ export default function CountryListPage() {
                             <span>✈️</span>
                             {country.airports.active.toLocaleString()} airports
                           </Typography>
+                        )}
+
+                        {country.tax && (
+                          <Tooltip
+                            title={`${country.tax.systemLabel} • Foreign: ${country.tax.foreignIncomeTaxRate}`}
+                            arrow
+                          >
+                            <Chip
+                              size="small"
+                              icon={
+                                <span
+                                  style={{
+                                    fontSize: "0.65rem",
+                                    marginLeft: 3,
+                                  }}
+                                >
+                                  {taxBadge.icon}
+                                </span>
+                              }
+                              label={taxBadge.shortLabel}
+                              sx={{
+                                height: 18,
+                                fontSize: "0.65rem",
+                                fontWeight: 700,
+                                backgroundColor: taxBadge.backgroundColor,
+                                color: taxBadge.textColor,
+                                border: `1px solid ${taxBadge.borderColor}`,
+                                borderRadius: 1,
+                                mt: 0.3,
+                                alignSelf: "flex-start",
+                                "& .MuiChip-label": { px: 0.5 },
+                              }}
+                            />
+                          </Tooltip>
                         )}
                       </CardContent>
                     </CardActionArea>
