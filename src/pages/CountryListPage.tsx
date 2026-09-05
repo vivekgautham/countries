@@ -31,6 +31,7 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import CompareFloatingDock from "../components/compare/CompareFloatingDock";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { matchesBlocQuery } from "../utils/blocUtils";
 import {
   TAX_FILTER_OPTIONS,
   getTaxBadgeConfig,
@@ -122,6 +123,7 @@ export default function CountryListPage() {
           (c.code3 && c.code3.toLowerCase().includes(query)) ||
           (c.capital && c.capital.toLowerCase().includes(query)) ||
           matchesTaxQuery(c, query) ||
+          matchesBlocQuery(c, query) ||
           (c.airports?.majorAirports?.some(
             (a) =>
               (a.iata && a.iata.toLowerCase().includes(query)) ||
@@ -729,39 +731,137 @@ export default function CountryListPage() {
                           </Typography>
                         )}
 
-                        {country.tax && (
-                          <Tooltip
-                            title={`${country.tax.systemLabel} • Foreign: ${country.tax.foreignIncomeTaxRate}`}
-                            arrow
-                          >
-                            <Chip
-                              size="small"
-                              icon={
-                                <span
-                                  style={{
-                                    fontSize: "0.65rem",
-                                    marginLeft: 3,
-                                  }}
-                                >
-                                  {taxBadge.icon}
-                                </span>
-                              }
-                              label={taxBadge.shortLabel}
-                              sx={{
-                                height: 18,
-                                fontSize: "0.65rem",
-                                fontWeight: 700,
-                                backgroundColor: taxBadge.backgroundColor,
-                                color: taxBadge.textColor,
-                                border: `1px solid ${taxBadge.borderColor}`,
-                                borderRadius: 1,
-                                mt: 0.3,
-                                alignSelf: "flex-start",
-                                "& .MuiChip-label": { px: 0.5 },
-                              }}
-                            />
-                          </Tooltip>
-                        )}
+                        <Stack
+                          direction="row"
+                          flexWrap="wrap"
+                          gap={0.5}
+                          sx={{ mt: 0.3 }}
+                        >
+                          {country.tax && (
+                            <Tooltip
+                              title={`${country.tax.systemLabel} • Foreign: ${country.tax.foreignIncomeTaxRate}`}
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    {taxBadge.icon}
+                                  </span>
+                                }
+                                label={taxBadge.shortLabel}
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 700,
+                                  backgroundColor: taxBadge.backgroundColor,
+                                  color: taxBadge.textColor,
+                                  border: `1px solid ${taxBadge.borderColor}`,
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isG7 && (
+                            <Tooltip
+                              title="Group of Seven (G7) & G20 Member State"
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🏛️
+                                  </span>
+                                }
+                                label="G7"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(99, 102, 241, 0.2)",
+                                  color: "#a5b4fc",
+                                  border: "1px solid rgba(99, 102, 241, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isG20 && !country.blocs?.isG7 && (
+                            <Tooltip
+                              title="Group of Twenty (G20) Member State"
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🌐
+                                  </span>
+                                }
+                                label="G20"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(14, 165, 233, 0.2)",
+                                  color: "#38bdf8",
+                                  border: "1px solid rgba(14, 165, 233, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isG20Guest && (
+                            <Tooltip title="G20 Permanent Guest Invitee" arrow>
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🌐
+                                  </span>
+                                }
+                                label="G20 Guest"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(245, 158, 11, 0.2)",
+                                  color: "#fcd34d",
+                                  border: "1px solid rgba(245, 158, 11, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+                        </Stack>
                       </CardContent>
                     </CardActionArea>
                   </Card>

@@ -35,6 +35,7 @@ import { UnifiedCountry } from "../types/country";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
+import { getG7BadgeConfig, getG20BadgeConfig } from "../utils/blocUtils";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -168,6 +169,8 @@ export default function CountryDetailPage() {
   const wikipediaUrl = `https://en.wikipedia.org/wiki/${encodeURIComponent(country.name)}`;
   const nptBadge = getNptBadgeConfig(country.npt);
   const taxBadge = getTaxBadgeConfig(country.tax);
+  const g7Badge = getG7BadgeConfig();
+  const g20Badge = getG20BadgeConfig(country.blocs?.isG20Guest);
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
@@ -398,6 +401,56 @@ export default function CountryDetailPage() {
                               backgroundColor: taxBadge.backgroundColor,
                               border: `1px solid ${taxBadge.borderColor}`,
                               color: taxBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isG7 && (
+                        <Tooltip title={g7Badge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {g7Badge.icon}
+                              </span>
+                            }
+                            label={g7Badge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: g7Badge.backgroundColor,
+                              border: `1px solid ${g7Badge.borderColor}`,
+                              color: g7Badge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {(country.blocs?.isG20 || country.blocs?.isG20Guest) && (
+                        <Tooltip title={g20Badge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {g20Badge.icon}
+                              </span>
+                            }
+                            label={g20Badge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: g20Badge.backgroundColor,
+                              border: `1px solid ${g20Badge.borderColor}`,
+                              color: g20Badge.textColor,
                             }}
                           />
                         </Tooltip>
@@ -704,6 +757,34 @@ export default function CountryDetailPage() {
                     </Typography>
                     <Typography fontWeight={600}>
                       {country.phoneCode || "N/A"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🏛️ G7 Membership
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isG7 ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🌐 G20 Membership
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isG20
+                        ? "Yes (Member State)"
+                        : country.blocs?.isG20Guest
+                          ? "Permanent Guest Invitee"
+                          : "No"}
                     </Typography>
                   </Stack>
                 </Stack>

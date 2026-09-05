@@ -131,6 +131,14 @@ export interface TaxInfo {
   isZeroGlobalTax: boolean;
 }
 
+export interface EconomicBlocs {
+  isG7: boolean;
+  isG20: boolean;
+  isG20Guest?: boolean;
+  g20Status: "member" | "permanent_guest" | "non_member";
+  statusLabel?: string;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -154,4 +162,5 @@ export interface UnifiedCountry {
   sovereignty?: SovereignInfo;
   autonomousRegions?: AutonomousRegionInfo[];
   tax?: TaxInfo;
+  blocs?: EconomicBlocs;
 }
