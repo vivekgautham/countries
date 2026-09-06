@@ -10,6 +10,7 @@ import {
 } from "../utils/sovereigntyUtils";
 import { getTaxInfo } from "../utils/taxUtils";
 import { getEconomicBlocInfo } from "../utils/blocUtils";
+import { getGdpInfo } from "../utils/gdpUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 
@@ -85,6 +86,7 @@ export function transformCountryDetails(
       sovereignty: getSovereigntyInfo(code),
       tax: getTaxInfo(code),
       blocs: getEconomicBlocInfo(code),
+      gdp: getGdpInfo(code, population),
     };
   });
 
@@ -104,6 +106,7 @@ function getFallbackCountries(): UnifiedCountry[] {
     sovereignty: getSovereigntyInfo(c.code),
     tax: getTaxInfo(c.code),
     blocs: getEconomicBlocInfo(c.code),
+    gdp: getGdpInfo(c.code, c.population),
   }));
 
   return baseList.map((c) => ({

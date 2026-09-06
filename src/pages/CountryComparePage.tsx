@@ -41,6 +41,11 @@ import {
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
+import {
+  formatGdp,
+  formatGdpFull,
+  formatGdpPerCapita,
+} from "../utils/gdpUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
 
@@ -136,6 +141,14 @@ export default function CountryComparePage() {
       selectedCountries,
       (c) => c.airports?.active ?? 0,
     );
+  }, [selectedCountries]);
+
+  const totalGdp = useMemo(() => {
+    return selectedCountries.reduce((acc, c) => acc + (c.gdp?.nominal || 0), 0);
+  }, [selectedCountries]);
+
+  const topGdp = useMemo(() => {
+    return getTopCountryByMetric(selectedCountries, (c) => c.gdp?.nominal ?? 0);
   }, [selectedCountries]);
 
   // Shared attributes
@@ -984,6 +997,131 @@ export default function CountryComparePage() {
                   })}
                 </Box>
               </Box>
+
+              <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.08)" }} />
+
+              {/* Nominal GDP Breakdown */}
+              <Box>
+                <Stack
+                  direction="row"
+                  justifyContent="space-between"
+                  alignItems="center"
+                  sx={{ mb: 1 }}
+                >
+                  <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                    💰 Nominal GDP Comparison
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    sx={{ color: "text.secondary" }}
+                  >
+                    Combined: {formatGdpFull(totalGdp)}
+                  </Typography>
+                </Stack>
+
+                <Box
+                  sx={{
+                    display: "grid",
+                    gridTemplateColumns: {
+                      xs: "1fr",
+                      sm: `repeat(${selectedCountries.length}, minmax(0, 1fr))`,
+                    },
+                    gap: 1.5,
+                  }}
+                >
+                  {selectedCountries.map((c) => {
+                    const pct =
+                      totalGdp > 0
+                        ? ((c.gdp?.nominal || 0) / totalGdp) * 100
+                        : 0;
+                    const isTop = topGdp.topIds.includes(c.code);
+
+                    return (
+                      <Paper
+                        key={c.code}
+                        variant="outlined"
+                        sx={{
+                          p: 1.5,
+                          borderRadius: 2,
+                          backgroundColor: isTop
+                            ? "rgba(16, 185, 129, 0.1)"
+                            : "rgba(15, 23, 42, 0.4)",
+                          borderColor: isTop
+                            ? "success.main"
+                            : "rgba(255, 255, 255, 0.08)",
+                        }}
+                      >
+                        <Stack spacing={0.75}>
+                          <Stack
+                            direction="row"
+                            justifyContent="space-between"
+                            alignItems="center"
+                          >
+                            <Typography
+                              variant="caption"
+                              sx={{ fontWeight: 700 }}
+                            >
+                              {c.name}
+                            </Typography>
+                            {isTop && selectedCountries.length > 1 && (
+                              <Chip
+                                label="Largest 💰"
+                                size="small"
+                                color="success"
+                                sx={{ height: 18, fontSize: "0.65rem" }}
+                              />
+                            )}
+                          </Stack>
+
+                          <Typography variant="h6" sx={{ fontWeight: 800 }}>
+                            {c.gdp ? formatGdp(c.gdp.nominal) : "N/A"}
+                          </Typography>
+
+                          <LinearProgress
+                            variant="determinate"
+                            value={pct}
+                            sx={{
+                              height: 6,
+                              borderRadius: 3,
+                              backgroundColor: "rgba(255, 255, 255, 0.08)",
+                              "& .MuiLinearProgress-bar": {
+                                backgroundColor: isTop
+                                  ? "success.main"
+                                  : "#10b981",
+                              },
+                            }}
+                          />
+                          <Stack
+                            direction="row"
+                            justifyContent="space-between"
+                            alignItems="center"
+                          >
+                            <Typography
+                              variant="caption"
+                              sx={{
+                                color: "text.secondary",
+                                fontSize: "0.7rem",
+                              }}
+                            >
+                              {c.gdp?.year ? `Year ${c.gdp.year}` : ""}
+                            </Typography>
+                            <Typography
+                              variant="caption"
+                              sx={{
+                                color: "text.secondary",
+                                textAlign: "right",
+                                fontSize: "0.7rem",
+                              }}
+                            >
+                              {pct.toFixed(1)}% of total
+                            </Typography>
+                          </Stack>
+                        </Stack>
+                      </Paper>
+                    );
+                  })}
+                </Box>
+              </Box>
             </Stack>
           </Paper>
 
@@ -1137,7 +1275,76 @@ export default function CountryComparePage() {
             ]}
           />
 
-          {/* 2. Culture, Language & Governance */}
+          {/* 2. Economy & National Accounts */}
+          <ComparisonSection
+            title="Economy & National Accounts"
+            icon={<span style={{ fontSize: "1.2rem" }}>📊</span>}
+            countries={selectedCountries}
+            rows={[
+              {
+                label: "Nominal GDP",
+                render: (c) => {
+                  const isTop = topGdp.topIds.includes(c.code);
+                  return (
+                    <Stack direction="row" alignItems="center" spacing={1}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 800,
+                          color: isTop ? "success.light" : "text.primary",
+                        }}
+                      >
+                        {c.gdp ? formatGdpFull(c.gdp.nominal) : "N/A"}
+                      </Typography>
+                      {isTop && selectedCountries.length > 1 && (
+                        <Chip
+                          label="Top 👑"
+                          size="small"
+                          color="success"
+                          sx={{
+                            height: 18,
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                          }}
+                        />
+                      )}
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "Reporting Year",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.year ? `📅 ${c.gdp.year}` : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "GDP per Capita",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.perCapita
+                      ? `${formatGdpPerCapita(c.gdp.perCapita)} / person`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Data Source",
+                render: (c) => (
+                  <Typography
+                    variant="caption"
+                    sx={{ color: "text.secondary" }}
+                  >
+                    {c.gdp?.source || "World Bank (WDI)"}
+                  </Typography>
+                ),
+              },
+            ]}
+          />
+
+          {/* 3. Culture, Language & Governance */}
           <ComparisonSection
             title="Culture, Languages & Governance"
             icon={<LanguageIcon sx={{ color: "secondary.light" }} />}

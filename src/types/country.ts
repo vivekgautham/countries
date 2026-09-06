@@ -139,6 +139,15 @@ export interface EconomicBlocs {
   statusLabel?: string;
 }
 
+export interface GdpInfo {
+  nominal: number; // Raw nominal GDP in current US$
+  year: number; // Reporting year (e.g. 2024)
+  source: string; // e.g. "World Bank (WDI)"
+  perCapita?: number; // GDP per capita in current US$
+  formattedNominal?: string; // e.g. "$27.36T"
+  formattedPerCapita?: string; // e.g. "$81,695"
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -163,4 +172,5 @@ export interface UnifiedCountry {
   autonomousRegions?: AutonomousRegionInfo[];
   tax?: TaxInfo;
   blocs?: EconomicBlocs;
+  gdp?: GdpInfo;
 }

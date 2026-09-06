@@ -1,7 +1,7 @@
 {
   "name": "countries",
   "private": true,
-  "version": "0.0.35",
+  "version": "0.0.37",
   "homepage": "https://vivekgautham.github.io/countries",
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,html}'",
     "update:airports": "node scripts/update-airports.js",
+    "update:gdp": "node scripts/update-gdp.js",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },

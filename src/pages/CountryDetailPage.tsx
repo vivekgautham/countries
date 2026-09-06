@@ -36,6 +36,12 @@ import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
 import { getG7BadgeConfig, getG20BadgeConfig } from "../utils/blocUtils";
+import {
+  formatGdp,
+  formatGdpFull,
+  formatGdpPerCapita,
+  getGdpRank,
+} from "../utils/gdpUtils";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -171,6 +177,10 @@ export default function CountryDetailPage() {
   const taxBadge = getTaxBadgeConfig(country.tax);
   const g7Badge = getG7BadgeConfig();
   const g20Badge = getG20BadgeConfig(country.blocs?.isG20Guest);
+  const gdpRank = useMemo(
+    () => (country ? getGdpRank(countries, country.code) : null),
+    [countries, country],
+  );
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 2.5, sm: 4 } }}>
@@ -559,6 +569,25 @@ export default function CountryDetailPage() {
                       size="small"
                       variant="outlined"
                     />
+                    {country.gdp && (
+                      <Tooltip
+                        title={`Nominal GDP: ${formatGdpFull(country.gdp.nominal)} (Year: ${country.gdp.year})`}
+                        arrow
+                      >
+                        <Chip
+                          label={`GDP: ${formatGdp(country.gdp.nominal)} (${country.gdp.year})`}
+                          size="small"
+                          color="success"
+                          variant="outlined"
+                          sx={{
+                            fontWeight: 700,
+                            backgroundColor: "rgba(16, 185, 129, 0.12)",
+                            borderColor: "rgba(16, 185, 129, 0.35)",
+                            color: "#6ee7b7",
+                          }}
+                        />
+                      </Tooltip>
+                    )}
                   </Stack>
                 </Stack>
 
@@ -934,6 +963,114 @@ export default function CountryDetailPage() {
                       }}
                     >
                       Source: UNODA Treaty Database ↗
+                    </Typography>
+                  </Box>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Economy & GDP */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1}
+                >
+                  <Typography
+                    variant="h6"
+                    component="h2"
+                    sx={{ fontWeight: 700 }}
+                  >
+                    📊 Economy & GDP
+                  </Typography>
+                  {country.gdp?.year && (
+                    <Chip
+                      size="small"
+                      label={`Reporting Year: ${country.gdp.year}`}
+                      variant="outlined"
+                      sx={{
+                        fontWeight: 700,
+                        fontSize: "0.75rem",
+                        backgroundColor: "rgba(14, 165, 233, 0.12)",
+                        borderColor: "rgba(14, 165, 233, 0.35)",
+                        color: "#38bdf8",
+                      }}
+                    />
+                  )}
+                </Stack>
+                <Divider />
+                <Stack spacing={1.5}>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      💰 Nominal GDP
+                    </Typography>
+                    <Typography fontWeight={700} textAlign="right">
+                      {country.gdp ? formatGdpFull(country.gdp.nominal) : "N/A"}
+                    </Typography>
+                  </Stack>
+
+                  {country.gdp?.perCapita && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        👤 GDP per Capita
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatGdpPerCapita(country.gdp.perCapita)} / person
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {gdpRank && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌐 Global GDP Rank
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        #{gdpRank.rank} of {gdpRank.total} (Top{" "}
+                        {Math.max(1, 100 - gdpRank.percentile)}%)
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  <Box
+                    sx={{
+                      pt: 0.5,
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Typography
+                      component="a"
+                      href={`https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=${country.code}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="caption"
+                      sx={{
+                        color: "primary.light",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      Source: {country.gdp?.source || "World Bank (WDI)"} ↗
                     </Typography>
                   </Box>
                 </Stack>

@@ -1,0 +1,1397 @@
+{
+  "1A": {
+    "nominal": 3797527236195,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "1W": {
+    "nominal": 118350166039396,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "4E": {
+    "nominal": 23247334500847,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "7E": {
+    "nominal": 2815874458070,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "8S": {
+    "nominal": 4578021773987,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AD": {
+    "nominal": 4500982732,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AE": {
+    "nominal": 552324919096,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "AF": {
+    "nominal": 17778508876,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "AG": {
+    "nominal": 2338196296,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AI": {
+    "nominal": 380000000,
+    "year": 2023,
+    "source": "UN Statistics Division / ECCB"
+  },
+  "AL": {
+    "nominal": 30540188271,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AM": {
+    "nominal": 29243452882,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AO": {
+    "nominal": 122174889424,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AR": {
+    "nominal": 683097891619,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AS": {
+    "nominal": 871000000,
+    "year": 2022,
+    "source": "World Bank (WDI)"
+  },
+  "AT": {
+    "nominal": 579470021095,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AU": {
+    "nominal": 1798518933689,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "AW": {
+    "nominal": 4167588070,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "AX": {
+    "nominal": 1600000000,
+    "year": 2023,
+    "source": "ÅSUB Statistics Åland"
+  },
+  "AZ": {
+    "nominal": 75937647059,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "B8": {
+    "nominal": 2762562481345,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BA": {
+    "nominal": 32599982936,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BB": {
+    "nominal": 8016550000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BD": {
+    "nominal": 456319229256,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BE": {
+    "nominal": 725466462860,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BF": {
+    "nominal": 27627297461,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BG": {
+    "nominal": 130777235530,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BH": {
+    "nominal": 48965725532,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BI": {
+    "nominal": 3364713864,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BJ": {
+    "nominal": 24566420904,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BL": {
+    "nominal": 420000000,
+    "year": 2022,
+    "source": "CEROM / INSEE"
+  },
+  "BM": {
+    "nominal": 9194499000,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "BN": {
+    "nominal": 15031980994,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BO": {
+    "nominal": 64768947525,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BR": {
+    "nominal": 2279920092492,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BS": {
+    "nominal": 15832800000,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "BT": {
+    "nominal": 3579320145,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BW": {
+    "nominal": 19928479839,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BY": {
+    "nominal": 93397215864,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "BZ": {
+    "nominal": 3326500000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CA": {
+    "nominal": 2319899772426,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CD": {
+    "nominal": 91030531317,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CF": {
+    "nominal": 3066109226,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CG": {
+    "nominal": 16306633779,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CH": {
+    "nominal": 1043529899251,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CI": {
+    "nominal": 99773555666,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CK": {
+    "nominal": 320000000,
+    "year": 2023,
+    "source": "Cook Islands Ministry of Finance"
+  },
+  "CL": {
+    "nominal": 357371159575,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CM": {
+    "nominal": 58933453924,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CN": {
+    "nominal": 19498039388043,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CO": {
+    "nominal": 457410034203,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CR": {
+    "nominal": 102904921157,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CU": {
+    "nominal": 107352000000,
+    "year": 2020,
+    "source": "World Bank (WDI)"
+  },
+  "CV": {
+    "nominal": 3056630435,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CW": {
+    "nominal": 3561178212,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "CY": {
+    "nominal": 41225787247,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "CZ": {
+    "nominal": 391026962800,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DE": {
+    "nominal": 5050922925047,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DJ": {
+    "nominal": 4624533092,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DK": {
+    "nominal": 462526660468,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DM": {
+    "nominal": 723859259,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DO": {
+    "nominal": 127407463759,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "DZ": {
+    "nominal": 287031225988,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "EC": {
+    "nominal": 130320560400,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "EE": {
+    "nominal": 47030833799,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "EG": {
+    "nominal": 365254630180,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ER": {
+    "nominal": 2065001626,
+    "year": 2011,
+    "source": "World Bank (WDI)"
+  },
+  "ES": {
+    "nominal": 1906453309986,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ET": {
+    "nominal": 126358758448,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "EU": {
+    "nominal": 21243212570163,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "FI": {
+    "nominal": 317039368820,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "FJ": {
+    "nominal": 6198013062,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "FK": {
+    "nominal": 300000000,
+    "year": 2023,
+    "source": "Falkland Islands Government"
+  },
+  "FM": {
+    "nominal": 501797600,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "FO": {
+    "nominal": 4052937170,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "FR": {
+    "nominal": 3366315927447,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GA": {
+    "nominal": 21427119323,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GB": {
+    "nominal": 4002587541846,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GD": {
+    "nominal": 1420173229,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GE": {
+    "nominal": 38143612855,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GG": {
+    "nominal": 4300000000,
+    "year": 2023,
+    "source": "States of Guernsey / UN"
+  },
+  "GH": {
+    "nominal": 114209905279,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GI": {
+    "nominal": 3100000000,
+    "year": 2023,
+    "source": "HM Government of Gibraltar"
+  },
+  "GL": {
+    "nominal": 3326543974,
+    "year": 2023,
+    "source": "World Bank (WDI)"
+  },
+  "GM": {
+    "nominal": 2593673988,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GN": {
+    "nominal": 28346024753,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GQ": {
+    "nominal": 12823210426,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GR": {
+    "nominal": 280635521324,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GT": {
+    "nominal": 123306008821,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GU": {
+    "nominal": 6910000000,
+    "year": 2022,
+    "source": "World Bank (WDI)"
+  },
+  "GW": {
+    "nominal": 2527930273,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "GY": {
+    "nominal": 27097477218,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "HK": {
+    "nominal": 427310315922,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "HN": {
+    "nominal": 39601409103,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "HR": {
+    "nominal": 105060182186,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "HT": {
+    "nominal": 32077278409,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "HU": {
+    "nominal": 246490213513,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ID": {
+    "nominal": 1445642584164,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IE": {
+    "nominal": 721701359046,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IL": {
+    "nominal": 610777842874,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IM": {
+    "nominal": 7576129933,
+    "year": 2023,
+    "source": "World Bank (WDI)"
+  },
+  "IN": {
+    "nominal": 3956067115772,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IQ": {
+    "nominal": 254367293538,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IR": {
+    "nominal": 362682115433,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IS": {
+    "nominal": 38582528789,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "IT": {
+    "nominal": 2551556954100,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "JE": {
+    "nominal": 6800000000,
+    "year": 2023,
+    "source": "Statistics Jersey / UN"
+  },
+  "JG": {
+    "nominal": 12507320838,
+    "year": 2023,
+    "source": "World Bank (WDI)"
+  },
+  "JM": {
+    "nominal": 22704903218,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "JO": {
+    "nominal": 61610052535,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "JP": {
+    "nominal": 4435162999977,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KE": {
+    "nominal": 135941278879,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KG": {
+    "nominal": 22623752095,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KH": {
+    "nominal": 51267065843,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KI": {
+    "nominal": 349227254,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KM": {
+    "nominal": 1814920856,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KN": {
+    "nominal": 1183514815,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KP": {
+    "nominal": 29500000000,
+    "year": 2023,
+    "source": "Bank of Korea / UN Stats"
+  },
+  "KR": {
+    "nominal": 1872374961553,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KW": {
+    "nominal": 157209026926,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "KY": {
+    "nominal": 7765336505,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "KZ": {
+    "nominal": 306239209650,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LA": {
+    "nominal": 18302970219,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LB": {
+    "nominal": 25971643441,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "LC": {
+    "nominal": 2656444444,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LI": {
+    "nominal": 8905764270,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "LK": {
+    "nominal": 108825231671,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LR": {
+    "nominal": 5245938900,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LS": {
+    "nominal": 2573572920,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LT": {
+    "nominal": 95210150818,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LU": {
+    "nominal": 101157829491,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LV": {
+    "nominal": 48618869160,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "LY": {
+    "nominal": 48098909614,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MA": {
+    "nominal": 182374250612,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MC": {
+    "nominal": 11125788838,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "MD": {
+    "nominal": 20351796275,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ME": {
+    "nominal": 9232801465,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MF": {
+    "nominal": 649206263,
+    "year": 2021,
+    "source": "World Bank (WDI)"
+  },
+  "MG": {
+    "nominal": 19620352036,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MH": {
+    "nominal": 308000000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MK": {
+    "nominal": 19101199817,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ML": {
+    "nominal": 30069148581,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MM": {
+    "nominal": 81665773810,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MN": {
+    "nominal": 25369107325,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MO": {
+    "nominal": 52061007670,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MP": {
+    "nominal": 1096000000,
+    "year": 2022,
+    "source": "World Bank (WDI)"
+  },
+  "MR": {
+    "nominal": 11679910946,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MS": {
+    "nominal": 75000000,
+    "year": 2023,
+    "source": "UN Statistics Division"
+  },
+  "MT": {
+    "nominal": 27771821561,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MU": {
+    "nominal": 16157804492,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MV": {
+    "nominal": 7741066861,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MW": {
+    "nominal": 14918276698,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MX": {
+    "nominal": 1832641364776,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MY": {
+    "nominal": 472193128645,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "MZ": {
+    "nominal": 22337997046,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NA": {
+    "nominal": 15080340654,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NC": {
+    "nominal": 8548919387,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "NE": {
+    "nominal": 21646191388,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NG": {
+    "nominal": 290794361542,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NI": {
+    "nominal": 22237167113,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NL": {
+    "nominal": 1332767651100,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NO": {
+    "nominal": 530755719439,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NP": {
+    "nominal": 45489810283,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NR": {
+    "nominal": 176040044,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "NU": {
+    "nominal": 35000000,
+    "year": 2023,
+    "source": "Statistics Niue / UN"
+  },
+  "NZ": {
+    "nominal": 264057413740,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "OE": {
+    "nominal": 72543267888365,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "OM": {
+    "nominal": 109604780696,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PA": {
+    "nominal": 90462600000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PE": {
+    "nominal": 334854659182,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PF": {
+    "nominal": 6323716355,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "PG": {
+    "nominal": 32498658654,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PH": {
+    "nominal": 487086123720,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PK": {
+    "nominal": 407307214476,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PL": {
+    "nominal": 1035491784197,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PM": {
+    "nominal": 280000000,
+    "year": 2022,
+    "source": "INSEE / IEDOM"
+  },
+  "PR": {
+    "nominal": 129368484000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PS": {
+    "nominal": 17167100000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PT": {
+    "nominal": 346639825142,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PW": {
+    "nominal": 345000000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "PY": {
+    "nominal": 49278227554,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "QA": {
+    "nominal": 215559615385,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "RO": {
+    "nominal": 428677977855,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "RS": {
+    "nominal": 99953324473,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "RU": {
+    "nominal": 2561310169359,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "RW": {
+    "nominal": 16372132990,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "S1": {
+    "nominal": 337311651765,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "S2": {
+    "nominal": 13005809519,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "S3": {
+    "nominal": 95141207521,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "S4": {
+    "nominal": 228636677707,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SA": {
+    "nominal": 1276942933333,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SB": {
+    "nominal": 1749572443,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SC": {
+    "nominal": 2387022853,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SD": {
+    "nominal": 60162634574,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SE": {
+    "nominal": 668998664082,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SG": {
+    "nominal": 603869516999,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SH": {
+    "nominal": 40000000,
+    "year": 2023,
+    "source": "St Helena Statistics Office"
+  },
+  "SI": {
+    "nominal": 79648204979,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SK": {
+    "nominal": 154530066507,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SL": {
+    "nominal": 7464157904,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SM": {
+    "nominal": 2027243194,
+    "year": 2023,
+    "source": "World Bank (WDI)"
+  },
+  "SN": {
+    "nominal": 37006536238,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SO": {
+    "nominal": 12995200000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SR": {
+    "nominal": 4523657797,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SS": {
+    "nominal": 11997800760,
+    "year": 2015,
+    "source": "World Bank (WDI)"
+  },
+  "ST": {
+    "nominal": 981293587,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SV": {
+    "nominal": 36708110000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SX": {
+    "nominal": 1887728480,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "SY": {
+    "nominal": 23737634644,
+    "year": 2022,
+    "source": "World Bank (WDI)"
+  },
+  "SZ": {
+    "nominal": 5160679613,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T2": {
+    "nominal": 7050566084339,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T3": {
+    "nominal": 2115722770483,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T4": {
+    "nominal": 23218679986475,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T5": {
+    "nominal": 4578021773987,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T6": {
+    "nominal": 2211221046103,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "T7": {
+    "nominal": 7077191807196,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TC": {
+    "nominal": 1745378000,
+    "year": 2024,
+    "source": "World Bank (WDI)"
+  },
+  "TD": {
+    "nominal": 21472835225,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TG": {
+    "nominal": 11889949067,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TH": {
+    "nominal": 577009981112,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TJ": {
+    "nominal": 17660626562,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TK": {
+    "nominal": 15000000,
+    "year": 2023,
+    "source": "UN Statistics Division"
+  },
+  "TL": {
+    "nominal": 1902180258,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TM": {
+    "nominal": 49828621356,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TN": {
+    "nominal": 57502836548,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TO": {
+    "nominal": 679218219,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TR": {
+    "nominal": 1597293229287,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TT": {
+    "nominal": 25942749718,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TV": {
+    "nominal": 57345435,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "TW": {
+    "nominal": 790728000000,
+    "year": 2024,
+    "source": "IMF World Economic Outlook"
+  },
+  "TZ": {
+    "nominal": 90143496090,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "UA": {
+    "nominal": 214233312784,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "UG": {
+    "nominal": 61985829288,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "US": {
+    "nominal": 30769700000000,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "UY": {
+    "nominal": 85347696278,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "UZ": {
+    "nominal": 147038081129,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "V1": {
+    "nominal": 1665770125126,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "V2": {
+    "nominal": 16406032169247,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "V3": {
+    "nominal": 31873985161937,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "V4": {
+    "nominal": 67379697065260,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "VA": {
+    "nominal": 25000000,
+    "year": 2023,
+    "source": "Prefecture for Economic Affairs"
+  },
+  "VC": {
+    "nominal": 1255222222,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "VE": {
+    "nominal": 99661244156,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "VG": {
+    "nominal": 1450000000,
+    "year": 2023,
+    "source": "UN Statistics Division"
+  },
+  "VI": {
+    "nominal": 4672000000,
+    "year": 2022,
+    "source": "World Bank (WDI)"
+  },
+  "VN": {
+    "nominal": 514697215165,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "VU": {
+    "nominal": 1353658841,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "WF": {
+    "nominal": 200000000,
+    "year": 2023,
+    "source": "IEOM / INSEE"
+  },
+  "WS": {
+    "nominal": 1287936622,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XC": {
+    "nominal": 18010000307247,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XD": {
+    "nominal": 76878050747687,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XE": {
+    "nominal": 1285481386975,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XF": {
+    "nominal": 43056359078690,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XG": {
+    "nominal": 3195044389894,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XH": {
+    "nominal": 1270032242274,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XI": {
+    "nominal": 1925012147620,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XJ": {
+    "nominal": 6523496128944,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XK": {
+    "nominal": 12456403307,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XL": {
+    "nominal": 1653686211542,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XM": {
+    "nominal": 642666054940,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XN": {
+    "nominal": 7308505375623,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XO": {
+    "nominal": 41478597585192,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XP": {
+    "nominal": 40836798203181,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XQ": {
+    "nominal": 2132889870483,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XT": {
+    "nominal": 33529653863549,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "XU": {
+    "nominal": 33099237425506,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "YE": {
+    "nominal": 21606160663,
+    "year": 2018,
+    "source": "World Bank (WDI)"
+  },
+  "Z4": {
+    "nominal": 33656980597208,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "Z7": {
+    "nominal": 32268612230367,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZA": {
+    "nominal": 427184325997,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZF": {
+    "nominal": 2208834023249,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZG": {
+    "nominal": 2211221046103,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZH": {
+    "nominal": 1358694050873,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZI": {
+    "nominal": 852526995230,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZJ": {
+    "nominal": 7395989651242,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZM": {
+    "nominal": 28879806220,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZQ": {
+    "nominal": 5135569539886,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZT": {
+    "nominal": 46251403468584,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  },
+  "ZW": {
+    "nominal": 51215643906,
+    "year": 2025,
+    "source": "World Bank (WDI)"
+  }
+}
