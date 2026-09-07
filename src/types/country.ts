@@ -141,9 +141,13 @@ export interface EconomicBlocs {
 
 export interface GdpInfo {
   nominal: number; // Raw nominal GDP in current US$
-  year: number; // Reporting year (e.g. 2024)
+  year: number; // Reporting year for nominal GDP (e.g. 2025)
   source: string; // e.g. "World Bank (WDI)"
   perCapita?: number; // GDP per capita in current US$
+  perCapitaYear?: number; // Reporting year for GDP per capita
+  population?: number; // Total population from World Bank
+  populationYear?: number; // Reporting year for population
+  populationSource?: string; // Data source for population (e.g. "World Bank (WDI)")
   formattedNominal?: string; // e.g. "$27.36T"
   formattedPerCapita?: string; // e.g. "$81,695"
 }

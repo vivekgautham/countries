@@ -705,12 +705,13 @@ export default function CountryDetailPage() {
                     <Typography color="text.secondary">
                       👥 Population
                     </Typography>
-                    <Typography fontWeight={600}>
+                    <Typography fontWeight={600} textAlign="right">
                       {country.population
-                        ? country.population.toLocaleString()
+                        ? `${country.population.toLocaleString()}${country.gdp?.populationYear ? ` (${country.gdp.populationYear})` : ""}`
                         : "N/A"}
                     </Typography>
                   </Stack>
+
                   {Boolean(
                     country.population && country.area && country.area > 0,
                   ) && (
@@ -734,6 +735,33 @@ export default function CountryDetailPage() {
                       </Typography>
                     </Stack>
                   )}
+
+                  <Box
+                    sx={{
+                      pt: 0.5,
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Typography
+                      component="a"
+                      href={`https://data.worldbank.org/indicator/SP.POP.TOTL?locations=${country.code}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="caption"
+                      sx={{
+                        color: "primary.light",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      Source:{" "}
+                      {country.gdp?.populationSource ||
+                        country.gdp?.source ||
+                        "World Bank (WDI)"}{" "}
+                      ↗
+                    </Typography>
+                  </Box>
                 </Stack>
               </CardContent>
             </Card>

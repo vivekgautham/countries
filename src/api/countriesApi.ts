@@ -53,7 +53,9 @@ export function transformCountryDetails(
 
     const languagesList = item.languages ? Object.values(item.languages) : [];
     const code = item.cca2.toUpperCase();
-    const population = item.population || populationByCode[code] || 0;
+    const fallbackPopulation = item.population || populationByCode[code] || 0;
+    const gdp = getGdpInfo(code, fallbackPopulation);
+    const population = gdp?.population || fallbackPopulation;
     const area = item.area || areaByCode[code] || 0;
     const timezones =
       item.timezones && item.timezones.length > 0
@@ -86,7 +88,7 @@ export function transformCountryDetails(
       sovereignty: getSovereigntyInfo(code),
       tax: getTaxInfo(code),
       blocs: getEconomicBlocInfo(code),
-      gdp: getGdpInfo(code, population),
+      gdp,
     };
   });
 
@@ -99,15 +101,22 @@ export function transformCountryDetails(
 function getFallbackCountries(): UnifiedCountry[] {
   const baseList: UnifiedCountry[] = (
     rawCountriesData as unknown as UnifiedCountry[]
-  ).map((c) => ({
-    ...c,
-    airports: airportsData[c.code.toUpperCase()],
-    npt: getNptInfo(c.code),
-    sovereignty: getSovereigntyInfo(c.code),
-    tax: getTaxInfo(c.code),
-    blocs: getEconomicBlocInfo(c.code),
-    gdp: getGdpInfo(c.code, c.population),
-  }));
+  ).map((c) => {
+    const code = c.code.toUpperCase();
+    const gdp = getGdpInfo(code, c.population);
+    const population = gdp?.population || c.population || 0;
+
+    return {
+      ...c,
+      population,
+      airports: airportsData[code],
+      npt: getNptInfo(c.code),
+      sovereignty: getSovereigntyInfo(c.code),
+      tax: getTaxInfo(c.code),
+      blocs: getEconomicBlocInfo(c.code),
+      gdp,
+    };
+  });
 
   return baseList.map((c) => ({
     ...c,

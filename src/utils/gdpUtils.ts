@@ -3,7 +3,16 @@ import { GdpInfo, UnifiedCountry } from "../types/country";
 
 const gdpDataset = gdpDataRaw as Record<
   string,
-  { nominal: number; year: number; source: string }
+  {
+    nominal?: number;
+    year?: number;
+    population?: number;
+    populationYear?: number;
+    populationSource?: string;
+    perCapita?: number;
+    perCapitaYear?: number;
+    source?: string;
+  }
 >;
 
 /**
@@ -66,28 +75,41 @@ export function formatGdpPerCapita(perCapita?: number): string {
 }
 
 /**
- * Look up GDP info by 2-letter country code and compute per-capita metrics.
+ * Look up GDP info by 2-letter country code and retrieve official World Bank
+ * GDP, population, and GDP per capita indicators.
  */
 export function getGdpInfo(
   countryCode?: string,
-  population?: number,
+  fallbackPopulation?: number,
 ): GdpInfo | undefined {
   if (!countryCode) return undefined;
   const code = countryCode.toUpperCase();
   const raw = gdpDataset[code];
-  if (!raw || !raw.nominal) return undefined;
+  if (!raw) return undefined;
 
+  const nominal = raw.nominal || 0;
+  const year = raw.year || new Date().getFullYear();
+  const population = raw.population || fallbackPopulation;
   const perCapita =
-    population && population > 0
-      ? Math.round(raw.nominal / population)
-      : undefined;
+    raw.perCapita ??
+    (population && population > 0 && nominal > 0
+      ? Math.round(nominal / population)
+      : undefined);
 
   return {
-    nominal: raw.nominal,
-    year: raw.year,
+    nominal,
+    year,
     source: raw.source || "World Bank (WDI)",
+    population: raw.population,
+    populationYear: raw.populationYear,
+    populationSource:
+      raw.populationSource ||
+      (raw.population
+        ? raw.source || "World Bank (WDI)"
+        : "National Census / UN"),
     perCapita,
-    formattedNominal: formatGdp(raw.nominal),
+    perCapitaYear: raw.perCapitaYear || year,
+    formattedNominal: nominal > 0 ? formatGdp(nominal) : undefined,
     formattedPerCapita: perCapita ? formatGdpPerCapita(perCapita) : undefined,
   };
 }

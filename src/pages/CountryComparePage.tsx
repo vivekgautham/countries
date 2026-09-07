@@ -1163,22 +1163,36 @@ export default function CountryComparePage() {
                 render: (c) => {
                   const isTop = topPopulation.topIds.includes(c.code);
                   return (
-                    <Stack direction="row" alignItems="center" spacing={1}>
-                      <Typography variant="body2" sx={{ fontWeight: 700 }}>
-                        {formatNumber(c.population)}
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Typography variant="body2" sx={{ fontWeight: 700 }}>
+                          {formatNumber(c.population)}
+                        </Typography>
+                        {isTop && selectedCountries.length > 1 && (
+                          <Chip
+                            label="Top"
+                            size="small"
+                            color="primary"
+                            sx={{ height: 18, fontSize: "0.65rem" }}
+                          />
+                        )}
+                      </Stack>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.7rem" }}
+                      >
+                        {c.gdp?.populationSource ||
+                          c.gdp?.source ||
+                          "World Bank (WDI)"}
+                        {c.gdp?.populationYear
+                          ? ` (${c.gdp.populationYear})`
+                          : ""}
                       </Typography>
-                      {isTop && selectedCountries.length > 1 && (
-                        <Chip
-                          label="Top"
-                          size="small"
-                          color="primary"
-                          sx={{ height: 18, fontSize: "0.65rem" }}
-                        />
-                      )}
                     </Stack>
                   );
                 },
               },
+
               {
                 label: "Land Area",
                 render: (c) => {
