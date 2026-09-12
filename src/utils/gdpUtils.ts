@@ -12,6 +12,12 @@ const gdpDataset = gdpDataRaw as Record<
     perCapita?: number;
     perCapitaYear?: number;
     source?: string;
+    growth?: number;
+    growthYear?: number;
+    inflation?: number;
+    inflationYear?: number;
+    lifeExpectancy?: number;
+    lifeExpectancyYear?: number;
   }
 >;
 
@@ -75,8 +81,46 @@ export function formatGdpPerCapita(perCapita?: number): string {
 }
 
 /**
+ * Formats annual GDP growth rate with +/- prefix:
+ * e.g. "+2.2%" or "-1.5%"
+ */
+export function formatGdpGrowth(growth?: number): string {
+  if (growth === undefined || growth === null || isNaN(growth)) {
+    return "N/A";
+  }
+  const prefix = growth > 0 ? "+" : "";
+  return `${prefix}${growth.toFixed(1)}%`;
+}
+
+/**
+ * Formats annual inflation rate (CPI):
+ * e.g. "2.9%"
+ */
+export function formatInflation(inflation?: number): string {
+  if (inflation === undefined || inflation === null || isNaN(inflation)) {
+    return "N/A";
+  }
+  return `${inflation.toFixed(1)}%`;
+}
+
+/**
+ * Formats life expectancy:
+ * e.g. "78.9 yrs"
+ */
+export function formatLifeExpectancy(lifeExpectancy?: number): string {
+  if (
+    lifeExpectancy === undefined ||
+    lifeExpectancy === null ||
+    isNaN(lifeExpectancy)
+  ) {
+    return "N/A";
+  }
+  return `${lifeExpectancy.toFixed(1)} yrs`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
- * GDP, population, and GDP per capita indicators.
+ * GDP, population, GDP per capita, growth, inflation, and life expectancy indicators.
  */
 export function getGdpInfo(
   countryCode?: string,
@@ -111,6 +155,20 @@ export function getGdpInfo(
     perCapitaYear: raw.perCapitaYear || year,
     formattedNominal: nominal > 0 ? formatGdp(nominal) : undefined,
     formattedPerCapita: perCapita ? formatGdpPerCapita(perCapita) : undefined,
+    growth: raw.growth,
+    growthYear: raw.growthYear,
+    inflation: raw.inflation,
+    inflationYear: raw.inflationYear,
+    lifeExpectancy: raw.lifeExpectancy,
+    lifeExpectancyYear: raw.lifeExpectancyYear,
+    formattedGrowth:
+      raw.growth !== undefined ? formatGdpGrowth(raw.growth) : undefined,
+    formattedInflation:
+      raw.inflation !== undefined ? formatInflation(raw.inflation) : undefined,
+    formattedLifeExpectancy:
+      raw.lifeExpectancy !== undefined
+        ? formatLifeExpectancy(raw.lifeExpectancy)
+        : undefined,
   };
 }
 

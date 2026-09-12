@@ -39,7 +39,10 @@ import { getG7BadgeConfig, getG20BadgeConfig } from "../utils/blocUtils";
 import {
   formatGdp,
   formatGdpFull,
+  formatGdpGrowth,
   formatGdpPerCapita,
+  formatInflation,
+  formatLifeExpectancy,
   getGdpRank,
 } from "../utils/gdpUtils";
 
@@ -736,6 +739,24 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
 
+                  {country.gdp?.lifeExpectancy !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🩺 Life Expectancy
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatLifeExpectancy(country.gdp.lifeExpectancy)}
+                        {country.gdp.lifeExpectancyYear
+                          ? ` (${country.gdp.lifeExpectancyYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
                   <Box
                     sx={{
                       pt: 0.5,
@@ -1075,6 +1096,53 @@ export default function CountryDetailPage() {
                       <Typography fontWeight={600} textAlign="right">
                         #{gdpRank.rank} of {gdpRank.total} (Top{" "}
                         {Math.max(1, 100 - gdpRank.percentile)}%)
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.growth !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📈 Real GDP Growth
+                      </Typography>
+                      <Typography
+                        fontWeight={700}
+                        textAlign="right"
+                        sx={{
+                          color:
+                            country.gdp.growth > 0
+                              ? "success.light"
+                              : country.gdp.growth < 0
+                                ? "error.light"
+                                : "text.primary",
+                        }}
+                      >
+                        {formatGdpGrowth(country.gdp.growth)}
+                        {country.gdp.growthYear
+                          ? ` (${country.gdp.growthYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.inflation !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏷️ Inflation Rate (CPI)
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatInflation(country.gdp.inflation)}
+                        {country.gdp.inflationYear
+                          ? ` (${country.gdp.inflationYear})`
+                          : ""}
                       </Typography>
                     </Stack>
                   )}

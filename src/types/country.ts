@@ -150,6 +150,15 @@ export interface GdpInfo {
   populationSource?: string; // Data source for population (e.g. "World Bank (WDI)")
   formattedNominal?: string; // e.g. "$27.36T"
   formattedPerCapita?: string; // e.g. "$81,695"
+  growth?: number; // Annual GDP growth rate in %
+  growthYear?: number;
+  inflation?: number; // Annual inflation rate (CPI) in %
+  inflationYear?: number;
+  lifeExpectancy?: number; // Life expectancy at birth in years
+  lifeExpectancyYear?: number;
+  formattedGrowth?: string; // e.g. "+2.16%"
+  formattedInflation?: string; // e.g. "2.95%"
+  formattedLifeExpectancy?: string; // e.g. "78.9 yrs"
 }
 
 export interface UnifiedCountry {

@@ -7,7 +7,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7544,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.68,
+    "growthYear": 2025,
+    "inflation": 1.77,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.7,
+    "lifeExpectancyYear": 2024
   },
   "1W": {
     "source": "World Bank (WDI)",
@@ -17,7 +23,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14406,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.92,
+    "growthYear": 2025,
+    "inflation": 3.04,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.5,
+    "lifeExpectancyYear": 2024
   },
   "4E": {
     "source": "World Bank (WDI)",
@@ -27,7 +39,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10843,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.94,
+    "growthYear": 2025,
+    "inflation": 2.06,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyYear": 2024
   },
   "7E": {
     "source": "World Bank (WDI)",
@@ -37,7 +55,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 11118,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.2,
+    "growthYear": 2025,
+    "inflation": 5.62,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.1,
+    "lifeExpectancyYear": 2024
   },
   "8S": {
     "source": "World Bank (WDI)",
@@ -47,7 +71,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2705,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.12,
+    "growthYear": 2025,
+    "inflation": 3.1,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.6,
+    "lifeExpectancyYear": 2024
   },
   "AD": {
     "source": "World Bank (WDI)",
@@ -57,7 +87,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 54292,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.87,
+    "growthYear": 2025,
+    "lifeExpectancy": 84.2,
+    "lifeExpectancyYear": 2024
   },
   "AE": {
     "source": "World Bank (WDI)",
@@ -67,7 +101,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 50274,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 3.99,
+    "growthYear": 2024,
+    "inflation": 1.25,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.1,
+    "lifeExpectancyYear": 2024
   },
   "AF": {
     "source": "World Bank (WDI)",
@@ -77,7 +117,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 417,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 1.87,
+    "growthYear": 2024,
+    "inflation": -6.6,
+    "inflationYear": 2024,
+    "lifeExpectancy": 66.3,
+    "lifeExpectancyYear": 2024
   },
   "AG": {
     "source": "World Bank (WDI)",
@@ -87,7 +133,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 24819,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5,
+    "growthYear": 2025,
+    "inflation": 1.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.8,
+    "lifeExpectancyYear": 2024
   },
   "AI": {
     "nominal": 380000000,
@@ -107,7 +159,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 12998,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.79,
+    "growthYear": 2025,
+    "inflation": 2.15,
+    "inflationYear": 2025,
+    "lifeExpectancy": 79.8,
+    "lifeExpectancyYear": 2024
   },
   "AM": {
     "source": "World Bank (WDI)",
@@ -117,7 +175,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 9474,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.2,
+    "growthYear": 2025,
+    "inflation": 3.31,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.3,
+    "lifeExpectancyYear": 2024
   },
   "AO": {
     "source": "World Bank (WDI)",
@@ -127,7 +191,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3129,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.13,
+    "growthYear": 2025,
+    "inflation": 20.16,
+    "inflationYear": 2025,
+    "lifeExpectancy": 64.8,
+    "lifeExpectancyYear": 2024
   },
   "AQ": {
     "population": 0,
@@ -142,7 +212,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14898,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.37,
+    "growthYear": 2025,
+    "inflation": 219.88,
+    "inflationYear": 2024,
+    "lifeExpectancy": 77.5,
+    "lifeExpectancyYear": 2024
   },
   "AS": {
     "source": "World Bank (WDI)",
@@ -152,7 +228,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 18017,
-    "perCapitaYear": 2022
+    "perCapitaYear": 2022,
+    "growth": 1.74,
+    "growthYear": 2022,
+    "lifeExpectancy": 73,
+    "lifeExpectancyYear": 2024
   },
   "AT": {
     "source": "World Bank (WDI)",
@@ -162,7 +242,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 62930,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.62,
+    "growthYear": 2025,
+    "inflation": 3.53,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82,
+    "lifeExpectancyYear": 2024
   },
   "AU": {
     "source": "World Bank (WDI)",
@@ -172,7 +258,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 65130,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.35,
+    "growthYear": 2025,
+    "inflation": 2.87,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.1,
+    "lifeExpectancyYear": 2024
   },
   "AW": {
     "source": "World Bank (WDI)",
@@ -182,7 +274,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 38591,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 6.81,
+    "growthYear": 2024,
+    "inflation": 4.26,
+    "inflationYear": 2019,
+    "lifeExpectancy": 76.5,
+    "lifeExpectancyYear": 2024
   },
   "AX": {
     "nominal": 1600000000,
@@ -202,7 +300,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7411,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.45,
+    "growthYear": 2025,
+    "inflation": 5.62,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.6,
+    "lifeExpectancyYear": 2024
   },
   "B8": {
     "source": "World Bank (WDI)",
@@ -212,7 +316,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 27677,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.37,
+    "growthYear": 2025,
+    "inflation": 3.81,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "BA": {
     "source": "World Bank (WDI)",
@@ -222,7 +332,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10382,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.13,
+    "growthYear": 2025,
+    "inflation": 6.11,
+    "inflationYear": 2023,
+    "lifeExpectancy": 78,
+    "lifeExpectancyYear": 2024
   },
   "BB": {
     "source": "World Bank (WDI)",
@@ -232,7 +348,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 28365,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.7,
+    "growthYear": 2025,
+    "inflation": 0.85,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.3,
+    "lifeExpectancyYear": 2024
   },
   "BD": {
     "source": "World Bank (WDI)",
@@ -242,7 +364,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2597,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.49,
+    "growthYear": 2025,
+    "inflation": 8.77,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.9,
+    "lifeExpectancyYear": 2024
   },
   "BE": {
     "source": "World Bank (WDI)",
@@ -252,7 +380,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 60750,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.98,
+    "growthYear": 2025,
+    "inflation": 2.47,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.3,
+    "lifeExpectancyYear": 2024
   },
   "BF": {
     "source": "World Bank (WDI)",
@@ -262,7 +396,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1148,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.29,
+    "growthYear": 2025,
+    "inflation": -0.59,
+    "inflationYear": 2025,
+    "lifeExpectancy": 61.3,
+    "lifeExpectancyYear": 2024
   },
   "BG": {
     "source": "World Bank (WDI)",
@@ -272,7 +412,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 20328,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.1,
+    "growthYear": 2025,
+    "inflation": 4.58,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.8,
+    "lifeExpectancyYear": 2024
   },
   "BH": {
     "source": "World Bank (WDI)",
@@ -282,7 +428,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 30597,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.48,
+    "growthYear": 2025,
+    "inflation": -0.14,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.4,
+    "lifeExpectancyYear": 2024
   },
   "BI": {
     "source": "World Bank (WDI)",
@@ -292,7 +444,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 234,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.24,
+    "growthYear": 2025,
+    "inflation": 34.13,
+    "inflationYear": 2025,
+    "lifeExpectancy": 63.8,
+    "lifeExpectancyYear": 2024
   },
   "BJ": {
     "source": "World Bank (WDI)",
@@ -302,7 +460,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1658,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 8.07,
+    "growthYear": 2025,
+    "inflation": 1.1,
+    "inflationYear": 2025,
+    "lifeExpectancy": 61,
+    "lifeExpectancyYear": 2024
   },
   "BL": {
     "nominal": 420000000,
@@ -322,7 +486,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 142250,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 1.89,
+    "growthYear": 2024,
+    "lifeExpectancy": 82.5,
+    "lifeExpectancyYear": 2024
   },
   "BN": {
     "source": "World Bank (WDI)",
@@ -332,7 +500,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 32235,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.67,
+    "growthYear": 2025,
+    "inflation": -0.3,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.5,
+    "lifeExpectancyYear": 2024
   },
   "BO": {
     "source": "World Bank (WDI)",
@@ -342,7 +516,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5148,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -1.58,
+    "growthYear": 2025,
+    "inflation": 19.52,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68.7,
+    "lifeExpectancyYear": 2024
   },
   "BQ": {
     "population": 26552,
@@ -357,7 +537,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10713,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.29,
+    "growthYear": 2025,
+    "inflation": 5.02,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyYear": 2024
   },
   "BS": {
     "source": "World Bank (WDI)",
@@ -367,7 +553,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 39455,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 3.38,
+    "growthYear": 2024,
+    "inflation": 0.41,
+    "inflationYear": 2024,
+    "lifeExpectancy": 74.7,
+    "lifeExpectancyYear": 2024
   },
   "BT": {
     "source": "World Bank (WDI)",
@@ -377,7 +569,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4493,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 8.01,
+    "growthYear": 2025,
+    "inflation": 3.56,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.3,
+    "lifeExpectancyYear": 2024
   },
   "BV": {
     "population": 0,
@@ -392,7 +590,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7778,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -0.73,
+    "growthYear": 2025,
+    "inflation": 2.66,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.3,
+    "lifeExpectancyYear": 2024
   },
   "BY": {
     "source": "World Bank (WDI)",
@@ -402,7 +606,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10279,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.3,
+    "growthYear": 2025,
+    "inflation": 6.6,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.4,
+    "lifeExpectancyYear": 2024
   },
   "BZ": {
     "source": "World Bank (WDI)",
@@ -412,7 +622,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7865,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.75,
+    "growthYear": 2025,
+    "inflation": 1.06,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.7,
+    "lifeExpectancyYear": 2024
   },
   "CA": {
     "source": "World Bank (WDI)",
@@ -422,7 +638,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 55698,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.74,
+    "growthYear": 2025,
+    "inflation": 2.07,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.1,
+    "lifeExpectancyYear": 2024
   },
   "CC": {
     "population": 593,
@@ -437,7 +659,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 807,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.76,
+    "growthYear": 2025,
+    "inflation": 2.89,
+    "inflationYear": 2016,
+    "lifeExpectancy": 62.1,
+    "lifeExpectancyYear": 2024
   },
   "CF": {
     "source": "World Bank (WDI)",
@@ -447,7 +675,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 556,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.5,
+    "growthYear": 2025,
+    "inflation": 1,
+    "inflationYear": 2025,
+    "lifeExpectancy": 57.7,
+    "lifeExpectancyYear": 2024
   },
   "CG": {
     "source": "World Bank (WDI)",
@@ -457,7 +691,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2515,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.08,
+    "growthYear": 2025,
+    "inflation": 2.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66,
+    "lifeExpectancyYear": 2024
   },
   "CH": {
     "source": "World Bank (WDI)",
@@ -467,7 +707,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 114769,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.3,
+    "growthYear": 2025,
+    "inflation": 0.15,
+    "inflationYear": 2025,
+    "lifeExpectancy": 84.4,
+    "lifeExpectancyYear": 2024
   },
   "CI": {
     "source": "World Bank (WDI)",
@@ -477,7 +723,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3050,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.5,
+    "growthYear": 2025,
+    "inflation": 0.13,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.1,
+    "lifeExpectancyYear": 2024
   },
   "CK": {
     "nominal": 320000000,
@@ -497,7 +749,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 17995,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.46,
+    "growthYear": 2025,
+    "inflation": 4.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.4,
+    "lifeExpectancyYear": 2024
   },
   "CM": {
     "source": "World Bank (WDI)",
@@ -507,7 +765,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1972,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.2,
+    "growthYear": 2025,
+    "inflation": 3.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 64,
+    "lifeExpectancyYear": 2024
   },
   "CN": {
     "source": "World Bank (WDI)",
@@ -517,7 +781,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 13862,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.96,
+    "growthYear": 2025,
+    "inflation": 0.06,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78,
+    "lifeExpectancyYear": 2024
   },
   "CO": {
     "source": "World Bank (WDI)",
@@ -527,7 +797,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8562,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.64,
+    "growthYear": 2025,
+    "inflation": 5.14,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "CR": {
     "source": "World Bank (WDI)",
@@ -537,7 +813,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 19970,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.56,
+    "growthYear": 2025,
+    "inflation": -0.07,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81,
+    "lifeExpectancyYear": 2024
   },
   "CU": {
     "source": "World Bank (WDI)",
@@ -547,7 +829,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 9605,
-    "perCapitaYear": 2020
+    "perCapitaYear": 2020,
+    "growth": -1.06,
+    "growthYear": 2024,
+    "lifeExpectancy": 78.3,
+    "lifeExpectancyYear": 2024
   },
   "CV": {
     "source": "World Bank (WDI)",
@@ -557,7 +843,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5796,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.3,
+    "growthYear": 2025,
+    "inflation": 2.34,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.2,
+    "lifeExpectancyYear": 2024
   },
   "CW": {
     "source": "World Bank (WDI)",
@@ -567,7 +859,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 22833,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 5.03,
+    "growthYear": 2024,
+    "inflation": 2.62,
+    "inflationYear": 2019,
+    "lifeExpectancy": 77,
+    "lifeExpectancyYear": 2024
   },
   "CX": {
     "population": 1692,
@@ -582,7 +880,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 41783,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.77,
+    "growthYear": 2025,
+    "inflation": 0.13,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.8,
+    "lifeExpectancyYear": 2024
   },
   "CZ": {
     "source": "World Bank (WDI)",
@@ -592,7 +896,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 35917,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.58,
+    "growthYear": 2025,
+    "inflation": 2.46,
+    "inflationYear": 2025,
+    "lifeExpectancy": 80,
+    "lifeExpectancyYear": 2024
   },
   "DE": {
     "source": "World Bank (WDI)",
@@ -602,7 +912,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 60496,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.24,
+    "growthYear": 2025,
+    "inflation": 2.17,
+    "inflationYear": 2025,
+    "lifeExpectancy": 80.8,
+    "lifeExpectancyYear": 2024
   },
   "DJ": {
     "source": "World Bank (WDI)",
@@ -612,7 +928,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3906,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.5,
+    "growthYear": 2025,
+    "inflation": -0.31,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66.2,
+    "lifeExpectancyYear": 2024
   },
   "DK": {
     "source": "World Bank (WDI)",
@@ -622,7 +944,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 76970,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.93,
+    "growthYear": 2025,
+    "inflation": 1.89,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.3,
+    "lifeExpectancyYear": 2024
   },
   "DM": {
     "source": "World Bank (WDI)",
@@ -632,7 +960,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10989,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.05,
+    "growthYear": 2025,
+    "inflation": 2.53,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.3,
+    "lifeExpectancyYear": 2024
   },
   "DO": {
     "source": "World Bank (WDI)",
@@ -642,7 +976,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 11059,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.12,
+    "growthYear": 2025,
+    "inflation": 3.87,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.9,
+    "lifeExpectancyYear": 2024
   },
   "DZ": {
     "source": "World Bank (WDI)",
@@ -652,7 +992,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6051,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.82,
+    "growthYear": 2025,
+    "inflation": 1.42,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.5,
+    "lifeExpectancyYear": 2024
   },
   "EC": {
     "source": "World Bank (WDI)",
@@ -662,7 +1008,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7125,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.73,
+    "growthYear": 2025,
+    "inflation": 0.71,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.6,
+    "lifeExpectancyYear": 2024
   },
   "EE": {
     "source": "World Bank (WDI)",
@@ -672,7 +1024,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 34418,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.58,
+    "growthYear": 2025,
+    "inflation": 4.83,
+    "inflationYear": 2025,
+    "lifeExpectancy": 79.3,
+    "lifeExpectancyYear": 2024
   },
   "EG": {
     "source": "World Bank (WDI)",
@@ -682,7 +1040,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3086,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.39,
+    "growthYear": 2025,
+    "inflation": 14.07,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.8,
+    "lifeExpectancyYear": 2024
   },
   "EH": {
     "population": 600904,
@@ -697,7 +1061,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 689,
-    "perCapitaYear": 2011
+    "perCapitaYear": 2011,
+    "growth": 8.68,
+    "growthYear": 2011,
+    "lifeExpectancy": 68.9,
+    "lifeExpectancyYear": 2024
   },
   "ES": {
     "source": "World Bank (WDI)",
@@ -707,7 +1075,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 38627,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.82,
+    "growthYear": 2025,
+    "inflation": 2.7,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.9,
+    "lifeExpectancyYear": 2024
   },
   "ET": {
     "source": "World Bank (WDI)",
@@ -717,7 +1091,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 933,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 9.77,
+    "growthYear": 2025,
+    "inflation": 13.23,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.6,
+    "lifeExpectancyYear": 2024
   },
   "EU": {
     "source": "World Bank (WDI)",
@@ -727,7 +1107,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 47089,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.54,
+    "growthYear": 2025,
+    "inflation": 2.47,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.6,
+    "lifeExpectancyYear": 2024
   },
   "FI": {
     "source": "World Bank (WDI)",
@@ -737,7 +1123,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 56149,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.17,
+    "growthYear": 2025,
+    "inflation": 0.34,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.3,
+    "lifeExpectancyYear": 2024
   },
   "FJ": {
     "source": "World Bank (WDI)",
@@ -747,7 +1139,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6642,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.2,
+    "growthYear": 2025,
+    "inflation": -1.38,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.5,
+    "lifeExpectancyYear": 2024
   },
   "FK": {
     "nominal": 300000000,
@@ -767,7 +1165,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4414,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.06,
+    "growthYear": 2025,
+    "inflation": 5.41,
+    "inflationYear": 2022,
+    "lifeExpectancy": 67.4,
+    "lifeExpectancyYear": 2024
   },
   "FO": {
     "source": "World Bank (WDI)",
@@ -777,7 +1181,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 74175,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 0.84,
+    "growthYear": 2024,
+    "lifeExpectancy": 83.1,
+    "lifeExpectancyYear": 2024
   },
   "FR": {
     "source": "World Bank (WDI)",
@@ -787,7 +1195,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 48986,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.84,
+    "growthYear": 2025,
+    "inflation": 0.94,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyYear": 2024
   },
   "GA": {
     "source": "World Bank (WDI)",
@@ -797,7 +1211,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8263,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.47,
+    "growthYear": 2025,
+    "inflation": 1.77,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68.5,
+    "lifeExpectancyYear": 2024
   },
   "GB": {
     "source": "World Bank (WDI)",
@@ -807,7 +1227,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 57602,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.39,
+    "growthYear": 2025,
+    "inflation": 3.88,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.4,
+    "lifeExpectancyYear": 2024
   },
   "GD": {
     "source": "World Bank (WDI)",
@@ -817,7 +1243,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 12107,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.41,
+    "growthYear": 2025,
+    "inflation": 0.61,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.4,
+    "lifeExpectancyYear": 2024
   },
   "GE": {
     "source": "World Bank (WDI)",
@@ -827,7 +1259,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 9692,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.46,
+    "growthYear": 2025,
+    "inflation": 3.87,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.7,
+    "lifeExpectancyYear": 2024
   },
   "GF": {
     "population": 292354,
@@ -852,13 +1290,21 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3257,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.95,
+    "growthYear": 2025,
+    "inflation": 14.2,
+    "inflationYear": 2025,
+    "lifeExpectancy": 65.7,
+    "lifeExpectancyYear": 2024
   },
   "GI": {
     "source": "World Bank (WDI)",
     "population": 40126,
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
+    "lifeExpectancy": 83.6,
+    "lifeExpectancyYear": 2024,
     "nominal": 3100000000,
     "year": 2023,
     "perCapita": 91176,
@@ -872,7 +1318,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 58499,
-    "perCapitaYear": 2023
+    "perCapitaYear": 2023,
+    "growth": 0.87,
+    "growthYear": 2023,
+    "lifeExpectancy": 70.3,
+    "lifeExpectancyYear": 2024
   },
   "GM": {
     "source": "World Bank (WDI)",
@@ -882,7 +1332,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 919,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.89,
+    "growthYear": 2025,
+    "inflation": 11.56,
+    "inflationYear": 2024,
+    "lifeExpectancy": 66.1,
+    "lifeExpectancyYear": 2024
   },
   "GN": {
     "source": "World Bank (WDI)",
@@ -892,7 +1348,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1877,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.45,
+    "growthYear": 2025,
+    "inflation": 3.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 60.9,
+    "lifeExpectancyYear": 2024
   },
   "GP": {
     "population": 373791,
@@ -907,7 +1369,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6615,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -5.85,
+    "growthYear": 2025,
+    "inflation": 2.92,
+    "inflationYear": 2024,
+    "lifeExpectancy": 63.9,
+    "lifeExpectancyYear": 2024
   },
   "GR": {
     "source": "World Bank (WDI)",
@@ -917,7 +1385,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 26948,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.07,
+    "growthYear": 2025,
+    "inflation": 2.48,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.8,
+    "lifeExpectancyYear": 2024
   },
   "GS": {
     "population": 0,
@@ -932,7 +1406,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6598,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.28,
+    "growthYear": 2025,
+    "inflation": 1.49,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.7,
+    "lifeExpectancyYear": 2024
   },
   "GU": {
     "source": "World Bank (WDI)",
@@ -942,7 +1422,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 41833,
-    "perCapitaYear": 2022
+    "perCapitaYear": 2022,
+    "growth": 5.1,
+    "growthYear": 2022,
+    "lifeExpectancy": 77.4,
+    "lifeExpectancyYear": 2024
   },
   "GW": {
     "source": "World Bank (WDI)",
@@ -952,7 +1436,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1124,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.82,
+    "growthYear": 2025,
+    "inflation": 0.87,
+    "inflationYear": 2025,
+    "lifeExpectancy": 64.3,
+    "lifeExpectancyYear": 2024
   },
   "GY": {
     "source": "World Bank (WDI)",
@@ -962,7 +1452,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 32414,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 19.34,
+    "growthYear": 2025,
+    "inflation": 3.33,
+    "inflationYear": 2025,
+    "lifeExpectancy": 70.3,
+    "lifeExpectancyYear": 2024
   },
   "HK": {
     "source": "World Bank (WDI)",
@@ -972,7 +1468,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 56983,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.49,
+    "growthYear": 2025,
+    "inflation": 1.44,
+    "inflationYear": 2025,
+    "lifeExpectancy": 85.4,
+    "lifeExpectancyYear": 2024
   },
   "HM": {
     "population": 0,
@@ -987,7 +1489,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3598,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.75,
+    "growthYear": 2025,
+    "inflation": 4.6,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73,
+    "lifeExpectancyYear": 2024
   },
   "HR": {
     "source": "World Bank (WDI)",
@@ -997,7 +1505,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 27104,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.4,
+    "growthYear": 2025,
+    "inflation": 3.69,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.9,
+    "lifeExpectancyYear": 2024
   },
   "HT": {
     "source": "World Bank (WDI)",
@@ -1007,7 +1521,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2694,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -2.71,
+    "growthYear": 2025,
+    "inflation": 28.64,
+    "inflationYear": 2025,
+    "lifeExpectancy": 65.1,
+    "lifeExpectancyYear": 2024
   },
   "HU": {
     "source": "World Bank (WDI)",
@@ -1017,7 +1537,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 25907,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.51,
+    "growthYear": 2025,
+    "inflation": 4.41,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.7,
+    "lifeExpectancyYear": 2024
   },
   "ID": {
     "source": "World Bank (WDI)",
@@ -1027,7 +1553,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5060,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.11,
+    "growthYear": 2025,
+    "inflation": 1.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.3,
+    "lifeExpectancyYear": 2024
   },
   "IE": {
     "source": "World Bank (WDI)",
@@ -1037,7 +1569,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 131592,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 12.34,
+    "growthYear": 2025,
+    "inflation": 2.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyYear": 2024
   },
   "IL": {
     "source": "World Bank (WDI)",
@@ -1047,7 +1585,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 60337,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.93,
+    "growthYear": 2025,
+    "inflation": 3.04,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.2,
+    "lifeExpectancyYear": 2024
   },
   "IM": {
     "source": "World Bank (WDI)",
@@ -1057,7 +1601,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 90015,
-    "perCapitaYear": 2023
+    "perCapitaYear": 2023,
+    "growth": -2.04,
+    "growthYear": 2023,
+    "lifeExpectancy": 81.1,
+    "lifeExpectancyYear": 2024
   },
   "IN": {
     "source": "World Bank (WDI)",
@@ -1067,7 +1615,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2702,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.57,
+    "growthYear": 2025,
+    "inflation": 2.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.2,
+    "lifeExpectancyYear": 2024
   },
   "IO": {
     "population": 0,
@@ -1082,7 +1636,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5410,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -2.16,
+    "growthYear": 2025,
+    "inflation": 0.3,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.4,
+    "lifeExpectancyYear": 2024
   },
   "IR": {
     "source": "World Bank (WDI)",
@@ -1092,7 +1652,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3924,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -2.83,
+    "growthYear": 2025,
+    "inflation": 42.17,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "IS": {
     "source": "World Bank (WDI)",
@@ -1102,7 +1668,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 98323,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.28,
+    "growthYear": 2025,
+    "inflation": 4.09,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.8,
+    "lifeExpectancyYear": 2024
   },
   "IT": {
     "source": "World Bank (WDI)",
@@ -1112,7 +1684,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 43309,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.54,
+    "growthYear": 2025,
+    "inflation": 1.53,
+    "inflationYear": 2025,
+    "lifeExpectancy": 84,
+    "lifeExpectancyYear": 2024
   },
   "JE": {
     "nominal": 6800000000,
@@ -1132,7 +1710,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 74586,
-    "perCapitaYear": 2023
+    "perCapitaYear": 2023,
+    "growth": 3.72,
+    "growthYear": 2023,
+    "lifeExpectancy": 81.2,
+    "lifeExpectancyYear": 2024
   },
   "JM": {
     "source": "World Bank (WDI)",
@@ -1142,7 +1724,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8003,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.08,
+    "growthYear": 2025,
+    "inflation": 4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.6,
+    "lifeExpectancyYear": 2024
   },
   "JO": {
     "source": "World Bank (WDI)",
@@ -1152,7 +1740,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5348,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.83,
+    "growthYear": 2025,
+    "inflation": 1.77,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78,
+    "lifeExpectancyYear": 2024
   },
   "JP": {
     "source": "World Bank (WDI)",
@@ -1162,7 +1756,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 35951,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.19,
+    "growthYear": 2025,
+    "inflation": 3.17,
+    "inflationYear": 2025,
+    "lifeExpectancy": 84,
+    "lifeExpectancyYear": 2024
   },
   "KE": {
     "source": "World Bank (WDI)",
@@ -1172,7 +1772,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2363,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.63,
+    "growthYear": 2025,
+    "inflation": 4.07,
+    "inflationYear": 2025,
+    "lifeExpectancy": 63.8,
+    "lifeExpectancyYear": 2024
   },
   "KG": {
     "source": "World Bank (WDI)",
@@ -1182,7 +1788,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3081,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 11.1,
+    "growthYear": 2025,
+    "inflation": 8.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.4,
+    "lifeExpectancyYear": 2024
   },
   "KH": {
     "source": "World Bank (WDI)",
@@ -1192,7 +1804,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2872,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.35,
+    "growthYear": 2025,
+    "inflation": 2.35,
+    "inflationYear": 2025,
+    "lifeExpectancy": 70.8,
+    "lifeExpectancyYear": 2024
   },
   "KI": {
     "source": "World Bank (WDI)",
@@ -1202,7 +1820,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2559,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.22,
+    "growthYear": 2025,
+    "inflation": 2.46,
+    "inflationYear": 2024,
+    "lifeExpectancy": 66.6,
+    "lifeExpectancyYear": 2024
   },
   "KM": {
     "source": "World Bank (WDI)",
@@ -1212,7 +1836,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2056,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.75,
+    "growthYear": 2025,
+    "inflation": 3.25,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67,
+    "lifeExpectancyYear": 2024
   },
   "KN": {
     "source": "World Bank (WDI)",
@@ -1222,13 +1852,21 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 25223,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.69,
+    "growthYear": 2025,
+    "inflation": 3.56,
+    "inflationYear": 2023,
+    "lifeExpectancy": 72.3,
+    "lifeExpectancyYear": 2024
   },
   "KP": {
     "source": "World Bank (WDI)",
     "population": 26571036,
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
+    "lifeExpectancy": 73.7,
+    "lifeExpectancyYear": 2024,
     "nominal": 29500000000,
     "year": 2023,
     "perCapita": 1128,
@@ -1242,7 +1880,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 36227,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.01,
+    "growthYear": 2025,
+    "inflation": 2.12,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.6,
+    "lifeExpectancyYear": 2024
   },
   "KW": {
     "source": "World Bank (WDI)",
@@ -1252,7 +1896,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 32312,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.73,
+    "growthYear": 2025,
+    "inflation": 2.36,
+    "inflationYear": 2025,
+    "lifeExpectancy": 84.6,
+    "lifeExpectancyYear": 2024
   },
   "KY": {
     "source": "World Bank (WDI)",
@@ -1262,7 +1912,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 104293,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 3.76,
+    "growthYear": 2024,
+    "inflation": -0.63,
+    "inflationYear": 2016,
+    "lifeExpectancy": 80.5,
+    "lifeExpectancyYear": 2024
   },
   "KZ": {
     "source": "World Bank (WDI)",
@@ -1272,7 +1928,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14692,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.5,
+    "growthYear": 2025,
+    "inflation": 11.39,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.5,
+    "lifeExpectancyYear": 2024
   },
   "LA": {
     "source": "World Bank (WDI)",
@@ -1282,7 +1944,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2325,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.54,
+    "growthYear": 2025,
+    "inflation": 7.74,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.2,
+    "lifeExpectancyYear": 2024
   },
   "LB": {
     "source": "World Bank (WDI)",
@@ -1292,7 +1960,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4473,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": -7.08,
+    "growthYear": 2024,
+    "inflation": 14.6,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "LC": {
     "source": "World Bank (WDI)",
@@ -1302,7 +1976,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14746,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -0.57,
+    "growthYear": 2025,
+    "inflation": 2.03,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.8,
+    "lifeExpectancyYear": 2024
   },
   "LI": {
     "source": "World Bank (WDI)",
@@ -1312,7 +1992,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 220167,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": -1.16,
+    "growthYear": 2009,
+    "lifeExpectancy": 84.2,
+    "lifeExpectancyYear": 2024
   },
   "LK": {
     "source": "World Bank (WDI)",
@@ -1322,7 +2006,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5002,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.95,
+    "growthYear": 2025,
+    "inflation": -4.76,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.7,
+    "lifeExpectancyYear": 2024
   },
   "LR": {
     "source": "World Bank (WDI)",
@@ -1332,7 +2022,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 915,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.02,
+    "growthYear": 2025,
+    "inflation": 8.32,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.3,
+    "lifeExpectancyYear": 2024
   },
   "LS": {
     "source": "World Bank (WDI)",
@@ -1342,7 +2038,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1089,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.98,
+    "growthYear": 2025,
+    "inflation": 4.27,
+    "inflationYear": 2025,
+    "lifeExpectancy": 57.8,
+    "lifeExpectancyYear": 2024
   },
   "LT": {
     "source": "World Bank (WDI)",
@@ -1352,7 +2054,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 32959,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.92,
+    "growthYear": 2025,
+    "inflation": 3.79,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.2,
+    "lifeExpectancyYear": 2024
   },
   "LU": {
     "source": "World Bank (WDI)",
@@ -1362,7 +2070,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 147252,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.64,
+    "growthYear": 2025,
+    "inflation": 2.26,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.2,
+    "lifeExpectancyYear": 2024
   },
   "LV": {
     "source": "World Bank (WDI)",
@@ -1372,7 +2086,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 26312,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.14,
+    "growthYear": 2025,
+    "inflation": 3.75,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.4,
+    "lifeExpectancyYear": 2024
   },
   "LY": {
     "source": "World Bank (WDI)",
@@ -1382,7 +2102,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6449,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 13.37,
+    "growthYear": 2025,
+    "inflation": 1.84,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.1,
+    "lifeExpectancyYear": 2024
   },
   "MA": {
     "source": "World Bank (WDI)",
@@ -1392,7 +2118,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4672,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.6,
+    "growthYear": 2025,
+    "inflation": 0.7,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.5,
+    "lifeExpectancyYear": 2024
   },
   "MC": {
     "source": "World Bank (WDI)",
@@ -1402,7 +2134,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 288002,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 8.51,
+    "growthYear": 2024,
+    "lifeExpectancy": 86.5,
+    "lifeExpectancyYear": 2024
   },
   "MD": {
     "source": "World Bank (WDI)",
@@ -1412,7 +2148,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8622,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.42,
+    "growthYear": 2025,
+    "inflation": 7.76,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.3,
+    "lifeExpectancyYear": 2024
   },
   "ME": {
     "source": "World Bank (WDI)",
@@ -1422,7 +2164,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14817,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.74,
+    "growthYear": 2025,
+    "inflation": 3.9,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "MF": {
     "source": "World Bank (WDI)",
@@ -1432,7 +2180,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 21668,
-    "perCapitaYear": 2021
+    "perCapitaYear": 2021,
+    "growth": 4.9,
+    "growthYear": 2021,
+    "lifeExpectancy": 80.4,
+    "lifeExpectancyYear": 2024
   },
   "MG": {
     "source": "World Bank (WDI)",
@@ -1442,7 +2194,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 599,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3,
+    "growthYear": 2025,
+    "inflation": 8.05,
+    "inflationYear": 2025,
+    "lifeExpectancy": 63.8,
+    "lifeExpectancyYear": 2024
   },
   "MH": {
     "source": "World Bank (WDI)",
@@ -1452,7 +2210,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8489,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.28,
+    "growthYear": 2025,
+    "lifeExpectancy": 67.1,
+    "lifeExpectancyYear": 2024
   },
   "MK": {
     "source": "World Bank (WDI)",
@@ -1462,7 +2224,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10490,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.49,
+    "growthYear": 2025,
+    "inflation": 4.07,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.6,
+    "lifeExpectancyYear": 2024
   },
   "ML": {
     "source": "World Bank (WDI)",
@@ -1472,7 +2240,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1193,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.6,
+    "growthYear": 2025,
+    "inflation": 3.28,
+    "inflationYear": 2025,
+    "lifeExpectancy": 60.7,
+    "lifeExpectancyYear": 2024
   },
   "MM": {
     "source": "World Bank (WDI)",
@@ -1482,7 +2256,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1489,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -2.01,
+    "growthYear": 2025,
+    "inflation": 8.83,
+    "inflationYear": 2019,
+    "lifeExpectancy": 67.1,
+    "lifeExpectancyYear": 2024
   },
   "MN": {
     "source": "World Bank (WDI)",
@@ -1492,7 +2272,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7108,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.84,
+    "growthYear": 2025,
+    "inflation": 8.61,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.4,
+    "lifeExpectancyYear": 2024
   },
   "MO": {
     "source": "World Bank (WDI)",
@@ -1502,7 +2288,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 75902,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.67,
+    "growthYear": 2025,
+    "inflation": 0.33,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.3,
+    "lifeExpectancyYear": 2024
   },
   "MP": {
     "source": "World Bank (WDI)",
@@ -1512,7 +2304,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 23786,
-    "perCapitaYear": 2022
+    "perCapitaYear": 2022,
+    "growth": 16.64,
+    "growthYear": 2022,
+    "lifeExpectancy": 78.9,
+    "lifeExpectancyYear": 2024
   },
   "MQ": {
     "population": 339897,
@@ -1527,7 +2323,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2198,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.03,
+    "growthYear": 2025,
+    "inflation": 1.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68.7,
+    "lifeExpectancyYear": 2024
   },
   "MS": {
     "nominal": 75000000,
@@ -1547,7 +2349,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 47907,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.96,
+    "growthYear": 2025,
+    "inflation": 2.36,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83,
+    "lifeExpectancyYear": 2024
   },
   "MU": {
     "source": "World Bank (WDI)",
@@ -1557,7 +2365,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 12991,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.15,
+    "growthYear": 2025,
+    "inflation": 3.67,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.8,
+    "lifeExpectancyYear": 2024
   },
   "MV": {
     "source": "World Bank (WDI)",
@@ -1567,7 +2381,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14615,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.31,
+    "growthYear": 2025,
+    "inflation": 4.01,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.3,
+    "lifeExpectancyYear": 2024
   },
   "MW": {
     "source": "World Bank (WDI)",
@@ -1577,7 +2397,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 672,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.89,
+    "growthYear": 2025,
+    "inflation": 28.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.6,
+    "lifeExpectancyYear": 2024
   },
   "MX": {
     "source": "World Bank (WDI)",
@@ -1587,7 +2413,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 13889,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.56,
+    "growthYear": 2025,
+    "inflation": 3.81,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.3,
+    "lifeExpectancyYear": 2024
   },
   "MY": {
     "source": "World Bank (WDI)",
@@ -1597,7 +2429,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 13125,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.17,
+    "growthYear": 2025,
+    "inflation": 1.38,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.8,
+    "lifeExpectancyYear": 2024
   },
   "MZ": {
     "source": "World Bank (WDI)",
@@ -1607,7 +2445,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 627,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -0.52,
+    "growthYear": 2025,
+    "inflation": 4.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 63.8,
+    "lifeExpectancyYear": 2024
   },
   "NA": {
     "source": "World Bank (WDI)",
@@ -1617,7 +2461,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4876,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.73,
+    "growthYear": 2025,
+    "inflation": 3.51,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.5,
+    "lifeExpectancyYear": 2024
   },
   "NC": {
     "source": "World Bank (WDI)",
@@ -1627,7 +2477,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 29213,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": -13.5,
+    "growthYear": 2024,
+    "inflation": 0.58,
+    "inflationYear": 2016,
+    "lifeExpectancy": 78.9,
+    "lifeExpectancyYear": 2024
   },
   "NE": {
     "source": "World Bank (WDI)",
@@ -1637,7 +2493,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 775,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.01,
+    "growthYear": 2025,
+    "inflation": -4.45,
+    "inflationYear": 2025,
+    "lifeExpectancy": 61.4,
+    "lifeExpectancyYear": 2024
   },
   "NF": {
     "population": 2188,
@@ -1652,7 +2514,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1224,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.01,
+    "growthYear": 2025,
+    "inflation": 23.01,
+    "inflationYear": 2025,
+    "lifeExpectancy": 54.6,
+    "lifeExpectancyYear": 2024
   },
   "NI": {
     "source": "World Bank (WDI)",
@@ -1662,7 +2530,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3173,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.92,
+    "growthYear": 2025,
+    "inflation": 2.08,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.1,
+    "lifeExpectancyYear": 2024
   },
   "NL": {
     "source": "World Bank (WDI)",
@@ -1672,7 +2546,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 73684,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.78,
+    "growthYear": 2025,
+    "inflation": 3.26,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82,
+    "lifeExpectancyYear": 2024
   },
   "NO": {
     "source": "World Bank (WDI)",
@@ -1682,7 +2562,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 94594,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.09,
+    "growthYear": 2025,
+    "inflation": 3.06,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.2,
+    "lifeExpectancyYear": 2024
   },
   "NP": {
     "source": "World Bank (WDI)",
@@ -1692,7 +2578,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1536,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.43,
+    "growthYear": 2025,
+    "inflation": 2.65,
+    "inflationYear": 2025,
+    "lifeExpectancy": 70.6,
+    "lifeExpectancyYear": 2024
   },
   "NR": {
     "source": "World Bank (WDI)",
@@ -1702,7 +2594,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14640,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.14,
+    "growthYear": 2025,
+    "inflation": -0.12,
+    "inflationYear": 2012,
+    "lifeExpectancy": 62.3,
+    "lifeExpectancyYear": 2024
   },
   "NU": {
     "nominal": 35000000,
@@ -1722,7 +2620,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 49591,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.46,
+    "growthYear": 2025,
+    "inflation": 2.84,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82,
+    "lifeExpectancyYear": 2024
   },
   "OE": {
     "source": "World Bank (WDI)",
@@ -1732,7 +2636,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 51734,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.77,
+    "growthYear": 2025,
+    "inflation": 2.84,
+    "inflationYear": 2025,
+    "lifeExpectancy": 80.4,
+    "lifeExpectancyYear": 2024
   },
   "OM": {
     "source": "World Bank (WDI)",
@@ -1742,7 +2652,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 19947,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.4,
+    "growthYear": 2025,
+    "inflation": 0.97,
+    "inflationYear": 2025,
+    "lifeExpectancy": 80.2,
+    "lifeExpectancyYear": 2024
   },
   "PA": {
     "source": "World Bank (WDI)",
@@ -1752,7 +2668,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 19790,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.35,
+    "growthYear": 2025,
+    "inflation": -0.19,
+    "inflationYear": 2025,
+    "lifeExpectancy": 79.8,
+    "lifeExpectancyYear": 2024
   },
   "PE": {
     "source": "World Bank (WDI)",
@@ -1762,7 +2684,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 9684,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.43,
+    "growthYear": 2025,
+    "inflation": 1.53,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.9,
+    "lifeExpectancyYear": 2024
   },
   "PF": {
     "source": "World Bank (WDI)",
@@ -1772,7 +2700,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 22440,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 1.13,
+    "growthYear": 2024,
+    "lifeExpectancy": 84.2,
+    "lifeExpectancyYear": 2024
   },
   "PG": {
     "source": "World Bank (WDI)",
@@ -1782,7 +2714,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3020,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.64,
+    "growthYear": 2025,
+    "inflation": 4.42,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66.3,
+    "lifeExpectancyYear": 2024
   },
   "PH": {
     "source": "World Bank (WDI)",
@@ -1792,7 +2730,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4171,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.4,
+    "growthYear": 2025,
+    "inflation": 1.66,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.9,
+    "lifeExpectancyYear": 2024
   },
   "PK": {
     "source": "World Bank (WDI)",
@@ -1802,7 +2746,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1596,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.7,
+    "growthYear": 2025,
+    "inflation": 3.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.8,
+    "lifeExpectancyYear": 2024
   },
   "PL": {
     "source": "World Bank (WDI)",
@@ -1812,7 +2762,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 28420,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.57,
+    "growthYear": 2025,
+    "inflation": 3.81,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.4,
+    "lifeExpectancyYear": 2024
   },
   "PM": {
     "nominal": 280000000,
@@ -1837,7 +2793,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 40620,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.32,
+    "growthYear": 2025,
+    "lifeExpectancy": 81.9,
+    "lifeExpectancyYear": 2024
   },
   "PS": {
     "source": "World Bank (WDI)",
@@ -1847,7 +2807,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3171,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.34,
+    "growthYear": 2025,
+    "inflation": 9.81,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.2,
+    "lifeExpectancyYear": 2024
   },
   "PT": {
     "source": "World Bank (WDI)",
@@ -1857,7 +2823,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 32082,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.86,
+    "growthYear": 2025,
+    "inflation": 2.34,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.4,
+    "lifeExpectancyYear": 2024
   },
   "PW": {
     "source": "World Bank (WDI)",
@@ -1867,7 +2839,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 19532,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.29,
+    "growthYear": 2025,
+    "inflation": -0.42,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.4,
+    "lifeExpectancyYear": 2024
   },
   "PY": {
     "source": "World Bank (WDI)",
@@ -1877,7 +2855,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7027,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.64,
+    "growthYear": 2025,
+    "inflation": 4.04,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74,
+    "lifeExpectancyYear": 2024
   },
   "QA": {
     "source": "World Bank (WDI)",
@@ -1887,7 +2871,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 72525,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.9,
+    "growthYear": 2025,
+    "inflation": 1.27,
+    "inflationYear": 2024,
+    "lifeExpectancy": 82.5,
+    "lifeExpectancyYear": 2024
   },
   "RE": {
     "population": 896175,
@@ -1902,7 +2892,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 22538,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.68,
+    "growthYear": 2025,
+    "inflation": 7.19,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.5,
+    "lifeExpectancyYear": 2024
   },
   "RS": {
     "source": "World Bank (WDI)",
@@ -1912,7 +2908,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 15262,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.03,
+    "growthYear": 2025,
+    "inflation": 3.89,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyYear": 2024
   },
   "RU": {
     "source": "World Bank (WDI)",
@@ -1922,7 +2924,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 17547,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1,
+    "growthYear": 2025,
+    "inflation": 8.72,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.4,
+    "lifeExpectancyYear": 2024
   },
   "RW": {
     "source": "World Bank (WDI)",
@@ -1932,7 +2940,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1124,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 9.38,
+    "growthYear": 2025,
+    "inflation": 5.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68,
+    "lifeExpectancyYear": 2024
   },
   "S1": {
     "source": "World Bank (WDI)",
@@ -1942,7 +2956,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 16578,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.39,
+    "growthYear": 2025,
+    "inflation": 2.25,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.1,
+    "lifeExpectancyYear": 2024
   },
   "S2": {
     "source": "World Bank (WDI)",
@@ -1952,7 +2972,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4720,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.32,
+    "growthYear": 2025,
+    "inflation": 1.43,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.4,
+    "lifeExpectancyYear": 2024
   },
   "S3": {
     "source": "World Bank (WDI)",
@@ -1962,7 +2988,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 20880,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.98,
+    "growthYear": 2025,
+    "inflation": 1.22,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.3,
+    "lifeExpectancyYear": 2024
   },
   "S4": {
     "source": "World Bank (WDI)",
@@ -1972,7 +3004,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 17540,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.88,
+    "growthYear": 2025,
+    "inflation": 2.81,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.8,
+    "lifeExpectancyYear": 2024
   },
   "SA": {
     "source": "World Bank (WDI)",
@@ -1982,7 +3020,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 34537,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.5,
+    "growthYear": 2025,
+    "inflation": 2.08,
+    "inflationYear": 2025,
+    "lifeExpectancy": 79,
+    "lifeExpectancyYear": 2024
   },
   "SB": {
     "source": "World Bank (WDI)",
@@ -1992,7 +3036,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2086,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.62,
+    "growthYear": 2025,
+    "inflation": 3.36,
+    "inflationYear": 2025,
+    "lifeExpectancy": 70.7,
+    "lifeExpectancyYear": 2024
   },
   "SC": {
     "source": "World Bank (WDI)",
@@ -2002,7 +3052,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 19449,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.8,
+    "growthYear": 2025,
+    "inflation": 0.3,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.3,
+    "lifeExpectancyYear": 2024
   },
   "SD": {
     "source": "World Bank (WDI)",
@@ -2012,7 +3068,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1165,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.06,
+    "growthYear": 2025,
+    "inflation": 138.81,
+    "inflationYear": 2022,
+    "lifeExpectancy": 66.5,
+    "lifeExpectancyYear": 2024
   },
   "SE": {
     "source": "World Bank (WDI)",
@@ -2022,7 +3084,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 63133,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.54,
+    "growthYear": 2025,
+    "inflation": 0.68,
+    "inflationYear": 2025,
+    "lifeExpectancy": 84.1,
+    "lifeExpectancyYear": 2024
   },
   "SG": {
     "source": "World Bank (WDI)",
@@ -2032,7 +3100,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 98814,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.03,
+    "growthYear": 2025,
+    "inflation": 0.9,
+    "inflationYear": 2025,
+    "lifeExpectancy": 83.3,
+    "lifeExpectancyYear": 2024
   },
   "SH": {
     "nominal": 40000000,
@@ -2052,7 +3126,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 37376,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.06,
+    "growthYear": 2025,
+    "inflation": 2.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.3,
+    "lifeExpectancyYear": 2024
   },
   "SJ": {
     "population": 0,
@@ -2067,7 +3147,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 28544,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 0.81,
+    "growthYear": 2025,
+    "inflation": 4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.4,
+    "lifeExpectancyYear": 2024
   },
   "SL": {
     "source": "World Bank (WDI)",
@@ -2077,7 +3163,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 846,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.61,
+    "growthYear": 2025,
+    "inflation": 7.49,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62,
+    "lifeExpectancyYear": 2024
   },
   "SM": {
     "source": "World Bank (WDI)",
@@ -2087,7 +3179,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 59871,
-    "perCapitaYear": 2023
+    "perCapitaYear": 2023,
+    "growth": 0.4,
+    "growthYear": 2023,
+    "inflation": 2.3,
+    "inflationYear": 2025,
+    "lifeExpectancy": 85.8,
+    "lifeExpectancyYear": 2024
   },
   "SN": {
     "source": "World Bank (WDI)",
@@ -2097,7 +3195,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1955,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.68,
+    "growthYear": 2025,
+    "inflation": 1.46,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68.9,
+    "lifeExpectancyYear": 2024
   },
   "SO": {
     "source": "World Bank (WDI)",
@@ -2107,7 +3211,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 661,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.99,
+    "growthYear": 2025,
+    "lifeExpectancy": 59,
+    "lifeExpectancyYear": 2024
   },
   "SR": {
     "source": "World Bank (WDI)",
@@ -2117,7 +3225,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7070,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.79,
+    "growthYear": 2025,
+    "inflation": 9.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.8,
+    "lifeExpectancyYear": 2024
   },
   "SS": {
     "source": "World Bank (WDI)",
@@ -2127,7 +3241,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1080,
-    "perCapitaYear": 2015
+    "perCapitaYear": 2015,
+    "growth": -10.79,
+    "growthYear": 2015,
+    "inflation": 91.44,
+    "inflationYear": 2024,
+    "lifeExpectancy": 57.7,
+    "lifeExpectancyYear": 2024
   },
   "ST": {
     "source": "World Bank (WDI)",
@@ -2137,7 +3257,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4084,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.03,
+    "growthYear": 2025,
+    "inflation": 11.05,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.9,
+    "lifeExpectancyYear": 2024
   },
   "SV": {
     "source": "World Bank (WDI)",
@@ -2147,7 +3273,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5767,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.91,
+    "growthYear": 2025,
+    "inflation": 0.26,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.3,
+    "lifeExpectancyYear": 2024
   },
   "SX": {
     "source": "World Bank (WDI)",
@@ -2157,7 +3289,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 42978,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.4,
+    "growthYear": 2025,
+    "inflation": 2.19,
+    "inflationYear": 2017,
+    "lifeExpectancy": 76.5,
+    "lifeExpectancyYear": 2024
   },
   "SY": {
     "source": "World Bank (WDI)",
@@ -2167,7 +3305,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1057,
-    "perCapitaYear": 2022
+    "perCapitaYear": 2022,
+    "growth": -0.2,
+    "growthYear": 2022,
+    "inflation": 13.42,
+    "inflationYear": 2019,
+    "lifeExpectancy": 72.6,
+    "lifeExpectancyYear": 2024
   },
   "SZ": {
     "source": "World Bank (WDI)",
@@ -2177,7 +3321,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4108,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.19,
+    "growthYear": 2025,
+    "inflation": 2.6,
+    "inflationYear": 2019,
+    "lifeExpectancy": 64.3,
+    "lifeExpectancyYear": 2024
   },
   "T2": {
     "source": "World Bank (WDI)",
@@ -2187,7 +3337,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10823,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.36,
+    "growthYear": 2025,
+    "inflation": 2.31,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.7,
+    "lifeExpectancyYear": 2024
   },
   "T3": {
     "source": "World Bank (WDI)",
@@ -2197,7 +3353,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2827,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.98,
+    "growthYear": 2025,
+    "inflation": 1.84,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.5,
+    "lifeExpectancyYear": 2024
   },
   "T4": {
     "source": "World Bank (WDI)",
@@ -2207,7 +3369,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10966,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.94,
+    "growthYear": 2025,
+    "inflation": 1.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyYear": 2024
   },
   "T5": {
     "source": "World Bank (WDI)",
@@ -2217,7 +3385,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2705,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.12,
+    "growthYear": 2025,
+    "inflation": 3.1,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.6,
+    "lifeExpectancyYear": 2024
   },
   "T6": {
     "source": "World Bank (WDI)",
@@ -2227,7 +3401,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1673,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.14,
+    "growthYear": 2025,
+    "inflation": 3.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.8,
+    "lifeExpectancyYear": 2024
   },
   "T7": {
     "source": "World Bank (WDI)",
@@ -2237,7 +3417,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 15300,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.84,
+    "growthYear": 2025,
+    "inflation": 5.1,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75,
+    "lifeExpectancyYear": 2024
   },
   "TC": {
     "source": "World Bank (WDI)",
@@ -2247,7 +3433,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 37507,
-    "perCapitaYear": 2024
+    "perCapitaYear": 2024,
+    "growth": 5.64,
+    "growthYear": 2024,
+    "lifeExpectancy": 78.2,
+    "lifeExpectancyYear": 2024
   },
   "TD": {
     "source": "World Bank (WDI)",
@@ -2257,7 +3447,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1022,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.59,
+    "growthYear": 2025,
+    "inflation": -3.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 55.2,
+    "lifeExpectancyYear": 2024
   },
   "TF": {
     "population": 0,
@@ -2272,7 +3468,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1384,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.31,
+    "growthYear": 2025,
+    "inflation": 0.43,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.9,
+    "lifeExpectancyYear": 2024
   },
   "TH": {
     "source": "World Bank (WDI)",
@@ -2282,7 +3484,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8057,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.44,
+    "growthYear": 2025,
+    "inflation": -0.13,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.6,
+    "lifeExpectancyYear": 2024
   },
   "TJ": {
     "source": "World Bank (WDI)",
@@ -2292,7 +3500,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1637,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 8.4,
+    "growthYear": 2025,
+    "inflation": 6,
+    "inflationYear": 2016,
+    "lifeExpectancy": 71.9,
+    "lifeExpectancyYear": 2024
   },
   "TK": {
     "nominal": 15000000,
@@ -2312,7 +3526,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1341,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.98,
+    "growthYear": 2025,
+    "inflation": 0.43,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.9,
+    "lifeExpectancyYear": 2024
   },
   "TM": {
     "source": "World Bank (WDI)",
@@ -2322,7 +3542,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6540,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.3,
+    "growthYear": 2025,
+    "lifeExpectancy": 70.2,
+    "lifeExpectancyYear": 2024
   },
   "TN": {
     "source": "World Bank (WDI)",
@@ -2332,7 +3556,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4657,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.49,
+    "growthYear": 2025,
+    "inflation": 5.15,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.7,
+    "lifeExpectancyYear": 2024
   },
   "TO": {
     "source": "World Bank (WDI)",
@@ -2342,7 +3572,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6547,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.8,
+    "growthYear": 2025,
+    "inflation": 5.59,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.1,
+    "lifeExpectancyYear": 2024
   },
   "TR": {
     "source": "World Bank (WDI)",
@@ -2352,7 +3588,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 18599,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.6,
+    "growthYear": 2025,
+    "inflation": 34.88,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.4,
+    "lifeExpectancyYear": 2024
   },
   "TT": {
     "source": "World Bank (WDI)",
@@ -2362,7 +3604,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 18967,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": -0.79,
+    "growthYear": 2025,
+    "inflation": 0.99,
+    "inflationYear": 2025,
+    "lifeExpectancy": 73.6,
+    "lifeExpectancyYear": 2024
   },
   "TV": {
     "source": "World Bank (WDI)",
@@ -2372,7 +3620,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6041,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.64,
+    "growthYear": 2025,
+    "inflation": 0.5,
+    "inflationYear": 2011,
+    "lifeExpectancy": 67.3,
+    "lifeExpectancyYear": 2024
   },
   "TW": {
     "nominal": 790728000000,
@@ -2381,6 +3635,12 @@
     "populationYear": 2024,
     "perCapita": 33763,
     "perCapitaYear": 2024,
+    "growth": 3.1,
+    "growthYear": 2024,
+    "inflation": 2.1,
+    "inflationYear": 2024,
+    "lifeExpectancy": 80.8,
+    "lifeExpectancyYear": 2023,
     "source": "IMF World Economic Outlook / DGBAS",
     "populationSource": "IMF World Economic Outlook / DGBAS"
   },
@@ -2392,7 +3652,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1319,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.85,
+    "growthYear": 2025,
+    "inflation": 3.33,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.2,
+    "lifeExpectancyYear": 2024
   },
   "UA": {
     "source": "World Bank (WDI)",
@@ -2402,7 +3668,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5866,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.82,
+    "growthYear": 2025,
+    "inflation": 12.73,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.7,
+    "lifeExpectancyYear": 2024
   },
   "UG": {
     "source": "World Bank (WDI)",
@@ -2412,7 +3684,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1206,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 6.33,
+    "growthYear": 2025,
+    "inflation": 3.58,
+    "inflationYear": 2025,
+    "lifeExpectancy": 68.5,
+    "lifeExpectancyYear": 2024
   },
   "UM": {
     "population": 0,
@@ -2427,7 +3705,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 90027,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.16,
+    "growthYear": 2025,
+    "inflation": 2.95,
+    "inflationYear": 2024,
+    "lifeExpectancy": 78.9,
+    "lifeExpectancyYear": 2024
   },
   "UY": {
     "source": "World Bank (WDI)",
@@ -2437,7 +3721,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 25216,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.78,
+    "growthYear": 2025,
+    "inflation": 4.65,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.3,
+    "lifeExpectancyYear": 2024
   },
   "UZ": {
     "source": "World Bank (WDI)",
@@ -2447,7 +3737,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3968,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 7.7,
+    "growthYear": 2025,
+    "inflation": 8.8,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.5,
+    "lifeExpectancyYear": 2024
   },
   "V1": {
     "source": "World Bank (WDI)",
@@ -2457,7 +3753,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1470,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.57,
+    "growthYear": 2025,
+    "inflation": 3.28,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.4,
+    "lifeExpectancyYear": 2024
   },
   "V2": {
     "source": "World Bank (WDI)",
@@ -2467,7 +3769,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4566,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.37,
+    "growthYear": 2025,
+    "inflation": 3.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72,
+    "lifeExpectancyYear": 2024
   },
   "V3": {
     "source": "World Bank (WDI)",
@@ -2477,7 +3785,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 13677,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.45,
+    "growthYear": 2025,
+    "inflation": 3.75,
+    "inflationYear": 2025,
+    "lifeExpectancy": 77.2,
+    "lifeExpectancyYear": 2024
   },
   "V4": {
     "source": "World Bank (WDI)",
@@ -2487,7 +3801,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 59490,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.65,
+    "growthYear": 2025,
+    "inflation": 2.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 81.1,
+    "lifeExpectancyYear": 2024
   },
   "VA": {
     "nominal": 25000000,
@@ -2507,7 +3827,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 12562,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.39,
+    "growthYear": 2025,
+    "inflation": 0.82,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.4,
+    "lifeExpectancyYear": 2024
   },
   "VE": {
     "source": "World Bank (WDI)",
@@ -2517,13 +3843,21 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3495,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.57,
+    "growthYear": 2025,
+    "inflation": 254.95,
+    "inflationYear": 2016,
+    "lifeExpectancy": 72.7,
+    "lifeExpectancyYear": 2024
   },
   "VG": {
     "source": "World Bank (WDI)",
     "population": 39732,
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
+    "lifeExpectancy": 77.4,
+    "lifeExpectancyYear": 2024,
     "nominal": 1450000000,
     "year": 2023,
     "perCapita": 46318,
@@ -2537,7 +3871,11 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 44321,
-    "perCapitaYear": 2022
+    "perCapitaYear": 2022,
+    "growth": -1.31,
+    "growthYear": 2022,
+    "lifeExpectancy": 80.8,
+    "lifeExpectancyYear": 2024
   },
   "VN": {
     "source": "World Bank (WDI)",
@@ -2547,7 +3885,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5066,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 8.02,
+    "growthYear": 2025,
+    "inflation": 3.31,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.7,
+    "lifeExpectancyYear": 2024
   },
   "VU": {
     "source": "World Bank (WDI)",
@@ -2557,7 +3901,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 4039,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.05,
+    "growthYear": 2025,
+    "inflation": 0.66,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.7,
+    "lifeExpectancyYear": 2024
   },
   "WF": {
     "nominal": 200000000,
@@ -2577,7 +3927,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 5873,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.2,
+    "growthYear": 2025,
+    "inflation": 2.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.8,
+    "lifeExpectancyYear": 2024
   },
   "XC": {
     "source": "World Bank (WDI)",
@@ -2587,7 +3943,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 50214,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.41,
+    "growthYear": 2025,
+    "inflation": 2.47,
+    "inflationYear": 2025,
+    "lifeExpectancy": 82.2,
+    "lifeExpectancyYear": 2024
   },
   "XD": {
     "source": "World Bank (WDI)",
@@ -2597,7 +3959,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 53997,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.91,
+    "growthYear": 2025,
+    "inflation": 2.35,
+    "inflationYear": 2025,
+    "lifeExpectancy": 80.4,
+    "lifeExpectancyYear": 2024
   },
   "XE": {
     "source": "World Bank (WDI)",
@@ -2607,7 +3975,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1332,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.83,
+    "growthYear": 2025,
+    "inflation": 3.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 64.9,
+    "lifeExpectancyYear": 2024
   },
   "XF": {
     "source": "World Bank (WDI)",
@@ -2617,7 +3991,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 8599,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.31,
+    "growthYear": 2025,
+    "inflation": 3.68,
+    "inflationYear": 2025,
+    "lifeExpectancy": 74.7,
+    "lifeExpectancyYear": 2024
   },
   "XG": {
     "source": "World Bank (WDI)",
@@ -2627,7 +4007,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1608,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.73,
+    "growthYear": 2025,
+    "inflation": 3.36,
+    "inflationYear": 2025,
+    "lifeExpectancy": 65.6,
+    "lifeExpectancyYear": 2024
   },
   "XH": {
     "source": "World Bank (WDI)",
@@ -2637,7 +4023,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1841,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.58,
+    "growthYear": 2025,
+    "inflation": 2.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.6,
+    "lifeExpectancyYear": 2024
   },
   "XI": {
     "source": "World Bank (WDI)",
@@ -2647,7 +4039,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1484,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.87,
+    "growthYear": 2025,
+    "inflation": 3.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 67.2,
+    "lifeExpectancyYear": 2024
   },
   "XJ": {
     "source": "World Bank (WDI)",
@@ -2657,7 +4055,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10407,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.21,
+    "growthYear": 2025,
+    "inflation": 3.17,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.5,
+    "lifeExpectancyYear": 2024
   },
   "XK": {
     "source": "World Bank (WDI)",
@@ -2667,7 +4071,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 7899,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.59,
+    "growthYear": 2025,
+    "inflation": 3.86,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.2,
+    "lifeExpectancyYear": 2024
   },
   "XL": {
     "source": "World Bank (WDI)",
@@ -2677,7 +4087,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1362,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.3,
+    "growthYear": 2025,
+    "inflation": 3.36,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66.7,
+    "lifeExpectancyYear": 2024
   },
   "XM": {
     "source": "World Bank (WDI)",
@@ -2687,7 +4103,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 837,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.34,
+    "growthYear": 2025,
+    "inflation": 4.37,
+    "inflationYear": 2025,
+    "lifeExpectancy": 65.2,
+    "lifeExpectancyYear": 2024
   },
   "XN": {
     "source": "World Bank (WDI)",
@@ -2697,7 +4119,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2481,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 5.96,
+    "growthYear": 2025,
+    "inflation": 3.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 69.5,
+    "lifeExpectancyYear": 2024
   },
   "XO": {
     "source": "World Bank (WDI)",
@@ -2707,7 +4135,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6107,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.53,
+    "growthYear": 2025,
+    "inflation": 3.55,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72,
+    "lifeExpectancyYear": 2024
   },
   "XP": {
     "source": "World Bank (WDI)",
@@ -2717,7 +4151,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6779,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.52,
+    "growthYear": 2025,
+    "inflation": 3.46,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.9,
+    "lifeExpectancyYear": 2024
   },
   "XQ": {
     "source": "World Bank (WDI)",
@@ -2727,7 +4167,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 2829,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2,
+    "growthYear": 2025,
+    "inflation": 2.69,
+    "inflationYear": 2025,
+    "lifeExpectancy": 71.5,
+    "lifeExpectancyYear": 2024
   },
   "XT": {
     "source": "World Bank (WDI)",
@@ -2737,7 +4183,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 10890,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.21,
+    "growthYear": 2025,
+    "inflation": 3.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76,
+    "lifeExpectancyYear": 2024
   },
   "XU": {
     "source": "World Bank (WDI)",
@@ -2747,7 +4199,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 86308,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.13,
+    "growthYear": 2025,
+    "inflation": 2.67,
+    "inflationYear": 2024,
+    "lifeExpectancy": 79.2,
+    "lifeExpectancyYear": 2024
   },
   "YE": {
     "source": "World Bank (WDI)",
@@ -2757,7 +4215,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 634,
-    "perCapitaYear": 2018
+    "perCapitaYear": 2018,
+    "growth": 0.75,
+    "growthYear": 2018,
+    "inflation": 8.1,
+    "inflationYear": 2014,
+    "lifeExpectancy": 69.4,
+    "lifeExpectancyYear": 2024
   },
   "YT": {
     "population": 337011,
@@ -2772,7 +4236,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 14077,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4,
+    "growthYear": 2025,
+    "inflation": 1.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 76.7,
+    "lifeExpectancyYear": 2024
   },
   "Z7": {
     "source": "World Bank (WDI)",
@@ -2782,7 +4252,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 34603,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.7,
+    "growthYear": 2025,
+    "inflation": 3.75,
+    "inflationYear": 2025,
+    "lifeExpectancy": 78.6,
+    "lifeExpectancyYear": 2024
   },
   "ZA": {
     "source": "World Bank (WDI)",
@@ -2792,7 +4268,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6598,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 1.11,
+    "growthYear": 2025,
+    "inflation": 3.21,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66.3,
+    "lifeExpectancyYear": 2024
   },
   "ZF": {
     "source": "World Bank (WDI)",
@@ -2802,7 +4284,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1671,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.14,
+    "growthYear": 2025,
+    "inflation": 3.46,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.8,
+    "lifeExpectancyYear": 2024
   },
   "ZG": {
     "source": "World Bank (WDI)",
@@ -2812,7 +4300,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1673,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.14,
+    "growthYear": 2025,
+    "inflation": 3.4,
+    "inflationYear": 2025,
+    "lifeExpectancy": 62.8,
+    "lifeExpectancyYear": 2024
   },
   "ZH": {
     "source": "World Bank (WDI)",
@@ -2822,7 +4316,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1722,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.74,
+    "growthYear": 2025,
+    "inflation": 4.27,
+    "inflationYear": 2025,
+    "lifeExpectancy": 65.3,
+    "lifeExpectancyYear": 2024
   },
   "ZI": {
     "source": "World Bank (WDI)",
@@ -2832,7 +4332,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1600,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.6,
+    "growthYear": 2025,
+    "inflation": 1.66,
+    "inflationYear": 2025,
+    "lifeExpectancy": 59,
+    "lifeExpectancyYear": 2024
   },
   "ZJ": {
     "source": "World Bank (WDI)",
@@ -2842,7 +4348,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 11095,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.32,
+    "growthYear": 2025,
+    "inflation": 2.31,
+    "inflationYear": 2025,
+    "lifeExpectancy": 75.8,
+    "lifeExpectancyYear": 2024
   },
   "ZM": {
     "source": "World Bank (WDI)",
@@ -2852,7 +4364,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 1318,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 3.76,
+    "growthYear": 2025,
+    "inflation": 13.91,
+    "inflationYear": 2025,
+    "lifeExpectancy": 66.5,
+    "lifeExpectancyYear": 2024
   },
   "ZQ": {
     "source": "World Bank (WDI)",
@@ -2862,7 +4380,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6202,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 2.74,
+    "growthYear": 2025,
+    "inflation": 2.08,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.3,
+    "lifeExpectancyYear": 2024
   },
   "ZT": {
     "source": "World Bank (WDI)",
@@ -2872,7 +4396,13 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 6613,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 4.34,
+    "growthYear": 2025,
+    "inflation": 3.51,
+    "inflationYear": 2025,
+    "lifeExpectancy": 72.1,
+    "lifeExpectancyYear": 2024
   },
   "ZW": {
     "source": "World Bank (WDI)",
@@ -2882,6 +4412,12 @@
     "populationYear": 2025,
     "populationSource": "World Bank (WDI)",
     "perCapita": 3021,
-    "perCapitaYear": 2025
+    "perCapitaYear": 2025,
+    "growth": 8.11,
+    "growthYear": 2025,
+    "inflation": 104.71,
+    "inflationYear": 2022,
+    "lifeExpectancy": 63.1,
+    "lifeExpectancyYear": 2024
   }
 }

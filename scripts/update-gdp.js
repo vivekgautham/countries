@@ -10,6 +10,9 @@ const INDICATORS = {
   GDP_NOMINAL: "NY.GDP.MKTP.CD", // GDP in current USD
   POPULATION: "SP.POP.TOTL", // Total population
   GDP_PER_CAPITA: "NY.GDP.PCAP.CD", // GDP per capita in current USD
+  GDP_GROWTH: "NY.GDP.MKTP.KD.ZG", // Annual GDP growth (%)
+  INFLATION: "FP.CPI.TOTL.ZG", // Inflation, consumer prices (annual %)
+  LIFE_EXPECTANCY: "SP.DYN.LE00.IN", // Life expectancy at birth, total (years)
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -28,6 +31,12 @@ const SUPPLEMENTAL_DATA = {
     populationYear: 2024,
     perCapita: 33763,
     perCapitaYear: 2024,
+    growth: 3.1,
+    growthYear: 2024,
+    inflation: 2.1,
+    inflationYear: 2024,
+    lifeExpectancy: 80.8,
+    lifeExpectancyYear: 2023,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -222,15 +231,18 @@ function fetchIndicator(indicator) {
 }
 
 async function run() {
-  console.log("Fetching World Bank data for GDP, Population, and GDP per Capita in parallel...");
-  const [gdpList, popList, pcapList] = await Promise.all([
+  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, and Life Expectancy in parallel...");
+  const [gdpList, popList, pcapList, growthList, inflationList, lifeList] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
     fetchIndicator(INDICATORS.GDP_PER_CAPITA),
+    fetchIndicator(INDICATORS.GDP_GROWTH),
+    fetchIndicator(INDICATORS.INFLATION),
+    fetchIndicator(INDICATORS.LIFE_EXPECTANCY),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Population (${popList.length}), Per-Capita (${pcapList.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -296,7 +308,46 @@ async function run() {
     resultByCountry[code].perCapitaYear = parseInt(item.date, 10);
   }
 
-  // 4. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
+  // 4. Process GDP Growth
+  for (const item of growthList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].growth = Math.round(item.value * 100) / 100;
+    resultByCountry[code].growthYear = parseInt(item.date, 10);
+  }
+
+  // 5. Process Inflation
+  for (const item of inflationList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].inflation = Math.round(item.value * 100) / 100;
+    resultByCountry[code].inflationYear = parseInt(item.date, 10);
+  }
+
+  // 6. Process Life Expectancy
+  for (const item of lifeList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].lifeExpectancy = Math.round(item.value * 10) / 10;
+    resultByCountry[code].lifeExpectancyYear = parseInt(item.date, 10);
+  }
+
+  // 7. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
   for (const entry of Object.values(resultByCountry)) {
     if (!entry.perCapita && entry.nominal && entry.population && entry.population > 0) {
       entry.perCapita = Math.round(entry.nominal / entry.population);
@@ -304,7 +355,7 @@ async function run() {
     }
   }
 
-  // 5. Merge supplemental data for entities not covered by World Bank
+  // 8. Merge supplemental data for entities not covered by World Bank
   for (const [code, supp] of Object.entries(SUPPLEMENTAL_DATA)) {
     if (!resultByCountry[code]) {
       resultByCountry[code] = {
@@ -325,10 +376,22 @@ async function run() {
         resultByCountry[code].perCapita = supp.perCapita;
         resultByCountry[code].perCapitaYear = supp.perCapitaYear;
       }
+      if (resultByCountry[code].growth === undefined && supp.growth !== undefined) {
+        resultByCountry[code].growth = supp.growth;
+        resultByCountry[code].growthYear = supp.growthYear;
+      }
+      if (resultByCountry[code].inflation === undefined && supp.inflation !== undefined) {
+        resultByCountry[code].inflation = supp.inflation;
+        resultByCountry[code].inflationYear = supp.inflationYear;
+      }
+      if (resultByCountry[code].lifeExpectancy === undefined && supp.lifeExpectancy !== undefined) {
+        resultByCountry[code].lifeExpectancy = supp.lifeExpectancy;
+        resultByCountry[code].lifeExpectancyYear = supp.lifeExpectancyYear;
+      }
     }
   }
 
-  // 6. Fallback to existing country record population if World Bank does not cover the entity (e.g. overseas territories)
+  // 9. Fallback to existing country record population if World Bank does not cover the entity (e.g. overseas territories)
   for (const c of rawCountries) {
     if (c.code) {
       const code = c.code.toUpperCase();
@@ -345,9 +408,7 @@ async function run() {
     }
   }
 
-
   // Sort keys alphabetically
-
   const sortedData = Object.keys(resultByCountry)
     .sort()
     .reduce((acc, key) => {
@@ -356,7 +417,7 @@ async function run() {
     }, {});
 
   const totalCount = Object.keys(sortedData).length;
-  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(sortedData, null, 2), "utf-8");
+  fs.writeFileSync(OUTPUT_FILE, JSON.stringify(sortedData, null, 2) + "\n", "utf-8");
   console.log(`Successfully saved World Bank dataset for ${totalCount} countries to ${OUTPUT_FILE}`);
 }
 

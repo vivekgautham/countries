@@ -44,7 +44,10 @@ import { getTaxBadgeConfig } from "../utils/taxUtils";
 import {
   formatGdp,
   formatGdpFull,
+  formatGdpGrowth,
   formatGdpPerCapita,
+  formatInflation,
+  formatLifeExpectancy,
 } from "../utils/gdpUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
@@ -1228,6 +1231,16 @@ export default function CountryComparePage() {
                 },
               },
               {
+                label: "Life Expectancy",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.lifeExpectancy !== undefined
+                      ? `${formatLifeExpectancy(c.gdp.lifeExpectancy)}${c.gdp.lifeExpectancyYear ? ` (${c.gdp.lifeExpectancyYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
                 label: "Landlocked",
                 render: (c) => (
                   <Chip
@@ -1340,6 +1353,39 @@ export default function CountryComparePage() {
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
                     {c.gdp?.perCapita
                       ? `${formatGdpPerCapita(c.gdp.perCapita)} / person`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Real GDP Growth",
+                render: (c) => (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 700,
+                      color:
+                        c.gdp?.growth !== undefined
+                          ? c.gdp.growth > 0
+                            ? "success.light"
+                            : c.gdp.growth < 0
+                              ? "error.light"
+                              : "text.primary"
+                          : "text.secondary",
+                    }}
+                  >
+                    {c.gdp?.growth !== undefined
+                      ? `${formatGdpGrowth(c.gdp.growth)}${c.gdp.growthYear ? ` (${c.gdp.growthYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Inflation Rate (CPI)",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.inflation !== undefined
+                      ? `${formatInflation(c.gdp.inflation)}${c.gdp.inflationYear ? ` (${c.gdp.inflationYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),
