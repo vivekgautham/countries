@@ -47,6 +47,7 @@ import {
   formatGdpGrowth,
   formatGdpPerCapita,
   formatInflation,
+  formatInternetUsage,
   formatLifeExpectancy,
 } from "../utils/gdpUtils";
 
@@ -1236,6 +1237,16 @@ export default function CountryComparePage() {
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
                     {c.gdp?.lifeExpectancy !== undefined
                       ? `${formatLifeExpectancy(c.gdp.lifeExpectancy)}${c.gdp.lifeExpectancyYear ? ` (${c.gdp.lifeExpectancyYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Internet Adoption",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.internetUsers !== undefined
+                      ? `${formatInternetUsage(c.gdp.internetUsers)}${c.gdp.internetUsersYear ? ` (${c.gdp.internetUsersYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),

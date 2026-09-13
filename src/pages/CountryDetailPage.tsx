@@ -42,6 +42,7 @@ import {
   formatGdpGrowth,
   formatGdpPerCapita,
   formatInflation,
+  formatInternetUsage,
   formatLifeExpectancy,
   getGdpRank,
 } from "../utils/gdpUtils";
@@ -752,6 +753,24 @@ export default function CountryDetailPage() {
                         {formatLifeExpectancy(country.gdp.lifeExpectancy)}
                         {country.gdp.lifeExpectancyYear
                           ? ` (${country.gdp.lifeExpectancyYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.internetUsers !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌐 Internet Adoption
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatInternetUsage(country.gdp.internetUsers)}
+                        {country.gdp.internetUsersYear
+                          ? ` (${country.gdp.internetUsersYear})`
                           : ""}
                       </Typography>
                     </Stack>

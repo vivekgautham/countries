@@ -18,6 +18,8 @@ const gdpDataset = gdpDataRaw as Record<
     inflationYear?: number;
     lifeExpectancy?: number;
     lifeExpectancyYear?: number;
+    internetUsers?: number;
+    internetUsersYear?: number;
   }
 >;
 
@@ -119,8 +121,19 @@ export function formatLifeExpectancy(lifeExpectancy?: number): string {
 }
 
 /**
+ * Formats internet adoption / usage rate:
+ * e.g. "94.7%"
+ */
+export function formatInternetUsage(usage?: number): string {
+  if (usage === undefined || usage === null || isNaN(usage)) {
+    return "N/A";
+  }
+  return `${usage.toFixed(1)}%`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
- * GDP, population, GDP per capita, growth, inflation, and life expectancy indicators.
+ * GDP, population, GDP per capita, growth, inflation, life expectancy, and internet usage indicators.
  */
 export function getGdpInfo(
   countryCode?: string,
@@ -161,6 +174,8 @@ export function getGdpInfo(
     inflationYear: raw.inflationYear,
     lifeExpectancy: raw.lifeExpectancy,
     lifeExpectancyYear: raw.lifeExpectancyYear,
+    internetUsers: raw.internetUsers,
+    internetUsersYear: raw.internetUsersYear,
     formattedGrowth:
       raw.growth !== undefined ? formatGdpGrowth(raw.growth) : undefined,
     formattedInflation:
@@ -168,6 +183,10 @@ export function getGdpInfo(
     formattedLifeExpectancy:
       raw.lifeExpectancy !== undefined
         ? formatLifeExpectancy(raw.lifeExpectancy)
+        : undefined,
+    formattedInternetUsers:
+      raw.internetUsers !== undefined
+        ? formatInternetUsage(raw.internetUsers)
         : undefined,
   };
 }

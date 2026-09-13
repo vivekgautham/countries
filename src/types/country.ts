@@ -156,9 +156,12 @@ export interface GdpInfo {
   inflationYear?: number;
   lifeExpectancy?: number; // Life expectancy at birth in years
   lifeExpectancyYear?: number;
+  internetUsers?: number; // Individuals using the Internet (% of population)
+  internetUsersYear?: number;
   formattedGrowth?: string; // e.g. "+2.16%"
   formattedInflation?: string; // e.g. "2.95%"
   formattedLifeExpectancy?: string; // e.g. "78.9 yrs"
+  formattedInternetUsers?: string; // e.g. "94.7%"
 }
 
 export interface UnifiedCountry {

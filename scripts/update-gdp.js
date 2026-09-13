@@ -13,6 +13,7 @@ const INDICATORS = {
   GDP_GROWTH: "NY.GDP.MKTP.KD.ZG", // Annual GDP growth (%)
   INFLATION: "FP.CPI.TOTL.ZG", // Inflation, consumer prices (annual %)
   LIFE_EXPECTANCY: "SP.DYN.LE00.IN", // Life expectancy at birth, total (years)
+  INTERNET_USERS: "IT.NET.USER.ZS", // Individuals using the Internet (% of population)
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -37,6 +38,8 @@ const SUPPLEMENTAL_DATA = {
     inflationYear: 2024,
     lifeExpectancy: 80.8,
     lifeExpectancyYear: 2023,
+    internetUsers: 91.8,
+    internetUsersYear: 2024,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -231,18 +234,19 @@ function fetchIndicator(indicator) {
 }
 
 async function run() {
-  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, and Life Expectancy in parallel...");
-  const [gdpList, popList, pcapList, growthList, inflationList, lifeList] = await Promise.all([
+  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, and Internet Users in parallel...");
+  const [gdpList, popList, pcapList, growthList, inflationList, lifeList, internetList] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
     fetchIndicator(INDICATORS.GDP_PER_CAPITA),
     fetchIndicator(INDICATORS.GDP_GROWTH),
     fetchIndicator(INDICATORS.INFLATION),
     fetchIndicator(INDICATORS.LIFE_EXPECTANCY),
+    fetchIndicator(INDICATORS.INTERNET_USERS),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -347,7 +351,20 @@ async function run() {
     resultByCountry[code].lifeExpectancyYear = parseInt(item.date, 10);
   }
 
-  // 7. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
+  // 7. Process Internet Users (% of population)
+  for (const item of internetList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].internetUsers = Math.round(item.value * 10) / 10;
+    resultByCountry[code].internetUsersYear = parseInt(item.date, 10);
+  }
+
+  // 8. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
   for (const entry of Object.values(resultByCountry)) {
     if (!entry.perCapita && entry.nominal && entry.population && entry.population > 0) {
       entry.perCapita = Math.round(entry.nominal / entry.population);
@@ -355,7 +372,7 @@ async function run() {
     }
   }
 
-  // 8. Merge supplemental data for entities not covered by World Bank
+  // 9. Merge supplemental data for entities not covered by World Bank
   for (const [code, supp] of Object.entries(SUPPLEMENTAL_DATA)) {
     if (!resultByCountry[code]) {
       resultByCountry[code] = {
@@ -388,10 +405,14 @@ async function run() {
         resultByCountry[code].lifeExpectancy = supp.lifeExpectancy;
         resultByCountry[code].lifeExpectancyYear = supp.lifeExpectancyYear;
       }
+      if (resultByCountry[code].internetUsers === undefined && supp.internetUsers !== undefined) {
+        resultByCountry[code].internetUsers = supp.internetUsers;
+        resultByCountry[code].internetUsersYear = supp.internetUsersYear;
+      }
     }
   }
 
-  // 9. Fallback to existing country record population if World Bank does not cover the entity (e.g. overseas territories)
+  // 10. Fallback to existing country record population if World Bank does not cover the entity (e.g. overseas territories)
   for (const c of rawCountries) {
     if (c.code) {
       const code = c.code.toUpperCase();
