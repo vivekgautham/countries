@@ -35,7 +35,11 @@ import { UnifiedCountry } from "../types/country";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
-import { getG7BadgeConfig, getG20BadgeConfig } from "../utils/blocUtils";
+import {
+  getG7BadgeConfig,
+  getG20BadgeConfig,
+  getGCCBadgeConfig,
+} from "../utils/blocUtils";
 import {
   formatGdp,
   formatGdpFull,
@@ -181,6 +185,7 @@ export default function CountryDetailPage() {
   const taxBadge = getTaxBadgeConfig(country.tax);
   const g7Badge = getG7BadgeConfig();
   const g20Badge = getG20BadgeConfig(country.blocs?.isG20Guest);
+  const gccBadge = getGCCBadgeConfig();
   const gdpRank = useMemo(
     () => (country ? getGdpRank(countries, country.code) : null),
     [countries, country],
@@ -465,6 +470,31 @@ export default function CountryDetailPage() {
                               backgroundColor: g20Badge.backgroundColor,
                               border: `1px solid ${g20Badge.borderColor}`,
                               color: g20Badge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isGCC && (
+                        <Tooltip title={gccBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {gccBadge.icon}
+                              </span>
+                            }
+                            label={gccBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: gccBadge.backgroundColor,
+                              border: `1px solid ${gccBadge.borderColor}`,
+                              color: gccBadge.textColor,
                             }}
                           />
                         </Tooltip>
@@ -882,6 +912,18 @@ export default function CountryDetailPage() {
                         : country.blocs?.isG20Guest
                           ? "Permanent Guest Invitee"
                           : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🤝 GCC Membership
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isGCC ? "Yes (Member State)" : "No"}
                     </Typography>
                   </Stack>
                 </Stack>

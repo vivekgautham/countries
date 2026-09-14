@@ -136,6 +136,7 @@ export interface EconomicBlocs {
   isG20: boolean;
   isG20Guest?: boolean;
   g20Status: "member" | "permanent_guest" | "non_member";
+  isGCC?: boolean;
   statusLabel?: string;
 }
 

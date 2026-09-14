@@ -384,28 +384,6 @@ export default function CountryListPage() {
                   );
                 })}
               </Stack>
-
-              {/* Results Count & Filter Feedback */}
-              {!isLoading && filteredCountries.length > 0 && (
-                <Typography
-                  variant="caption"
-                  sx={{
-                    color: "text.secondary",
-                    fontWeight: 600,
-                    fontSize: "0.78rem",
-                    textAlign: "center",
-                    mt: 0.5,
-                  }}
-                >
-                  Showing {visibleCountries.length} of{" "}
-                  {filteredCountries.length}{" "}
-                  {filteredCountries.length === 1 ? "country" : "countries"}
-                  {selectedRegion !== "All" && ` • ${selectedRegion}`}
-                  {selectedTaxRegime !== "all" &&
-                    ` • ${TAX_FILTER_OPTIONS.find((t) => t.id === selectedTaxRegime)?.label}`}
-                  {searchTerm && ` • Matching "${searchTerm}"`}
-                </Typography>
-              )}
             </Stack>
           </Box>
         </Stack>
@@ -855,6 +833,38 @@ export default function CountryListPage() {
                                   backgroundColor: "rgba(245, 158, 11, 0.2)",
                                   color: "#fcd34d",
                                   border: "1px solid rgba(245, 158, 11, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isGCC && (
+                            <Tooltip
+                              title="Gulf Cooperation Council (GCC) Member State"
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🤝
+                                  </span>
+                                }
+                                label="GCC"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(16, 185, 129, 0.2)",
+                                  color: "#6ee7b7",
+                                  border: "1px solid rgba(16, 185, 129, 0.45)",
                                   borderRadius: 1,
                                   "& .MuiChip-label": { px: 0.5 },
                                 }}

@@ -47,6 +47,19 @@ export const G20_COUNTRY_CODES = new Set<string>([
  */
 export const G20_GUEST_CODES = new Set<string>(["ES"]);
 
+/**
+ * GCC (Gulf Cooperation Council) Sovereign Member States:
+ * Bahrain, Kuwait, Oman, Qatar, Saudi Arabia, United Arab Emirates.
+ */
+export const GCC_COUNTRY_CODES = new Set<string>([
+  "BH", // Bahrain
+  "KW", // Kuwait
+  "OM", // Oman
+  "QA", // Qatar
+  "SA", // Saudi Arabia (also G20)
+  "AE", // United Arab Emirates
+]);
+
 export function isG7Member(countryCode?: string): boolean {
   if (!countryCode) return false;
   return G7_COUNTRY_CODES.has(countryCode.toUpperCase());
@@ -62,11 +75,17 @@ export function isG20Guest(countryCode?: string): boolean {
   return G20_GUEST_CODES.has(countryCode.toUpperCase());
 }
 
+export function isGCCMember(countryCode?: string): boolean {
+  if (!countryCode) return false;
+  return GCC_COUNTRY_CODES.has(countryCode.toUpperCase());
+}
+
 export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
   if (!countryCode) {
     return {
       isG7: false,
       isG20: false,
+      isGCC: false,
       g20Status: "non_member",
     };
   }
@@ -75,6 +94,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
   const isG7 = G7_COUNTRY_CODES.has(code);
   const isG20 = G20_COUNTRY_CODES.has(code);
   const isGuest = G20_GUEST_CODES.has(code);
+  const isGCC = GCC_COUNTRY_CODES.has(code);
 
   let g20Status: "member" | "permanent_guest" | "non_member" = "non_member";
   if (isG20) {
@@ -96,6 +116,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
     isG7,
     isG20,
     isG20Guest: isGuest,
+    isGCC,
     g20Status,
     statusLabel,
   };
@@ -150,8 +171,21 @@ export function getG20BadgeConfig(isGuest = false): BlocBadgeConfig {
   };
 }
 
+export function getGCCBadgeConfig(): BlocBadgeConfig {
+  return {
+    label: "GCC Member",
+    shortLabel: "GCC",
+    icon: "🤝",
+    tooltip:
+      "Gulf Cooperation Council (GCC) Member State: Regional political and economic union of Arab states of the Persian Gulf",
+    backgroundColor: "rgba(16, 185, 129, 0.18)",
+    borderColor: "rgba(16, 185, 129, 0.45)",
+    textColor: "#6ee7b7",
+  };
+}
+
 /**
- * Checks if search query contains G7/G20 search terms.
+ * Checks if search query contains G7/G20/GCC search terms.
  */
 export function matchesBlocQuery(
   country: UnifiedCountry,
@@ -170,6 +204,18 @@ export function matchesBlocQuery(
   const g20Terms = ["g20", "g-20", "group of twenty", "group of 20"];
   const isG20Search = g20Terms.some((term) => q === term || q.includes(term));
   if (isG20Search && (blocs.isG20 || blocs.isG20Guest)) {
+    return true;
+  }
+
+  const gccTerms = [
+    "gcc",
+    "g.c.c.",
+    "gulf cooperation council",
+    "gulf countries",
+    "gulf states",
+  ];
+  const isGCCSearch = gccTerms.some((term) => q === term || q.includes(term));
+  if (isGCCSearch && blocs.isGCC) {
     return true;
   }
 

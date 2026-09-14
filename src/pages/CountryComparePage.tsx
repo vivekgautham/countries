@@ -1562,9 +1562,135 @@ export default function CountryComparePage() {
                 ),
               },
               {
-                label: "G7 & G20 Economic Blocs",
+                label: "Economic & Regional Blocs",
                 render: (c) => {
+                  const chips: React.ReactNode[] = [];
+                  let description = "";
+
                   if (c.blocs?.isG7) {
+                    chips.push(
+                      <Chip
+                        key="g7"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🏛️
+                          </span>
+                        }
+                        label="G7 Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(99, 102, 241, 0.18)",
+                          borderColor: "rgba(99, 102, 241, 0.45)",
+                          border: "1px solid",
+                          color: "#a5b4fc",
+                        }}
+                      />,
+                    );
+                    description = "Major advanced economy & key G20 power";
+                  }
+
+                  if (c.blocs?.isG20) {
+                    chips.push(
+                      <Chip
+                        key="g20"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🌐
+                          </span>
+                        }
+                        label="G20 Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(14, 165, 233, 0.18)",
+                          borderColor: "rgba(14, 165, 233, 0.45)",
+                          border: "1px solid",
+                          color: "#38bdf8",
+                        }}
+                      />,
+                    );
+                    if (!description) {
+                      description =
+                        "Member of the G20 international economic forum";
+                    }
+                  } else if (c.blocs?.isG20Guest) {
+                    chips.push(
+                      <Chip
+                        key="g20guest"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🌐
+                          </span>
+                        }
+                        label="G20 Permanent Guest"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(245, 158, 11, 0.18)",
+                          borderColor: "rgba(245, 158, 11, 0.45)",
+                          border: "1px solid",
+                          color: "#fcd34d",
+                        }}
+                      />,
+                    );
+                    description = "Permanent Guest Invitee to G20 summits";
+                  }
+
+                  if (c.blocs?.isGCC) {
+                    chips.push(
+                      <Chip
+                        key="gcc"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🤝
+                          </span>
+                        }
+                        label="GCC Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(16, 185, 129, 0.18)",
+                          borderColor: "rgba(16, 185, 129, 0.45)",
+                          border: "1px solid",
+                          color: "#6ee7b7",
+                        }}
+                      />,
+                    );
+                    description = description
+                      ? `${description} & Gulf Cooperation Council state`
+                      : "Gulf Cooperation Council (GCC) Arab Gulf state";
+                  }
+
+                  if (chips.length > 0) {
                     return (
                       <Stack spacing={0.5} alignItems="flex-start">
                         <Stack
@@ -1573,140 +1699,19 @@ export default function CountryComparePage() {
                           flexWrap="wrap"
                           gap={0.5}
                         >
-                          <Chip
-                            size="small"
-                            icon={
-                              <span
-                                style={{
-                                  fontSize: "0.75rem",
-                                  marginLeft: 3,
-                                }}
-                              >
-                                🏛️
-                              </span>
-                            }
-                            label="G7 Member"
-                            sx={{
-                              height: 22,
-                              fontSize: "0.75rem",
-                              fontWeight: 700,
-                              backgroundColor: "rgba(99, 102, 241, 0.18)",
-                              borderColor: "rgba(99, 102, 241, 0.45)",
-                              border: "1px solid",
-                              color: "#a5b4fc",
-                            }}
-                          />
-                          <Chip
-                            size="small"
-                            icon={
-                              <span
-                                style={{
-                                  fontSize: "0.75rem",
-                                  marginLeft: 3,
-                                }}
-                              >
-                                🌐
-                              </span>
-                            }
-                            label="G20 Member"
-                            sx={{
-                              height: 22,
-                              fontSize: "0.75rem",
-                              fontWeight: 700,
-                              backgroundColor: "rgba(14, 165, 233, 0.18)",
-                              borderColor: "rgba(14, 165, 233, 0.45)",
-                              border: "1px solid",
-                              color: "#38bdf8",
-                            }}
-                          />
+                          {chips}
                         </Stack>
-                        <Typography
-                          variant="caption"
-                          sx={{
-                            color: "text.secondary",
-                            fontSize: "0.7rem",
-                          }}
-                        >
-                          Major advanced economy & key G20 power
-                        </Typography>
-                      </Stack>
-                    );
-                  }
-
-                  if (c.blocs?.isG20) {
-                    return (
-                      <Stack spacing={0.5} alignItems="flex-start">
-                        <Chip
-                          size="small"
-                          icon={
-                            <span
-                              style={{
-                                fontSize: "0.75rem",
-                                marginLeft: 3,
-                              }}
-                            >
-                              🌐
-                            </span>
-                          }
-                          label="G20 Member"
-                          sx={{
-                            height: 22,
-                            fontSize: "0.75rem",
-                            fontWeight: 700,
-                            backgroundColor: "rgba(14, 165, 233, 0.18)",
-                            borderColor: "rgba(14, 165, 233, 0.45)",
-                            border: "1px solid",
-                            color: "#38bdf8",
-                          }}
-                        />
-                        <Typography
-                          variant="caption"
-                          sx={{
-                            color: "text.secondary",
-                            fontSize: "0.7rem",
-                          }}
-                        >
-                          Member of the G20 international economic forum
-                        </Typography>
-                      </Stack>
-                    );
-                  }
-
-                  if (c.blocs?.isG20Guest) {
-                    return (
-                      <Stack spacing={0.5} alignItems="flex-start">
-                        <Chip
-                          size="small"
-                          icon={
-                            <span
-                              style={{
-                                fontSize: "0.75rem",
-                                marginLeft: 3,
-                              }}
-                            >
-                              🌐
-                            </span>
-                          }
-                          label="G20 Permanent Guest"
-                          sx={{
-                            height: 22,
-                            fontSize: "0.75rem",
-                            fontWeight: 700,
-                            backgroundColor: "rgba(245, 158, 11, 0.18)",
-                            borderColor: "rgba(245, 158, 11, 0.45)",
-                            border: "1px solid",
-                            color: "#fcd34d",
-                          }}
-                        />
-                        <Typography
-                          variant="caption"
-                          sx={{
-                            color: "text.secondary",
-                            fontSize: "0.7rem",
-                          }}
-                        >
-                          Permanent Guest Invitee to G20 summits
-                        </Typography>
+                        {description && (
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              color: "text.secondary",
+                              fontSize: "0.7rem",
+                            }}
+                          >
+                            {description}
+                          </Typography>
+                        )}
                       </Stack>
                     );
                   }
