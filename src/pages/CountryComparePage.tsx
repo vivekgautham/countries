@@ -49,6 +49,9 @@ import {
   formatInflation,
   formatInternetUsage,
   formatLifeExpectancy,
+  formatPercent,
+  formatPppFull,
+  formatPppPerCapita,
 } from "../utils/gdpUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
@@ -153,6 +156,10 @@ export default function CountryComparePage() {
 
   const topGdp = useMemo(() => {
     return getTopCountryByMetric(selectedCountries, (c) => c.gdp?.nominal ?? 0);
+  }, [selectedCountries]);
+
+  const topPpp = useMemo(() => {
+    return getTopCountryByMetric(selectedCountries, (c) => c.gdp?.ppp ?? 0);
   }, [selectedCountries]);
 
   // Shared attributes
@@ -1369,6 +1376,47 @@ export default function CountryComparePage() {
                 ),
               },
               {
+                label: "GDP (PPP)",
+                render: (c) => {
+                  const isTop = topPpp.topIds.includes(c.code);
+                  return (
+                    <Stack direction="row" alignItems="center" spacing={1}>
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 700,
+                          color: isTop ? "success.light" : "text.primary",
+                        }}
+                      >
+                        {c.gdp?.ppp ? formatPppFull(c.gdp.ppp) : "N/A"}
+                      </Typography>
+                      {isTop && selectedCountries.length > 1 && c.gdp?.ppp && (
+                        <Chip
+                          label="Top 👑"
+                          size="small"
+                          color="success"
+                          sx={{
+                            height: 18,
+                            fontSize: "0.65rem",
+                            fontWeight: 700,
+                          }}
+                        />
+                      )}
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "GDP per Capita (PPP)",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.pppPerCapita
+                      ? `${formatPppPerCapita(c.gdp.pppPerCapita)} / person`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
                 label: "Real GDP Growth",
                 render: (c) => (
                   <Typography
@@ -1400,6 +1448,155 @@ export default function CountryComparePage() {
                       : "N/A"}
                   </Typography>
                 ),
+              },
+              {
+                label: "Economic Sectors",
+                render: (c) => {
+                  if (!c.gdp?.sectors) {
+                    return (
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary" }}
+                      >
+                        N/A
+                      </Typography>
+                    );
+                  }
+                  const s = c.gdp.sectors;
+                  return (
+                    <Stack spacing={0.5} sx={{ minWidth: 120 }}>
+                      {s.services !== undefined && (
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="caption"
+                            sx={{ color: "#38bdf8", fontWeight: 600 }}
+                          >
+                            💼 Services
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{ fontWeight: 700 }}
+                          >
+                            {formatPercent(s.services)}
+                          </Typography>
+                        </Stack>
+                      )}
+                      {s.industry !== undefined && (
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="caption"
+                            sx={{ color: "#f59e0b", fontWeight: 600 }}
+                          >
+                            🏭 Industry
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{ fontWeight: 700 }}
+                          >
+                            {formatPercent(s.industry)}
+                          </Typography>
+                        </Stack>
+                      )}
+                      {s.agriculture !== undefined && (
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="caption"
+                            sx={{ color: "#10b981", fontWeight: 600 }}
+                          >
+                            🌾 Agriculture
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{ fontWeight: 700 }}
+                          >
+                            {formatPercent(s.agriculture)}
+                          </Typography>
+                        </Stack>
+                      )}
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "Trade Exposure",
+                render: (c) => {
+                  if (
+                    !c.gdp?.trade ||
+                    (c.gdp.trade.exports === undefined &&
+                      c.gdp.trade.imports === undefined)
+                  ) {
+                    return (
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary" }}
+                      >
+                        N/A
+                      </Typography>
+                    );
+                  }
+                  const t = c.gdp.trade;
+                  return (
+                    <Stack spacing={0.5} sx={{ minWidth: 120 }}>
+                      {t.exports !== undefined && (
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="caption"
+                            sx={{ color: "text.secondary", fontWeight: 600 }}
+                          >
+                            🚢 Exports
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{ fontWeight: 700 }}
+                          >
+                            {formatPercent(t.exports)}
+                          </Typography>
+                        </Stack>
+                      )}
+                      {t.imports !== undefined && (
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="caption"
+                            sx={{ color: "text.secondary", fontWeight: 600 }}
+                          >
+                            📥 Imports
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{ fontWeight: 700 }}
+                          >
+                            {formatPercent(t.imports)}
+                          </Typography>
+                        </Stack>
+                      )}
+                    </Stack>
+                  );
+                },
               },
               {
                 label: "Data Source",

@@ -20,6 +20,20 @@ const gdpDataset = gdpDataRaw as Record<
     lifeExpectancyYear?: number;
     internetUsers?: number;
     internetUsersYear?: number;
+    ppp?: number;
+    pppYear?: number;
+    pppPerCapita?: number;
+    pppPerCapitaYear?: number;
+    agricultureGdp?: number;
+    agricultureGdpYear?: number;
+    industryGdp?: number;
+    industryGdpYear?: number;
+    servicesGdp?: number;
+    servicesGdpYear?: number;
+    exportsGdp?: number;
+    exportsGdpYear?: number;
+    importsGdp?: number;
+    importsGdpYear?: number;
   }
 >;
 
@@ -132,8 +146,57 @@ export function formatInternetUsage(usage?: number): string {
 }
 
 /**
+ * Formats percentage value:
+ * e.g. "76.3%"
+ */
+export function formatPercent(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats GDP (PPP) in compact notation:
+ * e.g. "$30.77T"
+ */
+export function formatPpp(ppp?: number): string {
+  if (ppp === undefined || ppp === null || isNaN(ppp)) {
+    return "N/A";
+  }
+  return formatGdp(ppp);
+}
+
+/**
+ * Formats GDP (PPP) in full word notation:
+ * e.g. "$30.77 Trillion (PPP)"
+ */
+export function formatPppFull(ppp?: number): string {
+  if (ppp === undefined || ppp === null || isNaN(ppp)) {
+    return "N/A";
+  }
+  return `${formatGdpFull(ppp)} (PPP)`;
+}
+
+/**
+ * Formats GDP per capita (PPP):
+ * e.g. "$90,027"
+ */
+export function formatPppPerCapita(pppPerCapita?: number): string {
+  if (
+    pppPerCapita === undefined ||
+    pppPerCapita === null ||
+    isNaN(pppPerCapita)
+  ) {
+    return "N/A";
+  }
+  return `$${Math.round(pppPerCapita).toLocaleString()}`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
- * GDP, population, GDP per capita, growth, inflation, life expectancy, and internet usage indicators.
+ * GDP, population, GDP per capita, growth, inflation, life expectancy, internet usage,
+ * PPP, sector composition, and trade indicators.
  */
 export function getGdpInfo(
   countryCode?: string,
@@ -152,6 +215,13 @@ export function getGdpInfo(
     (population && population > 0 && nominal > 0
       ? Math.round(nominal / population)
       : undefined);
+
+  const hasSectors =
+    raw.servicesGdp !== undefined ||
+    raw.industryGdp !== undefined ||
+    raw.agricultureGdp !== undefined;
+
+  const hasTrade = raw.exportsGdp !== undefined || raw.importsGdp !== undefined;
 
   return {
     nominal,
@@ -188,6 +258,32 @@ export function getGdpInfo(
       raw.internetUsers !== undefined
         ? formatInternetUsage(raw.internetUsers)
         : undefined,
+    ppp: raw.ppp,
+    pppYear: raw.pppYear,
+    pppPerCapita: raw.pppPerCapita,
+    pppPerCapitaYear: raw.pppPerCapitaYear,
+    formattedPpp: raw.ppp ? formatPpp(raw.ppp) : undefined,
+    formattedPppPerCapita: raw.pppPerCapita
+      ? formatPppPerCapita(raw.pppPerCapita)
+      : undefined,
+    sectors: hasSectors
+      ? {
+          services: raw.servicesGdp,
+          servicesYear: raw.servicesGdpYear,
+          industry: raw.industryGdp,
+          industryYear: raw.industryGdpYear,
+          agriculture: raw.agricultureGdp,
+          agricultureYear: raw.agricultureGdpYear,
+        }
+      : undefined,
+    trade: hasTrade
+      ? {
+          exports: raw.exportsGdp,
+          exportsYear: raw.exportsGdpYear,
+          imports: raw.importsGdp,
+          importsYear: raw.importsGdpYear,
+        }
+      : undefined,
   };
 }
 
@@ -203,6 +299,35 @@ export function getGdpRank(
   const validCountries = allCountries
     .filter((c) => c.gdp?.nominal && c.gdp.nominal > 0)
     .sort((a, b) => (b.gdp?.nominal ?? 0) - (a.gdp?.nominal ?? 0));
+
+  const total = validCountries.length;
+  const targetUpper = targetCode.toUpperCase();
+  const index = validCountries.findIndex(
+    (c) =>
+      c.code.toUpperCase() === targetUpper ||
+      (c.code3 && c.code3.toUpperCase() === targetUpper),
+  );
+
+  if (index === -1) return null;
+
+  const rank = index + 1;
+  const percentile = Math.round(((total - rank + 1) / total) * 100);
+
+  return { rank, total, percentile };
+}
+
+/**
+ * Calculate global GDP (PPP) rank and percentile among all countries with reported PPP data.
+ */
+export function getPppRank(
+  allCountries: UnifiedCountry[],
+  targetCode: string,
+): { rank: number; total: number; percentile: number } | null {
+  if (!allCountries || allCountries.length === 0 || !targetCode) return null;
+
+  const validCountries = allCountries
+    .filter((c) => c.gdp?.ppp && c.gdp.ppp > 0)
+    .sort((a, b) => (b.gdp?.ppp ?? 0) - (a.gdp?.ppp ?? 0));
 
   const total = validCountries.length;
   const targetUpper = targetCode.toUpperCase();

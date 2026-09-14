@@ -48,8 +48,13 @@ import {
   formatInflation,
   formatInternetUsage,
   formatLifeExpectancy,
+  formatPercent,
+  formatPppFull,
+  formatPppPerCapita,
   getGdpRank,
+  getPppRank,
 } from "../utils/gdpUtils";
+import { SectorPieChart } from "../components/economy/SectorPieChart";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -188,6 +193,10 @@ export default function CountryDetailPage() {
   const gccBadge = getGCCBadgeConfig();
   const gdpRank = useMemo(
     () => (country ? getGdpRank(countries, country.code) : null),
+    [countries, country],
+  );
+  const pppRank = useMemo(
+    () => (country ? getPppRank(countries, country.code) : null),
     [countries, country],
   );
 
@@ -1161,6 +1170,56 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
 
+                  {country.gdp?.ppp && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🛒 GDP (PPP)
+                      </Typography>
+                      <Typography fontWeight={700} textAlign="right">
+                        {formatPppFull(country.gdp.ppp)}
+                        {country.gdp.pppYear &&
+                        country.gdp.pppYear !== country.gdp.year
+                          ? ` (${country.gdp.pppYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.pppPerCapita && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        👥 GDP per Capita (PPP)
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatPppPerCapita(country.gdp.pppPerCapita)} / person
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {pppRank && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌐 Global PPP Rank
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        #{pppRank.rank} of {pppRank.total} (Top{" "}
+                        {Math.max(1, 100 - pppRank.percentile)}%)
+                      </Typography>
+                    </Stack>
+                  )}
+
                   {country.gdp?.growth !== undefined && (
                     <Stack
                       direction="row"
@@ -1206,6 +1265,37 @@ export default function CountryDetailPage() {
                           : ""}
                       </Typography>
                     </Stack>
+                  )}
+
+                  {(country.gdp?.trade?.exports !== undefined ||
+                    country.gdp?.trade?.imports !== undefined) && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🚢 Trade (% of GDP)
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {country.gdp.trade?.exports !== undefined
+                          ? `Exports: ${formatPercent(country.gdp.trade.exports)}`
+                          : ""}
+                        {country.gdp.trade?.exports !== undefined &&
+                        country.gdp.trade?.imports !== undefined
+                          ? " • "
+                          : ""}
+                        {country.gdp.trade?.imports !== undefined
+                          ? `Imports: ${formatPercent(country.gdp.trade.imports)}`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.sectors && (
+                    <Box sx={{ pt: 1 }}>
+                      <SectorPieChart sectors={country.gdp.sectors} />
+                    </Box>
                   )}
 
                   <Box

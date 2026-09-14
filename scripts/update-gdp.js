@@ -14,6 +14,13 @@ const INDICATORS = {
   INFLATION: "FP.CPI.TOTL.ZG", // Inflation, consumer prices (annual %)
   LIFE_EXPECTANCY: "SP.DYN.LE00.IN", // Life expectancy at birth, total (years)
   INTERNET_USERS: "IT.NET.USER.ZS", // Individuals using the Internet (% of population)
+  GDP_PPP: "NY.GDP.MKTP.PP.CD", // GDP, PPP (current international $)
+  GDP_PPP_PER_CAPITA: "NY.GDP.PCAP.PP.CD", // GDP per capita, PPP (current international $)
+  AGRICULTURE_GDP: "NV.AGR.TOTL.ZS", // Agriculture, forestry, and fishing (% of GDP)
+  INDUSTRY_GDP: "NV.IND.TOTL.ZS", // Industry, value added (% of GDP)
+  SERVICES_GDP: "NV.SRV.TOTL.ZS", // Services, value added (% of GDP)
+  EXPORTS_GDP: "NE.EXP.GNFS.ZS", // Exports of goods and services (% of GDP)
+  IMPORTS_GDP: "NE.IMP.GNFS.ZS", // Imports of goods and services (% of GDP)
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -40,6 +47,20 @@ const SUPPLEMENTAL_DATA = {
     lifeExpectancyYear: 2023,
     internetUsers: 91.8,
     internetUsersYear: 2024,
+    ppp: 1780000000000,
+    pppYear: 2024,
+    pppPerCapita: 76000,
+    pppPerCapitaYear: 2024,
+    agricultureGdp: 1.6,
+    agricultureGdpYear: 2024,
+    industryGdp: 37.4,
+    industryGdpYear: 2024,
+    servicesGdp: 61.0,
+    servicesGdpYear: 2024,
+    exportsGdp: 58.2,
+    exportsGdpYear: 2024,
+    importsGdp: 49.5,
+    importsGdpYear: 2024,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -234,8 +255,23 @@ function fetchIndicator(indicator) {
 }
 
 async function run() {
-  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, and Internet Users in parallel...");
-  const [gdpList, popList, pcapList, growthList, inflationList, lifeList, internetList] = await Promise.all([
+  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, Internet, PPP, Sectors, and Trade in parallel...");
+  const [
+    gdpList,
+    popList,
+    pcapList,
+    growthList,
+    inflationList,
+    lifeList,
+    internetList,
+    pppList,
+    pppCapList,
+    agrList,
+    indList,
+    srvList,
+    expList,
+    impList,
+  ] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
     fetchIndicator(INDICATORS.GDP_PER_CAPITA),
@@ -243,10 +279,17 @@ async function run() {
     fetchIndicator(INDICATORS.INFLATION),
     fetchIndicator(INDICATORS.LIFE_EXPECTANCY),
     fetchIndicator(INDICATORS.INTERNET_USERS),
+    fetchIndicator(INDICATORS.GDP_PPP),
+    fetchIndicator(INDICATORS.GDP_PPP_PER_CAPITA),
+    fetchIndicator(INDICATORS.AGRICULTURE_GDP),
+    fetchIndicator(INDICATORS.INDUSTRY_GDP),
+    fetchIndicator(INDICATORS.SERVICES_GDP),
+    fetchIndicator(INDICATORS.EXPORTS_GDP),
+    fetchIndicator(INDICATORS.IMPORTS_GDP),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), PPP Per-Capita (${pppCapList.length}), Sectors (${srvList.length}), Trade (${expList.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -364,15 +407,110 @@ async function run() {
     resultByCountry[code].internetUsersYear = parseInt(item.date, 10);
   }
 
-  // 8. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
+  // 8. Process GDP (PPP)
+  for (const item of pppList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].ppp = Math.round(item.value);
+    resultByCountry[code].pppYear = parseInt(item.date, 10);
+  }
+
+  // 9. Process GDP per Capita (PPP)
+  for (const item of pppCapList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].pppPerCapita = Math.round(item.value);
+    resultByCountry[code].pppPerCapitaYear = parseInt(item.date, 10);
+  }
+
+  // 10. Process Agriculture (% of GDP)
+  for (const item of agrList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].agricultureGdp = Math.round(item.value * 10) / 10;
+    resultByCountry[code].agricultureGdpYear = parseInt(item.date, 10);
+  }
+
+  // 11. Process Industry (% of GDP)
+  for (const item of indList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].industryGdp = Math.round(item.value * 10) / 10;
+    resultByCountry[code].industryGdpYear = parseInt(item.date, 10);
+  }
+
+  // 12. Process Services (% of GDP)
+  for (const item of srvList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].servicesGdp = Math.round(item.value * 10) / 10;
+    resultByCountry[code].servicesGdpYear = parseInt(item.date, 10);
+  }
+
+  // 13. Process Exports (% of GDP)
+  for (const item of expList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].exportsGdp = Math.round(item.value * 10) / 10;
+    resultByCountry[code].exportsGdpYear = parseInt(item.date, 10);
+  }
+
+  // 14. Process Imports (% of GDP)
+  for (const item of impList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].importsGdp = Math.round(item.value * 10) / 10;
+    resultByCountry[code].importsGdpYear = parseInt(item.date, 10);
+  }
+
+  // 15. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
   for (const entry of Object.values(resultByCountry)) {
     if (!entry.perCapita && entry.nominal && entry.population && entry.population > 0) {
       entry.perCapita = Math.round(entry.nominal / entry.population);
       entry.perCapitaYear = entry.year || entry.populationYear;
     }
+    if (!entry.pppPerCapita && entry.ppp && entry.population && entry.population > 0) {
+      entry.pppPerCapita = Math.round(entry.ppp / entry.population);
+      entry.pppPerCapitaYear = entry.pppYear || entry.populationYear;
+    }
   }
 
-  // 9. Merge supplemental data for entities not covered by World Bank
+  // 16. Merge supplemental data for entities not covered by World Bank
   for (const [code, supp] of Object.entries(SUPPLEMENTAL_DATA)) {
     if (!resultByCountry[code]) {
       resultByCountry[code] = {
@@ -408,6 +546,34 @@ async function run() {
       if (resultByCountry[code].internetUsers === undefined && supp.internetUsers !== undefined) {
         resultByCountry[code].internetUsers = supp.internetUsers;
         resultByCountry[code].internetUsersYear = supp.internetUsersYear;
+      }
+      if (!resultByCountry[code].ppp && supp.ppp) {
+        resultByCountry[code].ppp = supp.ppp;
+        resultByCountry[code].pppYear = supp.pppYear;
+      }
+      if (!resultByCountry[code].pppPerCapita && supp.pppPerCapita) {
+        resultByCountry[code].pppPerCapita = supp.pppPerCapita;
+        resultByCountry[code].pppPerCapitaYear = supp.pppPerCapitaYear;
+      }
+      if (resultByCountry[code].agricultureGdp === undefined && supp.agricultureGdp !== undefined) {
+        resultByCountry[code].agricultureGdp = supp.agricultureGdp;
+        resultByCountry[code].agricultureGdpYear = supp.agricultureGdpYear;
+      }
+      if (resultByCountry[code].industryGdp === undefined && supp.industryGdp !== undefined) {
+        resultByCountry[code].industryGdp = supp.industryGdp;
+        resultByCountry[code].industryGdpYear = supp.industryGdpYear;
+      }
+      if (resultByCountry[code].servicesGdp === undefined && supp.servicesGdp !== undefined) {
+        resultByCountry[code].servicesGdp = supp.servicesGdp;
+        resultByCountry[code].servicesGdpYear = supp.servicesGdpYear;
+      }
+      if (resultByCountry[code].exportsGdp === undefined && supp.exportsGdp !== undefined) {
+        resultByCountry[code].exportsGdp = supp.exportsGdp;
+        resultByCountry[code].exportsGdpYear = supp.exportsGdpYear;
+      }
+      if (resultByCountry[code].importsGdp === undefined && supp.importsGdp !== undefined) {
+        resultByCountry[code].importsGdp = supp.importsGdp;
+        resultByCountry[code].importsGdpYear = supp.importsGdpYear;
       }
     }
   }

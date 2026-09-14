@@ -140,6 +140,22 @@ export interface EconomicBlocs {
   statusLabel?: string;
 }
 
+export interface SectorComposition {
+  services?: number;
+  servicesYear?: number;
+  industry?: number;
+  industryYear?: number;
+  agriculture?: number;
+  agricultureYear?: number;
+}
+
+export interface TradeExposure {
+  exports?: number;
+  exportsYear?: number;
+  imports?: number;
+  importsYear?: number;
+}
+
 export interface GdpInfo {
   nominal: number; // Raw nominal GDP in current US$
   year: number; // Reporting year for nominal GDP (e.g. 2025)
@@ -163,6 +179,14 @@ export interface GdpInfo {
   formattedInflation?: string; // e.g. "2.95%"
   formattedLifeExpectancy?: string; // e.g. "78.9 yrs"
   formattedInternetUsers?: string; // e.g. "94.7%"
+  ppp?: number; // GDP in PPP (current international $)
+  pppYear?: number;
+  pppPerCapita?: number; // GDP per capita in PPP (current international $)
+  pppPerCapitaYear?: number;
+  formattedPpp?: string; // e.g. "$30.77T"
+  formattedPppPerCapita?: string; // e.g. "$90,027"
+  sectors?: SectorComposition;
+  trade?: TradeExposure;
 }
 
 export interface UnifiedCountry {
