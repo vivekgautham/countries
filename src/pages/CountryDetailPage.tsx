@@ -940,153 +940,253 @@ export default function CountryDetailPage() {
             </Card>
           </Grid>
 
-          {/* Nuclear Non-Proliferation Treaty (NPT) */}
+          {/* Left Column: NPT and Currencies & Languages */}
           <Grid size={{ xs: 12, md: 6 }}>
-            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
-              <CardContent
-                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-              >
-                <Stack
-                  direction="row"
-                  alignItems="center"
-                  justifyContent="space-between"
-                  flexWrap="wrap"
-                  gap={1}
+            <Stack spacing={2.5} sx={{ height: "100%" }}>
+              {/* Nuclear Non-Proliferation Treaty (NPT) */}
+              <Card variant="outlined" sx={{ p: 1 }}>
+                <CardContent
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
                 >
-                  <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ fontWeight: 700 }}
-                  >
-                    ⚛️ Non-Proliferation Treaty (NPT)
-                  </Typography>
-                  {country.npt && (
-                    <Chip
-                      size="small"
-                      label={nptBadge.shortLabel}
-                      sx={{
-                        fontWeight: 700,
-                        fontSize: "0.75rem",
-                        backgroundColor: nptBadge.backgroundColor,
-                        border: `1px solid ${nptBadge.borderColor}`,
-                        color: nptBadge.textColor,
-                      }}
-                    />
-                  )}
-                </Stack>
-                <Divider />
-                <Stack spacing={1.5}>
                   <Stack
                     direction="row"
-                    justifyContent="space-between"
                     alignItems="center"
+                    justifyContent="space-between"
+                    flexWrap="wrap"
+                    gap={1}
                   >
-                    <Typography color="text.secondary">📋 Status</Typography>
-                    <Typography fontWeight={600} textAlign="right">
-                      {country.npt?.statusLabel || "Unknown"}
+                    <Typography
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700 }}
+                    >
+                      ⚛️ Non-Proliferation Treaty (NPT)
                     </Typography>
+                    {country.npt && (
+                      <Chip
+                        size="small"
+                        label={nptBadge.shortLabel}
+                        sx={{
+                          fontWeight: 700,
+                          fontSize: "0.75rem",
+                          backgroundColor: nptBadge.backgroundColor,
+                          border: `1px solid ${nptBadge.borderColor}`,
+                          color: nptBadge.textColor,
+                        }}
+                      />
+                    )}
                   </Stack>
-
-                  {country.npt?.signedDate && (
+                  <Divider />
+                  <Stack spacing={1.5}>
                     <Stack
                       direction="row"
                       justifyContent="space-between"
                       alignItems="center"
                     >
-                      <Typography color="text.secondary">✍️ Signed</Typography>
+                      <Typography color="text.secondary">📋 Status</Typography>
                       <Typography fontWeight={600} textAlign="right">
-                        {country.npt.signedDate}
+                        {country.npt?.statusLabel || "Unknown"}
                       </Typography>
                     </Stack>
-                  )}
 
-                  {country.npt?.depositedDate && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">
-                        📥 Ratified / Deposited
-                      </Typography>
-                      <Typography fontWeight={600} textAlign="right">
-                        {country.npt.depositedDate}
-                      </Typography>
-                    </Stack>
-                  )}
+                    {country.npt?.signedDate && (
+                      <Stack
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        <Typography color="text.secondary">
+                          ✍️ Signed
+                        </Typography>
+                        <Typography fontWeight={600} textAlign="right">
+                          {country.npt.signedDate}
+                        </Typography>
+                      </Stack>
+                    )}
 
-                  {country.npt?.method && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">📜 Method</Typography>
-                      <Typography fontWeight={600} textAlign="right">
-                        {country.npt.method}
-                      </Typography>
-                    </Stack>
-                  )}
+                    {country.npt?.depositedDate && (
+                      <Stack
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        <Typography color="text.secondary">
+                          📥 Ratified / Deposited
+                        </Typography>
+                        <Typography fontWeight={600} textAlign="right">
+                          {country.npt.depositedDate}
+                        </Typography>
+                      </Stack>
+                    )}
 
-                  {country.npt?.sovereignState && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">
-                        👑 Administering State
-                      </Typography>
-                      <Typography fontWeight={600}>
-                        {country.npt.sovereignState}
-                      </Typography>
-                    </Stack>
-                  )}
+                    {country.npt?.method && (
+                      <Stack
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        <Typography color="text.secondary">
+                          📜 Method
+                        </Typography>
+                        <Typography fontWeight={600} textAlign="right">
+                          {country.npt.method}
+                        </Typography>
+                      </Stack>
+                    )}
 
-                  {country.npt?.notes && (
+                    {country.npt?.sovereignState && (
+                      <Stack
+                        direction="row"
+                        justifyContent="space-between"
+                        alignItems="center"
+                      >
+                        <Typography color="text.secondary">
+                          👑 Administering State
+                        </Typography>
+                        <Typography fontWeight={600}>
+                          {country.npt.sovereignState}
+                        </Typography>
+                      </Stack>
+                    )}
+
+                    {country.npt?.notes && (
+                      <Box
+                        sx={{
+                          p: 1.25,
+                          borderRadius: 2,
+                          backgroundColor: "rgba(15, 23, 42, 0.5)",
+                          border: "1px solid rgba(255, 255, 255, 0.08)",
+                        }}
+                      >
+                        <Typography
+                          variant="caption"
+                          color="text.secondary"
+                          sx={{ display: "block", lineHeight: 1.5 }}
+                        >
+                          💡 {country.npt.notes}
+                        </Typography>
+                      </Box>
+                    )}
+
                     <Box
                       sx={{
-                        p: 1.25,
-                        borderRadius: 2,
-                        backgroundColor: "rgba(15, 23, 42, 0.5)",
-                        border: "1px solid rgba(255, 255, 255, 0.08)",
+                        pt: 0.5,
+                        display: "flex",
+                        justifyContent: "flex-end",
                       }}
                     >
                       <Typography
+                        component="a"
+                        href="https://treaties.unoda.org/t/npt"
+                        target="_blank"
+                        rel="noreferrer"
                         variant="caption"
-                        color="text.secondary"
-                        sx={{ display: "block", lineHeight: 1.5 }}
+                        sx={{
+                          color: "primary.light",
+                          textDecoration: "none",
+                          "&:hover": { textDecoration: "underline" },
+                        }}
                       >
-                        💡 {country.npt.notes}
+                        Source: UNODA Treaty Database ↗
                       </Typography>
                     </Box>
-                  )}
+                  </Stack>
+                </CardContent>
+              </Card>
 
-                  <Box
-                    sx={{
-                      pt: 0.5,
-                      display: "flex",
-                      justifyContent: "flex-end",
-                    }}
-                  >
+              {/* Currencies & Spoken Languages */}
+              <Card variant="outlined" sx={{ p: 1, flexGrow: 1 }}>
+                <CardContent
+                  sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                >
+                  {/* Currencies */}
+                  <Box>
                     <Typography
-                      component="a"
-                      href="https://treaties.unoda.org/t/npt"
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="caption"
-                      sx={{
-                        color: "primary.light",
-                        textDecoration: "none",
-                        "&:hover": { textDecoration: "underline" },
-                      }}
+                      variant="h6"
+                      component="h2"
+                      sx={{ fontWeight: 700, mb: 1.5 }}
                     >
-                      Source: UNODA Treaty Database ↗
+                      💵 Currencies
                     </Typography>
+                    <Stack direction="row" flexWrap="wrap" gap={1}>
+                      {country.currencies && country.currencies.length > 0 ? (
+                        country.currencies.map((curr) => (
+                          <Chip
+                            key={curr}
+                            label={curr}
+                            color="success"
+                            variant="outlined"
+                            sx={{
+                              fontWeight: 600,
+                              backgroundColor: "rgba(16, 185, 129, 0.12)",
+                              borderColor: "rgba(16, 185, 129, 0.3)",
+                              color: "#6ee7b7",
+                            }}
+                          />
+                        ))
+                      ) : (
+                        <Typography color="text.secondary">N/A</Typography>
+                      )}
+                    </Stack>
                   </Box>
-                </Stack>
-              </CardContent>
-            </Card>
+
+                  <Divider />
+
+                  {/* Spoken Languages */}
+                  <Box>
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      spacing={1}
+                      sx={{ mb: 1.5 }}
+                    >
+                      <Typography
+                        variant="h6"
+                        component="h2"
+                        sx={{ fontWeight: 700 }}
+                      >
+                        🗣️ Spoken Languages
+                      </Typography>
+                      <Chip
+                        label={country.languages ? country.languages.length : 0}
+                        size="small"
+                        color={
+                          country.languages && country.languages.length > 0
+                            ? "secondary"
+                            : "default"
+                        }
+                        variant="outlined"
+                        sx={{
+                          fontWeight: 700,
+                          height: 22,
+                          fontSize: "0.75rem",
+                        }}
+                      />
+                    </Stack>
+                    <Stack direction="row" flexWrap="wrap" gap={1}>
+                      {country.languages && country.languages.length > 0 ? (
+                        country.languages.map((lang) => (
+                          <Chip
+                            key={lang}
+                            label={lang}
+                            size="small"
+                            sx={{
+                              backgroundColor: "rgba(168, 85, 247, 0.15)",
+                              color: "#e9d5ff",
+                              border: "1px solid rgba(168, 85, 247, 0.3)",
+                              fontWeight: 600,
+                              fontSize: "0.8rem",
+                            }}
+                          />
+                        ))
+                      ) : (
+                        <Typography color="text.secondary">N/A</Typography>
+                      )}
+                    </Stack>
+                  </Box>
+                </CardContent>
+              </Card>
+            </Stack>
           </Grid>
 
           {/* Economy & GDP */}
@@ -1320,99 +1420,6 @@ export default function CountryDetailPage() {
                       Source: {country.gdp?.source || "World Bank (WDI)"} ↗
                     </Typography>
                   </Box>
-                </Stack>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Currencies */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
-              <CardContent
-                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-              >
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  sx={{ fontWeight: 700 }}
-                >
-                  💵 Currencies
-                </Typography>
-                <Divider />
-                <Stack direction="row" flexWrap="wrap" gap={1}>
-                  {country.currencies && country.currencies.length > 0 ? (
-                    country.currencies.map((curr) => (
-                      <Chip
-                        key={curr}
-                        label={curr}
-                        color="success"
-                        variant="outlined"
-                        sx={{
-                          fontWeight: 600,
-                          backgroundColor: "rgba(16, 185, 129, 0.12)",
-                          borderColor: "rgba(16, 185, 129, 0.3)",
-                          color: "#6ee7b7",
-                        }}
-                      />
-                    ))
-                  ) : (
-                    <Typography color="text.secondary">N/A</Typography>
-                  )}
-                </Stack>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          {/* Spoken Languages */}
-          <Grid size={{ xs: 12, md: 6 }}>
-            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
-              <CardContent
-                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
-              >
-                <Stack direction="row" alignItems="center" spacing={1}>
-                  <Typography
-                    variant="h6"
-                    component="h2"
-                    sx={{ fontWeight: 700 }}
-                  >
-                    🗣️ Spoken Languages
-                  </Typography>
-                  <Chip
-                    label={country.languages ? country.languages.length : 0}
-                    size="small"
-                    color={
-                      country.languages && country.languages.length > 0
-                        ? "secondary"
-                        : "default"
-                    }
-                    variant="outlined"
-                    sx={{
-                      fontWeight: 700,
-                      height: 22,
-                      fontSize: "0.75rem",
-                    }}
-                  />
-                </Stack>
-                <Divider />
-                <Stack direction="row" flexWrap="wrap" gap={1}>
-                  {country.languages && country.languages.length > 0 ? (
-                    country.languages.map((lang) => (
-                      <Chip
-                        key={lang}
-                        label={lang}
-                        size="small"
-                        sx={{
-                          backgroundColor: "rgba(168, 85, 247, 0.15)",
-                          color: "#e9d5ff",
-                          border: "1px solid rgba(168, 85, 247, 0.3)",
-                          fontWeight: 600,
-                          fontSize: "0.8rem",
-                        }}
-                      />
-                    ))
-                  ) : (
-                    <Typography color="text.secondary">N/A</Typography>
-                  )}
                 </Stack>
               </CardContent>
             </Card>
