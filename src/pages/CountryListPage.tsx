@@ -1,5 +1,6 @@
 import ClearIcon from "@mui/icons-material/Clear";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ReplayIcon from "@mui/icons-material/Replay";
 import SearchIcon from "@mui/icons-material/Search";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
@@ -240,29 +241,58 @@ export default function CountryListPage() {
             </Box>
           </Typography>
 
-          {/* Compare Shortcuts Button */}
-          <Button
-            component={RouterLink}
-            to="/compare"
-            startIcon={<CompareArrowsIcon />}
-            variant="outlined"
-            sx={{
-              borderRadius: 3,
-              borderColor: "rgba(99, 102, 241, 0.4)",
-              backgroundColor: "rgba(99, 102, 241, 0.1)",
-              color: "primary.light",
-              px: 2.5,
-              py: 0.75,
-              fontSize: "0.85rem",
-              fontWeight: 700,
-              "&:hover": {
-                borderColor: "primary.light",
-                backgroundColor: "rgba(99, 102, 241, 0.2)",
-              },
-            }}
+          {/* Navigation Action Buttons */}
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={1.5}
+            alignItems="center"
           >
-            Compare Countries
-          </Button>
+            <Button
+              component={RouterLink}
+              to="/rankings"
+              startIcon={<EmojiEventsIcon />}
+              variant="outlined"
+              sx={{
+                borderRadius: 3,
+                borderColor: "rgba(245, 158, 11, 0.4)",
+                backgroundColor: "rgba(245, 158, 11, 0.08)",
+                color: "#fbbf24",
+                px: 2.5,
+                py: 0.75,
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                "&:hover": {
+                  borderColor: "#fbbf24",
+                  backgroundColor: "rgba(245, 158, 11, 0.18)",
+                },
+              }}
+            >
+              Rankings
+            </Button>
+
+            <Button
+              component={RouterLink}
+              to="/compare"
+              startIcon={<CompareArrowsIcon />}
+              variant="outlined"
+              sx={{
+                borderRadius: 3,
+                borderColor: "rgba(99, 102, 241, 0.4)",
+                backgroundColor: "rgba(99, 102, 241, 0.1)",
+                color: "primary.light",
+                px: 2.5,
+                py: 0.75,
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                "&:hover": {
+                  borderColor: "primary.light",
+                  backgroundColor: "rgba(99, 102, 241, 0.2)",
+                },
+              }}
+            >
+              Compare Countries
+            </Button>
+          </Stack>
 
           {/* Search and Filter Section */}
           <Box sx={{ width: "100%", maxWidth: 840 }}>

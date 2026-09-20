@@ -58,6 +58,12 @@ const gdpDataset = gdpDataRaw as Record<
     giniYear?: number;
     mobileSubscriptions?: number;
     mobileSubscriptionsYear?: number;
+    governmentDebt?: number;
+    governmentDebtYear?: number;
+    fdiInflows?: number;
+    fdiInflowsYear?: number;
+    literacyRate?: number;
+    literacyRateYear?: number;
   }
 >;
 
@@ -342,6 +348,40 @@ export function formatMobileSubscriptions(val?: number): string {
 }
 
 /**
+ * Formats central government debt (% of GDP):
+ * e.g. "98.2% of GDP"
+ */
+export function formatGovernmentDebt(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}% of GDP`;
+}
+
+/**
+ * Formats foreign direct investment (FDI) net inflows (% of GDP):
+ * e.g. "+2.4% of GDP"
+ */
+export function formatFdiInflows(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  const prefix = val > 0 ? "+" : "";
+  return `${prefix}${val.toFixed(1)}% of GDP`;
+}
+
+/**
+ * Formats adult literacy rate (% of people ages 15+):
+ * e.g. "99.0%"
+ */
+export function formatLiteracyRate(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
  * GDP, population, GDP per capita, growth, inflation, life expectancy, internet usage,
  * PPP, sector composition, and trade indicators.
@@ -492,6 +532,24 @@ export function getGdpInfo(
     formattedMobileSubscriptions:
       raw.mobileSubscriptions !== undefined
         ? formatMobileSubscriptions(raw.mobileSubscriptions)
+        : undefined,
+    governmentDebt: raw.governmentDebt,
+    governmentDebtYear: raw.governmentDebtYear,
+    formattedGovernmentDebt:
+      raw.governmentDebt !== undefined
+        ? formatGovernmentDebt(raw.governmentDebt)
+        : undefined,
+    fdiInflows: raw.fdiInflows,
+    fdiInflowsYear: raw.fdiInflowsYear,
+    formattedFdiInflows:
+      raw.fdiInflows !== undefined
+        ? formatFdiInflows(raw.fdiInflows)
+        : undefined,
+    literacyRate: raw.literacyRate,
+    literacyRateYear: raw.literacyRateYear,
+    formattedLiteracyRate:
+      raw.literacyRate !== undefined
+        ? formatLiteracyRate(raw.literacyRate)
         : undefined,
   };
 }

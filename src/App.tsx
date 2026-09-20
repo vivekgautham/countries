@@ -5,6 +5,7 @@ import Footer from "./components/layout/Footer";
 import CountryComparePage from "./pages/CountryComparePage";
 import CountryDetailPage from "./pages/CountryDetailPage";
 import CountryListPage from "./pages/CountryListPage";
+import CountryRankingsPage from "./pages/CountryRankingsPage";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/" element={<CountryListPage />} />
           <Route path="/country/:countryCode" element={<CountryDetailPage />} />
           <Route path="/compare" element={<CountryComparePage />} />
+          <Route path="/rankings" element={<CountryRankingsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Box>

@@ -226,6 +226,15 @@ export interface GdpInfo {
   mobileSubscriptions?: number; // Mobile subscriptions per 100 people
   mobileSubscriptionsYear?: number;
   formattedMobileSubscriptions?: string; // e.g. "134.2 / 100"
+  governmentDebt?: number; // Central government debt (% of GDP)
+  governmentDebtYear?: number;
+  formattedGovernmentDebt?: string; // e.g. "115.8% of GDP"
+  fdiInflows?: number; // Foreign direct investment, net inflows (% of GDP)
+  fdiInflowsYear?: number;
+  formattedFdiInflows?: string; // e.g. "1.3% of GDP"
+  literacyRate?: number; // Adult literacy rate (% of people ages 15+)
+  literacyRateYear?: number;
+  formattedLiteracyRate?: string; // e.g. "99.0%"
 }
 
 export interface UnifiedCountry {

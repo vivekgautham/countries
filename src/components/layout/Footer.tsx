@@ -1,4 +1,5 @@
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ExploreIcon from "@mui/icons-material/Explore";
 import {
   Box,
@@ -112,6 +113,24 @@ export default function Footer() {
               >
                 <ExploreIcon sx={{ fontSize: 18 }} />
                 Explore
+              </Link>
+              <Link
+                component={RouterLink}
+                to="/rankings"
+                sx={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 0.7,
+                  color: "text.secondary",
+                  fontSize: "0.875rem",
+                  textDecoration: "none",
+                  fontWeight: 500,
+                  transition: "color 0.2s ease",
+                  "&:hover": { color: "primary.light" },
+                }}
+              >
+                <EmojiEventsIcon sx={{ fontSize: 18 }} />
+                Rankings
               </Link>
               <Link
                 component={RouterLink}

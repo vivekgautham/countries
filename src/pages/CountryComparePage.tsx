@@ -60,6 +60,9 @@ import {
   formatElectricPowerConsumption,
   formatElectricityAccess,
   formatUnemployment,
+  formatGovernmentDebt,
+  formatFdiInflows,
+  formatLiteracyRate,
   formatFertilityRate,
   formatUrbanPopulation,
   formatGini,
@@ -1292,6 +1295,16 @@ export default function CountryComparePage() {
                 ),
               },
               {
+                label: "Adult Literacy Rate",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.literacyRate !== undefined
+                      ? `${formatLiteracyRate(c.gdp.literacyRate)}${c.gdp.literacyRateYear ? ` (${c.gdp.literacyRateYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
                 label: "Income Inequality (Gini)",
                 render: (c) => (
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
@@ -1660,6 +1673,39 @@ export default function CountryComparePage() {
                     </Stack>
                   );
                 },
+              },
+              {
+                label: "Public Debt (% of GDP)",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.governmentDebt !== undefined
+                      ? `${formatGovernmentDebt(c.gdp.governmentDebt)}${c.gdp.governmentDebtYear ? ` (${c.gdp.governmentDebtYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "FDI Inflows (% of GDP)",
+                render: (c) => (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      fontWeight: 600,
+                      color:
+                        c.gdp?.fdiInflows !== undefined
+                          ? c.gdp.fdiInflows > 0
+                            ? "success.light"
+                            : c.gdp.fdiInflows < 0
+                              ? "error.light"
+                              : "text.primary"
+                          : "text.secondary",
+                    }}
+                  >
+                    {c.gdp?.fdiInflows !== undefined
+                      ? `${formatFdiInflows(c.gdp.fdiInflows)}${c.gdp.fdiInflowsYear ? ` (${c.gdp.fdiInflowsYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
               },
               {
                 label: "Data Source",

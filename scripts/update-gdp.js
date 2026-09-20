@@ -33,6 +33,9 @@ const INDICATORS = {
   URBAN_POPULATION: "SP.URB.TOTL.IN.ZS", // Urban population (% of total population)
   GINI_INDEX: "SI.POV.GINI", // Gini index (World Bank estimate)
   MOBILE_SUBSCRIPTIONS: "IT.CEL.SETS.P2", // Mobile cellular subscriptions (per 100 people)
+  GOVERNMENT_DEBT: "GC.DOD.TOTL.GD.ZS", // Central government debt, total (% of GDP)
+  FDI_INFLOWS: "BX.KLT.DINV.WD.GD.ZS", // Foreign direct investment, net inflows (% of GDP)
+  LITERACY_RATE: "SE.ADT.LITR.ZS", // Literacy rate, adult total (% of people ages 15 and above)
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -97,6 +100,12 @@ const SUPPLEMENTAL_DATA = {
     giniYear: 2023,
     mobileSubscriptions: 132.5,
     mobileSubscriptionsYear: 2024,
+    governmentDebt: 27.2,
+    governmentDebtYear: 2024,
+    fdiInflows: 1.4,
+    fdiInflowsYear: 2024,
+    literacyRate: 99.0,
+    literacyRateYear: 2024,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -321,6 +330,9 @@ async function run() {
     urbanList,
     giniList,
     mobileList,
+    debtList,
+    fdiList,
+    literacyList,
   ] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
@@ -348,10 +360,13 @@ async function run() {
     fetchIndicator(INDICATORS.URBAN_POPULATION),
     fetchIndicator(INDICATORS.GINI_INDEX),
     fetchIndicator(INDICATORS.MOBILE_SUBSCRIPTIONS),
+    fetchIndicator(INDICATORS.GOVERNMENT_DEBT),
+    fetchIndicator(INDICATORS.FDI_INFLOWS),
+    fetchIndicator(INDICATORS.LITERACY_RATE),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), Renewables (${renewList.length}), Forest (${forestList.length}), Electricity (${elecConsumptionList.length}), Access (${elecAccessList.length}), Unemployment (${unemploymentList.length}), Fertility (${fertilityList.length}), Urban (${urbanList.length}), Gini (${giniList.length}), Mobile (${mobileList.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), Renewables (${renewList.length}), Forest (${forestList.length}), Electricity (${elecConsumptionList.length}), Access (${elecAccessList.length}), Unemployment (${unemploymentList.length}), Fertility (${fertilityList.length}), Urban (${urbanList.length}), Gini (${giniList.length}), Mobile (${mobileList.length}), Debt (${debtList.length}), FDI (${fdiList.length}), Literacy (${literacyList.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -716,7 +731,46 @@ async function run() {
     resultByCountry[code].mobileSubscriptionsYear = parseInt(item.date, 10);
   }
 
-  // 27. Fallback CO2 per capita calculation if not directly reported
+  // 27. Process Central Government Debt (% of GDP)
+  for (const item of debtList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].governmentDebt = Math.round(item.value * 10) / 10;
+    resultByCountry[code].governmentDebtYear = parseInt(item.date, 10);
+  }
+
+  // 28. Process FDI Net Inflows (% of GDP)
+  for (const item of fdiList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].fdiInflows = Math.round(item.value * 10) / 10;
+    resultByCountry[code].fdiInflowsYear = parseInt(item.date, 10);
+  }
+
+  // 29. Process Adult Literacy Rate (% ages 15+)
+  for (const item of literacyList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].literacyRate = Math.round(item.value * 10) / 10;
+    resultByCountry[code].literacyRateYear = parseInt(item.date, 10);
+  }
+
+  // 30. Fallback CO2 per capita calculation if not directly reported
   for (const entry of Object.values(resultByCountry)) {
     if (
       entry.co2PerCapita === undefined &&
@@ -854,6 +908,18 @@ async function run() {
       if (resultByCountry[code].mobileSubscriptions === undefined && supp.mobileSubscriptions !== undefined) {
         resultByCountry[code].mobileSubscriptions = supp.mobileSubscriptions;
         resultByCountry[code].mobileSubscriptionsYear = supp.mobileSubscriptionsYear;
+      }
+      if (resultByCountry[code].governmentDebt === undefined && supp.governmentDebt !== undefined) {
+        resultByCountry[code].governmentDebt = supp.governmentDebt;
+        resultByCountry[code].governmentDebtYear = supp.governmentDebtYear;
+      }
+      if (resultByCountry[code].fdiInflows === undefined && supp.fdiInflows !== undefined) {
+        resultByCountry[code].fdiInflows = supp.fdiInflows;
+        resultByCountry[code].fdiInflowsYear = supp.fdiInflowsYear;
+      }
+      if (resultByCountry[code].literacyRate === undefined && supp.literacyRate !== undefined) {
+        resultByCountry[code].literacyRate = supp.literacyRate;
+        resultByCountry[code].literacyRateYear = supp.literacyRateYear;
       }
     }
   }

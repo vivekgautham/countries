@@ -64,6 +64,9 @@ import {
   formatElectricPowerConsumption,
   formatElectricityAccess,
   formatUnemployment,
+  formatGovernmentDebt,
+  formatFdiInflows,
+  formatLiteracyRate,
   formatFertilityRate,
   formatUrbanPopulation,
   formatGini,
@@ -1241,6 +1244,29 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
 
+                  {country.gdp?.literacyRate !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📚 Adult Literacy Rate
+                      </Typography>
+                      <Tooltip
+                        title="Adult literacy rate (% of people ages 15 and above) from World Bank / UNESCO"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatLiteracyRate(country.gdp.literacyRate)}
+                          {country.gdp.literacyRateYear
+                            ? ` (${country.gdp.literacyRateYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
                   {country.gdp?.gini !== undefined && (
                     <Stack
                       direction="row"
@@ -1983,6 +2009,63 @@ export default function CountryDetailPage() {
                           ? `Imports: ${formatPercent(country.gdp.trade.imports)}`
                           : ""}
                       </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.governmentDebt !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏛️ Public Debt (% of GDP)
+                      </Typography>
+                      <Tooltip
+                        title="Central government debt, total (% of GDP) from World Bank"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatGovernmentDebt(country.gdp.governmentDebt)}
+                          {country.gdp.governmentDebtYear
+                            ? ` (${country.gdp.governmentDebtYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.fdiInflows !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌐 FDI Net Inflows
+                      </Typography>
+                      <Tooltip
+                        title="Foreign direct investment, net inflows (% of GDP) from World Bank"
+                        arrow
+                      >
+                        <Typography
+                          fontWeight={600}
+                          textAlign="right"
+                          sx={{
+                            color:
+                              country.gdp.fdiInflows > 0
+                                ? "success.light"
+                                : country.gdp.fdiInflows < 0
+                                  ? "error.light"
+                                  : "text.primary",
+                          }}
+                        >
+                          {formatFdiInflows(country.gdp.fdiInflows)}
+                          {country.gdp.fdiInflowsYear
+                            ? ` (${country.gdp.fdiInflowsYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
                     </Stack>
                   )}
 

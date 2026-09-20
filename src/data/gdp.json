@@ -45,7 +45,11 @@
     "urbanPopulation": 60,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 102.9,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 79,
+    "literacyRateYear": 2024
   },
   "1W": {
     "source": "World Bank (WDI)",
@@ -95,7 +99,11 @@
     "urbanPopulation": 57.8,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 111.5,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 87.7,
+    "literacyRateYear": 2024
   },
   "4E": {
     "source": "World Bank (WDI)",
@@ -145,7 +153,11 @@
     "urbanPopulation": 62.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 129.8,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 0.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.8,
+    "literacyRateYear": 2024
   },
   "7E": {
     "source": "World Bank (WDI)",
@@ -195,7 +207,13 @@
     "urbanPopulation": 68.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 117.3,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 31.9,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99,
+    "literacyRateYear": 2024
   },
   "8S": {
     "source": "World Bank (WDI)",
@@ -245,7 +263,13 @@
     "urbanPopulation": 35.8,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 81.7,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 46.6,
+    "governmentDebtYear": 2018,
+    "fdiInflows": 0.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 78.2,
+    "literacyRateYear": 2024
   },
   "AD": {
     "source": "World Bank (WDI)",
@@ -283,7 +307,11 @@
     "urbanPopulation": 88.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 155.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 40,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 6.6,
+    "fdiInflowsYear": 2024
   },
   "AE": {
     "source": "World Bank (WDI)",
@@ -339,7 +367,13 @@
     "gini": 26.4,
     "giniYear": 2018,
     "mobileSubscriptions": 203.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 1.8,
+    "governmentDebtYear": 2013,
+    "fdiInflows": 8.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 98.8,
+    "literacyRateYear": 2024
   },
   "AF": {
     "source": "World Bank (WDI)",
@@ -391,7 +425,11 @@
     "urbanPopulation": 25.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 60.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.1,
+    "fdiInflowsYear": 2021,
+    "literacyRate": 37.3,
+    "literacyRateYear": 2021
   },
   "AG": {
     "source": "World Bank (WDI)",
@@ -441,7 +479,11 @@
     "urbanPopulation": 24.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 200.5,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 12.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.9,
+    "literacyRateYear": 2001
   },
   "AI": {
     "nominal": 380000000,
@@ -507,7 +549,13 @@
     "gini": 29.4,
     "giniYear": 2020,
     "mobileSubscriptions": 89.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 50,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 6.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.7,
+    "literacyRateYear": 2023
   },
   "AM": {
     "source": "World Bank (WDI)",
@@ -563,7 +611,13 @@
     "gini": 27.4,
     "giniYear": 2024,
     "mobileSubscriptions": 134.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 47.9,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.8,
+    "literacyRateYear": 2023
   },
   "AO": {
     "source": "World Bank (WDI)",
@@ -619,7 +673,11 @@
     "gini": 51.3,
     "giniYear": 2018,
     "mobileSubscriptions": 69.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 68.2,
+    "literacyRateYear": 2023
   },
   "AQ": {
     "population": 0,
@@ -680,7 +738,11 @@
     "gini": 42.4,
     "giniYear": 2024,
     "mobileSubscriptions": 140.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.1,
+    "literacyRateYear": 2020
   },
   "AS": {
     "source": "World Bank (WDI)",
@@ -712,7 +774,9 @@
     "urbanPopulation": 80.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 4,
-    "mobileSubscriptionsYear": 2004
+    "mobileSubscriptionsYear": 2004,
+    "literacyRate": 97.3,
+    "literacyRateYear": 1980
   },
   "AT": {
     "source": "World Bank (WDI)",
@@ -768,7 +832,9 @@
     "gini": 31.2,
     "giniYear": 2023,
     "mobileSubscriptions": 124.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": -2,
+    "fdiInflowsYear": 2025
   },
   "AU": {
     "source": "World Bank (WDI)",
@@ -824,7 +890,11 @@
     "gini": 33.8,
     "giniYear": 2020,
     "mobileSubscriptions": 112.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 57.9,
+    "governmentDebtYear": 2022,
+    "fdiInflows": 2,
+    "fdiInflowsYear": 2025
   },
   "AW": {
     "source": "World Bank (WDI)",
@@ -870,7 +940,11 @@
     "urbanPopulation": 61.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 130.6,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 96.8,
+    "literacyRateYear": 2010
   },
   "AX": {
     "nominal": 1600000000,
@@ -936,7 +1010,13 @@
     "gini": 26.6,
     "giniYear": 2005,
     "mobileSubscriptions": 109.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 6.4,
+    "governmentDebtYear": 2010,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.8,
+    "literacyRateYear": 2023
   },
   "B8": {
     "source": "World Bank (WDI)",
@@ -984,7 +1064,11 @@
     "urbanPopulation": 61.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 124.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": -0.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.5,
+    "literacyRateYear": 2024
   },
   "BA": {
     "source": "World Bank (WDI)",
@@ -1040,7 +1124,13 @@
     "gini": 30.3,
     "giniYear": 2021,
     "mobileSubscriptions": 121.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 39.7,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97,
+    "literacyRateYear": 2013
   },
   "BB": {
     "source": "World Bank (WDI)",
@@ -1090,7 +1180,13 @@
     "gini": 34.1,
     "giniYear": 2016,
     "mobileSubscriptions": 114.6,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 125,
+    "governmentDebtYear": 2016,
+    "fdiInflows": 4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.3,
+    "literacyRateYear": 1970
   },
   "BD": {
     "source": "World Bank (WDI)",
@@ -1146,7 +1242,13 @@
     "gini": 30.9,
     "giniYear": 2022,
     "mobileSubscriptions": 108.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 31.2,
+    "governmentDebtYear": 2003,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 79,
+    "literacyRateYear": 2022
   },
   "BE": {
     "source": "World Bank (WDI)",
@@ -1202,7 +1304,9 @@
     "gini": 26.8,
     "giniYear": 2023,
     "mobileSubscriptions": 103.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": -4,
+    "fdiInflowsYear": 2025
   },
   "BF": {
     "source": "World Bank (WDI)",
@@ -1258,7 +1362,13 @@
     "gini": 37.4,
     "giniYear": 2021,
     "mobileSubscriptions": 116.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 64.2,
+    "governmentDebtYear": 2024,
+    "fdiInflows": -0.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 41.6,
+    "literacyRateYear": 2023
   },
   "BG": {
     "source": "World Bank (WDI)",
@@ -1314,7 +1424,11 @@
     "gini": 39.5,
     "giniYear": 2023,
     "mobileSubscriptions": 118.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.3,
+    "literacyRateYear": 2011
   },
   "BH": {
     "source": "World Bank (WDI)",
@@ -1368,7 +1482,13 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 159.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 111.6,
+    "governmentDebtYear": 2020,
+    "fdiInflows": 5.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 97.8,
+    "literacyRateYear": 2024
   },
   "BI": {
     "source": "World Bank (WDI)",
@@ -1418,7 +1538,11 @@
     "gini": 37.5,
     "giniYear": 2020,
     "mobileSubscriptions": 63.2,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 71.3,
+    "literacyRateYear": 2020
   },
   "BJ": {
     "source": "World Bank (WDI)",
@@ -1474,7 +1598,11 @@
     "gini": 34.4,
     "giniYear": 2021,
     "mobileSubscriptions": 125.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 51.4,
+    "literacyRateYear": 2022
   },
   "BL": {
     "nominal": 420000000,
@@ -1528,7 +1656,9 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 96.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2024
   },
   "BN": {
     "source": "World Bank (WDI)",
@@ -1582,7 +1712,11 @@
     "urbanPopulation": 75,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 118.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.1,
+    "literacyRateYear": 2011
   },
   "BO": {
     "source": "World Bank (WDI)",
@@ -1638,7 +1772,13 @@
     "gini": 40.9,
     "giniYear": 2024,
     "mobileSubscriptions": 98,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 68.3,
+    "governmentDebtYear": 2001,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.7,
+    "literacyRateYear": 2024
   },
   "BQ": {
     "population": 26552,
@@ -1699,7 +1839,13 @@
     "gini": 50.3,
     "giniYear": 2024,
     "mobileSubscriptions": 101.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 81.9,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 3.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94.7,
+    "literacyRateYear": 2024
   },
   "BS": {
     "source": "World Bank (WDI)",
@@ -1751,7 +1897,11 @@
     "urbanPopulation": 81.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 96.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 71.5,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024
   },
   "BT": {
     "source": "World Bank (WDI)",
@@ -1805,7 +1955,13 @@
     "gini": 28.5,
     "giniYear": 2022,
     "mobileSubscriptions": 99.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 111,
+    "governmentDebtYear": 2020,
+    "fdiInflows": 0.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 64.9,
+    "literacyRateYear": 2022
   },
   "BV": {
     "population": 0,
@@ -1866,7 +2022,13 @@
     "gini": 54.9,
     "giniYear": 2015,
     "mobileSubscriptions": 164,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 19.7,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 81.2,
+    "literacyRateYear": 2003
   },
   "BY": {
     "source": "World Bank (WDI)",
@@ -1922,7 +2084,13 @@
     "gini": 24.4,
     "giniYear": 2020,
     "mobileSubscriptions": 131.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 33.2,
+    "governmentDebtYear": 2019,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2019
   },
   "BZ": {
     "source": "World Bank (WDI)",
@@ -1976,7 +2144,13 @@
     "gini": 39.9,
     "giniYear": 2018,
     "mobileSubscriptions": 67.2,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 61,
+    "governmentDebtYear": 2014,
+    "fdiInflows": 0,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 87.9,
+    "literacyRateYear": 2022
   },
   "CA": {
     "source": "World Bank (WDI)",
@@ -2032,7 +2206,11 @@
     "gini": 31.5,
     "giniYear": 2022,
     "mobileSubscriptions": 94.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 64.1,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 3,
+    "fdiInflowsYear": 2025
   },
   "CC": {
     "population": 593,
@@ -2093,7 +2271,13 @@
     "gini": 44.7,
     "giniYear": 2020,
     "mobileSubscriptions": 58.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 14.9,
+    "governmentDebtYear": 2022,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 68.5,
+    "literacyRateYear": 2023
   },
   "CF": {
     "source": "World Bank (WDI)",
@@ -2147,7 +2331,11 @@
     "gini": 43,
     "giniYear": 2021,
     "mobileSubscriptions": 38.8,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 42.4,
+    "literacyRateYear": 2019
   },
   "CG": {
     "source": "World Bank (WDI)",
@@ -2203,7 +2391,13 @@
     "gini": 48.9,
     "giniYear": 2011,
     "mobileSubscriptions": 95.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 25.5,
+    "governmentDebtYear": 2010,
+    "fdiInflows": 3.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 76.1,
+    "literacyRateYear": 2005
   },
   "CH": {
     "source": "World Bank (WDI)",
@@ -2259,7 +2453,11 @@
     "gini": 33.8,
     "giniYear": 2022,
     "mobileSubscriptions": 129.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 22.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": -1.2,
+    "fdiInflowsYear": 2025
   },
   "CI": {
     "source": "World Bank (WDI)",
@@ -2315,7 +2513,13 @@
     "gini": 35.3,
     "giniYear": 2021,
     "mobileSubscriptions": 183.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 171.1,
+    "governmentDebtYear": 1995,
+    "fdiInflows": 3.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 50,
+    "literacyRateYear": 2021
   },
   "CK": {
     "nominal": 320000000,
@@ -2381,7 +2585,13 @@
     "gini": 43,
     "giniYear": 2024,
     "mobileSubscriptions": 132.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 13.1,
+    "governmentDebtYear": 2000,
+    "fdiInflows": 4.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.4,
+    "literacyRateYear": 2017
   },
   "CM": {
     "source": "World Bank (WDI)",
@@ -2437,7 +2647,13 @@
     "gini": 42.2,
     "giniYear": 2021,
     "mobileSubscriptions": 108.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 79.5,
+    "governmentDebtYear": 1999,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 72.6,
+    "literacyRateYear": 2018
   },
   "CN": {
     "source": "World Bank (WDI)",
@@ -2493,7 +2709,11 @@
     "gini": 36,
     "giniYear": 2022,
     "mobileSubscriptions": 131.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.7,
+    "literacyRateYear": 2020
   },
   "CO": {
     "source": "World Bank (WDI)",
@@ -2549,7 +2769,13 @@
     "gini": 54.4,
     "giniYear": 2024,
     "mobileSubscriptions": 174.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 71.2,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 95.3,
+    "literacyRateYear": 2024
   },
   "CR": {
     "source": "World Bank (WDI)",
@@ -2605,7 +2831,13 @@
     "gini": 45.5,
     "giniYear": 2025,
     "mobileSubscriptions": 136,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 39.3,
+    "governmentDebtYear": 2001,
+    "fdiInflows": 5.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.4,
+    "literacyRateYear": 2011
   },
   "CU": {
     "source": "World Bank (WDI)",
@@ -2653,7 +2885,9 @@
     "urbanPopulation": 77.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 72.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "literacyRate": 97.7,
+    "literacyRateYear": 2019
   },
   "CV": {
     "source": "World Bank (WDI)",
@@ -2707,7 +2941,11 @@
     "gini": 42.4,
     "giniYear": 2015,
     "mobileSubscriptions": 111.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 88.5,
+    "literacyRateYear": 2024
   },
   "CW": {
     "source": "World Bank (WDI)",
@@ -2753,7 +2991,9 @@
     "urbanPopulation": 91.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 93.8,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 4.3,
+    "fdiInflowsYear": 2024
   },
   "CX": {
     "population": 1692,
@@ -2814,7 +3054,13 @@
     "gini": 31.8,
     "giniYear": 2023,
     "mobileSubscriptions": 156.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 53.7,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 27.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.7,
+    "literacyRateYear": 2011
   },
   "CZ": {
     "source": "World Bank (WDI)",
@@ -2870,7 +3116,11 @@
     "gini": 25.7,
     "giniYear": 2023,
     "mobileSubscriptions": 126.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 14,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 2.7,
+    "fdiInflowsYear": 2025
   },
   "DE": {
     "source": "World Bank (WDI)",
@@ -2926,7 +3176,11 @@
     "gini": 33.7,
     "giniYear": 2022,
     "mobileSubscriptions": 129.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 20.9,
+    "governmentDebtYear": 1990,
+    "fdiInflows": 1.9,
+    "fdiInflowsYear": 2025
   },
   "DJ": {
     "source": "World Bank (WDI)",
@@ -2980,7 +3234,9 @@
     "gini": 41.6,
     "giniYear": 2017,
     "mobileSubscriptions": 48.5,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 1.6,
+    "fdiInflowsYear": 2024
   },
   "DK": {
     "source": "World Bank (WDI)",
@@ -3036,7 +3292,11 @@
     "gini": 29.9,
     "giniYear": 2023,
     "mobileSubscriptions": 126.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 75.3,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 4.3,
+    "fdiInflowsYear": 2024
   },
   "DM": {
     "source": "World Bank (WDI)",
@@ -3082,7 +3342,9 @@
     "urbanPopulation": 74,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 85.2,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 6.8,
+    "fdiInflowsYear": 2025
   },
   "DO": {
     "source": "World Bank (WDI)",
@@ -3138,7 +3400,13 @@
     "gini": 39,
     "giniYear": 2024,
     "mobileSubscriptions": 93.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 16.4,
+    "governmentDebtYear": 1999,
+    "fdiInflows": 3.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94,
+    "literacyRateYear": 2024
   },
   "DZ": {
     "source": "World Bank (WDI)",
@@ -3194,7 +3462,11 @@
     "gini": 27.6,
     "giniYear": 2011,
     "mobileSubscriptions": 115.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 75.1,
+    "literacyRateYear": 2008
   },
   "EC": {
     "source": "World Bank (WDI)",
@@ -3250,7 +3522,11 @@
     "gini": 45.9,
     "giniYear": 2025,
     "mobileSubscriptions": 101.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 93.5,
+    "literacyRateYear": 2024
   },
   "EE": {
     "source": "World Bank (WDI)",
@@ -3306,7 +3582,11 @@
     "gini": 30.7,
     "giniYear": 2023,
     "mobileSubscriptions": 151.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": -1.8,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2011
   },
   "EG": {
     "source": "World Bank (WDI)",
@@ -3362,7 +3642,13 @@
     "gini": 28.5,
     "giniYear": 2021,
     "mobileSubscriptions": 97.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 85.8,
+    "governmentDebtYear": 2007,
+    "fdiInflows": 4.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 79.5,
+    "literacyRateYear": 2022
   },
   "EH": {
     "population": 600904,
@@ -3417,7 +3703,11 @@
     "urbanPopulation": 34.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 59.1,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.9,
+    "fdiInflowsYear": 2011,
+    "literacyRate": 64.7,
+    "literacyRateYear": 2008
   },
   "ES": {
     "source": "World Bank (WDI)",
@@ -3473,7 +3763,13 @@
     "gini": 33.4,
     "giniYear": 2023,
     "mobileSubscriptions": 130.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 105.6,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.7,
+    "literacyRateYear": 2021
   },
   "ET": {
     "source": "World Bank (WDI)",
@@ -3529,7 +3825,13 @@
     "gini": 31.1,
     "giniYear": 2021,
     "mobileSubscriptions": 65.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 31.4,
+    "governmentDebtYear": 2019,
+    "fdiInflows": 2.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 60.5,
+    "literacyRateYear": 2022
   },
   "EU": {
     "source": "World Bank (WDI)",
@@ -3577,7 +3879,9 @@
     "urbanPopulation": 75.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 123.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2025
   },
   "FI": {
     "source": "World Bank (WDI)",
@@ -3633,7 +3937,11 @@
     "gini": 27.4,
     "giniYear": 2023,
     "mobileSubscriptions": 125.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 58.3,
+    "governmentDebtYear": 1994,
+    "fdiInflows": -0.1,
+    "fdiInflowsYear": 2025
   },
   "FJ": {
     "source": "World Bank (WDI)",
@@ -3687,7 +3995,11 @@
     "gini": 30.7,
     "giniYear": 2019,
     "mobileSubscriptions": 574.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 36.6,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 3.4,
+    "fdiInflowsYear": 2024
   },
   "FK": {
     "nominal": 300000000,
@@ -3749,7 +4061,11 @@
     "gini": 40.1,
     "giniYear": 2013,
     "mobileSubscriptions": 20,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 27.8,
+    "governmentDebtYear": 2020,
+    "fdiInflows": 6.4,
+    "fdiInflowsYear": 2014
   },
   "FO": {
     "source": "World Bank (WDI)",
@@ -3849,7 +4165,9 @@
     "gini": 31.8,
     "giniYear": 2023,
     "mobileSubscriptions": 116.7,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2025
   },
   "GA": {
     "source": "World Bank (WDI)",
@@ -3905,7 +4223,11 @@
     "gini": 38,
     "giniYear": 2017,
     "mobileSubscriptions": 125.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 5.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 88.9,
+    "literacyRateYear": 2021
   },
   "GB": {
     "source": "World Bank (WDI)",
@@ -3961,7 +4283,11 @@
     "gini": 32.4,
     "giniYear": 2021,
     "mobileSubscriptions": 121.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 130.7,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.9,
+    "fdiInflowsYear": 2025
   },
   "GD": {
     "source": "World Bank (WDI)",
@@ -4009,7 +4335,11 @@
     "gini": 43.8,
     "giniYear": 2018,
     "mobileSubscriptions": 95.8,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 12,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.8,
+    "literacyRateYear": 1970
   },
   "GE": {
     "source": "World Bank (WDI)",
@@ -4065,7 +4395,13 @@
     "gini": 33.9,
     "giniYear": 2024,
     "mobileSubscriptions": 161.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 40.1,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 4.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.7,
+    "literacyRateYear": 2024
   },
   "GF": {
     "population": 292354,
@@ -4136,7 +4472,11 @@
     "gini": 43.5,
     "giniYear": 2016,
     "mobileSubscriptions": 113.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 76.5,
+    "literacyRateYear": 2021
   },
   "GI": {
     "source": "World Bank (WDI)",
@@ -4264,7 +4604,11 @@
     "gini": 38.8,
     "giniYear": 2020,
     "mobileSubscriptions": 126.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 9.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 51.6,
+    "literacyRateYear": 2021
   },
   "GN": {
     "source": "World Bank (WDI)",
@@ -4318,7 +4662,11 @@
     "gini": 29.6,
     "giniYear": 2018,
     "mobileSubscriptions": 97.9,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 5.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 39.6,
+    "literacyRateYear": 2018
   },
   "GP": {
     "population": 373791,
@@ -4379,7 +4727,11 @@
     "gini": 38.5,
     "giniYear": 2022,
     "mobileSubscriptions": 49.5,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 88.3,
+    "literacyRateYear": 2000
   },
   "GR": {
     "source": "World Bank (WDI)",
@@ -4435,7 +4787,11 @@
     "gini": 33.4,
     "giniYear": 2023,
     "mobileSubscriptions": 113.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 93.9,
+    "literacyRateYear": 2009
   },
   "GS": {
     "population": 0,
@@ -4496,7 +4852,13 @@
     "gini": 45.2,
     "giniYear": 2023,
     "mobileSubscriptions": 112.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 25.2,
+    "governmentDebtYear": 2013,
+    "fdiInflows": 1.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 82.1,
+    "literacyRateYear": 2024
   },
   "GU": {
     "source": "World Bank (WDI)",
@@ -4532,7 +4894,9 @@
     "urbanPopulation": 94.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 59.8,
-    "mobileSubscriptionsYear": 2004
+    "mobileSubscriptionsYear": 2004,
+    "literacyRate": 99.4,
+    "literacyRateYear": 1990
   },
   "GW": {
     "source": "World Bank (WDI)",
@@ -4586,7 +4950,11 @@
     "gini": 33.4,
     "giniYear": 2021,
     "mobileSubscriptions": 147.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 63.9,
+    "literacyRateYear": 2022
   },
   "GY": {
     "source": "World Bank (WDI)",
@@ -4640,7 +5008,11 @@
     "gini": 45.1,
     "giniYear": 1998,
     "mobileSubscriptions": 112.6,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 35,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 85.6,
+    "literacyRateYear": 2020
   },
   "HK": {
     "source": "World Bank (WDI)",
@@ -4688,7 +5060,9 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 364.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 30.8,
+    "fdiInflowsYear": 2024
   },
   "HM": {
     "population": 0,
@@ -4749,7 +5123,11 @@
     "gini": 45.7,
     "giniYear": 2024,
     "mobileSubscriptions": 70.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 88.3,
+    "literacyRateYear": 2024
   },
   "HR": {
     "source": "World Bank (WDI)",
@@ -4805,7 +5183,11 @@
     "gini": 30.1,
     "giniYear": 2023,
     "mobileSubscriptions": 121.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 4.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 98.2,
+    "literacyRateYear": 2001
   },
   "HT": {
     "source": "World Bank (WDI)",
@@ -4861,7 +5243,11 @@
     "gini": 41.1,
     "giniYear": 2012,
     "mobileSubscriptions": 65.2,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 0.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68,
+    "literacyRateYear": 2017
   },
   "HU": {
     "source": "World Bank (WDI)",
@@ -4917,7 +5303,13 @@
     "gini": 30.6,
     "giniYear": 2017,
     "mobileSubscriptions": 104.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 82,
+    "governmentDebtYear": 2024,
+    "fdiInflows": -28.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.9,
+    "literacyRateYear": 1980
   },
   "ID": {
     "source": "World Bank (WDI)",
@@ -4973,7 +5365,13 @@
     "gini": 34.4,
     "giniYear": 2025,
     "mobileSubscriptions": 122.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 30,
+    "governmentDebtYear": 2009,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96,
+    "literacyRateYear": 2020
   },
   "IE": {
     "source": "World Bank (WDI)",
@@ -5029,7 +5427,9 @@
     "gini": 29,
     "giniYear": 2023,
     "mobileSubscriptions": 112.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.8,
+    "fdiInflowsYear": 2024
   },
   "IL": {
     "source": "World Bank (WDI)",
@@ -5085,7 +5485,13 @@
     "gini": 38.3,
     "giniYear": 2022,
     "mobileSubscriptions": 177.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 88.3,
+    "governmentDebtYear": 1999,
+    "fdiInflows": 4.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 91.8,
+    "literacyRateYear": 1983
   },
   "IM": {
     "source": "World Bank (WDI)",
@@ -5171,7 +5577,13 @@
     "gini": 25.5,
     "giniYear": 2022,
     "mobileSubscriptions": 79.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 46.5,
+    "governmentDebtYear": 2018,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 78.2,
+    "literacyRateYear": 2024
   },
   "IO": {
     "population": 0,
@@ -5232,7 +5644,13 @@
     "gini": 29.8,
     "giniYear": 2023,
     "mobileSubscriptions": 100.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 27.4,
+    "governmentDebtYear": 2018,
+    "fdiInflows": -2.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 84.1,
+    "literacyRateYear": 2021
   },
   "IR": {
     "source": "World Bank (WDI)",
@@ -5288,7 +5706,11 @@
     "gini": 35.9,
     "giniYear": 2023,
     "mobileSubscriptions": 174.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 88.9,
+    "literacyRateYear": 2023
   },
   "IS": {
     "source": "World Bank (WDI)",
@@ -5344,7 +5766,11 @@
     "gini": 26.8,
     "giniYear": 2019,
     "mobileSubscriptions": 120.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 80.1,
+    "governmentDebtYear": 2023,
+    "fdiInflows": -0.5,
+    "fdiInflowsYear": 2025
   },
   "IT": {
     "source": "World Bank (WDI)",
@@ -5400,7 +5826,13 @@
     "gini": 34.3,
     "giniYear": 2023,
     "mobileSubscriptions": 132.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 77.3,
+    "governmentDebtYear": 1992,
+    "fdiInflows": 0,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.3,
+    "literacyRateYear": 2019
   },
   "JE": {
     "nominal": 6800000000,
@@ -5492,7 +5924,13 @@
     "gini": 39.9,
     "giniYear": 2021,
     "mobileSubscriptions": 117.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 97.9,
+    "governmentDebtYear": 2020,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 79.9,
+    "literacyRateYear": 1999
   },
   "JO": {
     "source": "World Bank (WDI)",
@@ -5548,7 +5986,13 @@
     "gini": 33.7,
     "giniYear": 2010,
     "mobileSubscriptions": 69.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 93.6,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 2.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 94.4,
+    "literacyRateYear": 2024
   },
   "JP": {
     "source": "World Bank (WDI)",
@@ -5604,7 +6048,9 @@
     "gini": 32.3,
     "giniYear": 2020,
     "mobileSubscriptions": 178.4,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025
   },
   "KE": {
     "source": "World Bank (WDI)",
@@ -5660,7 +6106,11 @@
     "gini": 38.5,
     "giniYear": 2022,
     "mobileSubscriptions": 126.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 82.2,
+    "literacyRateYear": 2000
   },
   "KG": {
     "source": "World Bank (WDI)",
@@ -5716,7 +6166,13 @@
     "gini": 27.5,
     "giniYear": 2024,
     "mobileSubscriptions": 107.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 38.7,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.2,
+    "literacyRateYear": 2009
   },
   "KH": {
     "source": "World Bank (WDI)",
@@ -5770,7 +6226,13 @@
     "urbanPopulation": 41.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 116.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 50.3,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 9.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 71.9,
+    "literacyRateYear": 2021
   },
   "KI": {
     "source": "World Bank (WDI)",
@@ -5822,7 +6284,11 @@
     "gini": 24.7,
     "giniYear": 2023,
     "mobileSubscriptions": 53.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.6,
+    "literacyRateYear": 2020
   },
   "KM": {
     "source": "World Bank (WDI)",
@@ -5876,7 +6342,11 @@
     "gini": 30.3,
     "giniYear": 2024,
     "mobileSubscriptions": 109.9,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 0.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 75.6,
+    "literacyRateYear": 2021
   },
   "KN": {
     "source": "World Bank (WDI)",
@@ -5922,7 +6392,11 @@
     "urbanPopulation": 31.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 118.9,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 57.7,
+    "governmentDebtYear": 2014,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2025
   },
   "KP": {
     "source": "World Bank (WDI)",
@@ -5955,6 +6429,8 @@
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 24.1,
     "mobileSubscriptionsYear": 2022,
+    "literacyRate": 100,
+    "literacyRateYear": 2008,
     "nominal": 29500000000,
     "year": 2023,
     "perCapita": 1128,
@@ -6014,7 +6490,13 @@
     "gini": 32.9,
     "giniYear": 2021,
     "mobileSubscriptions": 172.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 47.8,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 0.8,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98,
+    "literacyRateYear": 2008
   },
   "KW": {
     "source": "World Bank (WDI)",
@@ -6068,7 +6550,11 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 167.7,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 0.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.5,
+    "literacyRateYear": 2020
   },
   "KY": {
     "source": "World Bank (WDI)",
@@ -6114,7 +6600,11 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 139.3,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 40.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 98.9,
+    "literacyRateYear": 2017
   },
   "KZ": {
     "source": "World Bank (WDI)",
@@ -6170,7 +6660,13 @@
     "gini": 29.2,
     "giniYear": 2021,
     "mobileSubscriptions": 127.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 20.9,
+    "governmentDebtYear": 2023,
+    "fdiInflows": -0.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.7,
+    "literacyRateYear": 2009
   },
   "LA": {
     "source": "World Bank (WDI)",
@@ -6226,7 +6722,11 @@
     "gini": 34.7,
     "giniYear": 2024,
     "mobileSubscriptions": 64.8,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 75.6,
+    "literacyRateYear": 2023
   },
   "LB": {
     "source": "World Bank (WDI)",
@@ -6282,7 +6782,13 @@
     "gini": 35.5,
     "giniYear": 2022,
     "mobileSubscriptions": 74,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 128.6,
+    "governmentDebtYear": 1999,
+    "fdiInflows": 7.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 92,
+    "literacyRateYear": 2019
   },
   "LC": {
     "source": "World Bank (WDI)",
@@ -6332,7 +6838,11 @@
     "gini": 43.7,
     "giniYear": 2015,
     "mobileSubscriptions": 98.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 45.9,
+    "governmentDebtYear": 2010,
+    "fdiInflows": 7.3,
+    "fdiInflowsYear": 2025
   },
   "LI": {
     "source": "World Bank (WDI)",
@@ -6366,7 +6876,9 @@
     "urbanPopulation": 14.6,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 128.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": -1303.1,
+    "fdiInflowsYear": 2018
   },
   "LK": {
     "source": "World Bank (WDI)",
@@ -6422,7 +6934,13 @@
     "gini": 37.7,
     "giniYear": 2019,
     "mobileSubscriptions": 132.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 73.5,
+    "governmentDebtYear": 2015,
+    "fdiInflows": 0.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 92.7,
+    "literacyRateYear": 2024
   },
   "LR": {
     "source": "World Bank (WDI)",
@@ -6472,7 +6990,11 @@
     "gini": 35.3,
     "giniYear": 2016,
     "mobileSubscriptions": 32.1,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 9.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 59.4,
+    "literacyRateYear": 2010
   },
   "LS": {
     "source": "World Bank (WDI)",
@@ -6526,7 +7048,13 @@
     "gini": 44.9,
     "giniYear": 2017,
     "mobileSubscriptions": 70.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 3,
+    "governmentDebtYear": 2020,
+    "fdiInflows": -0.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 90.4,
+    "literacyRateYear": 2024
   },
   "LT": {
     "source": "World Bank (WDI)",
@@ -6582,7 +7110,11 @@
     "gini": 36,
     "giniYear": 2023,
     "mobileSubscriptions": 138.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.8,
+    "literacyRateYear": 2011
   },
   "LU": {
     "source": "World Bank (WDI)",
@@ -6638,7 +7170,11 @@
     "gini": 33.6,
     "giniYear": 2023,
     "mobileSubscriptions": 144.5,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 2.9,
+    "governmentDebtYear": 1993,
+    "fdiInflows": -92.8,
+    "fdiInflowsYear": 2025
   },
   "LV": {
     "source": "World Bank (WDI)",
@@ -6694,7 +7230,13 @@
     "gini": 34,
     "giniYear": 2023,
     "mobileSubscriptions": 121.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 7.4,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2011
   },
   "LY": {
     "source": "World Bank (WDI)",
@@ -6748,7 +7290,11 @@
     "urbanPopulation": 87.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 193,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.8,
+    "fdiInflowsYear": 2023,
+    "literacyRate": 60.2,
+    "literacyRateYear": 1984
   },
   "MA": {
     "source": "World Bank (WDI)",
@@ -6804,7 +7350,13 @@
     "gini": 39.5,
     "giniYear": 2013,
     "mobileSubscriptions": 153.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 51.2,
+    "governmentDebtYear": 2011,
+    "fdiInflows": 1.8,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 64.3,
+    "literacyRateYear": 2014
   },
   "MC": {
     "source": "World Bank (WDI)",
@@ -6890,7 +7442,13 @@
     "gini": 26.8,
     "giniYear": 2023,
     "mobileSubscriptions": 120.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 34.3,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 2.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.4,
+    "literacyRateYear": 2014
   },
   "ME": {
     "source": "World Bank (WDI)",
@@ -6940,7 +7498,11 @@
     "gini": 34.3,
     "giniYear": 2021,
     "mobileSubscriptions": 221.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 7.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.5,
+    "literacyRateYear": 2018
   },
   "MF": {
     "source": "World Bank (WDI)",
@@ -7018,7 +7580,11 @@
     "gini": 36.8,
     "giniYear": 2021,
     "mobileSubscriptions": 75.5,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 3.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 74.7,
+    "literacyRateYear": 2021
   },
   "MH": {
     "source": "World Bank (WDI)",
@@ -7068,7 +7634,13 @@
     "gini": 35.5,
     "giniYear": 2019,
     "mobileSubscriptions": 39.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 41.6,
+    "governmentDebtYear": 2019,
+    "fdiInflows": 4.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 95.8,
+    "literacyRateYear": 2021
   },
   "MK": {
     "source": "World Bank (WDI)",
@@ -7124,7 +7696,11 @@
     "gini": 33.5,
     "giniYear": 2019,
     "mobileSubscriptions": 108.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.1,
+    "literacyRateYear": 2002
   },
   "ML": {
     "source": "World Bank (WDI)",
@@ -7178,7 +7754,11 @@
     "gini": 35.7,
     "giniYear": 2021,
     "mobileSubscriptions": 112.1,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 3.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 35.6,
+    "literacyRateYear": 2024
   },
   "MM": {
     "source": "World Bank (WDI)",
@@ -7230,7 +7810,11 @@
     "gini": 30.7,
     "giniYear": 2017,
     "mobileSubscriptions": 114.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 93.5,
+    "literacyRateYear": 2020
   },
   "MN": {
     "source": "World Bank (WDI)",
@@ -7286,7 +7870,13 @@
     "gini": 31.4,
     "giniYear": 2022,
     "mobileSubscriptions": 140.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 43.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 11.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 98.6,
+    "literacyRateYear": 2024
   },
   "MO": {
     "source": "World Bank (WDI)",
@@ -7330,7 +7920,11 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 201.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 96.5,
+    "literacyRateYear": 2016
   },
   "MP": {
     "source": "World Bank (WDI)",
@@ -7423,7 +8017,11 @@
     "gini": 32,
     "giniYear": 2019,
     "mobileSubscriptions": 92.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 13.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 59.5,
+    "literacyRateYear": 2020
   },
   "MS": {
     "nominal": 75000000,
@@ -7489,7 +8087,13 @@
     "gini": 31.8,
     "giniYear": 2023,
     "mobileSubscriptions": 142.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 30,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 170.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 93.3,
+    "literacyRateYear": 2011
   },
   "MU": {
     "source": "World Bank (WDI)",
@@ -7545,7 +8149,13 @@
     "gini": 36.8,
     "giniYear": 2017,
     "mobileSubscriptions": 172.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 57.1,
+    "governmentDebtYear": 2019,
+    "fdiInflows": 4.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 94.3,
+    "literacyRateYear": 2023
   },
   "MV": {
     "source": "World Bank (WDI)",
@@ -7599,7 +8209,13 @@
     "gini": 29.3,
     "giniYear": 2019,
     "mobileSubscriptions": 148.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 57.3,
+    "governmentDebtYear": 2011,
+    "fdiInflows": 11.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 98.2,
+    "literacyRateYear": 2019
   },
   "MW": {
     "source": "World Bank (WDI)",
@@ -7653,7 +8269,13 @@
     "gini": 38.5,
     "giniYear": 2019,
     "mobileSubscriptions": 69.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 61.8,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 2.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 70.2,
+    "literacyRateYear": 2020
   },
   "MX": {
     "source": "World Bank (WDI)",
@@ -7709,7 +8331,13 @@
     "gini": 42.6,
     "giniYear": 2024,
     "mobileSubscriptions": 116.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 50.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 95.6,
+    "literacyRateYear": 2024
   },
   "MY": {
     "source": "World Bank (WDI)",
@@ -7765,7 +8393,13 @@
     "gini": 40.7,
     "giniYear": 2021,
     "mobileSubscriptions": 139.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 64.6,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 3.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 95.8,
+    "literacyRateYear": 2022
   },
   "MZ": {
     "source": "World Bank (WDI)",
@@ -7821,7 +8455,13 @@
     "gini": 49.6,
     "giniYear": 2022,
     "mobileSubscriptions": 49.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 71.8,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 15.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 61.7,
+    "literacyRateYear": 2022
   },
   "NA": {
     "source": "World Bank (WDI)",
@@ -7877,7 +8517,13 @@
     "gini": 59.1,
     "giniYear": 2015,
     "mobileSubscriptions": 85.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 4.7,
+    "governmentDebtYear": 2015,
+    "fdiInflows": 14.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 87.6,
+    "literacyRateYear": 2023
   },
   "NC": {
     "source": "World Bank (WDI)",
@@ -7921,7 +8567,11 @@
     "urbanPopulation": 68.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 91.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 8.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 96.1,
+    "literacyRateYear": 1996
   },
   "NE": {
     "source": "World Bank (WDI)",
@@ -7977,7 +8627,11 @@
     "gini": 32.9,
     "giniYear": 2021,
     "mobileSubscriptions": 60.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 35.6,
+    "literacyRateYear": 2022
   },
   "NF": {
     "population": 2188,
@@ -8038,7 +8692,11 @@
     "gini": 33.9,
     "giniYear": 2022,
     "mobileSubscriptions": 70.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 70.4,
+    "literacyRateYear": 2024
   },
   "NI": {
     "source": "World Bank (WDI)",
@@ -8094,7 +8752,11 @@
     "gini": 46.2,
     "giniYear": 2014,
     "mobileSubscriptions": 106,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 6.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 87.3,
+    "literacyRateYear": 2014
   },
   "NL": {
     "source": "World Bank (WDI)",
@@ -8150,7 +8812,11 @@
     "gini": 25.7,
     "giniYear": 2021,
     "mobileSubscriptions": 128.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 54.2,
+    "governmentDebtYear": 1994,
+    "fdiInflows": -1.4,
+    "fdiInflowsYear": 2024
   },
   "NO": {
     "source": "World Bank (WDI)",
@@ -8206,7 +8872,11 @@
     "gini": 26.5,
     "giniYear": 2023,
     "mobileSubscriptions": 109.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 30.9,
+    "governmentDebtYear": 1994,
+    "fdiInflows": -1.5,
+    "fdiInflowsYear": 2025
   },
   "NP": {
     "source": "World Bank (WDI)",
@@ -8262,7 +8932,13 @@
     "gini": 30,
     "giniYear": 2022,
     "mobileSubscriptions": 99.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 39.9,
+    "governmentDebtYear": 2021,
+    "fdiInflows": 0.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68.7,
+    "literacyRateYear": 2019
   },
   "NR": {
     "source": "World Bank (WDI)",
@@ -8308,7 +8984,11 @@
     "gini": 32.4,
     "giniYear": 2012,
     "mobileSubscriptions": 87.2,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": -3.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 96.6,
+    "literacyRateYear": 2023
   },
   "NU": {
     "nominal": 35000000,
@@ -8372,7 +9052,11 @@
     "urbanPopulation": 84,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 130.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 52,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2025
   },
   "OE": {
     "source": "World Bank (WDI)",
@@ -8420,7 +9104,13 @@
     "urbanPopulation": 81.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 122.3,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 44.5,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.2,
+    "literacyRateYear": 2020
   },
   "OM": {
     "source": "World Bank (WDI)",
@@ -8474,7 +9164,11 @@
     "urbanPopulation": 79.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 120.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 11.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 97.3,
+    "literacyRateYear": 2022
   },
   "PA": {
     "source": "World Bank (WDI)",
@@ -8530,7 +9224,11 @@
     "gini": 49.7,
     "giniYear": 2024,
     "mobileSubscriptions": 156.6,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.2,
+    "literacyRateYear": 2024
   },
   "PE": {
     "source": "World Bank (WDI)",
@@ -8586,7 +9284,13 @@
     "gini": 40.1,
     "giniYear": 2024,
     "mobileSubscriptions": 124.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 35.2,
+    "governmentDebtYear": 2021,
+    "fdiInflows": 3.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 93.7,
+    "literacyRateYear": 2024
   },
   "PF": {
     "source": "World Bank (WDI)",
@@ -8628,7 +9332,9 @@
     "urbanPopulation": 61.8,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 118.8,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": -0.2,
+    "fdiInflowsYear": 2024
   },
   "PG": {
     "source": "World Bank (WDI)",
@@ -8682,7 +9388,13 @@
     "gini": 41.9,
     "giniYear": 2009,
     "mobileSubscriptions": 38.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 52,
+    "governmentDebtYear": 2024,
+    "fdiInflows": -0.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 87,
+    "literacyRateYear": 2022
   },
   "PH": {
     "source": "World Bank (WDI)",
@@ -8738,7 +9450,13 @@
     "gini": 39.3,
     "giniYear": 2023,
     "mobileSubscriptions": 115.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 43.4,
+    "governmentDebtYear": 2014,
+    "fdiInflows": 1.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.5,
+    "literacyRateYear": 2020
   },
   "PK": {
     "source": "World Bank (WDI)",
@@ -8794,7 +9512,13 @@
     "gini": 33.5,
     "giniYear": 2024,
     "mobileSubscriptions": 76.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 55,
+    "governmentDebtYear": 2000,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 58.9,
+    "literacyRateYear": 2021
   },
   "PL": {
     "source": "World Bank (WDI)",
@@ -8850,7 +9574,13 @@
     "gini": 28.5,
     "giniYear": 2023,
     "mobileSubscriptions": 138,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 60.5,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 1.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.7,
+    "literacyRateYear": 1978
   },
   "PM": {
     "nominal": 280000000,
@@ -8911,7 +9641,9 @@
     "urbanPopulation": 94.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 126.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "literacyRate": 92.4,
+    "literacyRateYear": 2017
   },
   "PS": {
     "source": "World Bank (WDI)",
@@ -8959,7 +9691,11 @@
     "gini": 36.4,
     "giniYear": 2023,
     "mobileSubscriptions": 76.7,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 1.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.9,
+    "literacyRateYear": 2024
   },
   "PT": {
     "source": "World Bank (WDI)",
@@ -9015,7 +9751,13 @@
     "gini": 33.9,
     "giniYear": 2023,
     "mobileSubscriptions": 124.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 5.7,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 4.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 94.5,
+    "literacyRateYear": 2011
   },
   "PW": {
     "source": "World Bank (WDI)",
@@ -9065,7 +9807,13 @@
     "urbanPopulation": 79.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 135.4,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 85.2,
+    "governmentDebtYear": 2019,
+    "fdiInflows": 21.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.8,
+    "literacyRateYear": 2020
   },
   "PY": {
     "source": "World Bank (WDI)",
@@ -9121,7 +9869,11 @@
     "gini": 44.2,
     "giniYear": 2024,
     "mobileSubscriptions": 126.6,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94.9,
+    "literacyRateYear": 2024
   },
   "QA": {
     "source": "World Bank (WDI)",
@@ -9177,7 +9929,11 @@
     "gini": 35.1,
     "giniYear": 2017,
     "mobileSubscriptions": 153.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.8,
+    "literacyRateYear": 2014
   },
   "RE": {
     "population": 896175,
@@ -9238,7 +9994,11 @@
     "gini": 29.8,
     "giniYear": 2023,
     "mobileSubscriptions": 119.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.2,
+    "literacyRateYear": 2021
   },
   "RS": {
     "source": "World Bank (WDI)",
@@ -9288,7 +10048,11 @@
     "gini": 32.8,
     "giniYear": 2023,
     "mobileSubscriptions": 123.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.3,
+    "literacyRateYear": 2022
   },
   "RU": {
     "source": "World Bank (WDI)",
@@ -9344,7 +10108,13 @@
     "gini": 33,
     "giniYear": 2023,
     "mobileSubscriptions": 186.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 17.9,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 0.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2021
   },
   "RW": {
     "source": "World Bank (WDI)",
@@ -9400,7 +10170,13 @@
     "gini": 39.4,
     "giniYear": 2023,
     "mobileSubscriptions": 93.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 48.4,
+    "governmentDebtYear": 1992,
+    "fdiInflows": 3.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 78.8,
+    "literacyRateYear": 2022
   },
   "S1": {
     "source": "World Bank (WDI)",
@@ -9448,7 +10224,11 @@
     "urbanPopulation": 52.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 161.6,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 88,
+    "literacyRateYear": 2024
   },
   "S2": {
     "source": "World Bank (WDI)",
@@ -9494,7 +10274,9 @@
     "urbanPopulation": 40.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 76.2,
-    "mobileSubscriptionsYear": 2021
+    "mobileSubscriptionsYear": 2021,
+    "fdiInflows": 2.9,
+    "fdiInflowsYear": 2024
   },
   "S3": {
     "source": "World Bank (WDI)",
@@ -9536,7 +10318,13 @@
     "urbanPopulation": 50.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 109.1,
-    "mobileSubscriptionsYear": 2021
+    "mobileSubscriptionsYear": 2021,
+    "governmentDebt": 27.2,
+    "governmentDebtYear": 2007,
+    "fdiInflows": 11.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 91,
+    "literacyRateYear": 2008
   },
   "S4": {
     "source": "World Bank (WDI)",
@@ -9582,7 +10370,11 @@
     "urbanPopulation": 55.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 124.9,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 7.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 87.1,
+    "literacyRateYear": 2024
   },
   "SA": {
     "source": "World Bank (WDI)",
@@ -9636,7 +10428,11 @@
     "urbanPopulation": 84.6,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 159.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.9,
+    "literacyRateYear": 2024
   },
   "SB": {
     "source": "World Bank (WDI)",
@@ -9690,7 +10486,13 @@
     "gini": 37.1,
     "giniYear": 2012,
     "mobileSubscriptions": 62.1,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 26,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 76.6,
+    "literacyRateYear": 1999
   },
   "SC": {
     "source": "World Bank (WDI)",
@@ -9742,7 +10544,13 @@
     "gini": 32.1,
     "giniYear": 2018,
     "mobileSubscriptions": 125.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 174.7,
+    "governmentDebtYear": 2008,
+    "fdiInflows": 10.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 93.9,
+    "literacyRateYear": 2010
   },
   "SD": {
     "source": "World Bank (WDI)",
@@ -9798,7 +10606,13 @@
     "gini": 34.2,
     "giniYear": 2014,
     "mobileSubscriptions": 70.2,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 865.9,
+    "governmentDebtYear": 1999,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2023,
+    "literacyRate": 53.5,
+    "literacyRateYear": 2008
   },
   "SE": {
     "source": "World Bank (WDI)",
@@ -9854,7 +10668,9 @@
     "gini": 29.3,
     "giniYear": 2023,
     "mobileSubscriptions": 140.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.9,
+    "fdiInflowsYear": 2025
   },
   "SG": {
     "source": "World Bank (WDI)",
@@ -9908,7 +10724,13 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 170.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 167.8,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 26.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.7,
+    "literacyRateYear": 2021
   },
   "SH": {
     "nominal": 40000000,
@@ -9974,7 +10796,13 @@
     "gini": 24.7,
     "giniYear": 2023,
     "mobileSubscriptions": 130.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 16.2,
+    "governmentDebtYear": 1994,
+    "fdiInflows": 2.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.5,
+    "literacyRateYear": 1991
   },
   "SJ": {
     "population": 0,
@@ -10035,7 +10863,9 @@
     "gini": 23.8,
     "giniYear": 2023,
     "mobileSubscriptions": 140,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025
   },
   "SL": {
     "source": "World Bank (WDI)",
@@ -10089,7 +10919,11 @@
     "gini": 35.7,
     "giniYear": 2018,
     "mobileSubscriptions": 107.9,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 43.6,
+    "literacyRateYear": 2019
   },
   "SM": {
     "source": "World Bank (WDI)",
@@ -10131,7 +10965,13 @@
     "urbanPopulation": 97.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 120.3,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 99.9,
+    "governmentDebtYear": 2023,
+    "fdiInflows": -0.9,
+    "fdiInflowsYear": 2023,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2022
   },
   "SN": {
     "source": "World Bank (WDI)",
@@ -10187,7 +11027,11 @@
     "gini": 36.2,
     "giniYear": 2021,
     "mobileSubscriptions": 123.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 6.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 50.4,
+    "literacyRateYear": 2023
   },
   "SO": {
     "source": "World Bank (WDI)",
@@ -10235,7 +11079,13 @@
     "urbanPopulation": 55.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 54,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 12.7,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 6.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 54.1,
+    "literacyRateYear": 2022
   },
   "SR": {
     "source": "World Bank (WDI)",
@@ -10291,7 +11141,11 @@
     "gini": 39.2,
     "giniYear": 2022,
     "mobileSubscriptions": 142.1,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 45.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 92.9,
+    "literacyRateYear": 2012
   },
   "SS": {
     "source": "World Bank (WDI)",
@@ -10341,7 +11195,11 @@
     "gini": 44,
     "giniYear": 2016,
     "mobileSubscriptions": 46.6,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": 0,
+    "fdiInflowsYear": 2015,
+    "literacyRate": 26.8,
+    "literacyRateYear": 2008
   },
   "ST": {
     "source": "World Bank (WDI)",
@@ -10395,7 +11253,11 @@
     "gini": 40.7,
     "giniYear": 2017,
     "mobileSubscriptions": 62.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": -2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 87.4,
+    "literacyRateYear": 2019
   },
   "SV": {
     "source": "World Bank (WDI)",
@@ -10451,7 +11313,13 @@
     "gini": 39.8,
     "giniYear": 2023,
     "mobileSubscriptions": 176.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 107.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 89.8,
+    "literacyRateYear": 2024
   },
   "SX": {
     "source": "World Bank (WDI)",
@@ -10489,7 +11357,9 @@
     "urbanPopulation": 100,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 205.4,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2024
   },
   "SY": {
     "source": "World Bank (WDI)",
@@ -10545,7 +11415,11 @@
     "gini": 26.4,
     "giniYear": 2022,
     "mobileSubscriptions": 71.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.2,
+    "fdiInflowsYear": 2011,
+    "literacyRate": 94.4,
+    "literacyRateYear": 2021
   },
   "SZ": {
     "source": "World Bank (WDI)",
@@ -10601,7 +11475,13 @@
     "gini": 54.6,
     "giniYear": 2016,
     "mobileSubscriptions": 139.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 35.7,
+    "governmentDebtYear": 2021,
+    "fdiInflows": 1.6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 90.8,
+    "literacyRateYear": 2022
   },
   "T2": {
     "source": "World Bank (WDI)",
@@ -10655,7 +11535,13 @@
     "urbanPopulation": 81.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 117.5,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 70.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94.9,
+    "literacyRateYear": 2024
   },
   "T3": {
     "source": "World Bank (WDI)",
@@ -10709,7 +11595,9 @@
     "urbanPopulation": 52.6,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 101.1,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2024
   },
   "T4": {
     "source": "World Bank (WDI)",
@@ -10763,7 +11651,11 @@
     "urbanPopulation": 62,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 131,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 0.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.8,
+    "literacyRateYear": 2024
   },
   "T5": {
     "source": "World Bank (WDI)",
@@ -10817,7 +11709,13 @@
     "urbanPopulation": 35.8,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 81.7,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 46.6,
+    "governmentDebtYear": 2018,
+    "fdiInflows": 0.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 78.2,
+    "literacyRateYear": 2024
   },
   "T6": {
     "source": "World Bank (WDI)",
@@ -10871,7 +11769,11 @@
     "urbanPopulation": 44.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 90.4,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68.7,
+    "literacyRateYear": 2024
   },
   "T7": {
     "source": "World Bank (WDI)",
@@ -10925,7 +11827,13 @@
     "urbanPopulation": 69.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 142.4,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 24.2,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.4,
+    "literacyRateYear": 2024
   },
   "TC": {
     "source": "World Bank (WDI)",
@@ -10965,7 +11873,9 @@
     "urbanPopulation": 94.4,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 109.8,
-    "mobileSubscriptionsYear": 2004
+    "mobileSubscriptionsYear": 2004,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2024
   },
   "TD": {
     "source": "World Bank (WDI)",
@@ -11021,7 +11931,11 @@
     "gini": 37.4,
     "giniYear": 2022,
     "mobileSubscriptions": 72.9,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 5.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 30.6,
+    "literacyRateYear": 2019
   },
   "TF": {
     "population": 0,
@@ -11082,7 +11996,11 @@
     "gini": 37.9,
     "giniYear": 2021,
     "mobileSubscriptions": 80.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 0.8,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 72.6,
+    "literacyRateYear": 2022
   },
   "TH": {
     "source": "World Bank (WDI)",
@@ -11138,7 +12056,13 @@
     "gini": 33.3,
     "giniYear": 2024,
     "mobileSubscriptions": 160.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 61.9,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 3.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 91.1,
+    "literacyRateYear": 2022
   },
   "TJ": {
     "source": "World Bank (WDI)",
@@ -11194,7 +12118,13 @@
     "gini": 36.1,
     "giniYear": 2024,
     "mobileSubscriptions": 76.2,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 79.8,
+    "governmentDebtYear": 2001,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 99.7,
+    "literacyRateYear": 2009
   },
   "TK": {
     "nominal": 15000000,
@@ -11258,7 +12188,11 @@
     "gini": 28.7,
     "giniYear": 2014,
     "mobileSubscriptions": 116.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 13.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 69.4,
+    "literacyRateYear": 2022
   },
   "TM": {
     "source": "World Bank (WDI)",
@@ -11312,7 +12246,11 @@
     "gini": 40.8,
     "giniYear": 1998,
     "mobileSubscriptions": 88.2,
-    "mobileSubscriptionsYear": 2021
+    "mobileSubscriptionsYear": 2021,
+    "fdiInflows": 3.7,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.9,
+    "literacyRateYear": 2022
   },
   "TN": {
     "source": "World Bank (WDI)",
@@ -11368,7 +12306,13 @@
     "gini": 33.7,
     "giniYear": 2021,
     "mobileSubscriptions": 117.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 42.5,
+    "governmentDebtYear": 2012,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 86.3,
+    "literacyRateYear": 2023
   },
   "TO": {
     "source": "World Bank (WDI)",
@@ -11422,7 +12366,13 @@
     "gini": 27.1,
     "giniYear": 2021,
     "mobileSubscriptions": 61.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 43.1,
+    "governmentDebtYear": 2020,
+    "fdiInflows": -1.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.5,
+    "literacyRateYear": 2023
   },
   "TR": {
     "source": "World Bank (WDI)",
@@ -11478,7 +12428,13 @@
     "gini": 43.7,
     "giniYear": 2023,
     "mobileSubscriptions": 107.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 26.6,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 0.9,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 97.3,
+    "literacyRateYear": 2021
   },
   "TT": {
     "source": "World Bank (WDI)",
@@ -11530,7 +12486,13 @@
     "gini": 40.2,
     "giniYear": 1992,
     "mobileSubscriptions": 118.8,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 15.9,
+    "governmentDebtYear": 2007,
+    "fdiInflows": -3.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.9,
+    "literacyRateYear": 1990
   },
   "TV": {
     "source": "World Bank (WDI)",
@@ -11576,7 +12538,11 @@
     "gini": 39.1,
     "giniYear": 2010,
     "mobileSubscriptions": 98.9,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 0.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 100,
+    "literacyRateYear": 2022
   },
   "TW": {
     "nominal": 790728000000,
@@ -11631,6 +12597,12 @@
     "giniYear": 2023,
     "mobileSubscriptions": 132.5,
     "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 27.2,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99,
+    "literacyRateYear": 2024,
     "source": "IMF World Economic Outlook / DGBAS",
     "populationSource": "IMF World Economic Outlook / DGBAS"
   },
@@ -11688,7 +12660,11 @@
     "gini": 40.5,
     "giniYear": 2018,
     "mobileSubscriptions": 126.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 78.2,
+    "literacyRateYear": 2022
   },
   "UA": {
     "source": "World Bank (WDI)",
@@ -11744,7 +12720,13 @@
     "gini": 25.6,
     "giniYear": 2020,
     "mobileSubscriptions": 133.4,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 58.7,
+    "governmentDebtYear": 2020,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 99.4,
+    "literacyRateYear": 2001
   },
   "UG": {
     "source": "World Bank (WDI)",
@@ -11800,7 +12782,13 @@
     "gini": 42.7,
     "giniYear": 2019,
     "mobileSubscriptions": 83.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 54.4,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 6,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 77,
+    "literacyRateYear": 2024
   },
   "UM": {
     "population": 0,
@@ -11861,7 +12849,11 @@
     "gini": 41.8,
     "giniYear": 2024,
     "mobileSubscriptions": 113.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 115.8,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025
   },
   "UY": {
     "source": "World Bank (WDI)",
@@ -11917,7 +12909,13 @@
     "gini": 40,
     "giniYear": 2024,
     "mobileSubscriptions": 145.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 65.3,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.9,
+    "literacyRateYear": 2024
   },
   "UZ": {
     "source": "World Bank (WDI)",
@@ -11973,7 +12971,11 @@
     "gini": 32.7,
     "giniYear": 2025,
     "mobileSubscriptions": 110.5,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 100,
+    "literacyRateYear": 2022
   },
   "V1": {
     "source": "World Bank (WDI)",
@@ -12021,7 +13023,11 @@
     "urbanPopulation": 46,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 86.8,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 67.7,
+    "literacyRateYear": 2024
   },
   "V2": {
     "source": "World Bank (WDI)",
@@ -12069,7 +13075,11 @@
     "urbanPopulation": 47.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 96.4,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 82.1,
+    "literacyRateYear": 2024
   },
   "V3": {
     "source": "World Bank (WDI)",
@@ -12117,7 +13127,11 @@
     "urbanPopulation": 67.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 126.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.8,
+    "literacyRateYear": 2024
   },
   "V4": {
     "source": "World Bank (WDI)",
@@ -12165,7 +13179,11 @@
     "urbanPopulation": 81.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 124.4,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "governmentDebt": 44.1,
+    "governmentDebtYear": 1992,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025
   },
   "VA": {
     "nominal": 25000000,
@@ -12223,7 +13241,13 @@
     "urbanPopulation": 48,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 108.4,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 53.7,
+    "governmentDebtYear": 2009,
+    "fdiInflows": 8.9,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 95.6,
+    "literacyRateYear": 1970
   },
   "VE": {
     "source": "World Bank (WDI)",
@@ -12279,7 +13303,11 @@
     "gini": 44.7,
     "giniYear": 2006,
     "mobileSubscriptions": 71,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 97.2,
+    "literacyRateYear": 2017
   },
   "VG": {
     "source": "World Bank (WDI)",
@@ -12403,7 +13431,11 @@
     "gini": 36.1,
     "giniYear": 2022,
     "mobileSubscriptions": 127.6,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 4.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 96.1,
+    "literacyRateYear": 2022
   },
   "VU": {
     "source": "World Bank (WDI)",
@@ -12457,7 +13489,13 @@
     "gini": 32.3,
     "giniYear": 2019,
     "mobileSubscriptions": 89.3,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "governmentDebt": 67.9,
+    "governmentDebtYear": 2023,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 88,
+    "literacyRateYear": 2023
   },
   "WF": {
     "nominal": 200000000,
@@ -12521,7 +13559,11 @@
     "gini": 38.7,
     "giniYear": 2013,
     "mobileSubscriptions": 62.4,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 0.2,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98,
+    "literacyRateYear": 2019
   },
   "XC": {
     "source": "World Bank (WDI)",
@@ -12569,7 +13611,9 @@
     "urbanPopulation": 77.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 123.5,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 0.6,
+    "fdiInflowsYear": 2025
   },
   "XD": {
     "source": "World Bank (WDI)",
@@ -12619,7 +13663,11 @@
     "urbanPopulation": 80.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 141.6,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 97.7,
+    "literacyRateYear": 2020
   },
   "XE": {
     "source": "World Bank (WDI)",
@@ -12667,7 +13715,11 @@
     "urbanPopulation": 38.3,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 76.7,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 4.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 66.6,
+    "literacyRateYear": 2024
   },
   "XF": {
     "source": "World Bank (WDI)",
@@ -12721,7 +13773,11 @@
     "urbanPopulation": 58.6,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 115.9,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 90.7,
+    "literacyRateYear": 2024
   },
   "XG": {
     "source": "World Bank (WDI)",
@@ -12775,7 +13831,11 @@
     "urbanPopulation": 41.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 87.1,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 70.1,
+    "literacyRateYear": 2024
   },
   "XH": {
     "source": "World Bank (WDI)",
@@ -12827,7 +13887,11 @@
     "urbanPopulation": 49.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 84.2,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 69.2,
+    "literacyRateYear": 2024
   },
   "XI": {
     "source": "World Bank (WDI)",
@@ -12881,7 +13945,11 @@
     "urbanPopulation": 36.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 88.6,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 3.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 70.9,
+    "literacyRateYear": 2024
   },
   "XJ": {
     "source": "World Bank (WDI)",
@@ -12931,7 +13999,13 @@
     "urbanPopulation": 81.4,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 117.7,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 70.4,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 2.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94.7,
+    "literacyRateYear": 2024
   },
   "XK": {
     "source": "World Bank (WDI)",
@@ -12975,7 +14049,9 @@
     "gini": 38.3,
     "giniYear": 2022,
     "mobileSubscriptions": 34.5,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 10,
+    "fdiInflowsYear": 2025
   },
   "XL": {
     "source": "World Bank (WDI)",
@@ -13025,7 +14101,11 @@
     "urbanPopulation": 36.6,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 86.3,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.5,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68.3,
+    "literacyRateYear": 2024
   },
   "XM": {
     "source": "World Bank (WDI)",
@@ -13075,7 +14155,11 @@
     "urbanPopulation": 35.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 69.3,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 63.6,
+    "literacyRateYear": 2024
   },
   "XN": {
     "source": "World Bank (WDI)",
@@ -13125,7 +14209,11 @@
     "urbanPopulation": 42,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 89.9,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 78.3,
+    "literacyRateYear": 2024
   },
   "XO": {
     "source": "World Bank (WDI)",
@@ -13173,7 +14261,11 @@
     "urbanPopulation": 53.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 104.4,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 85.7,
+    "literacyRateYear": 2024
   },
   "XP": {
     "source": "World Bank (WDI)",
@@ -13221,7 +14313,11 @@
     "urbanPopulation": 55.4,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 108.3,
-    "mobileSubscriptionsYear": 2022
+    "mobileSubscriptionsYear": 2022,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 87.8,
+    "literacyRateYear": 2024
   },
   "XQ": {
     "source": "World Bank (WDI)",
@@ -13271,7 +14367,9 @@
     "urbanPopulation": 52.9,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 101,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2024
   },
   "XT": {
     "source": "World Bank (WDI)",
@@ -13321,7 +14419,11 @@
     "urbanPopulation": 68.2,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 132.4,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.2,
+    "literacyRateYear": 2024
   },
   "XU": {
     "source": "World Bank (WDI)",
@@ -13371,7 +14473,13 @@
     "urbanPopulation": 80.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 112,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 111.4,
+    "governmentDebtYear": 2024,
+    "fdiInflows": 1.4,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.8,
+    "literacyRateYear": 2022
   },
   "YE": {
     "source": "World Bank (WDI)",
@@ -13427,7 +14535,11 @@
     "gini": 36.7,
     "giniYear": 2014,
     "mobileSubscriptions": 50.9,
-    "mobileSubscriptionsYear": 2023
+    "mobileSubscriptionsYear": 2023,
+    "fdiInflows": -1.3,
+    "fdiInflowsYear": 2018,
+    "literacyRate": 37.1,
+    "literacyRateYear": 1994
   },
   "YT": {
     "population": 337011,
@@ -13482,7 +14594,11 @@
     "urbanPopulation": 64.8,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 135.1,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.3,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 96.6,
+    "literacyRateYear": 2024
   },
   "Z7": {
     "source": "World Bank (WDI)",
@@ -13532,7 +14648,11 @@
     "urbanPopulation": 74.1,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 134.6,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 0.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 98.8,
+    "literacyRateYear": 2023
   },
   "ZA": {
     "source": "World Bank (WDI)",
@@ -13588,7 +14708,13 @@
     "gini": 54.1,
     "giniYear": 2022,
     "mobileSubscriptions": 179.3,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 82.8,
+    "governmentDebtYear": 2024,
+    "fdiInflows": -0.5,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 91.2,
+    "literacyRateYear": 2024
   },
   "ZF": {
     "source": "World Bank (WDI)",
@@ -13642,7 +14768,11 @@
     "urbanPopulation": 44.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 92.7,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.2,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68.7,
+    "literacyRateYear": 2024
   },
   "ZG": {
     "source": "World Bank (WDI)",
@@ -13692,7 +14822,11 @@
     "urbanPopulation": 44.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 90.4,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 68.7,
+    "literacyRateYear": 2024
   },
   "ZH": {
     "source": "World Bank (WDI)",
@@ -13742,7 +14876,11 @@
     "urbanPopulation": 38.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 93.1,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 73.7,
+    "literacyRateYear": 2024
   },
   "ZI": {
     "source": "World Bank (WDI)",
@@ -13788,7 +14926,11 @@
     "urbanPopulation": 53.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 86.5,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.4,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 61.2,
+    "literacyRateYear": 2024
   },
   "ZJ": {
     "source": "World Bank (WDI)",
@@ -13838,7 +14980,13 @@
     "urbanPopulation": 81.5,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 116.8,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "governmentDebt": 69.1,
+    "governmentDebtYear": 2021,
+    "fdiInflows": 2.7,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 94.9,
+    "literacyRateYear": 2024
   },
   "ZM": {
     "source": "World Bank (WDI)",
@@ -13894,7 +15042,13 @@
     "gini": 51.5,
     "giniYear": 2022,
     "mobileSubscriptions": 108.7,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "governmentDebt": 71.4,
+    "governmentDebtYear": 2021,
+    "fdiInflows": 9.3,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 71.8,
+    "literacyRateYear": 2024
   },
   "ZQ": {
     "source": "World Bank (WDI)",
@@ -13944,7 +15098,11 @@
     "urbanPopulation": 56,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 107.1,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 2.6,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 75.6,
+    "literacyRateYear": 2024
   },
   "ZT": {
     "source": "World Bank (WDI)",
@@ -13998,7 +15156,11 @@
     "urbanPopulation": 53.7,
     "urbanPopulationYear": 2025,
     "mobileSubscriptions": 107.8,
-    "mobileSubscriptionsYear": 2025
+    "mobileSubscriptionsYear": 2025,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2025,
+    "literacyRate": 85.8,
+    "literacyRateYear": 2024
   },
   "ZW": {
     "source": "World Bank (WDI)",
@@ -14054,6 +15216,10 @@
     "gini": 50.3,
     "giniYear": 2019,
     "mobileSubscriptions": 94.2,
-    "mobileSubscriptionsYear": 2024
+    "mobileSubscriptionsYear": 2024,
+    "fdiInflows": 1.1,
+    "fdiInflowsYear": 2024,
+    "literacyRate": 93.2,
+    "literacyRateYear": 2019
   }
 }
