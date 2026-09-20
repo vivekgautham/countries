@@ -38,6 +38,7 @@ import {
   matchesTaxFilter,
   matchesTaxQuery,
 } from "../utils/taxUtils";
+import AppVersionBadge from "../components/layout/AppVersionBadge";
 
 const REGIONS = [
   "All",
@@ -181,11 +182,23 @@ export default function CountryListPage() {
       maxWidth={false}
       sx={{
         maxWidth: 1720,
-        py: { xs: 2.5, sm: 4 },
+        py: { xs: 2, sm: 3 },
         px: { xs: 1.5, sm: 3 },
         pb: selectedCompareCodes.length > 0 ? 12 : { xs: 2.5, sm: 4 },
       }}
     >
+      {/* Subtle App Version at Top Right */}
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          mb: { xs: 1, sm: 1.5 },
+        }}
+      >
+        <AppVersionBadge />
+      </Box>
+
       {/* Header Section */}
       <Box component="header" sx={{ mb: 4, textAlign: "center" }}>
         <Stack spacing={2.5} alignItems="center">

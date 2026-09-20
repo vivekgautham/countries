@@ -32,6 +32,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link as RouterLink, useNavigate, useParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
+import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
@@ -250,26 +251,29 @@ export default function CountryDetailPage() {
             Back to all countries
           </Button>
 
-          <Button
-            component={RouterLink}
-            to={`/compare?c=${country.code}`}
-            startIcon={<CompareArrowsIcon />}
-            variant="outlined"
-            sx={{
-              px: 2.5,
-              py: 1,
-              borderColor: "rgba(99, 102, 241, 0.5)",
-              backgroundColor: "rgba(99, 102, 241, 0.1)",
-              color: "primary.light",
-              fontWeight: 700,
-              "&:hover": {
-                borderColor: "primary.light",
-                backgroundColor: "rgba(99, 102, 241, 0.25)",
-              },
-            }}
-          >
-            Compare {country.name}
-          </Button>
+          <Stack direction="row" spacing={1.5} alignItems="center">
+            <AppVersionBadge compact />
+            <Button
+              component={RouterLink}
+              to={`/compare?c=${country.code}`}
+              startIcon={<CompareArrowsIcon />}
+              variant="outlined"
+              sx={{
+                px: 2.5,
+                py: 1,
+                borderColor: "rgba(99, 102, 241, 0.5)",
+                backgroundColor: "rgba(99, 102, 241, 0.1)",
+                color: "primary.light",
+                fontWeight: 700,
+                "&:hover": {
+                  borderColor: "primary.light",
+                  backgroundColor: "rgba(99, 102, 241, 0.25)",
+                },
+              }}
+            >
+              Compare {country.name}
+            </Button>
+          </Stack>
         </Stack>
 
         {/* Hero Card */}

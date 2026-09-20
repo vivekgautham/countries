@@ -32,6 +32,7 @@ import React, { useMemo, useState } from "react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import { UnifiedCountry } from "../types/country";
+import AppVersionBadge from "../components/layout/AppVersionBadge";
 import {
   calculateDensity,
   findSharedItems,
@@ -284,6 +285,7 @@ export default function CountryComparePage() {
               </Button>
             </>
           )}
+          <AppVersionBadge compact />
         </Stack>
       </Stack>
 
