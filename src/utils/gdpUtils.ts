@@ -42,6 +42,22 @@ const gdpDataset = gdpDataRaw as Record<
     co2PerCapitaYear?: number;
     ghgPerCapita?: number;
     ghgPerCapitaYear?: number;
+    forestCover?: number;
+    forestCoverYear?: number;
+    electricPowerConsumption?: number;
+    electricPowerConsumptionYear?: number;
+    electricityAccess?: number;
+    electricityAccessYear?: number;
+    unemployment?: number;
+    unemploymentYear?: number;
+    fertilityRate?: number;
+    fertilityRateYear?: number;
+    urbanPopulation?: number;
+    urbanPopulationYear?: number;
+    gini?: number;
+    giniYear?: number;
+    mobileSubscriptions?: number;
+    mobileSubscriptionsYear?: number;
   }
 >;
 
@@ -238,6 +254,94 @@ export function formatCo2Emissions(val?: number): string {
 }
 
 /**
+ * Formats forest cover percentage:
+ * e.g. "64.1%"
+ */
+export function formatForestCover(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats electric power consumption per capita in kWh:
+ * e.g. "11,350 kWh"
+ */
+export function formatElectricPowerConsumption(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${Math.round(val).toLocaleString()} kWh`;
+}
+
+/**
+ * Formats electricity access rate (% of population):
+ * e.g. "100.0%"
+ */
+export function formatElectricityAccess(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats unemployment rate (% of labor force):
+ * e.g. "3.8%"
+ */
+export function formatUnemployment(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats fertility rate (average births per woman):
+ * e.g. "1.61"
+ */
+export function formatFertilityRate(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return val.toFixed(2);
+}
+
+/**
+ * Formats urban population percentage:
+ * e.g. "81.2%"
+ */
+export function formatUrbanPopulation(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats Gini Index (income inequality):
+ * e.g. "41.8"
+ */
+export function formatGini(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return val.toFixed(1);
+}
+
+/**
+ * Formats mobile cellular subscriptions per 100 people:
+ * e.g. "134.2 / 100"
+ */
+export function formatMobileSubscriptions(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
  * GDP, population, GDP per capita, growth, inflation, life expectancy, internet usage,
  * PPP, sector composition, and trade indicators.
@@ -343,6 +447,51 @@ export function getGdpInfo(
     formattedCo2PerCapita:
       raw.co2PerCapita !== undefined
         ? formatCo2PerCapita(raw.co2PerCapita)
+        : undefined,
+    forestCover: raw.forestCover,
+    forestCoverYear: raw.forestCoverYear,
+    formattedForestCover:
+      raw.forestCover !== undefined
+        ? formatForestCover(raw.forestCover)
+        : undefined,
+    electricPowerConsumption: raw.electricPowerConsumption,
+    electricPowerConsumptionYear: raw.electricPowerConsumptionYear,
+    formattedElectricPowerConsumption:
+      raw.electricPowerConsumption !== undefined
+        ? formatElectricPowerConsumption(raw.electricPowerConsumption)
+        : undefined,
+    electricityAccess: raw.electricityAccess,
+    electricityAccessYear: raw.electricityAccessYear,
+    formattedElectricityAccess:
+      raw.electricityAccess !== undefined
+        ? formatElectricityAccess(raw.electricityAccess)
+        : undefined,
+    unemployment: raw.unemployment,
+    unemploymentYear: raw.unemploymentYear,
+    formattedUnemployment:
+      raw.unemployment !== undefined
+        ? formatUnemployment(raw.unemployment)
+        : undefined,
+    fertilityRate: raw.fertilityRate,
+    fertilityRateYear: raw.fertilityRateYear,
+    formattedFertilityRate:
+      raw.fertilityRate !== undefined
+        ? formatFertilityRate(raw.fertilityRate)
+        : undefined,
+    urbanPopulation: raw.urbanPopulation,
+    urbanPopulationYear: raw.urbanPopulationYear,
+    formattedUrbanPopulation:
+      raw.urbanPopulation !== undefined
+        ? formatUrbanPopulation(raw.urbanPopulation)
+        : undefined,
+    gini: raw.gini,
+    giniYear: raw.giniYear,
+    formattedGini: raw.gini !== undefined ? formatGini(raw.gini) : undefined,
+    mobileSubscriptions: raw.mobileSubscriptions,
+    mobileSubscriptionsYear: raw.mobileSubscriptionsYear,
+    formattedMobileSubscriptions:
+      raw.mobileSubscriptions !== undefined
+        ? formatMobileSubscriptions(raw.mobileSubscriptions)
         : undefined,
   };
 }

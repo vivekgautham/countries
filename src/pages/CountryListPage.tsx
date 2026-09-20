@@ -871,6 +871,132 @@ export default function CountryListPage() {
                               />
                             </Tooltip>
                           )}
+
+                          {country.blocs?.isEU && (
+                            <Tooltip
+                              title="European Union (EU) Member State"
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🇪🇺
+                                  </span>
+                                }
+                                label="EU"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(59, 130, 246, 0.2)",
+                                  color: "#93c5fd",
+                                  border: "1px solid rgba(59, 130, 246, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isNATO && (
+                            <Tooltip
+                              title="North Atlantic Treaty Organization (NATO) Allied Member"
+                              arrow
+                            >
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🛡️
+                                  </span>
+                                }
+                                label="NATO"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(99, 102, 241, 0.2)",
+                                  color: "#a5b4fc",
+                                  border: "1px solid rgba(99, 102, 241, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isBRICS && (
+                            <Tooltip title="BRICS+ Member State" arrow>
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🪙
+                                  </span>
+                                }
+                                label="BRICS+"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(245, 158, 11, 0.2)",
+                                  color: "#fcd34d",
+                                  border: "1px solid rgba(245, 158, 11, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
+                          {country.blocs?.isSchengen &&
+                            !country.blocs?.isEU && (
+                              <Tooltip
+                                title="Schengen Area Associated State"
+                                arrow
+                              >
+                                <Chip
+                                  size="small"
+                                  icon={
+                                    <span
+                                      style={{
+                                        fontSize: "0.65rem",
+                                        marginLeft: 3,
+                                      }}
+                                    >
+                                      🛂
+                                    </span>
+                                  }
+                                  label="Schengen"
+                                  sx={{
+                                    height: 18,
+                                    fontSize: "0.65rem",
+                                    fontWeight: 800,
+                                    backgroundColor: "rgba(6, 182, 212, 0.2)",
+                                    color: "#67e8f9",
+                                    border: "1px solid rgba(6, 182, 212, 0.45)",
+                                    borderRadius: 1,
+                                    "& .MuiChip-label": { px: 0.5 },
+                                  }}
+                                />
+                              </Tooltip>
+                            )}
                         </Stack>
                       </CardContent>
                     </CardActionArea>

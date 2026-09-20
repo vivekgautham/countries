@@ -23,7 +23,16 @@ const INDICATORS = {
   IMPORTS_GDP: "NE.IMP.GNFS.ZS", // Imports of goods and services (% of GDP)
   RENEWABLE_ENERGY: "EG.FEC.RNEW.ZS", // Renewable energy consumption (% of total final energy consumption)
   CO2_EMISSIONS: "EN.GHG.CO2.MT.CE.AR5", // Carbon dioxide (CO2) emissions (total) excluding LULUCF (Mt CO2e) [Source 75]
+  CO2_PER_CAPITA: "EN.GHG.CO2.PC.CE.AR5", // Carbon dioxide (CO2) emissions excluding LULUCF per capita (t CO2e/capita)
   GHG_PER_CAPITA: "EN.GHG.ALL.PC.CE.AR5", // Total greenhouse gas emissions excluding LULUCF per capita (t CO2e/capita) [Source 75]
+  FOREST_COVER: "AG.LND.FRST.ZS", // Forest area (% of land area)
+  ELECTRIC_POWER_CONSUMPTION: "EG.USE.ELEC.KH.PC", // Electric power consumption (kWh per capita)
+  ELECTRICITY_ACCESS: "EG.ELC.ACCS.ZS", // Access to electricity (% of population)
+  UNEMPLOYMENT: "SL.UEM.TOTL.ZS", // Unemployment, total (% of total labor force) (modeled ILO estimate)
+  FERTILITY_RATE: "SP.DYN.TFRT.IN", // Fertility rate, total (births per woman)
+  URBAN_POPULATION: "SP.URB.TOTL.IN.ZS", // Urban population (% of total population)
+  GINI_INDEX: "SI.POV.GINI", // Gini index (World Bank estimate)
+  MOBILE_SUBSCRIPTIONS: "IT.CEL.SETS.P2", // Mobile cellular subscriptions (per 100 people)
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -72,6 +81,22 @@ const SUPPLEMENTAL_DATA = {
     co2PerCapitaYear: 2023,
     ghgPerCapita: 12.2,
     ghgPerCapitaYear: 2023,
+    forestCover: 60.7,
+    forestCoverYear: 2023,
+    electricPowerConsumption: 12200,
+    electricPowerConsumptionYear: 2023,
+    electricityAccess: 100.0,
+    electricityAccessYear: 2024,
+    unemployment: 3.4,
+    unemploymentYear: 2024,
+    fertilityRate: 0.87,
+    fertilityRateYear: 2024,
+    urbanPopulation: 78.9,
+    urbanPopulationYear: 2024,
+    gini: 34.2,
+    giniYear: 2023,
+    mobileSubscriptions: 132.5,
+    mobileSubscriptionsYear: 2024,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -266,7 +291,9 @@ function fetchIndicator(indicator, source) {
 }
 
 async function run() {
-  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, Internet, PPP, Sectors, Trade, Renewables, and Emissions in parallel...");
+  console.log(
+    "Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, Internet, PPP, Sectors, Trade, Climate, Energy, Demographics, and Labor in parallel...",
+  );
   const [
     gdpList,
     popList,
@@ -284,7 +311,16 @@ async function run() {
     impList,
     renewList,
     co2List,
+    co2PerCapList,
     ghgList,
+    forestList,
+    elecConsumptionList,
+    elecAccessList,
+    unemploymentList,
+    fertilityList,
+    urbanList,
+    giniList,
+    mobileList,
   ] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
@@ -302,11 +338,20 @@ async function run() {
     fetchIndicator(INDICATORS.IMPORTS_GDP),
     fetchIndicator(INDICATORS.RENEWABLE_ENERGY),
     fetchIndicator(INDICATORS.CO2_EMISSIONS, 75),
+    fetchIndicator(INDICATORS.CO2_PER_CAPITA),
     fetchIndicator(INDICATORS.GHG_PER_CAPITA, 75),
+    fetchIndicator(INDICATORS.FOREST_COVER),
+    fetchIndicator(INDICATORS.ELECTRIC_POWER_CONSUMPTION),
+    fetchIndicator(INDICATORS.ELECTRICITY_ACCESS),
+    fetchIndicator(INDICATORS.UNEMPLOYMENT),
+    fetchIndicator(INDICATORS.FERTILITY_RATE),
+    fetchIndicator(INDICATORS.URBAN_POPULATION),
+    fetchIndicator(INDICATORS.GINI_INDEX),
+    fetchIndicator(INDICATORS.MOBILE_SUBSCRIPTIONS),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), PPP Per-Capita (${pppCapList.length}), Sectors (${srvList.length}), Trade (${expList.length}), Renewables (${renewList.length}), CO2 (${co2List.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), Renewables (${renewList.length}), Forest (${forestList.length}), Electricity (${elecConsumptionList.length}), Access (${elecAccessList.length}), Unemployment (${unemploymentList.length}), Fertility (${fertilityList.length}), Urban (${urbanList.length}), Gini (${giniList.length}), Mobile (${mobileList.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -554,9 +599,131 @@ async function run() {
     resultByCountry[code].ghgPerCapitaYear = parseInt(item.date, 10);
   }
 
-  // 18. Calculate CO2 per capita if co2Emissions (Mt) and population are available
+  // 18. Process Direct CO2 Emissions Per Capita (t CO2e/capita)
+  for (const item of co2PerCapList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].co2PerCapita = Math.round(item.value * 10) / 10;
+    resultByCountry[code].co2PerCapitaYear = parseInt(item.date, 10);
+  }
+
+  // 19. Process Forest Cover (% of land area)
+  for (const item of forestList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].forestCover = Math.round(item.value * 10) / 10;
+    resultByCountry[code].forestCoverYear = parseInt(item.date, 10);
+  }
+
+  // 20. Process Electric Power Consumption (kWh per capita)
+  for (const item of elecConsumptionList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].electricPowerConsumption = Math.round(item.value);
+    resultByCountry[code].electricPowerConsumptionYear = parseInt(item.date, 10);
+  }
+
+  // 21. Process Access to Electricity (% of population)
+  for (const item of elecAccessList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].electricityAccess = Math.round(item.value * 10) / 10;
+    resultByCountry[code].electricityAccessYear = parseInt(item.date, 10);
+  }
+
+  // 22. Process Unemployment Rate (% of labor force)
+  for (const item of unemploymentList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].unemployment = Math.round(item.value * 10) / 10;
+    resultByCountry[code].unemploymentYear = parseInt(item.date, 10);
+  }
+
+  // 23. Process Fertility Rate (births per woman)
+  for (const item of fertilityList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].fertilityRate = Math.round(item.value * 100) / 100;
+    resultByCountry[code].fertilityRateYear = parseInt(item.date, 10);
+  }
+
+  // 24. Process Urban Population (% of total population)
+  for (const item of urbanList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].urbanPopulation = Math.round(item.value * 10) / 10;
+    resultByCountry[code].urbanPopulationYear = parseInt(item.date, 10);
+  }
+
+  // 25. Process Gini Index (Income Inequality)
+  for (const item of giniList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].gini = Math.round(item.value * 10) / 10;
+    resultByCountry[code].giniYear = parseInt(item.date, 10);
+  }
+
+  // 26. Process Mobile Subscriptions (per 100 people)
+  for (const item of mobileList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].mobileSubscriptions = Math.round(item.value * 10) / 10;
+    resultByCountry[code].mobileSubscriptionsYear = parseInt(item.date, 10);
+  }
+
+  // 27. Fallback CO2 per capita calculation if not directly reported
   for (const entry of Object.values(resultByCountry)) {
-    if (entry.co2Emissions !== undefined && entry.population && entry.population > 0) {
+    if (
+      entry.co2PerCapita === undefined &&
+      entry.co2Emissions !== undefined &&
+      entry.population &&
+      entry.population > 0
+    ) {
       entry.co2PerCapita =
         Math.round(((entry.co2Emissions * 1e6) / entry.population) * 10) / 10;
       entry.co2PerCapitaYear = entry.co2EmissionsYear;
@@ -655,6 +822,38 @@ async function run() {
       if (resultByCountry[code].ghgPerCapita === undefined && supp.ghgPerCapita !== undefined) {
         resultByCountry[code].ghgPerCapita = supp.ghgPerCapita;
         resultByCountry[code].ghgPerCapitaYear = supp.ghgPerCapitaYear;
+      }
+      if (resultByCountry[code].forestCover === undefined && supp.forestCover !== undefined) {
+        resultByCountry[code].forestCover = supp.forestCover;
+        resultByCountry[code].forestCoverYear = supp.forestCoverYear;
+      }
+      if (resultByCountry[code].electricPowerConsumption === undefined && supp.electricPowerConsumption !== undefined) {
+        resultByCountry[code].electricPowerConsumption = supp.electricPowerConsumption;
+        resultByCountry[code].electricPowerConsumptionYear = supp.electricPowerConsumptionYear;
+      }
+      if (resultByCountry[code].electricityAccess === undefined && supp.electricityAccess !== undefined) {
+        resultByCountry[code].electricityAccess = supp.electricityAccess;
+        resultByCountry[code].electricityAccessYear = supp.electricityAccessYear;
+      }
+      if (resultByCountry[code].unemployment === undefined && supp.unemployment !== undefined) {
+        resultByCountry[code].unemployment = supp.unemployment;
+        resultByCountry[code].unemploymentYear = supp.unemploymentYear;
+      }
+      if (resultByCountry[code].fertilityRate === undefined && supp.fertilityRate !== undefined) {
+        resultByCountry[code].fertilityRate = supp.fertilityRate;
+        resultByCountry[code].fertilityRateYear = supp.fertilityRateYear;
+      }
+      if (resultByCountry[code].urbanPopulation === undefined && supp.urbanPopulation !== undefined) {
+        resultByCountry[code].urbanPopulation = supp.urbanPopulation;
+        resultByCountry[code].urbanPopulationYear = supp.urbanPopulationYear;
+      }
+      if (resultByCountry[code].gini === undefined && supp.gini !== undefined) {
+        resultByCountry[code].gini = supp.gini;
+        resultByCountry[code].giniYear = supp.giniYear;
+      }
+      if (resultByCountry[code].mobileSubscriptions === undefined && supp.mobileSubscriptions !== undefined) {
+        resultByCountry[code].mobileSubscriptions = supp.mobileSubscriptions;
+        resultByCountry[code].mobileSubscriptionsYear = supp.mobileSubscriptionsYear;
       }
     }
   }

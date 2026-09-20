@@ -137,6 +137,11 @@ export interface EconomicBlocs {
   isG20Guest?: boolean;
   g20Status: "member" | "permanent_guest" | "non_member";
   isGCC?: boolean;
+  isEU?: boolean;
+  isSchengen?: boolean;
+  isEurozone?: boolean;
+  isNATO?: boolean;
+  isBRICS?: boolean;
   statusLabel?: string;
 }
 
@@ -197,6 +202,30 @@ export interface GdpInfo {
   ghgPerCapitaYear?: number;
   formattedRenewableEnergy?: string; // e.g. "61.4%"
   formattedCo2PerCapita?: string; // e.g. "13.6 t"
+  forestCover?: number; // % of total land area covered by forests
+  forestCoverYear?: number;
+  formattedForestCover?: string; // e.g. "64.1%"
+  electricPowerConsumption?: number; // kWh consumed per person annually
+  electricPowerConsumptionYear?: number;
+  formattedElectricPowerConsumption?: string; // e.g. "11,350 kWh"
+  electricityAccess?: number; // % of population with electricity access
+  electricityAccessYear?: number;
+  formattedElectricityAccess?: string; // e.g. "100.0%"
+  unemployment?: number; // Total unemployment rate (% of labor force)
+  unemploymentYear?: number;
+  formattedUnemployment?: string; // e.g. "3.8%"
+  fertilityRate?: number; // Average births per woman
+  fertilityRateYear?: number;
+  formattedFertilityRate?: string; // e.g. "1.61"
+  urbanPopulation?: number; // % of population living in urban centers
+  urbanPopulationYear?: number;
+  formattedUrbanPopulation?: string; // e.g. "81.2%"
+  gini?: number; // Income inequality Gini index (0-100)
+  giniYear?: number;
+  formattedGini?: string; // e.g. "41.8"
+  mobileSubscriptions?: number; // Mobile subscriptions per 100 people
+  mobileSubscriptionsYear?: number;
+  formattedMobileSubscriptions?: string; // e.g. "134.2 / 100"
 }
 
 export interface UnifiedCountry {

@@ -39,6 +39,11 @@ import {
   getG7BadgeConfig,
   getG20BadgeConfig,
   getGCCBadgeConfig,
+  getEUBadgeConfig,
+  getSchengenBadgeConfig,
+  getEurozoneBadgeConfig,
+  getNATOBadgeConfig,
+  getBRICSBadgeConfig,
 } from "../utils/blocUtils";
 import {
   formatGdp,
@@ -54,6 +59,14 @@ import {
   formatRenewableEnergy,
   formatCo2PerCapita,
   formatCo2Emissions,
+  formatForestCover,
+  formatElectricPowerConsumption,
+  formatElectricityAccess,
+  formatUnemployment,
+  formatFertilityRate,
+  formatUrbanPopulation,
+  formatGini,
+  formatMobileSubscriptions,
   getGdpRank,
   getPppRank,
 } from "../utils/gdpUtils";
@@ -194,6 +207,11 @@ export default function CountryDetailPage() {
   const g7Badge = getG7BadgeConfig();
   const g20Badge = getG20BadgeConfig(country.blocs?.isG20Guest);
   const gccBadge = getGCCBadgeConfig();
+  const euBadge = getEUBadgeConfig();
+  const schengenBadge = getSchengenBadgeConfig();
+  const eurozoneBadge = getEurozoneBadgeConfig();
+  const natoBadge = getNATOBadgeConfig();
+  const bricsBadge = getBRICSBadgeConfig();
   const gdpRank = useMemo(
     () => (country ? getGdpRank(countries, country.code) : null),
     [countries, country],
@@ -512,6 +530,131 @@ export default function CountryDetailPage() {
                         </Tooltip>
                       )}
 
+                      {country.blocs?.isEU && (
+                        <Tooltip title={euBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {euBadge.icon}
+                              </span>
+                            }
+                            label={euBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: euBadge.backgroundColor,
+                              border: `1px solid ${euBadge.borderColor}`,
+                              color: euBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isSchengen && (
+                        <Tooltip title={schengenBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {schengenBadge.icon}
+                              </span>
+                            }
+                            label={schengenBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: schengenBadge.backgroundColor,
+                              border: `1px solid ${schengenBadge.borderColor}`,
+                              color: schengenBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isEurozone && (
+                        <Tooltip title={eurozoneBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {eurozoneBadge.icon}
+                              </span>
+                            }
+                            label={eurozoneBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: eurozoneBadge.backgroundColor,
+                              border: `1px solid ${eurozoneBadge.borderColor}`,
+                              color: eurozoneBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isNATO && (
+                        <Tooltip title={natoBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {natoBadge.icon}
+                              </span>
+                            }
+                            label={natoBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: natoBadge.backgroundColor,
+                              border: `1px solid ${natoBadge.borderColor}`,
+                              color: natoBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.blocs?.isBRICS && (
+                        <Tooltip title={bricsBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {bricsBadge.icon}
+                              </span>
+                            }
+                            label={bricsBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: bricsBadge.backgroundColor,
+                              border: `1px solid ${bricsBadge.borderColor}`,
+                              color: bricsBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
                       {country.sovereignty && (
                         <Tooltip
                           title={`Autonomous territory administered under the sovereignty of ${country.sovereignty.sovereignName}`}
@@ -782,126 +925,41 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
 
-                  {country.gdp?.lifeExpectancy !== undefined && (
+                  {country.landlocked !== undefined && (
                     <Stack
                       direction="row"
                       justifyContent="space-between"
                       alignItems="center"
                     >
                       <Typography color="text.secondary">
-                        🩺 Life Expectancy
+                        🌊 Maritime Access
                       </Typography>
                       <Typography fontWeight={600} textAlign="right">
-                        {formatLifeExpectancy(country.gdp.lifeExpectancy)}
-                        {country.gdp.lifeExpectancyYear
-                          ? ` (${country.gdp.lifeExpectancyYear})`
-                          : ""}
+                        {country.landlocked
+                          ? "Landlocked (No Ocean Access)"
+                          : "Coastal State"}
                       </Typography>
                     </Stack>
                   )}
 
-                  {country.gdp?.internetUsers !== undefined && (
+                  {country.borders && country.borders.length > 0 && (
                     <Stack
                       direction="row"
                       justifyContent="space-between"
                       alignItems="center"
                     >
                       <Typography color="text.secondary">
-                        🌐 Internet Adoption
+                        🛂 Border Nations
                       </Typography>
                       <Typography fontWeight={600} textAlign="right">
-                        {formatInternetUsage(country.gdp.internetUsers)}
-                        {country.gdp.internetUsersYear
-                          ? ` (${country.gdp.internetUsersYear})`
-                          : ""}
+                        {country.borders.length}{" "}
+                        {country.borders.length === 1
+                          ? "neighbor"
+                          : "neighbors"}{" "}
+                        ({country.borders.join(", ")})
                       </Typography>
                     </Stack>
                   )}
-
-                  {country.gdp?.renewableEnergy !== undefined && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">
-                        🌱 Renewable Energy
-                      </Typography>
-                      <Stack direction="row" alignItems="center" spacing={1}>
-                        <Box
-                          sx={{
-                            width: 60,
-                            height: 6,
-                            borderRadius: 3,
-                            backgroundColor: "rgba(255, 255, 255, 0.1)",
-                            overflow: "hidden",
-                            display: { xs: "none", sm: "block" },
-                          }}
-                        >
-                          <Box
-                            sx={{
-                              width: `${Math.min(100, Math.max(0, country.gdp.renewableEnergy))}%`,
-                              height: "100%",
-                              backgroundColor: "#10b981",
-                            }}
-                          />
-                        </Box>
-                        <Typography fontWeight={600} textAlign="right">
-                          {formatRenewableEnergy(country.gdp.renewableEnergy)}
-                          {country.gdp.renewableEnergyYear
-                            ? ` (${country.gdp.renewableEnergyYear})`
-                            : ""}
-                        </Typography>
-                      </Stack>
-                    </Stack>
-                  )}
-
-                  {country.gdp?.co2PerCapita !== undefined && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">
-                        🏭 CO₂ per Capita
-                      </Typography>
-                      <Typography fontWeight={600} textAlign="right">
-                        {formatCo2PerCapita(country.gdp.co2PerCapita)}
-                        {country.gdp.co2Emissions !== undefined
-                          ? ` (${formatCo2Emissions(country.gdp.co2Emissions)} total)`
-                          : country.gdp.co2PerCapitaYear
-                            ? ` (${country.gdp.co2PerCapitaYear})`
-                            : ""}
-                      </Typography>
-                    </Stack>
-                  )}
-
-                  <Box
-                    sx={{
-                      pt: 0.5,
-                      display: "flex",
-                      justifyContent: "flex-end",
-                    }}
-                  >
-                    <Typography
-                      component="a"
-                      href={`https://data.worldbank.org/indicator/SP.POP.TOTL?locations=${country.code}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      variant="caption"
-                      sx={{
-                        color: "primary.light",
-                        textDecoration: "none",
-                        "&:hover": { textDecoration: "underline" },
-                      }}
-                    >
-                      Source:{" "}
-                      {country.gdp?.populationSource ||
-                        country.gdp?.source ||
-                        "World Bank (WDI)"}{" "}
-                      ↗
-                    </Typography>
-                  </Box>
                 </Stack>
               </CardContent>
             </Card>
@@ -996,6 +1054,477 @@ export default function CountryDetailPage() {
                       {country.blocs?.isGCC ? "Yes (Member State)" : "No"}
                     </Typography>
                   </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🇪🇺 European Union (EU)
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isEU ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🛂 Schengen Area
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isSchengen ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      💶 Eurozone (€)
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isEurozone ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🛡️ NATO Alliance
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isNATO ? "Yes (Allied Member)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🪙 BRICS+ Bloc
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isBRICS ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Demographics, Society & Labor */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  sx={{ fontWeight: 700 }}
+                >
+                  👥 Demographics, Society & Labor
+                </Typography>
+                <Divider />
+                <Stack spacing={1.5}>
+                  {country.gdp?.urbanPopulation !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏙️ Urbanization Rate
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                          sx={{
+                            width: 60,
+                            height: 6,
+                            borderRadius: 3,
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            overflow: "hidden",
+                            display: { xs: "none", sm: "block" },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              width: `${Math.min(100, Math.max(0, country.gdp.urbanPopulation))}%`,
+                              height: "100%",
+                              backgroundColor: "#38bdf8",
+                            }}
+                          />
+                        </Box>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatUrbanPopulation(country.gdp.urbanPopulation)}
+                          {country.gdp.urbanPopulationYear
+                            ? ` (${country.gdp.urbanPopulationYear})`
+                            : ""}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.lifeExpectancy !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🩺 Life Expectancy
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatLifeExpectancy(country.gdp.lifeExpectancy)}
+                        {country.gdp.lifeExpectancyYear
+                          ? ` (${country.gdp.lifeExpectancyYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.fertilityRate !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        👶 Fertility Rate
+                      </Typography>
+                      <Tooltip
+                        title="Average births per woman (replacement rate is ~2.1)"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatFertilityRate(country.gdp.fertilityRate)}{" "}
+                          births / woman
+                          {country.gdp.fertilityRateYear
+                            ? ` (${country.gdp.fertilityRateYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.unemployment !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        💼 Unemployment Rate
+                      </Typography>
+                      <Tooltip
+                        title="Modeled ILO estimate (% of total labor force)"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatUnemployment(country.gdp.unemployment)}
+                          {country.gdp.unemploymentYear
+                            ? ` (${country.gdp.unemploymentYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.gini !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        ⚖️ Income Inequality (Gini)
+                      </Typography>
+                      <Tooltip
+                        title="Gini index measures wealth/income distribution (0 = perfect equality, 100 = perfect inequality)"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatGini(country.gdp.gini)}
+                          {country.gdp.giniYear
+                            ? ` (${country.gdp.giniYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.internetUsers !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌐 Internet Adoption
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatInternetUsage(country.gdp.internetUsers)}
+                        {country.gdp.internetUsersYear
+                          ? ` (${country.gdp.internetUsersYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.mobileSubscriptions !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        📱 Mobile Subscriptions
+                      </Typography>
+                      <Tooltip
+                        title="Mobile cellular subscriptions per 100 people"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatMobileSubscriptions(
+                            country.gdp.mobileSubscriptions,
+                          )}{" "}
+                          / 100
+                          {country.gdp.mobileSubscriptionsYear
+                            ? ` (${country.gdp.mobileSubscriptionsYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
+                  <Box
+                    sx={{
+                      pt: 0.5,
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Typography
+                      component="a"
+                      href={`https://data.worldbank.org/country/${country.code}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="caption"
+                      sx={{
+                        color: "primary.light",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      Source: World Bank (WDI) ↗
+                    </Typography>
+                  </Box>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Environmental, Energy & Climate */}
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card variant="outlined" sx={{ height: "100%", p: 1 }}>
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+              >
+                <Typography
+                  variant="h6"
+                  component="h2"
+                  sx={{ fontWeight: 700 }}
+                >
+                  ⚡ Environment, Energy & Climate
+                </Typography>
+                <Divider />
+                <Stack spacing={1.5}>
+                  {country.gdp?.renewableEnergy !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌱 Renewable Energy Share
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                          sx={{
+                            width: 60,
+                            height: 6,
+                            borderRadius: 3,
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            overflow: "hidden",
+                            display: { xs: "none", sm: "block" },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              width: `${Math.min(100, Math.max(0, country.gdp.renewableEnergy))}%`,
+                              height: "100%",
+                              backgroundColor: "#10b981",
+                            }}
+                          />
+                        </Box>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatRenewableEnergy(country.gdp.renewableEnergy)}
+                          {country.gdp.renewableEnergyYear
+                            ? ` (${country.gdp.renewableEnergyYear})`
+                            : ""}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.co2PerCapita !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏭 CO₂ per Capita
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatCo2PerCapita(country.gdp.co2PerCapita)}
+                        {country.gdp.co2Emissions !== undefined
+                          ? ` (${formatCo2Emissions(country.gdp.co2Emissions)} total)`
+                          : country.gdp.co2PerCapitaYear
+                            ? ` (${country.gdp.co2PerCapitaYear})`
+                            : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.forestCover !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌲 Forest Cover
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                          sx={{
+                            width: 60,
+                            height: 6,
+                            borderRadius: 3,
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            overflow: "hidden",
+                            display: { xs: "none", sm: "block" },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              width: `${Math.min(100, Math.max(0, country.gdp.forestCover))}%`,
+                              height: "100%",
+                              backgroundColor: "#059669",
+                            }}
+                          />
+                        </Box>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatForestCover(country.gdp.forestCover)}
+                          {country.gdp.forestCoverYear
+                            ? ` (${country.gdp.forestCoverYear})`
+                            : ""}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.electricPowerConsumption !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🔌 Electric Power Consumption
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatElectricPowerConsumption(
+                          country.gdp.electricPowerConsumption,
+                        )}{" "}
+                        / person
+                        {country.gdp.electricPowerConsumptionYear
+                          ? ` (${country.gdp.electricPowerConsumptionYear})`
+                          : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.electricityAccess !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        💡 Electricity Access
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                          sx={{
+                            width: 60,
+                            height: 6,
+                            borderRadius: 3,
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            overflow: "hidden",
+                            display: { xs: "none", sm: "block" },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              width: `${Math.min(100, Math.max(0, country.gdp.electricityAccess))}%`,
+                              height: "100%",
+                              backgroundColor: "#f59e0b",
+                            }}
+                          />
+                        </Box>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatElectricityAccess(
+                            country.gdp.electricityAccess,
+                          )}
+                          {country.gdp.electricityAccessYear
+                            ? ` (${country.gdp.electricityAccessYear})`
+                            : ""}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  )}
+
+                  <Box
+                    sx={{
+                      pt: 0.5,
+                      display: "flex",
+                      justifyContent: "flex-end",
+                    }}
+                  >
+                    <Typography
+                      component="a"
+                      href={`https://data.worldbank.org/topic/climate-change?locations=${country.code}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="caption"
+                      sx={{
+                        color: "primary.light",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      Source: World Bank / Climate Watch ↗
+                    </Typography>
+                  </Box>
                 </Stack>
               </CardContent>
             </Card>

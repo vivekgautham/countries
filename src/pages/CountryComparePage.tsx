@@ -54,6 +54,15 @@ import {
   formatPppPerCapita,
   formatRenewableEnergy,
   formatCo2PerCapita,
+  formatCo2Emissions,
+  formatForestCover,
+  formatElectricPowerConsumption,
+  formatElectricityAccess,
+  formatUnemployment,
+  formatFertilityRate,
+  formatUrbanPopulation,
+  formatGini,
+  formatMobileSubscriptions,
 } from "../utils/gdpUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
@@ -1241,11 +1250,51 @@ export default function CountryComparePage() {
                 },
               },
               {
+                label: "Urbanization Rate",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.urbanPopulation !== undefined
+                      ? `${formatUrbanPopulation(c.gdp.urbanPopulation)}${c.gdp.urbanPopulationYear ? ` (${c.gdp.urbanPopulationYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
                 label: "Life Expectancy",
                 render: (c) => (
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
                     {c.gdp?.lifeExpectancy !== undefined
                       ? `${formatLifeExpectancy(c.gdp.lifeExpectancy)}${c.gdp.lifeExpectancyYear ? ` (${c.gdp.lifeExpectancyYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Fertility Rate",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.fertilityRate !== undefined
+                      ? `${formatFertilityRate(c.gdp.fertilityRate)} births/woman${c.gdp.fertilityRateYear ? ` (${c.gdp.fertilityRateYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Unemployment Rate",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.unemployment !== undefined
+                      ? `${formatUnemployment(c.gdp.unemployment)}${c.gdp.unemploymentYear ? ` (${c.gdp.unemploymentYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Income Inequality (Gini)",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.gini !== undefined
+                      ? `${formatGini(c.gdp.gini)}${c.gdp.giniYear ? ` (${c.gdp.giniYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),
@@ -1261,21 +1310,11 @@ export default function CountryComparePage() {
                 ),
               },
               {
-                label: "Renewable Energy",
+                label: "Mobile Subscriptions",
                 render: (c) => (
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                    {c.gdp?.renewableEnergy !== undefined
-                      ? `${formatRenewableEnergy(c.gdp.renewableEnergy)}${c.gdp.renewableEnergyYear ? ` (${c.gdp.renewableEnergyYear})` : ""}`
-                      : "N/A"}
-                  </Typography>
-                ),
-              },
-              {
-                label: "CO₂ per Capita",
-                render: (c) => (
-                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                    {c.gdp?.co2PerCapita !== undefined
-                      ? `${formatCo2PerCapita(c.gdp.co2PerCapita)}${c.gdp.co2PerCapitaYear ? ` (${c.gdp.co2PerCapitaYear})` : ""}`
+                    {c.gdp?.mobileSubscriptions !== undefined
+                      ? `${formatMobileSubscriptions(c.gdp.mobileSubscriptions)} / 100${c.gdp.mobileSubscriptionsYear ? ` (${c.gdp.mobileSubscriptionsYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),
@@ -1634,7 +1673,76 @@ export default function CountryComparePage() {
             ]}
           />
 
-          {/* 3. Culture, Language & Governance */}
+          {/* 3. Environment, Energy & Climate */}
+          <ComparisonSection
+            title="Environment, Energy & Climate"
+            icon={<span style={{ fontSize: "1.2rem" }}>⚡</span>}
+            countries={selectedCountries}
+            rows={[
+              {
+                label: "Renewable Energy Share",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.renewableEnergy !== undefined
+                      ? `${formatRenewableEnergy(c.gdp.renewableEnergy)}${c.gdp.renewableEnergyYear ? ` (${c.gdp.renewableEnergyYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "CO₂ per Capita",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.co2PerCapita !== undefined
+                      ? `${formatCo2PerCapita(c.gdp.co2PerCapita)}${c.gdp.co2PerCapitaYear ? ` (${c.gdp.co2PerCapitaYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Total CO₂ Emissions",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.co2Emissions !== undefined
+                      ? `${formatCo2Emissions(c.gdp.co2Emissions)}${c.gdp.co2EmissionsYear ? ` (${c.gdp.co2EmissionsYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Forest Cover",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.forestCover !== undefined
+                      ? `${formatForestCover(c.gdp.forestCover)}${c.gdp.forestCoverYear ? ` (${c.gdp.forestCoverYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Electric Power Consumption",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.electricPowerConsumption !== undefined
+                      ? `${formatElectricPowerConsumption(c.gdp.electricPowerConsumption)} / person${c.gdp.electricPowerConsumptionYear ? ` (${c.gdp.electricPowerConsumptionYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Access to Electricity",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.electricityAccess !== undefined
+                      ? `${formatElectricityAccess(c.gdp.electricityAccess)}${c.gdp.electricityAccessYear ? ` (${c.gdp.electricityAccessYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+            ]}
+          />
+
+          {/* 4. Culture, Language & Governance */}
           <ComparisonSection
             title="Culture, Languages & Governance"
             icon={<LanguageIcon sx={{ color: "secondary.light" }} />}
@@ -1907,6 +2015,151 @@ export default function CountryComparePage() {
                     description = description
                       ? `${description} & Gulf Cooperation Council state`
                       : "Gulf Cooperation Council (GCC) Arab Gulf state";
+                  }
+
+                  if (c.blocs?.isEU) {
+                    chips.push(
+                      <Chip
+                        key="eu"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🇪🇺
+                          </span>
+                        }
+                        label="EU Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(59, 130, 246, 0.18)",
+                          borderColor: "rgba(59, 130, 246, 0.45)",
+                          border: "1px solid",
+                          color: "#93c5fd",
+                        }}
+                      />,
+                    );
+                  }
+
+                  if (c.blocs?.isSchengen) {
+                    chips.push(
+                      <Chip
+                        key="schengen"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🛂
+                          </span>
+                        }
+                        label="Schengen"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(6, 182, 212, 0.18)",
+                          borderColor: "rgba(6, 182, 212, 0.45)",
+                          border: "1px solid",
+                          color: "#67e8f9",
+                        }}
+                      />,
+                    );
+                  }
+
+                  if (c.blocs?.isEurozone) {
+                    chips.push(
+                      <Chip
+                        key="eurozone"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            💶
+                          </span>
+                        }
+                        label="Eurozone"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(16, 185, 129, 0.18)",
+                          borderColor: "rgba(16, 185, 129, 0.45)",
+                          border: "1px solid",
+                          color: "#6ee7b7",
+                        }}
+                      />,
+                    );
+                  }
+
+                  if (c.blocs?.isNATO) {
+                    chips.push(
+                      <Chip
+                        key="nato"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🛡️
+                          </span>
+                        }
+                        label="NATO Ally"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(99, 102, 241, 0.18)",
+                          borderColor: "rgba(99, 102, 241, 0.45)",
+                          border: "1px solid",
+                          color: "#a5b4fc",
+                        }}
+                      />,
+                    );
+                  }
+
+                  if (c.blocs?.isBRICS) {
+                    chips.push(
+                      <Chip
+                        key="brics"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🪙
+                          </span>
+                        }
+                        label="BRICS+ Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(245, 158, 11, 0.18)",
+                          borderColor: "rgba(245, 158, 11, 0.45)",
+                          border: "1px solid",
+                          color: "#fcd34d",
+                        }}
+                      />,
+                    );
                   }
 
                   if (chips.length > 0) {
