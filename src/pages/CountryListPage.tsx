@@ -31,7 +31,11 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import CompareFloatingDock from "../components/compare/CompareFloatingDock";
 import { getCountryEmoji } from "../utils/countryUtils";
-import { matchesBlocQuery } from "../utils/blocUtils";
+import {
+  BLOC_FILTER_OPTIONS,
+  matchesBlocFilter,
+  matchesBlocQuery,
+} from "../utils/blocUtils";
 import {
   TAX_FILTER_OPTIONS,
   getTaxBadgeConfig,
@@ -60,6 +64,7 @@ export default function CountryListPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedBloc, setSelectedBloc] = useState("all");
   const [selectedTaxRegime, setSelectedTaxRegime] = useState("all");
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
@@ -71,7 +76,7 @@ export default function CountryListPage() {
   // Reset pagination when filter/search changes
   useEffect(() => {
     setVisibleCount(INITIAL_BATCH_SIZE);
-  }, [searchTerm, selectedRegion, selectedTaxRegime]);
+  }, [searchTerm, selectedRegion, selectedBloc, selectedTaxRegime]);
 
   const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
     if (e) {
@@ -108,6 +113,11 @@ export default function CountryListPage() {
       );
     }
 
+    // Filter by Regional Bloc
+    if (selectedBloc !== "all") {
+      result = result.filter((c) => matchesBlocFilter(c, selectedBloc));
+    }
+
     // Filter by Tax Regime
     if (selectedTaxRegime !== "all") {
       result = result.filter((c) => matchesTaxFilter(c, selectedTaxRegime));
@@ -138,7 +148,7 @@ export default function CountryListPage() {
     result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion, selectedTaxRegime]);
+  }, [countries, searchTerm, selectedRegion, selectedBloc, selectedTaxRegime]);
 
   const visibleCountries = useMemo(() => {
     return filteredCountries.slice(0, visibleCount);
@@ -337,6 +347,68 @@ export default function CountryListPage() {
                 })}
               </Stack>
 
+              {/* Regional Blocs Filter Chips */}
+              <Stack
+                direction="row"
+                flexWrap="wrap"
+                justifyContent="center"
+                alignItems="center"
+                gap={1}
+                sx={{ pt: 0.5 }}
+              >
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontWeight: 700,
+                    fontSize: "0.75rem",
+                    mr: 0.5,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 0.5,
+                  }}
+                >
+                  🏛️ Blocs:
+                </Typography>
+                {BLOC_FILTER_OPTIONS.map((opt) => {
+                  const isActive = selectedBloc === opt.id;
+                  return (
+                    <Tooltip key={opt.id} title={opt.tooltip} arrow>
+                      <Chip
+                        icon={
+                          <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
+                            {opt.icon}
+                          </span>
+                        }
+                        label={opt.label}
+                        clickable
+                        onClick={() => setSelectedBloc(opt.id)}
+                        size="small"
+                        variant={isActive ? "filled" : "outlined"}
+                        sx={{
+                          fontSize: "0.8rem",
+                          fontWeight: isActive ? 700 : 500,
+                          borderRadius: 2,
+                          borderColor: isActive
+                            ? "primary.main"
+                            : "rgba(255, 255, 255, 0.12)",
+                          backgroundColor: isActive
+                            ? "rgba(99, 102, 241, 0.25)"
+                            : "rgba(30, 41, 59, 0.4)",
+                          color: isActive ? "#a5b4fc" : "text.secondary",
+                          "&:hover": {
+                            backgroundColor: isActive
+                              ? "rgba(99, 102, 241, 0.35)"
+                              : "rgba(30, 41, 59, 0.7)",
+                            color: "text.primary",
+                          },
+                        }}
+                      />
+                    </Tooltip>
+                  );
+                })}
+              </Stack>
+
               {/* Tax Regime Filter Chips */}
               <Stack
                 direction="row"
@@ -468,6 +540,7 @@ export default function CountryListPage() {
                 onClick={() => {
                   setSearchTerm("");
                   setSelectedRegion("All");
+                  setSelectedBloc("all");
                   setSelectedTaxRegime("all");
                 }}
               >

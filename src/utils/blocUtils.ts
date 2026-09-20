@@ -517,3 +517,97 @@ export function matchesBlocQuery(
 
   return false;
 }
+
+export interface BlocFilterOption {
+  id: string;
+  label: string;
+  icon: string;
+  tooltip: string;
+}
+
+export const BLOC_FILTER_OPTIONS: BlocFilterOption[] = [
+  {
+    id: "all",
+    label: "All Blocs",
+    icon: "🌐",
+    tooltip: "All countries (no regional bloc filter)",
+  },
+  {
+    id: "g7",
+    label: "G7",
+    icon: "🏛️",
+    tooltip: "Group of Seven (7 major advanced economies)",
+  },
+  {
+    id: "g20",
+    label: "G20",
+    icon: "🌐",
+    tooltip: "Group of Twenty (19 leading economies + permanent guest)",
+  },
+  {
+    id: "brics",
+    label: "BRICS+",
+    icon: "🪙",
+    tooltip: "BRICS+ coalition of emerging global economies (10 member states)",
+  },
+  {
+    id: "eu",
+    label: "EU",
+    icon: "🇪🇺",
+    tooltip: "European Union (27 sovereign member states)",
+  },
+  {
+    id: "nato",
+    label: "NATO",
+    icon: "🛡️",
+    tooltip: "North Atlantic Treaty Organization (32 allied nations)",
+  },
+  {
+    id: "gcc",
+    label: "GCC",
+    icon: "🤝",
+    tooltip: "Gulf Cooperation Council (6 Arabian Gulf member states)",
+  },
+  {
+    id: "schengen",
+    label: "Schengen",
+    icon: "🛂",
+    tooltip: "Schengen Area border-free travel zone (29 European states)",
+  },
+  {
+    id: "eurozone",
+    label: "Eurozone",
+    icon: "💶",
+    tooltip: "Eurozone monetary union (20 EU member states using the Euro)",
+  },
+];
+
+export function matchesBlocFilter(
+  country: UnifiedCountry,
+  filterId: string,
+): boolean {
+  if (filterId === "all") return true;
+  const blocs = country.blocs;
+  if (!blocs) return false;
+
+  switch (filterId) {
+    case "g7":
+      return Boolean(blocs.isG7);
+    case "g20":
+      return Boolean(blocs.isG20 || blocs.isG20Guest);
+    case "brics":
+      return Boolean(blocs.isBRICS);
+    case "eu":
+      return Boolean(blocs.isEU);
+    case "nato":
+      return Boolean(blocs.isNATO);
+    case "gcc":
+      return Boolean(blocs.isGCC);
+    case "schengen":
+      return Boolean(blocs.isSchengen);
+    case "eurozone":
+      return Boolean(blocs.isEurozone);
+    default:
+      return true;
+  }
+}
