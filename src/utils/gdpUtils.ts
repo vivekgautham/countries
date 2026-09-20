@@ -34,6 +34,14 @@ const gdpDataset = gdpDataRaw as Record<
     exportsGdpYear?: number;
     importsGdp?: number;
     importsGdpYear?: number;
+    renewableEnergy?: number;
+    renewableEnergyYear?: number;
+    co2Emissions?: number;
+    co2EmissionsYear?: number;
+    co2PerCapita?: number;
+    co2PerCapitaYear?: number;
+    ghgPerCapita?: number;
+    ghgPerCapitaYear?: number;
   }
 >;
 
@@ -194,6 +202,42 @@ export function formatPppPerCapita(pppPerCapita?: number): string {
 }
 
 /**
+ * Formats renewable energy consumption percentage:
+ * e.g. "61.4%"
+ */
+export function formatRenewableEnergy(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}%`;
+}
+
+/**
+ * Formats CO2 emissions per capita in metric tons:
+ * e.g. "13.6 t"
+ */
+export function formatCo2PerCapita(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)} t`;
+}
+
+/**
+ * Formats total CO2 emissions in Megatons (Mt) or Gigatons (Gt):
+ * e.g. "4,632 Mt" or "13.12 Gt"
+ */
+export function formatCo2Emissions(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  if (val >= 1000) {
+    return `${(val / 1000).toFixed(2)} Gt`;
+  }
+  return `${val.toLocaleString(undefined, { maximumFractionDigits: 1 })} Mt`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
  * GDP, population, GDP per capita, growth, inflation, life expectancy, internet usage,
  * PPP, sector composition, and trade indicators.
@@ -284,6 +328,22 @@ export function getGdpInfo(
           importsYear: raw.importsGdpYear,
         }
       : undefined,
+    renewableEnergy: raw.renewableEnergy,
+    renewableEnergyYear: raw.renewableEnergyYear,
+    co2Emissions: raw.co2Emissions,
+    co2EmissionsYear: raw.co2EmissionsYear,
+    co2PerCapita: raw.co2PerCapita,
+    co2PerCapitaYear: raw.co2PerCapitaYear,
+    ghgPerCapita: raw.ghgPerCapita,
+    ghgPerCapitaYear: raw.ghgPerCapitaYear,
+    formattedRenewableEnergy:
+      raw.renewableEnergy !== undefined
+        ? formatRenewableEnergy(raw.renewableEnergy)
+        : undefined,
+    formattedCo2PerCapita:
+      raw.co2PerCapita !== undefined
+        ? formatCo2PerCapita(raw.co2PerCapita)
+        : undefined,
   };
 }
 

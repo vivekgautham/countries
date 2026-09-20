@@ -27,7 +27,9 @@
     "exportsGdp": 46.8,
     "exportsGdpYear": 2023,
     "importsGdp": 42.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 5.2,
+    "renewableEnergyYear": 2020
   },
   "1W": {
     "source": "World Bank (WDI)",
@@ -59,7 +61,9 @@
     "exportsGdp": 29.5,
     "exportsGdpYear": 2025,
     "importsGdp": 28.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19.7,
+    "renewableEnergyYear": 2020
   },
   "4E": {
     "source": "World Bank (WDI)",
@@ -91,7 +95,9 @@
     "exportsGdp": 25.5,
     "exportsGdpYear": 2025,
     "importsGdp": 21.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 16.2,
+    "renewableEnergyYear": 2020
   },
   "7E": {
     "source": "World Bank (WDI)",
@@ -123,7 +129,9 @@
     "exportsGdp": 29,
     "exportsGdpYear": 2025,
     "importsGdp": 32.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 10.1,
+    "renewableEnergyYear": 2020
   },
   "8S": {
     "source": "World Bank (WDI)",
@@ -155,7 +163,9 @@
     "exportsGdp": 21,
     "exportsGdpYear": 2025,
     "importsGdp": 23.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 36.9,
+    "renewableEnergyYear": 2020
   },
   "AD": {
     "source": "World Bank (WDI)",
@@ -181,7 +191,9 @@
     "industryGdp": 12.8,
     "industryGdpYear": 2025,
     "servicesGdp": 77.8,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 18.7,
+    "renewableEnergyYear": 2022
   },
   "AE": {
     "source": "World Bank (WDI)",
@@ -213,7 +225,15 @@
     "exportsGdp": 106.8,
     "exportsGdpYear": 2023,
     "importsGdp": 92.2,
-    "importsGdpYear": 2023
+    "importsGdpYear": 2023,
+    "renewableEnergy": 1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 200.56,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 24,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 17.4,
+    "co2PerCapitaYear": 2024
   },
   "AF": {
     "source": "World Bank (WDI)",
@@ -245,7 +265,15 @@
     "exportsGdp": 15.7,
     "exportsGdpYear": 2024,
     "importsGdp": 68.1,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 20,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 12.07,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "AG": {
     "source": "World Bank (WDI)",
@@ -277,7 +305,15 @@
     "exportsGdp": 55,
     "exportsGdpYear": 2022,
     "importsGdp": 63.3,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 0.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.36,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.8,
+    "co2PerCapitaYear": 2024
   },
   "AI": {
     "nominal": 380000000,
@@ -319,7 +355,15 @@
     "exportsGdp": 37,
     "exportsGdpYear": 2025,
     "importsGdp": 42.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 41.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 4.24,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.8,
+    "co2PerCapitaYear": 2024
   },
   "AM": {
     "source": "World Bank (WDI)",
@@ -351,7 +395,15 @@
     "exportsGdp": 48.1,
     "exportsGdpYear": 2025,
     "importsGdp": 53.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 9.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 7.49,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.4,
+    "co2PerCapitaYear": 2024
   },
   "AO": {
     "source": "World Bank (WDI)",
@@ -383,7 +435,15 @@
     "exportsGdp": 23,
     "exportsGdpYear": 2025,
     "importsGdp": 11.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 52.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 28.1,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.7,
+    "co2PerCapitaYear": 2024
   },
   "AQ": {
     "population": 0,
@@ -420,7 +480,15 @@
     "exportsGdp": 15.6,
     "exportsGdpYear": 2025,
     "importsGdp": 14.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 9.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 183.27,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "AS": {
     "source": "World Bank (WDI)",
@@ -440,7 +508,9 @@
     "exportsGdp": 47,
     "exportsGdpYear": 2022,
     "importsGdp": 77.7,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 0.4,
+    "renewableEnergyYear": 2022
   },
   "AT": {
     "source": "World Bank (WDI)",
@@ -472,7 +542,15 @@
     "exportsGdp": 54.7,
     "exportsGdpYear": 2025,
     "importsGdp": 52.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 36,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 58.03,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 7.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.3,
+    "co2PerCapitaYear": 2024
   },
   "AU": {
     "source": "World Bank (WDI)",
@@ -504,7 +582,15 @@
     "exportsGdp": 23.2,
     "exportsGdpYear": 2025,
     "importsGdp": 22.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 383.4,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 21.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 13.9,
+    "co2PerCapitaYear": 2024
   },
   "AW": {
     "source": "World Bank (WDI)",
@@ -536,7 +622,9 @@
     "exportsGdp": 86,
     "exportsGdpYear": 2024,
     "importsGdp": 78.2,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 8.8,
+    "renewableEnergyYear": 2022
   },
   "AX": {
     "nominal": 1600000000,
@@ -578,7 +666,15 @@
     "exportsGdp": 43,
     "exportsGdpYear": 2025,
     "importsGdp": 36.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 1.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 38.89,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.8,
+    "co2PerCapitaYear": 2024
   },
   "B8": {
     "source": "World Bank (WDI)",
@@ -608,7 +704,9 @@
     "exportsGdp": 56.4,
     "exportsGdpYear": 2025,
     "importsGdp": 54.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19.7,
+    "renewableEnergyYear": 2020
   },
   "BA": {
     "source": "World Bank (WDI)",
@@ -640,7 +738,15 @@
     "exportsGdp": 41,
     "exportsGdpYear": 2025,
     "importsGdp": 54.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 36.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 20.41,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.5,
+    "co2PerCapitaYear": 2024
   },
   "BB": {
     "source": "World Bank (WDI)",
@@ -668,7 +774,15 @@
     "industryGdp": 12.2,
     "industryGdpYear": 2024,
     "servicesGdp": 75.8,
-    "servicesGdpYear": 2024
+    "servicesGdpYear": 2024,
+    "renewableEnergy": 5.5,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.71,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.5,
+    "co2PerCapitaYear": 2024
   },
   "BD": {
     "source": "World Bank (WDI)",
@@ -700,7 +814,15 @@
     "exportsGdp": 11.1,
     "exportsGdpYear": 2025,
     "importsGdp": 16.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 25,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 124.19,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.7,
+    "co2PerCapitaYear": 2024
   },
   "BE": {
     "source": "World Bank (WDI)",
@@ -732,7 +854,15 @@
     "exportsGdp": 75.5,
     "exportsGdpYear": 2025,
     "importsGdp": 77.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 11.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 86.65,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.3,
+    "co2PerCapitaYear": 2024
   },
   "BF": {
     "source": "World Bank (WDI)",
@@ -764,7 +894,15 @@
     "exportsGdp": 35,
     "exportsGdpYear": 2025,
     "importsGdp": 30,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 71.4,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 6.48,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "BG": {
     "source": "World Bank (WDI)",
@@ -796,7 +934,15 @@
     "exportsGdp": 50.7,
     "exportsGdpYear": 2025,
     "importsGdp": 51.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 20.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 34.19,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 7.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.3,
+    "co2PerCapitaYear": 2024
   },
   "BH": {
     "source": "World Bank (WDI)",
@@ -828,7 +974,15 @@
     "exportsGdp": 87.5,
     "exportsGdpYear": 2024,
     "importsGdp": 70,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 37.97,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 40.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 23.7,
+    "co2PerCapitaYear": 2024
   },
   "BI": {
     "source": "World Bank (WDI)",
@@ -856,7 +1010,15 @@
     "industryGdp": 18.2,
     "industryGdpYear": 2025,
     "servicesGdp": 42.1,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 83,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.97,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "BJ": {
     "source": "World Bank (WDI)",
@@ -888,7 +1050,15 @@
     "exportsGdp": 17.1,
     "exportsGdpYear": 2025,
     "importsGdp": 20.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 54.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 7.05,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "BL": {
     "nominal": 420000000,
@@ -928,7 +1098,9 @@
     "exportsGdp": 55.1,
     "exportsGdpYear": 2024,
     "importsGdp": 25.1,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 0.9,
+    "renewableEnergyYear": 2022
   },
   "BN": {
     "source": "World Bank (WDI)",
@@ -960,7 +1132,15 @@
     "exportsGdp": 71.6,
     "exportsGdpYear": 2025,
     "importsGdp": 52,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 9.37,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 25.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 20.1,
+    "co2PerCapitaYear": 2024
   },
   "BO": {
     "source": "World Bank (WDI)",
@@ -992,7 +1172,15 @@
     "exportsGdp": 21.4,
     "exportsGdpYear": 2024,
     "importsGdp": 25.5,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 12.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 28.44,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.3,
+    "co2PerCapitaYear": 2024
   },
   "BQ": {
     "population": 26552,
@@ -1029,7 +1217,15 @@
     "exportsGdp": 17.8,
     "exportsGdpYear": 2025,
     "importsGdp": 17.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 46.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 491.47,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.3,
+    "co2PerCapitaYear": 2024
   },
   "BS": {
     "source": "World Bank (WDI)",
@@ -1061,7 +1257,15 @@
     "exportsGdp": 37.8,
     "exportsGdpYear": 2024,
     "importsGdp": 41.5,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 1.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.46,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.6,
+    "co2PerCapitaYear": 2024
   },
   "BT": {
     "source": "World Bank (WDI)",
@@ -1093,7 +1297,15 @@
     "exportsGdp": 31.5,
     "exportsGdpYear": 2024,
     "importsGdp": 47.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 82.5,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.59,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2,
+    "co2PerCapitaYear": 2024
   },
   "BV": {
     "population": 0,
@@ -1130,7 +1342,15 @@
     "exportsGdp": 32,
     "exportsGdpYear": 2025,
     "importsGdp": 37.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 27.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 6.9,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.7,
+    "co2PerCapitaYear": 2024
   },
   "BY": {
     "source": "World Bank (WDI)",
@@ -1162,7 +1382,15 @@
     "exportsGdp": 55.1,
     "exportsGdpYear": 2025,
     "importsGdp": 57,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 8.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 54.22,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6,
+    "co2PerCapitaYear": 2024
   },
   "BZ": {
     "source": "World Bank (WDI)",
@@ -1194,7 +1422,15 @@
     "exportsGdp": 55.2,
     "exportsGdpYear": 2024,
     "importsGdp": 53.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 30.8,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.39,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.9,
+    "co2PerCapitaYear": 2024
   },
   "CA": {
     "source": "World Bank (WDI)",
@@ -1226,7 +1462,15 @@
     "exportsGdp": 31.3,
     "exportsGdpYear": 2025,
     "importsGdp": 32.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 23.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 577.97,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 18.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 13.9,
+    "co2PerCapitaYear": 2024
   },
   "CC": {
     "population": 593,
@@ -1263,7 +1507,15 @@
     "exportsGdp": 43.4,
     "exportsGdpYear": 2025,
     "importsGdp": 43.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 96.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 6.21,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "CF": {
     "source": "World Bank (WDI)",
@@ -1295,7 +1547,15 @@
     "exportsGdp": 19.3,
     "exportsGdpYear": 2025,
     "importsGdp": 33.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 90.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.34,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "CG": {
     "source": "World Bank (WDI)",
@@ -1327,7 +1587,15 @@
     "exportsGdp": 48,
     "exportsGdpYear": 2025,
     "importsGdp": 43.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 71.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.46,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.3,
+    "co2PerCapitaYear": 2024
   },
   "CH": {
     "source": "World Bank (WDI)",
@@ -1359,7 +1627,15 @@
     "exportsGdp": 78.1,
     "exportsGdpYear": 2025,
     "importsGdp": 69.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 27.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 33.73,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.7,
+    "co2PerCapitaYear": 2024
   },
   "CI": {
     "source": "World Bank (WDI)",
@@ -1391,7 +1667,15 @@
     "exportsGdp": 29.8,
     "exportsGdpYear": 2025,
     "importsGdp": 24.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 58.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 18.81,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "CK": {
     "nominal": 320000000,
@@ -1433,7 +1717,15 @@
     "exportsGdp": 34.6,
     "exportsGdpYear": 2025,
     "importsGdp": 30.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 24.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 77.82,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.9,
+    "co2PerCapitaYear": 2024
   },
   "CM": {
     "source": "World Bank (WDI)",
@@ -1465,7 +1757,15 @@
     "exportsGdp": 13.1,
     "exportsGdpYear": 2025,
     "importsGdp": 20.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 79.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 10.29,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "CN": {
     "source": "World Bank (WDI)",
@@ -1497,7 +1797,15 @@
     "exportsGdp": 21.1,
     "exportsGdpYear": 2025,
     "importsGdp": 16.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 13124.73,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 11,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 9.3,
+    "co2PerCapitaYear": 2024
   },
   "CO": {
     "source": "World Bank (WDI)",
@@ -1529,7 +1837,15 @@
     "exportsGdp": 15,
     "exportsGdpYear": 2025,
     "importsGdp": 20.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 29.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 95.08,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.8,
+    "co2PerCapitaYear": 2024
   },
   "CR": {
     "source": "World Bank (WDI)",
@@ -1561,7 +1877,15 @@
     "exportsGdp": 38.8,
     "exportsGdpYear": 2025,
     "importsGdp": 32.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.38,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.6,
+    "co2PerCapitaYear": 2024
   },
   "CU": {
     "source": "World Bank (WDI)",
@@ -1587,7 +1911,15 @@
     "exportsGdp": 42.5,
     "exportsGdpYear": 2024,
     "importsGdp": 82.4,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 20.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 21,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.9,
+    "co2PerCapitaYear": 2024
   },
   "CV": {
     "source": "World Bank (WDI)",
@@ -1619,7 +1951,15 @@
     "exportsGdp": 42,
     "exportsGdpYear": 2025,
     "importsGdp": 53.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 21.8,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.68,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.3,
+    "co2PerCapitaYear": 2024
   },
   "CW": {
     "source": "World Bank (WDI)",
@@ -1651,7 +1991,9 @@
     "exportsGdp": 63.2,
     "exportsGdpYear": 2018,
     "importsGdp": 92,
-    "importsGdpYear": 2018
+    "importsGdpYear": 2018,
+    "renewableEnergy": 2.8,
+    "renewableEnergyYear": 2021
   },
   "CX": {
     "population": 1692,
@@ -1688,7 +2030,15 @@
     "exportsGdp": 97.6,
     "exportsGdpYear": 2025,
     "importsGdp": 91.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 7.34,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.4,
+    "co2PerCapitaYear": 2024
   },
   "CZ": {
     "source": "World Bank (WDI)",
@@ -1720,7 +2070,15 @@
     "exportsGdp": 66.9,
     "exportsGdpYear": 2025,
     "importsGdp": 61.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 17.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 77.75,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.1,
+    "co2PerCapitaYear": 2024
   },
   "DE": {
     "source": "World Bank (WDI)",
@@ -1752,7 +2110,15 @@
     "exportsGdp": 40.4,
     "exportsGdpYear": 2025,
     "importsGdp": 38.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 17.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 579.94,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.9,
+    "co2PerCapitaYear": 2024
   },
   "DJ": {
     "source": "World Bank (WDI)",
@@ -1784,7 +2150,15 @@
     "exportsGdp": 110.5,
     "exportsGdpYear": 2025,
     "importsGdp": 95.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 26.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.89,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   },
   "DK": {
     "source": "World Bank (WDI)",
@@ -1816,7 +2190,15 @@
     "exportsGdp": 70.1,
     "exportsGdpYear": 2025,
     "importsGdp": 59.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 39.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 25.57,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.3,
+    "co2PerCapitaYear": 2024
   },
   "DM": {
     "source": "World Bank (WDI)",
@@ -1844,7 +2226,15 @@
     "industryGdp": 14.1,
     "industryGdpYear": 2025,
     "servicesGdp": 57.2,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 8.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.08,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.2,
+    "co2PerCapitaYear": 2024
   },
   "DO": {
     "source": "World Bank (WDI)",
@@ -1876,7 +2266,15 @@
     "exportsGdp": 23.6,
     "exportsGdpYear": 2025,
     "importsGdp": 27.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 14.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 34.22,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3,
+    "co2PerCapitaYear": 2024
   },
   "DZ": {
     "source": "World Bank (WDI)",
@@ -1908,7 +2306,15 @@
     "exportsGdp": 16.8,
     "exportsGdpYear": 2025,
     "importsGdp": 22.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 186.36,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.9,
+    "co2PerCapitaYear": 2024
   },
   "EC": {
     "source": "World Bank (WDI)",
@@ -1940,7 +2346,15 @@
     "exportsGdp": 31.4,
     "exportsGdpYear": 2025,
     "importsGdp": 27.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 18.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 47.96,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.6,
+    "co2PerCapitaYear": 2024
   },
   "EE": {
     "source": "World Bank (WDI)",
@@ -1972,7 +2386,15 @@
     "exportsGdp": 78.4,
     "exportsGdpYear": 2025,
     "importsGdp": 77.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 38,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 10.65,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 10.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.8,
+    "co2PerCapitaYear": 2024
   },
   "EG": {
     "source": "World Bank (WDI)",
@@ -2004,7 +2426,15 @@
     "exportsGdp": 19.8,
     "exportsGdpYear": 2025,
     "importsGdp": 31.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 6.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 291.64,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.5,
+    "co2PerCapitaYear": 2024
   },
   "EH": {
     "population": 600904,
@@ -2037,7 +2467,15 @@
     "exportsGdp": 18.2,
     "exportsGdpYear": 2011,
     "importsGdp": 29.2,
-    "importsGdpYear": 2011
+    "importsGdpYear": 2011,
+    "renewableEnergy": 80.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 0.78,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "ES": {
     "source": "World Bank (WDI)",
@@ -2069,7 +2507,15 @@
     "exportsGdp": 36.6,
     "exportsGdpYear": 2025,
     "importsGdp": 32.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 220.08,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.5,
+    "co2PerCapitaYear": 2024
   },
   "ET": {
     "source": "World Bank (WDI)",
@@ -2101,7 +2547,15 @@
     "exportsGdp": 13.3,
     "exportsGdpYear": 2025,
     "importsGdp": 20.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 90.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 19.36,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "EU": {
     "source": "World Bank (WDI)",
@@ -2131,7 +2585,9 @@
     "exportsGdp": 49.6,
     "exportsGdpYear": 2025,
     "importsGdp": 45.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 21.1,
+    "renewableEnergyYear": 2020
   },
   "FI": {
     "source": "World Bank (WDI)",
@@ -2163,7 +2619,15 @@
     "exportsGdp": 42.3,
     "exportsGdpYear": 2025,
     "importsGdp": 41.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 50.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 31.11,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.5,
+    "co2PerCapitaYear": 2024
   },
   "FJ": {
     "source": "World Bank (WDI)",
@@ -2195,7 +2659,15 @@
     "exportsGdp": 54.4,
     "exportsGdpYear": 2024,
     "importsGdp": 64.6,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 28.4,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.51,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.6,
+    "co2PerCapitaYear": 2024
   },
   "FK": {
     "nominal": 300000000,
@@ -2237,7 +2709,15 @@
     "exportsGdp": 22.1,
     "exportsGdpYear": 2025,
     "importsGdp": 70.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0,
+    "co2PerCapitaYear": 2024
   },
   "FO": {
     "source": "World Bank (WDI)",
@@ -2267,7 +2747,9 @@
     "exportsGdp": 54.6,
     "exportsGdpYear": 2024,
     "importsGdp": 51.2,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 7.9,
+    "renewableEnergyYear": 2022
   },
   "FR": {
     "source": "World Bank (WDI)",
@@ -2299,7 +2781,15 @@
     "exportsGdp": 33.4,
     "exportsGdpYear": 2025,
     "importsGdp": 33.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 16.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 274.45,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "GA": {
     "source": "World Bank (WDI)",
@@ -2331,7 +2821,15 @@
     "exportsGdp": 55.5,
     "exportsGdpYear": 2025,
     "importsGdp": 29.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 91.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 5.2,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2,
+    "co2PerCapitaYear": 2024
   },
   "GB": {
     "source": "World Bank (WDI)",
@@ -2363,7 +2861,15 @@
     "exportsGdp": 30.6,
     "exportsGdpYear": 2025,
     "importsGdp": 31.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 292.42,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.2,
+    "co2PerCapitaYear": 2024
   },
   "GD": {
     "source": "World Bank (WDI)",
@@ -2391,7 +2897,15 @@
     "industryGdp": 15.5,
     "industryGdpYear": 2025,
     "servicesGdp": 64.9,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 10,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.18,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.5,
+    "co2PerCapitaYear": 2024
   },
   "GE": {
     "source": "World Bank (WDI)",
@@ -2423,7 +2937,15 @@
     "exportsGdp": 47.4,
     "exportsGdpYear": 2025,
     "importsGdp": 53.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 25.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 13.47,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.4,
+    "co2PerCapitaYear": 2024
   },
   "GF": {
     "population": 292354,
@@ -2470,7 +2992,15 @@
     "exportsGdp": 35.1,
     "exportsGdpYear": 2024,
     "importsGdp": 33.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 39,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 24.17,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.7,
+    "co2PerCapitaYear": 2024
   },
   "GI": {
     "source": "World Bank (WDI)",
@@ -2481,6 +3011,8 @@
     "lifeExpectancyYear": 2024,
     "internetUsers": 94.4,
     "internetUsersYear": 2016,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2021,
     "nominal": 3100000000,
     "year": 2023,
     "perCapita": 91176,
@@ -2514,7 +3046,9 @@
     "exportsGdp": 40.8,
     "exportsGdpYear": 2023,
     "importsGdp": 51.1,
-    "importsGdpYear": 2023
+    "importsGdpYear": 2023,
+    "renewableEnergy": 11.7,
+    "renewableEnergyYear": 2022
   },
   "GM": {
     "source": "World Bank (WDI)",
@@ -2546,7 +3080,15 @@
     "exportsGdp": 12.7,
     "exportsGdpYear": 2025,
     "importsGdp": 49.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 47.7,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.49,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "GN": {
     "source": "World Bank (WDI)",
@@ -2578,7 +3120,15 @@
     "exportsGdp": 41.4,
     "exportsGdpYear": 2025,
     "importsGdp": 62.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 66.6,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 5.21,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "GP": {
     "population": 373791,
@@ -2615,7 +3165,15 @@
     "exportsGdp": 46.5,
     "exportsGdpYear": 2025,
     "importsGdp": 28.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 4.2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 4.83,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.5,
+    "co2PerCapitaYear": 2024
   },
   "GR": {
     "source": "World Bank (WDI)",
@@ -2647,7 +3205,15 @@
     "exportsGdp": 39.5,
     "exportsGdpYear": 2025,
     "importsGdp": 44,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 21.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 52.51,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5,
+    "co2PerCapitaYear": 2024
   },
   "GS": {
     "population": 0,
@@ -2684,7 +3250,15 @@
     "exportsGdp": 15.6,
     "exportsGdpYear": 2025,
     "importsGdp": 31,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 62.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 20.37,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.1,
+    "co2PerCapitaYear": 2024
   },
   "GU": {
     "source": "World Bank (WDI)",
@@ -2704,7 +3278,9 @@
     "exportsGdp": 7.9,
     "exportsGdpYear": 2022,
     "importsGdp": 64,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 6.7,
+    "renewableEnergyYear": 2022
   },
   "GW": {
     "source": "World Bank (WDI)",
@@ -2736,7 +3312,15 @@
     "exportsGdp": 13.9,
     "exportsGdpYear": 2025,
     "importsGdp": 27,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 87.4,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.34,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "GY": {
     "source": "World Bank (WDI)",
@@ -2768,7 +3352,15 @@
     "exportsGdp": 84.6,
     "exportsGdpYear": 2005,
     "importsGdp": 109.7,
-    "importsGdpYear": 2005
+    "importsGdpYear": 2005,
+    "renewableEnergy": 12.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 3.79,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 10.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.5,
+    "co2PerCapitaYear": 2024
   },
   "HK": {
     "source": "World Bank (WDI)",
@@ -2800,7 +3392,9 @@
     "exportsGdp": 199.8,
     "exportsGdpYear": 2025,
     "importsGdp": 196.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0.4,
+    "renewableEnergyYear": 2021
   },
   "HM": {
     "population": 0,
@@ -2837,7 +3431,15 @@
     "exportsGdp": 35,
     "exportsGdpYear": 2025,
     "importsGdp": 56.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 45.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 12.29,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.1,
+    "co2PerCapitaYear": 2024
   },
   "HR": {
     "source": "World Bank (WDI)",
@@ -2869,7 +3471,15 @@
     "exportsGdp": 48,
     "exportsGdpYear": 2025,
     "importsGdp": 53,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 18.68,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.8,
+    "co2PerCapitaYear": 2024
   },
   "HT": {
     "source": "World Bank (WDI)",
@@ -2901,7 +3511,15 @@
     "exportsGdp": 1.6,
     "exportsGdpYear": 2025,
     "importsGdp": 14.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 76.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 3.51,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "HU": {
     "source": "World Bank (WDI)",
@@ -2933,7 +3551,15 @@
     "exportsGdp": 72.6,
     "exportsGdpYear": 2025,
     "importsGdp": 68.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 42.63,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.5,
+    "co2PerCapitaYear": 2024
   },
   "ID": {
     "source": "World Bank (WDI)",
@@ -2965,7 +3591,15 @@
     "exportsGdp": 22.8,
     "exportsGdpYear": 2025,
     "importsGdp": 20.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 20.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 812.2,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.8,
+    "co2PerCapitaYear": 2024
   },
   "IE": {
     "source": "World Bank (WDI)",
@@ -2997,7 +3631,15 @@
     "exportsGdp": 140.1,
     "exportsGdpYear": 2025,
     "importsGdp": 99.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 32.57,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 11.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.9,
+    "co2PerCapitaYear": 2024
   },
   "IL": {
     "source": "World Bank (WDI)",
@@ -3029,7 +3671,15 @@
     "exportsGdp": 27.6,
     "exportsGdpYear": 2025,
     "importsGdp": 25.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 6.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 57.67,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 7.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.7,
+    "co2PerCapitaYear": 2024
   },
   "IM": {
     "source": "World Bank (WDI)",
@@ -3049,7 +3699,9 @@
     "industryGdp": 7.5,
     "industryGdpYear": 2023,
     "servicesGdp": 95.2,
-    "servicesGdpYear": 2023
+    "servicesGdpYear": 2023,
+    "renewableEnergy": 2.7,
+    "renewableEnergyYear": 2022
   },
   "IN": {
     "source": "World Bank (WDI)",
@@ -3081,7 +3733,15 @@
     "exportsGdp": 22.3,
     "exportsGdpYear": 2025,
     "importsGdp": 24,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 3153.83,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.2,
+    "co2PerCapitaYear": 2024
   },
   "IO": {
     "population": 0,
@@ -3118,7 +3778,15 @@
     "exportsGdp": 39.8,
     "exportsGdpYear": 2024,
     "importsGdp": 37.4,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 1.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 238.67,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.1,
+    "co2PerCapitaYear": 2024
   },
   "IR": {
     "source": "World Bank (WDI)",
@@ -3150,7 +3818,15 @@
     "exportsGdp": 25.8,
     "exportsGdpYear": 2025,
     "importsGdp": 34.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 828.99,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 11.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 9,
+    "co2PerCapitaYear": 2024
   },
   "IS": {
     "source": "World Bank (WDI)",
@@ -3182,7 +3858,15 @@
     "exportsGdp": 40.1,
     "exportsGdpYear": 2025,
     "importsGdp": 42.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 82.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 3.29,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 11.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 8.4,
+    "co2PerCapitaYear": 2024
   },
   "IT": {
     "source": "World Bank (WDI)",
@@ -3214,7 +3898,15 @@
     "exportsGdp": 32.2,
     "exportsGdpYear": 2025,
     "importsGdp": 30.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 17.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 299.23,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.1,
+    "co2PerCapitaYear": 2024
   },
   "JE": {
     "nominal": 6800000000,
@@ -3272,7 +3964,15 @@
     "industryGdp": 16.3,
     "industryGdpYear": 2025,
     "servicesGdp": 59.8,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 10.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.07,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.8,
+    "co2PerCapitaYear": 2024
   },
   "JO": {
     "source": "World Bank (WDI)",
@@ -3304,7 +4004,15 @@
     "exportsGdp": 54.2,
     "exportsGdpYear": 2007,
     "importsGdp": 91.8,
-    "importsGdpYear": 2007
+    "importsGdpYear": 2007,
+    "renewableEnergy": 11.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 24.14,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.1,
+    "co2PerCapitaYear": 2024
   },
   "JP": {
     "source": "World Bank (WDI)",
@@ -3336,7 +4044,15 @@
     "exportsGdp": 22,
     "exportsGdpYear": 2024,
     "importsGdp": 22.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 8.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 972.27,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.9,
+    "co2PerCapitaYear": 2024
   },
   "KE": {
     "source": "World Bank (WDI)",
@@ -3368,7 +4084,15 @@
     "exportsGdp": 15.8,
     "exportsGdpYear": 2025,
     "importsGdp": 21.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 67.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 21.64,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.4,
+    "co2PerCapitaYear": 2024
   },
   "KG": {
     "source": "World Bank (WDI)",
@@ -3400,7 +4124,15 @@
     "exportsGdp": 26.8,
     "exportsGdpYear": 2025,
     "importsGdp": 65.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 27.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 10.75,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.5,
+    "co2PerCapitaYear": 2024
   },
   "KH": {
     "source": "World Bank (WDI)",
@@ -3432,7 +4164,15 @@
     "exportsGdp": 68.6,
     "exportsGdpYear": 2025,
     "importsGdp": 67.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 52.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 19.44,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.1,
+    "co2PerCapitaYear": 2024
   },
   "KI": {
     "source": "World Bank (WDI)",
@@ -3464,7 +4204,15 @@
     "exportsGdp": 4.5,
     "exportsGdpYear": 2024,
     "importsGdp": 97.6,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 41.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.08,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "KM": {
     "source": "World Bank (WDI)",
@@ -3496,7 +4244,15 @@
     "exportsGdp": 9.3,
     "exportsGdpYear": 2025,
     "importsGdp": 31.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 39.3,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.45,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "KN": {
     "source": "World Bank (WDI)",
@@ -3524,7 +4280,15 @@
     "industryGdp": 20.8,
     "industryGdpYear": 2025,
     "servicesGdp": 66.2,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 1.5,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.14,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3,
+    "co2PerCapitaYear": 2024
   },
   "KP": {
     "source": "World Bank (WDI)",
@@ -3535,6 +4299,14 @@
     "lifeExpectancyYear": 2024,
     "internetUsers": 0,
     "internetUsersYear": 2004,
+    "renewableEnergy": 14.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 66.24,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.5,
+    "co2PerCapitaYear": 2024,
     "nominal": 29500000000,
     "year": 2023,
     "perCapita": 1128,
@@ -3570,7 +4342,15 @@
     "exportsGdp": 45.8,
     "exportsGdpYear": 2025,
     "importsGdp": 40.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 3.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 588.01,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 12.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 11.4,
+    "co2PerCapitaYear": 2024
   },
   "KW": {
     "source": "World Bank (WDI)",
@@ -3602,7 +4382,15 @@
     "exportsGdp": 55.8,
     "exportsGdpYear": 2024,
     "importsGdp": 38.2,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 0.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 115.93,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 35.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 23.8,
+    "co2PerCapitaYear": 2024
   },
   "KY": {
     "source": "World Bank (WDI)",
@@ -3634,7 +4422,9 @@
     "exportsGdp": 59.6,
     "exportsGdpYear": 2020,
     "importsGdp": 45.8,
-    "importsGdpYear": 2020
+    "importsGdpYear": 2020,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2022
   },
   "KZ": {
     "source": "World Bank (WDI)",
@@ -3666,7 +4456,15 @@
     "exportsGdp": 31.6,
     "exportsGdpYear": 2024,
     "importsGdp": 25.6,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 258.8,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 16,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 12.4,
+    "co2PerCapitaYear": 2024
   },
   "LA": {
     "source": "World Bank (WDI)",
@@ -3698,7 +4496,15 @@
     "exportsGdp": 33.2,
     "exportsGdpYear": 2016,
     "importsGdp": 41.9,
-    "importsGdpYear": 2016
+    "importsGdpYear": 2016,
+    "renewableEnergy": 49.2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 26.06,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.3,
+    "co2PerCapitaYear": 2024
   },
   "LB": {
     "source": "World Bank (WDI)",
@@ -3730,7 +4536,15 @@
     "exportsGdp": 23.3,
     "exportsGdpYear": 2024,
     "importsGdp": 58.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 6.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 11,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.9,
+    "co2PerCapitaYear": 2024
   },
   "LC": {
     "source": "World Bank (WDI)",
@@ -3758,7 +4572,15 @@
     "industryGdp": 10.7,
     "industryGdpYear": 2025,
     "servicesGdp": 73.8,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 9.7,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.31,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.7,
+    "co2PerCapitaYear": 2024
   },
   "LI": {
     "source": "World Bank (WDI)",
@@ -3780,7 +4602,9 @@
     "industryGdp": 39.1,
     "industryGdpYear": 2023,
     "servicesGdp": 57.4,
-    "servicesGdpYear": 2023
+    "servicesGdpYear": 2023,
+    "renewableEnergy": 56.9,
+    "renewableEnergyYear": 2022
   },
   "LK": {
     "source": "World Bank (WDI)",
@@ -3812,7 +4636,15 @@
     "exportsGdp": 19,
     "exportsGdpYear": 2025,
     "importsGdp": 22.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 48.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 23.33,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.1,
+    "co2PerCapitaYear": 2024
   },
   "LR": {
     "source": "World Bank (WDI)",
@@ -3840,7 +4672,15 @@
     "industryGdp": 24.5,
     "industryGdpYear": 2025,
     "servicesGdp": 40,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 92.8,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.87,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "LS": {
     "source": "World Bank (WDI)",
@@ -3872,7 +4712,15 @@
     "exportsGdp": 49.5,
     "exportsGdpYear": 2025,
     "importsGdp": 104.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.4,
+    "co2PerCapitaYear": 2024
   },
   "LT": {
     "source": "World Bank (WDI)",
@@ -3904,7 +4752,15 @@
     "exportsGdp": 73,
     "exportsGdpYear": 2025,
     "importsGdp": 69.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 33.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 12.97,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 7.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.5,
+    "co2PerCapitaYear": 2024
   },
   "LU": {
     "source": "World Bank (WDI)",
@@ -3936,7 +4792,15 @@
     "exportsGdp": 190.5,
     "exportsGdpYear": 2025,
     "importsGdp": 159.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 20.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 7.15,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 11.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 10.4,
+    "co2PerCapitaYear": 2024
   },
   "LV": {
     "source": "World Bank (WDI)",
@@ -3968,7 +4832,15 @@
     "exportsGdp": 62.6,
     "exportsGdpYear": 2025,
     "importsGdp": 67.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 44,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 6.81,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.7,
+    "co2PerCapitaYear": 2024
   },
   "LY": {
     "source": "World Bank (WDI)",
@@ -4000,7 +4872,15 @@
     "exportsGdp": 71.7,
     "exportsGdpYear": 2025,
     "importsGdp": 65.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 3.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 63.95,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 13.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 8.6,
+    "co2PerCapitaYear": 2024
   },
   "MA": {
     "source": "World Bank (WDI)",
@@ -4032,7 +4912,15 @@
     "exportsGdp": 42,
     "exportsGdpYear": 2025,
     "importsGdp": 51.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 10.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 70.04,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.8,
+    "co2PerCapitaYear": 2024
   },
   "MC": {
     "source": "World Bank (WDI)",
@@ -4084,7 +4972,15 @@
     "exportsGdp": 31.8,
     "exportsGdpYear": 2025,
     "importsGdp": 60.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 21.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.21,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.5,
+    "co2PerCapitaYear": 2024
   },
   "ME": {
     "source": "World Bank (WDI)",
@@ -4116,7 +5012,9 @@
     "exportsGdp": 40.1,
     "exportsGdpYear": 2025,
     "importsGdp": 65.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 39.6,
+    "renewableEnergyYear": 2021
   },
   "MF": {
     "source": "World Bank (WDI)",
@@ -4162,7 +5060,15 @@
     "exportsGdp": 21.3,
     "exportsGdpYear": 2025,
     "importsGdp": 32.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 83.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 4.68,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "MH": {
     "source": "World Bank (WDI)",
@@ -4192,7 +5098,15 @@
     "exportsGdp": 36,
     "exportsGdpYear": 2025,
     "importsGdp": 79.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0,
+    "co2PerCapitaYear": 2024
   },
   "MK": {
     "source": "World Bank (WDI)",
@@ -4224,7 +5138,15 @@
     "exportsGdp": 59.6,
     "exportsGdpYear": 2025,
     "importsGdp": 73.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 7.3,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "ML": {
     "source": "World Bank (WDI)",
@@ -4256,7 +5178,15 @@
     "exportsGdp": 22.1,
     "exportsGdpYear": 2025,
     "importsGdp": 26.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 71.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 7.41,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "MM": {
     "source": "World Bank (WDI)",
@@ -4284,7 +5214,15 @@
     "industryGdp": 36.2,
     "industryGdpYear": 2025,
     "servicesGdp": 38.5,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 62.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 31.36,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "MN": {
     "source": "World Bank (WDI)",
@@ -4316,7 +5254,15 @@
     "exportsGdp": 68.1,
     "exportsGdpYear": 2025,
     "importsGdp": 62.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 27.66,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 29.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.8,
+    "co2PerCapitaYear": 2024
   },
   "MO": {
     "source": "World Bank (WDI)",
@@ -4346,7 +5292,9 @@
     "exportsGdp": 92.3,
     "exportsGdpYear": 2025,
     "importsGdp": 46.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 11,
+    "renewableEnergyYear": 2022
   },
   "MP": {
     "source": "World Bank (WDI)",
@@ -4366,7 +5314,9 @@
     "exportsGdp": 22.3,
     "exportsGdpYear": 2022,
     "importsGdp": 70.9,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 0.5,
+    "renewableEnergyYear": 2022
   },
   "MQ": {
     "population": 339897,
@@ -4403,7 +5353,15 @@
     "exportsGdp": 39.9,
     "exportsGdpYear": 2025,
     "importsGdp": 54.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19.6,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 5.01,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.9,
+    "co2PerCapitaYear": 2024
   },
   "MS": {
     "nominal": 75000000,
@@ -4445,7 +5403,15 @@
     "exportsGdp": 119.1,
     "exportsGdpYear": 2025,
     "importsGdp": 99.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 8.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 1.81,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.1,
+    "co2PerCapitaYear": 2024
   },
   "MU": {
     "source": "World Bank (WDI)",
@@ -4477,7 +5443,15 @@
     "exportsGdp": 65,
     "exportsGdpYear": 2025,
     "importsGdp": 74.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 8.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 4.41,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.5,
+    "co2PerCapitaYear": 2024
   },
   "MV": {
     "source": "World Bank (WDI)",
@@ -4509,7 +5483,15 @@
     "exportsGdp": 78.2,
     "exportsGdpYear": 2024,
     "importsGdp": 78.3,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 1.2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.88,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.5,
+    "co2PerCapitaYear": 2024
   },
   "MW": {
     "source": "World Bank (WDI)",
@@ -4541,7 +5523,15 @@
     "exportsGdp": 10.6,
     "exportsGdpYear": 2025,
     "importsGdp": 28.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 62.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 4.79,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "MX": {
     "source": "World Bank (WDI)",
@@ -4573,7 +5563,15 @@
     "exportsGdp": 39.6,
     "exportsGdpYear": 2025,
     "importsGdp": 40.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 13,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 475.99,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.6,
+    "co2PerCapitaYear": 2024
   },
   "MY": {
     "source": "World Bank (WDI)",
@@ -4605,7 +5603,15 @@
     "exportsGdp": 71,
     "exportsGdpYear": 2025,
     "importsGdp": 65.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 7.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 295.95,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 8.2,
+    "co2PerCapitaYear": 2024
   },
   "MZ": {
     "source": "World Bank (WDI)",
@@ -4637,7 +5643,15 @@
     "exportsGdp": 41.4,
     "exportsGdpYear": 2025,
     "importsGdp": 55.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 76.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 10.11,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "NA": {
     "source": "World Bank (WDI)",
@@ -4669,7 +5683,15 @@
     "exportsGdp": 44.7,
     "exportsGdpYear": 2025,
     "importsGdp": 63.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 30,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 3.65,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.2,
+    "co2PerCapitaYear": 2024
   },
   "NC": {
     "source": "World Bank (WDI)",
@@ -4697,7 +5719,9 @@
     "exportsGdp": 11.7,
     "exportsGdpYear": 2024,
     "importsGdp": 28.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 9.6,
+    "renewableEnergyYear": 2022
   },
   "NE": {
     "source": "World Bank (WDI)",
@@ -4729,7 +5753,15 @@
     "exportsGdp": 15.8,
     "exportsGdpYear": 2025,
     "importsGdp": 18.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 79.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 3.21,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "NF": {
     "population": 2188,
@@ -4766,7 +5798,15 @@
     "exportsGdp": 9.2,
     "exportsGdpYear": 1960,
     "importsGdp": 16.9,
-    "importsGdpYear": 1960
+    "importsGdpYear": 1960,
+    "renewableEnergy": 80.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 131.91,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "NI": {
     "source": "World Bank (WDI)",
@@ -4798,7 +5838,15 @@
     "exportsGdp": 41.6,
     "exportsGdpYear": 2025,
     "importsGdp": 54.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 50.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 5.74,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   },
   "NL": {
     "source": "World Bank (WDI)",
@@ -4830,7 +5878,15 @@
     "exportsGdp": 80.7,
     "exportsGdpYear": 2025,
     "importsGdp": 69.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 118.79,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.6,
+    "co2PerCapitaYear": 2024
   },
   "NO": {
     "source": "World Bank (WDI)",
@@ -4862,7 +5918,15 @@
     "exportsGdp": 45.4,
     "exportsGdpYear": 2025,
     "importsGdp": 33.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 61.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 40,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.1,
+    "co2PerCapitaYear": 2024
   },
   "NP": {
     "source": "World Bank (WDI)",
@@ -4894,7 +5958,15 @@
     "exportsGdp": 8.8,
     "exportsGdpYear": 2025,
     "importsGdp": 33.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 73.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 15.89,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "NR": {
     "source": "World Bank (WDI)",
@@ -4920,7 +5992,15 @@
     "exportsGdp": 61.8,
     "exportsGdpYear": 2025,
     "importsGdp": 103.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 1.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0,
+    "co2PerCapitaYear": 2024
   },
   "NU": {
     "nominal": 35000000,
@@ -4962,7 +6042,15 @@
     "exportsGdp": 24.7,
     "exportsGdpYear": 2024,
     "importsGdp": 26,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 28.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 31.81,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 14.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6,
+    "co2PerCapitaYear": 2024
   },
   "OE": {
     "source": "World Bank (WDI)",
@@ -4992,7 +6080,9 @@
     "exportsGdp": 28.3,
     "exportsGdpYear": 2025,
     "importsGdp": 28.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 14.8,
+    "renewableEnergyYear": 2020
   },
   "OM": {
     "source": "World Bank (WDI)",
@@ -5024,7 +6114,15 @@
     "exportsGdp": 66.1,
     "exportsGdpYear": 2024,
     "importsGdp": 48.8,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 0.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 98.51,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 25,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 17.9,
+    "co2PerCapitaYear": 2024
   },
   "PA": {
     "source": "World Bank (WDI)",
@@ -5056,7 +6154,15 @@
     "exportsGdp": 44.4,
     "exportsGdpYear": 2024,
     "importsGdp": 39.3,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 28,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 12.37,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.7,
+    "co2PerCapitaYear": 2024
   },
   "PE": {
     "source": "World Bank (WDI)",
@@ -5088,7 +6194,15 @@
     "exportsGdp": 30,
     "exportsGdpYear": 2025,
     "importsGdp": 21.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 30.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 69.27,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2,
+    "co2PerCapitaYear": 2024
   },
   "PF": {
     "source": "World Bank (WDI)",
@@ -5114,7 +6228,9 @@
     "exportsGdp": 18.3,
     "exportsGdpYear": 2024,
     "importsGdp": 46.1,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 7,
+    "renewableEnergyYear": 2022
   },
   "PG": {
     "source": "World Bank (WDI)",
@@ -5146,7 +6262,15 @@
     "exportsGdp": 72.2,
     "exportsGdpYear": 2004,
     "importsGdp": 58.9,
-    "importsGdpYear": 2004
+    "importsGdpYear": 2004,
+    "renewableEnergy": 54.6,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 5.47,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "PH": {
     "source": "World Bank (WDI)",
@@ -5178,7 +6302,15 @@
     "exportsGdp": 26.6,
     "exportsGdpYear": 2025,
     "importsGdp": 40.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 28,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 174.11,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.5,
+    "co2PerCapitaYear": 2024
   },
   "PK": {
     "source": "World Bank (WDI)",
@@ -5210,7 +6342,15 @@
     "exportsGdp": 10,
     "exportsGdpYear": 2025,
     "importsGdp": 17.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 41.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 203.99,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   },
   "PL": {
     "source": "World Bank (WDI)",
@@ -5242,7 +6382,15 @@
     "exportsGdp": 50,
     "exportsGdpYear": 2025,
     "importsGdp": 47.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 276.06,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 9.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.6,
+    "co2PerCapitaYear": 2024
   },
   "PM": {
     "nominal": 280000000,
@@ -5287,7 +6435,9 @@
     "exportsGdp": 46.9,
     "exportsGdpYear": 2025,
     "importsGdp": 43.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 2.5,
+    "renewableEnergyYear": 2022
   },
   "PS": {
     "source": "World Bank (WDI)",
@@ -5319,7 +6469,9 @@
     "exportsGdp": 21.2,
     "exportsGdpYear": 2025,
     "importsGdp": 53.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.4,
+    "renewableEnergyYear": 2022
   },
   "PT": {
     "source": "World Bank (WDI)",
@@ -5351,7 +6503,15 @@
     "exportsGdp": 43.7,
     "exportsGdpYear": 2025,
     "importsGdp": 42.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 32.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 35.56,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.3,
+    "co2PerCapitaYear": 2024
   },
   "PW": {
     "source": "World Bank (WDI)",
@@ -5383,7 +6543,15 @@
     "exportsGdp": 32.7,
     "exportsGdpYear": 2024,
     "importsGdp": 73.1,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 0.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.47,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 86.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 83.2,
+    "co2PerCapitaYear": 2024
   },
   "PY": {
     "source": "World Bank (WDI)",
@@ -5415,7 +6583,15 @@
     "exportsGdp": 37.2,
     "exportsGdpYear": 2025,
     "importsGdp": 39.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 58.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.03,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.1,
+    "co2PerCapitaYear": 2024
   },
   "QA": {
     "source": "World Bank (WDI)",
@@ -5447,7 +6623,15 @@
     "exportsGdp": 68.6,
     "exportsGdpYear": 2022,
     "importsGdp": 31.6,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 135.27,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 56.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 45.5,
+    "co2PerCapitaYear": 2024
   },
   "RE": {
     "population": 896175,
@@ -5484,7 +6668,15 @@
     "exportsGdp": 35.5,
     "exportsGdpYear": 2025,
     "importsGdp": 40.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 23.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 70.88,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.7,
+    "co2PerCapitaYear": 2024
   },
   "RS": {
     "source": "World Bank (WDI)",
@@ -5516,7 +6708,9 @@
     "exportsGdp": 54.3,
     "exportsGdpYear": 2025,
     "importsGdp": 58.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 27.2,
+    "renewableEnergyYear": 2021
   },
   "RU": {
     "source": "World Bank (WDI)",
@@ -5548,7 +6742,15 @@
     "exportsGdp": 18.2,
     "exportsGdpYear": 2025,
     "importsGdp": 15.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 3.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 2009.15,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 17.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 14,
+    "co2PerCapitaYear": 2024
   },
   "RW": {
     "source": "World Bank (WDI)",
@@ -5580,7 +6782,15 @@
     "exportsGdp": 21.6,
     "exportsGdpYear": 2025,
     "importsGdp": 35.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 79.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 2.31,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "S1": {
     "source": "World Bank (WDI)",
@@ -5612,7 +6822,9 @@
     "exportsGdp": 74.9,
     "exportsGdpYear": 2025,
     "importsGdp": 70.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.3,
+    "renewableEnergyYear": 2020
   },
   "S2": {
     "source": "World Bank (WDI)",
@@ -5642,7 +6854,9 @@
     "exportsGdp": 41.5,
     "exportsGdpYear": 2024,
     "importsGdp": 64.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 29.4,
+    "renewableEnergyYear": 2020
   },
   "S3": {
     "source": "World Bank (WDI)",
@@ -5668,7 +6882,9 @@
     "industryGdp": 37,
     "industryGdpYear": 2024,
     "servicesGdp": 52.2,
-    "servicesGdpYear": 2024
+    "servicesGdpYear": 2024,
+    "renewableEnergy": 6.3,
+    "renewableEnergyYear": 2020
   },
   "S4": {
     "source": "World Bank (WDI)",
@@ -5698,7 +6914,9 @@
     "exportsGdp": 76,
     "exportsGdpYear": 2025,
     "importsGdp": 74.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 45.4,
+    "renewableEnergyYear": 2020
   },
   "SA": {
     "source": "World Bank (WDI)",
@@ -5730,7 +6948,15 @@
     "exportsGdp": 29.7,
     "exportsGdpYear": 2025,
     "importsGdp": 28.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 652.51,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 23.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 17.6,
+    "co2PerCapitaYear": 2024
   },
   "SB": {
     "source": "World Bank (WDI)",
@@ -5762,7 +6988,15 @@
     "exportsGdp": 40.6,
     "exportsGdpYear": 2024,
     "importsGdp": 70.8,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 50.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.31,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.4,
+    "co2PerCapitaYear": 2024
   },
   "SC": {
     "source": "World Bank (WDI)",
@@ -5794,7 +7028,15 @@
     "exportsGdp": 79.6,
     "exportsGdpYear": 2025,
     "importsGdp": 92.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 1.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.88,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.2,
+    "co2PerCapitaYear": 2024
   },
   "SD": {
     "source": "World Bank (WDI)",
@@ -5826,7 +7068,15 @@
     "exportsGdp": 1.1,
     "exportsGdpYear": 2025,
     "importsGdp": 1.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 61,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 21.87,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.4,
+    "co2PerCapitaYear": 2024
   },
   "SE": {
     "source": "World Bank (WDI)",
@@ -5858,7 +7108,15 @@
     "exportsGdp": 53.2,
     "exportsGdpYear": 2025,
     "importsGdp": 51.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 57.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 37.77,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.6,
+    "co2PerCapitaYear": 2024
   },
   "SG": {
     "source": "World Bank (WDI)",
@@ -5890,7 +7148,15 @@
     "exportsGdp": 177.9,
     "exportsGdpYear": 2025,
     "importsGdp": 142.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 1.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 58.87,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 12.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 9.6,
+    "co2PerCapitaYear": 2024
   },
   "SH": {
     "nominal": 40000000,
@@ -5932,7 +7198,15 @@
     "exportsGdp": 78.6,
     "exportsGdpYear": 2025,
     "importsGdp": 73.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 23.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 13.33,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.3,
+    "co2PerCapitaYear": 2024
   },
   "SJ": {
     "population": 0,
@@ -5969,7 +7243,15 @@
     "exportsGdp": 85.1,
     "exportsGdpYear": 2025,
     "importsGdp": 85.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 17.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 29.89,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 7.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.5,
+    "co2PerCapitaYear": 2024
   },
   "SL": {
     "source": "World Bank (WDI)",
@@ -6001,7 +7283,15 @@
     "exportsGdp": 20.9,
     "exportsGdpYear": 2025,
     "importsGdp": 28.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 71.6,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.46,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "SM": {
     "source": "World Bank (WDI)",
@@ -6065,7 +7355,15 @@
     "exportsGdp": 32.5,
     "exportsGdpYear": 2025,
     "importsGdp": 38.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 35.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 14.2,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   },
   "SO": {
     "source": "World Bank (WDI)",
@@ -6093,7 +7391,15 @@
     "exportsGdp": 29.2,
     "exportsGdpYear": 2025,
     "importsGdp": 98.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 95.4,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.87,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0,
+    "co2PerCapitaYear": 2024
   },
   "SR": {
     "source": "World Bank (WDI)",
@@ -6125,7 +7431,15 @@
     "exportsGdp": 52.5,
     "exportsGdpYear": 2010,
     "importsGdp": 38.4,
-    "importsGdpYear": 2010
+    "importsGdpYear": 2010,
+    "renewableEnergy": 14.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 2.58,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "SS": {
     "source": "World Bank (WDI)",
@@ -6157,7 +7471,9 @@
     "exportsGdp": 36.7,
     "exportsGdpYear": 2015,
     "importsGdp": 28.9,
-    "importsGdpYear": 2015
+    "importsGdpYear": 2015,
+    "renewableEnergy": 32.4,
+    "renewableEnergyYear": 2021
   },
   "ST": {
     "source": "World Bank (WDI)",
@@ -6189,7 +7505,15 @@
     "exportsGdp": 13.3,
     "exportsGdpYear": 2025,
     "importsGdp": 33.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 42.5,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.15,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "SV": {
     "source": "World Bank (WDI)",
@@ -6221,7 +7545,15 @@
     "exportsGdp": 32,
     "exportsGdpYear": 2025,
     "importsGdp": 56.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 21.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 9.54,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.5,
+    "co2PerCapitaYear": 2024
   },
   "SX": {
     "source": "World Bank (WDI)",
@@ -6247,7 +7579,9 @@
     "industryGdp": 6,
     "industryGdpYear": 2021,
     "servicesGdp": 89.3,
-    "servicesGdpYear": 2021
+    "servicesGdpYear": 2021,
+    "renewableEnergy": 0,
+    "renewableEnergyYear": 2022
   },
   "SY": {
     "source": "World Bank (WDI)",
@@ -6279,7 +7613,15 @@
     "exportsGdp": 6.8,
     "exportsGdpYear": 2022,
     "importsGdp": 28.7,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 1.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 31.45,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.2,
+    "co2PerCapitaYear": 2024
   },
   "SZ": {
     "source": "World Bank (WDI)",
@@ -6311,7 +7653,15 @@
     "exportsGdp": 53.8,
     "exportsGdpYear": 2024,
     "importsGdp": 53.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 64.7,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 1.09,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.9,
+    "co2PerCapitaYear": 2024
   },
   "T2": {
     "source": "World Bank (WDI)",
@@ -6343,7 +7693,15 @@
     "exportsGdp": 26.1,
     "exportsGdpYear": 2025,
     "importsGdp": 26.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.5,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 1732.38,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.7,
+    "co2PerCapitaYear": 2024
   },
   "T3": {
     "source": "World Bank (WDI)",
@@ -6375,7 +7733,15 @@
     "exportsGdp": 25.2,
     "exportsGdpYear": 2025,
     "importsGdp": 34.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 11.2,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 2005.96,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 4.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.7,
+    "co2PerCapitaYear": 2024
   },
   "T4": {
     "source": "World Bank (WDI)",
@@ -6407,7 +7773,15 @@
     "exportsGdp": 25.5,
     "exportsGdpYear": 2025,
     "importsGdp": 21.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 16.2,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 15236.49,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.2,
+    "co2PerCapitaYear": 2024
   },
   "T5": {
     "source": "World Bank (WDI)",
@@ -6439,7 +7813,15 @@
     "exportsGdp": 21,
     "exportsGdpYear": 2025,
     "importsGdp": 23.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 36.9,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 3320.72,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2,
+    "co2PerCapitaYear": 2024
   },
   "T6": {
     "source": "World Bank (WDI)",
@@ -6471,7 +7853,15 @@
     "exportsGdp": 27.9,
     "exportsGdpYear": 2025,
     "importsGdp": 27.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 70.3,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 896.34,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.7,
+    "co2PerCapitaYear": 2024
   },
   "T7": {
     "source": "World Bank (WDI)",
@@ -6503,7 +7893,15 @@
     "exportsGdp": 29.2,
     "exportsGdpYear": 2025,
     "importsGdp": 29.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 8,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 3650.96,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 10.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 7.9,
+    "co2PerCapitaYear": 2024
   },
   "TC": {
     "source": "World Bank (WDI)",
@@ -6529,7 +7927,9 @@
     "industryGdp": 9.3,
     "industryGdpYear": 2024,
     "servicesGdp": 72.6,
-    "servicesGdpYear": 2024
+    "servicesGdpYear": 2024,
+    "renewableEnergy": 0.8,
+    "renewableEnergyYear": 2022
   },
   "TD": {
     "source": "World Bank (WDI)",
@@ -6561,7 +7961,15 @@
     "exportsGdp": 29.4,
     "exportsGdpYear": 2025,
     "importsGdp": 16.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 70,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 2.89,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.1,
+    "co2PerCapitaYear": 2024
   },
   "TF": {
     "population": 0,
@@ -6598,7 +8006,15 @@
     "exportsGdp": 24.6,
     "exportsGdpYear": 2023,
     "importsGdp": 35.3,
-    "importsGdpYear": 2023
+    "importsGdpYear": 2023,
+    "renewableEnergy": 75.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 2.63,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "TH": {
     "source": "World Bank (WDI)",
@@ -6630,7 +8046,15 @@
     "exportsGdp": 71.1,
     "exportsGdpYear": 2025,
     "importsGdp": 67.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 283.81,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "TJ": {
     "source": "World Bank (WDI)",
@@ -6662,7 +8086,15 @@
     "exportsGdp": 11.2,
     "exportsGdpYear": 2024,
     "importsGdp": 47.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 34.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 9.77,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.9,
+    "co2PerCapitaYear": 2024
   },
   "TK": {
     "nominal": 15000000,
@@ -6704,7 +8136,15 @@
     "exportsGdp": 10.6,
     "exportsGdpYear": 2024,
     "importsGdp": 84.9,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 11.4,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.7,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "TM": {
     "source": "World Bank (WDI)",
@@ -6734,7 +8174,15 @@
     "exportsGdp": 14.5,
     "exportsGdpYear": 2025,
     "importsGdp": 13.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 0.1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 81.41,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 15.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 10.7,
+    "co2PerCapitaYear": 2024
   },
   "TN": {
     "source": "World Bank (WDI)",
@@ -6766,7 +8214,15 @@
     "exportsGdp": 46.7,
     "exportsGdpYear": 2025,
     "importsGdp": 54.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 11.6,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 32.18,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 3.6,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.6,
+    "co2PerCapitaYear": 2024
   },
   "TO": {
     "source": "World Bank (WDI)",
@@ -6798,7 +8254,15 @@
     "exportsGdp": 16.9,
     "exportsGdpYear": 2024,
     "importsGdp": 60.7,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 2.3,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.17,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.6,
+    "co2PerCapitaYear": 2024
   },
   "TR": {
     "source": "World Bank (WDI)",
@@ -6830,7 +8294,15 @@
     "exportsGdp": 24.8,
     "exportsGdpYear": 2025,
     "importsGdp": 25.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 460.03,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.4,
+    "co2PerCapitaYear": 2024
   },
   "TT": {
     "source": "World Bank (WDI)",
@@ -6858,7 +8330,15 @@
     "industryGdp": 34.6,
     "industryGdpYear": 2024,
     "servicesGdp": 59.2,
-    "servicesGdpYear": 2024
+    "servicesGdpYear": 2024,
+    "renewableEnergy": 0.5,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 26.79,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 24.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 19.6,
+    "co2PerCapitaYear": 2024
   },
   "TV": {
     "source": "World Bank (WDI)",
@@ -6884,7 +8364,15 @@
     "agricultureGdp": 15.9,
     "agricultureGdpYear": 2015,
     "industryGdp": 7,
-    "industryGdpYear": 2015
+    "industryGdpYear": 2015,
+    "renewableEnergy": 5.2,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0,
+    "co2PerCapitaYear": 2024
   },
   "TW": {
     "nominal": 790728000000,
@@ -6915,6 +8403,14 @@
     "exportsGdpYear": 2024,
     "importsGdp": 49.5,
     "importsGdpYear": 2024,
+    "renewableEnergy": 9.5,
+    "renewableEnergyYear": 2023,
+    "co2Emissions": 270.5,
+    "co2EmissionsYear": 2023,
+    "co2PerCapita": 11.6,
+    "co2PerCapitaYear": 2023,
+    "ghgPerCapita": 12.2,
+    "ghgPerCapitaYear": 2023,
     "source": "IMF World Economic Outlook / DGBAS",
     "populationSource": "IMF World Economic Outlook / DGBAS"
   },
@@ -6948,7 +8444,15 @@
     "exportsGdp": 19,
     "exportsGdpYear": 2025,
     "importsGdp": 20,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 78.3,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 21.34,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "UA": {
     "source": "World Bank (WDI)",
@@ -6980,7 +8484,15 @@
     "exportsGdp": 25.3,
     "exportsGdpYear": 2025,
     "importsGdp": 51.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 8.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 118.48,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3,
+    "co2PerCapitaYear": 2024
   },
   "UG": {
     "source": "World Bank (WDI)",
@@ -7012,7 +8524,15 @@
     "exportsGdp": 21.4,
     "exportsGdpYear": 2025,
     "importsGdp": 28.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 90.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 8.25,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.1,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.2,
+    "co2PerCapitaYear": 2024
   },
   "UM": {
     "population": 0,
@@ -7049,7 +8569,15 @@
     "exportsGdp": 11,
     "exportsGdpYear": 2024,
     "importsGdp": 14,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 10.9,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 4632.16,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 17.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 13.6,
+    "co2PerCapitaYear": 2024
   },
   "UY": {
     "source": "World Bank (WDI)",
@@ -7081,7 +8609,15 @@
     "exportsGdp": 27.1,
     "exportsGdpYear": 2025,
     "importsGdp": 22.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 57.8,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 8.7,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 13.2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 2.6,
+    "co2PerCapitaYear": 2024
   },
   "UZ": {
     "source": "World Bank (WDI)",
@@ -7113,7 +8649,15 @@
     "exportsGdp": 22,
     "exportsGdpYear": 2025,
     "importsGdp": 35.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 1,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 148.54,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.3,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4,
+    "co2PerCapitaYear": 2024
   },
   "V1": {
     "source": "World Bank (WDI)",
@@ -7143,7 +8687,9 @@
     "exportsGdp": 30,
     "exportsGdpYear": 2024,
     "importsGdp": 31,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 73.3,
+    "renewableEnergyYear": 2020
   },
   "V2": {
     "source": "World Bank (WDI)",
@@ -7173,7 +8719,9 @@
     "exportsGdp": 25.7,
     "exportsGdpYear": 2025,
     "importsGdp": 27.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 25,
+    "renewableEnergyYear": 2020
   },
   "V3": {
     "source": "World Bank (WDI)",
@@ -7203,7 +8751,9 @@
     "exportsGdp": 31.3,
     "exportsGdpYear": 2025,
     "importsGdp": 26.6,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.8,
+    "renewableEnergyYear": 2020
   },
   "V4": {
     "source": "World Bank (WDI)",
@@ -7233,7 +8783,9 @@
     "exportsGdp": 28.9,
     "exportsGdpYear": 2025,
     "importsGdp": 29.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 14.4,
+    "renewableEnergyYear": 2020
   },
   "VA": {
     "nominal": 25000000,
@@ -7271,7 +8823,15 @@
     "industryGdp": 15.1,
     "industryGdpYear": 2025,
     "servicesGdp": 66.4,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 5.1,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.13,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.3,
+    "co2PerCapitaYear": 2024
   },
   "VE": {
     "source": "World Bank (WDI)",
@@ -7303,7 +8863,15 @@
     "exportsGdp": 14.9,
     "exportsGdpYear": 2025,
     "importsGdp": 10.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 33.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 96.41,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.4,
+    "co2PerCapitaYear": 2024
   },
   "VG": {
     "source": "World Bank (WDI)",
@@ -7314,6 +8882,8 @@
     "lifeExpectancyYear": 2024,
     "internetUsers": 77.7,
     "internetUsersYear": 2017,
+    "renewableEnergy": 1.3,
+    "renewableEnergyYear": 2022,
     "nominal": 1450000000,
     "year": 2023,
     "perCapita": 46318,
@@ -7341,7 +8911,9 @@
     "exportsGdp": 97.4,
     "exportsGdpYear": 2022,
     "importsGdp": 108.3,
-    "importsGdpYear": 2022
+    "importsGdpYear": 2022,
+    "renewableEnergy": 5.9,
+    "renewableEnergyYear": 2022
   },
   "VN": {
     "source": "World Bank (WDI)",
@@ -7373,7 +8945,15 @@
     "exportsGdp": 98.2,
     "exportsGdpYear": 2025,
     "importsGdp": 92.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 24.2,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 430.82,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 4.2,
+    "co2PerCapitaYear": 2024
   },
   "VU": {
     "source": "World Bank (WDI)",
@@ -7405,7 +8985,15 @@
     "exportsGdp": 25.3,
     "exportsGdpYear": 2024,
     "importsGdp": 48,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 25,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.29,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.9,
+    "co2PerCapitaYear": 2024
   },
   "WF": {
     "nominal": 200000000,
@@ -7447,7 +9035,15 @@
     "exportsGdp": 27.6,
     "exportsGdpYear": 2025,
     "importsGdp": 43,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 35.9,
+    "renewableEnergyYear": 2022,
+    "co2Emissions": 0.35,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 1.6,
+    "co2PerCapitaYear": 2024
   },
   "XC": {
     "source": "World Bank (WDI)",
@@ -7477,7 +9073,9 @@
     "exportsGdp": 48.6,
     "exportsGdpYear": 2025,
     "importsGdp": 44.7,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 19.8,
+    "renewableEnergyYear": 2020
   },
   "XD": {
     "source": "World Bank (WDI)",
@@ -7509,7 +9107,9 @@
     "exportsGdp": 31.7,
     "exportsGdpYear": 2025,
     "importsGdp": 30.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 12.8,
+    "renewableEnergyYear": 2020
   },
   "XE": {
     "source": "World Bank (WDI)",
@@ -7539,7 +9139,9 @@
     "exportsGdp": 24.2,
     "exportsGdpYear": 2025,
     "importsGdp": 30.1,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 76,
+    "renewableEnergyYear": 2020
   },
   "XF": {
     "source": "World Bank (WDI)",
@@ -7571,7 +9173,15 @@
     "exportsGdp": 26.1,
     "exportsGdpYear": 2025,
     "importsGdp": 24.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 18,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 25730.97,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 6.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 5.1,
+    "co2PerCapitaYear": 2024
   },
   "XG": {
     "source": "World Bank (WDI)",
@@ -7603,7 +9213,15 @@
     "exportsGdp": 23.7,
     "exportsGdpYear": 2025,
     "importsGdp": 28.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 63.8,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 1111.88,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.7,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.6,
+    "co2PerCapitaYear": 2024
   },
   "XH": {
     "source": "World Bank (WDI)",
@@ -7633,7 +9251,15 @@
     "servicesGdp": 52.6,
     "servicesGdpYear": 2025,
     "importsGdp": 25.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 60.1,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 569.6,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   },
   "XI": {
     "source": "World Bank (WDI)",
@@ -7665,7 +9291,15 @@
     "exportsGdp": 22.8,
     "exportsGdpYear": 2025,
     "importsGdp": 31.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 67.4,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 542.27,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.5,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.4,
+    "co2PerCapitaYear": 2024
   },
   "XJ": {
     "source": "World Bank (WDI)",
@@ -7697,7 +9331,9 @@
     "exportsGdp": 24.6,
     "exportsGdpYear": 2025,
     "importsGdp": 25.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.8,
+    "renewableEnergyYear": 2020
   },
   "XK": {
     "source": "World Bank (WDI)",
@@ -7761,7 +9397,9 @@
     "exportsGdp": 21.7,
     "exportsGdpYear": 2025,
     "importsGdp": 28.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 70.9,
+    "renewableEnergyYear": 2020
   },
   "XM": {
     "source": "World Bank (WDI)",
@@ -7793,7 +9431,9 @@
     "exportsGdp": 23.6,
     "exportsGdpYear": 2025,
     "importsGdp": 33.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 74.6,
+    "renewableEnergyYear": 2020
   },
   "XN": {
     "source": "World Bank (WDI)",
@@ -7825,7 +9465,9 @@
     "exportsGdp": 23.2,
     "exportsGdpYear": 2025,
     "importsGdp": 26.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 43.3,
+    "renewableEnergyYear": 2020
   },
   "XO": {
     "source": "World Bank (WDI)",
@@ -7855,7 +9497,9 @@
     "exportsGdp": 25.3,
     "exportsGdpYear": 2025,
     "importsGdp": 24.3,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 25.2,
+    "renewableEnergyYear": 2020
   },
   "XP": {
     "source": "World Bank (WDI)",
@@ -7885,7 +9529,9 @@
     "exportsGdp": 25.3,
     "exportsGdpYear": 2025,
     "importsGdp": 24.2,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 23.4,
+    "renewableEnergyYear": 2020
   },
   "XQ": {
     "source": "World Bank (WDI)",
@@ -7917,7 +9563,9 @@
     "exportsGdp": 25.2,
     "exportsGdpYear": 2025,
     "importsGdp": 35,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 11.2,
+    "renewableEnergyYear": 2020
   },
   "XT": {
     "source": "World Bank (WDI)",
@@ -7949,7 +9597,9 @@
     "exportsGdp": 25.9,
     "exportsGdpYear": 2025,
     "importsGdp": 23.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 16.8,
+    "renewableEnergyYear": 2020
   },
   "XU": {
     "source": "World Bank (WDI)",
@@ -7981,7 +9631,9 @@
     "exportsGdp": 12.5,
     "exportsGdpYear": 2024,
     "importsGdp": 15.4,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 12.5,
+    "renewableEnergyYear": 2020
   },
   "YE": {
     "source": "World Bank (WDI)",
@@ -8013,7 +9665,15 @@
     "exportsGdp": 8.8,
     "exportsGdpYear": 2018,
     "importsGdp": 47.3,
-    "importsGdpYear": 2018
+    "importsGdpYear": 2018,
+    "renewableEnergy": 3.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 10.58,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 0.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.3,
+    "co2PerCapitaYear": 2024
   },
   "YT": {
     "population": 337011,
@@ -8050,7 +9710,9 @@
     "exportsGdp": 32.5,
     "exportsGdpYear": 2025,
     "importsGdp": 28.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 14.8,
+    "renewableEnergyYear": 2020
   },
   "Z7": {
     "source": "World Bank (WDI)",
@@ -8082,7 +9744,9 @@
     "exportsGdp": 43.7,
     "exportsGdpYear": 2025,
     "importsGdp": 41,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 15.1,
+    "renewableEnergyYear": 2020
   },
   "ZA": {
     "source": "World Bank (WDI)",
@@ -8114,7 +9778,15 @@
     "exportsGdp": 31.4,
     "exportsGdpYear": 2025,
     "importsGdp": 29.5,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 9.7,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 440.17,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 8.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 6.8,
+    "co2PerCapitaYear": 2024
   },
   "ZF": {
     "source": "World Bank (WDI)",
@@ -8146,7 +9818,15 @@
     "exportsGdp": 27.8,
     "exportsGdpYear": 2025,
     "importsGdp": 27.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 70.3,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 876.1,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 2,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.7,
+    "co2PerCapitaYear": 2024
   },
   "ZG": {
     "source": "World Bank (WDI)",
@@ -8178,7 +9858,9 @@
     "exportsGdp": 27.9,
     "exportsGdpYear": 2025,
     "importsGdp": 27.9,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 70.3,
+    "renewableEnergyYear": 2020
   },
   "ZH": {
     "source": "World Bank (WDI)",
@@ -8210,7 +9892,9 @@
     "exportsGdp": 25.6,
     "exportsGdpYear": 2025,
     "importsGdp": 27.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 65.8,
+    "renewableEnergyYear": 2020
   },
   "ZI": {
     "source": "World Bank (WDI)",
@@ -8238,7 +9922,9 @@
     "industryGdp": 23.2,
     "industryGdpYear": 2025,
     "servicesGdp": 49.7,
-    "servicesGdpYear": 2025
+    "servicesGdpYear": 2025,
+    "renewableEnergy": 75.8,
+    "renewableEnergyYear": 2020
   },
   "ZJ": {
     "source": "World Bank (WDI)",
@@ -8270,7 +9956,9 @@
     "exportsGdp": 26.1,
     "exportsGdpYear": 2025,
     "importsGdp": 26.4,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 34.2,
+    "renewableEnergyYear": 2020
   },
   "ZM": {
     "source": "World Bank (WDI)",
@@ -8302,7 +9990,15 @@
     "exportsGdp": 35,
     "exportsGdpYear": 2024,
     "importsGdp": 27.6,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 83,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 11.57,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.8,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.5,
+    "co2PerCapitaYear": 2024
   },
   "ZQ": {
     "source": "World Bank (WDI)",
@@ -8334,7 +10030,9 @@
     "exportsGdp": 41.1,
     "exportsGdpYear": 2023,
     "importsGdp": 38.4,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 7.5,
+    "renewableEnergyYear": 2020
   },
   "ZT": {
     "source": "World Bank (WDI)",
@@ -8366,7 +10064,15 @@
     "exportsGdp": 25.9,
     "exportsGdpYear": 2025,
     "importsGdp": 24.8,
-    "importsGdpYear": 2025
+    "importsGdpYear": 2025,
+    "renewableEnergy": 23.4,
+    "renewableEnergyYear": 2020,
+    "co2Emissions": 26842.85,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 5.4,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 3.8,
+    "co2PerCapitaYear": 2024
   },
   "ZW": {
     "source": "World Bank (WDI)",
@@ -8398,6 +10104,14 @@
     "exportsGdp": 18.1,
     "exportsGdpYear": 2024,
     "importsGdp": 23.4,
-    "importsGdpYear": 2024
+    "importsGdpYear": 2024,
+    "renewableEnergy": 82.4,
+    "renewableEnergyYear": 2021,
+    "co2Emissions": 12.86,
+    "co2EmissionsYear": 2024,
+    "ghgPerCapita": 1.9,
+    "ghgPerCapitaYear": 2024,
+    "co2PerCapita": 0.8,
+    "co2PerCapitaYear": 2024
   }
 }

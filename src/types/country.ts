@@ -187,6 +187,16 @@ export interface GdpInfo {
   formattedPppPerCapita?: string; // e.g. "$90,027"
   sectors?: SectorComposition;
   trade?: TradeExposure;
+  renewableEnergy?: number; // Renewable energy consumption (% of total final energy consumption)
+  renewableEnergyYear?: number;
+  co2Emissions?: number; // Total CO2 emissions in Mt CO2e
+  co2EmissionsYear?: number;
+  co2PerCapita?: number; // CO2 emissions per capita in metric tons
+  co2PerCapitaYear?: number;
+  ghgPerCapita?: number; // Total greenhouse gas emissions per capita (t CO2e/capita)
+  ghgPerCapitaYear?: number;
+  formattedRenewableEnergy?: string; // e.g. "61.4%"
+  formattedCo2PerCapita?: string; // e.g. "13.6 t"
 }
 
 export interface UnifiedCountry {

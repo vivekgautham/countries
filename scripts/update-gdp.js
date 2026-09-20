@@ -21,6 +21,9 @@ const INDICATORS = {
   SERVICES_GDP: "NV.SRV.TOTL.ZS", // Services, value added (% of GDP)
   EXPORTS_GDP: "NE.EXP.GNFS.ZS", // Exports of goods and services (% of GDP)
   IMPORTS_GDP: "NE.IMP.GNFS.ZS", // Imports of goods and services (% of GDP)
+  RENEWABLE_ENERGY: "EG.FEC.RNEW.ZS", // Renewable energy consumption (% of total final energy consumption)
+  CO2_EMISSIONS: "EN.GHG.CO2.MT.CE.AR5", // Carbon dioxide (CO2) emissions (total) excluding LULUCF (Mt CO2e) [Source 75]
+  GHG_PER_CAPITA: "EN.GHG.ALL.PC.CE.AR5", // Total greenhouse gas emissions excluding LULUCF per capita (t CO2e/capita) [Source 75]
 };
 
 const OUTPUT_FILE = path.resolve(__dirname, "../src/data/gdp.json");
@@ -61,6 +64,14 @@ const SUPPLEMENTAL_DATA = {
     exportsGdpYear: 2024,
     importsGdp: 49.5,
     importsGdpYear: 2024,
+    renewableEnergy: 9.5,
+    renewableEnergyYear: 2023,
+    co2Emissions: 270.5,
+    co2EmissionsYear: 2023,
+    co2PerCapita: 11.6,
+    co2PerCapitaYear: 2023,
+    ghgPerCapita: 12.2,
+    ghgPerCapitaYear: 2023,
     source: "IMF World Economic Outlook / DGBAS",
   },
   KP: {
@@ -218,8 +229,8 @@ const SUPPLEMENTAL_DATA = {
   },
 };
 
-function fetchIndicator(indicator) {
-  const url = `https://api.worldbank.org/v2/country/all/indicator/${indicator}?mrnev=1&format=json&per_page=350`;
+function fetchIndicator(indicator, source) {
+  const url = `https://api.worldbank.org/v2/country/all/indicator/${indicator}?${source ? `source=${source}&` : ""}mrnev=1&format=json&per_page=350`;
   return new Promise((resolve, reject) => {
     https
       .get(url, (res) => {
@@ -228,7 +239,7 @@ function fetchIndicator(indicator) {
           res.statusCode < 400 &&
           res.headers.location
         ) {
-          return resolve(fetchIndicator(indicator));
+          return resolve(fetchIndicator(indicator, source));
         }
         if (res.statusCode !== 200) {
           return reject(
@@ -255,7 +266,7 @@ function fetchIndicator(indicator) {
 }
 
 async function run() {
-  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, Internet, PPP, Sectors, and Trade in parallel...");
+  console.log("Fetching World Bank data for GDP, Population, Per Capita, Growth, Inflation, Life Expectancy, Internet, PPP, Sectors, Trade, Renewables, and Emissions in parallel...");
   const [
     gdpList,
     popList,
@@ -271,6 +282,9 @@ async function run() {
     srvList,
     expList,
     impList,
+    renewList,
+    co2List,
+    ghgList,
   ] = await Promise.all([
     fetchIndicator(INDICATORS.GDP_NOMINAL),
     fetchIndicator(INDICATORS.POPULATION),
@@ -286,10 +300,13 @@ async function run() {
     fetchIndicator(INDICATORS.SERVICES_GDP),
     fetchIndicator(INDICATORS.EXPORTS_GDP),
     fetchIndicator(INDICATORS.IMPORTS_GDP),
+    fetchIndicator(INDICATORS.RENEWABLE_ENERGY),
+    fetchIndicator(INDICATORS.CO2_EMISSIONS, 75),
+    fetchIndicator(INDICATORS.GHG_PER_CAPITA, 75),
   ]);
 
   console.log(
-    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), PPP Per-Capita (${pppCapList.length}), Sectors (${srvList.length}), Trade (${expList.length})`,
+    `Received records from World Bank: GDP (${gdpList.length}), Pop (${popList.length}), Per-Capita (${pcapList.length}), Growth (${growthList.length}), Inflation (${inflationList.length}), Life Expectancy (${lifeList.length}), Internet (${internetList.length}), PPP (${pppList.length}), PPP Per-Capita (${pppCapList.length}), Sectors (${srvList.length}), Trade (${expList.length}), Renewables (${renewList.length}), CO2 (${co2List.length})`,
   );
 
   // Load existing countries to build code3 -> code2 lookup
@@ -498,7 +515,55 @@ async function run() {
     resultByCountry[code].importsGdpYear = parseInt(item.date, 10);
   }
 
-  // 15. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
+  // 15. Process Renewable Energy (% of total final energy consumption)
+  for (const item of renewList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].renewableEnergy = Math.round(item.value * 10) / 10;
+    resultByCountry[code].renewableEnergyYear = parseInt(item.date, 10);
+  }
+
+  // 16. Process CO2 Emissions (total Mt)
+  for (const item of co2List) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].co2Emissions = Math.round(item.value * 100) / 100;
+    resultByCountry[code].co2EmissionsYear = parseInt(item.date, 10);
+  }
+
+  // 17. Process Total GHG Per Capita (t CO2e/capita)
+  for (const item of ghgList) {
+    if (item.value === null || item.value === undefined) continue;
+    const code = resolveCode(item);
+    if (!code) continue;
+
+    if (!resultByCountry[code]) {
+      resultByCountry[code] = { source: "World Bank (WDI)" };
+    }
+    resultByCountry[code].ghgPerCapita = Math.round(item.value * 10) / 10;
+    resultByCountry[code].ghgPerCapitaYear = parseInt(item.date, 10);
+  }
+
+  // 18. Calculate CO2 per capita if co2Emissions (Mt) and population are available
+  for (const entry of Object.values(resultByCountry)) {
+    if (entry.co2Emissions !== undefined && entry.population && entry.population > 0) {
+      entry.co2PerCapita =
+        Math.round(((entry.co2Emissions * 1e6) / entry.population) * 10) / 10;
+      entry.co2PerCapitaYear = entry.co2EmissionsYear;
+    }
+  }
+
+  // 19. Fill in calculated per-capita fallback if perCapita is missing but nominal & pop are available
   for (const entry of Object.values(resultByCountry)) {
     if (!entry.perCapita && entry.nominal && entry.population && entry.population > 0) {
       entry.perCapita = Math.round(entry.nominal / entry.population);
@@ -574,6 +639,22 @@ async function run() {
       if (resultByCountry[code].importsGdp === undefined && supp.importsGdp !== undefined) {
         resultByCountry[code].importsGdp = supp.importsGdp;
         resultByCountry[code].importsGdpYear = supp.importsGdpYear;
+      }
+      if (resultByCountry[code].renewableEnergy === undefined && supp.renewableEnergy !== undefined) {
+        resultByCountry[code].renewableEnergy = supp.renewableEnergy;
+        resultByCountry[code].renewableEnergyYear = supp.renewableEnergyYear;
+      }
+      if (resultByCountry[code].co2Emissions === undefined && supp.co2Emissions !== undefined) {
+        resultByCountry[code].co2Emissions = supp.co2Emissions;
+        resultByCountry[code].co2EmissionsYear = supp.co2EmissionsYear;
+      }
+      if (resultByCountry[code].co2PerCapita === undefined && supp.co2PerCapita !== undefined) {
+        resultByCountry[code].co2PerCapita = supp.co2PerCapita;
+        resultByCountry[code].co2PerCapitaYear = supp.co2PerCapitaYear;
+      }
+      if (resultByCountry[code].ghgPerCapita === undefined && supp.ghgPerCapita !== undefined) {
+        resultByCountry[code].ghgPerCapita = supp.ghgPerCapita;
+        resultByCountry[code].ghgPerCapitaYear = supp.ghgPerCapitaYear;
       }
     }
   }

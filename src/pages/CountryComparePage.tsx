@@ -52,6 +52,8 @@ import {
   formatPercent,
   formatPppFull,
   formatPppPerCapita,
+  formatRenewableEnergy,
+  formatCo2PerCapita,
 } from "../utils/gdpUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
@@ -1254,6 +1256,26 @@ export default function CountryComparePage() {
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>
                     {c.gdp?.internetUsers !== undefined
                       ? `${formatInternetUsage(c.gdp.internetUsers)}${c.gdp.internetUsersYear ? ` (${c.gdp.internetUsersYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Renewable Energy",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.renewableEnergy !== undefined
+                      ? `${formatRenewableEnergy(c.gdp.renewableEnergy)}${c.gdp.renewableEnergyYear ? ` (${c.gdp.renewableEnergyYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "CO₂ per Capita",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.co2PerCapita !== undefined
+                      ? `${formatCo2PerCapita(c.gdp.co2PerCapita)}${c.gdp.co2PerCapitaYear ? ` (${c.gdp.co2PerCapitaYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),

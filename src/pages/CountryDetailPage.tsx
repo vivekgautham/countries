@@ -51,6 +51,9 @@ import {
   formatPercent,
   formatPppFull,
   formatPppPerCapita,
+  formatRenewableEnergy,
+  formatCo2PerCapita,
+  formatCo2Emissions,
   getGdpRank,
   getPppRank,
 } from "../utils/gdpUtils";
@@ -811,6 +814,64 @@ export default function CountryDetailPage() {
                         {country.gdp.internetUsersYear
                           ? ` (${country.gdp.internetUsersYear})`
                           : ""}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.renewableEnergy !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🌱 Renewable Energy
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                          sx={{
+                            width: 60,
+                            height: 6,
+                            borderRadius: 3,
+                            backgroundColor: "rgba(255, 255, 255, 0.1)",
+                            overflow: "hidden",
+                            display: { xs: "none", sm: "block" },
+                          }}
+                        >
+                          <Box
+                            sx={{
+                              width: `${Math.min(100, Math.max(0, country.gdp.renewableEnergy))}%`,
+                              height: "100%",
+                              backgroundColor: "#10b981",
+                            }}
+                          />
+                        </Box>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatRenewableEnergy(country.gdp.renewableEnergy)}
+                          {country.gdp.renewableEnergyYear
+                            ? ` (${country.gdp.renewableEnergyYear})`
+                            : ""}
+                        </Typography>
+                      </Stack>
+                    </Stack>
+                  )}
+
+                  {country.gdp?.co2PerCapita !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏭 CO₂ per Capita
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatCo2PerCapita(country.gdp.co2PerCapita)}
+                        {country.gdp.co2Emissions !== undefined
+                          ? ` (${formatCo2Emissions(country.gdp.co2Emissions)} total)`
+                          : country.gdp.co2PerCapitaYear
+                            ? ` (${country.gdp.co2PerCapitaYear})`
+                            : ""}
                       </Typography>
                     </Stack>
                   )}
