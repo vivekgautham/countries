@@ -1,12 +1,10 @@
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ClearIcon from "@mui/icons-material/Clear";
-import Co2Icon from "@mui/icons-material/Co2";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import FlightIcon from "@mui/icons-material/Flight";
-import ForestIcon from "@mui/icons-material/Forest";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PublicIcon from "@mui/icons-material/Public";
 import SearchIcon from "@mui/icons-material/Search";
@@ -56,9 +54,7 @@ import { UnifiedCountry } from "../types/country";
 import { formatNumber } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
 import {
-  formatCo2PerCapita,
   formatFdiInflows,
-  formatForestCover,
   formatGdp,
   formatGdpGrowth,
   formatGdpPerCapita,
@@ -66,12 +62,11 @@ import {
   formatLiteracyRate,
   formatPpp,
   formatPppPerCapita,
-  formatRenewableEnergy,
 } from "../utils/gdpUtils";
 
 export interface RankingMetricConfig {
   id: string;
-  category: "economy" | "growth" | "green" | "digital" | "aviation";
+  category: "economy" | "growth" | "digital" | "aviation";
   label: string;
   shortLabel: string;
   unit: string;
@@ -81,7 +76,7 @@ export interface RankingMetricConfig {
   icon: React.ReactNode;
   getValue: (country: UnifiedCountry) => number | undefined | null;
   formatValue: (val: number, country: UnifiedCountry) => string;
-  getSecondaryValue?: (country: UnifiedCountry) => string;
+  getSecondaryValue?: (country: UnifiedCountry, globalSum?: number) => string;
 }
 
 export const RANKING_CATEGORIES = [
@@ -102,15 +97,6 @@ export const RANKING_CATEGORIES = [
     emoji: "🚀",
     description:
       "Highest real GDP growth rates and international investment attractiveness (FDI).",
-  },
-  {
-    id: "green",
-    label: "Green Champions",
-    shortLabel: "Green Energy",
-    icon: <ForestIcon sx={{ fontSize: 18 }} />,
-    emoji: "🌿",
-    description:
-      "Pioneers in clean renewable energy, forest conservation, and low carbon footprints.",
   },
   {
     id: "digital",
@@ -138,35 +124,53 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     id: "gdp_nominal",
     category: "economy",
     label: "Nominal GDP (US$)",
-    shortLabel: "Nominal GDP",
+    shortLabel: "Nominal GDP (% of World)",
     unit: "USD",
     description:
-      "Gross Domestic Product at current market exchange rates in US dollars.",
+      "Gross Domestic Product at current market exchange rates in US dollars, with each country's percentage share of total global economic output.",
     source: "World Bank (WDI)",
     sortDirection: "desc",
     icon: <AccountBalanceIcon sx={{ fontSize: 18 }} />,
     getValue: (c) => c.gdp?.nominal,
     formatValue: (val) => formatGdp(val),
-    getSecondaryValue: (c) =>
-      c.gdp?.perCapita ? `${formatGdpPerCapita(c.gdp.perCapita)}/capita` : "—",
+    getSecondaryValue: (c, globalSum) => {
+      const gdpVal = c.gdp?.nominal;
+      const perCap = c.gdp?.perCapita
+        ? `${formatGdpPerCapita(c.gdp.perCapita)}/capita`
+        : "";
+      if (typeof gdpVal === "number" && globalSum && globalSum > 0) {
+        const share = (gdpVal / globalSum) * 100;
+        const shareStr = `${share >= 1 ? share.toFixed(1) : share.toFixed(2)}% of World GDP`;
+        return perCap ? `${shareStr} • ${perCap}` : shareStr;
+      }
+      return perCap || "—";
+    },
   },
   {
     id: "gdp_ppp",
     category: "economy",
     label: "GDP at Purchasing Power Parity (PPP)",
-    shortLabel: "GDP (PPP)",
+    shortLabel: "GDP PPP (% of World)",
     unit: "Intl $",
     description:
-      "GDP converted to international dollars using purchasing power parity rates.",
+      "GDP converted to international dollars using purchasing power parity rates, showing each country's share of total world purchasing power output.",
     source: "World Bank (WDI)",
     sortDirection: "desc",
     icon: <PublicIcon sx={{ fontSize: 18 }} />,
     getValue: (c) => c.gdp?.ppp,
     formatValue: (val) => formatPpp(val),
-    getSecondaryValue: (c) =>
-      c.gdp?.pppPerCapita
+    getSecondaryValue: (c, globalSum) => {
+      const pppVal = c.gdp?.ppp;
+      const perCap = c.gdp?.pppPerCapita
         ? `${formatPppPerCapita(c.gdp.pppPerCapita)} PPP/capita`
-        : "—",
+        : "";
+      if (typeof pppVal === "number" && globalSum && globalSum > 0) {
+        const share = (pppVal / globalSum) * 100;
+        const shareStr = `${share >= 1 ? share.toFixed(1) : share.toFixed(2)}% of World PPP`;
+        return perCap ? `${shareStr} • ${perCap}` : shareStr;
+      }
+      return perCap || "—";
+    },
   },
   {
     id: "gdp_per_capita",
@@ -235,65 +239,7 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
       c.gdp?.growth ? `Growth: ${formatGdpGrowth(c.gdp.growth)}` : "—",
   },
 
-  // 3. Green Champions
-  {
-    id: "renewable_energy",
-    category: "green",
-    label: "Renewable Energy Share (%)",
-    shortLabel: "Renewables",
-    unit: "% of total energy",
-    description:
-      "Percentage of total final energy consumption generated from clean renewable energy.",
-    source: "World Bank (WDI)",
-    sortDirection: "desc",
-    icon: <ForestIcon sx={{ fontSize: 18 }} />,
-    getValue: (c) => c.gdp?.renewableEnergy,
-    formatValue: (val) => formatRenewableEnergy(val),
-    getSecondaryValue: (c) =>
-      c.gdp?.co2PerCapita
-        ? `CO₂: ${formatCo2PerCapita(c.gdp.co2PerCapita)}`
-        : "—",
-  },
-  {
-    id: "co2_lowest",
-    category: "green",
-    label: "Lowest CO₂ Emissions per Capita (Cleanest Footprint)",
-    shortLabel: "Lowest CO₂",
-    unit: "metric tons / person",
-    description:
-      "Nations with the smallest carbon dioxide footprint per citizen (metric tons CO₂/capita).",
-    source: "World Bank (WDI)",
-    sortDirection: "asc",
-    icon: <Co2Icon sx={{ fontSize: 18 }} />,
-    getValue: (c) => {
-      // Must be a valid non-negative number
-      const val = c.gdp?.co2PerCapita;
-      return typeof val === "number" && !isNaN(val) && val >= 0 ? val : null;
-    },
-    formatValue: (val) => formatCo2PerCapita(val),
-    getSecondaryValue: (c) =>
-      c.gdp?.renewableEnergy
-        ? `Renewables: ${formatRenewableEnergy(c.gdp.renewableEnergy)}`
-        : "—",
-  },
-  {
-    id: "forest_cover",
-    category: "green",
-    label: "Forest Cover (% of Land Area)",
-    shortLabel: "Forest Cover",
-    unit: "% land area",
-    description:
-      "Percentage of total land area covered by natural and planted forest ecosystems.",
-    source: "World Bank (WDI)",
-    sortDirection: "desc",
-    icon: <ForestIcon sx={{ fontSize: 18 }} />,
-    getValue: (c) => c.gdp?.forestCover,
-    formatValue: (val) => formatForestCover(val),
-    getSecondaryValue: (c) =>
-      c.area ? `Area: ${formatNumber(c.area)} km²` : "—",
-  },
-
-  // 4. Digital Penetration
+  // 3. Digital Penetration
   {
     id: "internet_users",
     category: "digital",
@@ -543,6 +489,15 @@ export default function CountryRankingsPage() {
     return rankedCountries.slice(0, 3);
   }, [rankedCountries]);
 
+  // Total global sum across all ranked countries for aggregate volume metrics (e.g. World GDP)
+  const globalSum = useMemo(() => {
+    if (!rankedCountries.length) return 0;
+    return rankedCountries.reduce(
+      (acc, curr) => acc + (curr.value > 0 ? curr.value : 0),
+      0,
+    );
+  }, [rankedCountries]);
+
   // Maximum value for relative progress bar
   const benchmarkValue = useMemo(() => {
     if (!rankedCountries.length) return 1;
@@ -554,18 +509,82 @@ export default function CountryRankingsPage() {
     }
   }, [rankedCountries, currentMetric.sortDirection]);
 
-  // Function to calculate bar percentage
-  const calculateBarPercent = (val: number): number => {
+  // Function to calculate bar percentage and contextual badge label
+  const getMetricBarInfo = (val: number) => {
+    // 1. Nominal GDP: % Share of Total Global GDP (e.g. US ~26.0%, China ~16.5%, Germany ~4.3%)
+    if (currentMetric.id === "gdp_nominal" && globalSum > 0) {
+      const share = (val / globalSum) * 100;
+      const formattedShare =
+        share >= 10
+          ? `${share.toFixed(1)}%`
+          : share >= 1
+            ? `${share.toFixed(1)}%`
+            : share >= 0.1
+              ? `${share.toFixed(2)}%`
+              : `<0.1%`;
+
+      return {
+        barPercent: Math.max(1.5, Math.min(100, share)),
+        label: `${formattedShare} of World GDP`,
+        tooltip: `${share.toFixed(2)}% share of Total World GDP (${formatGdp(globalSum)})`,
+      };
+    }
+
+    // 2. GDP (PPP): % Share of Total Global PPP Output
+    if (currentMetric.id === "gdp_ppp" && globalSum > 0) {
+      const share = (val / globalSum) * 100;
+      const formattedShare =
+        share >= 10
+          ? `${share.toFixed(1)}%`
+          : share >= 1
+            ? `${share.toFixed(1)}%`
+            : share >= 0.1
+              ? `${share.toFixed(2)}%`
+              : `<0.1%`;
+
+      return {
+        barPercent: Math.max(1.5, Math.min(100, share)),
+        label: `${formattedShare} of World PPP`,
+        tooltip: `${share.toFixed(2)}% share of Total World PPP Output (${formatPpp(globalSum)})`,
+      };
+    }
+
+    // 3. Percentage metrics where value is natively 0-100%
+    if (["internet_users", "literacy_rate"].includes(currentMetric.id)) {
+      return {
+        barPercent: Math.max(2, Math.min(100, val)),
+        label: `${val.toFixed(1)}%`,
+        tooltip: `${val.toFixed(1)}% national share / coverage`,
+      };
+    }
+
+    // 4. Default / Relative to #1 Benchmark
     if (currentMetric.sortDirection === "desc") {
-      if (benchmarkValue <= 0) return 10;
-      return Math.max(3, Math.min(100, (val / benchmarkValue) * 100));
+      if (benchmarkValue <= 0)
+        return { barPercent: 5, label: "5%", tooltip: "Relative score" };
+      const pct = Math.max(3, Math.min(100, (val / benchmarkValue) * 100));
+      return {
+        barPercent: pct,
+        label: `${pct.toFixed(0)}% of #1`,
+        tooltip: `${pct.toFixed(1)}% relative to global leader (${podiumTop3[0]?.country.name || "leader"})`,
+      };
     } else {
-      // For asc, rank 1 gets 100%, highest gets smallest
+      // Ascending (e.g. lowest CO2 emissions)
       const minVal = rankedCountries[0]?.value ?? 0;
       const maxVal = benchmarkValue;
-      if (maxVal <= minVal) return 100;
+      if (maxVal <= minVal)
+        return {
+          barPercent: 100,
+          label: "100%",
+          tooltip: "Cleanest footprint",
+        };
       const score = 1 - (val - minVal) / (maxVal - minVal);
-      return Math.max(5, Math.min(100, score * 100));
+      const pct = Math.max(5, Math.min(100, score * 100));
+      return {
+        barPercent: pct,
+        label: `${pct.toFixed(0)}% score`,
+        tooltip: `${pct.toFixed(1)}% relative cleanliness score`,
+      };
     }
   };
 
@@ -699,6 +718,26 @@ export default function CountryRankingsPage() {
             }}
           >
             Explorer
+          </Button>
+
+          <Button
+            component={RouterLink}
+            to="/tax-atlas"
+            startIcon={<AccountBalanceIcon />}
+            variant="outlined"
+            size="small"
+            sx={{
+              borderRadius: 2.5,
+              borderColor: "rgba(168, 85, 247, 0.35)",
+              backgroundColor: "rgba(168, 85, 247, 0.06)",
+              color: "#c084fc",
+              "&:hover": {
+                borderColor: "#c084fc",
+                backgroundColor: "rgba(168, 85, 247, 0.15)",
+              },
+            }}
+          >
+            Tax Atlas
           </Button>
 
           <Button
@@ -958,6 +997,34 @@ export default function CountryRankingsPage() {
                   border: "1px solid rgba(99, 102, 241, 0.3)",
                 }}
               />
+              {currentMetric.id === "gdp_nominal" && globalSum > 0 && (
+                <Chip
+                  label={`Total World GDP: ${formatGdp(globalSum)}`}
+                  size="small"
+                  sx={{
+                    height: 22,
+                    fontSize: "0.72rem",
+                    fontWeight: 700,
+                    backgroundColor: "rgba(16, 185, 129, 0.15)",
+                    color: "#6ee7b7",
+                    border: "1px solid rgba(16, 185, 129, 0.3)",
+                  }}
+                />
+              )}
+              {currentMetric.id === "gdp_ppp" && globalSum > 0 && (
+                <Chip
+                  label={`Total World PPP: ${formatPpp(globalSum)}`}
+                  size="small"
+                  sx={{
+                    height: 22,
+                    fontSize: "0.72rem",
+                    fontWeight: 700,
+                    backgroundColor: "rgba(14, 165, 233, 0.15)",
+                    color: "#38bdf8",
+                    border: "1px solid rgba(14, 165, 233, 0.3)",
+                  }}
+                />
+              )}
             </Stack>
             <Typography
               variant="body2"
@@ -1089,6 +1156,7 @@ export default function CountryRankingsPage() {
                         >
                           {currentMetric.getSecondaryValue?.(
                             podiumTop3[1].country,
+                            globalSum,
                           ) || "—"}
                         </Typography>
                       </Box>
@@ -1195,6 +1263,7 @@ export default function CountryRankingsPage() {
                         >
                           {currentMetric.getSecondaryValue?.(
                             podiumTop3[0].country,
+                            globalSum,
                           ) || "—"}
                         </Typography>
                       </Box>
@@ -1291,6 +1360,7 @@ export default function CountryRankingsPage() {
                         >
                           {currentMetric.getSecondaryValue?.(
                             podiumTop3[2].country,
+                            globalSum,
                           ) || "—"}
                         </Typography>
                       </Box>
@@ -1521,7 +1591,7 @@ export default function CountryRankingsPage() {
               </TableRow>
             ) : (
               displayedRankings.map((item) => {
-                const barPercent = calculateBarPercent(item.value);
+                const barInfo = getMetricBarInfo(item.value);
                 const isPodium = item.rank <= 3;
 
                 return (
@@ -1615,21 +1685,33 @@ export default function CountryRankingsPage() {
                             )}
                           </Typography>
 
-                          <Typography
-                            variant="caption"
-                            sx={{
-                              fontSize: "0.72rem",
-                              color: "text.secondary",
-                              opacity: 0.8,
-                            }}
-                          >
-                            {barPercent.toFixed(0)}%
-                          </Typography>
+                          <Tooltip title={barInfo.tooltip} arrow>
+                            <Typography
+                              variant="caption"
+                              sx={{
+                                fontSize: "0.72rem",
+                                fontWeight:
+                                  currentMetric.id === "gdp_nominal" ||
+                                  currentMetric.id === "gdp_ppp"
+                                    ? 700
+                                    : 500,
+                                color:
+                                  currentMetric.id === "gdp_nominal"
+                                    ? "#818cf8"
+                                    : currentMetric.id === "gdp_ppp"
+                                      ? "#38bdf8"
+                                      : "text.secondary",
+                                cursor: "help",
+                              }}
+                            >
+                              {barInfo.label}
+                            </Typography>
+                          </Tooltip>
                         </Stack>
 
                         <LinearProgress
                           variant="determinate"
-                          value={barPercent}
+                          value={barInfo.barPercent}
                           sx={{
                             height: 6,
                             borderRadius: 3,
@@ -1669,7 +1751,10 @@ export default function CountryRankingsPage() {
                           display: "block",
                         }}
                       >
-                        {currentMetric.getSecondaryValue?.(item.country) || "—"}
+                        {currentMetric.getSecondaryValue?.(
+                          item.country,
+                          globalSum,
+                        ) || "—"}
                       </Typography>
                     </TableCell>
 

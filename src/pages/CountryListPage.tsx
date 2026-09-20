@@ -1,3 +1,4 @@
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import ClearIcon from "@mui/icons-material/Clear";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
@@ -32,17 +33,8 @@ import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import CompareFloatingDock from "../components/compare/CompareFloatingDock";
 import { getCountryEmoji } from "../utils/countryUtils";
-import {
-  BLOC_FILTER_OPTIONS,
-  matchesBlocFilter,
-  matchesBlocQuery,
-} from "../utils/blocUtils";
-import {
-  TAX_FILTER_OPTIONS,
-  getTaxBadgeConfig,
-  matchesTaxFilter,
-  matchesTaxQuery,
-} from "../utils/taxUtils";
+import { matchesBlocQuery } from "../utils/blocUtils";
+import { getTaxBadgeConfig, matchesTaxQuery } from "../utils/taxUtils";
 import AppVersionBadge from "../components/layout/AppVersionBadge";
 
 const REGIONS = [
@@ -65,8 +57,6 @@ export default function CountryListPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
-  const [selectedBloc, setSelectedBloc] = useState("all");
-  const [selectedTaxRegime, setSelectedTaxRegime] = useState("all");
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
     [],
@@ -77,7 +67,7 @@ export default function CountryListPage() {
   // Reset pagination when filter/search changes
   useEffect(() => {
     setVisibleCount(INITIAL_BATCH_SIZE);
-  }, [searchTerm, selectedRegion, selectedBloc, selectedTaxRegime]);
+  }, [searchTerm, selectedRegion]);
 
   const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
     if (e) {
@@ -114,16 +104,6 @@ export default function CountryListPage() {
       );
     }
 
-    // Filter by Regional Bloc
-    if (selectedBloc !== "all") {
-      result = result.filter((c) => matchesBlocFilter(c, selectedBloc));
-    }
-
-    // Filter by Tax Regime
-    if (selectedTaxRegime !== "all") {
-      result = result.filter((c) => matchesTaxFilter(c, selectedTaxRegime));
-    }
-
     // Filter by Search Query
     const query = searchTerm.trim().toLowerCase();
     if (query) {
@@ -149,7 +129,7 @@ export default function CountryListPage() {
     result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion, selectedBloc, selectedTaxRegime]);
+  }, [countries, searchTerm, selectedRegion]);
 
   const visibleCountries = useMemo(() => {
     return filteredCountries.slice(0, visibleCount);
@@ -272,6 +252,29 @@ export default function CountryListPage() {
 
             <Button
               component={RouterLink}
+              to="/tax-atlas"
+              startIcon={<AccountBalanceIcon />}
+              variant="outlined"
+              sx={{
+                borderRadius: 3,
+                borderColor: "rgba(168, 85, 247, 0.4)",
+                backgroundColor: "rgba(168, 85, 247, 0.08)",
+                color: "#c084fc",
+                px: 2.5,
+                py: 0.75,
+                fontSize: "0.85rem",
+                fontWeight: 700,
+                "&:hover": {
+                  borderColor: "#c084fc",
+                  backgroundColor: "rgba(168, 85, 247, 0.18)",
+                },
+              }}
+            >
+              Tax Atlas
+            </Button>
+
+            <Button
+              component={RouterLink}
               to="/compare"
               startIcon={<CompareArrowsIcon />}
               variant="outlined"
@@ -376,129 +379,6 @@ export default function CountryListPage() {
                   );
                 })}
               </Stack>
-
-              {/* Regional Blocs Filter Chips */}
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="center"
-                alignItems="center"
-                gap={1}
-                sx={{ pt: 0.5 }}
-              >
-                <Typography
-                  variant="caption"
-                  sx={{
-                    color: "text.secondary",
-                    fontWeight: 700,
-                    fontSize: "0.75rem",
-                    mr: 0.5,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 0.5,
-                  }}
-                >
-                  🏛️ Blocs:
-                </Typography>
-                {BLOC_FILTER_OPTIONS.map((opt) => {
-                  const isActive = selectedBloc === opt.id;
-                  return (
-                    <Tooltip key={opt.id} title={opt.tooltip} arrow>
-                      <Chip
-                        icon={
-                          <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
-                            {opt.icon}
-                          </span>
-                        }
-                        label={opt.label}
-                        clickable
-                        onClick={() => setSelectedBloc(opt.id)}
-                        size="small"
-                        variant={isActive ? "filled" : "outlined"}
-                        sx={{
-                          fontSize: "0.8rem",
-                          fontWeight: isActive ? 700 : 500,
-                          borderRadius: 2,
-                          borderColor: isActive
-                            ? "primary.main"
-                            : "rgba(255, 255, 255, 0.12)",
-                          backgroundColor: isActive
-                            ? "rgba(99, 102, 241, 0.25)"
-                            : "rgba(30, 41, 59, 0.4)",
-                          color: isActive ? "#a5b4fc" : "text.secondary",
-                          "&:hover": {
-                            backgroundColor: isActive
-                              ? "rgba(99, 102, 241, 0.35)"
-                              : "rgba(30, 41, 59, 0.7)",
-                            color: "text.primary",
-                          },
-                        }}
-                      />
-                    </Tooltip>
-                  );
-                })}
-              </Stack>
-
-              {/* Tax Regime Filter Chips */}
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                justifyContent="center"
-                alignItems="center"
-                gap={1}
-                sx={{ pt: 0.5 }}
-              >
-                <Typography
-                  variant="caption"
-                  sx={{
-                    color: "text.secondary",
-                    fontWeight: 700,
-                    fontSize: "0.75rem",
-                    mr: 0.5,
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 0.5,
-                  }}
-                >
-                  💰 Tax:
-                </Typography>
-                {TAX_FILTER_OPTIONS.map((opt) => {
-                  const isActive = selectedTaxRegime === opt.id;
-                  return (
-                    <Chip
-                      key={opt.id}
-                      icon={
-                        <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
-                          {opt.icon}
-                        </span>
-                      }
-                      label={opt.label}
-                      clickable
-                      onClick={() => setSelectedTaxRegime(opt.id)}
-                      size="small"
-                      variant={isActive ? "filled" : "outlined"}
-                      sx={{
-                        fontSize: "0.8rem",
-                        fontWeight: isActive ? 700 : 500,
-                        borderRadius: 2,
-                        borderColor: isActive
-                          ? "secondary.main"
-                          : "rgba(255, 255, 255, 0.12)",
-                        backgroundColor: isActive
-                          ? "rgba(168, 85, 247, 0.25)"
-                          : "rgba(30, 41, 59, 0.4)",
-                        color: isActive ? "#d8b4fe" : "text.secondary",
-                        "&:hover": {
-                          backgroundColor: isActive
-                            ? "rgba(168, 85, 247, 0.35)"
-                            : "rgba(30, 41, 59, 0.7)",
-                          color: "text.primary",
-                        },
-                      }}
-                    />
-                  );
-                })}
-              </Stack>
             </Stack>
           </Box>
         </Stack>
@@ -570,8 +450,6 @@ export default function CountryListPage() {
                 onClick={() => {
                   setSearchTerm("");
                   setSelectedRegion("All");
-                  setSelectedBloc("all");
-                  setSelectedTaxRegime("all");
                 }}
               >
                 Reset Filters

@@ -6,6 +6,7 @@ import CountryComparePage from "./pages/CountryComparePage";
 import CountryDetailPage from "./pages/CountryDetailPage";
 import CountryListPage from "./pages/CountryListPage";
 import CountryRankingsPage from "./pages/CountryRankingsPage";
+import TaxAtlasPage from "./pages/TaxAtlasPage";
 
 export default function App() {
   return (
@@ -16,6 +17,8 @@ export default function App() {
           <Route path="/country/:countryCode" element={<CountryDetailPage />} />
           <Route path="/compare" element={<CountryComparePage />} />
           <Route path="/rankings" element={<CountryRankingsPage />} />
+          <Route path="/tax-atlas" element={<TaxAtlasPage />} />
+          <Route path="/tax" element={<Navigate to="/tax-atlas" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Box>
