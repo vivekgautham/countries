@@ -20,6 +20,12 @@ A modern, high-performance web application to explore comprehensive geographical
   - **Interactive Borders:** Navigate directly to bordering countries with one click.
   - **External Links:** Direct access to Google Maps satellite views and Wikipedia articles.
 
+- **🏙️ Major Cities & Urban Centers:**
+  - Sourced from [GeoNames](https://www.geonames.org/) geographical open data.
+  - Interactive segment displaying each country's largest cities, state/province administrative divisions, populations, and share of national population.
+  - Quick status chips for primate cities and national capitals, with direct links to Google Maps and Wikipedia.
+  - In-segment search and filtering to easily find specific metropolitan areas.
+
 - **✈️ Aviation & Airport Infrastructure:**
   - Sourced from [OurAirports](https://davidmegginson.github.io/ourairports-data/) open-data.
   - Metrics for active airports, international hubs, regional airfields, heliports, and scheduled commercial routes.
@@ -82,6 +88,8 @@ A modern, high-performance web application to explore comprehensive geographical
 | `npm run lint:fix` | Automatically fixes autofixable ESLint issues. |
 | `npm run format` | Formats all source files using Prettier. |
 | `npm run update:airports` | Downloads and compiles the latest dataset from OurAirports into `src/data/airports.json`. |
+| `npm run update:cities` | Downloads and compiles the latest world cities dataset from GeoNames into `src/data/cities.json`. |
+| `npm run update:gdp` | Updates economic indicators and macroeconomic metrics from World Bank into `src/data/gdp.json`. |
 | `npm run deploy` | Builds the project and publishes the `dist/` directory to GitHub Pages. |
 
 ---
@@ -92,21 +100,32 @@ A modern, high-performance web application to explore comprehensive geographical
 countries/
 ├── public/                 # Static public assets
 ├── scripts/
-│   └── update-airports.js  # Script to ingest and aggregate OurAirports CSV data
+│   ├── update-airports.js  # Script to ingest and aggregate OurAirports CSV data
+│   ├── update-cities.js    # Script to download and compile GeoNames major cities
+│   └── update-gdp.js       # Script to ingest World Bank economic metrics
 ├── src/
 │   ├── api/
 │   │   └── countriesApi.ts # Data fetcher with React Query, CDN caching & fallback
+│   ├── components/
+│   │   ├── cities/         # LargestCitiesSection and urban center components
+│   │   ├── compare/        # Compare floating dock and tools
+│   │   ├── economy/        # Sector composition charts
+│   │   └── layout/         # Header and footer navigation
 │   ├── data/
 │   │   ├── airports.json   # Pre-processed airport metrics & major hubs
+│   │   ├── cities.json     # Curated major cities with population & admin regions
 │   │   └── countries.json  # Bundled country dataset fallback
 │   ├── pages/
-│   │   ├── CountryDetailPage.tsx # Detailed single country view
-│   │   └── CountryListPage.tsx   # Searchable grid view of all countries
+│   │   ├── CountryComparePage.tsx  # Side-by-side country comparison
+│   │   ├── CountryDetailPage.tsx   # Detailed single country view
+│   │   ├── CountryListPage.tsx     # Searchable grid view of all countries
+│   │   └── CountryRankingsPage.tsx # Metric-based country leaderboards
 │   ├── theme/
 │   │   └── theme.ts        # MUI custom dark theme configuration
 │   ├── types/
 │   │   └── country.ts      # TypeScript interfaces and data models
 │   ├── utils/
+│   │   ├── cityUtils.ts    # City population formatting & link utilities
 │   │   └── countryUtils.ts # Helper functions (e.g. flag emojis)
 │   ├── App.tsx             # Root component & route definitions
 │   └── main.tsx            # Application entrypoint
@@ -120,6 +139,7 @@ countries/
 
 - **Country Data:** [mledoze/countries](https://github.com/mledoze/countries) (Open Data)
 - **Flag Assets:** [FlagCDN](https://flagcdn.com/)
+- **Cities Data:** [GeoNames](https://www.geonames.org/) (Creative Commons Attribution 4.0)
 - **Airport & Aviation Data:** [OurAirports](https://davidmegginson.github.io/ourairports-data/) (Public Domain)
 
 ---

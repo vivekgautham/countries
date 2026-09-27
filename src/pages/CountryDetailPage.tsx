@@ -75,6 +75,7 @@ import {
   getPppRank,
 } from "../utils/gdpUtils";
 import { SectorPieChart } from "../components/economy/SectorPieChart";
+import { LargestCitiesSection } from "../components/cities/LargestCitiesSection";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -2798,6 +2799,11 @@ export default function CountryDetailPage() {
               </Card>
             </Grid>
           )}
+
+          {/* Largest Cities & Urban Centers */}
+          <Grid size={{ xs: 12 }}>
+            <LargestCitiesSection country={country} />
+          </Grid>
 
           {/* Aviation & Airports */}
           <Grid size={{ xs: 12 }}>

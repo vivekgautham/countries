@@ -116,6 +116,12 @@ export default function CountryListPage() {
           (c.capital && c.capital.toLowerCase().includes(query)) ||
           matchesTaxQuery(c, query) ||
           matchesBlocQuery(c, query) ||
+          (c.cities?.some(
+            (city) =>
+              city.name.toLowerCase().includes(query) ||
+              (city.adminName && city.adminName.toLowerCase().includes(query)),
+          ) ??
+            false) ||
           (c.airports?.majorAirports?.some(
             (a) =>
               (a.iata && a.iata.toLowerCase().includes(query)) ||
@@ -303,7 +309,7 @@ export default function CountryListPage() {
               <TextField
                 fullWidth
                 variant="outlined"
-                placeholder="Search countries, examine flags, capitals, languages, and geographic info..."
+                placeholder="Search countries, examine flags, capitals, major cities, languages, and geographic info..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 autoFocus

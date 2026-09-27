@@ -1,8 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import airportsDataRaw from "../data/airports.json";
+import citiesDataRaw from "../data/cities.json";
 import rawCountriesData from "../data/countries.json";
-import { AirportStats, CountryDetail, UnifiedCountry } from "../types/country";
+import {
+  AirportStats,
+  CityInfo,
+  CountryDetail,
+  UnifiedCountry,
+} from "../types/country";
 import { getNptInfo } from "../utils/nptUtils";
 import {
   getAutonomousRegionsForCountry,
@@ -13,6 +19,7 @@ import { getEconomicBlocInfo } from "../utils/blocUtils";
 import { getGdpInfo } from "../utils/gdpUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
+const citiesData = citiesDataRaw as Record<string, CityInfo[]>;
 
 const COUNTRIES_DATA_URL =
   "https://raw.githubusercontent.com/mledoze/countries/master/dist/countries.json";
@@ -84,6 +91,7 @@ export function transformCountryDetails(
       landlocked: item.landlocked ?? false,
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
       airports: airportsData[code],
+      cities: citiesData[code] || [],
       npt: getNptInfo(code),
       sovereignty: getSovereigntyInfo(code),
       tax: getTaxInfo(code),
@@ -110,6 +118,7 @@ function getFallbackCountries(): UnifiedCountry[] {
       ...c,
       population,
       airports: airportsData[code],
+      cities: citiesData[code] || [],
       npt: getNptInfo(c.code),
       sovereignty: getSovereigntyInfo(c.code),
       tax: getTaxInfo(c.code),

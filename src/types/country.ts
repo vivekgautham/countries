@@ -237,6 +237,16 @@ export interface GdpInfo {
   formattedLiteracyRate?: string; // e.g. "99.0%"
 }
 
+export interface CityInfo {
+  name: string;
+  population: number;
+  adminName?: string;
+  isCapital?: boolean;
+  latitude?: number;
+  longitude?: number;
+  rank?: number;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -256,6 +266,7 @@ export interface UnifiedCountry {
   landlocked?: boolean;
   coatOfArms?: string;
   airports?: AirportStats;
+  cities?: CityInfo[];
   npt?: NptInfo;
   sovereignty?: SovereignInfo;
   autonomousRegions?: AutonomousRegionInfo[];

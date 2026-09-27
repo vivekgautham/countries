@@ -40,6 +40,7 @@ import {
   getTopCountryByMetric,
 } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { formatCityPopulation } from "../utils/cityUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
 import {
@@ -384,6 +385,13 @@ export default function CountryComparePage() {
                       (opt.code3 && opt.code3.toLowerCase().includes(query)) ||
                       (opt.capital &&
                         opt.capital.toLowerCase().includes(query)) ||
+                      (opt.cities?.some(
+                        (city) =>
+                          city.name.toLowerCase().includes(query) ||
+                          (city.adminName &&
+                            city.adminName.toLowerCase().includes(query)),
+                      ) ??
+                        false) ||
                       (opt.npt?.statusLabel &&
                         opt.npt.statusLabel.toLowerCase().includes(query)) ||
                       (query === "npt" && Boolean(opt.npt)),
@@ -1166,6 +1174,66 @@ export default function CountryComparePage() {
                     🏛️ {c.capital || "N/A"}
                   </Typography>
                 ),
+              },
+              {
+                label: "Largest Cities",
+                render: (c) => {
+                  const cities = c.cities || [];
+                  if (cities.length === 0) {
+                    return (
+                      <Typography
+                        variant="body2"
+                        sx={{ color: "text.secondary", fontStyle: "italic" }}
+                      >
+                        No cities listed
+                      </Typography>
+                    );
+                  }
+                  return (
+                    <Stack spacing={0.75}>
+                      {cities.slice(0, 4).map((city) => (
+                        <Stack
+                          key={`${city.name}-${city.rank}`}
+                          direction="row"
+                          alignItems="center"
+                          justifyContent="space-between"
+                          spacing={1}
+                        >
+                          <Typography
+                            variant="body2"
+                            sx={{
+                              fontWeight: city.isCapital ? 700 : 500,
+                              color: city.isCapital
+                                ? "primary.light"
+                                : "text.primary",
+                              fontSize: "0.85rem",
+                            }}
+                          >
+                            {city.isCapital ? "🏛️ " : "🏙️ "}
+                            {city.name}
+                          </Typography>
+                          <Typography
+                            variant="caption"
+                            sx={{
+                              color: "text.secondary",
+                              fontWeight: 600,
+                            }}
+                          >
+                            {formatCityPopulation(city.population)}
+                          </Typography>
+                        </Stack>
+                      ))}
+                      {cities.length > 4 && (
+                        <Typography
+                          variant="caption"
+                          sx={{ color: "text.secondary", fontStyle: "italic" }}
+                        >
+                          +{cities.length - 4} more
+                        </Typography>
+                      )}
+                    </Stack>
+                  );
+                },
               },
               {
                 label: "Region / Subregion",
