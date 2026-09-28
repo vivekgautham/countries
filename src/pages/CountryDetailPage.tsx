@@ -949,25 +949,6 @@ export default function CountryDetailPage() {
                       </Typography>
                     </Stack>
                   )}
-
-                  {country.borders && country.borders.length > 0 && (
-                    <Stack
-                      direction="row"
-                      justifyContent="space-between"
-                      alignItems="center"
-                    >
-                      <Typography color="text.secondary">
-                        🛂 Border Nations
-                      </Typography>
-                      <Typography fontWeight={600} textAlign="right">
-                        {country.borders.length}{" "}
-                        {country.borders.length === 1
-                          ? "neighbor"
-                          : "neighbors"}{" "}
-                        ({country.borders.join(", ")})
-                      </Typography>
-                    </Stack>
-                  )}
                 </Stack>
               </CardContent>
             </Card>
