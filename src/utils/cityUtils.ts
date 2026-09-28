@@ -58,7 +58,9 @@ export function formatCityShare(
  */
 export function getPrimateCity(cities?: CityInfo[]): CityInfo | undefined {
   if (!cities || cities.length === 0) return undefined;
-  return [...cities].sort((a, b) => b.population - a.population)[0];
+  return [...cities].sort(
+    (a, b) => (b.population || 0) - (a.population || 0),
+  )[0];
 }
 
 /**

@@ -40,7 +40,6 @@ import {
   getTopCountryByMetric,
 } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
-import { formatCityPopulation } from "../utils/cityUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
 import {
@@ -1176,9 +1175,11 @@ export default function CountryComparePage() {
                 ),
               },
               {
-                label: "Largest Cities",
+                label: "Major Cities",
                 render: (c) => {
-                  const cities = c.cities || [];
+                  const cities = [...(c.cities || [])].sort((a, b) =>
+                    a.name.localeCompare(b.name),
+                  );
                   if (cities.length === 0) {
                     return (
                       <Typography
@@ -1190,45 +1191,30 @@ export default function CountryComparePage() {
                     );
                   }
                   return (
-                    <Stack spacing={0.75}>
-                      {cities.slice(0, 4).map((city) => (
-                        <Stack
-                          key={`${city.name}-${city.rank}`}
-                          direction="row"
-                          alignItems="center"
-                          justifyContent="space-between"
-                          spacing={1}
+                    <Stack spacing={0.6}>
+                      {cities.slice(0, 5).map((city) => (
+                        <Typography
+                          key={city.name}
+                          variant="body2"
+                          sx={{
+                            fontWeight: city.isCapital ? 700 : 500,
+                            color: city.isCapital
+                              ? "primary.light"
+                              : "text.primary",
+                            fontSize: "0.85rem",
+                          }}
                         >
-                          <Typography
-                            variant="body2"
-                            sx={{
-                              fontWeight: city.isCapital ? 700 : 500,
-                              color: city.isCapital
-                                ? "primary.light"
-                                : "text.primary",
-                              fontSize: "0.85rem",
-                            }}
-                          >
-                            {city.isCapital ? "🏛️ " : "🏙️ "}
-                            {city.name}
-                          </Typography>
-                          <Typography
-                            variant="caption"
-                            sx={{
-                              color: "text.secondary",
-                              fontWeight: 600,
-                            }}
-                          >
-                            {formatCityPopulation(city.population)}
-                          </Typography>
-                        </Stack>
+                          {city.isCapital ? "🏛️ " : "🏙️ "}
+                          {city.name}
+                          {city.adminName ? ` (${city.adminName})` : ""}
+                        </Typography>
                       ))}
-                      {cities.length > 4 && (
+                      {cities.length > 5 && (
                         <Typography
                           variant="caption"
                           sx={{ color: "text.secondary", fontStyle: "italic" }}
                         >
-                          +{cities.length - 4} more
+                          +{cities.length - 5} more
                         </Typography>
                       )}
                     </Stack>

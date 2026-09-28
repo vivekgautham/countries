@@ -248,14 +248,15 @@ async function run() {
         }
       }
 
-      // Assign ranks (1-indexed based on population order)
-      selected.sort((a, b) => b.population - a.population);
-      const ranked = selected.map((city, idx) => ({
-        ...city,
-        rank: idx + 1,
+      // Sort alphabetically by city name
+      selected.sort((a, b) => a.name.localeCompare(b.name));
+      const formatted = selected.map((city) => ({
+        name: city.name,
+        adminName: city.adminName,
+        isCapital: city.isCapital,
       }));
 
-      finalResult[cc] = ranked;
+      finalResult[cc] = formatted;
     }
 
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(finalResult, null, 2), "utf-8");

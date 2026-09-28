@@ -239,9 +239,9 @@ export interface GdpInfo {
 
 export interface CityInfo {
   name: string;
-  population: number;
   adminName?: string;
   isCapital?: boolean;
+  population?: number;
   latitude?: number;
   longitude?: number;
   rank?: number;
