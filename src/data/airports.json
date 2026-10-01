@@ -1,14 +1,14 @@
 {
   "US": {
-    "total": 32619,
-    "active": 25085,
+    "total": 32668,
+    "active": 25082,
     "large": 95,
-    "medium": 822,
-    "small": 15229,
-    "heliport": 8226,
-    "seaplane": 681,
-    "balloonport": 32,
-    "closed": 7534,
+    "medium": 823,
+    "small": 15219,
+    "heliport": 8233,
+    "seaplane": 679,
+    "balloonport": 33,
+    "closed": 7586,
     "scheduled": 699,
     "majorAirports": [
       {
@@ -1004,11 +1004,11 @@
     "majorAirports": []
   },
   "PG": {
-    "total": 647,
-    "active": 575,
+    "total": 649,
+    "active": 577,
     "large": 2,
     "medium": 19,
-    "small": 551,
+    "small": 553,
     "heliport": 3,
     "seaplane": 0,
     "balloonport": 0,
@@ -1660,16 +1660,16 @@
     ]
   },
   "ES": {
-    "total": 582,
-    "active": 548,
+    "total": 588,
+    "active": 552,
     "large": 21,
     "medium": 34,
     "small": 310,
-    "heliport": 181,
+    "heliport": 185,
     "seaplane": 1,
     "balloonport": 1,
-    "closed": 34,
-    "scheduled": 45,
+    "closed": 36,
+    "scheduled": 46,
     "majorAirports": [
       {
         "name": "Adolfo Suárez Madrid–Barajas Airport",
@@ -1870,15 +1870,15 @@
     ]
   },
   "CN": {
-    "total": 778,
-    "active": 711,
+    "total": 783,
+    "active": 715,
     "large": 69,
     "medium": 265,
-    "small": 240,
+    "small": 244,
     "heliport": 132,
     "seaplane": 3,
     "balloonport": 2,
-    "closed": 67,
+    "closed": 68,
     "scheduled": 265,
     "majorAirports": [
       {
@@ -2468,7 +2468,7 @@
     ]
   },
   "AF": {
-    "total": 80,
+    "total": 81,
     "active": 76,
     "large": 4,
     "medium": 5,
@@ -2476,7 +2476,7 @@
     "heliport": 8,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 4,
+    "closed": 5,
     "scheduled": 8,
     "majorAirports": [
       {
@@ -2685,12 +2685,12 @@
     ]
   },
   "AU": {
-    "total": 2793,
-    "active": 2681,
+    "total": 2795,
+    "active": 2683,
     "large": 16,
     "medium": 177,
     "small": 2086,
-    "heliport": 398,
+    "heliport": 400,
     "seaplane": 4,
     "balloonport": 0,
     "closed": 112,
@@ -3145,7 +3145,7 @@
     ]
   },
   "MZ": {
-    "total": 104,
+    "total": 105,
     "active": 95,
     "large": 4,
     "medium": 12,
@@ -3153,7 +3153,7 @@
     "heliport": 0,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 9,
+    "closed": 10,
     "scheduled": 12,
     "majorAirports": [
       {
@@ -3423,12 +3423,12 @@
     ]
   },
   "AR": {
-    "total": 996,
-    "active": 955,
+    "total": 1009,
+    "active": 968,
     "large": 13,
     "medium": 60,
-    "small": 731,
-    "heliport": 150,
+    "small": 742,
+    "heliport": 152,
     "seaplane": 0,
     "balloonport": 1,
     "closed": 41,
@@ -3619,12 +3619,12 @@
     ]
   },
   "AT": {
-    "total": 200,
-    "active": 187,
+    "total": 201,
+    "active": 188,
     "large": 6,
     "medium": 3,
     "small": 55,
-    "heliport": 122,
+    "heliport": 123,
     "seaplane": 1,
     "balloonport": 0,
     "closed": 13,
@@ -4120,14 +4120,14 @@
   },
   "BE": {
     "total": 217,
-    "active": 165,
+    "active": 164,
     "large": 3,
     "medium": 8,
-    "small": 38,
+    "small": 37,
     "heliport": 114,
     "seaplane": 1,
     "balloonport": 1,
-    "closed": 52,
+    "closed": 53,
     "scheduled": 5,
     "majorAirports": [
       {
@@ -4175,15 +4175,15 @@
     ]
   },
   "GB": {
-    "total": 1603,
-    "active": 1222,
+    "total": 1605,
+    "active": 1221,
     "large": 17,
     "medium": 71,
-    "small": 968,
-    "heliport": 159,
+    "small": 966,
+    "heliport": 160,
     "seaplane": 5,
     "balloonport": 2,
-    "closed": 381,
+    "closed": 384,
     "scheduled": 57,
     "majorAirports": [
       {
@@ -4470,7 +4470,7 @@
     "seaplane": 0,
     "balloonport": 0,
     "closed": 12,
-    "scheduled": 61,
+    "scheduled": 60,
     "majorAirports": [
       {
         "name": "Nuuk International Airport",
@@ -4566,11 +4566,11 @@
     ]
   },
   "MX": {
-    "total": 2696,
-    "active": 2087,
+    "total": 2695,
+    "active": 2086,
     "large": 29,
     "medium": 42,
-    "small": 1507,
+    "small": 1506,
     "heliport": 496,
     "seaplane": 6,
     "balloonport": 7,
@@ -5218,7 +5218,7 @@
     "seaplane": 0,
     "balloonport": 0,
     "closed": 0,
-    "scheduled": 2,
+    "scheduled": 1,
     "majorAirports": [
       {
         "name": "Brunei International Airport",
@@ -5391,16 +5391,16 @@
     ]
   },
   "BR": {
-    "total": 8019,
-    "active": 7695,
+    "total": 8065,
+    "active": 7738,
     "large": 28,
     "medium": 110,
-    "small": 5529,
-    "heliport": 2028,
+    "small": 5565,
+    "heliport": 2035,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 324,
-    "scheduled": 139,
+    "closed": 327,
+    "scheduled": 138,
     "majorAirports": [
       {
         "name": "Atlas Brasil Cantanhede International Airport",
@@ -5529,7 +5529,7 @@
         "type": "large_airport"
       },
       {
-        "name": "Rio Galeão – Tom Jobim International Airport",
+        "name": "Rio de Janeiro Galeão – Tom Jobim International Airport",
         "iata": "GIG",
         "icao": "SBGL",
         "municipality": "Rio De Janeiro",
@@ -5859,11 +5859,11 @@
     ]
   },
   "TH": {
-    "total": 133,
-    "active": 115,
+    "total": 135,
+    "active": 117,
     "large": 10,
     "medium": 33,
-    "small": 63,
+    "small": 65,
     "heliport": 9,
     "seaplane": 0,
     "balloonport": 0,
@@ -6009,7 +6009,7 @@
     ]
   },
   "BW": {
-    "total": 143,
+    "total": 144,
     "active": 129,
     "large": 4,
     "medium": 3,
@@ -6017,7 +6017,7 @@
     "heliport": 2,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 14,
+    "closed": 15,
     "scheduled": 5,
     "majorAirports": [
       {
@@ -6169,16 +6169,16 @@
     ]
   },
   "UA": {
-    "total": 295,
+    "total": 298,
     "active": 208,
-    "large": 3,
-    "medium": 33,
+    "large": 4,
+    "medium": 32,
     "small": 117,
     "heliport": 55,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 87,
-    "scheduled": 1,
+    "closed": 90,
+    "scheduled": 0,
     "majorAirports": [
       {
         "name": "Boryspil International Airport",
@@ -6192,6 +6192,13 @@
         "iata": "LWO",
         "icao": "UKLL",
         "municipality": "Lviv",
+        "type": "large_airport"
+      },
+      {
+        "name": "Odesa International Airport",
+        "iata": "ODS",
+        "icao": "UKOO",
+        "municipality": "Odesa",
         "type": "large_airport"
       },
       {
@@ -6406,17 +6413,22 @@
     ]
   },
   "CA": {
-    "total": 3358,
-    "active": 2473,
-    "large": 15,
-    "medium": 237,
-    "small": 1251,
-    "heliport": 520,
-    "seaplane": 449,
+    "total": 3369,
+    "active": 2480,
+    "large": 17,
+    "medium": 233,
+    "small": 1254,
+    "heliport": 525,
+    "seaplane": 450,
     "balloonport": 1,
-    "closed": 885,
-    "scheduled": 304,
+    "closed": 889,
+    "scheduled": 297,
     "majorAirports": [
+      {
+        "name": "(Duplicate)YEG",
+        "municipality": "Edmonton",
+        "type": "large_airport"
+      },
       {
         "name": "Calgary International Airport",
         "iata": "YYC",
@@ -6436,6 +6448,13 @@
         "iata": "YHZ",
         "icao": "CYHZ",
         "municipality": "Halifax",
+        "type": "large_airport"
+      },
+      {
+        "name": "John C. Munro Hamilton International Airport",
+        "iata": "YHM",
+        "icao": "CYHM",
+        "municipality": "Hamilton",
         "type": "large_airport"
       },
       {
@@ -6502,15 +6521,17 @@
         "type": "large_airport"
       },
       {
+        "name": "Windsor International Airport",
+        "iata": "YQG",
+        "icao": "CYQG",
+        "municipality": "Windsor",
+        "type": "large_airport"
+      },
+      {
         "name": "Winnipeg / James Armstrong Richardson International Airport",
         "iata": "YWG",
         "icao": "CYWG",
         "municipality": "Winnipeg",
-        "type": "large_airport"
-      },
-      {
-        "name": "YEG",
-        "municipality": "Edmonton",
         "type": "large_airport"
       },
       {
@@ -7950,15 +7971,15 @@
   },
   "DE": {
     "total": 1435,
-    "active": 1318,
+    "active": 1317,
     "large": 22,
     "medium": 53,
-    "small": 767,
+    "small": 766,
     "heliport": 473,
     "seaplane": 1,
     "balloonport": 2,
-    "closed": 117,
-    "scheduled": 40,
+    "closed": 118,
+    "scheduled": 39,
     "majorAirports": [
       {
         "name": "Berlin Brandenburg Airport",
@@ -8293,27 +8314,21 @@
   },
   "YE": {
     "total": 50,
-    "active": 45,
-    "large": 5,
+    "active": 43,
+    "large": 4,
     "medium": 6,
-    "small": 28,
+    "small": 27,
     "heliport": 6,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 5,
-    "scheduled": 8,
+    "closed": 7,
+    "scheduled": 7,
     "majorAirports": [
       {
         "name": "Aden International Airport",
         "iata": "ADE",
         "icao": "OYAA",
         "municipality": "Aden",
-        "type": "large_airport"
-      },
-      {
-        "name": "Mokha International Airport",
-        "icao": "OYMK",
-        "municipality": "Mokha",
         "type": "large_airport"
       },
       {
@@ -8417,15 +8432,15 @@
     ]
   },
   "RU": {
-    "total": 1824,
-    "active": 1497,
+    "total": 1839,
+    "active": 1504,
     "large": 44,
     "medium": 211,
-    "small": 688,
-    "heliport": 550,
+    "small": 689,
+    "heliport": 556,
     "seaplane": 4,
     "balloonport": 0,
-    "closed": 327,
+    "closed": 335,
     "scheduled": 157,
     "majorAirports": [
       {
@@ -8855,12 +8870,12 @@
     ]
   },
   "DK": {
-    "total": 150,
-    "active": 135,
+    "total": 151,
+    "active": 136,
     "large": 5,
     "medium": 12,
     "small": 85,
-    "heliport": 31,
+    "heliport": 32,
     "seaplane": 2,
     "balloonport": 0,
     "closed": 15,
@@ -9009,11 +9024,11 @@
     ]
   },
   "NG": {
-    "total": 70,
-    "active": 68,
+    "total": 69,
+    "active": 67,
     "large": 12,
     "medium": 17,
-    "small": 22,
+    "small": 21,
     "heliport": 17,
     "seaplane": 0,
     "balloonport": 0,
@@ -9527,14 +9542,14 @@
   },
   "EE": {
     "total": 62,
-    "active": 45,
+    "active": 46,
     "large": 1,
     "medium": 5,
-    "small": 28,
+    "small": 29,
     "heliport": 10,
     "seaplane": 1,
     "balloonport": 0,
-    "closed": 17,
+    "closed": 16,
     "scheduled": 7,
     "majorAirports": [
       {
@@ -9946,7 +9961,7 @@
         "name": "Isle of Man Airport",
         "iata": "IOM",
         "icao": "EGNS",
-        "municipality": "Castletown",
+        "municipality": "Castletown, Rushen",
         "type": "large_airport"
       }
     ]
@@ -9954,8 +9969,8 @@
   "FK": {
     "total": 41,
     "active": 35,
-    "large": 1,
-    "medium": 0,
+    "large": 0,
+    "medium": 1,
     "small": 33,
     "heliport": 1,
     "seaplane": 0,
@@ -9968,7 +9983,7 @@
         "iata": "MPN",
         "icao": "EGYP",
         "municipality": "Mount Pleasant",
-        "type": "large_airport"
+        "type": "medium_airport"
       }
     ]
   },
@@ -10218,11 +10233,11 @@
     ]
   },
   "GT": {
-    "total": 72,
-    "active": 62,
+    "total": 73,
+    "active": 63,
     "large": 1,
     "medium": 6,
-    "small": 53,
+    "small": 54,
     "heliport": 2,
     "seaplane": 0,
     "balloonport": 0,
@@ -10428,15 +10443,15 @@
     ]
   },
   "PL": {
-    "total": 400,
-    "active": 348,
+    "total": 402,
+    "active": 349,
     "large": 11,
     "medium": 16,
-    "small": 300,
+    "small": 301,
     "heliport": 20,
     "seaplane": 1,
     "balloonport": 0,
-    "closed": 52,
+    "closed": 53,
     "scheduled": 15,
     "majorAirports": [
       {
@@ -10582,11 +10597,11 @@
     ]
   },
   "MN": {
-    "total": 41,
-    "active": 36,
+    "total": 42,
+    "active": 37,
     "large": 2,
     "medium": 12,
-    "small": 22,
+    "small": 23,
     "heliport": 0,
     "seaplane": 0,
     "balloonport": 0,
@@ -10811,10 +10826,10 @@
     ]
   },
   "SE": {
-    "total": 281,
-    "active": 243,
+    "total": 282,
+    "active": 244,
     "large": 11,
-    "medium": 34,
+    "medium": 35,
     "small": 164,
     "heliport": 33,
     "seaplane": 1,
@@ -11098,15 +11113,15 @@
     ]
   },
   "LV": {
-    "total": 89,
-    "active": 60,
+    "total": 92,
+    "active": 61,
     "large": 2,
     "medium": 2,
-    "small": 50,
+    "small": 51,
     "heliport": 5,
     "seaplane": 0,
     "balloonport": 1,
-    "closed": 29,
+    "closed": 31,
     "scheduled": 1,
     "majorAirports": [
       {
@@ -11175,15 +11190,15 @@
     ]
   },
   "ZA": {
-    "total": 674,
-    "active": 634,
+    "total": 685,
+    "active": 641,
     "large": 11,
     "medium": 51,
-    "small": 520,
+    "small": 527,
     "heliport": 51,
     "seaplane": 0,
     "balloonport": 1,
-    "closed": 40,
+    "closed": 44,
     "scheduled": 23,
     "majorAirports": [
       {
@@ -11343,14 +11358,14 @@
   },
   "SZ": {
     "total": 17,
-    "active": 17,
+    "active": 16,
     "large": 1,
     "medium": 1,
-    "small": 14,
+    "small": 13,
     "heliport": 1,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 0,
+    "closed": 1,
     "scheduled": 1,
     "majorAirports": [
       {
@@ -11497,7 +11512,7 @@
     "seaplane": 0,
     "balloonport": 0,
     "closed": 5,
-    "scheduled": 7,
+    "scheduled": 6,
     "majorAirports": [
       {
         "name": "Harry Mwanga Nkumbula International Airport",
@@ -11878,16 +11893,16 @@
     ]
   },
   "FR": {
-    "total": 1778,
-    "active": 1666,
+    "total": 1786,
+    "active": 1672,
     "large": 18,
     "medium": 117,
-    "small": 1054,
-    "heliport": 457,
+    "small": 1053,
+    "heliport": 465,
     "seaplane": 19,
-    "balloonport": 1,
-    "closed": 112,
-    "scheduled": 57,
+    "balloonport": 0,
+    "closed": 114,
+    "scheduled": 51,
     "majorAirports": [
       {
         "name": "Bastia-Poretta International airport",
@@ -12468,8 +12483,8 @@
   "GE": {
     "total": 55,
     "active": 44,
-    "large": 3,
-    "medium": 9,
+    "large": 4,
+    "medium": 8,
     "small": 8,
     "heliport": 24,
     "seaplane": 0,
@@ -12503,7 +12518,7 @@
         "iata": "SUI",
         "icao": "UGSS",
         "municipality": "Sukhumi",
-        "type": "medium_airport"
+        "type": "large_airport"
       }
     ]
   },
@@ -12783,7 +12798,7 @@
     "seaplane": 0,
     "balloonport": 0,
     "closed": 5,
-    "scheduled": 4,
+    "scheduled": 3,
     "majorAirports": [
       {
         "name": "Blaise Diagne International Airport",
@@ -13327,8 +13342,8 @@
   "VN": {
     "total": 98,
     "active": 71,
-    "large": 8,
-    "medium": 14,
+    "large": 9,
+    "medium": 13,
     "small": 14,
     "heliport": 34,
     "seaplane": 1,
@@ -13376,6 +13391,13 @@
         "iata": "HAN",
         "icao": "VVNB",
         "municipality": "Hanoi (Soc Son)",
+        "type": "large_airport"
+      },
+      {
+        "name": "Phu Bai International Airport",
+        "iata": "HUI",
+        "icao": "VVPB",
+        "municipality": "Huế",
         "type": "large_airport"
       },
       {
@@ -13432,13 +13454,6 @@
         "iata": "DLI",
         "icao": "VVDL",
         "municipality": "Da Lat",
-        "type": "medium_airport"
-      },
-      {
-        "name": "Phu Bai International Airport",
-        "iata": "HUI",
-        "icao": "VVPB",
-        "municipality": "Huế",
         "type": "medium_airport"
       },
       {
@@ -14756,15 +14771,15 @@
     ]
   },
   "IT": {
-    "total": 1152,
-    "active": 1023,
+    "total": 1158,
+    "active": 1027,
     "large": 25,
     "medium": 48,
-    "small": 588,
-    "heliport": 355,
+    "small": 587,
+    "heliport": 360,
     "seaplane": 7,
     "balloonport": 0,
-    "closed": 129,
+    "closed": 131,
     "scheduled": 45,
     "majorAirports": [
       {
@@ -15790,14 +15805,14 @@
     ]
   },
   "LA": {
-    "total": 25,
-    "active": 21,
+    "total": 27,
+    "active": 23,
     "large": 3,
     "medium": 3,
     "small": 14,
     "heliport": 0,
     "seaplane": 0,
-    "balloonport": 1,
+    "balloonport": 3,
     "closed": 4,
     "scheduled": 7,
     "majorAirports": [
@@ -15845,14 +15860,14 @@
   },
   "MY": {
     "total": 134,
-    "active": 124,
+    "active": 122,
     "large": 8,
     "medium": 21,
-    "small": 71,
+    "small": 69,
     "heliport": 24,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 10,
+    "closed": 12,
     "scheduled": 34,
     "majorAirports": [
       {
@@ -16033,7 +16048,7 @@
     ]
   },
   "PM": {
-    "total": 2,
+    "total": 3,
     "active": 2,
     "large": 0,
     "medium": 1,
@@ -16041,7 +16056,7 @@
     "heliport": 0,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 0,
+    "closed": 1,
     "scheduled": 2,
     "majorAirports": [
       {
@@ -16275,15 +16290,15 @@
     ]
   },
   "TR": {
-    "total": 425,
+    "total": 429,
     "active": 380,
-    "large": 17,
-    "medium": 48,
-    "small": 57,
-    "heliport": 256,
+    "large": 16,
+    "medium": 52,
+    "small": 53,
+    "heliport": 257,
     "seaplane": 1,
     "balloonport": 1,
-    "closed": 45,
+    "closed": 49,
     "scheduled": 51,
     "majorAirports": [
       {
@@ -16392,13 +16407,6 @@
         "type": "large_airport"
       },
       {
-        "name": "Rize–Artvin Airport",
-        "iata": "RZV",
-        "icao": "LTFO",
-        "municipality": "Rize",
-        "type": "large_airport"
-      },
-      {
         "name": "Şanlıurfa GAP Airport",
         "iata": "GNY",
         "icao": "LTCS",
@@ -16410,6 +16418,13 @@
         "iata": "AFY",
         "icao": "LTAH",
         "municipality": "Afyonkarahisar",
+        "type": "medium_airport"
+      },
+      {
+        "name": "Amasya Merzifon Airport",
+        "iata": "MZH",
+        "icao": "LTAP",
+        "municipality": "Amasya",
         "type": "medium_airport"
       },
       {
@@ -17114,12 +17129,12 @@
     ]
   },
   "NP": {
-    "total": 64,
-    "active": 64,
+    "total": 65,
+    "active": 65,
     "large": 3,
     "medium": 6,
     "small": 41,
-    "heliport": 14,
+    "heliport": 15,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 0,
@@ -17212,16 +17227,16 @@
     ]
   },
   "PF": {
-    "total": 57,
-    "active": 54,
+    "total": 59,
+    "active": 56,
     "large": 1,
     "medium": 25,
     "small": 28,
-    "heliport": 0,
+    "heliport": 2,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 3,
-    "scheduled": 38,
+    "scheduled": 39,
     "majorAirports": [
       {
         "name": "Fa'a'ā International Airport",
@@ -17365,11 +17380,11 @@
     ]
   },
   "NZ": {
-    "total": 320,
-    "active": 305,
+    "total": 335,
+    "active": 320,
     "large": 4,
     "medium": 34,
-    "small": 169,
+    "small": 184,
     "heliport": 94,
     "seaplane": 4,
     "balloonport": 0,
@@ -17496,14 +17511,14 @@
   },
   "PK": {
     "total": 195,
-    "active": 168,
+    "active": 167,
     "large": 11,
     "medium": 28,
-    "small": 76,
+    "small": 75,
     "heliport": 53,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 27,
+    "closed": 28,
     "scheduled": 24,
     "majorAirports": [
       {
