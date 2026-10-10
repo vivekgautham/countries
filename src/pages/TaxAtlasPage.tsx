@@ -2,6 +2,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ClearIcon from "@mui/icons-material/Clear";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import SearchIcon from "@mui/icons-material/Search";
 import ShareIcon from "@mui/icons-material/Share";
@@ -30,12 +31,15 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TableSortLabel,
   Tabs,
   TextField,
+  ToggleButton,
+  ToggleButtonGroup,
   Tooltip,
   Typography,
 } from "@mui/material";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link as RouterLink, useSearchParams } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import AppVersionBadge from "../components/layout/AppVersionBadge";
@@ -67,8 +71,68 @@ export default function TaxAtlasPage() {
   // Local state
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedRegion, setSelectedRegion] = useState<string>("All");
-  const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
   const [copyToast, setCopyToast] = useState<boolean>(false);
+
+  // View mode: grid vs table (synced with URL searchParams & localStorage)
+  const [viewMode, setViewModeState] = useState<"grid" | "table">(() => {
+    const fromUrl = searchParams.get("view");
+    if (fromUrl === "table" || fromUrl === "grid") return fromUrl;
+    try {
+      const saved = localStorage.getItem("tax_atlas_view_mode");
+      if (saved === "table" || saved === "grid") return saved;
+    } catch {
+      // ignore
+    }
+    return "grid";
+  });
+
+  // Keep viewMode synced if URL param changes
+  useEffect(() => {
+    const fromUrl = searchParams.get("view");
+    if (fromUrl === "table" || fromUrl === "grid") {
+      setViewModeState(fromUrl);
+    }
+  }, [searchParams]);
+
+  const handleViewModeChange = (
+    _event: React.MouseEvent<HTMLElement> | null,
+    newMode: "grid" | "table" | null,
+  ) => {
+    if (!newMode || newMode === viewMode) return;
+    setViewModeState(newMode);
+    try {
+      localStorage.setItem("tax_atlas_view_mode", newMode);
+    } catch {
+      // ignore
+    }
+    const nextParams = new URLSearchParams(searchParams);
+    if (newMode === "table") {
+      nextParams.set("view", "table");
+    } else {
+      nextParams.delete("view");
+    }
+    setSearchParams(nextParams, { replace: true });
+  };
+
+  // Table sorting state
+  type SortField =
+    | "name"
+    | "systemType"
+    | "headlineRate"
+    | "foreignIncomeTaxRate"
+    | "corporateTaxRate"
+    | "region";
+
+  type SortDirection = "asc" | "desc";
+
+  const [sortField, setSortField] = useState<SortField>("systemType");
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
+
+  const handleRequestSort = (property: SortField) => {
+    const isAsc = sortField === property && sortDirection === "asc";
+    setSortDirection(isAsc ? "desc" : "asc");
+    setSortField(property);
+  };
 
   // Tab change handler
   const handleTabChange = (_event: React.SyntheticEvent, newTab: string) => {
@@ -204,6 +268,75 @@ export default function TaxAtlasPage() {
     return result;
   }, [countries, activeTab, activeBloc, selectedRegion, searchTerm]);
 
+  // Sorted countries for Table & Grid View
+  const sortedCountries = useMemo(() => {
+    const result = [...filteredCountries];
+
+    const parseRate = (rateStr?: string) => {
+      if (!rateStr) return 999;
+      const match = rateStr.match(/(\d+(\.\d+)?)/);
+      return match ? parseFloat(match[1]) : 999;
+    };
+
+    result.sort((a, b) => {
+      let diff = 0;
+      if (sortField === "systemType") {
+        const priority = (sys?: string) => {
+          if (sys === "zero_tax") return 1;
+          if (sys === "territorial") return 2;
+          if (sys === "non_dom") return 3;
+          return 4;
+        };
+        diff = priority(a.tax?.systemType) - priority(b.tax?.systemType);
+      } else if (sortField === "name") {
+        diff = a.name.localeCompare(b.name);
+      } else if (sortField === "region") {
+        diff = a.region.localeCompare(b.region);
+      } else if (sortField === "headlineRate") {
+        const rateA = parseRate(a.tax?.headlineRate);
+        const rateB = parseRate(b.tax?.headlineRate);
+        diff = rateA - rateB;
+        if (diff === 0) {
+          diff = (a.tax?.headlineRate || "").localeCompare(
+            b.tax?.headlineRate || "",
+          );
+        }
+      } else if (sortField === "foreignIncomeTaxRate") {
+        const isZeroA =
+          a.tax?.isZeroGlobalTax ||
+          a.tax?.systemType === "territorial" ||
+          a.tax?.systemType === "zero_tax";
+        const isZeroB =
+          b.tax?.isZeroGlobalTax ||
+          b.tax?.systemType === "territorial" ||
+          b.tax?.systemType === "zero_tax";
+        if (isZeroA !== isZeroB) {
+          diff = isZeroA ? -1 : 1;
+        } else {
+          const rateA = parseRate(a.tax?.foreignIncomeTaxRate);
+          const rateB = parseRate(b.tax?.foreignIncomeTaxRate);
+          diff = rateA - rateB;
+        }
+      } else if (sortField === "corporateTaxRate") {
+        const rateA = parseRate(a.tax?.corporateTaxRate);
+        const rateB = parseRate(b.tax?.corporateTaxRate);
+        diff = rateA - rateB;
+        if (diff === 0) {
+          diff = (a.tax?.corporateTaxRate || "").localeCompare(
+            b.tax?.corporateTaxRate || "",
+          );
+        }
+      }
+
+      if (diff !== 0) {
+        return sortDirection === "asc" ? diff : -diff;
+      }
+      return a.name.localeCompare(b.name);
+    });
+
+    return result;
+  }, [filteredCountries, sortField, sortDirection]);
+
   if (isLoading) {
     return (
       <Container maxWidth="lg" sx={{ py: 12, textAlign: "center" }}>
@@ -316,7 +449,51 @@ export default function TaxAtlasPage() {
           </Button>
         </Stack>
 
-        <Stack direction="row" spacing={1.5} alignItems="center">
+        <Stack direction="row" spacing={1.5} alignItems="center" flexWrap="wrap">
+          {/* Prominent View Mode Toggle at Top */}
+          <ToggleButtonGroup
+            value={viewMode}
+            exclusive
+            onChange={handleViewModeChange}
+            size="small"
+            aria-label="Top view mode toggle"
+            sx={{
+              backgroundColor: "rgba(15, 23, 42, 0.6)",
+              borderRadius: 2.5,
+              border: "1px solid rgba(255, 255, 255, 0.12)",
+              p: "2px",
+              "& .MuiToggleButton-root": {
+                border: "none",
+                borderRadius: 2,
+                px: { xs: 1.25, sm: 1.75 },
+                py: 0.5,
+                color: "text.secondary",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                textTransform: "none",
+                transition: "all 0.2s ease",
+                "&.Mui-selected": {
+                  backgroundColor: "rgba(168, 85, 247, 0.25)",
+                  color: "#d8b4fe",
+                  boxShadow: "0 2px 8px rgba(168, 85, 247, 0.2)",
+                },
+                "&:hover:not(.Mui-selected)": {
+                  backgroundColor: "rgba(255, 255, 255, 0.06)",
+                  color: "text.primary",
+                },
+              },
+            }}
+          >
+            <ToggleButton value="grid" aria-label="Card grid view">
+              <ViewModuleIcon sx={{ fontSize: 18, mr: 0.6 }} />
+              Cards
+            </ToggleButton>
+            <ToggleButton value="table" aria-label="Table view">
+              <TableRowsIcon sx={{ fontSize: 18, mr: 0.6 }} />
+              Table
+            </ToggleButton>
+          </ToggleButtonGroup>
+
           <Tooltip title="Copy shareable link to Tax Atlas" arrow>
             <IconButton
               onClick={handleShareLink}
@@ -722,14 +899,10 @@ export default function TaxAtlasPage() {
           mb: 3.5,
         }}
       >
-        <Stack
-          direction={{ xs: "column", md: "row" }}
-          spacing={2}
-          alignItems={{ xs: "stretch", md: "center" }}
-          justifyContent="space-between"
-        >
-          {/* Search bar */}
+        <Stack spacing={2}>
+          {/* Search bar (Full Width) */}
           <TextField
+            fullWidth
             size="small"
             placeholder="Search tax rules, golden visas, residency rules, countries..."
             value={searchTerm}
@@ -753,7 +926,7 @@ export default function TaxAtlasPage() {
               ) : null,
             }}
             sx={{
-              maxWidth: { md: 420 },
+              width: "100%",
               "& .MuiOutlinedInput-root": {
                 borderRadius: 2.5,
                 backgroundColor: "rgba(15, 23, 42, 0.4)",
@@ -761,16 +934,37 @@ export default function TaxAtlasPage() {
             }}
           />
 
-          {/* Region Filter & View Toggle */}
+          {/* Region Filter & View Toggle row */}
           <Stack
-            direction="row"
+            direction={{ xs: "column", sm: "row" }}
             spacing={1.5}
-            alignItems="center"
+            alignItems={{ xs: "stretch", sm: "center" }}
+            justifyContent="space-between"
             flexWrap="wrap"
             gap={1}
           >
             {/* Region Filter */}
-            <Box sx={{ display: "flex", gap: 0.75, flexWrap: "wrap" }}>
+            <Box
+              sx={{
+                display: "flex",
+                gap: 0.75,
+                flexWrap: "wrap",
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="caption"
+                sx={{
+                  color: "text.secondary",
+                  fontWeight: 700,
+                  textTransform: "uppercase",
+                  letterSpacing: "0.06em",
+                  mr: 0.5,
+                  display: { xs: "none", sm: "inline-block" },
+                }}
+              >
+                Region:
+              </Typography>
               {REGION_OPTIONS.map((region) => (
                 <Chip
                   key={region}
@@ -796,65 +990,49 @@ export default function TaxAtlasPage() {
               ))}
             </Box>
 
-            <Divider
-              orientation="vertical"
-              flexItem
+            {/* View Mode Toggle in Filter Bar */}
+            <ToggleButtonGroup
+              value={viewMode}
+              exclusive
+              onChange={handleViewModeChange}
+              size="small"
+              aria-label="Filter bar view mode toggle"
               sx={{
-                borderColor: "rgba(255, 255, 255, 0.1)",
-                display: { xs: "none", sm: "block" },
+                backgroundColor: "rgba(15, 23, 42, 0.6)",
+                borderRadius: 2.5,
+                border: "1px solid rgba(255, 255, 255, 0.12)",
+                p: "2px",
+                "& .MuiToggleButton-root": {
+                  border: "none",
+                  borderRadius: 2,
+                  px: { xs: 1.25, sm: 1.6 },
+                  py: 0.5,
+                  color: "text.secondary",
+                  fontSize: "0.78rem",
+                  fontWeight: 700,
+                  textTransform: "none",
+                  transition: "all 0.2s ease",
+                  "&.Mui-selected": {
+                    backgroundColor: "rgba(168, 85, 247, 0.25)",
+                    color: "#d8b4fe",
+                    boxShadow: "0 2px 8px rgba(168, 85, 247, 0.2)",
+                  },
+                  "&:hover:not(.Mui-selected)": {
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    color: "text.primary",
+                  },
+                },
               }}
-            />
-
-            {/* View Mode Toggle */}
-            <Stack direction="row" spacing={0.5}>
-              <Tooltip title="Card Grid View" arrow>
-                <IconButton
-                  size="small"
-                  onClick={() => setViewMode("grid")}
-                  sx={{
-                    border: "1px solid",
-                    borderColor:
-                      viewMode === "grid"
-                        ? "secondary.light"
-                        : "rgba(255, 255, 255, 0.12)",
-                    backgroundColor:
-                      viewMode === "grid"
-                        ? "rgba(168, 85, 247, 0.15)"
-                        : "transparent",
-                    color:
-                      viewMode === "grid"
-                        ? "secondary.light"
-                        : "text.secondary",
-                  }}
-                >
-                  <ViewModuleIcon sx={{ fontSize: 18 }} />
-                </IconButton>
-              </Tooltip>
-
-              <Tooltip title="Table View" arrow>
-                <IconButton
-                  size="small"
-                  onClick={() => setViewMode("table")}
-                  sx={{
-                    border: "1px solid",
-                    borderColor:
-                      viewMode === "table"
-                        ? "secondary.light"
-                        : "rgba(255, 255, 255, 0.12)",
-                    backgroundColor:
-                      viewMode === "table"
-                        ? "rgba(168, 85, 247, 0.15)"
-                        : "transparent",
-                    color:
-                      viewMode === "table"
-                        ? "secondary.light"
-                        : "text.secondary",
-                  }}
-                >
-                  <TableRowsIcon sx={{ fontSize: 18 }} />
-                </IconButton>
-              </Tooltip>
-            </Stack>
+            >
+              <ToggleButton value="grid" aria-label="Card grid view">
+                <ViewModuleIcon sx={{ fontSize: 18, mr: 0.6 }} />
+                Cards
+              </ToggleButton>
+              <ToggleButton value="table" aria-label="Table view">
+                <TableRowsIcon sx={{ fontSize: 18, mr: 0.6 }} />
+                Table
+              </ToggleButton>
+            </ToggleButtonGroup>
           </Stack>
         </Stack>
 
@@ -868,8 +1046,8 @@ export default function TaxAtlasPage() {
           }}
         >
           <Typography variant="caption" sx={{ color: "text.secondary" }}>
-            Showing <strong>{filteredCountries.length}</strong> matching tax
-            jurisdictions
+            Showing <strong>{sortedCountries.length}</strong> matching tax
+            jurisdictions ({viewMode === "table" ? "Table Mode" : "Card Mode"})
           </Typography>
 
           {(searchTerm || selectedRegion !== "All") && (
@@ -893,7 +1071,7 @@ export default function TaxAtlasPage() {
 
       {/* View: Grid Cards */}
       {viewMode === "grid" ? (
-        filteredCountries.length === 0 ? (
+        sortedCountries.length === 0 ? (
           <Paper
             sx={{
               p: 6,
@@ -913,7 +1091,7 @@ export default function TaxAtlasPage() {
           </Paper>
         ) : (
           <Grid container spacing={2.5} sx={{ mb: 6 }}>
-            {filteredCountries.map((country) => {
+            {sortedCountries.map((country) => {
               const tax = country.tax;
               const badge = getTaxBadgeConfig(tax);
               const b = country.blocs;
@@ -1339,7 +1517,69 @@ export default function TaxAtlasPage() {
             overflowX: "auto",
           }}
         >
-          <Table sx={{ minWidth: 800 }}>
+          {/* Table Header Toolbar Bar */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              px: 2.5,
+              py: 1.5,
+              borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+              backgroundColor: "rgba(15, 23, 42, 0.6)",
+              backdropFilter: "blur(16px)",
+            }}
+          >
+            <Stack direction="row" spacing={1.5} alignItems="center">
+              <Chip
+                size="small"
+                label={`${sortedCountries.length} countries`}
+                sx={{
+                  fontWeight: 700,
+                  fontSize: "0.74rem",
+                  backgroundColor: "rgba(168, 85, 247, 0.15)",
+                  color: "#d8b4fe",
+                  border: "1px solid rgba(168, 85, 247, 0.3)",
+                }}
+              />
+              <Typography
+                variant="caption"
+                sx={{
+                  color: "text.secondary",
+                  display: { xs: "none", sm: "inline-block" },
+                }}
+              >
+                Click column headers to sort
+              </Typography>
+            </Stack>
+
+            <Button
+              size="small"
+              onClick={() => {
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                });
+              }}
+              startIcon={<KeyboardArrowUpIcon sx={{ fontSize: 16 }} />}
+              sx={{
+                fontSize: "0.75rem",
+                color: "text.secondary",
+                textTransform: "none",
+                py: 0.25,
+                px: 1,
+                borderRadius: 1.5,
+                "&:hover": {
+                  color: "secondary.light",
+                  backgroundColor: "rgba(168, 85, 247, 0.08)",
+                },
+              }}
+            >
+              Back to Top
+            </Button>
+          </Box>
+
+          <Table sx={{ minWidth: 980 }}>
             <TableHead>
               <TableRow
                 sx={{
@@ -1347,29 +1587,122 @@ export default function TaxAtlasPage() {
                   "& th": {
                     fontWeight: 700,
                     color: "text.secondary",
-                    fontSize: "0.8rem",
+                    fontSize: "0.78rem",
                     textTransform: "uppercase",
                     letterSpacing: "0.05em",
-                    borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
                     py: 1.8,
                   },
                 }}
               >
-                <TableCell>Country</TableCell>
-                <TableCell>Tax Regime</TableCell>
-                <TableCell>PIT Headline Rate</TableCell>
-                <TableCell>Foreign Income</TableCell>
-                <TableCell>Corporate Tax</TableCell>
+                <TableCell>
+                  <TableSortLabel
+                    active={sortField === "name"}
+                    direction={sortField === "name" ? sortDirection : "asc"}
+                    onClick={() => handleRequestSort("name")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    Country
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>
+                  <TableSortLabel
+                    active={sortField === "systemType"}
+                    direction={
+                      sortField === "systemType" ? sortDirection : "asc"
+                    }
+                    onClick={() => handleRequestSort("systemType")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    Tax Regime
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>
+                  <TableSortLabel
+                    active={sortField === "headlineRate"}
+                    direction={
+                      sortField === "headlineRate" ? sortDirection : "asc"
+                    }
+                    onClick={() => handleRequestSort("headlineRate")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    PIT Headline Rate
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>
+                  <TableSortLabel
+                    active={sortField === "foreignIncomeTaxRate"}
+                    direction={
+                      sortField === "foreignIncomeTaxRate"
+                        ? sortDirection
+                        : "asc"
+                    }
+                    onClick={() => handleRequestSort("foreignIncomeTaxRate")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    Foreign Income
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>
+                  <TableSortLabel
+                    active={sortField === "corporateTaxRate"}
+                    direction={
+                      sortField === "corporateTaxRate" ? sortDirection : "asc"
+                    }
+                    onClick={() => handleRequestSort("corporateTaxRate")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    Corporate Tax
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>Residency Rule</TableCell>
+
                 <TableCell>Blocs</TableCell>
+
                 <TableCell align="right">Actions</TableCell>
               </TableRow>
             </TableHead>
 
             <TableBody>
-              {filteredCountries.length === 0 ? (
+              {sortedCountries.length === 0 ? (
                 <TableRow>
                   <TableCell
-                    colSpan={7}
+                    colSpan={8}
                     sx={{
                       textAlign: "center",
                       py: 8,
@@ -1390,7 +1723,7 @@ export default function TaxAtlasPage() {
                   </TableCell>
                 </TableRow>
               ) : (
-                filteredCountries.map((country) => {
+                sortedCountries.map((country) => {
                   const tax = country.tax;
                   const badge = getTaxBadgeConfig(tax);
                   const b = country.blocs;
@@ -1442,6 +1775,7 @@ export default function TaxAtlasPage() {
                               sx={{ color: "text.secondary" }}
                             >
                               {country.region} • {country.code}
+                              {country.capital ? ` • ${country.capital}` : ""}
                             </Typography>
                           </Box>
                         </RouterLink>
@@ -1449,24 +1783,26 @@ export default function TaxAtlasPage() {
 
                       {/* Tax Regime */}
                       <TableCell>
-                        <Chip
-                          icon={
-                            <span
-                              style={{ fontSize: "0.85rem", marginLeft: 4 }}
-                            >
-                              {badge.icon}
-                            </span>
-                          }
-                          label={badge.shortLabel}
-                          size="small"
-                          sx={{
-                            fontWeight: 700,
-                            fontSize: "0.74rem",
-                            backgroundColor: badge.backgroundColor,
-                            color: badge.textColor,
-                            border: `1px solid ${badge.borderColor}`,
-                          }}
-                        />
+                        <Tooltip title={badge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{ fontSize: "0.85rem", marginLeft: 4 }}
+                              >
+                                {badge.icon}
+                              </span>
+                            }
+                            label={badge.shortLabel}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              fontSize: "0.74rem",
+                              backgroundColor: badge.backgroundColor,
+                              color: badge.textColor,
+                              border: `1px solid ${badge.borderColor}`,
+                            }}
+                          />
+                        </Tooltip>
                       </TableCell>
 
                       {/* Headline PIT */}
@@ -1520,6 +1856,25 @@ export default function TaxAtlasPage() {
                         </Typography>
                       </TableCell>
 
+                      {/* Residency Rule */}
+                      <TableCell>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.78rem",
+                            maxWidth: 220,
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            lineHeight: 1.35,
+                          }}
+                        >
+                          {tax?.residencyRule || "Standard rules apply"}
+                        </Typography>
+                      </TableCell>
+
                       {/* Blocs */}
                       <TableCell>
                         <Stack
@@ -1531,6 +1886,13 @@ export default function TaxAtlasPage() {
                           {b?.isEU && (
                             <Chip
                               label="EU"
+                              size="small"
+                              sx={{ height: 18, fontSize: "0.65rem" }}
+                            />
+                          )}
+                          {b?.isSchengen && (
+                            <Chip
+                              label="Schengen"
                               size="small"
                               sx={{ height: 18, fontSize: "0.65rem" }}
                             />
@@ -1571,6 +1933,7 @@ export default function TaxAtlasPage() {
                             />
                           )}
                           {!b?.isEU &&
+                            !b?.isSchengen &&
                             !b?.isNATO &&
                             !b?.isBRICS &&
                             !b?.isG7 &&
