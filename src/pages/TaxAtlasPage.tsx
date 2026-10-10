@@ -449,7 +449,12 @@ export default function TaxAtlasPage() {
           </Button>
         </Stack>
 
-        <Stack direction="row" spacing={1.5} alignItems="center" flexWrap="wrap">
+        <Stack
+          direction="row"
+          spacing={1.5}
+          alignItems="center"
+          flexWrap="wrap"
+        >
           {/* Prominent View Mode Toggle at Top */}
           <ToggleButtonGroup
             value={viewMode}

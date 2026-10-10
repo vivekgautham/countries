@@ -184,16 +184,89 @@ export default function CountryListPage() {
         pb: selectedCompareCodes.length > 0 ? 12 : { xs: 2.5, sm: 4 },
       }}
     >
-      {/* Subtle App Version at Top Right */}
+      {/* Top Action Bar */}
       <Box
         sx={{
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: "space-between",
           alignItems: "center",
-          mb: { xs: 1, sm: 1.5 },
+          mb: { xs: 2, sm: 3 },
+          flexWrap: "wrap",
+          gap: 2,
         }}
       >
         <AppVersionBadge />
+        {/* Navigation Action Buttons */}
+        <Stack direction="row" spacing={1.5} alignItems="center">
+          <Button
+            component={RouterLink}
+            to="/rankings"
+            startIcon={<EmojiEventsIcon />}
+            variant="outlined"
+            sx={{
+              borderRadius: 3,
+              borderColor: "rgba(245, 158, 11, 0.4)",
+              backgroundColor: "rgba(245, 158, 11, 0.08)",
+              color: "#fbbf24",
+              px: 2.5,
+              py: 0.75,
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              "&:hover": {
+                borderColor: "#fbbf24",
+                backgroundColor: "rgba(245, 158, 11, 0.18)",
+              },
+            }}
+          >
+            Rankings
+          </Button>
+
+          <Button
+            component={RouterLink}
+            to="/tax-atlas"
+            startIcon={<AccountBalanceIcon />}
+            variant="outlined"
+            sx={{
+              borderRadius: 3,
+              borderColor: "rgba(168, 85, 247, 0.4)",
+              backgroundColor: "rgba(168, 85, 247, 0.08)",
+              color: "#c084fc",
+              px: 2.5,
+              py: 0.75,
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              "&:hover": {
+                borderColor: "#c084fc",
+                backgroundColor: "rgba(168, 85, 247, 0.18)",
+              },
+            }}
+          >
+            Tax Atlas
+          </Button>
+
+          <Button
+            component={RouterLink}
+            to="/compare"
+            startIcon={<CompareArrowsIcon />}
+            variant="outlined"
+            sx={{
+              borderRadius: 3,
+              borderColor: "rgba(99, 102, 241, 0.4)",
+              backgroundColor: "rgba(99, 102, 241, 0.1)",
+              color: "primary.light",
+              px: 2.5,
+              py: 0.75,
+              fontSize: "0.85rem",
+              fontWeight: 700,
+              "&:hover": {
+                borderColor: "primary.light",
+                backgroundColor: "rgba(99, 102, 241, 0.2)",
+              },
+            }}
+          >
+            Compare Countries
+          </Button>
+        </Stack>
       </Box>
 
       {/* Header Section */}
@@ -227,84 +300,8 @@ export default function CountryListPage() {
             </Box>
           </Typography>
 
-          {/* Navigation Action Buttons */}
-          <Stack
-            direction={{ xs: "column", sm: "row" }}
-            spacing={1.5}
-            alignItems="center"
-          >
-            <Button
-              component={RouterLink}
-              to="/rankings"
-              startIcon={<EmojiEventsIcon />}
-              variant="outlined"
-              sx={{
-                borderRadius: 3,
-                borderColor: "rgba(245, 158, 11, 0.4)",
-                backgroundColor: "rgba(245, 158, 11, 0.08)",
-                color: "#fbbf24",
-                px: 2.5,
-                py: 0.75,
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                "&:hover": {
-                  borderColor: "#fbbf24",
-                  backgroundColor: "rgba(245, 158, 11, 0.18)",
-                },
-              }}
-            >
-              Rankings
-            </Button>
-
-            <Button
-              component={RouterLink}
-              to="/tax-atlas"
-              startIcon={<AccountBalanceIcon />}
-              variant="outlined"
-              sx={{
-                borderRadius: 3,
-                borderColor: "rgba(168, 85, 247, 0.4)",
-                backgroundColor: "rgba(168, 85, 247, 0.08)",
-                color: "#c084fc",
-                px: 2.5,
-                py: 0.75,
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                "&:hover": {
-                  borderColor: "#c084fc",
-                  backgroundColor: "rgba(168, 85, 247, 0.18)",
-                },
-              }}
-            >
-              Tax Atlas
-            </Button>
-
-            <Button
-              component={RouterLink}
-              to="/compare"
-              startIcon={<CompareArrowsIcon />}
-              variant="outlined"
-              sx={{
-                borderRadius: 3,
-                borderColor: "rgba(99, 102, 241, 0.4)",
-                backgroundColor: "rgba(99, 102, 241, 0.1)",
-                color: "primary.light",
-                px: 2.5,
-                py: 0.75,
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                "&:hover": {
-                  borderColor: "primary.light",
-                  backgroundColor: "rgba(99, 102, 241, 0.2)",
-                },
-              }}
-            >
-              Compare Countries
-            </Button>
-          </Stack>
-
           {/* Search and Filter Section */}
-          <Box sx={{ width: "100%", maxWidth: 840 }}>
+          <Box sx={{ width: "100%" }}>
             <Stack spacing={2}>
               <TextField
                 fullWidth
