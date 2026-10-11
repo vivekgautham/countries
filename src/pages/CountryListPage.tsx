@@ -382,11 +382,9 @@ export default function CountryListPage() {
                 }}
               />
 
-              {/* Ask Atlas AI Semantic Query Banner & Curated Prompts */}
+              {/* Ask Atlas AI Semantic Query Banner */}
               <AskAtlasBanner
                 result={askAtlasResult}
-                currentSearchTerm={searchTerm}
-                onSelectPrompt={(prompt) => setSearchTerm(prompt)}
                 onClear={() => setSearchTerm("")}
                 matchCount={filteredCountries.length}
               />

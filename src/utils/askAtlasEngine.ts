@@ -27,16 +27,6 @@ export interface AskAtlasResult {
   matchedCountries: UnifiedCountry[];
 }
 
-export const CURATED_AI_PROMPTS = [
-  "🏖️ 0% tax countries with major airports",
-  "🌍 European territorial tax havens",
-  "🛡️ NATO members not in the EU",
-  "💻 Fast internet and low corporate tax",
-  "🇪🇸 Spanish speaking with territorial tax",
-  "🏔️ Landlocked countries in Africa with >20M population",
-  "🌴 Warm islands with territorial or zero tax",
-];
-
 const LANGUAGE_MAP: Record<string, string> = {
   english: "English",
   spanish: "Spanish",
