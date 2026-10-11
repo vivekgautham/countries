@@ -63,7 +63,8 @@ const REGION_OPTIONS = [
 
 export default function TaxAtlasPage() {
   useDocumentTitle({
-    title: "Global Tax Atlas – Zero Tax Countries, Territorial & Corporate Tax Rates",
+    title:
+      "Global Tax Atlas – Zero Tax Countries, Territorial & Corporate Tax Rates",
     description:
       "Interactive world tax atlas: discover 0% income tax countries, territorial tax regimes, corporate tax rates, capital gains, and nomad tax-friendly jurisdictions.",
     keywords: [

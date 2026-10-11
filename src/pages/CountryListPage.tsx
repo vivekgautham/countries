@@ -390,7 +390,11 @@ export default function CountryListPage() {
           <Box sx={{ width: "100%" }}>
             <Stack spacing={2}>
               {/* Search Bar + Find Letter Button */}
-              <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5} alignItems="center">
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={1.5}
+                alignItems="center"
+              >
                 <TextField
                   fullWidth
                   variant="outlined"
@@ -432,7 +436,9 @@ export default function CountryListPage() {
                 />
 
                 <Button
-                  variant={showLetterMap || selectedLetter ? "contained" : "outlined"}
+                  variant={
+                    showLetterMap || selectedLetter ? "contained" : "outlined"
+                  }
                   color={selectedLetter ? "secondary" : "primary"}
                   onClick={() => setShowLetterMap((prev) => !prev)}
                   startIcon={<SortByAlphaIcon />}
@@ -448,13 +454,17 @@ export default function CountryListPage() {
                     width: { xs: "100%", sm: "auto" },
                     ...(showLetterMap || selectedLetter
                       ? {
-                          backgroundColor: selectedLetter ? "#a855f7" : "primary.main",
+                          backgroundColor: selectedLetter
+                            ? "#a855f7"
+                            : "primary.main",
                           color: "#fff",
                           boxShadow: selectedLetter
                             ? "0 0 16px -2px rgba(168, 85, 247, 0.4)"
                             : "0 0 16px -2px rgba(99, 102, 241, 0.4)",
                           "&:hover": {
-                            backgroundColor: selectedLetter ? "#9333ea" : "primary.dark",
+                            backgroundColor: selectedLetter
+                              ? "#9333ea"
+                              : "primary.dark",
                           },
                         }
                       : {
@@ -494,11 +504,19 @@ export default function CountryListPage() {
                       gap={1}
                     >
                       <Stack direction="row" alignItems="center" spacing={1}>
-                        <SortByAlphaIcon sx={{ fontSize: 18, color: "#c084fc" }} />
-                        <Typography variant="subtitle2" sx={{ fontWeight: 700, color: "text.primary" }}>
+                        <SortByAlphaIcon
+                          sx={{ fontSize: 18, color: "#c084fc" }}
+                        />
+                        <Typography
+                          variant="subtitle2"
+                          sx={{ fontWeight: 700, color: "text.primary" }}
+                        >
                           Alphabet Letter Map
                         </Typography>
-                        <Typography variant="caption" sx={{ color: "text.secondary" }}>
+                        <Typography
+                          variant="caption"
+                          sx={{ color: "text.secondary" }}
+                        >
                           (Filter countries starting with letter)
                         </Typography>
                       </Stack>
@@ -508,7 +526,12 @@ export default function CountryListPage() {
                           size="small"
                           color="secondary"
                           onClick={() => setSelectedLetter(null)}
-                          sx={{ textTransform: "none", fontSize: "0.75rem", fontWeight: 700, py: 0.25 }}
+                          sx={{
+                            textTransform: "none",
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            py: 0.25,
+                          }}
                         >
                           Clear Letter Filter
                         </Button>
@@ -529,7 +552,9 @@ export default function CountryListPage() {
                         clickable
                         onClick={() => setSelectedLetter(null)}
                         color={selectedLetter === null ? "primary" : "default"}
-                        variant={selectedLetter === null ? "filled" : "outlined"}
+                        variant={
+                          selectedLetter === null ? "filled" : "outlined"
+                        }
                         sx={{
                           fontWeight: 700,
                           fontSize: "0.8rem",
@@ -567,7 +592,9 @@ export default function CountryListPage() {
                                 clickable={!isDisabled}
                                 disabled={isDisabled}
                                 onClick={() =>
-                                  setSelectedLetter((prev) => (prev === letter ? null : letter))
+                                  setSelectedLetter((prev) =>
+                                    prev === letter ? null : letter,
+                                  )
                                 }
                                 color={isSelected ? "secondary" : "default"}
                                 variant={isSelected ? "filled" : "outlined"}
@@ -606,7 +633,12 @@ export default function CountryListPage() {
 
               {/* Active Filter Summary Bar if letter is active */}
               {selectedLetter && (
-                <Stack direction="row" alignItems="center" spacing={1} justifyContent="center">
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  spacing={1}
+                  justifyContent="center"
+                >
                   <Chip
                     label={`Filtered: Starts with "${selectedLetter}" (${filteredCountries.length} countries)`}
                     onDelete={() => setSelectedLetter(null)}

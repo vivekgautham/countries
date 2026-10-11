@@ -3004,7 +3004,8 @@ export default function CountryDetailPage() {
                     </Box>
 
                     {/* Aviation Extremes: Highest & Lowest Airfields */}
-                    {(country.airports.highestAirport || country.airports.lowestAirport) && (
+                    {(country.airports.highestAirport ||
+                      country.airports.lowestAirport) && (
                       <Paper
                         variant="outlined"
                         sx={{
@@ -3017,10 +3018,24 @@ export default function CountryDetailPage() {
                         <Stack
                           direction={{ xs: "column", sm: "row" }}
                           spacing={2}
-                          divider={<Divider orientation="vertical" flexItem sx={{ display: { xs: "none", sm: "block" } }} />}
+                          divider={
+                            <Divider
+                              orientation="vertical"
+                              flexItem
+                              sx={{ display: { xs: "none", sm: "block" } }}
+                            />
+                          }
                         >
                           {country.airports.highestAirport && (
-                            <Box sx={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", gap: 1.5 }}>
+                            <Box
+                              sx={{
+                                flex: 1,
+                                minWidth: 0,
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 1.5,
+                              }}
+                            >
                               <Box
                                 sx={{
                                   width: 36,
@@ -3037,8 +3052,20 @@ export default function CountryDetailPage() {
                                 <TerrainIcon fontSize="small" />
                               </Box>
                               <Box sx={{ minWidth: 0, flex: 1 }}>
-                                <Stack direction="row" alignItems="center" spacing={1}>
-                                  <Typography variant="caption" color="text.secondary" sx={{ textTransform: "uppercase", letterSpacing: 0.5, fontWeight: 700 }}>
+                                <Stack
+                                  direction="row"
+                                  alignItems="center"
+                                  spacing={1}
+                                >
+                                  <Typography
+                                    variant="caption"
+                                    color="text.secondary"
+                                    sx={{
+                                      textTransform: "uppercase",
+                                      letterSpacing: 0.5,
+                                      fontWeight: 700,
+                                    }}
+                                  >
                                     Highest Airfield / Airport
                                   </Typography>
                                   <Chip
@@ -3048,7 +3075,8 @@ export default function CountryDetailPage() {
                                       height: 20,
                                       fontSize: "0.7rem",
                                       fontWeight: 700,
-                                      backgroundColor: "rgba(56, 189, 248, 0.15)",
+                                      backgroundColor:
+                                        "rgba(56, 189, 248, 0.15)",
                                       color: "#38bdf8",
                                     }}
                                   />
@@ -3064,14 +3092,23 @@ export default function CountryDetailPage() {
                                   title={country.airports.highestAirport.name}
                                 >
                                   {country.airports.highestAirport.name}
-                                  {country.airports.highestAirport.iata && ` (${country.airports.highestAirport.iata})`}
+                                  {country.airports.highestAirport.iata &&
+                                    ` (${country.airports.highestAirport.iata})`}
                                 </Typography>
                               </Box>
                             </Box>
                           )}
 
                           {country.airports.lowestAirport && (
-                            <Box sx={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", gap: 1.5 }}>
+                            <Box
+                              sx={{
+                                flex: 1,
+                                minWidth: 0,
+                                display: "flex",
+                                alignItems: "center",
+                                gap: 1.5,
+                              }}
+                            >
                               <Box
                                 sx={{
                                   width: 36,
@@ -3088,8 +3125,20 @@ export default function CountryDetailPage() {
                                 <FlightTakeoffIcon fontSize="small" />
                               </Box>
                               <Box sx={{ minWidth: 0, flex: 1 }}>
-                                <Stack direction="row" alignItems="center" spacing={1}>
-                                  <Typography variant="caption" color="text.secondary" sx={{ textTransform: "uppercase", letterSpacing: 0.5, fontWeight: 700 }}>
+                                <Stack
+                                  direction="row"
+                                  alignItems="center"
+                                  spacing={1}
+                                >
+                                  <Typography
+                                    variant="caption"
+                                    color="text.secondary"
+                                    sx={{
+                                      textTransform: "uppercase",
+                                      letterSpacing: 0.5,
+                                      fontWeight: 700,
+                                    }}
+                                  >
                                     Lowest Airfield / Airport
                                   </Typography>
                                   <Chip
@@ -3099,7 +3148,8 @@ export default function CountryDetailPage() {
                                       height: 20,
                                       fontSize: "0.7rem",
                                       fontWeight: 700,
-                                      backgroundColor: "rgba(16, 185, 129, 0.15)",
+                                      backgroundColor:
+                                        "rgba(16, 185, 129, 0.15)",
                                       color: "#10b981",
                                     }}
                                   />
@@ -3115,7 +3165,8 @@ export default function CountryDetailPage() {
                                   title={country.airports.lowestAirport.name}
                                 >
                                   {country.airports.lowestAirport.name}
-                                  {country.airports.lowestAirport.iata && ` (${country.airports.lowestAirport.iata})`}
+                                  {country.airports.lowestAirport.iata &&
+                                    ` (${country.airports.lowestAirport.iata})`}
                                 </Typography>
                               </Box>
                             </Box>
@@ -3321,11 +3372,18 @@ export default function CountryDetailPage() {
                                       alignItems: "center",
                                       justifyContent: "space-between",
                                       pt: 0.5,
-                                      borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                                      borderTop:
+                                        "1px solid rgba(255, 255, 255, 0.05)",
                                       fontSize: "0.75rem",
                                     }}
                                   >
-                                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                                    <Box
+                                      sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: 0.5,
+                                      }}
+                                    >
                                       {airport.elevationFt !== undefined && (
                                         <Typography
                                           variant="caption"
@@ -3336,13 +3394,27 @@ export default function CountryDetailPage() {
                                             gap: 0.25,
                                           }}
                                         >
-                                          <TerrainIcon sx={{ fontSize: 13, color: "text.secondary" }} />
-                                          {airport.elevationFt.toLocaleString()} ft ({Math.round(airport.elevationFt * 0.3048).toLocaleString()} m)
+                                          <TerrainIcon
+                                            sx={{
+                                              fontSize: 13,
+                                              color: "text.secondary",
+                                            }}
+                                          />
+                                          {airport.elevationFt.toLocaleString()}{" "}
+                                          ft (
+                                          {Math.round(
+                                            airport.elevationFt * 0.3048,
+                                          ).toLocaleString()}{" "}
+                                          m)
                                         </Typography>
                                       )}
                                     </Box>
 
-                                    <Stack direction="row" spacing={1} alignItems="center">
+                                    <Stack
+                                      direction="row"
+                                      spacing={1}
+                                      alignItems="center"
+                                    >
                                       {airport.wikipedia && (
                                         <Typography
                                           component="a"
@@ -3356,11 +3428,15 @@ export default function CountryDetailPage() {
                                             display: "inline-flex",
                                             alignItems: "center",
                                             gap: 0.25,
-                                            "&:hover": { textDecoration: "underline" },
+                                            "&:hover": {
+                                              textDecoration: "underline",
+                                            },
                                           }}
                                         >
                                           Wikipedia
-                                          <OpenInNewIcon sx={{ fontSize: 11 }} />
+                                          <OpenInNewIcon
+                                            sx={{ fontSize: 11 }}
+                                          />
                                         </Typography>
                                       )}
                                       {airport.website && (
@@ -3376,11 +3452,16 @@ export default function CountryDetailPage() {
                                             display: "inline-flex",
                                             alignItems: "center",
                                             gap: 0.25,
-                                            "&:hover": { color: "primary.light", textDecoration: "underline" },
+                                            "&:hover": {
+                                              color: "primary.light",
+                                              textDecoration: "underline",
+                                            },
                                           }}
                                         >
                                           Website
-                                          <OpenInNewIcon sx={{ fontSize: 11 }} />
+                                          <OpenInNewIcon
+                                            sx={{ fontSize: 11 }}
+                                          />
                                         </Typography>
                                       )}
                                     </Stack>
