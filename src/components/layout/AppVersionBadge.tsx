@@ -16,10 +16,12 @@ import { ThemeColorId } from "../../theme/theme";
 
 interface AppVersionBadgeProps {
   compact?: boolean;
+  showVersion?: boolean;
 }
 
 export default function AppVersionBadge({
   compact: _compact = false,
+  showVersion = false,
 }: AppVersionBadgeProps) {
   const formattedBuildDate = BUILD_DATE.slice(0, 10);
   const { colorId, availableThemes, setColorId, currentColorTheme } =
@@ -72,56 +74,58 @@ export default function AppVersionBadge({
       </Tooltip>
 
       {/* App Version Tooltip Badge */}
-      <Tooltip
-        title={
-          <Box sx={{ p: 0.5 }}>
-            <Box sx={{ fontWeight: 700, fontSize: "0.75rem" }}>
-              {APP_NAME} v{APP_VERSION}
+      {showVersion && (
+        <Tooltip
+          title={
+            <Box sx={{ p: 0.5 }}>
+              <Box sx={{ fontWeight: 700, fontSize: "0.75rem" }}>
+                {APP_NAME} v{APP_VERSION}
+              </Box>
+              <Box
+                sx={{
+                  color: "rgba(255, 255, 255, 0.6)",
+                  fontSize: "0.68rem",
+                  mt: 0.25,
+                }}
+              >
+                Build: {formattedBuildDate}
+              </Box>
             </Box>
-            <Box
-              sx={{
-                color: "rgba(255, 255, 255, 0.6)",
-                fontSize: "0.68rem",
-                mt: 0.25,
-              }}
-            >
-              Build: {formattedBuildDate}
-            </Box>
-          </Box>
-        }
-        arrow
-        placement="bottom-end"
-      >
-        <Box
-          component="span"
-          sx={{
-            display: "inline-flex",
-            alignItems: "center",
-            color: "text.secondary",
-            opacity: 0.75,
-            transition: "all 0.2s ease-in-out",
-            px: 1,
-            py: 0.35,
-            borderRadius: "8px",
-            border: "1px solid",
-            borderColor: "divider",
-            backgroundColor: "background.paper",
-            backdropFilter: "blur(8px)",
-            fontSize: "0.74rem",
-            fontWeight: 600,
-            cursor: "default",
-            userSelect: "none",
-            "&:hover": {
-              opacity: 1,
-              color: "primary.main",
-              borderColor: "primary.main",
-              backgroundColor: "action.hover",
-            },
-          }}
+          }
+          arrow
+          placement="bottom-end"
         >
-          v{APP_VERSION}
-        </Box>
-      </Tooltip>
+          <Box
+            component="span"
+            sx={{
+              display: "inline-flex",
+              alignItems: "center",
+              color: "text.secondary",
+              opacity: 0.75,
+              transition: "all 0.2s ease-in-out",
+              px: 1,
+              py: 0.35,
+              borderRadius: "8px",
+              border: "1px solid",
+              borderColor: "divider",
+              backgroundColor: "background.paper",
+              backdropFilter: "blur(8px)",
+              fontSize: "0.74rem",
+              fontWeight: 600,
+              cursor: "default",
+              userSelect: "none",
+              "&:hover": {
+                opacity: 1,
+                color: "primary.main",
+                borderColor: "primary.main",
+                backgroundColor: "action.hover",
+              },
+            }}
+          >
+            v{APP_VERSION}
+          </Box>
+        </Tooltip>
+      )}
 
       {/* Theme Selection Menu */}
       <Menu

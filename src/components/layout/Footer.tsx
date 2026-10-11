@@ -4,7 +4,6 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ExploreIcon from "@mui/icons-material/Explore";
 import {
   Box,
-  Chip,
   Container,
   Divider,
   Link,
@@ -13,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { APP_NAME, APP_VERSION } from "../../constants/version";
+import { APP_NAME, APP_VERSION, BUILD_DATE } from "../../constants/version";
 
 export default function Footer() {
   return (
@@ -58,22 +57,6 @@ export default function Footer() {
                 >
                   <span>🌍</span> {APP_NAME}
                 </Typography>
-
-                <Tooltip title={`Application Version v${APP_VERSION}`} arrow>
-                  <Chip
-                    label={`v${APP_VERSION}`}
-                    size="small"
-                    sx={{
-                      height: 22,
-                      fontSize: "0.72rem",
-                      fontWeight: 700,
-                      backgroundColor: "rgba(99, 102, 241, 0.15)",
-                      color: "#a5b4fc",
-                      border: "1px solid rgba(99, 102, 241, 0.35)",
-                      borderRadius: 1.5,
-                    }}
-                  />
-                </Tooltip>
               </Stack>
               <Typography
                 variant="body2"
@@ -174,7 +157,7 @@ export default function Footer() {
 
           <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.07)" }} />
 
-          {/* Bottom section: Attribution */}
+          {/* Bottom section: Attribution & Version / Build Info */}
           <Stack
             direction={{ xs: "column", sm: "row" }}
             justifyContent="space-between"
@@ -225,6 +208,89 @@ export default function Footer() {
                 REST Countries
               </Link>
             </Typography>
+
+            {/* Version & Build Info */}
+            <Tooltip
+              title={
+                <Box sx={{ p: 0.5 }}>
+                  <Box sx={{ fontWeight: 700, fontSize: "0.75rem" }}>
+                    {APP_NAME} v{APP_VERSION}
+                  </Box>
+                  <Box
+                    sx={{
+                      color: "rgba(255, 255, 255, 0.7)",
+                      fontSize: "0.68rem",
+                      mt: 0.25,
+                    }}
+                  >
+                    Build Date: {BUILD_DATE.slice(0, 10)}
+                  </Box>
+                  <Box
+                    sx={{
+                      color: "rgba(255, 255, 255, 0.5)",
+                      fontSize: "0.65rem",
+                      mt: 0.25,
+                      fontFamily: "monospace",
+                    }}
+                  >
+                    {BUILD_DATE}
+                  </Box>
+                </Box>
+              }
+              arrow
+              placement="top"
+            >
+              <Stack
+                direction="row"
+                spacing={0.75}
+                alignItems="center"
+                sx={{
+                  cursor: "default",
+                  userSelect: "none",
+                  px: 1.2,
+                  py: 0.4,
+                  borderRadius: 1.5,
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  backgroundColor: "rgba(255, 255, 255, 0.03)",
+                  transition: "all 0.2s ease",
+                  "&:hover": {
+                    borderColor: "rgba(99, 102, 241, 0.35)",
+                    backgroundColor: "rgba(99, 102, 241, 0.08)",
+                  },
+                }}
+              >
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontSize: "0.74rem",
+                    fontWeight: 600,
+                  }}
+                >
+                  v{APP_VERSION}
+                </Typography>
+                <Box
+                  component="span"
+                  sx={{
+                    color: "text.disabled",
+                    fontSize: "0.7rem",
+                    lineHeight: 1,
+                  }}
+                >
+                  •
+                </Box>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: "text.secondary",
+                    fontSize: "0.74rem",
+                    fontFamily: "monospace",
+                  }}
+                >
+                  Build: {BUILD_DATE.slice(0, 10)}
+                </Typography>
+              </Stack>
+            </Tooltip>
           </Stack>
         </Stack>
       </Container>
