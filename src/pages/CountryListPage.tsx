@@ -5,6 +5,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ReplayIcon from "@mui/icons-material/Replay";
 import SearchIcon from "@mui/icons-material/Search";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import {
   Box,
   Button,
@@ -36,6 +37,9 @@ import { getCountryEmoji } from "../utils/countryUtils";
 import { matchesBlocQuery } from "../utils/blocUtils";
 import { getTaxBadgeConfig, matchesTaxQuery } from "../utils/taxUtils";
 import AppVersionBadge from "../components/layout/AppVersionBadge";
+import { parseNaturalLanguageQuery } from "../utils/askAtlasEngine";
+import NomadAdvisorModal from "../components/ai/NomadAdvisorModal";
+import AskAtlasBanner from "../components/ai/AskAtlasBanner";
 
 const REGIONS = [
   "All",
@@ -61,8 +65,14 @@ export default function CountryListPage() {
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
     [],
   );
+  const [isNomadModalOpen, setIsNomadModalOpen] = useState(false);
 
   const sentinelRef = useRef<HTMLDivElement | null>(null);
+
+  // Parse natural language semantic query with Ask Atlas
+  const askAtlasResult = useMemo(() => {
+    return parseNaturalLanguageQuery(searchTerm, countries);
+  }, [searchTerm, countries]);
 
   // Reset pagination when filter/search changes
   useEffect(() => {
@@ -97,6 +107,39 @@ export default function CountryListPage() {
   const filteredCountries = useMemo(() => {
     let result = [...countries];
 
+    // 1. If Ask Atlas recognized a natural language semantic query, use its intelligent match!
+    if (askAtlasResult && askAtlasResult.isNaturalLanguage) {
+      result = [...askAtlasResult.matchedCountries];
+    } else {
+      // 2. Standard Search Query
+      const query = searchTerm.trim().toLowerCase();
+      if (query) {
+        result = result.filter(
+          (c) =>
+            c.name.toLowerCase().includes(query) ||
+            (c.officialName && c.officialName.toLowerCase().includes(query)) ||
+            c.code.toLowerCase().includes(query) ||
+            (c.code3 && c.code3.toLowerCase().includes(query)) ||
+            (c.capital && c.capital.toLowerCase().includes(query)) ||
+            matchesTaxQuery(c, query) ||
+            matchesBlocQuery(c, query) ||
+            (c.cities?.some(
+              (city) =>
+                city.name.toLowerCase().includes(query) ||
+                (city.adminName &&
+                  city.adminName.toLowerCase().includes(query)),
+            ) ??
+              false) ||
+            (c.airports?.majorAirports?.some(
+              (a) =>
+                (a.iata && a.iata.toLowerCase().includes(query)) ||
+                a.name.toLowerCase().includes(query),
+            ) ??
+              false),
+        );
+      }
+    }
+
     // Filter by Region
     if (selectedRegion !== "All") {
       result = result.filter(
@@ -104,38 +147,11 @@ export default function CountryListPage() {
       );
     }
 
-    // Filter by Search Query
-    const query = searchTerm.trim().toLowerCase();
-    if (query) {
-      result = result.filter(
-        (c) =>
-          c.name.toLowerCase().includes(query) ||
-          (c.officialName && c.officialName.toLowerCase().includes(query)) ||
-          c.code.toLowerCase().includes(query) ||
-          (c.code3 && c.code3.toLowerCase().includes(query)) ||
-          (c.capital && c.capital.toLowerCase().includes(query)) ||
-          matchesTaxQuery(c, query) ||
-          matchesBlocQuery(c, query) ||
-          (c.cities?.some(
-            (city) =>
-              city.name.toLowerCase().includes(query) ||
-              (city.adminName && city.adminName.toLowerCase().includes(query)),
-          ) ??
-            false) ||
-          (c.airports?.majorAirports?.some(
-            (a) =>
-              (a.iata && a.iata.toLowerCase().includes(query)) ||
-              a.name.toLowerCase().includes(query),
-          ) ??
-            false),
-      );
-    }
-
     // Sort alphabetically by name
     result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion]);
+  }, [countries, searchTerm, selectedRegion, askAtlasResult]);
 
   const visibleCountries = useMemo(() => {
     return filteredCountries.slice(0, visibleCount);
@@ -198,6 +214,29 @@ export default function CountryListPage() {
         <AppVersionBadge />
         {/* Navigation Action Buttons */}
         <Stack direction="row" spacing={1.5} alignItems="center">
+          <Button
+            startIcon={<AutoAwesomeIcon />}
+            variant="outlined"
+            onClick={() => setIsNomadModalOpen(true)}
+            sx={{
+              borderRadius: 3,
+              borderColor: "rgba(168, 85, 247, 0.45)",
+              backgroundColor: "rgba(168, 85, 247, 0.12)",
+              color: "#c084fc",
+              px: 2.2,
+              py: 0.75,
+              fontSize: "0.85rem",
+              fontWeight: 800,
+              boxShadow: "0 0 16px -2px rgba(168, 85, 247, 0.2)",
+              "&:hover": {
+                borderColor: "#c084fc",
+                backgroundColor: "rgba(168, 85, 247, 0.22)",
+              },
+            }}
+          >
+            NomadAI
+          </Button>
+
           <Button
             component={RouterLink}
             to="/rankings"
@@ -306,7 +345,7 @@ export default function CountryListPage() {
               <TextField
                 fullWidth
                 variant="outlined"
-                placeholder="Search countries, examine flags, capitals, major cities, languages, and geographic info..."
+                placeholder="Search countries, or ask anything (e.g. '0% tax countries with major airports', 'NATO not in EU')..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 autoFocus
@@ -341,6 +380,15 @@ export default function CountryListPage() {
                     },
                   },
                 }}
+              />
+
+              {/* Ask Atlas AI Semantic Query Banner & Curated Prompts */}
+              <AskAtlasBanner
+                result={askAtlasResult}
+                currentSearchTerm={searchTerm}
+                onSelectPrompt={(prompt) => setSearchTerm(prompt)}
+                onClear={() => setSearchTerm("")}
+                matchCount={filteredCountries.length}
               />
 
               {/* Region Filter Chips */}
@@ -1061,6 +1109,14 @@ export default function CountryListPage() {
         allCountries={countries}
         onRemove={handleRemoveCompare}
         onClear={handleClearCompare}
+      />
+
+      {/* NomadAI Relocation & Expat Matchmaker Modal */}
+      <NomadAdvisorModal
+        open={isNomadModalOpen}
+        onClose={() => setIsNomadModalOpen(false)}
+        countries={countries}
+        onAddToCompare={handleToggleCompare}
       />
     </Container>
   );
