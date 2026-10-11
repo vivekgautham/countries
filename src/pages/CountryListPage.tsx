@@ -4,6 +4,7 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import ReplayIcon from "@mui/icons-material/Replay";
 import SearchIcon from "@mui/icons-material/Search";
+import SortByAlphaIcon from "@mui/icons-material/SortByAlpha";
 import WarningAmberIcon from "@mui/icons-material/WarningAmber";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import {
@@ -14,6 +15,7 @@ import {
   CardContent,
   Chip,
   CircularProgress,
+  Collapse,
   Container,
   IconButton,
   InputAdornment,
@@ -61,6 +63,8 @@ export default function CountryListPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [selectedLetter, setSelectedLetter] = useState<string | null>(null);
+  const [showLetterMap, setShowLetterMap] = useState(false);
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [selectedCompareCodes, setSelectedCompareCodes] = useState<string[]>(
     [],
@@ -74,10 +78,25 @@ export default function CountryListPage() {
     return parseNaturalLanguageQuery(searchTerm, countries);
   }, [searchTerm, countries]);
 
-  // Reset pagination when filter/search changes
+  // Compute country counts per alphabet letter
+  const letterCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const c of countries) {
+      const normalizedName = (c.name || "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "");
+      const firstChar = normalizedName.charAt(0).toUpperCase();
+      if (firstChar >= "A" && firstChar <= "Z") {
+        counts[firstChar] = (counts[firstChar] || 0) + 1;
+      }
+    }
+    return counts;
+  }, [countries]);
+
+  // Reset pagination when filter/search/letter changes
   useEffect(() => {
     setVisibleCount(INITIAL_BATCH_SIZE);
-  }, [searchTerm, selectedRegion]);
+  }, [searchTerm, selectedRegion, selectedLetter]);
 
   const handleToggleCompare = (code: string, e?: React.MouseEvent) => {
     if (e) {
@@ -140,6 +159,16 @@ export default function CountryListPage() {
       }
     }
 
+    // Filter by Alphabet Letter
+    if (selectedLetter) {
+      result = result.filter((c) => {
+        const normalized = (c.name || "")
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "");
+        return normalized.charAt(0).toUpperCase() === selectedLetter;
+      });
+    }
+
     // Filter by Region
     if (selectedRegion !== "All") {
       result = result.filter(
@@ -151,7 +180,7 @@ export default function CountryListPage() {
     result.sort((a, b) => a.name.localeCompare(b.name));
 
     return result;
-  }, [countries, searchTerm, selectedRegion, askAtlasResult]);
+  }, [countries, searchTerm, selectedLetter, selectedRegion, askAtlasResult]);
 
   const visibleCountries = useMemo(() => {
     return filteredCountries.slice(0, visibleCount);
@@ -342,45 +371,238 @@ export default function CountryListPage() {
           {/* Search and Filter Section */}
           <Box sx={{ width: "100%" }}>
             <Stack spacing={2}>
-              <TextField
-                fullWidth
-                variant="outlined"
-                placeholder="Search countries, or ask anything (e.g. '0% tax countries with major airports', 'NATO not in EU')..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                autoFocus
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon sx={{ color: "text.secondary" }} />
-                    </InputAdornment>
-                  ),
-                  endAdornment: searchTerm ? (
-                    <InputAdornment position="end">
-                      <IconButton
-                        aria-label="Clear search"
-                        onClick={() => setSearchTerm("")}
-                        edge="end"
-                        size="small"
-                      >
-                        <ClearIcon fontSize="small" />
-                      </IconButton>
-                    </InputAdornment>
-                  ) : null,
-                  sx: {
+              {/* Search Bar + Find Letter Button */}
+              <Stack direction={{ xs: "column", sm: "row" }} spacing={1.5} alignItems="center">
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  placeholder="Search countries, or ask anything (e.g. '0% tax countries with major airports', 'NATO not in EU')..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  autoFocus
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <SearchIcon sx={{ color: "text.secondary" }} />
+                      </InputAdornment>
+                    ),
+                    endAdornment: searchTerm ? (
+                      <InputAdornment position="end">
+                        <IconButton
+                          aria-label="Clear search"
+                          onClick={() => setSearchTerm("")}
+                          edge="end"
+                          size="small"
+                        >
+                          <ClearIcon fontSize="small" />
+                        </IconButton>
+                      </InputAdornment>
+                    ) : null,
+                    sx: {
+                      borderRadius: 3.5,
+                      backgroundColor: "rgba(30, 41, 59, 0.7)",
+                      backdropFilter: "blur(12px)",
+                      fontSize: "0.95rem",
+                      "& fieldset": {
+                        borderColor: "rgba(255, 255, 255, 0.12)",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "primary.light",
+                      },
+                    },
+                  }}
+                />
+
+                <Button
+                  variant={showLetterMap || selectedLetter ? "contained" : "outlined"}
+                  color={selectedLetter ? "secondary" : "primary"}
+                  onClick={() => setShowLetterMap((prev) => !prev)}
+                  startIcon={<SortByAlphaIcon />}
+                  sx={{
+                    height: { xs: 44, sm: 52 },
+                    px: 2.5,
                     borderRadius: 3.5,
-                    backgroundColor: "rgba(30, 41, 59, 0.7)",
-                    backdropFilter: "blur(12px)",
-                    fontSize: "0.95rem",
-                    "& fieldset": {
-                      borderColor: "rgba(255, 255, 255, 0.12)",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "primary.light",
-                    },
-                  },
-                }}
-              />
+                    whiteSpace: "nowrap",
+                    textTransform: "none",
+                    fontWeight: 700,
+                    fontSize: "0.9rem",
+                    flexShrink: 0,
+                    width: { xs: "100%", sm: "auto" },
+                    ...(showLetterMap || selectedLetter
+                      ? {
+                          backgroundColor: selectedLetter ? "#a855f7" : "primary.main",
+                          color: "#fff",
+                          boxShadow: selectedLetter
+                            ? "0 0 16px -2px rgba(168, 85, 247, 0.4)"
+                            : "0 0 16px -2px rgba(99, 102, 241, 0.4)",
+                          "&:hover": {
+                            backgroundColor: selectedLetter ? "#9333ea" : "primary.dark",
+                          },
+                        }
+                      : {
+                          borderColor: "rgba(255, 255, 255, 0.15)",
+                          backgroundColor: "rgba(30, 41, 59, 0.7)",
+                          color: "text.primary",
+                          "&:hover": {
+                            borderColor: "primary.light",
+                            backgroundColor: "rgba(30, 41, 59, 0.9)",
+                          },
+                        }),
+                  }}
+                >
+                  {selectedLetter ? `Letter: ${selectedLetter}` : "Find A–Z"}
+                </Button>
+              </Stack>
+
+              {/* Alphabets Letter Map Panel */}
+              <Collapse in={showLetterMap}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 3.5,
+                    backgroundColor: "rgba(15, 23, 42, 0.8)",
+                    backdropFilter: "blur(16px)",
+                    borderColor: "rgba(168, 85, 247, 0.25)",
+                    boxShadow: "0 8px 32px -4px rgba(0, 0, 0, 0.4)",
+                  }}
+                >
+                  <Stack spacing={1.5}>
+                    <Stack
+                      direction="row"
+                      alignItems="center"
+                      justifyContent="space-between"
+                      flexWrap="wrap"
+                      gap={1}
+                    >
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <SortByAlphaIcon sx={{ fontSize: 18, color: "#c084fc" }} />
+                        <Typography variant="subtitle2" sx={{ fontWeight: 700, color: "text.primary" }}>
+                          Alphabet Letter Map
+                        </Typography>
+                        <Typography variant="caption" sx={{ color: "text.secondary" }}>
+                          (Filter countries starting with letter)
+                        </Typography>
+                      </Stack>
+
+                      {selectedLetter && (
+                        <Button
+                          size="small"
+                          color="secondary"
+                          onClick={() => setSelectedLetter(null)}
+                          sx={{ textTransform: "none", fontSize: "0.75rem", fontWeight: 700, py: 0.25 }}
+                        >
+                          Clear Letter Filter
+                        </Button>
+                      )}
+                    </Stack>
+
+                    {/* Letter Buttons Grid */}
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        gap: 0.75,
+                        justifyContent: "center",
+                      }}
+                    >
+                      <Chip
+                        label="All"
+                        clickable
+                        onClick={() => setSelectedLetter(null)}
+                        color={selectedLetter === null ? "primary" : "default"}
+                        variant={selectedLetter === null ? "filled" : "outlined"}
+                        sx={{
+                          fontWeight: 700,
+                          fontSize: "0.8rem",
+                          borderRadius: 2,
+                          px: 0.5,
+                          borderColor:
+                            selectedLetter === null
+                              ? "primary.main"
+                              : "rgba(255, 255, 255, 0.12)",
+                          backgroundColor:
+                            selectedLetter === null
+                              ? "primary.main"
+                              : "rgba(30, 41, 59, 0.5)",
+                        }}
+                      />
+
+                      {"ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").map((letter) => {
+                        const count = letterCounts[letter] || 0;
+                        const isSelected = selectedLetter === letter;
+                        const isDisabled = count === 0;
+
+                        return (
+                          <Tooltip
+                            key={letter}
+                            title={
+                              isDisabled
+                                ? `No countries start with ${letter}`
+                                : `${count} countr${count === 1 ? "y" : "ies"} starting with ${letter}`
+                            }
+                            arrow
+                          >
+                            <span>
+                              <Chip
+                                label={`${letter}${count > 0 ? ` (${count})` : ""}`}
+                                clickable={!isDisabled}
+                                disabled={isDisabled}
+                                onClick={() =>
+                                  setSelectedLetter((prev) => (prev === letter ? null : letter))
+                                }
+                                color={isSelected ? "secondary" : "default"}
+                                variant={isSelected ? "filled" : "outlined"}
+                                sx={{
+                                  fontWeight: isSelected ? 800 : 600,
+                                  fontSize: "0.8rem",
+                                  borderRadius: 2,
+                                  minWidth: 42,
+                                  opacity: isDisabled ? 0.35 : 1,
+                                  borderColor: isSelected
+                                    ? "#a855f7"
+                                    : "rgba(255, 255, 255, 0.12)",
+                                  backgroundColor: isSelected
+                                    ? "#a855f7"
+                                    : "rgba(30, 41, 59, 0.5)",
+                                  "&:hover": {
+                                    backgroundColor: isSelected
+                                      ? "#9333ea"
+                                      : !isDisabled
+                                        ? "rgba(168, 85, 247, 0.15)"
+                                        : undefined,
+                                    borderColor: !isDisabled
+                                      ? "#c084fc"
+                                      : undefined,
+                                  },
+                                }}
+                              />
+                            </span>
+                          </Tooltip>
+                        );
+                      })}
+                    </Box>
+                  </Stack>
+                </Paper>
+              </Collapse>
+
+              {/* Active Filter Summary Bar if letter is active */}
+              {selectedLetter && (
+                <Stack direction="row" alignItems="center" spacing={1} justifyContent="center">
+                  <Chip
+                    label={`Filtered: Starts with "${selectedLetter}" (${filteredCountries.length} countries)`}
+                    onDelete={() => setSelectedLetter(null)}
+                    color="secondary"
+                    variant="outlined"
+                    sx={{
+                      fontWeight: 700,
+                      borderRadius: 2,
+                      borderColor: "#a855f7",
+                      backgroundColor: "rgba(168, 85, 247, 0.12)",
+                    }}
+                  />
+                </Stack>
+              )}
 
               {/* Ask Atlas AI Semantic Query Banner */}
               <AskAtlasBanner
@@ -499,6 +721,7 @@ export default function CountryListPage() {
                 onClick={() => {
                   setSearchTerm("");
                   setSelectedRegion("All");
+                  setSelectedLetter(null);
                 }}
               >
                 Reset Filters
