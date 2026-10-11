@@ -9,6 +9,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PublicIcon from "@mui/icons-material/Public";
 import SearchIcon from "@mui/icons-material/Search";
 import ShareIcon from "@mui/icons-material/Share";
+import TerrainIcon from "@mui/icons-material/Terrain";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import WifiIcon from "@mui/icons-material/Wifi";
 import {
@@ -344,6 +345,24 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     getSecondaryValue: (c) =>
       c.airports?.active
         ? `${formatNumber(c.airports.active)} total active`
+        : "—",
+  },
+  {
+    id: "airports_highest",
+    category: "aviation",
+    label: "Highest Airport Elevation",
+    shortLabel: "Highest Elevation",
+    unit: "ft",
+    description:
+      "Highest elevation airfield or aerodrome in the country.",
+    source: "OurAirports",
+    sortDirection: "desc",
+    icon: <TerrainIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.airports?.highestAirport?.elevationFt,
+    formatValue: (val) => `${formatNumber(val)} ft (${Math.round(val * 0.3048).toLocaleString()} m)`,
+    getSecondaryValue: (c) =>
+      c.airports?.highestAirport
+        ? `${c.airports.highestAirport.name}${c.airports.highestAirport.iata ? ` (${c.airports.highestAirport.iata})` : ""}`
         : "—",
   },
 ];

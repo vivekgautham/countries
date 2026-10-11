@@ -84,6 +84,9 @@ async function run() {
   const icaoIdx = headers.indexOf("icao_code");
   const municipalityIdx = headers.indexOf("municipality");
   const scheduledIdx = headers.indexOf("scheduled_service");
+  const elevationIdx = headers.indexOf("elevation_ft");
+  const wikiIdx = headers.indexOf("wikipedia_link");
+  const homeIdx = headers.indexOf("home_link");
 
   if (isoCountryIdx === -1 || typeIdx === -1) {
     throw new Error("Missing required columns in CSV header");
@@ -105,6 +108,10 @@ async function run() {
     const icao = (cols[icaoIdx] || "").trim();
     const municipality = (cols[municipalityIdx] || "").trim();
     const scheduled = (cols[scheduledIdx] || "").trim().toLowerCase() === "yes";
+    const elevStr = elevationIdx !== -1 ? (cols[elevationIdx] || "").trim() : "";
+    const elev = elevStr !== "" && !isNaN(elevStr) ? parseInt(elevStr, 10) : undefined;
+    const wikipedia = wikiIdx !== -1 ? (cols[wikiIdx] || "").trim() || undefined : undefined;
+    const website = homeIdx !== -1 ? (cols[homeIdx] || "").trim() || undefined : undefined;
 
     if (!airportsByCountry[country]) {
       airportsByCountry[country] = {
@@ -129,26 +136,46 @@ async function run() {
       cData.closed += 1;
     } else {
       cData.active += 1;
+
+      // Track highest and lowest elevation for active airfields/airports
+      if (elev !== undefined) {
+        if (!cData.highestAirport || elev > cData.highestAirport.elevationFt) {
+          cData.highestAirport = {
+            name,
+            iata: iata || undefined,
+            elevationFt: elev,
+            type,
+          };
+        }
+        if (!cData.lowestAirport || elev < cData.lowestAirport.elevationFt) {
+          cData.lowestAirport = {
+            name,
+            iata: iata || undefined,
+            elevationFt: elev,
+            type,
+          };
+        }
+      }
+
+      const airportObj = {
+        name,
+        iata: iata || undefined,
+        icao: icao || undefined,
+        municipality: municipality || undefined,
+        type,
+        elevationFt: elev,
+        wikipedia,
+        website,
+      };
+
       if (type === "large_airport") {
         cData.large += 1;
-        cData.majorAirports.push({
-          name,
-          iata: iata || undefined,
-          icao: icao || undefined,
-          municipality: municipality || undefined,
-          type,
-        });
+        cData.majorAirports.push(airportObj);
       } else if (type === "medium_airport") {
         cData.medium += 1;
         // If the country has fewer than 15 major airports recorded, include medium airports that have IATA codes
         if (cData.majorAirports.length < 15 && iata) {
-          cData.majorAirports.push({
-            name,
-            iata,
-            icao: icao || undefined,
-            municipality: municipality || undefined,
-            type,
-          });
+          cData.majorAirports.push(airportObj);
         }
       } else if (type === "small_airport") {
         cData.small += 1;

@@ -46,6 +46,9 @@ export interface MajorAirport {
   icao?: string;
   municipality?: string;
   type: string;
+  elevationFt?: number;
+  wikipedia?: string;
+  website?: string;
 }
 
 export interface AirportStats {
@@ -59,6 +62,18 @@ export interface AirportStats {
   balloonport: number;
   closed: number;
   scheduled: number;
+  highestAirport?: {
+    name: string;
+    iata?: string;
+    elevationFt: number;
+    type?: string;
+  };
+  lowestAirport?: {
+    name: string;
+    iata?: string;
+    elevationFt: number;
+    type?: string;
+  };
   majorAirports: MajorAirport[];
 }
 

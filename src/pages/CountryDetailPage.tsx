@@ -7,7 +7,9 @@ import ExploreIcon from "@mui/icons-material/Explore";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import MapIcon from "@mui/icons-material/Map";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import SearchIcon from "@mui/icons-material/Search";
+import TerrainIcon from "@mui/icons-material/Terrain";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import {
   Box,
@@ -2977,6 +2979,127 @@ export default function CountryDetailPage() {
                       </Paper>
                     </Box>
 
+                    {/* Aviation Extremes: Highest & Lowest Airfields */}
+                    {(country.airports.highestAirport || country.airports.lowestAirport) && (
+                      <Paper
+                        variant="outlined"
+                        sx={{
+                          p: 1.75,
+                          backgroundColor: "rgba(15, 23, 42, 0.45)",
+                          borderRadius: 2,
+                          borderColor: "rgba(255, 255, 255, 0.08)",
+                        }}
+                      >
+                        <Stack
+                          direction={{ xs: "column", sm: "row" }}
+                          spacing={2}
+                          divider={<Divider orientation="vertical" flexItem sx={{ display: { xs: "none", sm: "block" } }} />}
+                        >
+                          {country.airports.highestAirport && (
+                            <Box sx={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", gap: 1.5 }}>
+                              <Box
+                                sx={{
+                                  width: 36,
+                                  height: 36,
+                                  borderRadius: 1.5,
+                                  backgroundColor: "rgba(56, 189, 248, 0.12)",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  color: "#38bdf8",
+                                  flexShrink: 0,
+                                }}
+                              >
+                                <TerrainIcon fontSize="small" />
+                              </Box>
+                              <Box sx={{ minWidth: 0, flex: 1 }}>
+                                <Stack direction="row" alignItems="center" spacing={1}>
+                                  <Typography variant="caption" color="text.secondary" sx={{ textTransform: "uppercase", letterSpacing: 0.5, fontWeight: 700 }}>
+                                    Highest Airfield / Airport
+                                  </Typography>
+                                  <Chip
+                                    label={`${country.airports.highestAirport.elevationFt.toLocaleString()} ft (${Math.round(country.airports.highestAirport.elevationFt * 0.3048).toLocaleString()} m)`}
+                                    size="small"
+                                    sx={{
+                                      height: 20,
+                                      fontSize: "0.7rem",
+                                      fontWeight: 700,
+                                      backgroundColor: "rgba(56, 189, 248, 0.15)",
+                                      color: "#38bdf8",
+                                    }}
+                                  />
+                                </Stack>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontWeight: 600,
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    whiteSpace: "nowrap",
+                                  }}
+                                  title={country.airports.highestAirport.name}
+                                >
+                                  {country.airports.highestAirport.name}
+                                  {country.airports.highestAirport.iata && ` (${country.airports.highestAirport.iata})`}
+                                </Typography>
+                              </Box>
+                            </Box>
+                          )}
+
+                          {country.airports.lowestAirport && (
+                            <Box sx={{ flex: 1, minWidth: 0, display: "flex", alignItems: "center", gap: 1.5 }}>
+                              <Box
+                                sx={{
+                                  width: 36,
+                                  height: 36,
+                                  borderRadius: 1.5,
+                                  backgroundColor: "rgba(16, 185, 129, 0.12)",
+                                  display: "flex",
+                                  alignItems: "center",
+                                  justifyContent: "center",
+                                  color: "#10b981",
+                                  flexShrink: 0,
+                                }}
+                              >
+                                <FlightTakeoffIcon fontSize="small" />
+                              </Box>
+                              <Box sx={{ minWidth: 0, flex: 1 }}>
+                                <Stack direction="row" alignItems="center" spacing={1}>
+                                  <Typography variant="caption" color="text.secondary" sx={{ textTransform: "uppercase", letterSpacing: 0.5, fontWeight: 700 }}>
+                                    Lowest Airfield / Airport
+                                  </Typography>
+                                  <Chip
+                                    label={`${country.airports.lowestAirport.elevationFt.toLocaleString()} ft (${Math.round(country.airports.lowestAirport.elevationFt * 0.3048).toLocaleString()} m)`}
+                                    size="small"
+                                    sx={{
+                                      height: 20,
+                                      fontSize: "0.7rem",
+                                      fontWeight: 700,
+                                      backgroundColor: "rgba(16, 185, 129, 0.15)",
+                                      color: "#10b981",
+                                    }}
+                                  />
+                                </Stack>
+                                <Typography
+                                  variant="body2"
+                                  sx={{
+                                    fontWeight: 600,
+                                    overflow: "hidden",
+                                    textOverflow: "ellipsis",
+                                    whiteSpace: "nowrap",
+                                  }}
+                                  title={country.airports.lowestAirport.name}
+                                >
+                                  {country.airports.lowestAirport.name}
+                                  {country.airports.lowestAirport.iata && ` (${country.airports.lowestAirport.iata})`}
+                                </Typography>
+                              </Box>
+                            </Box>
+                          )}
+                        </Stack>
+                      </Paper>
+                    )}
+
                     {/* Major Airports List */}
                     {country.airports.majorAirports &&
                       country.airports.majorAirports.length > 0 && (
@@ -3064,7 +3187,7 @@ export default function CountryDetailPage() {
                                   xs: "repeat(1, minmax(0, 1fr))",
                                   sm: "repeat(2, minmax(0, 1fr))",
                                   md: "repeat(2, minmax(0, 1fr))",
-                                  lg: "repeat(auto-fill, minmax(290px, 1fr))",
+                                  lg: "repeat(auto-fill, minmax(310px, 1fr))",
                                 },
                                 gap: 1.25,
                                 minWidth: 0,
@@ -3075,87 +3198,169 @@ export default function CountryDetailPage() {
                                   key={`${airport.name}-${idx}`}
                                   variant="outlined"
                                   sx={{
-                                    p: 1.25,
+                                    p: 1.5,
                                     backgroundColor: "rgba(15, 23, 42, 0.6)",
                                     borderColor: "rgba(255, 255, 255, 0.08)",
                                     borderRadius: 2,
                                     display: "flex",
-                                    alignItems: "center",
+                                    flexDirection: "column",
                                     justifyContent: "space-between",
-                                    gap: 1.25,
+                                    gap: 1,
                                     minWidth: 0,
                                     overflow: "hidden",
                                   }}
                                 >
                                   <Box
                                     sx={{
+                                      display: "flex",
+                                      alignItems: "flex-start",
+                                      justifyContent: "space-between",
+                                      gap: 1,
                                       minWidth: 0,
-                                      flexGrow: 1,
-                                      overflow: "hidden",
                                     }}
                                   >
-                                    <Typography
-                                      variant="body2"
+                                    <Box
                                       sx={{
-                                        fontWeight: 600,
+                                        minWidth: 0,
+                                        flexGrow: 1,
                                         overflow: "hidden",
-                                        textOverflow: "ellipsis",
-                                        whiteSpace: "nowrap",
                                       }}
-                                      title={airport.name}
                                     >
-                                      {airport.name}
-                                    </Typography>
-                                    {airport.municipality && (
                                       <Typography
-                                        variant="caption"
-                                        color="text.secondary"
+                                        variant="body2"
                                         sx={{
-                                          display: "block",
+                                          fontWeight: 600,
                                           overflow: "hidden",
                                           textOverflow: "ellipsis",
                                           whiteSpace: "nowrap",
                                         }}
-                                        title={airport.municipality}
+                                        title={airport.name}
                                       >
-                                        📍 {airport.municipality}
+                                        {airport.name}
                                       </Typography>
-                                    )}
+                                      {airport.municipality && (
+                                        <Typography
+                                          variant="caption"
+                                          color="text.secondary"
+                                          sx={{
+                                            display: "block",
+                                            overflow: "hidden",
+                                            textOverflow: "ellipsis",
+                                            whiteSpace: "nowrap",
+                                          }}
+                                          title={airport.municipality}
+                                        >
+                                          📍 {airport.municipality}
+                                        </Typography>
+                                      )}
+                                    </Box>
+                                    {airport.iata ? (
+                                      <Chip
+                                        label={airport.iata}
+                                        size="small"
+                                        sx={{
+                                          flexShrink: 0,
+                                          fontWeight: 700,
+                                          fontSize: "0.75rem",
+                                          backgroundColor:
+                                            airport.type === "large_airport"
+                                              ? "rgba(99, 102, 241, 0.25)"
+                                              : "rgba(148, 163, 184, 0.15)",
+                                          color:
+                                            airport.type === "large_airport"
+                                              ? "primary.light"
+                                              : "text.secondary",
+                                          border: "1px solid",
+                                          borderColor:
+                                            airport.type === "large_airport"
+                                              ? "rgba(99, 102, 241, 0.4)"
+                                              : "rgba(255, 255, 255, 0.1)",
+                                        }}
+                                      />
+                                    ) : airport.icao ? (
+                                      <Chip
+                                        label={airport.icao}
+                                        size="small"
+                                        variant="outlined"
+                                        sx={{
+                                          flexShrink: 0,
+                                          fontSize: "0.7rem",
+                                        }}
+                                      />
+                                    ) : null}
                                   </Box>
-                                  {airport.iata ? (
-                                    <Chip
-                                      label={airport.iata}
-                                      size="small"
-                                      sx={{
-                                        flexShrink: 0,
-                                        fontWeight: 700,
-                                        fontSize: "0.75rem",
-                                        backgroundColor:
-                                          airport.type === "large_airport"
-                                            ? "rgba(99, 102, 241, 0.25)"
-                                            : "rgba(148, 163, 184, 0.15)",
-                                        color:
-                                          airport.type === "large_airport"
-                                            ? "primary.light"
-                                            : "text.secondary",
-                                        border: "1px solid",
-                                        borderColor:
-                                          airport.type === "large_airport"
-                                            ? "rgba(99, 102, 241, 0.4)"
-                                            : "rgba(255, 255, 255, 0.1)",
-                                      }}
-                                    />
-                                  ) : airport.icao ? (
-                                    <Chip
-                                      label={airport.icao}
-                                      size="small"
-                                      variant="outlined"
-                                      sx={{
-                                        flexShrink: 0,
-                                        fontSize: "0.7rem",
-                                      }}
-                                    />
-                                  ) : null}
+
+                                  {/* Airport Details Bar: Elevation & Links */}
+                                  <Box
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "center",
+                                      justifyContent: "space-between",
+                                      pt: 0.5,
+                                      borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                                      fontSize: "0.75rem",
+                                    }}
+                                  >
+                                    <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
+                                      {airport.elevationFt !== undefined && (
+                                        <Typography
+                                          variant="caption"
+                                          sx={{
+                                            color: "text.secondary",
+                                            display: "flex",
+                                            alignItems: "center",
+                                            gap: 0.25,
+                                          }}
+                                        >
+                                          <TerrainIcon sx={{ fontSize: 13, color: "text.secondary" }} />
+                                          {airport.elevationFt.toLocaleString()} ft ({Math.round(airport.elevationFt * 0.3048).toLocaleString()} m)
+                                        </Typography>
+                                      )}
+                                    </Box>
+
+                                    <Stack direction="row" spacing={1} alignItems="center">
+                                      {airport.wikipedia && (
+                                        <Typography
+                                          component="a"
+                                          href={airport.wikipedia}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          variant="caption"
+                                          sx={{
+                                            color: "primary.light",
+                                            textDecoration: "none",
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            gap: 0.25,
+                                            "&:hover": { textDecoration: "underline" },
+                                          }}
+                                        >
+                                          Wikipedia
+                                          <OpenInNewIcon sx={{ fontSize: 11 }} />
+                                        </Typography>
+                                      )}
+                                      {airport.website && (
+                                        <Typography
+                                          component="a"
+                                          href={airport.website}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                          variant="caption"
+                                          sx={{
+                                            color: "text.secondary",
+                                            textDecoration: "none",
+                                            display: "inline-flex",
+                                            alignItems: "center",
+                                            gap: 0.25,
+                                            "&:hover": { color: "primary.light", textDecoration: "underline" },
+                                          }}
+                                        >
+                                          Website
+                                          <OpenInNewIcon sx={{ fontSize: 11 }} />
+                                        </Typography>
+                                      )}
+                                    </Stack>
+                                  </Box>
                                 </Paper>
                               ))}
                             </Box>
