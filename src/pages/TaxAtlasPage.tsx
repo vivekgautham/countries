@@ -50,6 +50,7 @@ import {
   matchesTaxFilter,
   TAX_FILTER_OPTIONS,
 } from "../utils/taxUtils";
+import { useDocumentTitle } from "../utils/useDocumentTitle";
 
 const REGION_OPTIONS = [
   "All",
@@ -61,6 +62,22 @@ const REGION_OPTIONS = [
 ];
 
 export default function TaxAtlasPage() {
+  useDocumentTitle({
+    title: "Global Tax Atlas – Zero Tax Countries, Territorial & Corporate Tax Rates",
+    description:
+      "Interactive world tax atlas: discover 0% income tax countries, territorial tax regimes, corporate tax rates, capital gains, and nomad tax-friendly jurisdictions.",
+    keywords: [
+      "zero tax countries",
+      "no income tax",
+      "territorial tax",
+      "corporate tax rates",
+      "tax havens",
+      "expat tax guide",
+      "digital nomad tax",
+    ],
+    canonicalPath: "/tax-atlas",
+  });
+
   const [searchParams, setSearchParams] = useSearchParams();
   const { data: countries = [], isLoading, isError } = useCountriesData();
 

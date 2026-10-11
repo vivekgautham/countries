@@ -42,6 +42,7 @@ import {
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
+import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatGdp,
   formatGdpFull,
@@ -101,6 +102,18 @@ export default function CountryComparePage() {
       )
       .filter((c): c is UnifiedCountry => Boolean(c));
   }, [selectedCodes, allCountries]);
+
+  useDocumentTitle({
+    title:
+      selectedCountries.length > 0
+        ? `Compare ${selectedCountries.map((c) => c.name).join(" vs ")} – Economy, Taxes & Demographics`
+        : "Compare Countries Side-by-Side",
+    description:
+      selectedCountries.length > 0
+        ? `Side-by-side comparison of ${selectedCountries.map((c) => c.name).join(", ")}: GDP, taxes, airports, population, cost, and rankings.`
+        : "Compare up to 4 countries side-by-side across economy, taxes, population, and infrastructure.",
+    canonicalPath: `/compare${selectedCodes.length > 0 ? `?c=${selectedCodes.join(",")}` : ""}`,
+  });
 
   // Update URL search params
   const updateSelectedCodes = (newCodes: string[]) => {

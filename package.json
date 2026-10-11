@@ -1,12 +1,13 @@
 {
   "name": "countries",
   "private": true,
-  "version": "0.0.66",
+  "version": "0.0.67",
   "homepage": "https://vivekgautham.github.io/countries",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "node scripts/generate-sitemap.js && tsc && vite build",
+    "generate:sitemap": "node scripts/generate-sitemap.js",
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,html}'",

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vivekgautham.github.io/countries/sitemap.xml

@@ -54,6 +54,7 @@ import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { UnifiedCountry } from "../types/country";
 import { formatNumber } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatFdiInflows,
   formatGdp,
@@ -407,6 +408,19 @@ export default function CountryRankingsPage() {
       RANKING_METRICS[0]
     );
   }, [activeMetricId, categoryMetrics]);
+
+  useDocumentTitle({
+    title: `${currentMetric.label} Rankings – Global Country Leaders`,
+    description: `Global ranking of countries by ${currentMetric.label.toLowerCase()} (${currentMetric.unit}). ${currentMetric.description}`,
+    keywords: [
+      "country rankings",
+      currentMetric.label.toLowerCase(),
+      "world leaders",
+      "GDP per capita",
+      "fastest growing economies",
+    ],
+    canonicalPath: `/rankings?category=${activeCategory}&metric=${currentMetric.id}`,
+  });
 
   // Filters
   const [selectedRegion, setSelectedRegion] = useState<string>("All");

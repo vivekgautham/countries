@@ -78,6 +78,7 @@ import {
 } from "../utils/gdpUtils";
 import { SectorPieChart } from "../components/economy/SectorPieChart";
 import { LargestCitiesSection } from "../components/cities/LargestCitiesSection";
+import { useDocumentTitle } from "../utils/useDocumentTitle";
 
 export default function CountryDetailPage() {
   const { countryCode = "" } = useParams<{ countryCode: string }>();
@@ -116,6 +117,29 @@ export default function CountryDetailPage() {
       ) || null
     );
   }, [countries, countryCode]);
+
+  useDocumentTitle({
+    title: country
+      ? `${country.name} – Economy, Taxes, Airports & Overview`
+      : "Country Details",
+    description: country
+      ? `Explore ${country.name} (${country.code}): Capital ${country.capital || "N/A"}, population ${country.population.toLocaleString()}, corporate tax ${country.tax?.corporateTaxRate !== undefined ? `${country.tax.corporateTaxRate}%` : "data"}, GDP, airports, and major cities.`
+      : undefined,
+    keywords: country
+      ? [
+          country.name,
+          country.officialName || "",
+          country.code,
+          country.capital || "",
+          country.region,
+          "taxes",
+          "airports",
+          "economy",
+          "GDP",
+        ].filter(Boolean)
+      : undefined,
+    canonicalPath: `/country/${countryCode.toLowerCase()}`,
+  });
 
   const filteredMajorAirports = useMemo(() => {
     if (!country?.airports?.majorAirports) return [];

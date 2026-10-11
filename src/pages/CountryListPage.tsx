@@ -42,6 +42,7 @@ import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { parseNaturalLanguageQuery } from "../utils/askAtlasEngine";
 import NomadAdvisorModal from "../components/ai/NomadAdvisorModal";
 import AskAtlasBanner from "../components/ai/AskAtlasBanner";
+import { useDocumentTitle } from "../utils/useDocumentTitle";
 
 const REGIONS = [
   "All",
@@ -60,6 +61,23 @@ const LOAD_MORE_STEP = 36;
 export default function CountryListPage() {
   const { data: countries = [], isLoading, isError } = useCountriesData();
   const navigate = useNavigate();
+
+  useDocumentTitle({
+    title: "World Countries Atlas – Economy, Taxes, Airports & Demographics",
+    description:
+      "Explore 240+ countries and territories: corporate & income tax rates, GDP & economic indicators, major airports, largest cities, and demographics.",
+    keywords: [
+      "countries",
+      "world atlas",
+      "country data",
+      "corporate tax",
+      "GDP rankings",
+      "airports",
+      "cities",
+      "nomad guide",
+    ],
+    canonicalPath: "/",
+  });
 
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
