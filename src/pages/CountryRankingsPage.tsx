@@ -5,6 +5,8 @@ import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import FlightIcon from "@mui/icons-material/Flight";
+import GroupsIcon from "@mui/icons-material/Groups";
+import LocationCityIcon from "@mui/icons-material/LocationCity";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PublicIcon from "@mui/icons-material/Public";
 import SearchIcon from "@mui/icons-material/Search";
@@ -52,7 +54,7 @@ import {
 import { useCountriesData } from "../api/countriesApi";
 import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { UnifiedCountry } from "../types/country";
-import { formatNumber } from "../utils/comparisonUtils";
+import { calculateDensity, formatNumber } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
@@ -68,7 +70,7 @@ import {
 
 export interface RankingMetricConfig {
   id: string;
-  category: "economy" | "growth" | "digital" | "aviation";
+  category: "economy" | "demographics" | "growth" | "digital" | "aviation";
   label: string;
   shortLabel: string;
   unit: string;
@@ -90,6 +92,15 @@ export const RANKING_CATEGORIES = [
     emoji: "🥇",
     description:
       "Global leaders ranked by nominal output, purchasing power parity (PPP), and living standards.",
+  },
+  {
+    id: "demographics",
+    label: "Demographics & Population",
+    shortLabel: "Demographics",
+    icon: <GroupsIcon sx={{ fontSize: 18 }} />,
+    emoji: "👥",
+    description:
+      "Global leaders ranked by resident population size, population density, and demographic concentration.",
   },
   {
     id: "growth",
@@ -207,7 +218,59 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
       c.population ? `Pop: ${formatNumber(c.population)}` : "—",
   },
 
-  // 2. Growth
+  // 2. Demographics & Population
+  {
+    id: "population",
+    category: "demographics",
+    label: "Total Population",
+    shortLabel: "Population (% of World)",
+    unit: "people",
+    description:
+      "Total resident human population based on latest censuses, national estimates, and United Nations / World Bank demographic figures.",
+    source: "RestCountries / UN / World Bank",
+    sortDirection: "desc",
+    icon: <GroupsIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => (c.population > 0 ? c.population : undefined),
+    formatValue: (val) => formatNumber(val),
+    getSecondaryValue: (c, globalSum) => {
+      const pop = c.population;
+      const density = calculateDensity(c.population, c.area);
+      const densityStr =
+        density !== null ? `${formatNumber(density)} / km²` : "";
+      if (typeof pop === "number" && globalSum && globalSum > 0) {
+        const share = (pop / globalSum) * 100;
+        const shareStr = `${share >= 1 ? share.toFixed(1) : share.toFixed(2)}% of World Pop`;
+        return densityStr ? `${shareStr} • ${densityStr}` : shareStr;
+      }
+      return densityStr || (c.area ? `${formatNumber(c.area)} km²` : "—");
+    },
+  },
+  {
+    id: "population_density",
+    category: "demographics",
+    label: "Population Density (people / km²)",
+    shortLabel: "Population Density",
+    unit: "people / km²",
+    description:
+      "Number of human inhabitants per square kilometer of sovereign land area, highlighting demographic concentration and urbanization.",
+    source: "RestCountries / World Bank",
+    sortDirection: "desc",
+    icon: <LocationCityIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => calculateDensity(c.population, c.area),
+    formatValue: (val) => `${formatNumber(val)} / km²`,
+    getSecondaryValue: (c) => {
+      const sqMiles = (c.area || 0) * 0.386102;
+      const densitySqMi =
+        sqMiles > 0 ? Math.round(c.population / sqMiles) : null;
+      const imperialStr = densitySqMi
+        ? `${formatNumber(densitySqMi)} / sq mi`
+        : "";
+      const areaStr = c.area ? `Area: ${formatNumber(c.area)} km²` : "";
+      return [imperialStr, areaStr].filter(Boolean).join(" • ") || "—";
+    },
+  },
+
+  // 3. Growth
   {
     id: "gdp_growth",
     category: "growth",
@@ -354,13 +417,13 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     label: "Highest Airport Elevation",
     shortLabel: "Highest Elevation",
     unit: "ft",
-    description:
-      "Highest elevation airfield or aerodrome in the country.",
+    description: "Highest elevation airfield or aerodrome in the country.",
     source: "OurAirports",
     sortDirection: "desc",
     icon: <TerrainIcon sx={{ fontSize: 18 }} />,
     getValue: (c) => c.airports?.highestAirport?.elevationFt,
-    formatValue: (val) => `${formatNumber(val)} ft (${Math.round(val * 0.3048).toLocaleString()} m)`,
+    formatValue: (val) =>
+      `${formatNumber(val)} ft (${Math.round(val * 0.3048).toLocaleString()} m)`,
     getSecondaryValue: (c) =>
       c.airports?.highestAirport
         ? `${c.airports.highestAirport.name}${c.airports.highestAirport.iata ? ` (${c.airports.highestAirport.iata})` : ""}`
@@ -417,6 +480,8 @@ export default function CountryRankingsPage() {
       currentMetric.label.toLowerCase(),
       "world leaders",
       "GDP per capita",
+      "population rankings",
+      "population density",
       "fastest growing economies",
     ],
     canonicalPath: `/rankings?category=${activeCategory}&metric=${currentMetric.id}`,
@@ -582,7 +647,26 @@ export default function CountryRankingsPage() {
       };
     }
 
-    // 3. Percentage metrics where value is natively 0-100%
+    // 3. Population: % Share of Total Global Population
+    if (currentMetric.id === "population" && globalSum > 0) {
+      const share = (val / globalSum) * 100;
+      const formattedShare =
+        share >= 10
+          ? `${share.toFixed(1)}%`
+          : share >= 1
+            ? `${share.toFixed(1)}%`
+            : share >= 0.1
+              ? `${share.toFixed(2)}%`
+              : `<0.1%`;
+
+      return {
+        barPercent: Math.max(1.5, Math.min(100, share)),
+        label: `${formattedShare} of World Pop`,
+        tooltip: `${share.toFixed(2)}% share of World Population (${formatNumber(globalSum)})`,
+      };
+    }
+
+    // 4. Percentage metrics where value is natively 0-100%
     if (["internet_users", "literacy_rate"].includes(currentMetric.id)) {
       return {
         barPercent: Math.max(2, Math.min(100, val)),
@@ -855,8 +939,9 @@ export default function CountryRankingsPage() {
             lineHeight: 1.5,
           }}
         >
-          Discover worldwide economic supremacy, fastest growing nations, clean
-          energy champions, digital penetration, and premier aviation hubs.
+          Discover worldwide economic supremacy, demographics and population
+          density, fastest growing nations, digital penetration, and premier
+          aviation hubs.
         </Typography>
       </Box>
 
@@ -1055,6 +1140,20 @@ export default function CountryRankingsPage() {
                     backgroundColor: "rgba(14, 165, 233, 0.15)",
                     color: "#38bdf8",
                     border: "1px solid rgba(14, 165, 233, 0.3)",
+                  }}
+                />
+              )}
+              {currentMetric.id === "population" && globalSum > 0 && (
+                <Chip
+                  label={`Total World Population: ${formatNumber(globalSum)}`}
+                  size="small"
+                  sx={{
+                    height: 22,
+                    fontSize: "0.72rem",
+                    fontWeight: 700,
+                    backgroundColor: "rgba(16, 185, 129, 0.15)",
+                    color: "#6ee7b7",
+                    border: "1px solid rgba(16, 185, 129, 0.3)",
                   }}
                 />
               )}
@@ -1593,7 +1692,9 @@ export default function CountryRankingsPage() {
               <TableCell sx={{ width: { xs: 200, sm: 280 } }}>
                 {currentMetric.shortLabel}
               </TableCell>
-              <TableCell sx={{ width: 140 }}>Population</TableCell>
+              <TableCell sx={{ width: 140 }}>
+                {currentMetric.id === "population" ? "Land Area" : "Population"}
+              </TableCell>
               <TableCell sx={{ width: 160 }}>Secondary Context</TableCell>
               <TableCell align="right" sx={{ width: 110 }}>
                 Actions
@@ -1725,7 +1826,8 @@ export default function CountryRankingsPage() {
                                 fontSize: "0.72rem",
                                 fontWeight:
                                   currentMetric.id === "gdp_nominal" ||
-                                  currentMetric.id === "gdp_ppp"
+                                  currentMetric.id === "gdp_ppp" ||
+                                  currentMetric.id === "population"
                                     ? 700
                                     : 500,
                                 color:
@@ -1733,7 +1835,9 @@ export default function CountryRankingsPage() {
                                     ? "#818cf8"
                                     : currentMetric.id === "gdp_ppp"
                                       ? "#38bdf8"
-                                      : "text.secondary",
+                                      : currentMetric.id === "population"
+                                        ? "#34d399"
+                                        : "text.secondary",
                                 cursor: "help",
                               }}
                             >
@@ -1765,12 +1869,16 @@ export default function CountryRankingsPage() {
                       </Box>
                     </TableCell>
 
-                    {/* Population Column */}
+                    {/* Population / Land Area Column */}
                     <TableCell>
                       <Typography variant="body2" sx={{ fontSize: "0.85rem" }}>
-                        {item.country.population
-                          ? formatNumber(item.country.population)
-                          : "—"}
+                        {currentMetric.id === "population"
+                          ? item.country.area
+                            ? `${formatNumber(item.country.area)} km²`
+                            : "—"
+                          : item.country.population
+                            ? formatNumber(item.country.population)
+                            : "—"}
                       </Typography>
                     </TableCell>
 
