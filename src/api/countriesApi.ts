@@ -17,6 +17,7 @@ import {
 import { getTaxInfo } from "../utils/taxUtils";
 import { getEconomicBlocInfo } from "../utils/blocUtils";
 import { getGdpInfo } from "../utils/gdpUtils";
+import { getCoastline } from "../data/coastlineData";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 const citiesData = citiesDataRaw as Record<string, CityInfo[]>;
@@ -88,7 +89,12 @@ export function transformCountryDetails(
       timezones,
       borders: item.borders || [],
       unMember: item.unMember ?? false,
-      landlocked: item.landlocked ?? false,
+      landlocked:
+        item.landlocked !== undefined
+          ? item.landlocked
+          : (getCoastline(code) ?? 0) === 0,
+      coastline:
+        item.coastline !== undefined ? item.coastline : getCoastline(code),
       coatOfArms: item.coatOfArms?.png || item.coatOfArms?.svg,
       airports: airportsData[code],
       cities: citiesData[code] || [],
@@ -113,10 +119,16 @@ function getFallbackCountries(): UnifiedCountry[] {
     const code = c.code.toUpperCase();
     const gdp = getGdpInfo(code, c.population);
     const population = gdp?.population || c.population || 0;
+    const coastline =
+      c.coastline !== undefined ? c.coastline : getCoastline(code);
+    const landlocked =
+      c.landlocked !== undefined ? c.landlocked : (coastline ?? 0) === 0;
 
     return {
       ...c,
       population,
+      landlocked,
+      coastline,
       airports: airportsData[code],
       cities: citiesData[code] || [],
       npt: getNptInfo(c.code),

@@ -29,6 +29,7 @@ export interface CountryDetail {
   borders?: string[];
   unMember?: boolean;
   landlocked?: boolean;
+  coastline?: number;
   coatOfArms?: {
     png?: string;
     svg?: string;
@@ -279,6 +280,7 @@ export interface UnifiedCountry {
   borders?: string[];
   unMember?: boolean;
   landlocked?: boolean;
+  coastline?: number;
   coatOfArms?: string;
   airports?: AirportStats;
   cities?: CityInfo[];

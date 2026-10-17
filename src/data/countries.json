@@ -10,7 +10,7 @@
     "population": 107566,
     "area": 180,
     "currencies": [
-      "Aruban florin (\u0192)"
+      "Aruban florin (ƒ)"
     ],
     "languages": [
       "Dutch",
@@ -21,7 +21,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 68.5,
+    "landlocked": false
   },
   {
     "code": "AF",
@@ -34,7 +36,7 @@
     "population": 43844000,
     "area": 652230,
     "currencies": [
-      "Afghan afghani (\u060b)"
+      "Afghan afghani (؋)"
     ],
     "languages": [
       "Dari",
@@ -53,7 +55,9 @@
       "TJK",
       "CHN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "AO",
@@ -81,7 +85,9 @@
       "ZMB",
       "NAM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1600,
+    "landlocked": false
   },
   {
     "code": "AI",
@@ -104,20 +110,22 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 61,
+    "landlocked": false
   },
   {
     "code": "AX",
     "code3": "ALA",
-    "name": "\u00c5land Islands",
-    "officialName": "\u00c5land Islands",
+    "name": "Åland Islands",
+    "officialName": "Åland Islands",
     "capital": "Mariehamn",
     "region": "Europe",
     "subregion": "Northern Europe",
     "population": 30654,
     "area": 1580,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Swedish"
@@ -127,7 +135,9 @@
       "UTC+02:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1198,
+    "landlocked": false
   },
   {
     "code": "AL",
@@ -155,7 +165,9 @@
       "MKD",
       "UNK"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 362,
+    "landlocked": false
   },
   {
     "code": "AD",
@@ -168,7 +180,7 @@
     "population": 88306,
     "area": 468,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Catalan"
@@ -181,7 +193,9 @@
       "FRA",
       "ESP"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "AE",
@@ -194,7 +208,7 @@
     "population": 10678556,
     "area": 83600,
     "currencies": [
-      "United Arab Emirates dirham (\u062f.\u0625)"
+      "United Arab Emirates dirham (د.إ)"
     ],
     "languages": [
       "Arabic"
@@ -207,7 +221,9 @@
       "OMN",
       "SAU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1318,
+    "landlocked": false
   },
   {
     "code": "AR",
@@ -223,7 +239,7 @@
       "Argentine peso ($)"
     ],
     "languages": [
-      "Guaran\u00ed",
+      "Guaraní",
       "Spanish"
     ],
     "phoneCode": "+54",
@@ -237,7 +253,9 @@
       "PRY",
       "URY"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4989,
+    "landlocked": false
   },
   {
     "code": "AM",
@@ -250,7 +268,7 @@
     "population": 3081100,
     "area": 29743,
     "currencies": [
-      "Armenian dram (\u058f)"
+      "Armenian dram (֏)"
     ],
     "languages": [
       "Armenian"
@@ -265,7 +283,9 @@
       "IRN",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "AS",
@@ -289,7 +309,9 @@
       "UTC-11:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 116,
+    "landlocked": false
   },
   {
     "code": "AQ",
@@ -315,20 +337,22 @@
       "UTC+13:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 17968,
+    "landlocked": false
   },
   {
     "code": "TF",
     "code3": "ATF",
     "name": "French Southern and Antarctic Lands",
     "officialName": "Territory of the French Southern and Antarctic Lands",
-    "capital": "Port-aux-Fran\u00e7ais",
+    "capital": "Port-aux-Français",
     "region": "Antarctic",
     "subregion": "",
     "population": null,
     "area": 7747,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -338,7 +362,9 @@
       "UTC+05:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 2948.4,
+    "landlocked": false
   },
   {
     "code": "AG",
@@ -361,7 +387,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 153,
+    "landlocked": false
   },
   {
     "code": "AU",
@@ -389,7 +417,9 @@
       "UTC+11:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 25760,
+    "landlocked": false
   },
   {
     "code": "AT",
@@ -402,7 +432,7 @@
     "population": 9200931,
     "area": 83871,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Austro-Bavarian German"
@@ -421,7 +451,9 @@
       "SVN",
       "CHE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "AZ",
@@ -434,7 +466,7 @@
     "population": 10241722,
     "area": 86600,
     "currencies": [
-      "Azerbaijani manat (\u20bc)"
+      "Azerbaijani manat (₼)"
     ],
     "languages": [
       "Azerbaijani",
@@ -451,7 +483,9 @@
       "RUS",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BI",
@@ -479,7 +513,9 @@
       "RWA",
       "TZA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BE",
@@ -492,7 +528,7 @@
     "population": 11825551,
     "area": 30528,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "German",
@@ -509,7 +545,9 @@
       "LUX",
       "NLD"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 66.5,
+    "landlocked": false
   },
   {
     "code": "BJ",
@@ -537,7 +575,9 @@
       "NGA",
       "TGO"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 121,
+    "landlocked": false
   },
   {
     "code": "BF",
@@ -567,7 +607,9 @@
       "NER",
       "TGO"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BD",
@@ -580,7 +622,7 @@
     "population": 169828911,
     "area": 147570,
     "currencies": [
-      "Bangladeshi taka (\u09f3)"
+      "Bangladeshi taka (৳)"
     ],
     "languages": [
       "Bengali"
@@ -593,7 +635,9 @@
       "MMR",
       "IND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 580,
+    "landlocked": false
   },
   {
     "code": "BG",
@@ -606,7 +650,7 @@
     "population": 6437360,
     "area": 110879,
     "currencies": [
-      "Bulgarian lev (\u043b\u0432)"
+      "Bulgarian lev (лв)"
     ],
     "languages": [
       "Bulgarian"
@@ -622,7 +666,9 @@
       "SRB",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 354,
+    "landlocked": false
   },
   {
     "code": "BH",
@@ -635,7 +681,7 @@
     "population": 1594654,
     "area": 765,
     "currencies": [
-      "Bahraini dinar (.\u062f.\u0628)"
+      "Bahraini dinar (.د.ب)"
     ],
     "languages": [
       "Arabic"
@@ -645,7 +691,9 @@
       "UTC+03:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 161,
+    "landlocked": false
   },
   {
     "code": "BS",
@@ -669,7 +717,9 @@
       "UTC-05:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3542,
+    "landlocked": false
   },
   {
     "code": "BA",
@@ -698,20 +748,22 @@
       "MNE",
       "SRB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 20,
+    "landlocked": false
   },
   {
     "code": "BL",
     "code3": "BLM",
-    "name": "Saint Barth\u00e9lemy",
-    "officialName": "Collectivity of Saint Barth\u00e9lemy",
+    "name": "Saint Barthélemy",
+    "officialName": "Collectivity of Saint Barthélemy",
     "capital": "Gustavia",
     "region": "Americas",
     "subregion": "Caribbean",
     "population": 10562,
     "area": 21,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -721,7 +773,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 32,
+    "landlocked": false
   },
   {
     "code": "SH",
@@ -734,8 +788,8 @@
     "population": 5651,
     "area": 394,
     "currencies": [
-      "Pound sterling (\u00a3)",
-      "Saint Helena pound (\u00a3)"
+      "Pound sterling (£)",
+      "Saint Helena pound (£)"
     ],
     "languages": [
       "English"
@@ -745,7 +799,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 94,
+    "landlocked": false
   },
   {
     "code": "BY",
@@ -775,7 +831,9 @@
       "RUS",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BZ",
@@ -803,7 +861,9 @@
       "GTM",
       "MEX"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 386,
+    "landlocked": false
   },
   {
     "code": "BM",
@@ -826,7 +886,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 103,
+    "landlocked": false
   },
   {
     "code": "BO",
@@ -843,7 +905,7 @@
     ],
     "languages": [
       "Aymara",
-      "Guaran\u00ed",
+      "Guaraní",
       "Quechua",
       "Spanish"
     ],
@@ -858,7 +920,9 @@
       "PRY",
       "PER"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BQ",
@@ -883,14 +947,16 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 140,
+    "landlocked": false
   },
   {
     "code": "BR",
     "code3": "BRA",
     "name": "Brazil",
     "officialName": "Federative Republic of Brazil",
-    "capital": "Bras\u00edlia",
+    "capital": "Brasília",
     "region": "Americas",
     "subregion": "South America",
     "population": 213421037,
@@ -920,7 +986,9 @@
       "URY",
       "VEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 7491,
+    "landlocked": false
   },
   {
     "code": "BB",
@@ -943,7 +1011,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 97,
+    "landlocked": false
   },
   {
     "code": "BN",
@@ -969,7 +1039,9 @@
     "borders": [
       "MYS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 161,
+    "landlocked": false
   },
   {
     "code": "BT",
@@ -983,7 +1055,7 @@
     "area": 38394,
     "currencies": [
       "Bhutanese ngultrum (Nu.)",
-      "Indian rupee (\u20b9)"
+      "Indian rupee (₹)"
     ],
     "languages": [
       "Dzongkha"
@@ -996,7 +1068,9 @@
       "CHN",
       "IND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "BV",
@@ -1017,7 +1091,9 @@
       "UTC+01:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 29.6,
+    "landlocked": false
   },
   {
     "code": "BW",
@@ -1046,7 +1122,9 @@
       "ZMB",
       "ZWE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "CF",
@@ -1077,7 +1155,9 @@
       "SSD",
       "SDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "CA",
@@ -1108,7 +1188,9 @@
     "borders": [
       "USA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 202080,
+    "landlocked": false
   },
   {
     "code": "CC",
@@ -1131,7 +1213,9 @@
       "UTC+06:30"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 26,
+    "landlocked": false
   },
   {
     "code": "CH",
@@ -1163,7 +1247,9 @@
       "LIE",
       "DEU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "CL",
@@ -1191,7 +1277,9 @@
       "BOL",
       "PER"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 6435,
+    "landlocked": false
   },
   {
     "code": "CN",
@@ -1204,7 +1292,7 @@
     "population": 1408280000,
     "area": 9706961,
     "currencies": [
-      "Chinese yuan (\u00a5)"
+      "Chinese yuan (¥)"
     ],
     "languages": [
       "Chinese"
@@ -1232,13 +1320,15 @@
       "TJK",
       "VNM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 14500,
+    "landlocked": false
   },
   {
     "code": "CI",
     "code3": "CIV",
     "name": "Ivory Coast",
-    "officialName": "Republic of C\u00f4te d'Ivoire",
+    "officialName": "Republic of Côte d'Ivoire",
     "capital": "Yamoussoukro",
     "region": "Africa",
     "subregion": "Western Africa",
@@ -1261,14 +1351,16 @@
       "LBR",
       "MLI"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 515,
+    "landlocked": false
   },
   {
     "code": "CM",
     "code3": "CMR",
     "name": "Cameroon",
     "officialName": "Republic of Cameroon",
-    "capital": "Yaound\u00e9",
+    "capital": "Yaoundé",
     "region": "Africa",
     "subregion": "Middle Africa",
     "population": 29442327,
@@ -1292,7 +1384,9 @@
       "GAB",
       "NGA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 402,
+    "landlocked": false
   },
   {
     "code": "CD",
@@ -1330,7 +1424,9 @@
       "UGA",
       "ZMB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 37,
+    "landlocked": false
   },
   {
     "code": "CG",
@@ -1361,7 +1457,9 @@
       "COD",
       "GAB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 169,
+    "landlocked": false
   },
   {
     "code": "CK",
@@ -1379,21 +1477,23 @@
     ],
     "languages": [
       "English",
-      "Cook Islands M\u0101ori"
+      "Cook Islands Māori"
     ],
     "phoneCode": "+682",
     "timezones": [
       "UTC-10:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 120,
+    "landlocked": false
   },
   {
     "code": "CO",
     "code3": "COL",
     "name": "Colombia",
     "officialName": "Republic of Colombia",
-    "capital": "Bogot\u00e1",
+    "capital": "Bogotá",
     "region": "Americas",
     "subregion": "South America",
     "population": 53057212,
@@ -1415,7 +1515,9 @@
       "PER",
       "VEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3208,
+    "landlocked": false
   },
   {
     "code": "KM",
@@ -1440,7 +1542,9 @@
       "UTC+03:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 340,
+    "landlocked": false
   },
   {
     "code": "CV",
@@ -1463,20 +1567,22 @@
       "UTC-01:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 965,
+    "landlocked": false
   },
   {
     "code": "CR",
     "code3": "CRI",
     "name": "Costa Rica",
     "officialName": "Republic of Costa Rica",
-    "capital": "San Jos\u00e9",
+    "capital": "San José",
     "region": "Americas",
     "subregion": "Central America",
     "population": 5309625,
     "area": 51100,
     "currencies": [
-      "Costa Rican col\u00f3n (\u20a1)"
+      "Costa Rican colón (₡)"
     ],
     "languages": [
       "Spanish"
@@ -1489,7 +1595,9 @@
       "NIC",
       "PAN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1290,
+    "landlocked": false
   },
   {
     "code": "CU",
@@ -1513,20 +1621,22 @@
       "UTC-05:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3735,
+    "landlocked": false
   },
   {
     "code": "CW",
     "code3": "CUW",
-    "name": "Cura\u00e7ao",
-    "officialName": "Country of Cura\u00e7ao",
+    "name": "Curaçao",
+    "officialName": "Country of Curaçao",
     "capital": "Willemstad",
     "region": "Americas",
     "subregion": "Caribbean",
     "population": 156115,
     "area": 444,
     "currencies": [
-      "Netherlands Antillean guilder (\u0192)"
+      "Netherlands Antillean guilder (ƒ)"
     ],
     "languages": [
       "English",
@@ -1538,7 +1648,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 364,
+    "landlocked": false
   },
   {
     "code": "CX",
@@ -1561,7 +1673,9 @@
       "UTC+07:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 138.9,
+    "landlocked": false
   },
   {
     "code": "KY",
@@ -1584,7 +1698,9 @@
       "UTC-05:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 160,
+    "landlocked": false
   },
   {
     "code": "CY",
@@ -1597,7 +1713,7 @@
     "population": 966400,
     "area": 9251,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Greek",
@@ -1608,7 +1724,9 @@
       "UTC+02:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 648,
+    "landlocked": false
   },
   {
     "code": "CZ",
@@ -1621,7 +1739,7 @@
     "population": 10876875,
     "area": 78865,
     "currencies": [
-      "Czech koruna (K\u010d)"
+      "Czech koruna (Kč)"
     ],
     "languages": [
       "Czech",
@@ -1637,7 +1755,9 @@
       "POL",
       "SVK"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "DE",
@@ -1650,7 +1770,7 @@
     "population": 83517030,
     "area": 357114,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "German"
@@ -1670,7 +1790,9 @@
       "POL",
       "CHE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2389,
+    "landlocked": false
   },
   {
     "code": "DJ",
@@ -1698,7 +1820,9 @@
       "ETH",
       "SOM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 314,
+    "landlocked": false
   },
   {
     "code": "DM",
@@ -1721,7 +1845,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 148,
+    "landlocked": false
   },
   {
     "code": "DK",
@@ -1746,7 +1872,9 @@
     "borders": [
       "DEU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 7314,
+    "landlocked": false
   },
   {
     "code": "DO",
@@ -1771,7 +1899,9 @@
     "borders": [
       "HTI"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1288,
+    "landlocked": false
   },
   {
     "code": "DZ",
@@ -1784,7 +1914,7 @@
     "population": 47400000,
     "area": 2381741,
     "currencies": [
-      "Algerian dinar (\u062f.\u062c)"
+      "Algerian dinar (د.ج)"
     ],
     "languages": [
       "Arabic",
@@ -1804,7 +1934,9 @@
       "MLI",
       "MAR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 998,
+    "landlocked": false
   },
   {
     "code": "EC",
@@ -1831,7 +1963,9 @@
       "COL",
       "PER"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2237,
+    "landlocked": false
   },
   {
     "code": "EG",
@@ -1844,7 +1978,7 @@
     "population": 107271260,
     "area": 1002450,
     "currencies": [
-      "Egyptian pound (\u00a3)"
+      "Egyptian pound (£)"
     ],
     "languages": [
       "Arabic"
@@ -1859,7 +1993,9 @@
       "PSE",
       "SDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2450,
+    "landlocked": false
   },
   {
     "code": "ER",
@@ -1888,20 +2024,22 @@
       "ETH",
       "SDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2234,
+    "landlocked": false
   },
   {
     "code": "EH",
     "code3": "ESH",
     "name": "Western Sahara",
     "officialName": "Sahrawi Arab Democratic Republic",
-    "capital": "El Aai\u00fan",
+    "capital": "El Aaiún",
     "region": "Africa",
     "subregion": "Northern Africa",
     "population": 600904,
     "area": 266000,
     "currencies": [
-      "Algerian dinar (\u062f\u062c)",
+      "Algerian dinar (دج)",
       "Moroccan dirham (DH)",
       "Mauritanian ouguiya (UM)"
     ],
@@ -1919,7 +2057,9 @@
       "MRT",
       "MAR"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1110,
+    "landlocked": false
   },
   {
     "code": "ES",
@@ -1932,7 +2072,7 @@
     "population": 49315949,
     "area": 505992,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Spanish",
@@ -1953,7 +2093,9 @@
       "PRT",
       "MAR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4964,
+    "landlocked": false
   },
   {
     "code": "EE",
@@ -1966,7 +2108,7 @@
     "population": 1369995,
     "area": 45227,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Estonian"
@@ -1979,7 +2121,9 @@
       "LVA",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3794,
+    "landlocked": false
   },
   {
     "code": "ET",
@@ -2014,7 +2158,9 @@
       "SSD",
       "SDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "FI",
@@ -2027,7 +2173,7 @@
     "population": 5645651,
     "area": 338424,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Finnish",
@@ -2042,7 +2188,9 @@
       "SWE",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1250,
+    "landlocked": false
   },
   {
     "code": "FJ",
@@ -2067,7 +2215,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1129,
+    "landlocked": false
   },
   {
     "code": "FK",
@@ -2080,7 +2230,7 @@
     "population": 3662,
     "area": 12173,
     "currencies": [
-      "Falkland Islands pound (\u00a3)"
+      "Falkland Islands pound (£)"
     ],
     "languages": [
       "English"
@@ -2090,7 +2240,9 @@
       "UTC-03:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1288,
+    "landlocked": false
   },
   {
     "code": "FR",
@@ -2103,7 +2255,7 @@
     "population": 68688000,
     "area": 551695,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -2122,21 +2274,23 @@
       "ESP",
       "CHE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4853,
+    "landlocked": false
   },
   {
     "code": "FO",
     "code3": "FRO",
     "name": "Faroe Islands",
     "officialName": "Faroe Islands",
-    "capital": "T\u00f3rshavn",
+    "capital": "Tórshavn",
     "region": "Europe",
     "subregion": "Northern Europe",
     "population": 55146,
     "area": 1393,
     "currencies": [
       "Danish krone (kr)",
-      "Faroese kr\u00f3na (kr)"
+      "Faroese króna (kr)"
     ],
     "languages": [
       "Danish",
@@ -2147,7 +2301,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1117,
+    "landlocked": false
   },
   {
     "code": "FM",
@@ -2169,7 +2325,9 @@
       "UTC+11:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 6112,
+    "landlocked": false
   },
   {
     "code": "GA",
@@ -2196,7 +2354,9 @@
       "COG",
       "GNQ"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 885,
+    "landlocked": false
   },
   {
     "code": "GB",
@@ -2209,7 +2369,7 @@
     "population": 68265209,
     "area": 242900,
     "currencies": [
-      "British pound (\u00a3)"
+      "British pound (£)"
     ],
     "languages": [
       "English"
@@ -2221,7 +2381,9 @@
     "borders": [
       "IRL"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 12429,
+    "landlocked": false
   },
   {
     "code": "GE",
@@ -2234,7 +2396,7 @@
     "population": 3704500,
     "area": 69700,
     "currencies": [
-      "lari (\u20be)"
+      "lari (₾)"
     ],
     "languages": [
       "Georgian"
@@ -2249,7 +2411,9 @@
       "RUS",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 310,
+    "landlocked": false
   },
   {
     "code": "GG",
@@ -2262,20 +2426,22 @@
     "population": 64781,
     "area": 78,
     "currencies": [
-      "British pound (\u00a3)",
-      "Guernsey pound (\u00a3)"
+      "British pound (£)",
+      "Guernsey pound (£)"
     ],
     "languages": [
       "English",
       "French",
-      "Guern\u00e9siais"
+      "Guernésiais"
     ],
     "phoneCode": "+44",
     "timezones": [
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 50,
+    "landlocked": false
   },
   {
     "code": "GH",
@@ -2288,7 +2454,7 @@
     "population": 33742380,
     "area": 238533,
     "currencies": [
-      "Ghanaian cedi (\u20b5)"
+      "Ghanaian cedi (₵)"
     ],
     "languages": [
       "English"
@@ -2302,7 +2468,9 @@
       "CIV",
       "TGO"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 539,
+    "landlocked": false
   },
   {
     "code": "GI",
@@ -2315,7 +2483,7 @@
     "population": 38000,
     "area": 6,
     "currencies": [
-      "Gibraltar pound (\u00a3)"
+      "Gibraltar pound (£)"
     ],
     "languages": [
       "English"
@@ -2327,7 +2495,9 @@
     "borders": [
       "ESP"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 12,
+    "landlocked": false
   },
   {
     "code": "GN",
@@ -2357,7 +2527,9 @@
       "SEN",
       "SLE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 320,
+    "landlocked": false
   },
   {
     "code": "GP",
@@ -2370,7 +2542,7 @@
     "population": 373791,
     "area": 1628,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -2380,7 +2552,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 306,
+    "landlocked": false
   },
   {
     "code": "GM",
@@ -2405,7 +2579,9 @@
     "borders": [
       "SEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 80,
+    "landlocked": false
   },
   {
     "code": "GW",
@@ -2432,7 +2608,9 @@
       "GIN",
       "SEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 350,
+    "landlocked": false
   },
   {
     "code": "GQ",
@@ -2460,7 +2638,9 @@
       "CMR",
       "GAB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 296,
+    "landlocked": false
   },
   {
     "code": "GR",
@@ -2473,7 +2653,7 @@
     "population": 10400720,
     "area": 131990,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Greek"
@@ -2488,7 +2668,9 @@
       "TUR",
       "MKD"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 13676,
+    "landlocked": false
   },
   {
     "code": "GD",
@@ -2511,7 +2693,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 121,
+    "landlocked": false
   },
   {
     "code": "GL",
@@ -2537,7 +2721,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 44087,
+    "landlocked": false
   },
   {
     "code": "GT",
@@ -2565,7 +2751,9 @@
       "HND",
       "MEX"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 400,
+    "landlocked": false
   },
   {
     "code": "GF",
@@ -2578,7 +2766,7 @@
     "population": 292354,
     "area": 83534,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -2591,14 +2779,16 @@
       "BRA",
       "SUR"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 378,
+    "landlocked": false
   },
   {
     "code": "GU",
     "code3": "GUM",
     "name": "Guam",
     "officialName": "Guam",
-    "capital": "Hag\u00e5t\u00f1a",
+    "capital": "Hagåtña",
     "region": "Oceania",
     "subregion": "Micronesia",
     "population": 153836,
@@ -2616,7 +2806,9 @@
       "UTC+10:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 125.5,
+    "landlocked": false
   },
   {
     "code": "GY",
@@ -2643,7 +2835,9 @@
       "SUR",
       "VEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 459,
+    "landlocked": false
   },
   {
     "code": "HK",
@@ -2669,7 +2863,9 @@
     "borders": [
       "CHN"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 733,
+    "landlocked": false
   },
   {
     "code": "HM",
@@ -2689,7 +2885,9 @@
       "UTC+05:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 101.9,
+    "landlocked": false
   },
   {
     "code": "HN",
@@ -2716,7 +2914,9 @@
       "SLV",
       "NIC"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 832,
+    "landlocked": false
   },
   {
     "code": "HR",
@@ -2729,7 +2929,7 @@
     "population": 3866233,
     "area": 56594,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Croatian"
@@ -2745,7 +2945,9 @@
       "SRB",
       "SVN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 5835,
+    "landlocked": false
   },
   {
     "code": "HT",
@@ -2771,7 +2973,9 @@
     "borders": [
       "DOM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1771,
+    "landlocked": false
   },
   {
     "code": "HU",
@@ -2802,7 +3006,9 @@
       "SVN",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "ID",
@@ -2831,7 +3037,9 @@
       "MYS",
       "PNG"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 54716,
+    "landlocked": false
   },
   {
     "code": "IM",
@@ -2844,8 +3052,8 @@
     "population": 84530,
     "area": 572,
     "currencies": [
-      "British pound (\u00a3)",
-      "Manx pound (\u00a3)"
+      "British pound (£)",
+      "Manx pound (£)"
     ],
     "languages": [
       "English",
@@ -2856,7 +3064,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 160,
+    "landlocked": false
   },
   {
     "code": "IN",
@@ -2869,7 +3079,7 @@
     "population": 1417492000,
     "area": 3287590,
     "currencies": [
-      "Indian rupee (\u20b9)"
+      "Indian rupee (₹)"
     ],
     "languages": [
       "Hindi",
@@ -2907,7 +3117,9 @@
       "NPL",
       "PAK"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 11098,
+    "landlocked": false
   },
   {
     "code": "IO",
@@ -2930,7 +3142,9 @@
       "UTC+06:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 698,
+    "landlocked": false
   },
   {
     "code": "IE",
@@ -2943,7 +3157,7 @@
     "population": 5458600,
     "area": 70273,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "English",
@@ -2956,7 +3170,9 @@
     "borders": [
       "GBR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1448,
+    "landlocked": false
   },
   {
     "code": "IR",
@@ -2969,7 +3185,7 @@
     "population": 85961000,
     "area": 1648195,
     "currencies": [
-      "Iranian rial (\ufdfc)"
+      "Iranian rial (﷼)"
     ],
     "languages": [
       "Persian (Farsi)"
@@ -2987,7 +3203,9 @@
       "TUR",
       "TKM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2440,
+    "landlocked": false
   },
   {
     "code": "IQ",
@@ -3000,7 +3218,7 @@
     "population": 46118793,
     "area": 438317,
     "currencies": [
-      "Iraqi dinar (\u0639.\u062f)"
+      "Iraqi dinar (ع.د)"
     ],
     "languages": [
       "Arabic",
@@ -3019,7 +3237,9 @@
       "SYR",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 58,
+    "landlocked": false
   },
   {
     "code": "IS",
@@ -3032,7 +3252,7 @@
     "population": 391810,
     "area": 103000,
     "currencies": [
-      "Icelandic kr\u00f3na (kr)"
+      "Icelandic króna (kr)"
     ],
     "languages": [
       "Icelandic"
@@ -3042,7 +3262,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4970,
+    "landlocked": false
   },
   {
     "code": "IL",
@@ -3055,7 +3277,7 @@
     "population": 10119400,
     "area": 20770,
     "currencies": [
-      "Israeli new shekel (\u20aa)"
+      "Israeli new shekel (₪)"
     ],
     "languages": [
       "Arabic",
@@ -3072,7 +3294,9 @@
       "PSE",
       "SYR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 273,
+    "landlocked": false
   },
   {
     "code": "IT",
@@ -3085,7 +3309,7 @@
     "population": 58919230,
     "area": 301336,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Italian"
@@ -3102,7 +3326,9 @@
       "CHE",
       "VAT"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 7600,
+    "landlocked": false
   },
   {
     "code": "JM",
@@ -3126,7 +3352,9 @@
       "UTC-05:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1022,
+    "landlocked": false
   },
   {
     "code": "JE",
@@ -3139,20 +3367,22 @@
     "population": 103267,
     "area": 116,
     "currencies": [
-      "British pound (\u00a3)",
-      "Jersey pound (\u00a3)"
+      "British pound (£)",
+      "Jersey pound (£)"
     ],
     "languages": [
       "English",
       "French",
-      "J\u00e8rriais"
+      "Jèrriais"
     ],
     "phoneCode": "+44",
     "timezones": [
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 70,
+    "landlocked": false
   },
   {
     "code": "JO",
@@ -3165,7 +3395,7 @@
     "population": 11734000,
     "area": 89342,
     "currencies": [
-      "Jordanian dinar (\u062f.\u0627)"
+      "Jordanian dinar (د.ا)"
     ],
     "languages": [
       "Arabic"
@@ -3181,7 +3411,9 @@
       "SAU",
       "SYR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 26,
+    "landlocked": false
   },
   {
     "code": "JP",
@@ -3194,7 +3426,7 @@
     "population": 123300000,
     "area": 377930,
     "currencies": [
-      "Japanese yen (\u00a5)"
+      "Japanese yen (¥)"
     ],
     "languages": [
       "Japanese"
@@ -3204,7 +3436,9 @@
       "UTC+09:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 29751,
+    "landlocked": false
   },
   {
     "code": "KZ",
@@ -3217,7 +3451,7 @@
     "population": 20407844,
     "area": 2724900,
     "currencies": [
-      "Kazakhstani tenge (\u20b8)"
+      "Kazakhstani tenge (₸)"
     ],
     "languages": [
       "Kazakh",
@@ -3235,7 +3469,9 @@
       "TKM",
       "UZB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "KE",
@@ -3265,7 +3501,9 @@
       "TZA",
       "UGA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 536,
+    "landlocked": false
   },
   {
     "code": "KG",
@@ -3278,7 +3516,7 @@
     "population": 7281800,
     "area": 199951,
     "currencies": [
-      "Kyrgyzstani som (\u0441)"
+      "Kyrgyzstani som (с)"
     ],
     "languages": [
       "Kyrgyz",
@@ -3294,7 +3532,9 @@
       "TJK",
       "UZB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "KH",
@@ -3307,7 +3547,7 @@
     "population": 17577760,
     "area": 181035,
     "currencies": [
-      "Cambodian riel (\u17db)",
+      "Cambodian riel (៛)",
       "United States dollar ($)"
     ],
     "languages": [
@@ -3322,7 +3562,9 @@
       "THA",
       "VNM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 443,
+    "landlocked": false
   },
   {
     "code": "KI",
@@ -3349,7 +3591,9 @@
       "UTC+14:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1143,
+    "landlocked": false
   },
   {
     "code": "KN",
@@ -3372,7 +3616,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 135,
+    "landlocked": false
   },
   {
     "code": "KR",
@@ -3385,7 +3631,7 @@
     "population": 51159889,
     "area": 100210,
     "currencies": [
-      "South Korean won (\u20a9)"
+      "South Korean won (₩)"
     ],
     "languages": [
       "Korean"
@@ -3397,7 +3643,9 @@
     "borders": [
       "PRK"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2413,
+    "landlocked": false
   },
   {
     "code": "XK",
@@ -3410,7 +3658,7 @@
     "population": 1585566,
     "area": 10908,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Albanian",
@@ -3426,7 +3674,9 @@
       "MNE",
       "SRB"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "KW",
@@ -3439,7 +3689,7 @@
     "population": 4881254,
     "area": 17818,
     "currencies": [
-      "Kuwaiti dinar (\u062f.\u0643)"
+      "Kuwaiti dinar (د.ك)"
     ],
     "languages": [
       "Arabic"
@@ -3452,7 +3702,9 @@
       "IRQ",
       "SAU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 499,
+    "landlocked": false
   },
   {
     "code": "LA",
@@ -3465,7 +3717,7 @@
     "population": 7647000,
     "area": 236800,
     "currencies": [
-      "Lao kip (\u20ad)"
+      "Lao kip (₭)"
     ],
     "languages": [
       "Lao"
@@ -3481,7 +3733,9 @@
       "THA",
       "VNM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "LB",
@@ -3494,7 +3748,7 @@
     "population": 5490000,
     "area": 10452,
     "currencies": [
-      "Lebanese pound (\u0644.\u0644)"
+      "Lebanese pound (ل.ل)"
     ],
     "languages": [
       "Arabic",
@@ -3508,7 +3762,9 @@
       "ISR",
       "SYR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 225,
+    "landlocked": false
   },
   {
     "code": "LR",
@@ -3535,7 +3791,9 @@
       "CIV",
       "SLE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 579,
+    "landlocked": false
   },
   {
     "code": "LY",
@@ -3548,7 +3806,7 @@
     "population": 7459000,
     "area": 1759540,
     "currencies": [
-      "Libyan dinar (\u0644.\u062f)"
+      "Libyan dinar (ل.د)"
     ],
     "languages": [
       "Arabic"
@@ -3565,7 +3823,9 @@
       "SDN",
       "TUN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1770,
+    "landlocked": false
   },
   {
     "code": "LC",
@@ -3588,7 +3848,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 158,
+    "landlocked": false
   },
   {
     "code": "LI",
@@ -3614,7 +3876,9 @@
       "AUT",
       "CHE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "LK",
@@ -3627,7 +3891,7 @@
     "population": 21763170,
     "area": 65610,
     "currencies": [
-      "Sri Lankan rupee (Rs \u0dbb\u0dd4)"
+      "Sri Lankan rupee (Rs රු)"
     ],
     "languages": [
       "Sinhala",
@@ -3641,7 +3905,9 @@
     "borders": [
       "IND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1340,
+    "landlocked": false
   },
   {
     "code": "LS",
@@ -3668,7 +3934,9 @@
     "borders": [
       "ZAF"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "LT",
@@ -3681,7 +3949,7 @@
     "population": 2894548,
     "area": 65300,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Lithuanian"
@@ -3696,7 +3964,9 @@
       "POL",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 90,
+    "landlocked": false
   },
   {
     "code": "LU",
@@ -3709,7 +3979,7 @@
     "population": 681973,
     "area": 2586,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "German",
@@ -3725,7 +3995,9 @@
       "FRA",
       "DEU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "LV",
@@ -3738,7 +4010,7 @@
     "population": 1830400,
     "area": 64559,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Latvian"
@@ -3753,7 +4025,9 @@
       "LTU",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 498,
+    "landlocked": false
   },
   {
     "code": "MO",
@@ -3779,7 +4053,9 @@
     "borders": [
       "CHN"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 41,
+    "landlocked": false
   },
   {
     "code": "MF",
@@ -3792,7 +4068,7 @@
     "population": 31496,
     "area": 53,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -3804,7 +4080,9 @@
     "borders": [
       "SXM"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 58.9,
+    "landlocked": false
   },
   {
     "code": "MA",
@@ -3817,7 +4095,7 @@
     "population": 36828330,
     "area": 446550,
     "currencies": [
-      "Moroccan dirham (\u062f.\u0645.)"
+      "Moroccan dirham (د.م.)"
     ],
     "languages": [
       "Arabic",
@@ -3833,7 +4111,9 @@
       "ESH",
       "ESP"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2945,
+    "landlocked": false
   },
   {
     "code": "MC",
@@ -3846,7 +4126,7 @@
     "population": 38423,
     "area": 2.02,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -3858,14 +4138,16 @@
     "borders": [
       "FRA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4.1,
+    "landlocked": false
   },
   {
     "code": "MD",
     "code3": "MDA",
     "name": "Moldova",
     "officialName": "Republic of Moldova",
-    "capital": "Chi\u0219in\u0103u",
+    "capital": "Chișinău",
     "region": "Europe",
     "subregion": "Eastern Europe",
     "population": 2381300,
@@ -3884,7 +4166,9 @@
       "ROU",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "MG",
@@ -3908,20 +4192,22 @@
       "UTC+03:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4828,
+    "landlocked": false
   },
   {
     "code": "MV",
     "code3": "MDV",
     "name": "Maldives",
     "officialName": "Republic of the Maldives",
-    "capital": "Mal\u00e9",
+    "capital": "Malé",
     "region": "Asia",
     "subregion": "Southern Asia",
     "population": 515132,
     "area": 300,
     "currencies": [
-      "Maldivian rufiyaa (.\u0783)"
+      "Maldivian rufiyaa (.ރ)"
     ],
     "languages": [
       "Maldivian"
@@ -3931,7 +4217,9 @@
       "UTC+05:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 644,
+    "landlocked": false
   },
   {
     "code": "MX",
@@ -3961,7 +4249,9 @@
       "GTM",
       "USA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 9330,
+    "landlocked": false
   },
   {
     "code": "MH",
@@ -3985,7 +4275,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 370.4,
+    "landlocked": false
   },
   {
     "code": "MK",
@@ -4014,7 +4306,9 @@
       "UNK",
       "SRB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "ML",
@@ -4045,7 +4339,9 @@
       "NER",
       "SEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "MT",
@@ -4058,7 +4354,7 @@
     "population": 574250,
     "area": 316,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "English",
@@ -4069,7 +4365,9 @@
       "UTC+01:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 252.8,
+    "landlocked": false
   },
   {
     "code": "MM",
@@ -4098,7 +4396,9 @@
       "LAO",
       "THA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1930,
+    "landlocked": false
   },
   {
     "code": "ME",
@@ -4111,7 +4411,7 @@
     "population": 623327,
     "area": 13812,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Montenegrin"
@@ -4127,7 +4427,9 @@
       "UNK",
       "SRB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 293.5,
+    "landlocked": false
   },
   {
     "code": "MN",
@@ -4140,7 +4442,7 @@
     "population": 3544835,
     "area": 1564110,
     "currencies": [
-      "Mongolian t\u00f6gr\u00f6g (\u20ae)"
+      "Mongolian tögrög (₮)"
     ],
     "languages": [
       "Mongolian"
@@ -4154,7 +4456,9 @@
       "CHN",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "MP",
@@ -4179,7 +4483,9 @@
       "UTC+10:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1482,
+    "landlocked": false
   },
   {
     "code": "MZ",
@@ -4209,7 +4515,9 @@
       "ZMB",
       "ZWE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2470,
+    "landlocked": false
   },
   {
     "code": "MR",
@@ -4237,7 +4545,9 @@
       "SEN",
       "ESH"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 754,
+    "landlocked": false
   },
   {
     "code": "MS",
@@ -4260,7 +4570,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 40,
+    "landlocked": false
   },
   {
     "code": "MQ",
@@ -4273,7 +4585,7 @@
     "population": 339897,
     "area": 1128,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -4283,7 +4595,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 350,
+    "landlocked": false
   },
   {
     "code": "MU",
@@ -4296,7 +4610,7 @@
     "population": 1243741,
     "area": 2040,
     "currencies": [
-      "Mauritian rupee (\u20a8)"
+      "Mauritian rupee (₨)"
     ],
     "languages": [
       "English",
@@ -4309,7 +4623,9 @@
       "UTC+04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 177,
+    "landlocked": false
   },
   {
     "code": "MW",
@@ -4337,7 +4653,9 @@
       "TZA",
       "ZMB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "MY",
@@ -4365,7 +4683,9 @@
       "IDN",
       "THA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 4675,
+    "landlocked": false
   },
   {
     "code": "YT",
@@ -4378,7 +4698,7 @@
     "population": 337011,
     "area": 374,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -4388,7 +4708,9 @@
       "UTC+03:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 185,
+    "landlocked": false
   },
   {
     "code": "NA",
@@ -4425,20 +4747,22 @@
       "ZAF",
       "ZMB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1572,
+    "landlocked": false
   },
   {
     "code": "NC",
     "code3": "NCL",
     "name": "New Caledonia",
     "officialName": "New Caledonia",
-    "capital": "Noum\u00e9a",
+    "capital": "Nouméa",
     "region": "Oceania",
     "subregion": "Melanesia",
     "population": 264596,
     "area": 18575,
     "currencies": [
-      "CFP franc (\u20a3)"
+      "CFP franc (₣)"
     ],
     "languages": [
       "French"
@@ -4448,7 +4772,9 @@
       "UTC+11:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 2254,
+    "landlocked": false
   },
   {
     "code": "NE",
@@ -4479,7 +4805,9 @@
       "MLI",
       "NGA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "NF",
@@ -4503,7 +4831,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 32,
+    "landlocked": false
   },
   {
     "code": "NG",
@@ -4516,7 +4846,7 @@
     "population": 223800000,
     "area": 923768,
     "currencies": [
-      "Nigerian naira (\u20a6)"
+      "Nigerian naira (₦)"
     ],
     "languages": [
       "English",
@@ -4535,7 +4865,9 @@
       "TCD",
       "NER"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 853,
+    "landlocked": false
   },
   {
     "code": "NI",
@@ -4548,7 +4880,7 @@
     "population": 6803886,
     "area": 130373,
     "currencies": [
-      "Nicaraguan c\u00f3rdoba (C$)"
+      "Nicaraguan córdoba (C$)"
     ],
     "languages": [
       "Spanish"
@@ -4561,7 +4893,9 @@
       "CRI",
       "HND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 910,
+    "landlocked": false
   },
   {
     "code": "NU",
@@ -4585,7 +4919,9 @@
       "UTC-11:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 64,
+    "landlocked": false
   },
   {
     "code": "NL",
@@ -4598,7 +4934,7 @@
     "population": 18080943,
     "area": 41850,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Dutch"
@@ -4611,7 +4947,9 @@
       "BEL",
       "DEU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 451,
+    "landlocked": false
   },
   {
     "code": "NO",
@@ -4628,7 +4966,7 @@
     ],
     "languages": [
       "Norwegian Nynorsk",
-      "Norwegian Bokm\u00e5l",
+      "Norwegian Bokmål",
       "Sami"
     ],
     "phoneCode": "+47",
@@ -4640,7 +4978,9 @@
       "SWE",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 83281,
+    "landlocked": false
   },
   {
     "code": "NP",
@@ -4653,7 +4993,7 @@
     "population": 29911840,
     "area": 147181,
     "currencies": [
-      "Nepalese rupee (\u20a8)"
+      "Nepalese rupee (₨)"
     ],
     "languages": [
       "Nepali"
@@ -4666,7 +5006,9 @@
       "CHN",
       "IND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "NR",
@@ -4690,7 +5032,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 30,
+    "landlocked": false
   },
   {
     "code": "NZ",
@@ -4707,7 +5051,7 @@
     ],
     "languages": [
       "English",
-      "M\u0101ori",
+      "Māori",
       "New Zealand Sign Language"
     ],
     "phoneCode": "+64",
@@ -4716,7 +5060,9 @@
       "UTC+13:45"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 15134,
+    "landlocked": false
   },
   {
     "code": "OM",
@@ -4729,7 +5075,7 @@
     "population": 5306976,
     "area": 309500,
     "currencies": [
-      "Omani rial (\u0631.\u0639.)"
+      "Omani rial (ر.ع.)"
     ],
     "languages": [
       "Arabic"
@@ -4743,7 +5089,9 @@
       "ARE",
       "YEM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2092,
+    "landlocked": false
   },
   {
     "code": "PK",
@@ -4756,7 +5104,7 @@
     "population": 241499431,
     "area": 881912,
     "currencies": [
-      "Terroristani rupee (\u20a8)"
+      "Terroristani rupee (₨)"
     ],
     "languages": [
       "Urdu",
@@ -4777,7 +5125,9 @@
       "IND",
       "IRN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1046,
+    "landlocked": false
   },
   {
     "code": "PA",
@@ -4804,7 +5154,9 @@
       "COL",
       "CRI"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2490,
+    "landlocked": false
   },
   {
     "code": "PN",
@@ -4827,7 +5179,9 @@
       "UTC-08:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 51,
+    "landlocked": false
   },
   {
     "code": "PE",
@@ -4858,7 +5212,9 @@
       "COL",
       "ECU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2414,
+    "landlocked": false
   },
   {
     "code": "PH",
@@ -4871,7 +5227,7 @@
     "population": 114123600,
     "area": 342353,
     "currencies": [
-      "Philippine peso (\u20b1)"
+      "Philippine peso (₱)"
     ],
     "languages": [
       "Filipino",
@@ -4889,7 +5245,9 @@
       "UTC+08:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 36289,
+    "landlocked": false
   },
   {
     "code": "PW",
@@ -4913,7 +5271,9 @@
       "UTC+09:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1519,
+    "landlocked": false
   },
   {
     "code": "PG",
@@ -4942,7 +5302,9 @@
     "borders": [
       "IDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 5152,
+    "landlocked": false
   },
   {
     "code": "PL",
@@ -4955,7 +5317,7 @@
     "population": 37401000,
     "area": 312679,
     "currencies": [
-      "Polish z\u0142oty (z\u0142)"
+      "Polish złoty (zł)"
     ],
     "languages": [
       "Polish"
@@ -4973,7 +5335,9 @@
       "SVK",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 440,
+    "landlocked": false
   },
   {
     "code": "PR",
@@ -4997,7 +5361,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 501,
+    "landlocked": false
   },
   {
     "code": "KP",
@@ -5010,7 +5376,7 @@
     "population": 25950000,
     "area": 120538,
     "currencies": [
-      "North Korean won (\u20a9)"
+      "North Korean won (₩)"
     ],
     "languages": [
       "Korean"
@@ -5024,7 +5390,9 @@
       "KOR",
       "RUS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2495,
+    "landlocked": false
   },
   {
     "code": "PT",
@@ -5037,7 +5405,7 @@
     "population": 10749635,
     "area": 92090,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Portuguese"
@@ -5050,23 +5418,25 @@
     "borders": [
       "ESP"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1793,
+    "landlocked": false
   },
   {
     "code": "PY",
     "code3": "PRY",
     "name": "Paraguay",
     "officialName": "Republic of Paraguay",
-    "capital": "Asunci\u00f3n",
+    "capital": "Asunción",
     "region": "Americas",
     "subregion": "South America",
     "population": 6109644,
     "area": 406752,
     "currencies": [
-      "Paraguayan guaran\u00ed (\u20b2)"
+      "Paraguayan guaraní (₲)"
     ],
     "languages": [
-      "Guaran\u00ed",
+      "Guaraní",
       "Spanish"
     ],
     "phoneCode": "+595",
@@ -5078,7 +5448,9 @@
       "BOL",
       "BRA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "PS",
@@ -5091,8 +5463,8 @@
     "population": 5483450,
     "area": 6220,
     "currencies": [
-      "Egyptian pound (E\u00a3)",
-      "Israeli new shekel (\u20aa)",
+      "Egyptian pound (E£)",
+      "Israeli new shekel (₪)",
       "Jordanian dinar (JD)"
     ],
     "languages": [
@@ -5107,20 +5479,22 @@
       "EGY",
       "JOR"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 40,
+    "landlocked": false
   },
   {
     "code": "PF",
     "code3": "PYF",
     "name": "French Polynesia",
     "officialName": "French Polynesia",
-    "capital": "Papeet\u0113",
+    "capital": "Papeetē",
     "region": "Oceania",
     "subregion": "Polynesia",
     "population": 279500,
     "area": 4167,
     "currencies": [
-      "CFP franc (\u20a3)"
+      "CFP franc (₣)"
     ],
     "languages": [
       "French"
@@ -5132,7 +5506,9 @@
       "UTC-09:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 2525,
+    "landlocked": false
   },
   {
     "code": "QA",
@@ -5145,7 +5521,7 @@
     "population": 3173024,
     "area": 11586,
     "currencies": [
-      "Qatari riyal (\u0631.\u0642)"
+      "Qatari riyal (ر.ق)"
     ],
     "languages": [
       "Arabic"
@@ -5157,20 +5533,22 @@
     "borders": [
       "SAU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 563,
+    "landlocked": false
   },
   {
     "code": "RE",
     "code3": "REU",
-    "name": "R\u00e9union",
-    "officialName": "R\u00e9union Island",
+    "name": "Réunion",
+    "officialName": "Réunion Island",
     "capital": "Saint-Denis",
     "region": "Africa",
     "subregion": "Eastern Africa",
     "population": 896175,
     "area": 2511,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -5180,7 +5558,9 @@
       "UTC+04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 207,
+    "landlocked": false
   },
   {
     "code": "RO",
@@ -5209,7 +5589,9 @@
       "SRB",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 225,
+    "landlocked": false
   },
   {
     "code": "RU",
@@ -5222,7 +5604,7 @@
     "population": 146028325,
     "area": 17098242,
     "currencies": [
-      "Russian ruble (\u20bd)"
+      "Russian ruble (₽)"
     ],
     "languages": [
       "Russian"
@@ -5257,7 +5639,9 @@
       "POL",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 37653,
+    "landlocked": false
   },
   {
     "code": "RW",
@@ -5288,7 +5672,9 @@
       "TZA",
       "UGA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "SA",
@@ -5301,7 +5687,7 @@
     "population": 35300280,
     "area": 2149690,
     "currencies": [
-      "Saudi riyal (\u0631.\u0633)"
+      "Saudi riyal (ر.س)"
     ],
     "languages": [
       "Arabic"
@@ -5319,7 +5705,9 @@
       "ARE",
       "YEM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2640,
+    "landlocked": false
   },
   {
     "code": "SD",
@@ -5351,7 +5739,9 @@
       "LBY",
       "SSD"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 853,
+    "landlocked": false
   },
   {
     "code": "SN",
@@ -5380,7 +5770,9 @@
       "MLI",
       "MRT"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 531,
+    "landlocked": false
   },
   {
     "code": "SG",
@@ -5406,7 +5798,9 @@
       "UTC+08:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 193,
+    "landlocked": false
   },
   {
     "code": "GS",
@@ -5419,7 +5813,7 @@
     "population": null,
     "area": 3903,
     "currencies": [
-      "Saint Helena pound (\u00a3)"
+      "Saint Helena pound (£)"
     ],
     "languages": [
       "English"
@@ -5429,7 +5823,9 @@
       "UTC-02:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 990,
+    "landlocked": false
   },
   {
     "code": "SJ",
@@ -5452,7 +5848,9 @@
       "UTC+01:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 3587,
+    "landlocked": false
   },
   {
     "code": "SB",
@@ -5475,7 +5873,9 @@
       "UTC+11:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 5313,
+    "landlocked": false
   },
   {
     "code": "SL",
@@ -5501,7 +5901,9 @@
       "GIN",
       "LBR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 402,
+    "landlocked": false
   },
   {
     "code": "SV",
@@ -5527,7 +5929,9 @@
       "GTM",
       "HND"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 307,
+    "landlocked": false
   },
   {
     "code": "SM",
@@ -5540,7 +5944,7 @@
     "population": 34132,
     "area": 61,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Italian"
@@ -5552,7 +5956,9 @@
     "borders": [
       "ITA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "SO",
@@ -5580,7 +5986,9 @@
       "ETH",
       "KEN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3333,
+    "landlocked": false
   },
   {
     "code": "PM",
@@ -5593,7 +6001,7 @@
     "population": 5819,
     "area": 242,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "French"
@@ -5603,7 +6011,9 @@
       "UTC-03:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 120,
+    "landlocked": false
   },
   {
     "code": "RS",
@@ -5616,7 +6026,7 @@
     "population": 6567783,
     "area": 88361,
     "currencies": [
-      "Serbian dinar (\u0434\u0438\u043d.)"
+      "Serbian dinar (дин.)"
     ],
     "languages": [
       "Serbian"
@@ -5635,7 +6045,9 @@
       "MNE",
       "ROU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "SS",
@@ -5648,7 +6060,7 @@
     "population": 15786898,
     "area": 619745,
     "currencies": [
-      "South Sudanese pound (\u00a3)"
+      "South Sudanese pound (£)"
     ],
     "languages": [
       "English"
@@ -5665,20 +6077,22 @@
       "SDN",
       "UGA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "ST",
     "code3": "STP",
-    "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
-    "officialName": "Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe",
-    "capital": "S\u00e3o Tom\u00e9",
+    "name": "São Tomé and Príncipe",
+    "officialName": "Democratic Republic of São Tomé and Príncipe",
+    "capital": "São Tomé",
     "region": "Africa",
     "subregion": "Middle Africa",
     "population": 209607,
     "area": 964,
     "currencies": [
-      "S\u00e3o Tom\u00e9 and Pr\u00edncipe dobra (Db)"
+      "São Tomé and Príncipe dobra (Db)"
     ],
     "languages": [
       "Portuguese"
@@ -5688,7 +6102,9 @@
       "UTC+00:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 209,
+    "landlocked": false
   },
   {
     "code": "SR",
@@ -5715,7 +6131,9 @@
       "GUF",
       "GUY"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 386,
+    "landlocked": false
   },
   {
     "code": "SK",
@@ -5728,7 +6146,7 @@
     "population": 5413813,
     "area": 49037,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Slovak"
@@ -5744,7 +6162,9 @@
       "POL",
       "UKR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "SI",
@@ -5757,7 +6177,7 @@
     "population": 2130638,
     "area": 20273,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Slovene"
@@ -5772,7 +6192,9 @@
       "ITA",
       "HUN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 46.6,
+    "landlocked": false
   },
   {
     "code": "SE",
@@ -5798,7 +6220,9 @@
       "FIN",
       "NOR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3218,
+    "landlocked": false
   },
   {
     "code": "SZ",
@@ -5826,7 +6250,9 @@
       "MOZ",
       "ZAF"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "SX",
@@ -5839,7 +6265,7 @@
     "population": 41349,
     "area": 34,
     "currencies": [
-      "Netherlands Antillean guilder (\u0192)"
+      "Netherlands Antillean guilder (ƒ)"
     ],
     "languages": [
       "English",
@@ -5853,7 +6279,9 @@
     "borders": [
       "MAF"
     ],
-    "unMember": false
+    "unMember": false,
+    "coastline": 16,
+    "landlocked": false
   },
   {
     "code": "SC",
@@ -5866,7 +6294,7 @@
     "population": 122729,
     "area": 452,
     "currencies": [
-      "Seychellois rupee (\u20a8)"
+      "Seychellois rupee (₨)"
     ],
     "languages": [
       "Seychellois Creole",
@@ -5878,7 +6306,9 @@
       "UTC+04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 491,
+    "landlocked": false
   },
   {
     "code": "SY",
@@ -5891,7 +6321,7 @@
     "population": 25620000,
     "area": 185180,
     "currencies": [
-      "Syrian pound (\u00a3)"
+      "Syrian pound (£)"
     ],
     "languages": [
       "Arabic"
@@ -5907,7 +6337,9 @@
       "LBN",
       "TUR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 193,
+    "landlocked": false
   },
   {
     "code": "TC",
@@ -5930,7 +6362,9 @@
       "UTC-05:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 389,
+    "landlocked": false
   },
   {
     "code": "TD",
@@ -5961,14 +6395,16 @@
       "NGA",
       "SDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "TG",
     "code3": "TGO",
     "name": "Togo",
     "officialName": "Togolese Republic",
-    "capital": "Lom\u00e9",
+    "capital": "Lomé",
     "region": "Africa",
     "subregion": "Western Africa",
     "population": 8095498,
@@ -5988,7 +6424,9 @@
       "BFA",
       "GHA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 56,
+    "landlocked": false
   },
   {
     "code": "TH",
@@ -6001,7 +6439,7 @@
     "population": 65859640,
     "area": 513120,
     "currencies": [
-      "Thai baht (\u0e3f)"
+      "Thai baht (฿)"
     ],
     "languages": [
       "Thai"
@@ -6016,7 +6454,9 @@
       "LAO",
       "MYS"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3219,
+    "landlocked": false
   },
   {
     "code": "TJ",
@@ -6029,7 +6469,7 @@
     "population": 10499000,
     "area": 143100,
     "currencies": [
-      "Tajikistani somoni (\u0405\u041c)"
+      "Tajikistani somoni (ЅМ)"
     ],
     "languages": [
       "Russian",
@@ -6045,7 +6485,9 @@
       "KGZ",
       "UZB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "TK",
@@ -6070,7 +6512,9 @@
       "UTC+13:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 101,
+    "landlocked": false
   },
   {
     "code": "TM",
@@ -6099,7 +6543,9 @@
       "KAZ",
       "UZB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "TL",
@@ -6125,7 +6571,9 @@
     "borders": [
       "IDN"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 706,
+    "landlocked": false
   },
   {
     "code": "TO",
@@ -6138,7 +6586,7 @@
     "population": 100179,
     "area": 747,
     "currencies": [
-      "Tongan pa\u02bbanga (T$)"
+      "Tongan paʻanga (T$)"
     ],
     "languages": [
       "English",
@@ -6149,7 +6597,9 @@
       "UTC+13:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 419,
+    "landlocked": false
   },
   {
     "code": "TT",
@@ -6172,7 +6622,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 362,
+    "landlocked": false
   },
   {
     "code": "TN",
@@ -6185,7 +6637,7 @@
     "population": 11972169,
     "area": 163610,
     "currencies": [
-      "Tunisian dinar (\u062f.\u062a)"
+      "Tunisian dinar (د.ت)"
     ],
     "languages": [
       "Arabic"
@@ -6198,20 +6650,22 @@
       "DZA",
       "LBY"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1148,
+    "landlocked": false
   },
   {
     "code": "TR",
     "code3": "TUR",
-    "name": "T\u00fcrkiye",
-    "officialName": "Republic of T\u00fcrkiye",
+    "name": "Türkiye",
+    "officialName": "Republic of Türkiye",
     "capital": "Ankara",
     "region": "Asia",
     "subregion": "Western Asia",
     "population": 85664944,
     "area": 783562,
     "currencies": [
-      "Turkish lira (\u20ba)"
+      "Turkish lira (₺)"
     ],
     "languages": [
       "Turkish"
@@ -6230,7 +6684,9 @@
       "IRQ",
       "SYR"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 7200,
+    "landlocked": false
   },
   {
     "code": "TV",
@@ -6255,7 +6711,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 24,
+    "landlocked": false
   },
   {
     "code": "TW",
@@ -6278,7 +6736,9 @@
       "UTC+08:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 1566.3,
+    "landlocked": false
   },
   {
     "code": "TZ",
@@ -6311,7 +6771,9 @@
       "UGA",
       "ZMB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1424,
+    "landlocked": false
   },
   {
     "code": "UG",
@@ -6341,7 +6803,9 @@
       "SSD",
       "TZA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "UA",
@@ -6354,7 +6818,7 @@
     "population": 32862000,
     "area": 603500,
     "currencies": [
-      "Ukrainian hryvnia (\u20b4)"
+      "Ukrainian hryvnia (₴)"
     ],
     "languages": [
       "Ukrainian"
@@ -6373,7 +6837,9 @@
       "RUS",
       "SVK"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2782,
+    "landlocked": false
   },
   {
     "code": "UM",
@@ -6397,7 +6863,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 158,
+    "landlocked": false
   },
   {
     "code": "UY",
@@ -6423,7 +6891,9 @@
       "ARG",
       "BRA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 660,
+    "landlocked": false
   },
   {
     "code": "US",
@@ -6454,7 +6924,9 @@
       "CAN",
       "MEX"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 19924,
+    "landlocked": false
   },
   {
     "code": "UZ",
@@ -6467,7 +6939,7 @@
     "population": 37859698,
     "area": 447400,
     "currencies": [
-      "Uzbekistani so\u02bbm (so'm)"
+      "Uzbekistani soʻm (so'm)"
     ],
     "languages": [
       "Russian",
@@ -6484,7 +6956,9 @@
       "TJK",
       "TKM"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "VA",
@@ -6497,7 +6971,7 @@
     "population": 882,
     "area": 0.44,
     "currencies": [
-      "Euro (\u20ac)"
+      "Euro (€)"
     ],
     "languages": [
       "Italian",
@@ -6510,7 +6984,9 @@
     "borders": [
       "ITA"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "VC",
@@ -6533,7 +7009,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 84,
+    "landlocked": false
   },
   {
     "code": "VE",
@@ -6546,7 +7024,7 @@
     "population": 28517000,
     "area": 916445,
     "currencies": [
-      "Venezuelan bol\u00edvar soberano (Bs.S.)"
+      "Venezuelan bolívar soberano (Bs.S.)"
     ],
     "languages": [
       "Spanish"
@@ -6560,7 +7038,9 @@
       "COL",
       "GUY"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2800,
+    "landlocked": false
   },
   {
     "code": "VG",
@@ -6583,7 +7063,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 80,
+    "landlocked": false
   },
   {
     "code": "VI",
@@ -6606,7 +7088,9 @@
       "UTC-04:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 188,
+    "landlocked": false
   },
   {
     "code": "VN",
@@ -6619,7 +7103,7 @@
     "population": 101343800,
     "area": 331212,
     "currencies": [
-      "Vietnamese \u0111\u1ed3ng (\u20ab)"
+      "Vietnamese đồng (₫)"
     ],
     "languages": [
       "Vietnamese"
@@ -6633,7 +7117,9 @@
       "CHN",
       "LAO"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 3444,
+    "landlocked": false
   },
   {
     "code": "VU",
@@ -6658,7 +7144,9 @@
       "UTC+11:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2528,
+    "landlocked": false
   },
   {
     "code": "WF",
@@ -6671,7 +7159,7 @@
     "population": 11620,
     "area": 142,
     "currencies": [
-      "CFP franc (\u20a3)"
+      "CFP franc (₣)"
     ],
     "languages": [
       "French"
@@ -6681,7 +7169,9 @@
       "UTC+12:00"
     ],
     "borders": [],
-    "unMember": false
+    "unMember": false,
+    "coastline": 129,
+    "landlocked": false
   },
   {
     "code": "WS",
@@ -6694,7 +7184,7 @@
     "population": 205557,
     "area": 2842,
     "currencies": [
-      "Samoan t\u0101l\u0101 (T)"
+      "Samoan tālā (T)"
     ],
     "languages": [
       "English",
@@ -6705,7 +7195,9 @@
       "UTC+14:00"
     ],
     "borders": [],
-    "unMember": true
+    "unMember": true,
+    "coastline": 403,
+    "landlocked": false
   },
   {
     "code": "YE",
@@ -6718,7 +7210,7 @@
     "population": 32684503,
     "area": 527968,
     "currencies": [
-      "Yemeni rial (\ufdfc)"
+      "Yemeni rial (﷼)"
     ],
     "languages": [
       "Arabic"
@@ -6731,7 +7223,9 @@
       "OMN",
       "SAU"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 1906,
+    "landlocked": false
   },
   {
     "code": "ZA",
@@ -6772,7 +7266,9 @@
       "SWZ",
       "ZWE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 2798,
+    "landlocked": false
   },
   {
     "code": "ZM",
@@ -6804,7 +7300,9 @@
       "TZA",
       "ZWE"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   },
   {
     "code": "ZW",
@@ -6818,11 +7316,11 @@
     "area": 390757,
     "currencies": [
       "Botswana pula (P)",
-      "Chinese yuan (\u00a5)",
-      "Euro (\u20ac)",
-      "British pound (\u00a3)",
-      "Indian rupee (\u20b9)",
-      "Japanese yen (\u00a5)",
+      "Chinese yuan (¥)",
+      "Euro (€)",
+      "British pound (£)",
+      "Indian rupee (₹)",
+      "Japanese yen (¥)",
       "United States dollar ($)",
       "South African rand (Rs)",
       "Zimbabwean bonds ($)"
@@ -6854,6 +7352,8 @@
       "ZAF",
       "ZMB"
     ],
-    "unMember": true
+    "unMember": true,
+    "coastline": 0,
+    "landlocked": true
   }
 ]

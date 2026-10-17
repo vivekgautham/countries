@@ -13,6 +13,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShareIcon from "@mui/icons-material/Share";
 import TerrainIcon from "@mui/icons-material/Terrain";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import WaterIcon from "@mui/icons-material/Water";
+import WavesIcon from "@mui/icons-material/Waves";
 import WifiIcon from "@mui/icons-material/Wifi";
 import {
   Alert,
@@ -70,7 +72,13 @@ import {
 
 export interface RankingMetricConfig {
   id: string;
-  category: "economy" | "demographics" | "growth" | "digital" | "aviation";
+  category:
+    | "economy"
+    | "demographics"
+    | "geography"
+    | "growth"
+    | "digital"
+    | "aviation";
   label: string;
   shortLabel: string;
   unit: string;
@@ -100,7 +108,16 @@ export const RANKING_CATEGORIES = [
     icon: <GroupsIcon sx={{ fontSize: 18 }} />,
     emoji: "👥",
     description:
-      "Global leaders ranked by resident population size, population density, and demographic concentration.",
+      "Global leaders ranked by resident population size and population density.",
+  },
+  {
+    id: "geography",
+    label: "Coastlines & Maritime",
+    shortLabel: "Coastlines",
+    icon: <WavesIcon sx={{ fontSize: 18 }} />,
+    emoji: "🌊",
+    description:
+      "Global leaders ranked by total coastline length, maritime shoreline exposure, and coast-to-area density.",
   },
   {
     id: "growth",
@@ -269,8 +286,62 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
       return [imperialStr, areaStr].filter(Boolean).join(" • ") || "—";
     },
   },
+  // 3. Coastlines & Maritime
+  {
+    id: "coastline",
+    category: "geography",
+    label: "Total Coastline Length (km)",
+    shortLabel: "Coastline (% of World)",
+    unit: "km",
+    description:
+      "Total length of sovereign maritime shoreline in kilometers according to the CIA World Factbook, with percentage share of global coastlines.",
+    source: "CIA World Factbook",
+    sortDirection: "desc",
+    icon: <WavesIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.coastline,
+    formatValue: (val) => `${formatNumber(val)} km`,
+    getSecondaryValue: (c, globalSum) => {
+      if (c.coastline === undefined || c.coastline === null) return "—";
+      if (c.coastline === 0) return "Landlocked state (0 km)";
+      const mi = Math.round(c.coastline * 0.621371);
+      if (globalSum && globalSum > 0) {
+        const share = (c.coastline / globalSum) * 100;
+        const shareStr = `${share >= 1 ? share.toFixed(1) : share.toFixed(2)}% of World Coastline`;
+        return `${shareStr} • ${formatNumber(mi)} mi`;
+      }
+      return `${formatNumber(mi)} mi${c.area ? ` • Area: ${formatNumber(c.area)} km²` : ""}`;
+    },
+  },
+  {
+    id: "coast_to_area_ratio",
+    category: "geography",
+    label: "Coastline-to-Area Ratio (m / km²)",
+    shortLabel: "Coast/Area Ratio",
+    unit: "m / km²",
+    description:
+      "Meters of maritime coastline per square kilometer of sovereign land area, highlighting island archipelago nations and maritime exposure.",
+    source: "CIA World Factbook / Calculation",
+    sortDirection: "desc",
+    icon: <WaterIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => {
+      if (
+        typeof c.coastline === "number" &&
+        typeof c.area === "number" &&
+        c.area > 0
+      ) {
+        return Math.round(((c.coastline * 1000) / c.area) * 10) / 10;
+      }
+      return undefined;
+    },
+    formatValue: (val) => `${val.toLocaleString()} m/km²`,
+    getSecondaryValue: (c) => {
+      if (c.coastline === undefined || c.coastline === null) return "—";
+      if (c.coastline === 0) return "Landlocked (0 m/km²)";
+      return `${formatNumber(c.coastline)} km coast • ${c.area ? `${formatNumber(c.area)} km² area` : ""}`;
+    },
+  },
 
-  // 3. Growth
+  // 4. Growth
   {
     id: "gdp_growth",
     category: "growth",
@@ -482,6 +553,9 @@ export default function CountryRankingsPage() {
       "GDP per capita",
       "population rankings",
       "population density",
+      "coastline rankings",
+      "longest coastlines",
+      "coastline to area ratio",
       "fastest growing economies",
     ],
     canonicalPath: `/rankings?category=${activeCategory}&metric=${currentMetric.id}`,
@@ -666,7 +740,26 @@ export default function CountryRankingsPage() {
       };
     }
 
-    // 4. Percentage metrics where value is natively 0-100%
+    // 4. Coastline: % Share of Total Global Coastline
+    if (currentMetric.id === "coastline" && globalSum > 0) {
+      const share = (val / globalSum) * 100;
+      const formattedShare =
+        share >= 10
+          ? `${share.toFixed(1)}%`
+          : share >= 1
+            ? `${share.toFixed(1)}%`
+            : share >= 0.1
+              ? `${share.toFixed(2)}%`
+              : `<0.1%`;
+
+      return {
+        barPercent: Math.max(1.5, Math.min(100, share)),
+        label: `${formattedShare} of World Coastline`,
+        tooltip: `${share.toFixed(2)}% share of World Coastline (${formatNumber(Math.round(globalSum))} km)`,
+      };
+    }
+
+    // 5. Percentage metrics where value is natively 0-100%
     if (["internet_users", "literacy_rate"].includes(currentMetric.id)) {
       return {
         barPercent: Math.max(2, Math.min(100, val)),
@@ -940,8 +1033,8 @@ export default function CountryRankingsPage() {
           }}
         >
           Discover worldwide economic supremacy, demographics and population
-          density, fastest growing nations, digital penetration, and premier
-          aviation hubs.
+          density, maritime coastline leaders, fastest growing nations, digital
+          penetration, and premier aviation hubs.
         </Typography>
       </Box>
 
@@ -1154,6 +1247,20 @@ export default function CountryRankingsPage() {
                     backgroundColor: "rgba(16, 185, 129, 0.15)",
                     color: "#6ee7b7",
                     border: "1px solid rgba(16, 185, 129, 0.3)",
+                  }}
+                />
+              )}
+              {currentMetric.id === "coastline" && globalSum > 0 && (
+                <Chip
+                  label={`Total World Coastline: ${formatNumber(Math.round(globalSum))} km`}
+                  size="small"
+                  sx={{
+                    height: 22,
+                    fontSize: "0.72rem",
+                    fontWeight: 700,
+                    backgroundColor: "rgba(14, 165, 233, 0.15)",
+                    color: "#38bdf8",
+                    border: "1px solid rgba(14, 165, 233, 0.3)",
                   }}
                 />
               )}
@@ -1693,7 +1800,11 @@ export default function CountryRankingsPage() {
                 {currentMetric.shortLabel}
               </TableCell>
               <TableCell sx={{ width: 140 }}>
-                {currentMetric.id === "population" ? "Land Area" : "Population"}
+                {["population", "coastline"].includes(currentMetric.id)
+                  ? "Land Area"
+                  : currentMetric.id === "coast_to_area_ratio"
+                    ? "Coastline Length"
+                    : "Population"}
               </TableCell>
               <TableCell sx={{ width: 160 }}>Secondary Context</TableCell>
               <TableCell align="right" sx={{ width: 110 }}>
@@ -1837,7 +1948,9 @@ export default function CountryRankingsPage() {
                                       ? "#38bdf8"
                                       : currentMetric.id === "population"
                                         ? "#34d399"
-                                        : "text.secondary",
+                                        : currentMetric.id === "coastline"
+                                          ? "#38bdf8"
+                                          : "text.secondary",
                                 cursor: "help",
                               }}
                             >
@@ -1869,16 +1982,20 @@ export default function CountryRankingsPage() {
                       </Box>
                     </TableCell>
 
-                    {/* Population / Land Area Column */}
+                    {/* Population / Land Area / Coastline Column */}
                     <TableCell>
                       <Typography variant="body2" sx={{ fontSize: "0.85rem" }}>
-                        {currentMetric.id === "population"
+                        {["population", "coastline"].includes(currentMetric.id)
                           ? item.country.area
                             ? `${formatNumber(item.country.area)} km²`
                             : "—"
-                          : item.country.population
-                            ? formatNumber(item.country.population)
-                            : "—"}
+                          : currentMetric.id === "coast_to_area_ratio"
+                            ? typeof item.country.coastline === "number"
+                              ? `${formatNumber(item.country.coastline)} km`
+                              : "—"
+                            : item.country.population
+                              ? formatNumber(item.country.population)
+                              : "—"}
                       </Typography>
                     </TableCell>
 

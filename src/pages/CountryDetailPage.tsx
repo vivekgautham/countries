@@ -38,6 +38,7 @@ import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
+import { formatCoastline } from "../data/coastlineData";
 import {
   getG7BadgeConfig,
   getG20BadgeConfig,
@@ -972,6 +973,21 @@ export default function CountryDetailPage() {
                         {country.landlocked
                           ? "Landlocked (No Ocean Access)"
                           : "Coastal State"}
+                      </Typography>
+                    </Stack>
+                  )}
+
+                  {country.coastline !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🏖️ Coastline
+                      </Typography>
+                      <Typography fontWeight={600} textAlign="right">
+                        {formatCoastline(country.coastline)}
                       </Typography>
                     </Stack>
                   )}

@@ -42,6 +42,7 @@ import {
 import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
+import { formatCoastline } from "../data/coastlineData";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatGdp,
@@ -1411,6 +1412,16 @@ export default function CountryComparePage() {
                     color={c.landlocked ? "warning" : "default"}
                     sx={{ height: 22, fontSize: "0.75rem" }}
                   />
+                ),
+              },
+              {
+                label: "Coastline Length",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.coastline !== undefined
+                      ? formatCoastline(c.coastline)
+                      : "N/A"}
+                  </Typography>
                 ),
               },
               {
