@@ -1,0 +1,3630 @@
+{
+  "AD": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "10 May 2024",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "18 September 2026",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "AE": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "2 July 2007",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "Aa2",
+      "outlook": "Stable",
+      "date": "21 March 2023",
+      "grade": "investment",
+      "score": 19
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "11 November 2020",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "AL": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "21 March 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Stable",
+      "date": "19 October 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "AM": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "25 August 2023",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Stable",
+      "date": "22 June 2023",
+      "grade": "speculative",
+      "score": 9
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Positive",
+      "date": "10 July 2026",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "AO": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "4 February 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Positive",
+      "date": "24 October 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "8 May 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "AR": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "10 June 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Positive",
+      "date": "21 July 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "5 May 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "AT": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "13 January 2012",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa1",
+      "outlook": "Stable",
+      "date": "24 February 2023",
+      "grade": "investment",
+      "score": 20
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "5 December 2025",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 19.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "AU": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "16 February 2003",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "28 June 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "9 October 2026",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "AW": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "24 March 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Positive",
+      "date": "3 March 2026",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13.5,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "AZ": {
+    "sp": {
+      "rating": "BB+",
+      "outlook": "Positive",
+      "date": "29 January 2016",
+      "grade": "speculative",
+      "score": 11
+    },
+    "moodys": {
+      "rating": "Ba1",
+      "outlook": "Stable",
+      "date": "5 August 2022",
+      "grade": "speculative",
+      "score": 11
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "13 June 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 11.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BA": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "4 August 2023",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "22 July 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BB": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "24 October 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "3 August 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Positive",
+      "date": "9 October 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 7.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BD": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "30 July 2024",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Stable",
+      "date": "16 Sep 2026",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "22 May 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 7.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BE": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Negative",
+      "date": "25 April 2025",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "28 April 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "13 June 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 18,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "BF": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "26 January 2022",
+      "grade": "speculative",
+      "score": 5
+    },
+    "averageScore": 5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BG": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "10 July 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Stable",
+      "date": "3 February 2023",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "10 July 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "averageScore": 14,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "BH": {
+    "sp": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Stable",
+      "date": "22 April 2022",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "23 February 2026",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BJ": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "19 April 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Stable",
+      "date": "18 September 2023",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Positive",
+      "date": "16 January 2026",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BM": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "28 April 2015",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "21 June 2022",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16.5,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "BO": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "23 March 2026",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Negative",
+      "date": "30 June 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "CCC",
+      "outlook": "Stable",
+      "date": "16 January 2026",
+      "grade": "speculative",
+      "score": 4
+    },
+    "averageScore": 4.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BR": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "19 December 2023",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba1",
+      "outlook": "Positive",
+      "date": "7 October 2024",
+      "grade": "speculative",
+      "score": 11
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "25 June 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 10.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BS": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "26 September 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Stable",
+      "date": "6 October 2022",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "9 April 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 8.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "BW": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Negative",
+      "date": "12 September 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "27 October 2023",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 14,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "BY": {
+    "moodys": {
+      "rating": "C",
+      "outlook": "Stable",
+      "date": "2 June 2023",
+      "grade": "default",
+      "score": 1
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "6 October 2023",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 1,
+    "overallGrade": "default",
+    "isInvestmentGrade": false
+  },
+  "BZ": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "9 November 2021",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa2",
+      "outlook": "Stable",
+      "date": "16 November 2022",
+      "grade": "speculative",
+      "score": 4
+    },
+    "averageScore": 5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CA": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "29 July 2002",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "3 November 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "18 July 2025",
+      "grade": "investment",
+      "score": 20
+    },
+    "averageScore": 20.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CD": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "28 January 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "11 November 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CG": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "30 October 2024",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa2",
+      "outlook": "Stable",
+      "date": "3 November 2023",
+      "grade": "speculative",
+      "score": 4
+    },
+    "fitch": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "16 September 2022",
+      "grade": "speculative",
+      "score": 5
+    },
+    "averageScore": 4.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CH": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "1 October 1988",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "17 February 2023",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "10 August 1994",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CI": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "18 October 2024",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Positive",
+      "date": "27 June 2022",
+      "grade": "speculative",
+      "score": 9
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "12 December 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 9.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CK": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Positive",
+      "date": "11 November 2020",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CL": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "24 March 2021",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "15 September 2022",
+      "grade": "investment",
+      "score": 16
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "26 September 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CM": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "22 March 2024",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Stable",
+      "date": "27 July 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Negative",
+      "date": "7 November 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CN": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "21 September 2017",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "27 April 2026",
+      "grade": "investment",
+      "score": 17
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "3 April 2025",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CO": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Negative",
+      "date": "26 June 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Baa2",
+      "outlook": "Stable",
+      "date": "8 June 2023",
+      "grade": "investment",
+      "score": 13
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "16 December 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 11,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CR": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "22 October 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Positive",
+      "date": "18 September 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Positive",
+      "date": "17 December 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 9.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CU": {
+    "moodys": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "18 November 2021",
+      "grade": "unrated",
+      "score": 0
+    }
+  },
+  "CV": {
+    "sp": {
+      "rating": "B",
+      "outlook": "Positive",
+      "date": "16 August 2024",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "13 May 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "CW": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "22 February 2022",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CY": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Positive",
+      "date": "20 March 2026",
+      "grade": "investment",
+      "score": 15
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "22 November 2024",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Positive",
+      "date": "21 November 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "CZ": {
+    "sp": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "28 March 2025",
+      "grade": "investment",
+      "score": 18
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "24 November 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "6 February 2026",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "DE": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "17 August 1983",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "10 February 2023",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "11 July 2025",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "DK": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "6 February 2026",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "11 February 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "3 October 2025",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "DO": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "19 December 2022",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Positive",
+      "date": "10 August 2023",
+      "grade": "speculative",
+      "score": 9
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Positive",
+      "date": "7 November 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "EC": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "1 September 2020",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa3",
+      "outlook": "Stable",
+      "date": "27 February 2023",
+      "grade": "speculative",
+      "score": 3
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "25 February 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "EE": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "31 May 2024",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "29 April 2022",
+      "grade": "investment",
+      "score": 17
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "6 June 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "EG": {
+    "sp": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "10 October 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Negative",
+      "date": "18 January 2024",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "10 October 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 6.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "ES": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "12 September 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Positive",
+      "date": "27 September 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "26 September 2025",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "ET": {
+    "sp": {
+      "rating": "D",
+      "outlook": "Stable",
+      "date": "15 December 2023",
+      "grade": "default",
+      "score": 1
+    },
+    "moodys": {
+      "rating": "Caa3",
+      "outlook": "Stable",
+      "date": "15 September 2023",
+      "grade": "speculative",
+      "score": 3
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Stable",
+      "date": "16 October 2026",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 1.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "FI": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "10 October 2014",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa1",
+      "outlook": "Stable",
+      "date": "29 July 2022",
+      "grade": "investment",
+      "score": 20
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "25 July 2025",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 19.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "FJ": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "22 September 2021",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Stable",
+      "date": "7 October 2022",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "FK": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "22 September 2021",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "FR": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "17 October 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "14 December 2024",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "6 March 2026",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "GA": {
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Negative",
+      "date": "12 September 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "CCC-",
+      "outlook": "Stable",
+      "date": "19 December 2025",
+      "grade": "speculative",
+      "score": 3
+    },
+    "averageScore": 4,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "GB": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "27 June 2016",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "20 October 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "22 March 2024",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "GE": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "11 October 2019",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Negative",
+      "date": "28 April 2022",
+      "grade": "speculative",
+      "score": 10
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 10,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "GG": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "13 January 2023",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "GH": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "7 November 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa3",
+      "outlook": "Stable",
+      "date": "9 June 2023",
+      "grade": "speculative",
+      "score": 3
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "16 June 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "GN": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "18 September 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "GR": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "18 April 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Positive",
+      "date": "18 September 2026",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "14 November 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 12.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "GT": {
+    "sp": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "23 May 2025",
+      "grade": "speculative",
+      "score": 11
+    },
+    "moodys": {
+      "rating": "Ba1",
+      "outlook": "Stable",
+      "date": "15 June 2022",
+      "grade": "speculative",
+      "score": 11
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "14 October 2025",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 11,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "HK": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "22 September 2017",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Negative",
+      "date": "6 December 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "23 May 2025",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "HN": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Negative",
+      "date": "19 July 2017",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Stable",
+      "date": "3 October 2023",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "HR": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "14 March 2026",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "7 November 2024",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "6 March 2026",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "HU": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Negative",
+      "date": "11 April 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Ba1",
+      "outlook": "Negative",
+      "date": "30 December 2025",
+      "grade": "speculative",
+      "score": 11
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Negative",
+      "date": "5 December 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "ID": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "31 May 2019",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "Baa2",
+      "outlook": "Negative",
+      "date": "5 February 2026",
+      "grade": "investment",
+      "score": 13
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Negative",
+      "date": "4 March 2026",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "IE": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "20 March 2026",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "21 April 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "7 November 2025",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 19,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "IL": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "1 October 2024",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Negative",
+      "date": "27 September 2024",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Negative",
+      "date": "31 March 2025",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 15.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "IM": {
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "27 October 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "IN": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "14 August 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "18 August 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "25 August 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "IQ": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "3 September 2015",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Stable",
+      "date": "24 November 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "24 November 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "IS": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Positive",
+      "date": "6 March 2026",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "19 September 2024",
+      "grade": "investment",
+      "score": 17
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "6 February 2026",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 11.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "IT": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "11 April 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "moodys": {
+      "rating": "Baa2",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "fitch": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "19 September 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "averageScore": 13.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "JE": {
+    "sp": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "16 January 2021",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "JM": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "25 September 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Positive",
+      "date": "18 October 2023",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "5 February 2026",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "JO": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "6 September 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Positive",
+      "date": "17 November 2022",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "7 May 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 8.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "JP": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "16 September 2015",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "8 November 2023",
+      "grade": "investment",
+      "score": 17
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "19 January 2026",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "KE": {
+    "sp": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "22 August 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Negative",
+      "date": "28 July 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "23 January 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "KG": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "28 March 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Negative",
+      "date": "17 October 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "24 April 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "KH": {
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Negative",
+      "date": "15 November 2022",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "KR": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "8 August 2016",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "Aa2",
+      "outlook": "Stable",
+      "date": "21 April 2022",
+      "grade": "investment",
+      "score": 19
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "6 September 2012",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "KW": {
+    "sp": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "investment",
+      "score": 18
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "26 May 2022",
+      "grade": "investment",
+      "score": 17
+    },
+    "fitch": {
+      "rating": "AA-",
+      "outlook": "Stable",
+      "date": "5 September 2025",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 17.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "KY": {
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "8 June 2023",
+      "grade": "investment",
+      "score": 18
+    },
+    "averageScore": 18,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "KZ": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Positive",
+      "date": "21 August 2026",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Positive",
+      "date": "9 September 2024",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "15 July 2025",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "LA": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Positive",
+      "date": "23 October 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "21 October 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "averageScore": 5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "LB": {
+    "sp": {
+      "rating": "D",
+      "outlook": "Stable",
+      "date": "11 March 2020",
+      "grade": "default",
+      "score": 1
+    },
+    "moodys": {
+      "rating": "C",
+      "outlook": "Stable",
+      "date": "13 December 2023",
+      "grade": "default",
+      "score": 1
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "23 July 2023",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 1,
+    "overallGrade": "default",
+    "isInvestmentGrade": false
+  },
+  "LI": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "2 December 1996",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "LK": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "19 September 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Positive",
+      "date": "23 December 2024",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "22 September 2026",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "LS": {
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "9 June 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "LT": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "31 May 2024",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "29 April 2022",
+      "grade": "investment",
+      "score": 16
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "24 October 2025",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "LU": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "28 April 1994",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "17 March 2023",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "31 October 2025",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "LV": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "31 May 2024",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "29 April 2022",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "7 November 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MA": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "26 September 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Ba1",
+      "outlook": "Positive",
+      "date": "6 March 2026",
+      "grade": "speculative",
+      "score": 11
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "17 September 2026",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 11.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MD": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "10 October 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Stable",
+      "date": "3 April 2026",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "27 February 2026",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "ME": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "30 August 2024",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Stable",
+      "date": "27 September 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 8.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MG": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Negative",
+      "date": "11 April 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MK": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "24 May 2013",
+      "grade": "speculative",
+      "score": 9
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "19 September 2025",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 10,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "ML": {
+    "moodys": {
+      "rating": "Caa2",
+      "outlook": "Stable",
+      "date": "9 September 2022",
+      "grade": "speculative",
+      "score": 4
+    },
+    "averageScore": 4,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MN": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "30 October 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "14 February 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "1 September 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 7.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MO": {
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Negative",
+      "date": "6 December 2022",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "11 February 2026",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 18.5,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MS": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "2 September 2011",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MT": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "14 October 2016",
+      "grade": "investment",
+      "score": 15
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "18 November 2022",
+      "grade": "investment",
+      "score": 16
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "5 September 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 16,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MU": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "21 July 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "28 July 2022",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MV": {
+    "moodys": {
+      "rating": "Caa2",
+      "outlook": "Stable",
+      "date": "11 September 2024",
+      "grade": "speculative",
+      "score": 4
+    },
+    "fitch": {
+      "rating": "CC",
+      "outlook": "Stable",
+      "date": "12 June 2025",
+      "grade": "speculative",
+      "score": 2
+    },
+    "averageScore": 3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "MX": {
+    "sp": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "26 March 2020",
+      "grade": "investment",
+      "score": 13
+    },
+    "moodys": {
+      "rating": "Baa2",
+      "outlook": "Stable",
+      "date": "8 July 2022",
+      "grade": "investment",
+      "score": 13
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "16 April 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MY": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "19 September 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "14 April 2023",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "8 December 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "averageScore": 14.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "MZ": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Negative",
+      "date": "22 November 2019",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa2",
+      "outlook": "Stable",
+      "date": "22 September 2023",
+      "grade": "speculative",
+      "score": 4
+    },
+    "fitch": {
+      "rating": "CCC",
+      "outlook": "Stable",
+      "date": "30 January 2025",
+      "grade": "speculative",
+      "score": 4
+    },
+    "averageScore": 4.3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "NA": {
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Stable",
+      "date": "5 April 2022",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 8.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "NG": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Positive",
+      "date": "26 March 2020",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Positive",
+      "date": "8 December 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Positive",
+      "date": "9 October 2026",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "NI": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "23 October 2024",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "30 March 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "23 May 2025",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "NL": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "20 November 2015",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "27 January 2023",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "16 January 2026",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "NO": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "9 July 1975",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "6 May 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "13 March 1995",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "NP": {
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "18 November 2025",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "NZ": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "21 February 2021",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "21 April 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "17 August 2025",
+      "grade": "investment",
+      "score": 20
+    },
+    "averageScore": 20.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "OM": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "27 September 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "7 December 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "8 December 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "PA": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "26 November 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "31 October 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "28 March 2024",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 11.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "PE": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "25 April 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Negative",
+      "date": "31 January 2023",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "20 October 2022",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "PG": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "29 April 2020",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Stable",
+      "date": "10 November 2022",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 6.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "PH": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Positive",
+      "date": "30 April 2019",
+      "grade": "investment",
+      "score": 14
+    },
+    "moodys": {
+      "rating": "Baa2",
+      "outlook": "Stable",
+      "date": "15 September 2022",
+      "grade": "investment",
+      "score": 13
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "22 May 2023",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "PK": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "24 July 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Positive",
+      "date": "13 August 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "15 April 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "PL": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "12 October 2018",
+      "grade": "investment",
+      "score": 15
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "29 April 2022",
+      "grade": "investment",
+      "score": 16
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Negative",
+      "date": "5 September 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "PT": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "29 August 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "17 November 2023",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A",
+      "outlook": "Stable",
+      "date": "12 September 2025",
+      "grade": "investment",
+      "score": 16
+    },
+    "averageScore": 16,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "PY": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "17 December 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "26 July 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Positive",
+      "date": "6 October 2025",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 11.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "QA": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "4 November 2022",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Positive",
+      "date": "2 November 2022",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "20 March 2024",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 18.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "RO": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Negative",
+      "date": "16 May 2014",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Baa3",
+      "outlook": "Stable",
+      "date": "3 November 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Negative",
+      "date": "17 December 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "RS": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "4 October 2024",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Stable",
+      "date": "8 September 2023",
+      "grade": "speculative",
+      "score": 10
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Positive",
+      "date": "9 August 2024",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 11,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "RU": {
+    "moodys": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "6 March 2022",
+      "grade": "unrated",
+      "score": 0
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "25 March 2022",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 1,
+    "overallGrade": "default",
+    "isInvestmentGrade": false
+  },
+  "RW": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "9 August 2019",
+      "grade": "speculative",
+      "score": 8
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Stable",
+      "date": "8 September 2023",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Negative",
+      "date": "4 April 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 7.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "SA": {
+    "sp": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "14 March 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "22 November 2024",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "5 April 2023",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SC": {
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "5 September 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 10,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "SE": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "16 February 2004",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "25 March 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "8 March 2004",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SG": {
+    "sp": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "6 March 1995",
+      "grade": "investment",
+      "score": 21
+    },
+    "moodys": {
+      "rating": "Aaa",
+      "outlook": "Stable",
+      "date": "17 May 2022",
+      "grade": "investment",
+      "score": 21
+    },
+    "fitch": {
+      "rating": "AAA",
+      "outlook": "Stable",
+      "date": "14 May 2003",
+      "grade": "investment",
+      "score": 21
+    },
+    "averageScore": 21,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SH": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Stable",
+      "date": "31 March 2023",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 12,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SI": {
+    "sp": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "6 June 2025",
+      "grade": "investment",
+      "score": 19
+    },
+    "moodys": {
+      "rating": "A2",
+      "outlook": "Stable",
+      "date": "27 February 2026",
+      "grade": "investment",
+      "score": 16
+    },
+    "fitch": {
+      "rating": "A+",
+      "outlook": "Stable",
+      "date": "3 October 2025",
+      "grade": "investment",
+      "score": 17
+    },
+    "averageScore": 17.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SK": {
+    "sp": {
+      "rating": "A",
+      "outlook": "Negative",
+      "date": "24 April 2026",
+      "grade": "investment",
+      "score": 16
+    },
+    "moodys": {
+      "rating": "A3",
+      "outlook": "Stable",
+      "date": "13 December 2024",
+      "grade": "investment",
+      "score": 15
+    },
+    "fitch": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "6 December 2024",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15.3,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SM": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "1 August 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB-",
+      "outlook": "Positive",
+      "date": "12 December 2025",
+      "grade": "investment",
+      "score": 12
+    },
+    "averageScore": 13,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "SN": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "14 November 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Ba3",
+      "outlook": "Stable",
+      "date": "18 March 2022",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "SR": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "6 December 2023",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa3",
+      "outlook": "Stable",
+      "date": "17 February 2023",
+      "grade": "speculative",
+      "score": 3
+    },
+    "fitch": {
+      "rating": "D",
+      "outlook": "Ratings withdrawn",
+      "date": "25 January 2022",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 3,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "SV": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "7 November 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "26 November 2024",
+      "grade": "speculative",
+      "score": 6
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "30 April 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "SZ": {
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Positive",
+      "date": "1 December 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TC": {
+    "sp": {
+      "rating": "A-",
+      "outlook": "Stable",
+      "date": "26 February 2025",
+      "grade": "investment",
+      "score": 15
+    },
+    "averageScore": 15,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "TD": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "28 October 2024",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TG": {
+    "sp": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "18 April 2025",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TH": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "26 August 2004",
+      "grade": "investment",
+      "score": 14
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Stable",
+      "date": "7 April 2022",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB+",
+      "outlook": "Negative",
+      "date": "24 September 2025",
+      "grade": "investment",
+      "score": 14
+    },
+    "averageScore": 14,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "TJ": {
+    "sp": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "16 August 2024",
+      "grade": "speculative",
+      "score": 7
+    },
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "12 October 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TM": {
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "2 August 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TN": {
+    "moodys": {
+      "rating": "Caa1",
+      "outlook": "Stable",
+      "date": "28 February 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "12 September 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 5.5,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TR": {
+    "sp": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "1 November 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "moodys": {
+      "rating": "B1",
+      "outlook": "Positive",
+      "date": "19 July 2024",
+      "grade": "speculative",
+      "score": 8
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "6 September 2024",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 8.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TT": {
+    "sp": {
+      "rating": "BBB-",
+      "outlook": "Negative",
+      "date": "26 March 2020",
+      "grade": "investment",
+      "score": 12
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Positive",
+      "date": "10 July 2023",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 11,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "TW": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "29 April 2022",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa3",
+      "outlook": "Stable",
+      "date": "22 September 2022",
+      "grade": "investment",
+      "score": 18
+    },
+    "fitch": {
+      "rating": "AA",
+      "outlook": "Stable",
+      "date": "10 September 2021",
+      "grade": "investment",
+      "score": 19
+    },
+    "averageScore": 19,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "TZ": {
+    "fitch": {
+      "rating": "B+",
+      "outlook": "Stable",
+      "date": "9 June 2023",
+      "grade": "speculative",
+      "score": 8
+    },
+    "averageScore": 8,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "UA": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "22 January 2026",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Ca",
+      "outlook": "Stable",
+      "date": "10 February 2023",
+      "grade": "speculative",
+      "score": 2
+    },
+    "fitch": {
+      "rating": "CCC",
+      "outlook": "Stable",
+      "date": "22 December 2025",
+      "grade": "speculative",
+      "score": 4
+    },
+    "averageScore": 3.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "UG": {
+    "sp": {
+      "rating": "B-",
+      "outlook": "Positive",
+      "date": "6 October 2023",
+      "grade": "speculative",
+      "score": 6
+    },
+    "moodys": {
+      "rating": "B2",
+      "outlook": "Negative",
+      "date": "18 November 2022",
+      "grade": "speculative",
+      "score": 7
+    },
+    "fitch": {
+      "rating": "B",
+      "outlook": "Stable",
+      "date": "30 August 2024",
+      "grade": "speculative",
+      "score": 7
+    },
+    "averageScore": 6.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "US": {
+    "sp": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "5 August 2011",
+      "grade": "investment",
+      "score": 20
+    },
+    "moodys": {
+      "rating": "Aa1",
+      "outlook": "Stable",
+      "date": "16 May 2025",
+      "grade": "investment",
+      "score": 20
+    },
+    "fitch": {
+      "rating": "AA+",
+      "outlook": "Stable",
+      "date": "1 August 2023",
+      "grade": "investment",
+      "score": 20
+    },
+    "averageScore": 20,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "UY": {
+    "sp": {
+      "rating": "BBB+",
+      "outlook": "Stable",
+      "date": "26 April 2023",
+      "grade": "investment",
+      "score": 14
+    },
+    "moodys": {
+      "rating": "Baa1",
+      "outlook": "Stable",
+      "date": "15 March 2024",
+      "grade": "investment",
+      "score": 14
+    },
+    "fitch": {
+      "rating": "BBB",
+      "outlook": "Stable",
+      "date": "7 June 2023",
+      "grade": "investment",
+      "score": 13
+    },
+    "averageScore": 13.7,
+    "overallGrade": "investment",
+    "isInvestmentGrade": true
+  },
+  "UZ": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Stable",
+      "date": "22 May 2026",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Stable",
+      "date": "25 June 2026",
+      "grade": "speculative",
+      "score": 10
+    },
+    "fitch": {
+      "rating": "BB",
+      "outlook": "Positive",
+      "date": "3 June 2026",
+      "grade": "speculative",
+      "score": 10
+    },
+    "averageScore": 10,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "VC": {
+    "moodys": {
+      "rating": "B3",
+      "outlook": "Stable",
+      "date": "1 March 2022",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 6,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "VE": {
+    "moodys": {
+      "rating": "C",
+      "outlook": "Ratings withdrawn",
+      "date": "9 March 2018",
+      "grade": "default",
+      "score": 1
+    },
+    "averageScore": 1,
+    "overallGrade": "default",
+    "isInvestmentGrade": false
+  },
+  "VN": {
+    "sp": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "26 May 2022",
+      "grade": "speculative",
+      "score": 11
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Stable",
+      "date": "6 September 2022",
+      "grade": "speculative",
+      "score": 10
+    },
+    "fitch": {
+      "rating": "BB+",
+      "outlook": "Stable",
+      "date": "8 December 2023",
+      "grade": "speculative",
+      "score": 11
+    },
+    "averageScore": 10.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "XK": {
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "6 January 2026",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "ZA": {
+    "sp": {
+      "rating": "BB",
+      "outlook": "Positive",
+      "date": "14 November 2025",
+      "grade": "speculative",
+      "score": 10
+    },
+    "moodys": {
+      "rating": "Ba2",
+      "outlook": "Stable",
+      "date": "1 April 2022",
+      "grade": "speculative",
+      "score": 10
+    },
+    "fitch": {
+      "rating": "BB-",
+      "outlook": "Stable",
+      "date": "15 December 2021",
+      "grade": "speculative",
+      "score": 9
+    },
+    "averageScore": 9.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  },
+  "ZM": {
+    "sp": {
+      "rating": "CCC+",
+      "outlook": "Stable",
+      "date": "21 November 2025",
+      "grade": "speculative",
+      "score": 5
+    },
+    "moodys": {
+      "rating": "Caa3",
+      "outlook": "Stable",
+      "date": "21 October 2022",
+      "grade": "speculative",
+      "score": 3
+    },
+    "fitch": {
+      "rating": "B-",
+      "outlook": "Stable",
+      "date": "28 November 2025",
+      "grade": "speculative",
+      "score": 6
+    },
+    "averageScore": 4.7,
+    "overallGrade": "speculative",
+    "isInvestmentGrade": false
+  }
+}

@@ -18,6 +18,7 @@ import { getTaxInfo } from "../utils/taxUtils";
 import { getEconomicBlocInfo } from "../utils/blocUtils";
 import { getGdpInfo } from "../utils/gdpUtils";
 import { getCoastline } from "../data/coastlineData";
+import { getCreditRatings } from "../utils/creditRatingUtils";
 
 const airportsData = airportsDataRaw as Record<string, AirportStats>;
 const citiesData = citiesDataRaw as Record<string, CityInfo[]>;
@@ -103,6 +104,7 @@ export function transformCountryDetails(
       tax: getTaxInfo(code),
       blocs: getEconomicBlocInfo(code),
       gdp,
+      creditRatings: getCreditRatings(code),
     };
   });
 
@@ -136,6 +138,7 @@ function getFallbackCountries(): UnifiedCountry[] {
       tax: getTaxInfo(c.code),
       blocs: getEconomicBlocInfo(c.code),
       gdp,
+      creditRatings: getCreditRatings(code),
     };
   });
 

@@ -37,7 +37,7 @@ export function ThemeContextProvider({
     if (saved && saved in COLOR_THEMES) {
       return saved as ThemeColorId;
     }
-    return "indigo";
+    return "ocean";
   });
 
   const setColorId = (newColorId: ThemeColorId) => {
@@ -45,7 +45,7 @@ export function ThemeContextProvider({
     localStorage.setItem("app-theme-color", newColorId);
   };
 
-  const currentColorTheme = COLOR_THEMES[colorId] || COLOR_THEMES.indigo;
+  const currentColorTheme = COLOR_THEMES[colorId] || COLOR_THEMES.ocean;
 
   const theme = useMemo(() => getTheme(colorId), [colorId]);
 

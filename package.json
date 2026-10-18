@@ -1,7 +1,7 @@
 {
   "name": "countries",
   "private": true,
-  "version": "0.0.72",
+  "version": "0.0.74",
   "homepage": "https://vivekgautham.github.io/countries",
   "type": "module",
   "scripts": {
@@ -14,6 +14,7 @@
     "update:airports": "node scripts/update-airports.js",
     "update:cities": "node scripts/update-cities.js",
     "update:gdp": "node scripts/update-gdp.js",
+    "update:ratings": "node scripts/update-ratings.js",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },

@@ -40,6 +40,11 @@ import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
 import { formatCoastline } from "../data/coastlineData";
 import {
+  getGradeBadgeConfig,
+  getOutlookBadgeConfig,
+  getRatingTierDescription,
+} from "../utils/creditRatingUtils";
+import {
   getG7BadgeConfig,
   getG20BadgeConfig,
   getGCCBadgeConfig,
@@ -244,6 +249,10 @@ export default function CountryDetailPage() {
   const eurozoneBadge = getEurozoneBadgeConfig();
   const natoBadge = getNATOBadgeConfig();
   const bricsBadge = getBRICSBadgeConfig();
+  const creditGradeBadge = getGradeBadgeConfig(
+    country.creditRatings?.overallGrade,
+    country.creditRatings?.isInvestmentGrade,
+  );
   const gdpRank = useMemo(
     () => (country ? getGdpRank(countries, country.code) : null),
     [countries, country],
@@ -485,6 +494,34 @@ export default function CountryDetailPage() {
                               backgroundColor: taxBadge.backgroundColor,
                               border: `1px solid ${taxBadge.borderColor}`,
                               color: taxBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
+                      {country.creditRatings && (
+                        <Tooltip
+                          title={`Sovereign Credit Rating: ${creditGradeBadge.label} • Average Score: ${country.creditRatings.averageScore || "N/A"}/21 (S&P: ${country.creditRatings.sp?.rating || "NR"}, Moody's: ${country.creditRatings.moodys?.rating || "NR"}, Fitch: ${country.creditRatings.fitch?.rating || "NR"})`}
+                          arrow
+                        >
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {creditGradeBadge.icon}
+                              </span>
+                            }
+                            label={`${creditGradeBadge.shortLabel}${country.creditRatings.sp?.rating ? ` (${country.creditRatings.sp.rating})` : country.creditRatings.moodys?.rating ? ` (${country.creditRatings.moodys.rating})` : ""}`}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: creditGradeBadge.bg,
+                              border: `1px solid ${creditGradeBadge.border}`,
+                              color: creditGradeBadge.color,
                             }}
                           />
                         </Tooltip>
@@ -2466,6 +2503,568 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
                 </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+
+          {/* Sovereign Credit Ratings Card */}
+          <Grid size={{ xs: 12 }}>
+            <Card
+              variant="outlined"
+              sx={{
+                p: { xs: 1.5, sm: 2 },
+                borderRadius: 3.5,
+                backgroundColor: "rgba(15, 23, 42, 0.65)",
+                borderColor:
+                  creditGradeBadge.border || "rgba(255, 255, 255, 0.1)",
+                boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+              }}
+            >
+              <CardContent
+                sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}
+              >
+                <Stack
+                  direction={{ xs: "column", md: "row" }}
+                  alignItems={{ xs: "flex-start", md: "center" }}
+                  justifyContent="space-between"
+                  flexWrap="wrap"
+                  gap={1.5}
+                >
+                  <Stack spacing={0.5}>
+                    <Stack direction="row" alignItems="center" spacing={1.5}>
+                      <Typography
+                        variant="h5"
+                        component="h2"
+                        sx={{ fontWeight: 800 }}
+                      >
+                        🏛️ Sovereign Credit Ratings
+                      </Typography>
+                      <Chip
+                        icon={
+                          <span style={{ fontSize: "0.85rem", marginLeft: 4 }}>
+                            {creditGradeBadge.icon}
+                          </span>
+                        }
+                        label={creditGradeBadge.label}
+                        sx={{
+                          fontWeight: 700,
+                          fontSize: "0.8rem",
+                          backgroundColor: creditGradeBadge.bg,
+                          border: `1px solid ${creditGradeBadge.border}`,
+                          color: creditGradeBadge.color,
+                        }}
+                      />
+                    </Stack>
+                    <Typography variant="caption" color="text.secondary">
+                      Long-term foreign-currency sovereign debt ratings
+                      evaluating sovereign default risk, fiscal capacity, and
+                      institutional stability
+                    </Typography>
+                  </Stack>
+
+                  {country.creditRatings?.averageScore && (
+                    <Chip
+                      label={`Composite Benchmark: ${country.creditRatings.averageScore} / 21`}
+                      size="small"
+                      sx={{
+                        fontWeight: 700,
+                        backgroundColor: "rgba(99, 102, 241, 0.15)",
+                        border: "1px solid rgba(99, 102, 241, 0.35)",
+                        color: "primary.light",
+                      }}
+                    />
+                  )}
+                </Stack>
+
+                <Divider />
+
+                {/* Agencies Grid */}
+                <Grid container spacing={2}>
+                  {/* S&P Global */}
+                  <Grid size={{ xs: 12, md: 4 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        backgroundColor: "rgba(30, 41, 59, 0.45)",
+                        borderColor: country.creditRatings?.sp
+                          ? "rgba(255, 255, 255, 0.12)"
+                          : "rgba(255, 255, 255, 0.05)",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        gap: 1.5,
+                      }}
+                    >
+                      <Stack spacing={1}>
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                        >
+                          <Typography
+                            variant="subtitle2"
+                            sx={{ fontWeight: 800, color: "text.primary" }}
+                          >
+                            Standard &amp; Poor&apos;s (S&amp;P)
+                          </Typography>
+                          {country.creditRatings?.sp ? (
+                            <Chip
+                              label={
+                                country.creditRatings.sp.grade === "investment"
+                                  ? "Investment"
+                                  : "Speculative"
+                              }
+                              size="small"
+                              sx={{
+                                height: 20,
+                                fontSize: "0.68rem",
+                                fontWeight: 700,
+                                backgroundColor:
+                                  country.creditRatings.sp.grade ===
+                                  "investment"
+                                    ? "rgba(16, 185, 129, 0.15)"
+                                    : "rgba(245, 158, 11, 0.15)",
+                                color:
+                                  country.creditRatings.sp.grade ===
+                                  "investment"
+                                    ? "#34d399"
+                                    : "#fbbf24",
+                              }}
+                            />
+                          ) : (
+                            <Chip
+                              label="Unrated"
+                              size="small"
+                              sx={{ height: 20, fontSize: "0.68rem" }}
+                            />
+                          )}
+                        </Stack>
+
+                        {country.creditRatings?.sp ? (
+                          <>
+                            <Stack
+                              direction="row"
+                              alignItems="baseline"
+                              spacing={1.5}
+                            >
+                              <Typography
+                                variant="h4"
+                                sx={{
+                                  fontWeight: 900,
+                                  letterSpacing: "-0.02em",
+                                  color:
+                                    country.creditRatings.sp.grade ===
+                                    "investment"
+                                      ? "#34d399"
+                                      : country.creditRatings.sp.grade ===
+                                          "default"
+                                        ? "#f87171"
+                                        : "#fbbf24",
+                                }}
+                              >
+                                {country.creditRatings.sp.rating}
+                              </Typography>
+                              {(() => {
+                                const ob = getOutlookBadgeConfig(
+                                  country.creditRatings.sp.outlook,
+                                );
+                                return (
+                                  <Chip
+                                    size="small"
+                                    icon={
+                                      <span
+                                        style={{
+                                          fontSize: "0.75rem",
+                                          marginLeft: 4,
+                                        }}
+                                      >
+                                        {ob.icon}
+                                      </span>
+                                    }
+                                    label={ob.label}
+                                    sx={{
+                                      height: 22,
+                                      fontSize: "0.72rem",
+                                      fontWeight: 700,
+                                      backgroundColor: ob.bg,
+                                      color: ob.color,
+                                      border: `1px solid ${ob.border}`,
+                                    }}
+                                  />
+                                );
+                              })()}
+                            </Stack>
+                            <Typography
+                              variant="caption"
+                              sx={{ color: "text.secondary", lineHeight: 1.4 }}
+                            >
+                              {getRatingTierDescription(
+                                country.creditRatings.sp.rating,
+                                "sp",
+                              )}
+                            </Typography>
+                          </>
+                        ) : (
+                          <Typography
+                            variant="body2"
+                            sx={{ color: "text.secondary", py: 1 }}
+                          >
+                            Not rated by S&amp;P Global Ratings
+                          </Typography>
+                        )}
+                      </Stack>
+
+                      {country.creditRatings?.sp?.date && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                            pt: 1,
+                            borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                          }}
+                        >
+                          Action Date: {country.creditRatings.sp.date}
+                        </Typography>
+                      )}
+                    </Paper>
+                  </Grid>
+
+                  {/* Moody's */}
+                  <Grid size={{ xs: 12, md: 4 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        backgroundColor: "rgba(30, 41, 59, 0.45)",
+                        borderColor: country.creditRatings?.moodys
+                          ? "rgba(255, 255, 255, 0.12)"
+                          : "rgba(255, 255, 255, 0.05)",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        gap: 1.5,
+                      }}
+                    >
+                      <Stack spacing={1}>
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                        >
+                          <Typography
+                            variant="subtitle2"
+                            sx={{ fontWeight: 800, color: "text.primary" }}
+                          >
+                            Moody&apos;s Ratings
+                          </Typography>
+                          {country.creditRatings?.moodys ? (
+                            <Chip
+                              label={
+                                country.creditRatings.moodys.grade ===
+                                "investment"
+                                  ? "Investment"
+                                  : "Speculative"
+                              }
+                              size="small"
+                              sx={{
+                                height: 20,
+                                fontSize: "0.68rem",
+                                fontWeight: 700,
+                                backgroundColor:
+                                  country.creditRatings.moodys.grade ===
+                                  "investment"
+                                    ? "rgba(16, 185, 129, 0.15)"
+                                    : "rgba(245, 158, 11, 0.15)",
+                                color:
+                                  country.creditRatings.moodys.grade ===
+                                  "investment"
+                                    ? "#34d399"
+                                    : "#fbbf24",
+                              }}
+                            />
+                          ) : (
+                            <Chip
+                              label="Unrated"
+                              size="small"
+                              sx={{ height: 20, fontSize: "0.68rem" }}
+                            />
+                          )}
+                        </Stack>
+
+                        {country.creditRatings?.moodys ? (
+                          <>
+                            <Stack
+                              direction="row"
+                              alignItems="baseline"
+                              spacing={1.5}
+                            >
+                              <Typography
+                                variant="h4"
+                                sx={{
+                                  fontWeight: 900,
+                                  letterSpacing: "-0.02em",
+                                  color:
+                                    country.creditRatings.moodys.grade ===
+                                    "investment"
+                                      ? "#34d399"
+                                      : country.creditRatings.moodys.grade ===
+                                          "default"
+                                        ? "#f87171"
+                                        : "#fbbf24",
+                                }}
+                              >
+                                {country.creditRatings.moodys.rating}
+                              </Typography>
+                              {(() => {
+                                const ob = getOutlookBadgeConfig(
+                                  country.creditRatings.moodys.outlook,
+                                );
+                                return (
+                                  <Chip
+                                    size="small"
+                                    icon={
+                                      <span
+                                        style={{
+                                          fontSize: "0.75rem",
+                                          marginLeft: 4,
+                                        }}
+                                      >
+                                        {ob.icon}
+                                      </span>
+                                    }
+                                    label={ob.label}
+                                    sx={{
+                                      height: 22,
+                                      fontSize: "0.72rem",
+                                      fontWeight: 700,
+                                      backgroundColor: ob.bg,
+                                      color: ob.color,
+                                      border: `1px solid ${ob.border}`,
+                                    }}
+                                  />
+                                );
+                              })()}
+                            </Stack>
+                            <Typography
+                              variant="caption"
+                              sx={{ color: "text.secondary", lineHeight: 1.4 }}
+                            >
+                              {getRatingTierDescription(
+                                country.creditRatings.moodys.rating,
+                                "moodys",
+                              )}
+                            </Typography>
+                          </>
+                        ) : (
+                          <Typography
+                            variant="body2"
+                            sx={{ color: "text.secondary", py: 1 }}
+                          >
+                            Not rated by Moody&apos;s Ratings
+                          </Typography>
+                        )}
+                      </Stack>
+
+                      {country.creditRatings?.moodys?.date && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                            pt: 1,
+                            borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                          }}
+                        >
+                          Action Date: {country.creditRatings.moodys.date}
+                        </Typography>
+                      )}
+                    </Paper>
+                  </Grid>
+
+                  {/* Fitch Ratings */}
+                  <Grid size={{ xs: 12, md: 4 }}>
+                    <Paper
+                      variant="outlined"
+                      sx={{
+                        p: 2,
+                        borderRadius: 2.5,
+                        backgroundColor: "rgba(30, 41, 59, 0.45)",
+                        borderColor: country.creditRatings?.fitch
+                          ? "rgba(255, 255, 255, 0.12)"
+                          : "rgba(255, 255, 255, 0.05)",
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        gap: 1.5,
+                      }}
+                    >
+                      <Stack spacing={1}>
+                        <Stack
+                          direction="row"
+                          justifyContent="space-between"
+                          alignItems="center"
+                        >
+                          <Typography
+                            variant="subtitle2"
+                            sx={{ fontWeight: 800, color: "text.primary" }}
+                          >
+                            Fitch Ratings
+                          </Typography>
+                          {country.creditRatings?.fitch ? (
+                            <Chip
+                              label={
+                                country.creditRatings.fitch.grade ===
+                                "investment"
+                                  ? "Investment"
+                                  : "Speculative"
+                              }
+                              size="small"
+                              sx={{
+                                height: 20,
+                                fontSize: "0.68rem",
+                                fontWeight: 700,
+                                backgroundColor:
+                                  country.creditRatings.fitch.grade ===
+                                  "investment"
+                                    ? "rgba(16, 185, 129, 0.15)"
+                                    : "rgba(245, 158, 11, 0.15)",
+                                color:
+                                  country.creditRatings.fitch.grade ===
+                                  "investment"
+                                    ? "#34d399"
+                                    : "#fbbf24",
+                              }}
+                            />
+                          ) : (
+                            <Chip
+                              label="Unrated"
+                              size="small"
+                              sx={{ height: 20, fontSize: "0.68rem" }}
+                            />
+                          )}
+                        </Stack>
+
+                        {country.creditRatings?.fitch ? (
+                          <>
+                            <Stack
+                              direction="row"
+                              alignItems="baseline"
+                              spacing={1.5}
+                            >
+                              <Typography
+                                variant="h4"
+                                sx={{
+                                  fontWeight: 900,
+                                  letterSpacing: "-0.02em",
+                                  color:
+                                    country.creditRatings.fitch.grade ===
+                                    "investment"
+                                      ? "#34d399"
+                                      : country.creditRatings.fitch.grade ===
+                                          "default"
+                                        ? "#f87171"
+                                        : "#fbbf24",
+                                }}
+                              >
+                                {country.creditRatings.fitch.rating}
+                              </Typography>
+                              {(() => {
+                                const ob = getOutlookBadgeConfig(
+                                  country.creditRatings.fitch.outlook,
+                                );
+                                return (
+                                  <Chip
+                                    size="small"
+                                    icon={
+                                      <span
+                                        style={{
+                                          fontSize: "0.75rem",
+                                          marginLeft: 4,
+                                        }}
+                                      >
+                                        {ob.icon}
+                                      </span>
+                                    }
+                                    label={ob.label}
+                                    sx={{
+                                      height: 22,
+                                      fontSize: "0.72rem",
+                                      fontWeight: 700,
+                                      backgroundColor: ob.bg,
+                                      color: ob.color,
+                                      border: `1px solid ${ob.border}`,
+                                    }}
+                                  />
+                                );
+                              })()}
+                            </Stack>
+                            <Typography
+                              variant="caption"
+                              sx={{ color: "text.secondary", lineHeight: 1.4 }}
+                            >
+                              {getRatingTierDescription(
+                                country.creditRatings.fitch.rating,
+                                "fitch",
+                              )}
+                            </Typography>
+                          </>
+                        ) : (
+                          <Typography
+                            variant="body2"
+                            sx={{ color: "text.secondary", py: 1 }}
+                          >
+                            Not rated by Fitch Ratings
+                          </Typography>
+                        )}
+                      </Stack>
+
+                      {country.creditRatings?.fitch?.date && (
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            color: "text.secondary",
+                            fontSize: "0.7rem",
+                            pt: 1,
+                            borderTop: "1px solid rgba(255, 255, 255, 0.05)",
+                          }}
+                        >
+                          Action Date: {country.creditRatings.fitch.date}
+                        </Typography>
+                      )}
+                    </Paper>
+                  </Grid>
+                </Grid>
+
+                <Box
+                  sx={{
+                    pt: 1,
+                    borderTop: "1px solid rgba(255, 255, 255, 0.06)",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                    gap: 1,
+                  }}
+                >
+                  <Typography variant="caption" color="text.secondary">
+                    Ratings benchmarked on a 21-tier linear scale from AAA/Aaa
+                    (Prime, 21) down to D/C (Default, 1).
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    sx={{ color: "text.secondary" }}
+                  >
+                    Sources: Standard &amp; Poor&apos;s, Moody&apos;s, Fitch
+                    Ratings
+                  </Typography>
+                </Box>
               </CardContent>
             </Card>
           </Grid>

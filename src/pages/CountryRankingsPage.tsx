@@ -10,6 +10,7 @@ import LocationCityIcon from "@mui/icons-material/LocationCity";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PublicIcon from "@mui/icons-material/Public";
 import SearchIcon from "@mui/icons-material/Search";
+import SecurityIcon from "@mui/icons-material/Security";
 import ShareIcon from "@mui/icons-material/Share";
 import TerrainIcon from "@mui/icons-material/Terrain";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
@@ -27,6 +28,7 @@ import {
   Container,
   Divider,
   FormControl,
+  Grid,
   IconButton,
   InputAdornment,
   LinearProgress,
@@ -74,6 +76,7 @@ export interface RankingMetricConfig {
   id: string;
   category:
     | "economy"
+    | "credit"
     | "demographics"
     | "geography"
     | "growth"
@@ -86,6 +89,7 @@ export interface RankingMetricConfig {
   source: string;
   sortDirection: "desc" | "asc";
   icon: React.ReactNode;
+  includeUnrated?: boolean;
   getValue: (country: UnifiedCountry) => number | undefined | null;
   formatValue: (val: number, country: UnifiedCountry) => string;
   getSecondaryValue?: (country: UnifiedCountry, globalSum?: number) => string;
@@ -100,6 +104,15 @@ export const RANKING_CATEGORIES = [
     emoji: "🥇",
     description:
       "Global leaders ranked by nominal output, purchasing power parity (PPP), and living standards.",
+  },
+  {
+    id: "credit",
+    label: "Sovereign Credit Ratings",
+    shortLabel: "Credit Ratings",
+    icon: <SecurityIcon sx={{ fontSize: 18 }} />,
+    emoji: "🏛️",
+    description:
+      "Global sovereign debt creditworthiness, investment grade stability, and default risk benchmarks across S&P, Moody's, and Fitch.",
   },
   {
     id: "demographics",
@@ -233,6 +246,110 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     formatValue: (val) => formatPppPerCapita(val),
     getSecondaryValue: (c) =>
       c.population ? `Pop: ${formatNumber(c.population)}` : "—",
+  },
+  // Sovereign Credit Ratings
+  {
+    id: "credit_rating",
+    category: "credit",
+    label: "Sovereign Credit Rating (Composite Benchmark)",
+    shortLabel: "Composite Credit Score",
+    unit: "/ 21 scale",
+    description:
+      "Composite sovereign creditworthiness score (1-21) benchmarked across Standard & Poor's, Moody's, and Fitch foreign-currency debt ratings.",
+    source: "S&P / Moody's / Fitch",
+    sortDirection: "desc",
+    icon: <SecurityIcon sx={{ fontSize: 18 }} />,
+    includeUnrated: true,
+    getValue: (c) => c.creditRatings?.averageScore,
+    formatValue: (val, c) => {
+      if (val === null) return "Unrated";
+      const top =
+        c.creditRatings?.sp?.rating ||
+        c.creditRatings?.moodys?.rating ||
+        c.creditRatings?.fitch?.rating;
+      return top ? `${top} (${val}/21)` : `${val}/21`;
+    },
+    getSecondaryValue: (c) => {
+      const parts: string[] = [];
+      if (c.creditRatings?.sp) parts.push(`S&P: ${c.creditRatings.sp.rating}`);
+      if (c.creditRatings?.moodys)
+        parts.push(`Moody's: ${c.creditRatings.moodys.rating}`);
+      if (c.creditRatings?.fitch)
+        parts.push(`Fitch: ${c.creditRatings.fitch.rating}`);
+      return parts.join(" • ") || "Unrated by S&P, Moody's & Fitch";
+    },
+  },
+  {
+    id: "credit_sp",
+    category: "credit",
+    label: "Standard & Poor's (S&P) Sovereign Rating",
+    shortLabel: "S&P Global Rating",
+    unit: "grade scale",
+    description:
+      "Foreign-currency long-term sovereign debt issuer rating evaluated by Standard & Poor's Global Ratings.",
+    source: "Standard & Poor's (S&P)",
+    sortDirection: "desc",
+    icon: <SecurityIcon sx={{ fontSize: 18 }} />,
+    includeUnrated: true,
+    getValue: (c) => c.creditRatings?.sp?.score,
+    formatValue: (val, c) => {
+      if (val === null || !c.creditRatings?.sp) return "Unrated";
+      return `${c.creditRatings.sp.rating} (${val}/21)`;
+    },
+    getSecondaryValue: (c) => {
+      if (!c.creditRatings?.sp) return "Not rated by Standard & Poor's";
+      const out = c.creditRatings.sp.outlook;
+      const date = c.creditRatings.sp.date;
+      return `Outlook: ${out}${date ? ` • ${date}` : ""}`;
+    },
+  },
+  {
+    id: "credit_moodys",
+    category: "credit",
+    label: "Moody's Sovereign Rating",
+    shortLabel: "Moody's Rating",
+    unit: "grade scale",
+    description:
+      "Long-term sovereign government debt obligation rating assessed by Moody's Investors Service.",
+    source: "Moody's",
+    sortDirection: "desc",
+    icon: <SecurityIcon sx={{ fontSize: 18 }} />,
+    includeUnrated: true,
+    getValue: (c) => c.creditRatings?.moodys?.score,
+    formatValue: (val, c) => {
+      if (val === null || !c.creditRatings?.moodys) return "Unrated";
+      return `${c.creditRatings.moodys.rating} (${val}/21)`;
+    },
+    getSecondaryValue: (c) => {
+      if (!c.creditRatings?.moodys) return "Not rated by Moody's";
+      const out = c.creditRatings.moodys.outlook;
+      const date = c.creditRatings.moodys.date;
+      return `Outlook: ${out}${date ? ` • ${date}` : ""}`;
+    },
+  },
+  {
+    id: "credit_fitch",
+    category: "credit",
+    label: "Fitch Sovereign Rating",
+    shortLabel: "Fitch Rating",
+    unit: "grade scale",
+    description:
+      "Foreign-currency long-term sovereign default rating evaluated by Fitch Ratings.",
+    source: "Fitch Ratings",
+    sortDirection: "desc",
+    icon: <SecurityIcon sx={{ fontSize: 18 }} />,
+    includeUnrated: true,
+    getValue: (c) => c.creditRatings?.fitch?.score,
+    formatValue: (val, c) => {
+      if (val === null || !c.creditRatings?.fitch) return "Unrated";
+      return `${c.creditRatings.fitch.rating} (${val}/21)`;
+    },
+    getSecondaryValue: (c) => {
+      if (!c.creditRatings?.fitch) return "Not rated by Fitch Ratings";
+      const out = c.creditRatings.fitch.outlook;
+      const date = c.creditRatings.fitch.date;
+      return `Outlook: ${out}${date ? ` • ${date}` : ""}`;
+    },
   },
 
   // 2. Demographics & Population
@@ -595,11 +712,97 @@ export default function CountryRankingsPage() {
     }
   };
 
+  // Credit Ratings Dashboard Statistics
+  const creditStats = useMemo(() => {
+    let rated = 0;
+    let investment = 0;
+    let speculative = 0;
+    let defaultCount = 0;
+    let unrated = 0;
+
+    for (const c of countries) {
+      const score = c.creditRatings?.averageScore;
+      if (typeof score === "number" && !isNaN(score)) {
+        rated++;
+        if (score >= 12) {
+          investment++;
+        } else if (score >= 4) {
+          speculative++;
+        } else {
+          defaultCount++;
+        }
+      } else {
+        unrated++;
+      }
+    }
+
+    const total = countries.length || 1;
+    return {
+      total,
+      rated,
+      unrated,
+      investment,
+      speculative,
+      defaultCount,
+      investmentPct: Math.round((investment / (rated || 1)) * 100),
+      speculativePct: Math.round((speculative / (rated || 1)) * 100),
+      defaultPct: Math.round((defaultCount / (rated || 1)) * 100),
+      ratedPct: Math.round((rated / total) * 100),
+    };
+  }, [countries]);
+
   // Compute sorted & ranked countries
   const rankedCountries = useMemo(() => {
     if (!countries.length || !currentMetric) return [];
 
-    // Filter valid countries that have this metric value
+    const isCreditMetric =
+      Boolean(currentMetric.includeUnrated) ||
+      currentMetric.category === "credit";
+
+    if (isCreditMetric) {
+      const rated: { country: UnifiedCountry; value: number }[] = [];
+      const unrated: { country: UnifiedCountry; value: null }[] = [];
+
+      for (const c of countries) {
+        const val = currentMetric.getValue(c);
+        if (typeof val === "number" && !isNaN(val)) {
+          rated.push({ country: c, value: val });
+        } else {
+          unrated.push({ country: c, value: null });
+        }
+      }
+
+      // Sort rated countries by score
+      rated.sort((a, b) => {
+        if (currentMetric.sortDirection === "asc") {
+          return a.value - b.value;
+        }
+        return b.value - a.value;
+      });
+
+      // Sort unrated countries alphabetically by name
+      unrated.sort((a, b) => a.country.name.localeCompare(b.country.name));
+
+      // Map rated with rank 1..N
+      const rankedRated = rated.map((item, index) => ({
+        country: item.country,
+        value: item.value as number | null,
+        rank: (index + 1) as number | null,
+        isUnrated: false,
+      }));
+
+      // Map unrated with rank null (at the bottom)
+      const rankedUnrated = unrated.map((item) => ({
+        country: item.country,
+        value: null as number | null,
+        rank: null as number | null,
+        isUnrated: true,
+      }));
+
+      return [...rankedRated, ...rankedUnrated];
+    }
+
+    // Default behavior for other metrics
     const withMetric = countries
       .map((c) => {
         const val = currentMetric.getValue(c);
@@ -624,7 +827,9 @@ export default function CountryRankingsPage() {
     // Assign true rank (1-based index)
     return withMetric.map((item, index) => ({
       ...item,
-      rank: index + 1,
+      value: item.value as number | null,
+      rank: (index + 1) as number | null,
+      isUnrated: false,
     }));
   }, [countries, currentMetric]);
 
@@ -658,31 +863,49 @@ export default function CountryRankingsPage() {
 
   // Top 3 Podium countries from overall unfiltered ranking (so podium always represents true #1, #2, #3)
   const podiumTop3 = useMemo(() => {
-    return rankedCountries.slice(0, 3);
+    return rankedCountries
+      .filter(
+        (item): item is typeof item & { value: number; rank: number } =>
+          typeof item.value === "number" && typeof item.rank === "number",
+      )
+      .slice(0, 3);
   }, [rankedCountries]);
 
   // Total global sum across all ranked countries for aggregate volume metrics (e.g. World GDP)
   const globalSum = useMemo(() => {
     if (!rankedCountries.length) return 0;
     return rankedCountries.reduce(
-      (acc, curr) => acc + (curr.value > 0 ? curr.value : 0),
+      (acc, curr) =>
+        acc +
+        (typeof curr.value === "number" && curr.value > 0 ? curr.value : 0),
       0,
     );
   }, [rankedCountries]);
 
   // Maximum value for relative progress bar
   const benchmarkValue = useMemo(() => {
-    if (!rankedCountries.length) return 1;
+    const valid = rankedCountries.filter(
+      (item): item is typeof item & { value: number } =>
+        typeof item.value === "number",
+    );
+    if (!valid.length) return 1;
     if (currentMetric.sortDirection === "desc") {
-      return rankedCountries[0].value || 1;
+      return valid[0].value || 1;
     } else {
       // For ascending (lowest CO2), worst is last
-      return rankedCountries[rankedCountries.length - 1].value || 1;
+      return valid[valid.length - 1].value || 1;
     }
   }, [rankedCountries, currentMetric.sortDirection]);
 
   // Function to calculate bar percentage and contextual badge label
-  const getMetricBarInfo = (val: number) => {
+  const getMetricBarInfo = (val: number | null) => {
+    if (val === null || val === undefined) {
+      return {
+        barPercent: 0,
+        label: "Unrated",
+        tooltip: "No official sovereign credit rating published",
+      };
+    }
     // 1. Nominal GDP: % Share of Total Global GDP (e.g. US ~26.0%, China ~16.5%, Germany ~4.3%)
     if (currentMetric.id === "gdp_nominal" && globalSum > 0) {
       const share = (val / globalSum) * 100;
@@ -768,6 +991,20 @@ export default function CountryRankingsPage() {
       };
     }
 
+    // 6. Credit Rating: Score out of 21
+    if (
+      currentMetric.category === "credit" ||
+      currentMetric.id === "credit_rating" ||
+      currentMetric.id.startsWith("credit_")
+    ) {
+      const pct = Math.max(5, Math.min(100, (val / 21) * 100));
+      return {
+        barPercent: pct,
+        label: val >= 12 ? "Investment Grade" : "Speculative Grade",
+        tooltip: `Score: ${val}/21 (${val >= 12 ? "Investment Grade" : "Speculative / High Yield"})`,
+      };
+    }
+
     // 4. Default / Relative to #1 Benchmark
     if (currentMetric.sortDirection === "desc") {
       if (benchmarkValue <= 0)
@@ -798,7 +1035,23 @@ export default function CountryRankingsPage() {
     }
   };
 
-  const getRankBadge = (rank: number) => {
+  const getRankBadge = (rank: number | null) => {
+    if (rank === null || rank === undefined) {
+      return (
+        <Chip
+          label="Unrated"
+          size="small"
+          sx={{
+            fontWeight: 700,
+            fontSize: "0.68rem",
+            height: 20,
+            backgroundColor: "rgba(255, 255, 255, 0.04)",
+            color: "text.secondary",
+            border: "1px solid rgba(255, 255, 255, 0.1)",
+          }}
+        />
+      );
+    }
     if (rank === 1) {
       return (
         <Chip
@@ -1166,6 +1419,233 @@ export default function CountryRankingsPage() {
         })}
       </Box>
 
+      {/* Credit Ratings Dashboard Panel */}
+      {(activeCategory === "credit" || currentMetric.category === "credit") && (
+        <Card
+          elevation={0}
+          sx={{
+            mb: 4,
+            borderRadius: 3.5,
+            background:
+              "linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%)",
+            border: "1px solid rgba(99, 102, 241, 0.25)",
+            p: { xs: 2, sm: 2.5 },
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <Stack spacing={2}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              justifyContent="space-between"
+              alignItems={{ xs: "flex-start", sm: "center" }}
+              flexWrap="wrap"
+              gap={1.5}
+            >
+              <Box>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: "1.15rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <span>🏛️</span> Sovereign Credit Ratings Dashboard
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mt: 0.25 }}
+                >
+                  Global sovereign creditworthiness benchmarks across Standard
+                  &amp; Poor&apos;s, Moody&apos;s, and Fitch Ratings
+                </Typography>
+              </Box>
+
+              <Chip
+                label={`${creditStats.rated} Rated • ${creditStats.unrated} Unrated Nations`}
+                size="small"
+                sx={{
+                  fontWeight: 700,
+                  fontSize: "0.78rem",
+                  backgroundColor: "rgba(99, 102, 241, 0.15)",
+                  color: "#a5b4fc",
+                  border: "1px solid rgba(99, 102, 241, 0.35)",
+                }}
+              />
+            </Stack>
+
+            {/* 4 Stat Cards Grid */}
+            <Grid container spacing={2}>
+              {/* Investment Grade */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(16, 185, 129, 0.08)",
+                    borderColor: "rgba(16, 185, 129, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#34d399",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🛡️ Investment Grade
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#34d399" }}
+                    >
+                      {creditStats.investment}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {creditStats.investmentPct}% of rated nations (AAA to
+                      BBB-) • High safety &amp; fiscal capacity
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Speculative Grade */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(245, 158, 11, 0.08)",
+                    borderColor: "rgba(245, 158, 11, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#fbbf24",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      ⚠️ Speculative Grade
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#fbbf24" }}
+                    >
+                      {creditStats.speculative}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {creditStats.speculativePct}% of rated nations (BB+ to B-)
+                      • High yield &amp; moderate credit risk
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Default / Distressed */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(239, 68, 68, 0.08)",
+                    borderColor: "rgba(239, 68, 68, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#f87171",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🚨 Default / Distressed
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#f87171" }}
+                    >
+                      {creditStats.defaultCount}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {creditStats.defaultPct}% of rated nations (CCC to D) •
+                      Highly vulnerable or in sovereign default
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Unrated Nations */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(255, 255, 255, 0.04)",
+                    borderColor: "rgba(255, 255, 255, 0.1)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "text.secondary",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      ⚪ Unrated Nations
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "text.primary" }}
+                    >
+                      {creditStats.unrated}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      Nations with no public ratings from Big Three agencies •
+                      Positioned at bottom of table
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Stack>
+        </Card>
+      )}
+
       {/* Indicator Overview Card */}
       <Card
         elevation={0}
@@ -1197,7 +1677,12 @@ export default function CountryRankingsPage() {
                 {currentMetric.label}
               </Typography>
               <Chip
-                label={`Ranked across ${rankedCountries.length} countries`}
+                label={
+                  currentMetric.includeUnrated ||
+                  currentMetric.category === "credit"
+                    ? `${rankedCountries.filter((i) => i.value !== null).length} Rated • ${rankedCountries.filter((i) => i.value === null).length} Unrated Nations`
+                    : `Ranked across ${rankedCountries.length} countries`
+                }
                 size="small"
                 sx={{
                   height: 22,
@@ -1742,8 +2227,26 @@ export default function CountryRankingsPage() {
         >
           <Typography variant="caption" sx={{ color: "text.secondary" }}>
             Showing <strong>{displayedRankings.length}</strong> of{" "}
-            <strong>{filteredRankings.length}</strong> matching entries (Ranked
-            globally from <strong>{rankedCountries.length}</strong> nations)
+            <strong>{filteredRankings.length}</strong> matching entries (
+            {currentMetric.includeUnrated ||
+            currentMetric.category === "credit" ? (
+              <>
+                <strong>
+                  {rankedCountries.filter((i) => i.value !== null).length}
+                </strong>{" "}
+                rated •{" "}
+                <strong>
+                  {rankedCountries.filter((i) => i.value === null).length}
+                </strong>{" "}
+                unrated
+              </>
+            ) : (
+              <>
+                Ranked globally from <strong>{rankedCountries.length}</strong>{" "}
+                nations
+              </>
+            )}
+            )
           </Typography>
 
           {(searchTerm || selectedRegion !== "All") && (
@@ -1804,7 +2307,10 @@ export default function CountryRankingsPage() {
                   ? "Land Area"
                   : currentMetric.id === "coast_to_area_ratio"
                     ? "Coastline Length"
-                    : "Population"}
+                    : currentMetric.category === "credit" ||
+                        currentMetric.includeUnrated
+                      ? "Credit Tier"
+                      : "Population"}
               </TableCell>
               <TableCell sx={{ width: 160 }}>Secondary Context</TableCell>
               <TableCell align="right" sx={{ width: 110 }}>
@@ -1837,7 +2343,8 @@ export default function CountryRankingsPage() {
             ) : (
               displayedRankings.map((item) => {
                 const barInfo = getMetricBarInfo(item.value);
-                const isPodium = item.rank <= 3;
+                const isPodium =
+                  typeof item.rank === "number" && item.rank <= 3;
 
                 return (
                   <TableRow
@@ -1921,13 +2428,17 @@ export default function CountryRankingsPage() {
                                     ? "#cbd5e1"
                                     : item.rank === 3
                                       ? "#fdba74"
-                                      : "text.primary",
+                                      : item.value === null
+                                        ? "text.secondary"
+                                        : "text.primary",
                             }}
                           >
-                            {currentMetric.formatValue(
-                              item.value,
-                              item.country,
-                            )}
+                            {item.value !== null
+                              ? currentMetric.formatValue(
+                                  item.value,
+                                  item.country,
+                                )
+                              : "Unrated"}
                           </Typography>
 
                           <Tooltip title={barInfo.tooltip} arrow>
@@ -1969,34 +2480,79 @@ export default function CountryRankingsPage() {
                             "& .MuiLinearProgress-bar": {
                               borderRadius: 3,
                               background:
-                                item.rank === 1
-                                  ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
-                                  : item.rank === 2
-                                    ? "linear-gradient(90deg, #94a3b8, #cbd5e1)"
-                                    : item.rank === 3
-                                      ? "linear-gradient(90deg, #b45309, #f59e0b)"
-                                      : "linear-gradient(90deg, #6366f1, #a855f7)",
+                                item.value === null
+                                  ? "rgba(255, 255, 255, 0.15)"
+                                  : item.rank === 1
+                                    ? "linear-gradient(90deg, #f59e0b, #fbbf24)"
+                                    : item.rank === 2
+                                      ? "linear-gradient(90deg, #94a3b8, #cbd5e1)"
+                                      : item.rank === 3
+                                        ? "linear-gradient(90deg, #b45309, #f59e0b)"
+                                        : "linear-gradient(90deg, #6366f1, #a855f7)",
                             },
                           }}
                         />
                       </Box>
                     </TableCell>
 
-                    {/* Population / Land Area / Coastline Column */}
+                    {/* Population / Land Area / Coastline / Credit Tier Column */}
                     <TableCell>
-                      <Typography variant="body2" sx={{ fontSize: "0.85rem" }}>
-                        {["population", "coastline"].includes(currentMetric.id)
-                          ? item.country.area
-                            ? `${formatNumber(item.country.area)} km²`
-                            : "—"
-                          : currentMetric.id === "coast_to_area_ratio"
-                            ? typeof item.country.coastline === "number"
-                              ? `${formatNumber(item.country.coastline)} km`
+                      {currentMetric.category === "credit" ||
+                      currentMetric.includeUnrated ? (
+                        item.value !== null ? (
+                          <Chip
+                            label={
+                              item.value >= 12
+                                ? "Investment Grade"
+                                : "Speculative Grade"
+                            }
+                            size="small"
+                            sx={{
+                              height: 22,
+                              fontSize: "0.72rem",
+                              fontWeight: 700,
+                              backgroundColor:
+                                item.value >= 12
+                                  ? "rgba(16, 185, 129, 0.15)"
+                                  : "rgba(245, 158, 11, 0.15)",
+                              color: item.value >= 12 ? "#34d399" : "#fbbf24",
+                              border: `1px solid ${item.value >= 12 ? "rgba(16, 185, 129, 0.3)" : "rgba(245, 158, 11, 0.3)"}`,
+                            }}
+                          />
+                        ) : (
+                          <Chip
+                            label="Unrated"
+                            size="small"
+                            sx={{
+                              height: 20,
+                              fontSize: "0.68rem",
+                              fontWeight: 600,
+                              backgroundColor: "rgba(255, 255, 255, 0.04)",
+                              color: "text.secondary",
+                              border: "1px solid rgba(255, 255, 255, 0.08)",
+                            }}
+                          />
+                        )
+                      ) : (
+                        <Typography
+                          variant="body2"
+                          sx={{ fontSize: "0.85rem" }}
+                        >
+                          {["population", "coastline"].includes(
+                            currentMetric.id,
+                          )
+                            ? item.country.area
+                              ? `${formatNumber(item.country.area)} km²`
                               : "—"
-                            : item.country.population
-                              ? formatNumber(item.country.population)
-                              : "—"}
-                      </Typography>
+                            : currentMetric.id === "coast_to_area_ratio"
+                              ? typeof item.country.coastline === "number"
+                                ? `${formatNumber(item.country.coastline)} km`
+                                : "—"
+                              : item.country.population
+                                ? formatNumber(item.country.population)
+                                : "—"}
+                        </Typography>
+                      )}
                     </TableCell>
 
                     {/* Secondary Context Column */}

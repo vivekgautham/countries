@@ -161,6 +161,25 @@ export interface EconomicBlocs {
   statusLabel?: string;
 }
 
+export type CreditGrade = "investment" | "speculative" | "default" | "unrated";
+
+export interface AgencyRating {
+  rating: string; // e.g. "AAA", "Aaa", "BBB-", "Ba2"
+  outlook: string; // e.g. "Stable", "Positive", "Negative"
+  date?: string; // e.g. "18 April 2025"
+  grade: CreditGrade;
+  score: number; // 1 to 21 numerical score
+}
+
+export interface SovereignCreditRatings {
+  sp?: AgencyRating;
+  moodys?: AgencyRating;
+  fitch?: AgencyRating;
+  averageScore?: number; // average score across rated agencies (1-21)
+  overallGrade?: CreditGrade;
+  isInvestmentGrade?: boolean;
+}
+
 export interface SectorComposition {
   services?: number;
   servicesYear?: number;
@@ -290,4 +309,5 @@ export interface UnifiedCountry {
   tax?: TaxInfo;
   blocs?: EconomicBlocs;
   gdp?: GdpInfo;
+  creditRatings?: SovereignCreditRatings;
 }

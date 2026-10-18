@@ -43,6 +43,10 @@ import { getCountryEmoji } from "../utils/countryUtils";
 import { getNptBadgeConfig } from "../utils/nptUtils";
 import { getTaxBadgeConfig } from "../utils/taxUtils";
 import { formatCoastline } from "../data/coastlineData";
+import {
+  getGradeBadgeConfig,
+  getOutlookBadgeConfig,
+} from "../utils/creditRatingUtils";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatGdp,
@@ -1799,6 +1803,232 @@ export default function CountryComparePage() {
             ]}
           />
 
+          {/* 2b. Sovereign Credit Ratings Comparison */}
+          <ComparisonSection
+            title="Sovereign Credit Ratings"
+            icon={<span style={{ fontSize: "1.2rem" }}>🏛️</span>}
+            countries={selectedCountries}
+            rows={[
+              {
+                label: "Credit Classification",
+                render: (c) => {
+                  const ratings = c.creditRatings;
+                  const badge = getGradeBadgeConfig(
+                    ratings?.overallGrade,
+                    ratings?.isInvestmentGrade,
+                  );
+                  return (
+                    <Chip
+                      size="small"
+                      icon={
+                        <span
+                          style={{ fontSize: "0.85rem", marginLeft: "4px" }}
+                        >
+                          {badge.icon}
+                        </span>
+                      }
+                      label={badge.label}
+                      sx={{
+                        fontWeight: 700,
+                        backgroundColor: badge.bg,
+                        borderColor: badge.border,
+                        color: badge.color,
+                        border: "1px solid",
+                        height: 24,
+                        fontSize: "0.75rem",
+                      }}
+                    />
+                  );
+                },
+              },
+              {
+                label: "Composite Benchmark",
+                render: (c) => {
+                  const avg = c.creditRatings?.averageScore;
+                  if (!avg) {
+                    return (
+                      <Typography variant="body2" color="text.secondary">
+                        Unrated
+                      </Typography>
+                    );
+                  }
+                  return (
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontWeight: 800,
+                        color:
+                          avg >= 12
+                            ? "#34d399"
+                            : avg > 1
+                              ? "#fbbf24"
+                              : "#f87171",
+                      }}
+                    >
+                      {avg} / 21
+                    </Typography>
+                  );
+                },
+              },
+              {
+                label: "Standard & Poor's (S&P)",
+                render: (c) => {
+                  const sp = c.creditRatings?.sp;
+                  if (!sp) {
+                    return (
+                      <Typography variant="body2" color="text.secondary">
+                        NR (Not Rated)
+                      </Typography>
+                    );
+                  }
+                  const outlook = getOutlookBadgeConfig(sp.outlook);
+                  return (
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 800,
+                          fontSize: "0.95rem",
+                          color:
+                            sp.grade === "investment"
+                              ? "#34d399"
+                              : sp.grade === "default"
+                                ? "#f87171"
+                                : "#fbbf24",
+                        }}
+                      >
+                        {sp.rating}
+                      </Typography>
+                      <Chip
+                        size="small"
+                        icon={
+                          <span
+                            style={{ fontSize: "0.7rem", marginLeft: "4px" }}
+                          >
+                            {outlook.icon}
+                          </span>
+                        }
+                        label={outlook.label}
+                        sx={{
+                          height: 20,
+                          fontSize: "0.68rem",
+                          fontWeight: 600,
+                          backgroundColor: outlook.bg,
+                          color: outlook.color,
+                          border: `1px solid ${outlook.border}`,
+                        }}
+                      />
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "Moody's Ratings",
+                render: (c) => {
+                  const moodys = c.creditRatings?.moodys;
+                  if (!moodys) {
+                    return (
+                      <Typography variant="body2" color="text.secondary">
+                        NR (Not Rated)
+                      </Typography>
+                    );
+                  }
+                  const outlook = getOutlookBadgeConfig(moodys.outlook);
+                  return (
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 800,
+                          fontSize: "0.95rem",
+                          color:
+                            moodys.grade === "investment"
+                              ? "#34d399"
+                              : moodys.grade === "default"
+                                ? "#f87171"
+                                : "#fbbf24",
+                        }}
+                      >
+                        {moodys.rating}
+                      </Typography>
+                      <Chip
+                        size="small"
+                        icon={
+                          <span
+                            style={{ fontSize: "0.7rem", marginLeft: "4px" }}
+                          >
+                            {outlook.icon}
+                          </span>
+                        }
+                        label={outlook.label}
+                        sx={{
+                          height: 20,
+                          fontSize: "0.68rem",
+                          fontWeight: 600,
+                          backgroundColor: outlook.bg,
+                          color: outlook.color,
+                          border: `1px solid ${outlook.border}`,
+                        }}
+                      />
+                    </Stack>
+                  );
+                },
+              },
+              {
+                label: "Fitch Ratings",
+                render: (c) => {
+                  const fitch = c.creditRatings?.fitch;
+                  if (!fitch) {
+                    return (
+                      <Typography variant="body2" color="text.secondary">
+                        NR (Not Rated)
+                      </Typography>
+                    );
+                  }
+                  const outlook = getOutlookBadgeConfig(fitch.outlook);
+                  return (
+                    <Stack spacing={0.5} alignItems="flex-start">
+                      <Typography
+                        variant="body2"
+                        sx={{
+                          fontWeight: 800,
+                          fontSize: "0.95rem",
+                          color:
+                            fitch.grade === "investment"
+                              ? "#34d399"
+                              : fitch.grade === "default"
+                                ? "#f87171"
+                                : "#fbbf24",
+                        }}
+                      >
+                        {fitch.rating}
+                      </Typography>
+                      <Chip
+                        size="small"
+                        icon={
+                          <span
+                            style={{ fontSize: "0.7rem", marginLeft: "4px" }}
+                          >
+                            {outlook.icon}
+                          </span>
+                        }
+                        label={outlook.label}
+                        sx={{
+                          height: 20,
+                          fontSize: "0.68rem",
+                          fontWeight: 600,
+                          backgroundColor: outlook.bg,
+                          color: outlook.color,
+                          border: `1px solid ${outlook.border}`,
+                        }}
+                      />
+                    </Stack>
+                  );
+                },
+              },
+            ]}
+          />
+
           {/* 3. Environment, Energy & Climate */}
           <ComparisonSection
             title="Environment, Energy & Climate"
@@ -2622,7 +2852,7 @@ export default function CountryComparePage() {
             ]}
           />
 
-          {/* 4. Aviation & Infrastructure */}
+          {/* 5. Aviation & Infrastructure */}
           <ComparisonSection
             title="Aviation & Airport Infrastructure"
             icon={<FlightIcon sx={{ color: "info.light" }} />}

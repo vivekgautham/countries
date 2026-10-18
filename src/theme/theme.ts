@@ -1,7 +1,18 @@
 import { createTheme } from "@mui/material/styles";
 
 export type ThemeColorId =
-  "indigo" | "ocean" | "emerald" | "sunset" | "amethyst" | "rose" | "obsidian";
+  | "ocean"
+  | "indigo"
+  | "emerald"
+  | "sunset"
+  | "amethyst"
+  | "rose"
+  | "obsidian"
+  | "nordic"
+  | "cyberpunk"
+  | "tokyo"
+  | "copper"
+  | "mint";
 
 export interface ColorThemeDefinition {
   id: ThemeColorId;
@@ -29,30 +40,6 @@ export interface ColorThemeDefinition {
 }
 
 export const COLOR_THEMES: Record<ThemeColorId, ColorThemeDefinition> = {
-  indigo: {
-    id: "indigo",
-    name: "Indigo Slate",
-    previewColor: "#6366f1",
-    secondaryPreview: "#a855f7",
-    primary: {
-      main: "#6366f1",
-      light: "#818cf8",
-      dark: "#4f46e5",
-      contrastText: "#ffffff",
-    },
-    secondary: {
-      main: "#a855f7",
-      light: "#c084fc",
-      dark: "#7e22ce",
-      contrastText: "#ffffff",
-    },
-    darkBg: {
-      default: "#0f172a",
-      paper: "#1e293b",
-      card: "rgba(30, 41, 59, 0.65)",
-      divider: "rgba(255, 255, 255, 0.08)",
-    },
-  },
   ocean: {
     id: "ocean",
     name: "Ocean Azure",
@@ -75,6 +62,30 @@ export const COLOR_THEMES: Record<ThemeColorId, ColorThemeDefinition> = {
       paper: "#0e2e50",
       card: "rgba(14, 46, 80, 0.65)",
       divider: "rgba(255, 255, 255, 0.09)",
+    },
+  },
+  indigo: {
+    id: "indigo",
+    name: "Indigo Slate",
+    previewColor: "#6366f1",
+    secondaryPreview: "#a855f7",
+    primary: {
+      main: "#6366f1",
+      light: "#818cf8",
+      dark: "#4f46e5",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#a855f7",
+      light: "#c084fc",
+      dark: "#7e22ce",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#0f172a",
+      paper: "#1e293b",
+      card: "rgba(30, 41, 59, 0.65)",
+      divider: "rgba(255, 255, 255, 0.08)",
     },
   },
   emerald: {
@@ -197,12 +208,132 @@ export const COLOR_THEMES: Record<ThemeColorId, ColorThemeDefinition> = {
       divider: "rgba(255, 255, 255, 0.12)",
     },
   },
+  nordic: {
+    id: "nordic",
+    name: "Nordic Frost",
+    previewColor: "#88c0d0",
+    secondaryPreview: "#81a1c1",
+    primary: {
+      main: "#88c0d0",
+      light: "#a3be8c",
+      dark: "#5e81ac",
+      contrastText: "#1e232a",
+    },
+    secondary: {
+      main: "#81a1c1",
+      light: "#88c0d0",
+      dark: "#4c566a",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#1b212c",
+      paper: "#242d3c",
+      card: "rgba(36, 45, 60, 0.7)",
+      divider: "rgba(255, 255, 255, 0.09)",
+    },
+  },
+  cyberpunk: {
+    id: "cyberpunk",
+    name: "Cyberpunk Neon",
+    previewColor: "#facc15",
+    secondaryPreview: "#ec4899",
+    primary: {
+      main: "#facc15",
+      light: "#fde047",
+      dark: "#eab308",
+      contrastText: "#000000",
+    },
+    secondary: {
+      main: "#ec4899",
+      light: "#f472b6",
+      dark: "#db2777",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#0d0b18",
+      paper: "#18152b",
+      card: "rgba(24, 21, 43, 0.72)",
+      divider: "rgba(250, 204, 21, 0.15)",
+    },
+  },
+  tokyo: {
+    id: "tokyo",
+    name: "Tokyo Night",
+    previewColor: "#7aa2f7",
+    secondaryPreview: "#bb9af7",
+    primary: {
+      main: "#7aa2f7",
+      light: "#9d7cd8",
+      dark: "#3d59a1",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#bb9af7",
+      light: "#c0caf5",
+      dark: "#9d7cd8",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#13141f",
+      paper: "#1a1b2a",
+      card: "rgba(26, 27, 42, 0.75)",
+      divider: "rgba(255, 255, 255, 0.08)",
+    },
+  },
+  copper: {
+    id: "copper",
+    name: "Desert Copper",
+    previewColor: "#f97316",
+    secondaryPreview: "#d97706",
+    primary: {
+      main: "#f97316",
+      light: "#fb923c",
+      dark: "#ea580c",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#d97706",
+      light: "#f59e0b",
+      dark: "#b45309",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#1c1410",
+      paper: "#281d17",
+      card: "rgba(40, 29, 23, 0.75)",
+      divider: "rgba(255, 255, 255, 0.08)",
+    },
+  },
+  mint: {
+    id: "mint",
+    name: "Borealis Mint",
+    previewColor: "#14b8a6",
+    secondaryPreview: "#06b6d4",
+    primary: {
+      main: "#14b8a6",
+      light: "#5eead4",
+      dark: "#0f766e",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#06b6d4",
+      light: "#67e8f9",
+      dark: "#0891b2",
+      contrastText: "#ffffff",
+    },
+    darkBg: {
+      default: "#041d1c",
+      paper: "#092928",
+      card: "rgba(9, 41, 40, 0.72)",
+      divider: "rgba(255, 255, 255, 0.09)",
+    },
+  },
 };
 
 export const THEME_COLOR_LIST = Object.values(COLOR_THEMES);
 
-export const getTheme = (colorId: ThemeColorId = "indigo") => {
-  const def = COLOR_THEMES[colorId] || COLOR_THEMES.indigo;
+export const getTheme = (colorId: ThemeColorId = "ocean") => {
+  const def = COLOR_THEMES[colorId] || COLOR_THEMES.ocean;
   const bg = def.darkBg;
 
   return createTheme({
