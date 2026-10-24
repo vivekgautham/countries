@@ -1301,6 +1301,35 @@ export default function TaxAtlasPage() {
                               </Typography>
                             </Grid>
                           )}
+
+                          {country.gdp?.taxRevenue !== undefined && (
+                            <Grid size={{ xs: 12 }}>
+                              <Typography
+                                variant="caption"
+                                sx={{
+                                  color: "text.secondary",
+                                  fontSize: "0.7rem",
+                                  fontWeight: 700,
+                                  textTransform: "uppercase",
+                                }}
+                              >
+                                Tax Revenue (% of GDP)
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  color: "#38bdf8",
+                                  fontSize: "0.82rem",
+                                  fontWeight: 700,
+                                }}
+                              >
+                                {country.gdp.taxRevenue}% of GDP
+                                {country.gdp.taxRevenueYear
+                                  ? ` (${country.gdp.taxRevenueYear})`
+                                  : ""}
+                              </Typography>
+                            </Grid>
+                          )}
                         </Grid>
                       </Box>
 

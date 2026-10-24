@@ -68,6 +68,7 @@ import {
   formatUnemployment,
   formatGovernmentDebt,
   formatFdiInflows,
+  formatTaxRevenue,
   formatLiteracyRate,
   formatFertilityRate,
   formatUrbanPopulation,
@@ -1785,6 +1786,16 @@ export default function CountryComparePage() {
                   >
                     {c.gdp?.fdiInflows !== undefined
                       ? `${formatFdiInflows(c.gdp.fdiInflows)}${c.gdp.fdiInflowsYear ? ` (${c.gdp.fdiInflowsYear})` : ""}`
+                      : "N/A"}
+                  </Typography>
+                ),
+              },
+              {
+                label: "Tax Revenue (% of GDP)",
+                render: (c) => (
+                  <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                    {c.gdp?.taxRevenue !== undefined
+                      ? `${formatTaxRevenue(c.gdp.taxRevenue)}${c.gdp.taxRevenueYear ? ` (${c.gdp.taxRevenueYear})` : ""}`
                       : "N/A"}
                   </Typography>
                 ),

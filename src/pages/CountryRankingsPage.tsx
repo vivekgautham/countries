@@ -63,6 +63,7 @@ import { getCountryEmoji } from "../utils/countryUtils";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatFdiInflows,
+  formatTaxRevenue,
   formatGdp,
   formatGdpGrowth,
   formatGdpPerCapita,
@@ -490,6 +491,22 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     formatValue: (val) => formatFdiInflows(val),
     getSecondaryValue: (c) =>
       c.gdp?.growth ? `Growth: ${formatGdpGrowth(c.gdp.growth)}` : "—",
+  },
+  {
+    id: "tax_revenue",
+    category: "growth",
+    label: "Tax Revenue (% of GDP)",
+    shortLabel: "Tax / GDP",
+    unit: "% of GDP",
+    description:
+      "Compulsory transfers to the central government for public purposes as a percentage of gross domestic product.",
+    source: "World Bank (WDI)",
+    sortDirection: "desc",
+    icon: <AccountBalanceIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.gdp?.taxRevenue,
+    formatValue: (val) => formatTaxRevenue(val),
+    getSecondaryValue: (c) =>
+      c.gdp?.taxRevenueYear ? `Reporting Year: ${c.gdp.taxRevenueYear}` : "—",
   },
 
   // 3. Digital Penetration

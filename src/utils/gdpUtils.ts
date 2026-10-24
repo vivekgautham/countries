@@ -64,6 +64,8 @@ const gdpDataset = gdpDataRaw as Record<
     fdiInflowsYear?: number;
     literacyRate?: number;
     literacyRateYear?: number;
+    taxRevenue?: number;
+    taxRevenueYear?: number;
   }
 >;
 
@@ -382,6 +384,17 @@ export function formatLiteracyRate(val?: number): string {
 }
 
 /**
+ * Formats tax revenue (% of GDP):
+ * e.g. "18.2% of GDP"
+ */
+export function formatTaxRevenue(val?: number): string {
+  if (val === undefined || val === null || isNaN(val)) {
+    return "N/A";
+  }
+  return `${val.toFixed(1)}% of GDP`;
+}
+
+/**
  * Look up GDP info by 2-letter country code and retrieve official World Bank
  * GDP, population, GDP per capita, growth, inflation, life expectancy, internet usage,
  * PPP, sector composition, and trade indicators.
@@ -550,6 +563,12 @@ export function getGdpInfo(
     formattedLiteracyRate:
       raw.literacyRate !== undefined
         ? formatLiteracyRate(raw.literacyRate)
+        : undefined,
+    taxRevenue: raw.taxRevenue,
+    taxRevenueYear: raw.taxRevenueYear,
+    formattedTaxRevenue:
+      raw.taxRevenue !== undefined
+        ? formatTaxRevenue(raw.taxRevenue)
         : undefined,
   };
 }

@@ -75,6 +75,7 @@ import {
   formatGovernmentDebt,
   formatFdiInflows,
   formatLiteracyRate,
+  formatTaxRevenue,
   formatFertilityRate,
   formatUrbanPopulation,
   formatGini,
@@ -2130,6 +2131,29 @@ export default function CountryDetailPage() {
                     </Stack>
                   )}
 
+                  {country.gdp?.taxRevenue !== undefined && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        💰 Tax Revenue (% of GDP)
+                      </Typography>
+                      <Tooltip
+                        title="Compulsory transfers to the central government for public purposes (% of GDP) from World Bank"
+                        arrow
+                      >
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatTaxRevenue(country.gdp.taxRevenue)}
+                          {country.gdp.taxRevenueYear
+                            ? ` (${country.gdp.taxRevenueYear})`
+                            : ""}
+                        </Typography>
+                      </Tooltip>
+                    </Stack>
+                  )}
+
                   {country.gdp?.sectors && (
                     <Box sx={{ pt: 1 }}>
                       <SectorPieChart sectors={country.gdp.sectors} />
@@ -2257,6 +2281,19 @@ export default function CountryDetailPage() {
                           fontWeight: 700,
                           borderColor: "rgba(255, 255, 255, 0.2)",
                           color: "text.primary",
+                        }}
+                      />
+                    )}
+                    {country.gdp?.taxRevenue !== undefined && (
+                      <Chip
+                        label={`Tax/GDP: ${formatTaxRevenue(country.gdp.taxRevenue)}${country.gdp.taxRevenueYear ? ` (${country.gdp.taxRevenueYear})` : ""}`}
+                        size="small"
+                        variant="outlined"
+                        sx={{
+                          fontWeight: 700,
+                          borderColor: "rgba(56, 189, 248, 0.35)",
+                          backgroundColor: "rgba(56, 189, 248, 0.08)",
+                          color: "#38bdf8",
                         }}
                       />
                     )}

@@ -270,6 +270,9 @@ export interface GdpInfo {
   literacyRate?: number; // Adult literacy rate (% of people ages 15+)
   literacyRateYear?: number;
   formattedLiteracyRate?: string; // e.g. "99.0%"
+  taxRevenue?: number; // Tax revenue (% of GDP)
+  taxRevenueYear?: number;
+  formattedTaxRevenue?: string; // e.g. "18.2% of GDP"
 }
 
 export interface CityInfo {
