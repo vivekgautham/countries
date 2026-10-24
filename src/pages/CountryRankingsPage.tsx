@@ -1,4 +1,5 @@
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ClearIcon from "@mui/icons-material/Clear";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
@@ -104,7 +105,7 @@ export const RANKING_CATEGORIES = [
     icon: <EmojiEventsIcon sx={{ fontSize: 18 }} />,
     emoji: "🥇",
     description:
-      "Global leaders ranked by nominal output, purchasing power parity (PPP), and living standards.",
+      "Global leaders ranked by nominal output, purchasing power parity (PPP), living standards, and tax revenue capacity.",
   },
   {
     id: "credit",
@@ -247,6 +248,22 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     formatValue: (val) => formatPppPerCapita(val),
     getSecondaryValue: (c) =>
       c.population ? `Pop: ${formatNumber(c.population)}` : "—",
+  },
+  {
+    id: "tax_revenue",
+    category: "economy",
+    label: "Tax Revenue (% of GDP)",
+    shortLabel: "Tax / GDP",
+    unit: "% of GDP",
+    description:
+      "Central government tax revenue as a percentage of gross domestic product, measuring fiscal extraction and state budget mobilization.",
+    source: "World Bank (WDI)",
+    sortDirection: "desc",
+    icon: <AccountBalanceWalletIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.gdp?.taxRevenue,
+    formatValue: (val) => formatTaxRevenue(val),
+    getSecondaryValue: (c) =>
+      c.gdp?.taxRevenueYear ? `Reporting Year: ${c.gdp.taxRevenueYear}` : "—",
   },
   // Sovereign Credit Ratings
   {
@@ -491,22 +508,6 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
     formatValue: (val) => formatFdiInflows(val),
     getSecondaryValue: (c) =>
       c.gdp?.growth ? `Growth: ${formatGdpGrowth(c.gdp.growth)}` : "—",
-  },
-  {
-    id: "tax_revenue",
-    category: "growth",
-    label: "Tax Revenue (% of GDP)",
-    shortLabel: "Tax / GDP",
-    unit: "% of GDP",
-    description:
-      "Compulsory transfers to the central government for public purposes as a percentage of gross domestic product.",
-    source: "World Bank (WDI)",
-    sortDirection: "desc",
-    icon: <AccountBalanceIcon sx={{ fontSize: 18 }} />,
-    getValue: (c) => c.gdp?.taxRevenue,
-    formatValue: (val) => formatTaxRevenue(val),
-    getSecondaryValue: (c) =>
-      c.gdp?.taxRevenueYear ? `Reporting Year: ${c.gdp.taxRevenueYear}` : "—",
   },
 
   // 3. Digital Penetration
@@ -765,6 +766,64 @@ export default function CountryRankingsPage() {
       speculativePct: Math.round((speculative / (rated || 1)) * 100),
       defaultPct: Math.round((defaultCount / (rated || 1)) * 100),
       ratedPct: Math.round((rated / total) * 100),
+    };
+  }, [countries]);
+
+  // Tax Revenue Dashboard Statistics
+  const taxStats = useMemo(() => {
+    const valid = countries
+      .map((c) => ({
+        country: c,
+        val: c.gdp?.taxRevenue,
+        year: c.gdp?.taxRevenueYear,
+      }))
+      .filter(
+        (x): x is { country: UnifiedCountry; val: number; year: number | undefined } =>
+          typeof x.val === "number" && !isNaN(x.val),
+      )
+      .sort((a, b) => b.val - a.val);
+
+    const total = countries.length || 1;
+    const reported = valid.length;
+    if (reported === 0) {
+      return {
+        total,
+        reported: 0,
+        unreported: total,
+        avg: 0,
+        median: 0,
+        high: 0,
+        moderate: 0,
+        low: 0,
+        highPct: 0,
+        moderatePct: 0,
+        lowPct: 0,
+        topCountry: null as { country: UnifiedCountry; val: number; year: number | undefined } | null,
+        bottomCountry: null as { country: UnifiedCountry; val: number; year: number | undefined } | null,
+      };
+    }
+
+    const sum = valid.reduce((acc, x) => acc + x.val, 0);
+    const avg = Math.round((sum / reported) * 10) / 10;
+    const median = valid[Math.floor(reported / 2)].val;
+    const high = valid.filter((x) => x.val >= 25).length;
+    const moderate = valid.filter((x) => x.val >= 15 && x.val < 25).length;
+    const low = valid.filter((x) => x.val < 15).length;
+
+    return {
+      total,
+      reported,
+      unreported: total - reported,
+      avg,
+      median,
+      high,
+      moderate,
+      low,
+      highPct: Math.round((high / reported) * 100),
+      moderatePct: Math.round((moderate / reported) * 100),
+      lowPct: Math.round((low / reported) * 100),
+      topCountry: valid[0],
+      bottomCountry: valid[valid.length - 1],
     };
   }, [countries]);
 
@@ -1663,6 +1722,241 @@ export default function CountryRankingsPage() {
         </Card>
       )}
 
+      {/* Tax Revenue & Fiscal Capacity Dashboard Panel */}
+      {currentMetric.id === "tax_revenue" && (
+        <Card
+          elevation={0}
+          sx={{
+            mb: 4,
+            borderRadius: 3.5,
+            background:
+              "linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%)",
+            border: "1px solid rgba(56, 189, 248, 0.25)",
+            p: { xs: 2, sm: 2.5 },
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <Stack spacing={2}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              justifyContent="space-between"
+              alignItems={{ xs: "flex-start", sm: "center" }}
+              flexWrap="wrap"
+              gap={1.5}
+            >
+              <Box>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: "1.15rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <span>💰</span> Tax Revenue &amp; Fiscal Capacity Dashboard
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mt: 0.25 }}
+                >
+                  Central government tax revenue collection as a percentage of gross domestic product across World Bank reported nations
+                </Typography>
+              </Box>
+
+              <Stack direction="row" spacing={1} flexWrap="wrap" gap={0.5}>
+                <Chip
+                  label={`${taxStats.reported} Nations Reported`}
+                  size="small"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: "0.78rem",
+                    backgroundColor: "rgba(56, 189, 248, 0.15)",
+                    color: "#38bdf8",
+                    border: "1px solid rgba(56, 189, 248, 0.35)",
+                  }}
+                />
+                <Chip
+                  label={`Global Median: ${taxStats.median}%`}
+                  size="small"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: "0.78rem",
+                    backgroundColor: "rgba(16, 185, 129, 0.15)",
+                    color: "#34d399",
+                    border: "1px solid rgba(16, 185, 129, 0.35)",
+                  }}
+                />
+              </Stack>
+            </Stack>
+
+            {/* 4 Stat Cards Grid */}
+            <Grid container spacing={2}>
+              {/* High Tax Take */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(99, 102, 241, 0.08)",
+                    borderColor: "rgba(99, 102, 241, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#a5b4fc",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🏛️ High Tax Take (≥ 25%)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#a5b4fc" }}
+                    >
+                      {taxStats.high}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {taxStats.highPct}% of reported nations (e.g. Denmark, France, UK) • Extensive public welfare &amp; services
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Moderate Tax Take */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(14, 165, 233, 0.08)",
+                    borderColor: "rgba(14, 165, 233, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#38bdf8",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      ⚖️ Moderate (15% – 25%)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#38bdf8" }}
+                    >
+                      {taxStats.moderate}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {taxStats.moderatePct}% of reported nations • Balanced fiscal extraction across OECD &amp; middle-income economies
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Low / Resource-Funded */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(16, 185, 129, 0.08)",
+                    borderColor: "rgba(16, 185, 129, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#34d399",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🌴 Low / Resource-Funded (&lt; 15%)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#34d399" }}
+                    >
+                      {taxStats.low}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {taxStats.lowPct}% of reported nations (e.g. UAE 0.6%, Kuwait 1.5%) • Low direct taxation or resource-funded budgets
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Global Benchmarks */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(245, 158, 11, 0.08)",
+                    borderColor: "rgba(245, 158, 11, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#fbbf24",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🌐 Global Benchmark
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#fbbf24" }}
+                    >
+                      {taxStats.avg}%
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      Global mean • Highest: {taxStats.topCountry?.country.name} ({taxStats.topCountry?.val}%) • Lowest: {taxStats.bottomCountry?.country.name} ({taxStats.bottomCountry?.val}%)
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+            </Grid>
+          </Stack>
+        </Card>
+      )}
+
       {/* Indicator Overview Card */}
       <Card
         elevation={0}
@@ -1765,6 +2059,34 @@ export default function CountryRankingsPage() {
                     border: "1px solid rgba(14, 165, 233, 0.3)",
                   }}
                 />
+              )}
+              {currentMetric.id === "tax_revenue" && taxStats.reported > 0 && (
+                <>
+                  <Chip
+                    label={`Global Median: ${taxStats.median}% of GDP`}
+                    size="small"
+                    sx={{
+                      height: 22,
+                      fontSize: "0.72rem",
+                      fontWeight: 700,
+                      backgroundColor: "rgba(56, 189, 248, 0.15)",
+                      color: "#38bdf8",
+                      border: "1px solid rgba(56, 189, 248, 0.3)",
+                    }}
+                  />
+                  <Chip
+                    label={`Global Mean: ${taxStats.avg}% of GDP`}
+                    size="small"
+                    sx={{
+                      height: 22,
+                      fontSize: "0.72rem",
+                      fontWeight: 700,
+                      backgroundColor: "rgba(16, 185, 129, 0.15)",
+                      color: "#6ee7b7",
+                      border: "1px solid rgba(16, 185, 129, 0.3)",
+                    }}
+                  />
+                </>
               )}
             </Stack>
             <Typography
