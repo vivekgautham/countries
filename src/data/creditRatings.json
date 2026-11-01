@@ -311,18 +311,18 @@
   },
   "BE": {
     "sp": {
-      "rating": "AA",
-      "outlook": "Negative",
-      "date": "25 April 2025",
-      "grade": "investment",
-      "score": 19
-    },
-    "moodys": {
-      "rating": "Aa3",
+      "rating": "AA-",
       "outlook": "Stable",
-      "date": "28 April 2023",
+      "date": "24 April 2026",
       "grade": "investment",
       "score": 18
+    },
+    "moodys": {
+      "rating": "A1",
+      "outlook": "Stable",
+      "date": "17 April 2026",
+      "grade": "investment",
+      "score": 17
     },
     "fitch": {
       "rating": "A+",
@@ -331,7 +331,7 @@
       "grade": "investment",
       "score": 17
     },
-    "averageScore": 18,
+    "averageScore": 17.3,
     "overallGrade": "investment",
     "isInvestmentGrade": true
   },
@@ -1218,8 +1218,8 @@
     },
     "fitch": {
       "rating": "A+",
-      "outlook": "Stable",
-      "date": "6 March 2026",
+      "outlook": "Negative",
+      "date": "30 October 2026",
       "grade": "investment",
       "score": 17
     },

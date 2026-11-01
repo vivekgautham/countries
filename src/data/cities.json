@@ -586,6 +586,11 @@
   ],
   "BD": [
     {
+      "name": "Bogura",
+      "adminName": "Rajshahi Division",
+      "isCapital": false
+    },
+    {
       "name": "Chattogram",
       "adminName": "Chittagong",
       "isCapital": false
@@ -628,11 +633,6 @@
     {
       "name": "Rangpur",
       "adminName": "Rangpur Division",
-      "isCapital": false
-    },
-    {
-      "name": "Shibganj",
-      "adminName": "Rajshahi Division",
       "isCapital": false
     }
   ],
@@ -3107,6 +3107,11 @@
       "isCapital": false
     },
     {
+      "name": "Kamsar",
+      "adminName": "Boké Region",
+      "isCapital": false
+    },
+    {
       "name": "Kankan",
       "adminName": "Kankan Region",
       "isCapital": false
@@ -3114,11 +3119,6 @@
     {
       "name": "Kindia",
       "adminName": "Kindia",
-      "isCapital": false
-    },
-    {
-      "name": "Kissidougou",
-      "adminName": "Faranah",
       "isCapital": false
     },
     {
@@ -3190,6 +3190,16 @@
     }
   ],
   "GQ": [
+    {
+      "name": "Aconibe",
+      "adminName": "Wele-Nzas",
+      "isCapital": false
+    },
+    {
+      "name": "Añisoc",
+      "adminName": "Wele-Nzas",
+      "isCapital": false
+    },
     {
       "name": "Bata",
       "adminName": "Litoral",
@@ -5378,13 +5388,13 @@
       "isCapital": true
     },
     {
-      "name": "Gao",
-      "adminName": "Gao",
+      "name": "Bougouni",
+      "adminName": "Sikasso",
       "isCapital": false
     },
     {
-      "name": "Kalaban Koro",
-      "adminName": "Koulikoro",
+      "name": "Gao",
+      "adminName": "Gao",
       "isCapital": false
     },
     {
@@ -7290,7 +7300,7 @@
     },
     {
       "name": "Saint Petersburg",
-      "adminName": "St.-Petersburg",
+      "adminName": "St. Petersburg",
       "isCapital": false
     },
     {

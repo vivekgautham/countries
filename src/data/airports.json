@@ -1,14 +1,14 @@
 {
   "US": {
-    "total": 32694,
-    "active": 25084,
+    "total": 32698,
+    "active": 25079,
     "large": 95,
     "medium": 822,
-    "small": 15228,
-    "heliport": 8227,
+    "small": 15224,
+    "heliport": 8226,
     "seaplane": 679,
     "balloonport": 33,
-    "closed": 7610,
+    "closed": 7619,
     "scheduled": 699,
     "majorAirports": [
       {
@@ -2170,12 +2170,12 @@
     }
   },
   "AE": {
-    "total": 306,
-    "active": 297,
+    "total": 308,
+    "active": 299,
     "large": 8,
     "medium": 4,
-    "small": 30,
-    "heliport": 253,
+    "small": 31,
+    "heliport": 254,
     "seaplane": 2,
     "balloonport": 0,
     "closed": 9,
@@ -2349,12 +2349,12 @@
     }
   },
   "ES": {
-    "total": 588,
-    "active": 552,
+    "total": 589,
+    "active": 553,
     "large": 21,
     "medium": 34,
     "small": 310,
-    "heliport": 185,
+    "heliport": 186,
     "seaplane": 1,
     "balloonport": 1,
     "closed": 36,
@@ -2653,12 +2653,12 @@
     }
   },
   "CN": {
-    "total": 785,
-    "active": 717,
+    "total": 787,
+    "active": 719,
     "large": 69,
     "medium": 265,
-    "small": 246,
-    "heliport": 132,
+    "small": 247,
+    "heliport": 133,
     "seaplane": 3,
     "balloonport": 2,
     "closed": 68,
@@ -3759,7 +3759,7 @@
     "seaplane": 4,
     "balloonport": 0,
     "closed": 112,
-    "scheduled": 157,
+    "scheduled": 158,
     "majorAirports": [
       {
         "name": "Adelaide International Airport",
@@ -4031,11 +4031,11 @@
     }
   },
   "MG": {
-    "total": 94,
-    "active": 93,
+    "total": 95,
+    "active": 94,
     "large": 4,
     "medium": 19,
-    "small": 70,
+    "small": 71,
     "heliport": 0,
     "seaplane": 0,
     "balloonport": 0,
@@ -5870,15 +5870,15 @@
     }
   },
   "GB": {
-    "total": 1605,
-    "active": 1221,
+    "total": 1612,
+    "active": 1227,
     "large": 17,
     "medium": 71,
-    "small": 966,
-    "heliport": 160,
+    "small": 965,
+    "heliport": 167,
     "seaplane": 5,
     "balloonport": 2,
-    "closed": 384,
+    "closed": 385,
     "scheduled": 57,
     "majorAirports": [
       {
@@ -6283,8 +6283,8 @@
   "GL": {
     "total": 91,
     "active": 79,
-    "large": 1,
-    "medium": 9,
+    "large": 2,
+    "medium": 8,
     "small": 15,
     "heliport": 54,
     "seaplane": 0,
@@ -6292,6 +6292,16 @@
     "closed": 12,
     "scheduled": 60,
     "majorAirports": [
+      {
+        "name": "Ilulissat Airport",
+        "iata": "JAV",
+        "icao": "BGJN",
+        "municipality": "Ilulissat",
+        "type": "large_airport",
+        "elevationFt": 95,
+        "wikipedia": "https://en.wikipedia.org/wiki/Ilulissat_Airport",
+        "website": "https://mit.gl/ilulissat"
+      },
       {
         "name": "Nuuk International Airport",
         "iata": "GOH",
@@ -6311,16 +6321,6 @@
         "elevationFt": 74,
         "wikipedia": "https://en.wikipedia.org/wiki/Aasiaat_Airport",
         "website": "http://airgreenland.com/om_rejsen/efter_rejsen/din_destination_/aasiaat/"
-      },
-      {
-        "name": "Ilulissat Airport",
-        "iata": "JAV",
-        "icao": "BGJN",
-        "municipality": "Ilulissat",
-        "type": "medium_airport",
-        "elevationFt": 95,
-        "wikipedia": "https://en.wikipedia.org/wiki/Ilulissat_Airport",
-        "website": "https://mit.gl/ilulissat"
       },
       {
         "name": "Kangerlussuaq International Airport",
@@ -6436,12 +6436,12 @@
     }
   },
   "MX": {
-    "total": 2695,
-    "active": 2086,
+    "total": 2696,
+    "active": 2087,
     "large": 29,
     "medium": 42,
     "small": 1506,
-    "heliport": 496,
+    "heliport": 497,
     "seaplane": 6,
     "balloonport": 7,
     "closed": 609,
@@ -7604,15 +7604,15 @@
     }
   },
   "BR": {
-    "total": 8092,
-    "active": 7765,
+    "total": 8120,
+    "active": 7792,
     "large": 28,
     "medium": 110,
-    "small": 5584,
-    "heliport": 2043,
+    "small": 5600,
+    "heliport": 2054,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 327,
+    "closed": 328,
     "scheduled": 138,
     "majorAirports": [
       {
@@ -9646,7 +9646,7 @@
     "seaplane": 6,
     "balloonport": 1,
     "closed": 180,
-    "scheduled": 45,
+    "scheduled": 46,
     "majorAirports": [
       {
         "name": "Bacolod-Silay International Airport",
@@ -11871,12 +11871,12 @@
     }
   },
   "RU": {
-    "total": 1839,
-    "active": 1504,
+    "total": 1844,
+    "active": 1509,
     "large": 44,
     "medium": 211,
-    "small": 689,
-    "heliport": 556,
+    "small": 691,
+    "heliport": 559,
     "seaplane": 4,
     "balloonport": 0,
     "closed": 335,
@@ -13501,8 +13501,8 @@
   "EG": {
     "total": 144,
     "active": 134,
-    "large": 15,
-    "medium": 18,
+    "large": 14,
+    "medium": 19,
     "small": 39,
     "heliport": 62,
     "seaplane": 0,
@@ -13537,15 +13537,6 @@
         "type": "large_airport",
         "elevationFt": 748,
         "wikipedia": "https://en.wikipedia.org/wiki/Assiut_Airport"
-      },
-      {
-        "name": "Berenice International Airport / Banas Cape Air Base",
-        "iata": "EES",
-        "icao": "HEBR",
-        "municipality": "Berenice Troglodytica",
-        "type": "large_airport",
-        "elevationFt": 108,
-        "wikipedia": "https://ar.wikipedia.org/wiki/%D9%85%D8%B7%D8%A7%D8%B1_%D8%A8%D8%B1%D9%86%D9%8A%D8%B3_%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A"
       },
       {
         "name": "Cairo International Airport",
@@ -13667,6 +13658,15 @@
         "wikipedia": "https://en.wikipedia.org/wiki/Bir_Gifgafa_Airfield"
       },
       {
+        "name": "Berenice International Airport / Banas Cape Air Base",
+        "iata": "EES",
+        "icao": "HEBR",
+        "municipality": "Berenice Troglodytica",
+        "type": "medium_airport",
+        "elevationFt": 108,
+        "wikipedia": "https://ar.wikipedia.org/wiki/%D9%85%D8%B7%D8%A7%D8%B1_%D8%A8%D8%B1%D9%86%D9%8A%D8%B3_%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A"
+      },
+      {
         "name": "Capital International Airport",
         "iata": "CCE",
         "icao": "HECP",
@@ -13698,14 +13698,14 @@
   },
   "FI": {
     "total": 125,
-    "active": 115,
+    "active": 114,
     "large": 10,
     "medium": 21,
-    "small": 67,
+    "small": 66,
     "heliport": 17,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 10,
+    "closed": 11,
     "scheduled": 20,
     "majorAirports": [
       {
@@ -15111,12 +15111,12 @@
     }
   },
   "PT": {
-    "total": 238,
-    "active": 197,
+    "total": 240,
+    "active": 199,
     "large": 5,
     "medium": 26,
     "small": 98,
-    "heliport": 68,
+    "heliport": 70,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 41,
@@ -15803,15 +15803,15 @@
     }
   },
   "ZA": {
-    "total": 685,
-    "active": 641,
+    "total": 693,
+    "active": 588,
     "large": 11,
     "medium": 51,
-    "small": 527,
-    "heliport": 51,
+    "small": 474,
+    "heliport": 52,
     "seaplane": 0,
-    "balloonport": 1,
-    "closed": 44,
+    "balloonport": 0,
+    "closed": 105,
     "scheduled": 23,
     "majorAirports": [
       {
@@ -15979,7 +15979,6 @@
       {
         "name": "Harrismith Airport",
         "iata": "HRS",
-        "icao": "FAHR",
         "municipality": "Harrismith",
         "type": "medium_airport",
         "elevationFt": 5585,
@@ -16005,14 +16004,14 @@
       }
     ],
     "highestAirport": {
-      "name": "Forel Airport",
-      "elevationFt": 6464,
+      "name": "Belfast Aerodrome",
+      "elevationFt": 6250,
       "type": "small_airport"
     },
     "lowestAirport": {
-      "name": "Koffee Bay Airport",
-      "elevationFt": 10,
-      "type": "small_airport"
+      "name": "Cape Town Waterfront Heliport",
+      "elevationFt": 9,
+      "type": "heliport"
     }
   },
   "ZZ": {
@@ -16184,10 +16183,9 @@
       "type": "medium_airport"
     },
     "lowestAirport": {
-      "name": "RAF Ascension Island",
-      "iata": "ASI",
-      "elevationFt": 278,
-      "type": "medium_airport"
+      "name": "Gough Island Heliport",
+      "elevationFt": 204,
+      "type": "heliport"
     }
   },
   "MU": {
@@ -16436,8 +16434,8 @@
   "KM": {
     "total": 4,
     "active": 3,
-    "large": 1,
-    "medium": 2,
+    "large": 0,
+    "medium": 3,
     "small": 0,
     "heliport": 0,
     "seaplane": 0,
@@ -16445,15 +16443,6 @@
     "closed": 1,
     "scheduled": 2,
     "majorAirports": [
-      {
-        "name": "Prince Said Ibrahim International Airport",
-        "iata": "HAH",
-        "icao": "FMCH",
-        "municipality": "Moroni",
-        "type": "large_airport",
-        "elevationFt": 93,
-        "wikipedia": "https://en.wikipedia.org/wiki/Prince_Said_Ibrahim_International_Airport"
-      },
       {
         "name": "Mohéli Bandar Es Eslam Airport",
         "iata": "NWA",
@@ -16471,13 +16460,22 @@
         "type": "medium_airport",
         "elevationFt": 62,
         "wikipedia": "https://en.wikipedia.org/wiki/Ouani_Airport"
+      },
+      {
+        "name": "Prince Said Ibrahim International Airport",
+        "iata": "HAH",
+        "icao": "FMCH",
+        "municipality": "Moroni",
+        "type": "medium_airport",
+        "elevationFt": 93,
+        "wikipedia": "https://en.wikipedia.org/wiki/Prince_Said_Ibrahim_International_Airport"
       }
     ],
     "highestAirport": {
       "name": "Prince Said Ibrahim International Airport",
       "iata": "HAH",
       "elevationFt": 93,
-      "type": "large_airport"
+      "type": "medium_airport"
     },
     "lowestAirport": {
       "name": "Mohéli Bandar Es Eslam Airport",
@@ -16850,12 +16848,12 @@
     }
   },
   "FR": {
-    "total": 1786,
-    "active": 1672,
+    "total": 1789,
+    "active": 1675,
     "large": 18,
     "medium": 117,
-    "small": 1053,
-    "heliport": 465,
+    "small": 1054,
+    "heliport": 467,
     "seaplane": 19,
     "balloonport": 0,
     "closed": 114,
@@ -18382,8 +18380,8 @@
   "GR": {
     "total": 169,
     "active": 146,
-    "large": 9,
-    "medium": 20,
+    "large": 11,
+    "medium": 18,
     "small": 53,
     "heliport": 64,
     "seaplane": 0,
@@ -18441,6 +18439,16 @@
         "website": "https://www.kva-airport.gr/en"
       },
       {
+        "name": "Kefalonia International Airport \"Anna Pollatou\"",
+        "iata": "EFL",
+        "icao": "LGKF",
+        "municipality": "Kefallinia Island",
+        "type": "large_airport",
+        "elevationFt": 59,
+        "wikipedia": "https://en.wikipedia.org/wiki/Kefalonia_Island_International_Airport",
+        "website": "https://www.efl-airport.gr/"
+      },
+      {
         "name": "Kos International Airport \"Ippokratis\"",
         "iata": "KGS",
         "icao": "LGKO",
@@ -18479,6 +18487,16 @@
         "elevationFt": 22,
         "wikipedia": "https://en.wikipedia.org/wiki/Thessaloniki_Airport",
         "website": "https://www.skg-airport.gr/en"
+      },
+      {
+        "name": "Zakynthos International Airport \"Dionysios Solomos\"",
+        "iata": "ZTH",
+        "icao": "LGZA",
+        "municipality": "Zakynthos",
+        "type": "large_airport",
+        "elevationFt": 12,
+        "wikipedia": "https://en.wikipedia.org/wiki/Zakynthos_International_Airport",
+        "website": "https://www.zth-airport.gr"
       },
       {
         "name": "Alexandroupoli Democritus Airport",
@@ -18535,15 +18553,6 @@
         "type": "medium_airport",
         "elevationFt": 66,
         "wikipedia": "https://en.wikipedia.org/wiki/Karpathos_Island_National_Airport"
-      },
-      {
-        "name": "Kefallinia Airport",
-        "iata": "EFL",
-        "icao": "LGKF",
-        "municipality": "Kefallinia Island",
-        "type": "medium_airport",
-        "elevationFt": 59,
-        "wikipedia": "https://en.wikipedia.org/wiki/Kefalonia_Island_International_Airport"
       },
       {
         "name": "Kozani National Airport Filippos",
@@ -18703,7 +18712,7 @@
     }
   },
   "HK": {
-    "total": 152,
+    "total": 153,
     "active": 144,
     "large": 1,
     "medium": 1,
@@ -18711,7 +18720,7 @@
     "heliport": 142,
     "seaplane": 0,
     "balloonport": 0,
-    "closed": 8,
+    "closed": 9,
     "scheduled": 2,
     "majorAirports": [
       {
@@ -18948,15 +18957,15 @@
     }
   },
   "VN": {
-    "total": 98,
-    "active": 71,
+    "total": 101,
+    "active": 72,
     "large": 9,
     "medium": 13,
-    "small": 14,
+    "small": 15,
     "heliport": 34,
     "seaplane": 1,
     "balloonport": 0,
-    "closed": 27,
+    "closed": 29,
     "scheduled": 22,
     "majorAirports": [
       {
@@ -19725,12 +19734,12 @@
     }
   },
   "HU": {
-    "total": 142,
-    "active": 128,
+    "total": 143,
+    "active": 129,
     "large": 3,
     "medium": 7,
     "small": 101,
-    "heliport": 17,
+    "heliport": 18,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 14,
@@ -19789,16 +19798,16 @@
     }
   },
   "IN": {
-    "total": 653,
-    "active": 622,
+    "total": 660,
+    "active": 629,
     "large": 43,
     "medium": 98,
-    "small": 179,
-    "heliport": 301,
+    "small": 178,
+    "heliport": 309,
     "seaplane": 1,
     "balloonport": 0,
     "closed": 31,
-    "scheduled": 119,
+    "scheduled": 120,
     "majorAirports": [
       {
         "name": "Alluri Sitarama Raju International Airport (Vizag)",
@@ -21419,12 +21428,12 @@
     }
   },
   "JP": {
-    "total": 3747,
-    "active": 3328,
+    "total": 3748,
+    "active": 3329,
     "large": 29,
     "medium": 79,
     "small": 171,
-    "heliport": 3040,
+    "heliport": 3041,
     "seaplane": 6,
     "balloonport": 3,
     "closed": 419,
@@ -22963,11 +22972,11 @@
     }
   },
   "RO": {
-    "total": 214,
-    "active": 182,
+    "total": 215,
+    "active": 183,
     "large": 12,
     "medium": 9,
-    "small": 90,
+    "small": 91,
     "heliport": 71,
     "seaplane": 0,
     "balloonport": 0,
@@ -24938,12 +24947,12 @@
     }
   },
   "PK": {
-    "total": 195,
-    "active": 168,
+    "total": 197,
+    "active": 170,
     "large": 11,
     "medium": 28,
     "small": 76,
-    "heliport": 53,
+    "heliport": 55,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 27,
@@ -25565,12 +25574,12 @@
     }
   },
   "PY": {
-    "total": 122,
-    "active": 114,
+    "total": 133,
+    "active": 125,
     "large": 3,
     "medium": 11,
-    "small": 71,
-    "heliport": 29,
+    "small": 81,
+    "heliport": 30,
     "seaplane": 0,
     "balloonport": 0,
     "closed": 8,
@@ -25604,7 +25613,15 @@
         "wikipedia": "https://en.wikipedia.org/wiki/Teniente_Amin_Ayub_Gonzalez_Airport"
       },
       {
-        "name": "Aeródromo Don Carlos Miguel Gimenez",
+        "name": "Doctor Juan Plate National Airport",
+        "iata": "VMI",
+        "municipality": "Puerto Vallemi",
+        "type": "medium_airport",
+        "elevationFt": 280,
+        "wikipedia": "https://en.wikipedia.org/wiki/Dr._Juan_Plate_Airport"
+      },
+      {
+        "name": "Don Carlos Miguel Gimenez Airport",
         "iata": "PIL",
         "icao": "SGPI",
         "municipality": "Pilar",
@@ -25613,30 +25630,13 @@
         "wikipedia": "https://en.wikipedia.org/wiki/Carlos_Miguel_Jim%C3%A9nez_Airport"
       },
       {
-        "name": "Aeropuerto Nacional Doctor Juan Plate",
-        "iata": "VMI",
-        "municipality": "Puerto Vallemi",
-        "type": "medium_airport",
-        "elevationFt": 280,
-        "wikipedia": "https://en.wikipedia.org/wiki/Dr._Juan_Plate_Airport"
-      },
-      {
-        "name": "Aeropuerto Nacional Dr. Augusto Roberto Fuster",
+        "name": "Dr. Augusto Roberto Fuster International Airport",
         "iata": "PJC",
         "icao": "SGPJ",
         "municipality": "Pedro Juan Caballero",
         "type": "medium_airport",
         "elevationFt": 1873,
         "wikipedia": "https://en.wikipedia.org/wiki/Dr._Augusto_Roberto_Fuster_International_Airport"
-      },
-      {
-        "name": "Aeropuerto Nacional Juan de Ayolas",
-        "iata": "AYO",
-        "icao": "SGAY",
-        "municipality": "Ayolas",
-        "type": "medium_airport",
-        "elevationFt": 223,
-        "wikipedia": "https://en.wikipedia.org/wiki/Juan_de_Ayolas_Airport"
       },
       {
         "name": "Dr. Luis María Argaña International Airport",
@@ -25646,6 +25646,15 @@
         "type": "medium_airport",
         "elevationFt": 553,
         "wikipedia": "https://en.wikipedia.org/wiki/Dr._Luis_Maria_Arga%C3%B1a_International_Airport"
+      },
+      {
+        "name": "Juan de Ayolas National Airport",
+        "iata": "AYO",
+        "icao": "SGAY",
+        "municipality": "Ayolas",
+        "type": "medium_airport",
+        "elevationFt": 223,
+        "wikipedia": "https://en.wikipedia.org/wiki/Juan_de_Ayolas_Airport"
       },
       {
         "name": "Lieutenant Colonel Carmelo Peralta National Airport",
@@ -25658,13 +25667,12 @@
       }
     ],
     "highestAirport": {
-      "name": "Aeropuerto Nacional Dr. Augusto Roberto Fuster",
-      "iata": "PJC",
-      "elevationFt": 1873,
-      "type": "medium_airport"
+      "name": "Ypané Complex Airport",
+      "elevationFt": 2100,
+      "type": "small_airport"
     },
     "lowestAirport": {
-      "name": "Aeródromo de Loma Plata",
+      "name": "Loma Plata Airport",
       "elevationFt": 70,
       "type": "small_airport"
     }
