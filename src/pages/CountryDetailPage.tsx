@@ -53,6 +53,7 @@ import {
   getEurozoneBadgeConfig,
   getNATOBadgeConfig,
   getBRICSBadgeConfig,
+  getOECDBadgeConfig,
 } from "../utils/blocUtils";
 import {
   formatGdp,
@@ -250,6 +251,7 @@ export default function CountryDetailPage() {
   const eurozoneBadge = getEurozoneBadgeConfig();
   const natoBadge = getNATOBadgeConfig();
   const bricsBadge = getBRICSBadgeConfig();
+  const oecdBadge = getOECDBadgeConfig();
   const creditGradeBadge = getGradeBadgeConfig(
     country.creditRatings?.overallGrade,
     country.creditRatings?.isInvestmentGrade,
@@ -728,6 +730,31 @@ export default function CountryDetailPage() {
                         </Tooltip>
                       )}
 
+                      {country.blocs?.isOECD && (
+                        <Tooltip title={oecdBadge.tooltip} arrow>
+                          <Chip
+                            icon={
+                              <span
+                                style={{
+                                  fontSize: "0.95rem",
+                                  marginLeft: "4px",
+                                }}
+                              >
+                                {oecdBadge.icon}
+                              </span>
+                            }
+                            label={oecdBadge.label}
+                            size="small"
+                            sx={{
+                              fontWeight: 700,
+                              backgroundColor: oecdBadge.backgroundColor,
+                              border: `1px solid ${oecdBadge.borderColor}`,
+                              color: oecdBadge.textColor,
+                            }}
+                          />
+                        </Tooltip>
+                      )}
+
                       {country.sovereignty && (
                         <Tooltip
                           title={`Autonomous territory administered under the sovereignty of ${country.sovereignty.sovereignName}`}
@@ -1181,6 +1208,18 @@ export default function CountryDetailPage() {
                     </Typography>
                     <Typography fontWeight={600}>
                       {country.blocs?.isBRICS ? "Yes (Member State)" : "No"}
+                    </Typography>
+                  </Stack>
+                  <Stack
+                    direction="row"
+                    justifyContent="space-between"
+                    alignItems="center"
+                  >
+                    <Typography color="text.secondary">
+                      🌐 OECD Organization
+                    </Typography>
+                    <Typography fontWeight={600}>
+                      {country.blocs?.isOECD ? "Yes (Member State)" : "No"}
                     </Typography>
                   </Stack>
                 </Stack>

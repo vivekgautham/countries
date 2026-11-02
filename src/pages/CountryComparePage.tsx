@@ -2529,6 +2529,35 @@ export default function CountryComparePage() {
                     );
                   }
 
+                  if (c.blocs?.isOECD) {
+                    chips.push(
+                      <Chip
+                        key="oecd"
+                        size="small"
+                        icon={
+                          <span
+                            style={{
+                              fontSize: "0.75rem",
+                              marginLeft: 3,
+                            }}
+                          >
+                            🌐
+                          </span>
+                        }
+                        label="OECD Member"
+                        sx={{
+                          height: 22,
+                          fontSize: "0.75rem",
+                          fontWeight: 700,
+                          backgroundColor: "rgba(20, 184, 166, 0.18)",
+                          borderColor: "rgba(20, 184, 166, 0.45)",
+                          border: "1px solid",
+                          color: "#5eead4",
+                        }}
+                      />,
+                    );
+                  }
+
                   if (chips.length > 0) {
                     return (
                       <Stack spacing={0.5} alignItems="flex-start">

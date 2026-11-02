@@ -108,6 +108,7 @@ export function parseNaturalLanguageQuery(
   checkBloc("isSchengen", "schengen", "Schengen Area");
   checkBloc("isEurozone", "eurozone", "Eurozone");
   checkBloc("isBRICS", "brics", "BRICS");
+  checkBloc("isOECD", "oecd", "OECD");
   checkBloc("isG7", "g7", "G7");
   checkBloc("isG20", "g20", "G20");
   checkBloc("isGCC", "gcc", "GCC (Gulf)");

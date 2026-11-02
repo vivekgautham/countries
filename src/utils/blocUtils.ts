@@ -210,6 +210,51 @@ export const BRICS_COUNTRY_CODES = new Set<string>([
   "SA", // Saudi Arabia (Joined 2024)
 ]);
 
+/**
+ * OECD (Organisation for Economic Co-operation and Development) - 38 Member States:
+ * High-income developed economies committed to democracy and market economic policy.
+ */
+export const OECD_COUNTRY_CODES = new Set<string>([
+  "AU", // Australia
+  "AT", // Austria
+  "BE", // Belgium
+  "CA", // Canada
+  "CL", // Chile
+  "CO", // Colombia
+  "CR", // Costa Rica
+  "CZ", // Czechia
+  "DK", // Denmark
+  "EE", // Estonia
+  "FI", // Finland
+  "FR", // France
+  "DE", // Germany
+  "GR", // Greece
+  "HU", // Hungary
+  "IS", // Iceland
+  "IE", // Ireland
+  "IL", // Israel
+  "IT", // Italy
+  "JP", // Japan
+  "KR", // South Korea
+  "LV", // Latvia
+  "LT", // Lithuania
+  "LU", // Luxembourg
+  "MX", // Mexico
+  "NL", // Netherlands
+  "NZ", // New Zealand
+  "NO", // Norway
+  "PL", // Poland
+  "PT", // Portugal
+  "SK", // Slovakia
+  "SI", // Slovenia
+  "ES", // Spain
+  "SE", // Sweden
+  "CH", // Switzerland
+  "TR", // Turkey
+  "GB", // United Kingdom
+  "US", // United States
+]);
+
 export function isG7Member(countryCode?: string): boolean {
   if (!countryCode) return false;
   return G7_COUNTRY_CODES.has(countryCode.toUpperCase());
@@ -255,6 +300,11 @@ export function isBRICSMember(countryCode?: string): boolean {
   return BRICS_COUNTRY_CODES.has(countryCode.toUpperCase());
 }
 
+export function isOECDMember(countryCode?: string): boolean {
+  if (!countryCode) return false;
+  return OECD_COUNTRY_CODES.has(countryCode.toUpperCase());
+}
+
 export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
   if (!countryCode) {
     return {
@@ -266,6 +316,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
       isEurozone: false,
       isNATO: false,
       isBRICS: false,
+      isOECD: false,
       g20Status: "non_member",
     };
   }
@@ -280,6 +331,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
   const isEurozone = EUROZONE_COUNTRY_CODES.has(code);
   const isNATO = NATO_COUNTRY_CODES.has(code);
   const isBRICS = BRICS_COUNTRY_CODES.has(code);
+  const isOECD = OECD_COUNTRY_CODES.has(code);
 
   let g20Status: "member" | "permanent_guest" | "non_member" = "non_member";
   if (isG20) {
@@ -292,6 +344,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
   if (isG7) statusLabels.push("G7");
   if (isG20) statusLabels.push("G20");
   else if (isGuest) statusLabels.push("G20 Guest");
+  if (isOECD) statusLabels.push("OECD");
   if (isEU) statusLabels.push("EU");
   if (isNATO) statusLabels.push("NATO");
   if (isBRICS) statusLabels.push("BRICS+");
@@ -310,6 +363,7 @@ export function getEconomicBlocInfo(countryCode?: string): EconomicBlocs {
     isEurozone,
     isNATO,
     isBRICS,
+    isOECD,
     g20Status,
     statusLabel,
   };
@@ -442,6 +496,19 @@ export function getBRICSBadgeConfig(): BlocBadgeConfig {
   };
 }
 
+export function getOECDBadgeConfig(): BlocBadgeConfig {
+  return {
+    label: "OECD Member",
+    shortLabel: "OECD",
+    icon: "🌐",
+    tooltip:
+      "Organisation for Economic Co-operation and Development (OECD) Member: Forum of 38 high-income democratic market economies",
+    backgroundColor: "rgba(20, 184, 166, 0.18)",
+    borderColor: "rgba(20, 184, 166, 0.45)",
+    textColor: "#5eead4",
+  };
+}
+
 /**
  * Checks if search query contains G7/G20/GCC/EU/Schengen/Eurozone/NATO/BRICS search terms.
  */
@@ -515,6 +582,16 @@ export function matchesBlocQuery(
     return true;
   }
 
+  const isOECDSearch =
+    /\boecd\b/i.test(q) ||
+    q.includes("organisation for economic co-operation") ||
+    q.includes("organization for economic co-operation") ||
+    q.includes("oecd member") ||
+    q.includes("oecd countries");
+  if (isOECDSearch && blocs.isOECD) {
+    return true;
+  }
+
   return false;
 }
 
@@ -543,6 +620,13 @@ export const BLOC_FILTER_OPTIONS: BlocFilterOption[] = [
     label: "G20",
     icon: "🌐",
     tooltip: "Group of Twenty (19 leading economies + permanent guest)",
+  },
+  {
+    id: "oecd",
+    label: "OECD",
+    icon: "🌐",
+    tooltip:
+      "Organisation for Economic Co-operation and Development (38 developed market economies)",
   },
   {
     id: "brics",
@@ -595,6 +679,8 @@ export function matchesBlocFilter(
       return Boolean(blocs.isG7);
     case "g20":
       return Boolean(blocs.isG20 || blocs.isG20Guest);
+    case "oecd":
+      return Boolean(blocs.isOECD);
     case "brics":
       return Boolean(blocs.isBRICS);
     case "eu":

@@ -158,6 +158,7 @@ export interface EconomicBlocs {
   isEurozone?: boolean;
   isNATO?: boolean;
   isBRICS?: boolean;
+  isOECD?: boolean;
   statusLabel?: string;
 }
 

@@ -1284,6 +1284,35 @@ export default function CountryListPage() {
                             </Tooltip>
                           )}
 
+                          {country.blocs?.isOECD && (
+                            <Tooltip title="OECD Member State" arrow>
+                              <Chip
+                                size="small"
+                                icon={
+                                  <span
+                                    style={{
+                                      fontSize: "0.65rem",
+                                      marginLeft: 3,
+                                    }}
+                                  >
+                                    🌐
+                                  </span>
+                                }
+                                label="OECD"
+                                sx={{
+                                  height: 18,
+                                  fontSize: "0.65rem",
+                                  fontWeight: 800,
+                                  backgroundColor: "rgba(20, 184, 166, 0.2)",
+                                  color: "#5eead4",
+                                  border: "1px solid rgba(20, 184, 166, 0.45)",
+                                  borderRadius: 1,
+                                  "& .MuiChip-label": { px: 0.5 },
+                                }}
+                              />
+                            </Tooltip>
+                          )}
+
                           {country.blocs?.isSchengen &&
                             !country.blocs?.isEU && (
                               <Tooltip

@@ -61,6 +61,7 @@ import AppVersionBadge from "../components/layout/AppVersionBadge";
 import { UnifiedCountry } from "../types/country";
 import { calculateDensity, formatNumber } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
+import { matchesBlocQuery } from "../utils/blocUtils";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
 import {
   formatFdiInflows,
@@ -792,6 +793,8 @@ export default function CountryRankingsPage() {
         unreported: total,
         avg: 0,
         median: 0,
+        oecdAvg: undefined as number | undefined,
+        oecdCount: 0,
         high: 0,
         moderate: 0,
         low: 0,
@@ -810,12 +813,23 @@ export default function CountryRankingsPage() {
     const moderate = valid.filter((x) => x.val >= 15 && x.val < 25).length;
     const low = valid.filter((x) => x.val < 15).length;
 
+    const oecdValid = valid.filter((x) => x.country.blocs?.isOECD);
+    const oecdAvg =
+      oecdValid.length > 0
+        ? Math.round(
+            (oecdValid.reduce((acc, x) => acc + x.val, 0) / oecdValid.length) *
+              10,
+          ) / 10
+        : undefined;
+
     return {
       total,
       reported,
       unreported: total - reported,
       avg,
       median,
+      oecdAvg,
+      oecdCount: oecdValid.length,
       high,
       moderate,
       low,
@@ -924,7 +938,8 @@ export default function CountryRankingsPage() {
           item.country.name.toLowerCase().includes(q) ||
           item.country.officialName?.toLowerCase().includes(q) ||
           item.country.code.toLowerCase() === q ||
-          item.country.capital?.toLowerCase().includes(q),
+          item.country.capital?.toLowerCase().includes(q) ||
+          matchesBlocQuery(item.country, q),
       );
     }
 
@@ -1788,6 +1803,19 @@ export default function CountryRankingsPage() {
                     border: "1px solid rgba(16, 185, 129, 0.35)",
                   }}
                 />
+                {taxStats.oecdAvg !== undefined && (
+                  <Chip
+                    label={`OECD Avg: ${taxStats.oecdAvg}%`}
+                    size="small"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "0.78rem",
+                      backgroundColor: "rgba(20, 184, 166, 0.15)",
+                      color: "#5eead4",
+                      border: "1px solid rgba(20, 184, 166, 0.35)",
+                    }}
+                  />
+                )}
               </Stack>
             </Stack>
 
@@ -2086,6 +2114,20 @@ export default function CountryRankingsPage() {
                       border: "1px solid rgba(16, 185, 129, 0.3)",
                     }}
                   />
+                  {taxStats.oecdAvg !== undefined && (
+                    <Chip
+                      label={`OECD Benchmark: ${taxStats.oecdAvg}% of GDP`}
+                      size="small"
+                      sx={{
+                        height: 22,
+                        fontSize: "0.72rem",
+                        fontWeight: 700,
+                        backgroundColor: "rgba(20, 184, 166, 0.15)",
+                        color: "#5eead4",
+                        border: "1px solid rgba(20, 184, 166, 0.3)",
+                      }}
+                    />
+                  )}
                 </>
               )}
             </Stack>

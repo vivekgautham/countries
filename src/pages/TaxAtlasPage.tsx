@@ -197,6 +197,7 @@ export default function TaxAtlasPage() {
         (b.isEU ||
           b.isNATO ||
           b.isBRICS ||
+          b.isOECD ||
           b.isG7 ||
           b.isG20 ||
           b.isGCC ||
@@ -232,6 +233,7 @@ export default function TaxAtlasPage() {
             (b.isEU ||
               b.isNATO ||
               b.isBRICS ||
+              b.isOECD ||
               b.isG7 ||
               b.isG20 ||
               b.isGCC ||
@@ -1456,6 +1458,19 @@ export default function TaxAtlasPage() {
                               }}
                             />
                           )}
+                          {b.isOECD && (
+                            <Chip
+                              label="🌐 OECD"
+                              size="small"
+                              sx={{
+                                height: 20,
+                                fontSize: "0.68rem",
+                                fontWeight: 700,
+                                backgroundColor: "rgba(20, 184, 166, 0.15)",
+                                color: "#5eead4",
+                              }}
+                            />
+                          )}
                           {b.isG7 && (
                             <Chip
                               label="🏛️ G7"
@@ -1963,6 +1978,13 @@ export default function TaxAtlasPage() {
                               sx={{ height: 18, fontSize: "0.65rem" }}
                             />
                           )}
+                          {b?.isOECD && (
+                            <Chip
+                              label="OECD"
+                              size="small"
+                              sx={{ height: 18, fontSize: "0.65rem" }}
+                            />
+                          )}
                           {b?.isG7 && (
                             <Chip
                               label="G7"
@@ -1988,6 +2010,7 @@ export default function TaxAtlasPage() {
                             !b?.isSchengen &&
                             !b?.isNATO &&
                             !b?.isBRICS &&
+                            !b?.isOECD &&
                             !b?.isG7 &&
                             !b?.isG20 &&
                             !b?.isGCC && (
