@@ -84,6 +84,7 @@ import {
   getGdpRank,
   getPppRank,
 } from "../utils/gdpUtils";
+import { formatPm25, getAqiBadgeConfig } from "../utils/airQualityUtils";
 import { SectorPieChart } from "../components/economy/SectorPieChart";
 import { LargestCitiesSection } from "../components/cities/LargestCitiesSection";
 import { useDocumentTitle } from "../utils/useDocumentTitle";
@@ -1477,6 +1478,39 @@ export default function CountryDetailPage() {
                 </Typography>
                 <Divider />
                 <Stack spacing={1.5}>
+                  {country.airQuality && (
+                    <Stack
+                      direction="row"
+                      justifyContent="space-between"
+                      alignItems="center"
+                    >
+                      <Typography color="text.secondary">
+                        🍃 Ambient Air Quality
+                      </Typography>
+                      <Stack direction="row" alignItems="center" spacing={1}>
+                        <Typography fontWeight={600} textAlign="right">
+                          {formatPm25(country.airQuality.pm25)}
+                        </Typography>
+                        <Chip
+                          label={`${country.airQuality.category} (AQI ${country.airQuality.aqi})`}
+                          size="small"
+                          sx={{
+                            height: 20,
+                            fontSize: "0.68rem",
+                            fontWeight: 700,
+                            backgroundColor: getAqiBadgeConfig(
+                              country.airQuality.category,
+                            ).bg,
+                            color: getAqiBadgeConfig(
+                              country.airQuality.category,
+                            ).color,
+                            border: `1px solid ${getAqiBadgeConfig(country.airQuality.category).border}`,
+                          }}
+                        />
+                      </Stack>
+                    </Stack>
+                  )}
+
                   {country.gdp?.renewableEnergy !== undefined && (
                     <Stack
                       direction="row"

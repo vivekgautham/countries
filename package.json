@@ -1,7 +1,7 @@
 {
   "name": "countries",
   "private": true,
-  "version": "0.0.77",
+  "version": "0.0.78",
   "homepage": "https://vivekgautham.github.io/countries",
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
     "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,html}'",
+    "update:air-quality": "node scripts/update-air-quality.js",
     "update:airports": "node scripts/update-airports.js",
     "update:cities": "node scripts/update-cities.js",
     "update:gdp": "node scripts/update-gdp.js",

@@ -7,12 +7,15 @@ import ElectricBoltIcon from "@mui/icons-material/ElectricBolt";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import FlightIcon from "@mui/icons-material/Flight";
 import GroupsIcon from "@mui/icons-material/Groups";
+import AirIcon from "@mui/icons-material/Air";
+import CloudIcon from "@mui/icons-material/Cloud";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import PublicIcon from "@mui/icons-material/Public";
 import SearchIcon from "@mui/icons-material/Search";
 import SecurityIcon from "@mui/icons-material/Security";
 import ShareIcon from "@mui/icons-material/Share";
+import SpaIcon from "@mui/icons-material/Spa";
 import TerrainIcon from "@mui/icons-material/Terrain";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import WaterIcon from "@mui/icons-material/Water";
@@ -58,7 +61,7 @@ import {
 } from "react-router-dom";
 import { useCountriesData } from "../api/countriesApi";
 import AppVersionBadge from "../components/layout/AppVersionBadge";
-import { UnifiedCountry } from "../types/country";
+import { AirQualityInfo, UnifiedCountry } from "../types/country";
 import { calculateDensity, formatNumber } from "../utils/comparisonUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
 import { matchesBlocQuery } from "../utils/blocUtils";
@@ -74,6 +77,11 @@ import {
   formatPpp,
   formatPppPerCapita,
 } from "../utils/gdpUtils";
+import {
+  formatAqi,
+  formatPm25,
+  getAqiBadgeConfig,
+} from "../utils/airQualityUtils";
 
 export interface RankingMetricConfig {
   id: string;
@@ -84,7 +92,8 @@ export interface RankingMetricConfig {
     | "geography"
     | "growth"
     | "digital"
-    | "aviation";
+    | "aviation"
+    | "air_quality";
   label: string;
   shortLabel: string;
   unit: string;
@@ -161,6 +170,15 @@ export const RANKING_CATEGORIES = [
     emoji: "✈️",
     description:
       "Countries with the most extensive airport infrastructure and commercial flight networks.",
+  },
+  {
+    id: "air_quality",
+    label: "Clean Air & Environment",
+    shortLabel: "Air Quality",
+    icon: <AirIcon sx={{ fontSize: 18 }} />,
+    emoji: "🍃",
+    description:
+      "Global nations ranked by ambient air cleanliness, fine particulate matter (PM2.5) exposure, US AQI index, and WHO health guideline adherence.",
   },
 ] as const;
 
@@ -636,6 +654,66 @@ export const RANKING_METRICS: RankingMetricConfig[] = [
         ? `${c.airports.highestAirport.name}${c.airports.highestAirport.iata ? ` (${c.airports.highestAirport.iata})` : ""}`
         : "—",
   },
+
+  // 8. Clean Air & Air Quality
+  {
+    id: "pm25_cleanest",
+    category: "air_quality",
+    label: "Cleanest Air (Lowest PM2.5)",
+    shortLabel: "PM2.5 (Cleanest)",
+    unit: "µg/m³",
+    description:
+      "Annual mean concentration of ambient fine particulate matter (PM2.5) in micrograms per cubic meter. Ranked from cleanest air (lowest PM2.5) to most polluted.",
+    source: "World Bank (WDI) / WHO",
+    sortDirection: "asc",
+    icon: <AirIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.airQuality?.pm25,
+    formatValue: (val) => formatPm25(val),
+    getSecondaryValue: (c) => {
+      if (!c.airQuality) return "—";
+      const whoStr = c.airQuality.whoTargetMet
+        ? "🌿 Meets WHO Target (≤5 µg/m³)"
+        : c.airQuality.whoTier;
+      return `AQI ${c.airQuality.aqi} (${c.airQuality.category}) • ${whoStr}`;
+    },
+  },
+  {
+    id: "pm25_highest",
+    category: "air_quality",
+    label: "Highest PM2.5 Air Pollution",
+    shortLabel: "PM2.5 (Most Polluted)",
+    unit: "µg/m³",
+    description:
+      "Countries with the highest annual mean particulate pollution (PM2.5) concentrations and public health exposure risks.",
+    source: "World Bank (WDI) / WHO",
+    sortDirection: "desc",
+    icon: <CloudIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.airQuality?.pm25,
+    formatValue: (val) => formatPm25(val),
+    getSecondaryValue: (c) => {
+      if (!c.airQuality) return "—";
+      const timesWho = (c.airQuality.pm25 / 5.0).toFixed(1);
+      return `AQI ${c.airQuality.aqi} • ${timesWho}× WHO Guideline`;
+    },
+  },
+  {
+    id: "aqi_index",
+    category: "air_quality",
+    label: "Air Quality Index (AQI)",
+    shortLabel: "AQI Index",
+    unit: "AQI",
+    description:
+      "US EPA Air Quality Index calculated from ambient annual fine particulate concentrations.",
+    source: "World Bank / US EPA Breakpoints",
+    sortDirection: "asc",
+    icon: <SpaIcon sx={{ fontSize: 18 }} />,
+    getValue: (c) => c.airQuality?.aqi,
+    formatValue: (val) => formatAqi(val),
+    getSecondaryValue: (c) => {
+      if (!c.airQuality) return "—";
+      return `${c.airQuality.category} Air • ${formatPm25(c.airQuality.pm25)}`;
+    },
+  },
 ];
 
 const REGION_OPTIONS = [
@@ -779,8 +857,13 @@ export default function CountryRankingsPage() {
         year: c.gdp?.taxRevenueYear,
       }))
       .filter(
-        (x): x is { country: UnifiedCountry; val: number; year: number | undefined } =>
-          typeof x.val === "number" && !isNaN(x.val),
+        (
+          x,
+        ): x is {
+          country: UnifiedCountry;
+          val: number;
+          year: number | undefined;
+        } => typeof x.val === "number" && !isNaN(x.val),
       )
       .sort((a, b) => b.val - a.val);
 
@@ -801,8 +884,16 @@ export default function CountryRankingsPage() {
         highPct: 0,
         moderatePct: 0,
         lowPct: 0,
-        topCountry: null as { country: UnifiedCountry; val: number; year: number | undefined } | null,
-        bottomCountry: null as { country: UnifiedCountry; val: number; year: number | undefined } | null,
+        topCountry: null as {
+          country: UnifiedCountry;
+          val: number;
+          year: number | undefined;
+        } | null,
+        bottomCountry: null as {
+          country: UnifiedCountry;
+          val: number;
+          year: number | undefined;
+        } | null,
       };
     }
 
@@ -838,6 +929,116 @@ export default function CountryRankingsPage() {
       lowPct: Math.round((low / reported) * 100),
       topCountry: valid[0],
       bottomCountry: valid[valid.length - 1],
+    };
+  }, [countries]);
+
+  // Air Quality Dashboard Statistics
+  const airStats = useMemo(() => {
+    const valid = countries
+      .map((c) => ({
+        country: c,
+        aq: c.airQuality,
+      }))
+      .filter((x): x is { country: UnifiedCountry; aq: AirQualityInfo } =>
+        Boolean(x.aq && typeof x.aq.pm25 === "number" && !isNaN(x.aq.pm25)),
+      )
+      .sort((a, b) => a.aq.pm25 - b.aq.pm25);
+
+    const total = countries.length || 1;
+    const reported = valid.length;
+    if (reported === 0) {
+      return {
+        total,
+        reported: 0,
+        unreported: total,
+        avgPm25: 0,
+        medianPm25: 0,
+        oecdAvgPm25: undefined as number | undefined,
+        whoTargetMetCount: 0,
+        whoTargetMetPct: 0,
+        it4Count: 0,
+        it3Count: 0,
+        it2Count: 0,
+        it1Count: 0,
+        exceedsAllCount: 0,
+        exceedsAllPct: 0,
+        goodAqiCount: 0,
+        goodAqiPct: 0,
+        moderateAqiCount: 0,
+        moderateAqiPct: 0,
+        unhealthyAqiCount: 0,
+        unhealthyAqiPct: 0,
+        cleanestCountry: null as {
+          country: UnifiedCountry;
+          aq: AirQualityInfo;
+        } | null,
+        mostPollutedCountry: null as {
+          country: UnifiedCountry;
+          aq: AirQualityInfo;
+        } | null,
+      };
+    }
+
+    const sum = valid.reduce((acc, x) => acc + x.aq.pm25, 0);
+    const avgPm25 = Math.round((sum / reported) * 10) / 10;
+    const medianPm25 = valid[Math.floor(reported / 2)].aq.pm25;
+
+    const whoTargetMetCount = valid.filter((x) => x.aq.whoTargetMet).length;
+    const it4Count = valid.filter(
+      (x) => x.aq.pm25 > 5.0 && x.aq.pm25 <= 10.0,
+    ).length;
+    const it3Count = valid.filter(
+      (x) => x.aq.pm25 > 10.0 && x.aq.pm25 <= 15.0,
+    ).length;
+    const it2Count = valid.filter(
+      (x) => x.aq.pm25 > 15.0 && x.aq.pm25 <= 25.0,
+    ).length;
+    const it1Count = valid.filter(
+      (x) => x.aq.pm25 > 25.0 && x.aq.pm25 <= 35.0,
+    ).length;
+    const exceedsAllCount = valid.filter((x) => x.aq.pm25 > 35.0).length;
+
+    const goodAqiCount = valid.filter((x) => x.aq.category === "Good").length;
+    const moderateAqiCount = valid.filter(
+      (x) => x.aq.category === "Moderate",
+    ).length;
+    const unhealthyAqiCount = valid.filter(
+      (x) => x.aq.category !== "Good" && x.aq.category !== "Moderate",
+    ).length;
+
+    const oecdValid = valid.filter((x) => x.country.blocs?.isOECD);
+    const oecdAvgPm25 =
+      oecdValid.length > 0
+        ? Math.round(
+            (oecdValid.reduce((acc, x) => acc + x.aq.pm25, 0) /
+              oecdValid.length) *
+              10,
+          ) / 10
+        : undefined;
+
+    return {
+      total,
+      reported,
+      unreported: total - reported,
+      avgPm25,
+      medianPm25,
+      oecdAvgPm25,
+      whoTargetMetCount,
+      whoTargetMetPct: Math.round((whoTargetMetCount / reported) * 100),
+      it4Count,
+      it3Count,
+      it2Count,
+      it1Count,
+      exceedsAllCount,
+      exceedsAllPct: Math.round((exceedsAllCount / reported) * 100),
+      goodAqiCount,
+      goodAqiPct: Math.round((goodAqiCount / reported) * 100),
+      moderateAqiCount,
+      moderateAqiPct: Math.round((moderateAqiCount / reported) * 100),
+      unhealthyAqiCount,
+      unhealthyAqiPct: Math.round((unhealthyAqiCount / reported) * 100),
+      cleanestCountry: valid[0],
+      mostPollutedCountry: valid[valid.length - 1],
     };
   }, [countries]);
 
@@ -1094,6 +1295,45 @@ export default function CountryRankingsPage() {
         label: val >= 12 ? "Investment Grade" : "Speculative Grade",
         tooltip: `Score: ${val}/21 (${val >= 12 ? "Investment Grade" : "Speculative / High Yield"})`,
       };
+    }
+
+    // 7. Clean Air & PM2.5 / AQI Metrics
+    if (
+      currentMetric.category === "air_quality" ||
+      currentMetric.id.startsWith("pm25_") ||
+      currentMetric.id === "aqi_index"
+    ) {
+      if (currentMetric.id === "pm25_cleanest") {
+        const score = Math.max(
+          5,
+          Math.min(100, Math.round(100 - (val / 80) * 95)),
+        );
+        const whoStatus =
+          val <= 5.0
+            ? "🌿 Meets WHO Target"
+            : `${(val / 5.0).toFixed(1)}× WHO Limit`;
+        return {
+          barPercent: score,
+          label: whoStatus,
+          tooltip: `${val.toFixed(1)} µg/m³ PM2.5 • ${whoStatus}`,
+        };
+      }
+      if (currentMetric.id === "pm25_highest") {
+        const pct = Math.max(5, Math.min(100, Math.round((val / 100) * 100)));
+        return {
+          barPercent: pct,
+          label: `${(val / 5.0).toFixed(1)}× WHO Guideline`,
+          tooltip: `${val.toFixed(1)} µg/m³ PM2.5 (${(val / 5.0).toFixed(1)}× WHO annual guideline limit)`,
+        };
+      }
+      if (currentMetric.id === "aqi_index") {
+        const pct = Math.max(5, Math.min(100, Math.round((val / 300) * 100)));
+        return {
+          barPercent: pct,
+          label: `AQI ${val}`,
+          tooltip: `US EPA Air Quality Index: ${val}`,
+        };
+      }
     }
 
     // 4. Default / Relative to #1 Benchmark
@@ -1776,7 +2016,8 @@ export default function CountryRankingsPage() {
                   variant="body2"
                   sx={{ color: "text.secondary", mt: 0.25 }}
                 >
-                  Central government tax revenue collection as a percentage of gross domestic product across World Bank reported nations
+                  Central government tax revenue collection as a percentage of
+                  gross domestic product across World Bank reported nations
                 </Typography>
               </Box>
 
@@ -1855,7 +2096,8 @@ export default function CountryRankingsPage() {
                       variant="caption"
                       sx={{ color: "text.secondary" }}
                     >
-                      {taxStats.highPct}% of reported nations (e.g. Denmark, France, UK) • Extensive public welfare &amp; services
+                      {taxStats.highPct}% of reported nations (e.g. Denmark,
+                      France, UK) • Extensive public welfare &amp; services
                     </Typography>
                   </Stack>
                 </Paper>
@@ -1895,7 +2137,9 @@ export default function CountryRankingsPage() {
                       variant="caption"
                       sx={{ color: "text.secondary" }}
                     >
-                      {taxStats.moderatePct}% of reported nations • Balanced fiscal extraction across OECD &amp; middle-income economies
+                      {taxStats.moderatePct}% of reported nations • Balanced
+                      fiscal extraction across OECD &amp; middle-income
+                      economies
                     </Typography>
                   </Stack>
                 </Paper>
@@ -1935,7 +2179,9 @@ export default function CountryRankingsPage() {
                       variant="caption"
                       sx={{ color: "text.secondary" }}
                     >
-                      {taxStats.lowPct}% of reported nations (e.g. UAE 0.6%, Kuwait 1.5%) • Low direct taxation or resource-funded budgets
+                      {taxStats.lowPct}% of reported nations (e.g. UAE 0.6%,
+                      Kuwait 1.5%) • Low direct taxation or resource-funded
+                      budgets
                     </Typography>
                   </Stack>
                 </Paper>
@@ -1975,12 +2221,579 @@ export default function CountryRankingsPage() {
                       variant="caption"
                       sx={{ color: "text.secondary" }}
                     >
-                      Global mean • Highest: {taxStats.topCountry?.country.name} ({taxStats.topCountry?.val}%) • Lowest: {taxStats.bottomCountry?.country.name} ({taxStats.bottomCountry?.val}%)
+                      Global mean • Highest: {taxStats.topCountry?.country.name}{" "}
+                      ({taxStats.topCountry?.val}%) • Lowest:{" "}
+                      {taxStats.bottomCountry?.country.name} (
+                      {taxStats.bottomCountry?.val}%)
                     </Typography>
                   </Stack>
                 </Paper>
               </Grid>
             </Grid>
+          </Stack>
+        </Card>
+      )}
+
+      {/* Air Quality & Environment Dashboard Panel */}
+      {(activeCategory === "air_quality" ||
+        currentMetric.category === "air_quality") && (
+        <Card
+          elevation={0}
+          sx={{
+            mb: 4,
+            borderRadius: 3.5,
+            background:
+              "linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(15, 23, 42, 0.8) 100%)",
+            border: "1px solid rgba(52, 211, 153, 0.25)",
+            p: { xs: 2, sm: 2.5 },
+            boxShadow: "0 8px 32px rgba(0, 0, 0, 0.25)",
+          }}
+        >
+          <Stack spacing={2.5}>
+            <Stack
+              direction={{ xs: "column", sm: "row" }}
+              justifyContent="space-between"
+              alignItems={{ xs: "flex-start", sm: "center" }}
+              flexWrap="wrap"
+              gap={1.5}
+            >
+              <Box>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    fontWeight: 800,
+                    fontSize: "1.15rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <span>🍃</span> Ambient Air Quality &amp; Clean Air Dashboard
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mt: 0.25 }}
+                >
+                  Fine particulate matter (PM2.5) exposure and WHO 2021 air
+                  quality guideline adherence across World Bank &amp; WHO
+                  monitored nations
+                </Typography>
+              </Box>
+
+              <Stack direction="row" spacing={1} flexWrap="wrap" gap={0.5}>
+                <Chip
+                  label={`${airStats.reported} Nations Monitored`}
+                  size="small"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: "0.78rem",
+                    backgroundColor: "rgba(52, 211, 153, 0.15)",
+                    color: "#34d399",
+                    border: "1px solid rgba(52, 211, 153, 0.35)",
+                  }}
+                />
+                <Chip
+                  label="WHO Benchmark: ≤ 5 µg/m³"
+                  size="small"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: "0.78rem",
+                    backgroundColor: "rgba(99, 102, 241, 0.15)",
+                    color: "#a5b4fc",
+                    border: "1px solid rgba(99, 102, 241, 0.35)",
+                  }}
+                />
+                <Chip
+                  label={`Global Median: ${airStats.medianPm25} µg/m³`}
+                  size="small"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: "0.78rem",
+                    backgroundColor: "rgba(245, 158, 11, 0.15)",
+                    color: "#fbbf24",
+                    border: "1px solid rgba(245, 158, 11, 0.35)",
+                  }}
+                />
+                {airStats.oecdAvgPm25 !== undefined && (
+                  <Chip
+                    label={`OECD Avg: ${airStats.oecdAvgPm25} µg/m³`}
+                    size="small"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: "0.78rem",
+                      backgroundColor: "rgba(56, 189, 248, 0.15)",
+                      color: "#38bdf8",
+                      border: "1px solid rgba(56, 189, 248, 0.35)",
+                    }}
+                  />
+                )}
+              </Stack>
+            </Stack>
+
+            {/* 4 Stat Cards Grid */}
+            <Grid container spacing={2}>
+              {/* Clean Air Champions */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(16, 185, 129, 0.08)",
+                    borderColor: "rgba(16, 185, 129, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#34d399",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🌿 Meets WHO Target (≤ 5 µg)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#34d399" }}
+                    >
+                      {airStats.whoTargetMetCount}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {airStats.whoTargetMetPct}% of nations achieve WHO gold
+                      guideline (e.g. {airStats.cleanestCountry?.country.name})
+                      • Pristine air
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Good & Acceptable Air */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(56, 189, 248, 0.08)",
+                    borderColor: "rgba(56, 189, 248, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#38bdf8",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🟡 Good &amp; Moderate (AQI ≤ 100)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#38bdf8" }}
+                    >
+                      {airStats.goodAqiCount + airStats.moderateAqiCount}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {Math.round(
+                        ((airStats.goodAqiCount + airStats.moderateAqiCount) /
+                          (airStats.reported || 1)) *
+                          100,
+                      )}
+                      % of nations have satisfactory or acceptable particulate
+                      levels for healthy adults
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Severe Pollution Hotspots */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(239, 68, 68, 0.08)",
+                    borderColor: "rgba(239, 68, 68, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#f87171",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      ⛔ Pollution Hotspots (&gt; 35 µg)
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#f87171" }}
+                    >
+                      {airStats.exceedsAllCount}
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      {airStats.exceedsAllPct}% of nations exceed all WHO
+                      interim targets (&gt;7× guideline limit) • Critical
+                      respiratory exposure
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+
+              {/* Global PM2.5 Average */}
+              <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+                <Paper
+                  variant="outlined"
+                  sx={{
+                    p: 2,
+                    borderRadius: 2.5,
+                    backgroundColor: "rgba(245, 158, 11, 0.08)",
+                    borderColor: "rgba(245, 158, 11, 0.3)",
+                    height: "100%",
+                  }}
+                >
+                  <Stack spacing={0.5}>
+                    <Typography
+                      variant="caption"
+                      sx={{
+                        fontWeight: 700,
+                        color: "#fbbf24",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.05em",
+                      }}
+                    >
+                      🌐 Global PM2.5 Mean
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ fontWeight: 800, color: "#fbbf24" }}
+                    >
+                      {airStats.avgPm25} µg
+                    </Typography>
+                    <Typography
+                      variant="caption"
+                      sx={{ color: "text.secondary" }}
+                    >
+                      Lowest: {airStats.cleanestCountry?.country.name} (
+                      {airStats.cleanestCountry?.aq.pm25} µg) • Highest:{" "}
+                      {airStats.mostPollutedCountry?.country.name} (
+                      {airStats.mostPollutedCountry?.aq.pm25} µg)
+                    </Typography>
+                  </Stack>
+                </Paper>
+              </Grid>
+            </Grid>
+
+            {/* WHO Guideline Distribution Bar */}
+            <Box
+              sx={{
+                p: 2,
+                borderRadius: 2.5,
+                backgroundColor: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.08)",
+              }}
+            >
+              <Typography
+                variant="subtitle2"
+                sx={{ fontWeight: 700, mb: 1.5, color: "text.primary" }}
+              >
+                Global Exposure Spectrum (WHO 2021 Tier Breakdown)
+              </Typography>
+
+              {/* Segmented Bar */}
+              <Box
+                sx={{
+                  display: "flex",
+                  height: 14,
+                  borderRadius: 2,
+                  overflow: "hidden",
+                  mb: 1.5,
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: `${(airStats.whoTargetMetCount / airStats.reported) * 100}%`,
+                    backgroundColor: "#10b981",
+                  }}
+                  title={`WHO Guideline (≤5 µg): ${airStats.whoTargetMetCount} nations`}
+                />
+                <Box
+                  sx={{
+                    width: `${(airStats.it4Count / airStats.reported) * 100}%`,
+                    backgroundColor: "#06b6d4",
+                  }}
+                  title={`Interim Target 4 (5.1-10 µg): ${airStats.it4Count} nations`}
+                />
+                <Box
+                  sx={{
+                    width: `${(airStats.it3Count / airStats.reported) * 100}%`,
+                    backgroundColor: "#eab308",
+                  }}
+                  title={`Interim Target 3 (10.1-15 µg): ${airStats.it3Count} nations`}
+                />
+                <Box
+                  sx={{
+                    width: `${(airStats.it2Count / airStats.reported) * 100}%`,
+                    backgroundColor: "#f97316",
+                  }}
+                  title={`Interim Target 2 (15.1-25 µg): ${airStats.it2Count} nations`}
+                />
+                <Box
+                  sx={{
+                    width: `${(airStats.it1Count / airStats.reported) * 100}%`,
+                    backgroundColor: "#ef4444",
+                  }}
+                  title={`Interim Target 1 (25.1-35 µg): ${airStats.it1Count} nations`}
+                />
+                <Box
+                  sx={{
+                    width: `${(airStats.exceedsAllCount / airStats.reported) * 100}%`,
+                    backgroundColor: "#d946ef",
+                  }}
+                  title={`Exceeds Targets (>35 µg): ${airStats.exceedsAllCount} nations`}
+                />
+              </Box>
+
+              {/* Legend Grid */}
+              <Grid container spacing={1.5}>
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#10b981",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        ≤ 5 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        WHO Target ({airStats.whoTargetMetCount})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#06b6d4",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        5.1 – 10 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        Target 4 ({airStats.it4Count})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#eab308",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        10.1 – 15 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        Target 3 ({airStats.it3Count})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#f97316",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        15.1 – 25 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        Target 2 ({airStats.it2Count})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#ef4444",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        25.1 – 35 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        Target 1 ({airStats.it1Count})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+
+                <Grid size={{ xs: 6, sm: 4, md: 2 }}>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 10,
+                        height: 10,
+                        borderRadius: "50%",
+                        backgroundColor: "#d946ef",
+                        flexShrink: 0,
+                      }}
+                    />
+                    <Box>
+                      <Typography
+                        variant="caption"
+                        sx={{ fontWeight: 700, display: "block" }}
+                      >
+                        &gt; 35 µg/m³
+                      </Typography>
+                      <Typography
+                        variant="caption"
+                        sx={{ color: "text.secondary", fontSize: "0.68rem" }}
+                      >
+                        Exceeds ({airStats.exceedsAllCount})
+                      </Typography>
+                    </Box>
+                  </Stack>
+                </Grid>
+              </Grid>
+            </Box>
+
+            {/* WHO 2021 Reference Callout */}
+            <Paper
+              variant="outlined"
+              sx={{
+                p: 1.75,
+                borderRadius: 2.5,
+                backgroundColor: "rgba(99, 102, 241, 0.05)",
+                borderColor: "rgba(99, 102, 241, 0.2)",
+              }}
+            >
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                spacing={1.5}
+                alignItems="flex-start"
+              >
+                <Box sx={{ fontSize: "1.4rem", lineHeight: 1 }}>💡</Box>
+                <Box>
+                  <Typography
+                    variant="body2"
+                    sx={{ fontWeight: 700, color: "#a5b4fc" }}
+                  >
+                    Why PM2.5 matters: The 2021 WHO Global Air Quality Benchmark
+                  </Typography>
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: "text.secondary",
+                      display: "block",
+                      mt: 0.5,
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Fine particulate matter (PM2.5) consists of microscopic
+                    airborne particles under 2.5 micrometers in width (roughly
+                    3% the diameter of a human hair). Because of their small
+                    size, they penetrate deep into lung tissue and enter the
+                    bloodstream, elevating risks of stroke, heart disease, lung
+                    cancer, and asthma. In 2021, the WHO tightened the annual
+                    guideline from 10 µg/m³ down to 5 µg/m³ after medical
+                    studies proved significant mortality effects even at very
+                    low exposure levels.
+                  </Typography>
+                </Box>
+              </Stack>
+            </Paper>
           </Stack>
         </Card>
       )}
@@ -2688,10 +3501,12 @@ export default function CountryRankingsPage() {
                   ? "Land Area"
                   : currentMetric.id === "coast_to_area_ratio"
                     ? "Coastline Length"
-                    : currentMetric.category === "credit" ||
-                        currentMetric.includeUnrated
-                      ? "Credit Tier"
-                      : "Population"}
+                    : currentMetric.category === "air_quality"
+                      ? "Air Quality (AQI)"
+                      : currentMetric.category === "credit" ||
+                          currentMetric.includeUnrated
+                        ? "Credit Tier"
+                        : "Population"}
               </TableCell>
               <TableCell sx={{ width: 160 }}>Secondary Context</TableCell>
               <TableCell align="right" sx={{ width: 110 }}>
@@ -2876,10 +3691,42 @@ export default function CountryRankingsPage() {
                       </Box>
                     </TableCell>
 
-                    {/* Population / Land Area / Coastline / Credit Tier Column */}
+                    {/* Population / Land Area / Coastline / Credit Tier / Air Quality Column */}
                     <TableCell>
-                      {currentMetric.category === "credit" ||
-                      currentMetric.includeUnrated ? (
+                      {currentMetric.category === "air_quality" ? (
+                        item.country.airQuality ? (
+                          <Chip
+                            label={`${item.country.airQuality.category} (AQI ${item.country.airQuality.aqi})`}
+                            size="small"
+                            sx={{
+                              height: 22,
+                              fontSize: "0.72rem",
+                              fontWeight: 700,
+                              backgroundColor: getAqiBadgeConfig(
+                                item.country.airQuality.category,
+                              ).bg,
+                              color: getAqiBadgeConfig(
+                                item.country.airQuality.category,
+                              ).color,
+                              border: `1px solid ${getAqiBadgeConfig(item.country.airQuality.category).border}`,
+                            }}
+                          />
+                        ) : (
+                          <Chip
+                            label="Unmeasured"
+                            size="small"
+                            sx={{
+                              height: 20,
+                              fontSize: "0.68rem",
+                              fontWeight: 600,
+                              backgroundColor: "rgba(255, 255, 255, 0.04)",
+                              color: "text.secondary",
+                              border: "1px solid rgba(255, 255, 255, 0.08)",
+                            }}
+                          />
+                        )
+                      ) : currentMetric.category === "credit" ||
+                        currentMetric.includeUnrated ? (
                         item.value !== null ? (
                           <Chip
                             label={

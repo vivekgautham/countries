@@ -286,6 +286,32 @@ export interface CityInfo {
   rank?: number;
 }
 
+export type AqiCategory =
+  | "Good"
+  | "Moderate"
+  | "Sensitive"
+  | "Unhealthy"
+  | "Very Unhealthy"
+  | "Hazardous";
+
+export type WhoAirQualityTier =
+  | "WHO Guideline"
+  | "Interim Target 4"
+  | "Interim Target 3"
+  | "Interim Target 2"
+  | "Interim Target 1"
+  | "Exceeds Targets";
+
+export interface AirQualityInfo {
+  pm25: number; // Annual mean PM2.5 exposure in µg/m³
+  year: number; // Reporting year
+  aqi: number; // US EPA Air Quality Index value (0-500)
+  category: AqiCategory;
+  whoTargetMet: boolean; // true if pm25 <= 5.0 µg/m³
+  whoTier: WhoAirQualityTier;
+  source: string;
+}
+
 export interface UnifiedCountry {
   code: string; // ISO 2-letter (e.g. US)
   code3?: string; // ISO 3-letter (e.g. USA)
@@ -314,4 +340,5 @@ export interface UnifiedCountry {
   blocs?: EconomicBlocs;
   gdp?: GdpInfo;
   creditRatings?: SovereignCreditRatings;
+  airQuality?: AirQualityInfo;
 }

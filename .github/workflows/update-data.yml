@@ -26,12 +26,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Update GDP, Airport, Cities, and Credit Ratings Datasets
+      - name: Update GDP, Airport, Cities, Credit Ratings, and Air Quality Datasets
         run: |
           npm run update:gdp
           npm run update:airports
           npm run update:cities
           npm run update:ratings
+          npm run update:air-quality
 
       - name: Format files
         run: npm run format
@@ -40,9 +41,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/gdp.json src/data/airports.json src/data/cities.json src/data/creditRatings.json
+          git add src/data/gdp.json src/data/airports.json src/data/cities.json src/data/creditRatings.json src/data/airQuality.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore(data): automated monthly dataset refresh"
+            git commit -m "Chore(data): Automated monthly dataset refresh."
             git push origin main
           else
             echo "No data changes detected. Everything is up to date."

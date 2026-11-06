@@ -75,6 +75,7 @@ import {
   formatGini,
   formatMobileSubscriptions,
 } from "../utils/gdpUtils";
+import { formatPm25, getAqiBadgeConfig } from "../utils/airQualityUtils";
 
 const MAX_COMPARE_COUNTRIES = 4;
 
@@ -2046,6 +2047,32 @@ export default function CountryComparePage() {
             icon={<span style={{ fontSize: "1.2rem" }}>⚡</span>}
             countries={selectedCountries}
             rows={[
+              {
+                label: "Ambient PM2.5 Air Pollution",
+                render: (c) => (
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                      {formatPm25(c.airQuality?.pm25)}
+                    </Typography>
+                    {c.airQuality && (
+                      <Chip
+                        label={`${c.airQuality.category} (AQI ${c.airQuality.aqi})`}
+                        size="small"
+                        sx={{
+                          height: 18,
+                          fontSize: "0.65rem",
+                          fontWeight: 700,
+                          backgroundColor: getAqiBadgeConfig(
+                            c.airQuality.category,
+                          ).bg,
+                          color: getAqiBadgeConfig(c.airQuality.category).color,
+                          border: `1px solid ${getAqiBadgeConfig(c.airQuality.category).border}`,
+                        }}
+                      />
+                    )}
+                  </Stack>
+                ),
+              },
               {
                 label: "Renewable Energy Share",
                 render: (c) => (
