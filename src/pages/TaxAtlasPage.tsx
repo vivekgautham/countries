@@ -47,6 +47,7 @@ import { BLOC_FILTER_OPTIONS, matchesBlocFilter } from "../utils/blocUtils";
 import { getCountryEmoji } from "../utils/countryUtils";
 import {
   getTaxBadgeConfig,
+  isZeroCapitalGainsTax,
   matchesTaxFilter,
   TAX_FILTER_OPTIONS,
 } from "../utils/taxUtils";
@@ -138,6 +139,7 @@ export default function TaxAtlasPage() {
     | "systemType"
     | "headlineRate"
     | "foreignIncomeTaxRate"
+    | "capitalGainsTaxRate"
     | "corporateTaxRate"
     | "region";
 
@@ -183,6 +185,7 @@ export default function TaxAtlasPage() {
     let zeroTaxCount = 0;
     let territorialCount = 0;
     let nonDomCount = 0;
+    let zeroCgtCount = 0;
     let blocsRepresented = 0;
 
     countries.forEach((c) => {
@@ -190,6 +193,10 @@ export default function TaxAtlasPage() {
       if (type === "zero_tax") zeroTaxCount++;
       else if (type === "territorial") territorialCount++;
       else if (type === "non_dom") nonDomCount++;
+
+      if (isZeroCapitalGainsTax(c.tax)) {
+        zeroCgtCount++;
+      }
 
       const b = c.blocs;
       if (
@@ -212,6 +219,7 @@ export default function TaxAtlasPage() {
       zeroTaxCount,
       territorialCount,
       nonDomCount,
+      zeroCgtCount,
       blocsRepresented,
     };
   }, [countries]);
@@ -274,6 +282,22 @@ export default function TaxAtlasPage() {
 
     // Prioritize 0% and territorial taxes first in 'all' view, then alphabetical
     result.sort((a, b) => {
+      if (activeTab === "zero_cgt") {
+        const isPureA =
+          a.tax?.capitalGainsTaxRate
+            ?.toLowerCase()
+            .includes("no capital gains") ||
+          a.tax?.capitalGainsTaxRate === "0%" ||
+          a.tax?.systemType === "zero_tax";
+        const isPureB =
+          b.tax?.capitalGainsTaxRate
+            ?.toLowerCase()
+            .includes("no capital gains") ||
+          b.tax?.capitalGainsTaxRate === "0%" ||
+          b.tax?.systemType === "zero_tax";
+        if (isPureA !== isPureB) return isPureA ? -1 : 1;
+        return a.name.localeCompare(b.name);
+      }
       const priority = (sys?: string) => {
         if (sys === "zero_tax") return 1;
         if (sys === "territorial") return 2;
@@ -336,6 +360,16 @@ export default function TaxAtlasPage() {
           const rateA = parseRate(a.tax?.foreignIncomeTaxRate);
           const rateB = parseRate(b.tax?.foreignIncomeTaxRate);
           diff = rateA - rateB;
+        }
+      } else if (sortField === "capitalGainsTaxRate") {
+        const isZeroA = isZeroCapitalGainsTax(a.tax);
+        const isZeroB = isZeroCapitalGainsTax(b.tax);
+        if (isZeroA !== isZeroB) {
+          diff = isZeroA ? -1 : 1;
+        } else {
+          diff = (a.tax?.capitalGainsTaxRate || "").localeCompare(
+            b.tax?.capitalGainsTaxRate || "",
+          );
         }
       } else if (sortField === "corporateTaxRate") {
         const rateA = parseRate(a.tax?.corporateTaxRate);
@@ -586,8 +620,13 @@ export default function TaxAtlasPage() {
       </Box>
 
       {/* Executive KPI Stat Summary */}
-      <Grid container spacing={2} sx={{ mb: 4 }}>
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+      <Grid
+        container
+        spacing={2}
+        columns={{ xs: 12, sm: 12, md: 10 }}
+        sx={{ mb: 4 }}
+      >
+        <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Card
             elevation={0}
             onClick={() =>
@@ -637,7 +676,57 @@ export default function TaxAtlasPage() {
           </Card>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 2 }}>
+          <Card
+            elevation={0}
+            onClick={() =>
+              handleTabChange({} as React.SyntheticEvent, "zero_cgt")
+            }
+            sx={{
+              cursor: "pointer",
+              borderRadius: 3,
+              backgroundColor: "rgba(52, 211, 153, 0.08)",
+              border: "1px solid rgba(52, 211, 153, 0.25)",
+              transition: "transform 0.2s ease, border-color 0.2s ease",
+              "&:hover": {
+                transform: "translateY(-3px)",
+                borderColor: "rgba(52, 211, 153, 0.6)",
+              },
+            }}
+          >
+            <CardContent sx={{ p: 2.5 }}>
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Box>
+                  <Typography
+                    variant="caption"
+                    sx={{ color: "#34d399", fontWeight: 700 }}
+                  >
+                    0% CAPITAL GAINS
+                  </Typography>
+                  <Typography
+                    variant="h4"
+                    sx={{ fontWeight: 800, color: "#34d399", mt: 0.5 }}
+                  >
+                    {kpiStats.zeroCgtCount}
+                  </Typography>
+                </Box>
+                <Box sx={{ fontSize: "2rem" }}>📈</Box>
+              </Stack>
+              <Typography
+                variant="caption"
+                sx={{ color: "text.secondary", mt: 1, display: "block" }}
+              >
+                0% CGT on securities, assets &amp; crypto
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Card
             elevation={0}
             onClick={() =>
@@ -687,7 +776,7 @@ export default function TaxAtlasPage() {
           </Card>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Card
             elevation={0}
             onClick={() =>
@@ -731,13 +820,13 @@ export default function TaxAtlasPage() {
                 variant="caption"
                 sx={{ color: "text.secondary", mt: 1, display: "block" }}
               >
-                Lump-sum & expat remittance relief
+                Lump-sum &amp; expat remittance relief
               </Typography>
             </CardContent>
           </Card>
         </Grid>
 
-        <Grid size={{ xs: 12, sm: 6, md: 3 }}>
+        <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Card
             elevation={0}
             onClick={() => handleTabChange({} as React.SyntheticEvent, "blocs")}
@@ -910,6 +999,62 @@ export default function TaxAtlasPage() {
             );
           })}
         </Box>
+      )}
+
+      {/* Informative Banner for 0% Capital Gains Tab */}
+      {activeTab === "zero_cgt" && (
+        <Paper
+          elevation={0}
+          sx={{
+            p: 2.25,
+            mb: 3,
+            borderRadius: 3.5,
+            background:
+              "linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(15, 23, 42, 0.7) 100%)",
+            border: "1px solid rgba(52, 211, 153, 0.35)",
+            backdropFilter: "blur(12px)",
+          }}
+        >
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={2}
+            alignItems={{ xs: "flex-start", sm: "center" }}
+            justifyContent="space-between"
+          >
+            <Stack direction="row" spacing={1.5} alignItems="center">
+              <Box sx={{ fontSize: "2rem", lineHeight: 1 }}>📈</Box>
+              <Box>
+                <Typography
+                  variant="subtitle1"
+                  sx={{ fontWeight: 800, color: "#34d399", lineHeight: 1.2 }}
+                >
+                  0% Capital Gains Tax Regimes
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{ color: "text.secondary", mt: 0.25, maxWidth: 850 }}
+                >
+                  Jurisdictions that impose zero tax on investment profits,
+                  stocks, dividends, and cryptocurrency gains (or offer complete
+                  tax exemptions on foreign capital assets). Ideal for equity
+                  investors, fund managers, tech founders, and crypto traders.
+                </Typography>
+              </Box>
+            </Stack>
+
+            <Chip
+              label={`${filteredCountries.length} Jurisdictions`}
+              size="small"
+              sx={{
+                fontWeight: 800,
+                fontSize: "0.78rem",
+                backgroundColor: "rgba(52, 211, 153, 0.18)",
+                color: "#6ee7b7",
+                border: "1px solid rgba(52, 211, 153, 0.4)",
+              }}
+            />
+          </Stack>
+        </Paper>
       )}
 
       {/* Filter and View Controls */}
@@ -1277,6 +1422,37 @@ export default function TaxAtlasPage() {
                               {tax?.foreignIncomeTaxRate || "Worldwide"}
                             </Typography>
                           </Grid>
+
+                          {tax?.capitalGainsTaxRate && (
+                            <Grid size={{ xs: 12 }}>
+                              <Typography
+                                variant="caption"
+                                sx={{
+                                  color: "text.secondary",
+                                  fontSize: "0.7rem",
+                                  fontWeight: 700,
+                                  textTransform: "uppercase",
+                                }}
+                              >
+                                Capital Gains Tax
+                              </Typography>
+                              <Typography
+                                variant="body2"
+                                sx={{
+                                  color: isZeroCapitalGainsTax(tax)
+                                    ? "#34d399"
+                                    : "text.primary",
+                                  fontWeight: isZeroCapitalGainsTax(tax)
+                                    ? 700
+                                    : 500,
+                                  fontSize: "0.82rem",
+                                  lineHeight: 1.3,
+                                }}
+                              >
+                                {tax.capitalGainsTaxRate}
+                              </Typography>
+                            </Grid>
+                          )}
 
                           {tax?.corporateTaxRate && (
                             <Grid size={{ xs: 12 }}>
@@ -1740,6 +1916,27 @@ export default function TaxAtlasPage() {
 
                 <TableCell>
                   <TableSortLabel
+                    active={sortField === "capitalGainsTaxRate"}
+                    direction={
+                      sortField === "capitalGainsTaxRate"
+                        ? sortDirection
+                        : "asc"
+                    }
+                    onClick={() => handleRequestSort("capitalGainsTaxRate")}
+                    sx={{
+                      color: "inherit !important",
+                      "&.Mui-active": { color: "secondary.light !important" },
+                      "& .MuiTableSortLabel-icon": {
+                        color: "secondary.light !important",
+                      },
+                    }}
+                  >
+                    Capital Gains
+                  </TableSortLabel>
+                </TableCell>
+
+                <TableCell>
+                  <TableSortLabel
                     active={sortField === "corporateTaxRate"}
                     direction={
                       sortField === "corporateTaxRate" ? sortDirection : "asc"
@@ -1769,7 +1966,7 @@ export default function TaxAtlasPage() {
               {sortedCountries.length === 0 ? (
                 <TableRow>
                   <TableCell
-                    colSpan={8}
+                    colSpan={9}
                     sx={{
                       textAlign: "center",
                       py: 8,
@@ -1905,6 +2102,28 @@ export default function TaxAtlasPage() {
                           }}
                         >
                           {tax?.foreignIncomeTaxRate || "Worldwide"}
+                        </Typography>
+                      </TableCell>
+
+                      {/* Capital Gains Tax */}
+                      <TableCell>
+                        <Typography
+                          variant="caption"
+                          sx={{
+                            fontWeight: isZeroCapitalGainsTax(tax) ? 700 : 500,
+                            color: isZeroCapitalGainsTax(tax)
+                              ? "#34d399"
+                              : "text.secondary",
+                            fontSize: "0.8rem",
+                            maxWidth: 190,
+                            display: "-webkit-box",
+                            WebkitLineClamp: 2,
+                            WebkitBoxOrient: "vertical",
+                            overflow: "hidden",
+                            lineHeight: 1.35,
+                          }}
+                        >
+                          {tax?.capitalGainsTaxRate || "Standard"}
                         </Typography>
                       </TableCell>
 

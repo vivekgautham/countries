@@ -130,7 +130,7 @@ export const TAX_FILTER_OPTIONS: {
   id: string;
   label: string;
   icon: string;
-  type?: TaxSystemType | "zero_global";
+  type?: TaxSystemType | "zero_global" | "zero_cgt";
 }[] = [
   { id: "all", label: "All Tax Regimes", icon: "🌐" },
   {
@@ -138,6 +138,12 @@ export const TAX_FILTER_OPTIONS: {
     label: "0% Income Tax",
     icon: "🟢",
     type: "zero_tax",
+  },
+  {
+    id: "zero_cgt",
+    label: "0% Capital Gains",
+    icon: "📈",
+    type: "zero_cgt",
   },
   {
     id: "territorial",
@@ -166,6 +172,38 @@ export const TAX_FILTER_OPTIONS: {
 ];
 
 /**
+ * Checks if a jurisdiction offers 0% capital gains tax
+ * (either complete 0% CGT, 0% on private movable assets/shares/crypto, or 0% on foreign investment gains).
+ */
+export function isZeroCapitalGainsTax(tax?: TaxInfo): boolean {
+  if (!tax) return false;
+  if (tax.systemType === "zero_tax") return true;
+  if (!tax.capitalGainsTaxRate) return false;
+
+  const s = tax.capitalGainsTaxRate.trim().toLowerCase();
+
+  // Exclude progressive scales that start with 0% (e.g. US 0%, 15%, 20%)
+  if (
+    s.startsWith("0%,") ||
+    s.startsWith("0% to") ||
+    s.startsWith("0% -") ||
+    s.startsWith("0% or")
+  ) {
+    return false;
+  }
+
+  return (
+    s.startsWith("0%") ||
+    s.includes("no capital gains") ||
+    s.includes("0% on private") ||
+    s.includes("0% general") ||
+    s.includes("0% on securities") ||
+    s.includes("0% on sale of shares") ||
+    s.includes("0% on foreign")
+  );
+}
+
+/**
  * Filter matcher for tax filter chip selection.
  */
 export function matchesTaxFilter(
@@ -179,6 +217,10 @@ export function matchesTaxFilter(
 
   if (filterId === "zero_global") {
     return tax.isZeroGlobalTax;
+  }
+
+  if (filterId === "zero_cgt") {
+    return isZeroCapitalGainsTax(tax);
   }
 
   return tax.systemType === filterId;
@@ -212,6 +254,21 @@ export function matchesTaxQuery(
     return tax.isZeroGlobalTax || tax.systemType === "zero_tax";
   }
 
+  const cgtKeywords = [
+    "capital gains",
+    "cgt",
+    "0% capital gains",
+    "zero capital gains",
+    "no cgt",
+    "no capital gains",
+    "zero cgt",
+    "0% cgt",
+  ];
+
+  if (cgtKeywords.some((k) => q.includes(k) || k.includes(q))) {
+    return isZeroCapitalGainsTax(tax);
+  }
+
   if (q.includes("territorial")) {
     return tax.systemType === "territorial";
   }
@@ -240,6 +297,11 @@ export function matchesTaxQuery(
   if (
     tax.foreignIncomeTaxRate &&
     tax.foreignIncomeTaxRate.toLowerCase().includes(q)
+  )
+    return true;
+  if (
+    tax.capitalGainsTaxRate &&
+    tax.capitalGainsTaxRate.toLowerCase().includes(q)
   )
     return true;
   if (tax.notes && tax.notes.toLowerCase().includes(q)) return true;

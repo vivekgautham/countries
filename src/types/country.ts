@@ -145,6 +145,7 @@ export interface TaxInfo {
   summary?: string;
   notes?: string;
   isZeroGlobalTax: boolean;
+  isZeroCapitalGainsTax?: boolean;
 }
 
 export interface EconomicBlocs {
